@@ -152,20 +152,38 @@ export default function DevelopersPage() {
           </p>
         </Section>
 
-        <Section id="mcp" title="Veda MCP Server (Model Context Protocol)">
+        <Section id="mcp" title="Veda Model Context Protocol (MCP) Servers">
           <p className="text-muted-foreground mb-3">
-            A first-party MCP server runs at <code className="font-mono text-xs">/.well-known/mcp</code> using the
-            Streamable HTTP transport with JSON-RPC 2.0. It is stateless, needs no auth, and supports protocol versions
-            2025-06-18, 2025-03-26, and 2024-11-05.
+            Veda runs dual, production-ready MCP servers over Streamable HTTP (JSON-RPC 2.0) with zero authentication required:
           </p>
-          <p className="text-muted-foreground mb-3">Exposed tools:</p>
-          <ul className="mb-3 space-y-1 text-muted-foreground">
-            <li><code className="font-mono text-xs">search_essays</code> - find essays by keyword</li>
-            <li><code className="font-mono text-xs">get_essay</code> - full Markdown text of one essay</li>
-            <li><code className="font-mono text-xs">search_glossary</code> - search 100+ term glossary</li>
-            <li><code className="font-mono text-xs">get_glossary_term</code> - full definition of one term</li>
-            <li><code className="font-mono text-xs">search_reports</code> - cited academic literature via OpenAlex</li>
-          </ul>
+          <div className="space-y-4 mb-4">
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <h3 className="font-semibold text-sm mb-1">1. Veda Product MCP Server (Action & Research)</h3>
+              <p className="text-xs text-muted-foreground mb-2">
+                Endpoint: <code className="font-mono text-xs text-foreground">https://veda.ng/.well-known/mcp</code> (also reachable at <code className="font-mono text-xs">/api/mcp</code>)
+              </p>
+              <ul className="text-xs space-y-1 text-muted-foreground list-disc list-inside">
+                <li><code className="font-mono">search_reports</code> - Query 233,000+ indexed academic papers via OpenAlex</li>
+                <li><code className="font-mono">search_essays</code> - Find long-form technical research essays</li>
+                <li><code className="font-mono">get_essay</code> - Fetch full Markdown text of any essay</li>
+                <li><code className="font-mono">search_glossary</code> - Search 100+ AI and Web3 glossary terms</li>
+                <li><code className="font-mono">get_glossary_term</code> - Fetch definition for any glossary term</li>
+              </ul>
+            </div>
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <h3 className="font-semibold text-sm mb-1">2. Veda Documentation MCP Server (Knowledge & Courses)</h3>
+              <p className="text-xs text-muted-foreground mb-2">
+                Endpoint: <code className="font-mono text-xs text-foreground">https://veda.ng/.well-known/mcp/docs</code> (also reachable at <code className="font-mono text-xs">/api/mcp/docs</code>)
+              </p>
+              <ul className="text-xs space-y-1 text-muted-foreground list-disc list-inside">
+                <li><code className="font-mono">get_api_documentation</code> - Fetch complete developer documentation</li>
+                <li><code className="font-mono">get_openapi_specification</code> - Fetch full OpenAPI 3.1 specification</li>
+                <li><code className="font-mono">get_auth_guide</code> - Keyless access and security guidelines</li>
+                <li><code className="font-mono">search_documentation</code> - Search developer docs, guides, and courses</li>
+                <li><code className="font-mono">get_course_curriculum</code> - Full curricula for Prompt Engineering, Web3, MCP, Vibe Coding, and Agentic Web</li>
+              </ul>
+            </div>
+          </div>
           <CommandBlock command={mcpExample} />
         </Section>
 
@@ -173,7 +191,7 @@ export default function DevelopersPage() {
           <p className="text-muted-foreground mb-3">
             The machine-readable OpenAPI specification is published at{' '}
             <Link href="/openapi.json" className="underline underline-offset-4 hover:text-foreground">/openapi.json</Link>{' '}
-            (with predictable aliases at <code className="font-mono text-xs">/swagger.json</code> and <code className="font-mono text-xs">/docs.json</code>).
+            (with predictable aliases at <code className="font-mono text-xs">/openapi</code>, <code className="font-mono text-xs">/swagger.json</code>, and <code className="font-mono text-xs">/docs.json</code>).
             It documents 100% typed response schemas, RFC rate-limit headers, cursor pagination, batch execution, and async polling.
           </p>
         </Section>

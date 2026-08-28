@@ -1,9 +1,19 @@
-# robots.txt for veda.ng - 100% Open Access for AI Crawlers & Search Engines
+# robots.txt for veda.ng - 100% Open Access for Search & Answer Engines
 
-User-agent: *
-Allow: /
+# Blocked Training-Only & Bulk Scraping Bots
+User-agent: CCBot
+Disallow: /
 
-# OpenAI Crawlers
+User-agent: ByteSpider
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+# Allowed AI Answer Engine & Search Bots
 User-agent: GPTBot
 Allow: /
 
@@ -13,7 +23,6 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Anthropic Claude Crawlers
 User-agent: ClaudeBot
 Allow: /
 
@@ -23,11 +32,9 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# Perplexity AI Crawlers
 User-agent: PerplexityBot
 Allow: /
 
-# Google AI & Search Crawlers
 User-agent: Google-Extended
 Allow: /
 
@@ -43,22 +50,18 @@ Allow: /
 User-agent: GoogleOther-Video
 Allow: /
 
-# Apple Intelligence Crawlers
 User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-# DeepSeek Crawlers
 User-agent: DeepSeekBot
 Allow: /
 
-# Amazon & AWS AI Crawlers
 User-agent: Amazonbot
 Allow: /
 
-# Meta AI Crawlers
 User-agent: Meta-ExternalAgent
 Allow: /
 
@@ -67,21 +70,6 @@ Allow: /
 
 User-agent: FacebookBot
 Allow: /
-
-# ByteDance & TikTok Scraping Bots (Blocked)
-User-agent: Bytespider
-Disallow: /
-
-User-agent: ByteSpider
-Disallow: /
-
-# Common Crawl Bulk Scraper (Blocked)
-User-agent: CCBot
-Disallow: /
-
-# Scrapy generic scraping bot (Blocked)
-User-agent: Scrapy
-Disallow: /
 
 User-agent: cohere-ai
 Allow: /
@@ -104,6 +92,10 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+# General Crawlers
+User-agent: *
+Allow: /
+
 # Machine-Readable Indexes & Discovery
 Content-Signal: search=yes, ai-train=yes, ai-input=yes
 
@@ -111,4 +103,5 @@ Sitemap: https://veda.ng/sitemap.xml
 Schemamap: https://veda.ng/schemamap.xml
 
 # Discovery manifests
-# See https://veda.ng/llms.txt, https://veda.ng/brand.txt, and https://veda.ng/.well-known/agents.json
+# See https://veda.ng/llms.txt, https://veda.ng/brand.txt, https://veda.ng/.well-known/agents.json, and https://veda.ng/.well-known/mcp.json
+

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T06:01:11.395Z",
+  "generatedAt": "2026-08-28T04:34:52.542Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -461,6 +461,7 @@
     "/mcp-development",
     "/mcp-docs",
     "/mcp-server",
+    "/mcp/docs",
     "/mcp/final-exam",
     "/mcp/module-1-what-is-mcp",
     "/mcp/module-2-transports",
@@ -478,6 +479,9 @@
     "/neocloud",
     "/news",
     "/noslop",
+    "/openapi",
+    "/openapi.yaml",
+    "/openapi.yml",
     "/outlives",
     "/paradox",
     "/playbook",
@@ -636,11 +640,7 @@
     "/writings/universal-text-ui",
     "/writings/yc-landscape",
     "/yc",
-    "/yc-landscape",
-    "/api",
-    "/api/v1/essays",
-    "/api/v1/glossary",
-    "/api/v1/reports/search"
+    "/yc-landscape"
   ],
   "markdownPaths": [
     "/",
@@ -1004,22 +1004,6 @@
     "/traffic",
     "/trust",
     "/twilight",
-    "/yc",
-    "/api",
-    "/docs",
-    "/api/v1/essays",
-    "/api/v1/glossary",
-    "/prompt",
-    "/web3",
-    "/vibecoding",
-    "/mcp",
-    "/agentic",
-    "/automation",
-    "/media",
-    "/community",
-    "/health-protocols",
-    "/auth",
-    "/api/v1/reports/search",
-    "/seo"
+    "/yc"
   ]
 }
