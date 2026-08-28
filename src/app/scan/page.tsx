@@ -10,7 +10,8 @@ import {
   Search, Sparkles, CheckCircle2, AlertTriangle, XCircle, Clock,
   ArrowRight, Copy, Check, RefreshCw, ExternalLink, Shield,
   FileCode, Terminal, Layers, Cpu, Zap, Lock, BarChart3,
-  BookOpen, Wrench, ChevronDown, ChevronUp,
+  BookOpen, Wrench, ChevronDown, ChevronUp, Play, RotateCcw,
+  Sparkle, CheckSquare, Square, Info
 } from 'lucide-react';
 
 const PRESETS = [
@@ -39,6 +40,12 @@ const IMPACT_LABELS: Record<string, { label: string; color: string }> = {
   recommended: { label: 'Recommended', color: 'text-blue-600   dark:text-blue-400   bg-blue-500/10   border-blue-500/30' },
   optional:    { label: 'Optional',    color: 'text-zinc-500   dark:text-zinc-400   bg-zinc-500/10   border-zinc-500/30' },
 };
+
+interface SimLog {
+  text: string;
+  type: 'info' | 'success' | 'warn' | 'error' | 'header';
+  delay: number;
+}
 
 function CheckCard({ check, defaultExpanded = false }: { check: CheckResult; defaultExpanded?: boolean }) {
   const [expanded, setExpanded] = useState(defaultExpanded);
@@ -207,6 +214,15 @@ export default function ScanPage() {
   const [copiedShare, setCopiedShare] = useState(false);
   const [, startTransition] = useTransition();
 
+  // AI Prompt builder states
+  const [selectedFixIds, setSelectedFixIds] = useState<string[]>([]);
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
+
+  // Agent simulation states
+  const [simLogs, setSimLogs] = useState<SimLog[]>([]);
+  const [simIndex, setSimIndex] = useState<number>(-1);
+  const [isSimPlaying, setIsSimPlaying] = useState(false);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const params = new URLSearchParams(window.location.search);
@@ -220,6 +236,16 @@ export default function ScanPage() {
     const interval = setInterval(() => setActiveStepIndex(p => (p + 1) % SCAN_STEPS.length), 500);
     return () => clearInterval(interval);
   }, [loading]);
+
+  // Pre-select all warnings/failures when a new result arrives
+  useEffect(() => {
+    if (result) {
+      const issues = result.layers.flatMap(l => l.checks).filter(c => c.status === 'fail' || c.status === 'warning');
+      setSelectedFixIds(issues.map(i => i.id));
+      // Auto-trigger agent journey simulation
+      startAgentSimulation(result);
+    }
+  }, [result]);
 
   async function executeScan(target: string, bypassCache = false) {
     if (!target.trim()) return;
@@ -264,6 +290,142 @@ export default function ScanPage() {
   const criticalFails  = allChecks.filter(c => c.status === 'fail'    && c.impact === 'critical');
   const importantFails = allChecks.filter(c => (c.status === 'fail' || c.status === 'warning') && c.impact === 'important');
   const topWins        = allChecks.filter(c => c.status === 'pass'    && (c.impact === 'critical' || c.impact === 'important'));
+
+  // AI Prompt builder logic
+  const failedOrWarningChecks = allChecks.filter(c => c.status === 'fail' || c.status === 'warning');
+
+  function toggleFixSelection(id: string) {
+    setSelectedFixIds(prev =>
+      prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
+    );
+  }
+
+  function selectAllFixes() {
+    setSelectedFixIds(failedOrWarningChecks.map(c => c.id));
+  }
+
+  function selectNoneFixes() {
+    setSelectedFixIds([]);
+  }
+
+  function handleCopyPrompt() {
+    if (!result) return;
+    const selected = failedOrWarningChecks.filter(c => selectedFixIds.includes(c.id));
+    if (selected.length === 0) {
+      alert('Please select at least one fix checkbox to generate the prompt.');
+      return;
+    }
+
+    const promptText = `You are an expert full-stack developer. My website (${result.domain}) was scanned for AI Agent Readiness on veda.ng and scored ${result.score}/100 (Grade ${result.grade}).
+    
+I need your help to fix the following ${selected.length} issue(s) so that LLM agents, crawler bots, and autonomous models can browse, parse, and use my site programmatically.
+
+Here are the details of the selected gaps:
+
+${selected.map((c, i) => `${i + 1}. [${c.name}] (${c.layer} layer — ${c.impact || 'recommended'} priority)
+   - Finding: ${c.details}
+   - Why it matters: ${c.why || 'AI agents need this to perform tasks.'}
+   - Fix recommendation: ${c.recommendation || 'Implement standard configurations.'}
+   ${c.fixSnippet ? `- Code Template / Fix Reference:\n\`\`\`${c.fixSnippet.language}\n${c.fixSnippet.code}\n\`\`\`` : ''}`).join('\n\n')}
+
+Please review these gaps and write the complete, copy-pasteable files, code changes, or middleware configurations to implement the fixes in my codebase. Give step-by-step instructions.`;
+
+    navigator.clipboard.writeText(promptText);
+    setCopiedPrompt(true);
+    setTimeout(() => setCopiedPrompt(false), 2000);
+  }
+
+  // Agent journey simulator logs compilation
+  function startAgentSimulation(res: ScanResult) {
+    setIsSimPlaying(true);
+    setSimIndex(0);
+
+    const checks = res.layers.flatMap(l => l.checks);
+    const robots = checks.find(c => c.id === 'robots-ai-policy');
+    const llms = checks.find(c => c.id === 'llms-txt');
+    const negotiation = checks.find(c => c.id === 'markdown-negotiation');
+    const mcp = checks.find(c => c.id === 'mcp-server-live');
+    const openapi = checks.find(c => c.id === 'openapi-spec');
+    const security = checks.find(c => c.id === 'https-tls');
+    const hsts = checks.find(c => c.id === 'hsts');
+
+    const logsList: SimLog[] = [
+      { text: `SYSTEM: Initializing agent simulation for ${res.domain}...`, type: 'header', delay: 100 },
+      { text: `GET https://${res.domain}/robots.txt [User-Agent: ClaudeBot/1.0]`, type: 'info', delay: 800 },
+    ];
+
+    // robots step
+    if (robots?.status === 'pass') {
+      logsList.push({ text: `✓ robots.txt parsed: Crawling allowed for AI agents (GPTBot, ClaudeBot, PerplexityBot).`, type: 'success', delay: 400 });
+    } else {
+      logsList.push({ text: `⚠ robots.txt alert: Crawling disallowed or missing explicit allowances. Agent will bypass/warn user.`, type: 'warn', delay: 400 });
+    }
+
+    logsList.push({ text: `GET https://${res.domain}/llms.txt [User-Agent: GPTBot/1.0]`, type: 'info', delay: 900 });
+
+    // llms.txt step
+    if (llms?.status === 'pass' || llms?.status === 'warning') {
+      logsList.push({ text: `✓ llms.txt discovered: Loaded site catalog index (${llms.status === 'warning' ? 'warning: heading formatting incomplete' : 'structured successfully'}).`, type: 'success', delay: 450 });
+    } else {
+      logsList.push({ text: `✗ llms.txt missing (404): Fallback initiated. Crawling raw HTML home page...`, type: 'error', delay: 600 });
+      logsList.push({ text: `  Ingested raw HTML index (${res.domain}): parsed navigational links from markup with high token overhead.`, type: 'info', delay: 500 });
+    }
+
+    logsList.push({ text: `GET https://${res.domain}/ [Accept: text/markdown]`, type: 'info', delay: 700 });
+
+    // markdown step
+    if (negotiation?.status === 'pass') {
+      logsList.push({ text: `✓ Content negotiation supported: Server returned clean Markdown. Ingested data efficiently (saved 75% tokens).`, type: 'success', delay: 400 });
+    } else {
+      logsList.push({ text: `⚠ Accept header rejected: Server served full HTML app shell. Token usage increased 4.2x.`, type: 'warn', delay: 400 });
+    }
+
+    logsList.push({ text: `GET /.well-known/mcp and /openapi.json`, type: 'info', delay: 800 });
+
+    // mcp & openapi step
+    if (mcp?.status === 'pass') {
+      logsList.push({ text: `✓ Live MCP Server detected at /.well-known/mcp. Initialized JSON-RPC protocol. 4 tools bound.`, type: 'success', delay: 500 });
+    } else {
+      logsList.push({ text: `✗ No MCP server found. Fallback to REST API scan.`, type: 'info', delay: 300 });
+    }
+
+    if (openapi?.status === 'pass') {
+      logsList.push({ text: `✓ OpenAPI schema loaded from /openapi.json: parsed typed parameters. Agent can execute endpoints.`, type: 'success', delay: 400 });
+    } else {
+      logsList.push({ text: `⚠ OpenAPI specification missing. Agent has to guess parameter names from prose documentation.`, type: 'warn', delay: 400 });
+    }
+
+    logsList.push({ text: `AUDIT Transport security constraints...`, type: 'info', delay: 600 });
+
+    // security step
+    if (security?.status === 'pass' && hsts?.status === 'pass') {
+      logsList.push({ text: `✓ Secure transport active: HTTPS enabled, HSTS header enforced. Secure tool authorization is safe.`, type: 'success', delay: 400 });
+    } else {
+      logsList.push({ text: `⚠ Security warning: HTTPS or HSTS missing/weak. High risk of local proxy interception.`, type: 'warn', delay: 450 });
+    }
+
+    // final report
+    logsList.push({ text: `\n[Agent Simulation Report]
+- Host: ${res.domain}
+- Score: ${res.score}/100 (Grade ${res.grade})
+- Core Result: ${res.score >= 88 ? 'Fully Agent-Ready. Operation succeeded without errors.' : 'Degraded capability. Agent completed execution but warning flags require human code changes.'}`, type: 'header', delay: 400 });
+
+    setSimLogs(logsList);
+  }
+
+  useEffect(() => {
+    if (!isSimPlaying || simIndex < 0 || simIndex >= simLogs.length) {
+      if (simIndex >= simLogs.length) setIsSimPlaying(false);
+      return;
+    }
+
+    const currentLog = simLogs[simIndex];
+    const t = setTimeout(() => {
+      setSimIndex(prev => prev + 1);
+    }, currentLog.delay);
+
+    return () => clearTimeout(t);
+  }, [simIndex, isSimPlaying, simLogs]);
 
   return (
     <PageLayout>
@@ -451,6 +613,115 @@ export default function ScanPage() {
                     </button>
                   </div>
                 )}
+              </div>
+            )}
+
+            {/* ── Simulated Agent Journey Console (NEW) ── */}
+            <div className="p-6 rounded-2xl border border-border bg-zinc-950 text-zinc-100 font-mono text-sm shadow-sm space-y-4">
+              <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
+                <div className="flex items-center gap-2">
+                  <Terminal className="h-5 w-5 text-emerald-400" />
+                  <span className="font-semibold text-sm tracking-wide text-zinc-200">Simulated Agent Journey</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => startAgentSimulation(result)}
+                    className="inline-flex items-center gap-1 text-xs hover:text-emerald-400 transition bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-lg text-zinc-300"
+                  >
+                    <RotateCcw className="h-3.5 w-3.5" />
+                    <span>Restart Journey</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="bg-zinc-950 p-4 rounded-lg min-h-[16rem] max-h-[22rem] overflow-y-auto space-y-2 text-xs leading-relaxed text-zinc-300 scrollbar-thin">
+                {simIndex === 0 && (
+                  <div className="flex items-center gap-2 text-zinc-500">
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping shrink-0" />
+                    <span>Spawning autonomous model context...</span>
+                  </div>
+                )}
+                {simLogs.slice(0, simIndex).map((log, idx) => {
+                  let colorClass = 'text-zinc-300';
+                  if (log.type === 'success') colorClass = 'text-emerald-400';
+                  if (log.type === 'warn') colorClass = 'text-amber-400';
+                  if (log.type === 'error') colorClass = 'text-rose-400 font-semibold';
+                  if (log.type === 'header') colorClass = 'text-primary font-bold text-zinc-200';
+
+                  return (
+                    <div key={idx} className={`whitespace-pre-wrap transition-opacity duration-300 ${colorClass}`}>
+                      {log.text}
+                    </div>
+                  );
+                })}
+                {isSimPlaying && simIndex > 0 && simIndex < simLogs.length && (
+                  <div className="inline-flex items-center gap-1.5 text-zinc-500 mt-1">
+                    <RefreshCw className="h-3.5 w-3.5 animate-spin" />
+                    <span>Agent working...</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* ── Interactive Fix Prompt Builder (NEW) ── */}
+            {failedOrWarningChecks.length > 0 && (
+              <div className="p-6 rounded-2xl border border-primary/20 bg-primary/[0.01] space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border pb-3.5">
+                  <div className="flex items-center gap-2">
+                    <Sparkle className="h-5 w-5 text-primary" />
+                    <div>
+                      <h4 className="font-bold text-base text-foreground leading-none">Fix with AI Assistant</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Select readiness gaps to compile a detailed code implementation prompt</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs">
+                    <button type="button" onClick={selectAllFixes} className="hover:text-primary transition font-medium text-muted-foreground">Select All</button>
+                    <span className="text-border">|</span>
+                    <button type="button" onClick={selectNoneFixes} className="hover:text-primary transition font-medium text-muted-foreground">Clear All</button>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-h-56 overflow-y-auto pr-1">
+                  {failedOrWarningChecks.map(c => {
+                    const isSelected = selectedFixIds.includes(c.id);
+                    return (
+                      <button
+                        key={c.id}
+                        type="button"
+                        onClick={() => toggleFixSelection(c.id)}
+                        className={`flex items-start text-left gap-2.5 p-3 rounded-xl border text-xs transition ${
+                          isSelected 
+                            ? 'border-primary/40 bg-primary/[0.04] text-foreground' 
+                            : 'border-border/60 hover:border-border bg-card hover:bg-card/80 text-muted-foreground'
+                        }`}
+                      >
+                        <div className="shrink-0 mt-0.5 text-primary">
+                          {isSelected ? <CheckSquare className="h-4 w-4" /> : <Square className="h-4 w-4 text-muted-foreground" />}
+                        </div>
+                        <div className="min-w-0">
+                          <p className="font-semibold truncate">{c.name}</p>
+                          <p className="text-[10px] text-muted-foreground leading-snug line-clamp-1 mt-0.5">{c.details}</p>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-muted/40 p-4 rounded-xl border border-border">
+                  <div className="flex items-start gap-2.5 text-xs text-muted-foreground leading-relaxed max-w-lg">
+                    <Info className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                    <span>Copies a specialized system directive containing your website context, error details, correct recommendations, and template codes. Paste this straight into Claude or ChatGPT to get correct, drop-in fix files.</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleCopyPrompt}
+                    disabled={selectedFixIds.length === 0}
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/95 text-xs shadow-sm transition disabled:opacity-50 shrink-0"
+                  >
+                    {copiedPrompt ? <><Check className="h-4 w-4" /><span>Prompt Copied!</span></> : <><Sparkles className="h-4 w-4" /><span>Copy Master Fix Prompt ({selectedFixIds.length})</span></>}
+                  </button>
+                </div>
               </div>
             )}
 
