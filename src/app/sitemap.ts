@@ -108,7 +108,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/noslop`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/job-boards`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/privacy`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/developers`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/developers`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/openapi.json`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/auth.md`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/llms.txt`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
   ];
 
   const glossaryRoutes: MetadataRoute.Sitemap = glossaryTerms.map(term => ({

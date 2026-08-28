@@ -12,6 +12,8 @@ export async function GET(request: NextRequest) {
       documentation: 'https://veda.ng/developers',
       openapi: 'https://veda.ng/openapi.json',
       mcp: 'https://veda.ng/.well-known/mcp',
+      mcp_docs: 'https://veda.ng/.well-known/mcp/docs',
+      mcp_manifest: 'https://veda.ng/.well-known/mcp.json',
       endpoints: {
         search: 'https://veda.ng/api/v1/reports/search',
         essays: 'https://veda.ng/api/v1/essays',
@@ -22,12 +24,12 @@ export async function GET(request: NextRequest) {
       pypi: 'https://pypi.org/project/vedang-cli/',
       npm: 'https://www.npmjs.com/package/vedang',
       auth: 'https://veda.ng/auth.md',
-      webhooks: 'https://veda.ng/webhooks.json',
+      webhooks: 'https://veda.ng/developers#webhooks',
     });
   }
 
   if (accept.includes('text/markdown')) {
-    const md = `# Veda Developer Resources & API Documentation\n\n${developersSummaryLines().join('\n')}\n\nFull documentation: https://veda.ng/developers\nOpenAPI 3.1 Spec: https://veda.ng/openapi.json\nMCP Server: https://veda.ng/.well-known/mcp\nAuth: https://veda.ng/auth.md\nWebhooks: https://veda.ng/webhooks.json\n`;
+    const md = `# Vedang Vatsa - Developer Resources & API Documentation (veda.ng)\n\n${developersSummaryLines().join('\n')}\n\n- Interactive Developer Portal: https://veda.ng/developers\n- OpenAPI 3.1 Specification: https://veda.ng/openapi.json\n- Product MCP Server: https://veda.ng/.well-known/mcp\n- Documentation MCP Server: https://veda.ng/.well-known/mcp/docs\n- Multi-server MCP Manifest: https://veda.ng/.well-known/mcp.json\n- Authentication Guide: https://veda.ng/auth.md\n- Python SDK (PyPI): https://pypi.org/project/vedang-cli/\n`;
     return new Response(md, { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });
   }
 

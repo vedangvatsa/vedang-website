@@ -93,8 +93,11 @@ export function buildLinkHeader(pathname: string): string | null {
     links.push(`<${mdHref}>; rel="alternate"; type="text/markdown"`);
   }
   links.push('</llms.txt>; rel="alternate"; type="text/plain"; title="LLM index"');
-  links.push('</.well-known/mcp>; rel="service"; type="application/json"');
-  links.push('</openapi.json>; rel="service"; type="application/openapi+json"');
+  links.push('</developers>; rel="help"; title="Developer Documentation"');
+  links.push('</.well-known/mcp>; rel="service"; type="application/json"; title="Product MCP Server"');
+  links.push('</.well-known/mcp/docs>; rel="service"; type="application/json"; title="Docs MCP Server"');
+  links.push('</openapi.json>; rel="service"; type="application/openapi+json"; title="OpenAPI Specification"');
+  links.push('</auth.md>; rel="help"; type="text/markdown"; title="Authentication Guide"');
   links.push('</feed.xml>; rel="alternate"; type="application/rss+xml"');
   return links.length > 0 ? links.join(', ') : null;
 }
