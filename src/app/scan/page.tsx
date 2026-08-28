@@ -34,12 +34,12 @@ const SCAN_STEPS = [
 ];
 
 const AUDIT_LAYERS_INFO = [
-  { name: 'Discovery', desc: 'robots.txt AI rules, llms.txt, ARD catalog, agents.txt, sitemaps' },
-  { name: 'Access', desc: 'Markdown twins (Accept: text/markdown), SSR payload, no-JS fallback' },
-  { name: 'Usability & MCP', desc: 'MCP endpoints (/.well-known/mcp), OpenAPI 3.1 schema & examples' },
-  { name: 'Security', desc: 'HTTPS enforcement, HSTS preload, CSP header, security.txt RFC 9116' },
-  { name: 'SEO & Structured Data', desc: 'JSON-LD entity graph, Open Graph tags, canonical URLs, RSS/Atom feeds' },
-  { name: 'Micropayments', desc: 'L402 / HTTP 402 macaroons, WebLN, autonomous machine payments' },
+  { name: 'Discovery (13 Probes)', desc: 'robots.txt AI bot policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, XML/JSON sitemaps' },
+  { name: 'Access (9 Probes)', desc: 'Markdown content negotiation (Accept: text/markdown), .md twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
+  { name: 'Usability & MCP (10 Probes)', desc: 'Streamable MCP servers, OpenAPI 3.1 schema & examples, auth guides, RFC 8414 OAuth, TDMRep rights' },
+  { name: 'Security (11 Probes)', desc: 'HTTPS, HSTS preload, CSP, nosniff, frame protection, RFC 9116 security.txt, RFC 9421 signatures' },
+  { name: 'SEO & Citations (15 Probes)', desc: 'Title/Meta tags, JSON-LD @graph schemas, E-E-A-T sameAs links, inverted pyramid Q&A, favicons, RSS feeds' },
+  { name: 'Micropayments (3 Probes)', desc: 'L402 / HTTP 402 macaroons, WebLN wallet discovery, machine terms of service' },
 ];
 
 const LAYER_LABELS: Record<string, string> = {
@@ -461,7 +461,7 @@ export default function ScanPage() {
               />
             </div>
             <p className="text-[11px] text-muted-foreground font-mono">
-              Probing 23 machine-readiness standards across 6 layers
+              Probing 61 machine-readiness & AI citation standards across 6 layers
             </p>
           </section>
         )}
@@ -586,14 +586,18 @@ export default function ScanPage() {
                   { label: 'robots.txt AI Policy', active: result.badges.aiBotFriendly },
                   { label: 'llms.txt Catalog', active: result.badges.llmsTxt },
                   { label: 'ARD Registry', active: result.badges.ardCatalog },
+                  { label: 'RFC 9727 API Catalog', active: result.badges.apiCatalog },
                   { label: 'Markdown Twins', active: result.badges.markdownTwins },
                   { label: 'OpenAPI 3.1 Spec', active: result.badges.openapiSpec },
                   { label: 'Live MCP Server', active: result.badges.mcpServer },
                   { label: 'HTTPS & HSTS', active: result.badges.httpsSecure },
+                  { label: 'Robots Meta Directives', active: result.badges.robotsMetaAi },
+                  { label: 'Author E-E-A-T Signals', active: result.badges.authorEeat },
                   { label: 'No-JS HTML Fallback', active: result.badges.jsRenderingSelfSufficient },
-                  { label: 'JSON-LD Graph', active: result.badges.schemaEntityGraph },
+                  { label: 'JSON-LD Entity Graph', active: result.badges.schemaEntityGraph },
                   { label: 'Structured Sitemap', active: result.badges.xmlOrJsonSitemap },
                   { label: 'API Examples', active: result.badges.openapiExamplesReady },
+                  { label: 'Structured Data', active: result.badges.structuredData },
                   { label: 'Micropayments (L402)', active: result.badges.micropaymentsSupported },
                 ].map(item => (
                   <div

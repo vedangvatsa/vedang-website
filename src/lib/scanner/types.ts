@@ -50,11 +50,14 @@ export interface ScanResult {
     mcpServer: boolean;
     llmsTxt: boolean;
     ardCatalog: boolean;
+    apiCatalog: boolean;
     markdownTwins: boolean;
     openapiSpec: boolean;
     aiBotFriendly: boolean;
     httpsSecure: boolean;
     structuredData: boolean;
+    authorEeat: boolean;
+    robotsMetaAi: boolean;
     jsRenderingSelfSufficient: boolean;
     xmlOrJsonSitemap: boolean;
     schemaEntityGraph: boolean;
