@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/v1/plugin.json",
-  "name": "veda-research-hub",
+  "name": "vedang",
   "version": "1.0.0",
-  "description": "Access essays, technical glossaries, course curricula, and 233,000+ indexed academic papers across AI and Web3.",
+  "description": "Official Vedang Vatsa AI agent plugin: access essays, technical glossaries, course curricula, and 233,000+ indexed academic papers across AI and Web3.",
   "homepage": "https://veda.ng",
   "repository": "https://github.com/vedangvatsa/vedang-website",
   "author": {
@@ -22,6 +22,10 @@
   },
   "skills": [
     {
+      "name": "search_reports",
+      "description": "Search 233,000+ academic papers via OpenAlex."
+    },
+    {
       "name": "search_essays",
       "description": "Search 50+ long-form research essays by keyword."
     },
@@ -36,10 +40,6 @@
     {
       "name": "get_glossary_term",
       "description": "Fetch full markdown definition of a glossary term."
-    },
-    {
-      "name": "search_reports",
-      "description": "Search 233,000+ academic papers via OpenAlex."
     },
     {
       "name": "get_api_documentation",

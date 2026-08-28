@@ -12,15 +12,15 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swa
 export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
   title: {
-    default: 'Vedang - Essays, Research & Profile (veda.ng)',
-    template: '%s | Vedang',
+    default: 'Vedang Vatsa - Essays, Research & Profile (veda.ng)',
+    template: '%s | Vedang Vatsa',
   },
   description:
-    'Official website of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research papers, profile, and free courses on AI agents and Web3.',
-  keywords: ['Vedang Vatsa', 'veda.ng', 'Essays', 'AI Thought Leader', 'Web3 Expert', 'Hashtag Web3', 'AI Researcher', 'DeFi', 'Profile'],
+    'Official personal website and research hub of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research publications, profile, and free courses on AI agents and Web3.',
+  keywords: ['Vedang Vatsa', 'veda.ng', 'Veda', 'Vedang', 'Essays', 'AI Thought Leader', 'Web3 Expert', 'Hashtag Web3', 'AI Researcher', 'DeFi', 'Profile'],
   openGraph: {
     title: 'Vedang Vatsa - Essays, Research & Profile (veda.ng)',
-    description: 'Official website of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research papers, profile, and free courses on AI agents and Web3.',
+    description: 'Official personal website and research hub of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research publications, profile, and free courses on AI agents and Web3.',
     url: '/',
     siteName: 'Vedang Vatsa',
     locale: 'en_US',

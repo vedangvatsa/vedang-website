@@ -1,7 +1,8 @@
 {
-  "name": "vedang-website",
+  "name": "vedang",
   "version": "0.1.0",
   "private": true,
+  "description": "Official repository and TypeScript/JavaScript SDK for Vedang Vatsa and Veda (veda.ng) APIs and Model Context Protocol (MCP) servers.",
   "homepage": "https://veda.ng",
   "repository": {
     "type": "git",
