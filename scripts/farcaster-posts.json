@@ -1347,9 +1347,11 @@
     "id": "ig-ai-impressed",
     "scheduleDate": "2026-08-28",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Humans spend six hours building something in AI.\n\nThen the AI says, \"Impressive. Keep going, human.\"\n\nWe are training our own replacements.\n\nAnd feeling proud about it.",
-    "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4",
+    "postedAt": "2026-08-29T10:24:25.317Z",
+    "castHash": "0x6e94eb64a9f167a8e0a4850ded98dbef1ab2712c"
   },
   {
     "id": "ig-ai-proud-moment",
