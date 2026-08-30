@@ -1357,10 +1357,12 @@
     "id": "ig-ai-proud-moment",
     "scheduleDate": "2026-08-29",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "You spend 3 days debugging.\n\nFinally fix it.\n\nFeel like a genius.\n\nThen remember ChatGPT could have done it in 4 seconds.\n\nProud moment and existential crisis at the same time.",
     "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4",
-    "error": "fetch failed"
+    "error": "fetch failed",
+    "postedAt": "2026-08-30T15:27:33.248Z",
+    "castHash": "0x429a107b14752865cd35c9c7efc05674cd3eadc2"
   },
   {
     "id": "ig-ai-limit-reached",
