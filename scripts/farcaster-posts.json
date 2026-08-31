@@ -1378,9 +1378,11 @@
     "id": "ig-ai-constant-pressure",
     "scheduleDate": "2026-08-31",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "New AI tool every week.\n\nNew framework every month.\n\nNew paradigm every quarter.\n\nRemember when learning one skill was enough for a decade?\n\nNow it barely lasts a quarter.",
-    "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4",
+    "postedAt": "2026-08-31T18:07:35.731Z",
+    "castHash": "0xe797aee6161dea9112d2298374047e7060e98ef2"
   },
   {
     "id": "ig-shadow-ai",
