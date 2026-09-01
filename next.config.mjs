@@ -109,7 +109,7 @@ const nextConfig = {
               "font-src 'self' data: https://basemaps.cartocdn.com https://*.cal.com",
               "frame-src https://www.youtube.com https://platform.twitter.com https://syndication.twitter.com https://app.cal.com https://*.cal.com",
               "frame-ancestors 'self'",
-              "connect-src 'self' https://www.google-analytics.com https://syndication.twitter.com https://cdn.syndication.twimg.com https://basemaps.cartocdn.com https://*.basemaps.cartocdn.com https://app.cal.com https://*.cal.com https://www.clarity.ms https://*.clarity.ms",
+              "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://syndication.twitter.com https://cdn.syndication.twimg.com https://basemaps.cartocdn.com https://*.basemaps.cartocdn.com https://app.cal.com https://*.cal.com https://www.clarity.ms https://*.clarity.ms",
               "worker-src 'self' blob:",
               "base-uri 'self'",
               "form-action 'self'",
