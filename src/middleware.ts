@@ -10,7 +10,7 @@ import {
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Seamlessly handle MCP clients connecting to /mcp via POST, SSE, or JSON-RPC
+  // Route MCP clients connecting to /mcp via POST, SSE, or JSON-RPC
   if (
     pathname === '/mcp' &&
     (req.method === 'POST' ||

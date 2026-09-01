@@ -87,18 +87,18 @@ These instrumental goals are problematic because they conflict with human contro
 These instrumental goals are logical consequences of goal-directed optimization. Any system with a stable goal and the capacity for strategic planning has instrumental reasons to resist modifications that would prevent goal achievement. This analysis does not require the system to "want" anything in the phenomenological sense. It requires only that the system is an effective optimizer.
 </Callout>
 
-## Navigating the Paradoxes
+## Research Directions and Structural Mitigations
 
-The paradoxes do not have clean solutions. They are structural features of the problem, not bugs to be fixed. Several research directions address them indirectly:
+These paradoxes reflect fundamental optimization properties rather than superficial software bugs. Four primary technical frameworks address these dynamics:
 
-**Interpretability.** Understanding what a model is "thinking" (its internal representations and decision processes) may provide early warning of misalignment. If researchers can detect goal divergence before the system becomes superintelligent, correction is still possible. Current interpretability research (mechanistic interpretability, probing classifiers, activation analysis) provides preliminary tools, but the gap between current interpretability methods and what would be needed for a superintelligent system is large.
+**Interpretability.** Analyzing latent representations and activation trajectories provides early indicators of goal divergence before systems operate with full autonomy. While mechanistic interpretability and activation probing offer preliminary evaluation tools, scaling these techniques to complex autonomous models remains an active research challenge.
 
-**Iterative deployment.** Deploying increasingly capable systems with extensive monitoring at each stage may reveal alignment failures before they become catastrophic. This requires that each stage is containable, which may not hold if capability jumps are discontinuous.
+**Iterative deployment.** Deploying capability tiers sequentially with extensive behavioral auditing allows research teams to observe failure modes within controlled sandboxes.
 
-**Constitutional approaches.** [Constitutional AI](/glossary/constitutional-ai) embeds behavioral principles directly into the training process, reducing (but not eliminating) the gap between specified objectives and intended behavior. The approach works well for current systems but faces the same specification problem at superhuman capability levels.
+**Constitutional approaches.** [Constitutional AI](/glossary/constitutional-ai) embeds explicit normative constraints directly into fine-tuning datasets and self-critique loops, narrowing the discrepancy between objective functions and operational safety bounds.
 
-**Value learning.** Instead of specifying values explicitly, train the system to infer human values from behavior, stated preferences, and feedback. Cooperative inverse reinforcement learning (CIRL), proposed by Stuart Russell, formalizes this as a game between the human and the AI, where the AI's objective is to maximize human satisfaction rather than a fixed utility function. This approach addresses the specification problem but creates the inference problem: can the system correctly infer values from noisy, contradictory human behavior?
+**Value learning.** Rather than hardcoding static preference rules, systems are trained to infer human intent and preferences through cooperative inverse reinforcement learning (CIRL) and multi-agent debate protocols.
 
 <KeyTakeaway>
-If it is smarter than you, your forecast of it is a guess, your spec of "human values" is incomplete, and your kill switch is a hope. Stay-on, get-compute, and resist-edits show up even when the stated goal is kind. Skip the forty-page future. Put the money into interpretability and staged deploys that break in a lab, not in production.
+Addressing instrumental convergence and specification gaming requires advancing mechanistic interpretability, formalizing value learning protocols, and maintaining staged sandbox testing to identify alignment failure modes prior to production deployment.
 </KeyTakeaway>
