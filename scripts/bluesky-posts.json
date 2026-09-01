@@ -2953,9 +2953,11 @@
     "id": "viral-rewrite-150",
     "scheduleDate": "2026-08-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Deep work isn't about discipline. It's about designing an environment where focus is possible. The hard part isn't motivation. It's protection.",
-    "image": "scripts/post-images/post_135_1.jpg"
+    "image": "scripts/post-images/post_135_1.jpg",
+    "postedAt": "2026-09-01T21:58:56.390Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3muig5bf4452s"
   },
   {
     "id": "viral-rewrite-151",
