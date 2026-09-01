@@ -10,30 +10,25 @@ import { JumpNav } from '@/components/ui/jump-nav';
 import { ResourceCard } from '@/components/ui/resource-card';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Developer Resources, API Documentation & MCP Server | Vedang Vatsa (veda.ng)',
+  title: 'Vedang Vatsa Developer Resources, API Documentation & MCP Server | veda.ng',
   description:
     'Official developer resources, API documentation, Model Context Protocol (MCP) server, Python SDK (vedang-cli), NPM SDK (vedang), and OpenAPI 3.1 specification for Vedang Vatsa (veda.ng).',
   url: '/developers',
   keywords: [
-    'Vedang developer resources',
     'Vedang Vatsa developer resources',
-    'Vedang API',
     'Vedang Vatsa API',
-    'Vedang API documentation',
     'Vedang Vatsa API documentation',
-    'Vedang MCP server',
     'Vedang Vatsa MCP server',
-    'Vedang developer docs',
+    'Vedang Vatsa developer docs',
     'Vedang Vatsa developer portal',
-    'Vedang OpenAPI specification',
+    'Vedang Vatsa OpenAPI specification',
     'Vedang Vatsa OpenAPI',
-    'Vedang webhooks',
-    'Vedang authentication',
-    'Vedang SDK',
     'Vedang Vatsa SDK',
     'veda.ng API',
     'veda.ng MCP server',
     'veda.ng developer docs',
+    'veda.ng OpenAPI specification',
+    'Vedang Vatsa',
     'Hashtag Web3 developer resources',
     'AI research API',
     'OpenAlex search API',
@@ -43,19 +38,20 @@ export const metadata: Metadata = generateMetadata({
 const developersSchema = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
-  headline: 'Developer Resources, API Documentation & MCP Server',
-  name: 'Developer Resources',
+  headline: 'Vedang Vatsa Developer Resources, API Documentation & MCP Server (veda.ng)',
+  name: 'Vedang Vatsa Developer Resources',
   alternateName: [
     'Vedang Vatsa Developer Resources',
     'Vedang Vatsa API Documentation',
     'Vedang Vatsa Developer Portal',
     'Vedang Vatsa MCP Server',
-    'Vedang API Documentation',
-    'Vedang Developer Portal',
-    'Vedang MCP Server',
-    'Vedang OpenAPI Specification',
+    'Vedang Vatsa OpenAPI Specification',
+    'Vedang Vatsa Python SDK (vedang-cli)',
+    'Vedang Vatsa NPM SDK (vedang)',
     'veda.ng Developer Resources',
-    'Vedang SDK Packages',
+    'veda.ng API Documentation',
+    'veda.ng MCP Server',
+    'veda.ng OpenAPI Specification',
   ],
   url: 'https://veda.ng/developers',
   description:
@@ -227,8 +223,8 @@ export default function DevelopersPage() {
       <div className="w-full space-y-12 sm:space-y-16 pb-20">
         <header>
           <PageHero
-            title="Developer Resources"
-            subtitle="Official machine and developer interfaces for Vedang Vatsa (veda.ng): public research search API, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, Python SDK, syndication feeds, and agent discovery manifests. Keyless and open-access."
+            title="Vedang Vatsa Developer Resources"
+            subtitle="Official API documentation, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, and developer portal for Vedang Vatsa (veda.ng). Keyless, open-access machine interfaces for research paper search, essay catalogs, and agent tools."
           />
 
           <div className="pt-2">

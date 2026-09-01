@@ -109,13 +109,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/job-boards`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/privacy`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/developers`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/docs`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/scan`, lastModified: buildDate, changeFrequency: 'daily', priority: 0.9 },
     { url: `${BASE_URL}/scan.md`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/pricing`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/pricing.md`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/openapi.json`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/openapi.json`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/auth.md`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/llms.txt`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/brand.txt`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/llms.txt`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/llms-full.txt`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/.well-known/agents.json`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/.well-known/mcp.json`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/.well-known/api-catalog`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/.well-known/ard.json`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
   ];
 
   const glossaryRoutes: MetadataRoute.Sitemap = glossaryTerms.map(term => ({

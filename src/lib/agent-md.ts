@@ -198,11 +198,11 @@ export function developersSummaryLines(): string[] {
 
 function developersMarkdown(): string {
   return [
-    '# veda.ng Developer Resources',
+    '# Vedang Vatsa Developer Resources & API Documentation (veda.ng)',
     '',
     frontmatterFor('Developer Resources', '/developers').trimEnd(),
     '',
-    `Machine interfaces for ${SITE_NAME}'s research hub: a public search API over 233,000+ indexed papers, an MCP server, syndication feeds, and agent discovery files.`,
+    'Official machine and developer interfaces for Vedang Vatsa (veda.ng): public research paper search API over 233,000+ indexed papers, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, Python SDK (vedang-cli), and agent discovery files.',
     '',
     '## Endpoints',
     '',

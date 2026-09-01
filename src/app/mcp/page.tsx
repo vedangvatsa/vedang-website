@@ -9,7 +9,7 @@ import { CourseReferences } from '@/components/course-references';
 export const metadata: Metadata = {
   title: { absolute: 'MCP Development - Build AI Tool Servers | Vedang Vatsa' },
   description: 'Free course on building MCP (Model Context Protocol) servers. Learn to create tools that connect AI models to databases, APIs, and any data source.',
-  keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude', 'Cursor', 'TypeScript', 'JSON-RPC', 'Anthropic'],
+  keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude', 'Cursor', 'TypeScript', 'JSON-RPC', 'Anthropic', 'Vedang Vatsa', 'Vedang Vatsa MCP'],
   alternates: { canonical: '/mcp' },
   openGraph: {
     title: 'MCP Development - Build AI Tool Servers',

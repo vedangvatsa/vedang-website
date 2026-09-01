@@ -7,7 +7,9 @@ export async function GET(request: NextRequest) {
   const accept = request.headers.get('accept') || '';
   if (accept.includes('application/json')) {
     return NextResponse.json({
-      name: 'Vedang Developer Resources',
+      name: 'Vedang Vatsa Developer Resources',
+      brand: 'Vedang Vatsa',
+      alternate_names: ['veda.ng Developer Resources', 'Vedang Vatsa API Documentation', 'Vedang Vatsa MCP Server'],
       url: 'https://veda.ng/developers',
       documentation: 'https://veda.ng/developers',
       openapi: 'https://veda.ng/openapi.json',

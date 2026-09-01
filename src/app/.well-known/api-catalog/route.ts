@@ -12,34 +12,34 @@ export function GET() {
           {
             href: OPENAPI_URL,
             type: 'application/openapi+json',
-            title: `${SITE_NAME} Research Paper Search API (OpenAPI 3.1)`,
+            title: 'Vedang Vatsa Research Paper Search API (OpenAPI 3.1)',
           },
           {
             href: `${SITE_URL}/developers`,
             type: 'text/html',
-            title: 'Developer documentation',
+            title: 'Vedang Vatsa Developer Documentation & API Portal',
           },
           {
             href: `${SITE_URL}/auth.md`,
             type: 'text/markdown',
-            title: 'Authentication guide (no auth required)',
+            title: 'Vedang Vatsa Authentication Guide (Keyless Access)',
           },
         ],
         service: [
           {
             href: OPENAPI_URL,
             type: 'application/openapi+json',
-            title: `${SITE_NAME} Research Paper Search API (OpenAPI 3.1)`,
+            title: 'Vedang Vatsa Research Paper Search API (OpenAPI 3.1)',
           },
           {
             href: `${SITE_URL}/developers`,
             type: 'text/html',
-            title: 'Developer documentation',
+            title: 'Vedang Vatsa Developer Documentation & API Portal',
           },
           {
             href: `${SITE_URL}/auth.md`,
             type: 'text/markdown',
-            title: 'Authentication guide (no auth required)',
+            title: 'Vedang Vatsa Authentication Guide (Keyless Access)',
           },
         ],
         describedby: [

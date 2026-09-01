@@ -124,17 +124,19 @@ const organizationSchema = {
     'https://www.npmjs.com/package/vedang',
     'https://linkedin.com/in/vedangvatsa',
     'https://x.com/vedangvatsa',
+    'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
+    'https://www.youtube.com/@vedangvatsa',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Veda Developer Resources & SDKs',
+    name: 'Vedang Vatsa Developer Resources & SDKs',
     itemListElement: [
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'WebAPI',
-          name: 'Veda Public REST API',
-          description: 'Keyless, open-access research API indexing 233,000+ academic papers.',
+          name: 'Vedang Vatsa Public REST API',
+          description: 'Keyless, open-access research API indexing 233,000+ academic papers by Vedang Vatsa.',
           url: 'https://veda.ng/developers',
           documentation: 'https://veda.ng/developers',
         },
@@ -143,8 +145,8 @@ const organizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'SoftwareApplication',
-          name: 'Veda MCP Server',
-          description: 'Model Context Protocol (MCP) server over Streamable HTTP.',
+          name: 'Vedang Vatsa MCP Server',
+          description: 'Model Context Protocol (MCP) server over Streamable HTTP for AI agents.',
           url: 'https://veda.ng/.well-known/mcp',
           applicationCategory: 'DeveloperApplication',
         },
@@ -153,8 +155,8 @@ const organizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'SoftwareApplication',
-          name: 'vedang-cli (PyPI Python SDK)',
-          description: 'Official Python SDK and CLI package for Veda research tools.',
+          name: 'vedang-cli (Vedang Vatsa PyPI Python SDK)',
+          description: 'Official Python SDK and CLI package for Vedang Vatsa research tools.',
           url: 'https://pypi.org/project/vedang-cli/',
           downloadUrl: 'https://pypi.org/project/vedang-cli/',
           applicationCategory: 'DeveloperApplication',
@@ -165,8 +167,8 @@ const organizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'SoftwareApplication',
-          name: 'vedang (NPM TypeScript SDK)',
-          description: 'Official TypeScript and JavaScript SDK package for Veda developer resources.',
+          name: 'vedang (Vedang Vatsa NPM TypeScript/JS SDK)',
+          description: 'Official TypeScript and JavaScript SDK package for Vedang Vatsa developer resources.',
           url: 'https://www.npmjs.com/package/vedang',
           downloadUrl: 'https://www.npmjs.com/package/vedang',
           applicationCategory: 'DeveloperApplication',
