@@ -172,7 +172,7 @@ Your objective is to update our codebase, server response headers, and static fi
 `;
 
   if (failing.length > 0) {
-    prompt += `\n#### 🔴 CRITICAL FAILURES (${failing.length}):\n`;
+    prompt += `\n#### CRITICAL FAILURES (${failing.length}):\n`;
     failing.forEach((c, idx) => {
       prompt += `\n${idx + 1}. [${c.layer.toUpperCase()}] ${c.name}\n`;
       prompt += `   - Issue: ${c.details}\n`;
@@ -185,7 +185,7 @@ Your objective is to update our codebase, server response headers, and static fi
   }
 
   if (warnings.length > 0) {
-    prompt += `\n#### 🟡 RECOMMENDED IMPROVEMENTS & WARNINGS (${warnings.length}):\n`;
+    prompt += `\n#### RECOMMENDED IMPROVEMENTS & WARNINGS (${warnings.length}):\n`;
     warnings.forEach((c, idx) => {
       prompt += `\n${idx + 1}. [${c.layer.toUpperCase()}] ${c.name}\n`;
       prompt += `   - Issue: ${c.details}\n`;
@@ -198,7 +198,7 @@ Your objective is to update our codebase, server response headers, and static fi
   }
 
   if (failing.length === 0 && warnings.length === 0) {
-    prompt += `\n🎉 All 61 checks passed! Maintain your agentic readiness by running regular CI/CD checks against https://veda.ng/api/v1/scan.\n`;
+    prompt += `\nAll 61 checks passed. Maintain agentic readiness by running regular CI/CD checks against https://veda.ng/api/v1/scan.\n`;
   }
 
   prompt += `
