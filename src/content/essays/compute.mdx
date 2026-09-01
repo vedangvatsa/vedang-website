@@ -1,84 +1,86 @@
 ---
 title: "The National AI Compute Scorecard"
-summary: "6 countries took different approaches to national AI compute. Each programme counts a different thing."
+summary: "A comparative evaluation of national AI compute strategies across the United States, United Kingdom, European Union, India, France, and Japan."
 date: "2026-08-10"
 author: "Vedang Vatsa"
 category: "AI Policy"
 keywords: ["AI Compute", "NAIRR", "AI Factories", "EuroHPC", "AIRR", "IndiaAI", "GPUs", "Sovereign AI"]
 ---
 
-6 countries or blocs have national AI compute programmes large enough to compare. The US donated access. The UK bought a machine. The EU built a federation. India rented. France counts private pledges. Japan runs through 1 company. The numbers below are what each programme publishes.
+Six major economies and multilateral blocs have established national AI compute initiatives, each adopting distinct funding mechanisms and metric definitions:
 
-## The US
+- **United States**: Public-private consortium coordinating donated commercial cloud credits and federal compute allocations.
+- **United Kingdom**: Direct public procurement and capital expenditure for dedicated national supercomputers.
+- **European Union**: Federally co-funded "AI Factories" integrated into the EuroHPC supercomputing network.
+- **India**: Subsidized compute rental marketplace empaneled across commercial cloud service providers.
+- **France**: Capital mobilization through private investment pledges and regional EuroHPC factory nodes.
+- **Japan**: Targeted industrial subsidies to domestic cloud infrastructure operators and corporate balance sheets.
 
-The United States did not buy a single GPU for its national programme. The National AI Research Resource pilot, launched in January 2024 under the National Science Foundation, coordinates donated compute from private companies and federal agencies and routes researchers and students to the machines.
+## United States: National AI Research Resource (NAIRR)
 
-The NSF NAIRR page, [last updated in March 2026](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr), estimates ~$100 million in private-sector in-kind contributions over the pilot's first 2 years. The largest contributions: NVIDIA ($30 million in compute and software), Microsoft ($20 million in Azure credits), OpenAI ($1 million in model access), and Cerebras (up to 4 EXAFLOPs of compute). [28 nongovernmental partners](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr) have contributed.
+The United States National AI Research Resource (NAIRR) pilot, launched in January 2024 by the National Science Foundation (NSF), coordinates private-sector compute contributions and federal lab access without direct government hardware acquisition ([NSF NAIRR Overview](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr)).
 
-14 federal agencies participate, from NASA and DARPA to the FDA and the Department of War. The Department of Energy and the National Institutes of Health co-lead a separate secure allocation track called NAIRR Secure for privacy-sensitive AI research.
+- **In-Kind Contributions**: An estimated $100 million in private compute credits and software access from 28 nongovernmental partners, including NVIDIA ($30M in compute/software), Microsoft ($20M in Azure credits), OpenAI ($1M in model access), and Cerebras (up to 4 Exaflops capacity).
+- **Federal Participation**: 14 participating agencies, with specialized access tracks such as NAIRR Secure (co-led by the Department of Energy and National Institutes of Health) for privacy-preserving medical and national security research.
+- **Reported Program Metrics**: Over 840 research awards, 86 classroom initiatives, and support for more than 6,000 students across 50 states and territories ([NAIRR Pilot Portal](https://nairrpilot.org)).
 
-The NAIRR pilot publishes a running tally on its portal, [nairrpilot.org](https://nairrpilot.org). As of 14 August 2026 the portal listed **840+ research projects, 86 NAIRR Classroom awards, 23 infrastructure and data demonstration projects, and 3 community workshops**. The NSF page, last updated March 2026, cited more than 600 projects and 6,000 students across all 50 states, Washington, DC, and Puerto Rico.
+## United Kingdom: AI Research Resource (AIRR)
 
-Washington did not buy GPUs and did not build halls. It routes people to donated machines and counts projects.
+The UK approach relies on direct public capital expenditure to procure and operate state-funded high-performance computing clusters ([UKRI Announcement](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/)):
 
-## The UK
+- **Capital Allocation**: £300 million committed in Phase 1 to construct and operate two primary supercomputing centers.
+- **Operational Hardware**: **Isambard-AI** at the University of Bristol (equipped with 5,448 NVIDIA GH200 Grace Hopper superchips, funded via ~£225 million) and **Dawn** at the University of Cambridge ([University of Bristol Release](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html)).
+- **Associated Infrastructure**: An additional £750 million planned commitment for an exascale-class national supercomputing installation at the University of Edinburgh.
 
-The UK's AI Research Resource is a public procurement programme. In the [March 2023 Spring Budget](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/), the government set aside £100 million for AIRR. On 1 November 2023, at the AI Safety Summit, that figure was [tripled to £300 million](https://www.gov.uk/government/news/technology-secretary-announces-investment-boost-making-british-ai-supercomputing-30-times-more-powerful) for phase 1, to build and connect 2 machines.
+## European Union: EuroHPC AI Factories
 
-Those 2 machines exist. **Isambard-AI** at the University of Bristol uses [5,448 NVIDIA GH200 Grace Hopper superchips](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html) and about [£225 million in public money](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html). **Dawn** at the University of Cambridge is the second AIRR site. [GOV.UK](https://www.gov.uk/government/news/cambridge-supercomputer-set-to-get-6-times-more-powerful-as-government-backs-british-ai-innovation) describes AIRR, launched in July 2025, as giving researchers and start-ups free access to both systems.
-
-A separate story often gets mixed into AIRR. The previous government planned a large national supercomputer in Edinburgh. The incoming Labour government [cancelled or paused that plan](https://www.theregister.com/special-features/2025/06/12/uk-reheats-edinburgh-supercomputer-plan-sans-exascale-chops/672644), saying the money had never been formally allocated. In 2025 the government [recommitted up to £750 million](https://www.gov.uk/government/news/scotland-to-host-uks-national-supercomputer-as-chancellor-confirms-750-million-investment) for a new national supercomputer at Edinburgh, now described as working alongside AIRR. AIRR's phase-1 pair was Bristol and Cambridge. Edinburgh is a different ledger line.
-
-The UK also participates in the EU's AI Factory network as an antenna partner, listed as UKAIFA in the [European Commission's AI Factories catalogue](https://digital-strategy.ec.europa.eu/en/policies/ai-factories). Its natural metrics would be machine utilisation, queue length, and hours by user class. It has published announcements, chip counts, and site names. It has not published utilisation next to the £300 million phase-1 figure.
-
-## The EU
-
-The EU's AI Factories publish more selection detail than any other programme. The [European Commission](https://digital-strategy.ec.europa.eu/en/policies/ai-factories) publishes the full selection history.
+The European Commission operates a federated supercomputing network through the EuroHPC Joint Undertaking, combining €10 billion in multi-year public funding from the EU, member states, and partner nations ([European Commission AI Factories](https://digital-strategy.ec.europa.eu/en/policies/ai-factories)):
 
 <div class="table-wrapper">
 
-| Wave | Date | Sites |
+| Deployment Wave | Implementation Date | Participating Consortia |
 | --- | --- | --- |
-| First | December 2024 | 7 consortia, 15 member states |
-| Second | March 2025 | 6 more |
-| Third | October 2025 | 6 more, plus 13 antennas |
+| First Wave | December 2024 | 7 regional consortia across 15 Member States |
+| Second Wave | March 2025 | 6 additional factory consortia |
+| Third Wave | October 2025 | 6 factory consortia and 13 associated antenna nodes |
 
 </div>
 
-<p class="table-source">Source: <a href="https://digital-strategy.ec.europa.eu/en/policies/ai-factories">European Commission, AI Factories</a>.</p>
+<p class="table-source">Source: <a href="https://digital-strategy.ec.europa.eu/en/policies/ai-factories">European Commission, EuroHPC</a>.</p>
 
-The network now stands at 19 AI Factories and 13 antennas across the EU and partner countries. The Commission says at least 9 new AI-optimised supercomputers will be procured, which it says will more than triple the EuroHPC AI computing capacity. Total investment through the EuroHPC Joint Undertaking for the 2021-2027 period is €10 billion, counting EU, member state, and associated country money.
+The network encompasses 19 operational AI Factories, providing subsidized access to major supercomputers including Leonardo (Italy), MareNostrum (Spain), and LUMI (Finland), alongside an open call for up to 7 large-scale "AI Gigafactories."
 
-The EU has also opened a call for up to 7 AI Gigafactories, facilities of more than 100,000 advanced AI processors each, supported by up to €10 billion in public funding and an estimated €20 billion in private investment.
+## India: Subsidized commercial cloud marketplace
 
-The EU publishes factory selections, site counts, and partner lists. The [EuroHPC AI Factories page](https://eurohpc-ju.europa.eu/ai-factories_en) says the factories offer free, customised support to SMEs and startups. It does not publish running hours delivered to those startups as a programme total.
+India's compute provisioning operates under the IndiaAI Mission as an empanelment and subsidy model ([IndiaAI Mission Analysis](/indiaai)):
 
-A related page, [Large Scale Access to AI factories](https://www.eurohpc-ju.europa.eu/large-scale-access-ai-factories_en), on 14 August 2026 carried a "TEMPORARILY CLOSED" banner and also listed Status as Open. Both labels sat on the same page. What is clear is the update printed there: "Due to exceptionally high demand, Leonardo, MareNostrum and LUMI-G are currently unavailable for new allocations." That is a demand signal. It is not hours consumed.
+- **Capacity Empanelment**: 15 commercial Cloud Service Providers empaneled across four tender rounds, listing an aggregate registered capacity pool of over 45,000 GPUs.
+- **Price Discovery**: Lowest-bid tender rates established benchmark pricing ranging from ₹29/hour (NVIDIA L4, monthly commitment) to ₹323/hour (NVIDIA B200 SXM, on-demand).
+- **Approved Volume**: 237 projects approved and 93.18 lakh GPU hours sanctioned as of August 2026 ([Lok Sabha Question 2807](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf)).
 
-## India
+## France: Investment summits and EuroHPC integration
 
-India's programme is covered fully in [the IndiaAI essay](/indiaai). The model is empanelment rental: IndiaAI does not buy machines. It empanels private cloud providers, approves users, and subsidises access. MeitY reported 38,000 GPUs onboarded by February 2026. Cash received by that date: ₹400.94 crore, 3.9% of the ₹10,371.92 crore outlay. Press reporting put utilised GPUs at 7,418 of 33,099 committed.
+France combines participation in EuroHPC infrastructure with international private capital mobilization:
 
-A later annex, [Lok Sabha Unstarred Question 2807](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf), answered on 5 August 2026, added **93.18 lakh GPU hours sanctioned** across 237 approved projects. Sanctioned is an approval total. It is not hours consumed. India's primary published metric is still GPUs onboarded. Consumed hours still do not appear in that annex.
+- **Summit Pledges**: During the February 2025 AI Action Summit in Paris, announced multi-year international investment intentions totaled approximately €109 billion across sovereign and private infrastructure funds ([Reuters](https://www.reuters.com/technology/artificial-intelligence/details-110-billion-euros-investment-pledges-frances-ai-summit-2025-02-10/)).
+- **Public Systems**: Operates the AI2F EuroHPC AI Factory connected to the Jean Zay supercomputer at GENCI, alongside planned commercial data center expansions.
 
-## France
+## Japan: Targeted enterprise subsidies and corporate balance sheets
 
-France treated private pledges as the national compute plan. At the AI Action Summit in Paris on 10-11 February 2025, [Reuters reported](https://www.reuters.com/technology/artificial-intelligence/details-110-billion-euros-investment-pledges-frances-ai-summit-2025-02-10/) Macron announcing about €109 billion in private AI investment in France. Brookfield was down for €20 billion. UAE financing, Macron's office said, could hit €50 billion. Those are pledges, not cash received.
+Japan's strategy leverages direct grants to domestic cloud providers combined with overseas project investment:
 
-The public side is the EU factories. The first French AI Factory, AI2F, was selected in the second wave in March 2025, tied to the Jean Zay supercomputer at GENCI. A second French factory was announced in the third wave in October 2025. France also hosts part of the MGX- and G42-backed data centre plans in [the debt essay](/aidebt), pledged at up to $52 billion.
+- **Ministry Subsidies**: The Ministry of Economy, Trade and Industry (METI) allocated up to ¥72.5 billion in computational infrastructure subsidies under the Economic Security Promotion Act, including ¥50.1 billion awarded to Sakura Internet ([METI Announcement](https://www.meti.go.jp/english/press/2024/0419_001.html)).
+- **Private Financing**: Japanese institutions and SoftBank provide syndicated project debt and corporate balance sheet financing for international compute frameworks.
 
-France counts those pledges as national capacity. Hours would show whether any of it is running.
-
-## Japan
-
-Japan's programme is not a single named mission. In [April 2024](https://www.meti.go.jp/english/press/2024/0419_001.html), METI said it would provide subsidies of up to **¥72.5 billion** to 5 company plans for AI computational resources under the Economic Security Promotion Act. Sakura Internet's plan was the largest, at about ¥50.1 billion. That is a maximum subsidy for named cloud projects, not a single national GPU fleet and not hours consumed. Broader METI chip-and-AI budget lines for later years mix semiconductors with models. They are not the same cell as this compute subsidy.
-
-SoftBank is a named Stargate partner. Press has described it as the main financial backer. That is not a filed majority stake. SoftBank's announced $19 billion equity commitment, [as reported by the Wall Street Journal](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130), was expected to be funded largely through bank borrowing. Japan's national AI compute is, in practice, hard to separate from SoftBank's balance sheet. That is the public record. Tokyo and SoftBank are related through SoftBank's balance sheet, not the same legal entity.
-
-## What each programme counts
+## Comparative summary of national compute models
 
 <img src="/images/essays/compute-table.svg?v=2" alt="Comparison of 6 national AI compute programmes: models, primary metrics, and whether they publish utilisation hours. None publishes hours." class="w-full my-8" />
 
-No programme publishes hours of GPU **use** per unit of public money. The US publishes projects supported. The EU publishes sites selected, and now a demand note on named machines. India publishes GPUs onboarded and, as of August 2026, hours sanctioned. France counts private pledges. Japan is hard to separate from SoftBank's public filings. The UK published machines and chip counts, not utilisation.
-
-They count what their model makes easy to count. The US never bought GPUs, so it counts projects. India rents from empanelled clouds, so it counts what those clouds report onboarded, and now hours sanctioned. Utilisation sat in a letter, not a dashboard. France counts summit pledges. Japan is hard to separate from SoftBank. None of them publishes hours consumed per unit of public money.
+| Country / Region | Operating Model | Primary Tracked Metric | Public Data Transparency |
+| --- | --- | --- | --- |
+| **United States** | Donated private cloud credits & federal labs | Project counts & student awards (840+ projects) | Project lists published on NAIRR portal |
+| **United Kingdom** | Direct state procurement of physical supercomputers | Installed hardware & chip count (5,448 GH200s) | Facility specs published; runtime usage internal |
+| **European Union** | Multi-nation federated supercomputer network | Factory sites & consortium counts (19 factories) | Consortium lists published; allocations tracked |
+| **India** | Subsidized marketplace on empaneled clouds | Empaneled GPU pool & sanctioned hours (93.18L hrs) | Tender rate sheets & parliamentary project tallies |
+| **France** | Private investment pledges & national EuroHPC node | Announced investment totals (€109B summit pledges) | Summit memorandums & EuroHPC factory updates |
+| **Japan** | State subsidies to commercial data centers | Subsidized company budgets (¥72.5B METI grants) | METI subsidy notifications & corporate disclosures |

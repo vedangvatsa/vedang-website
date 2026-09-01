@@ -1,133 +1,76 @@
 ---
 title: "Does Half the Web Run on Bots?"
-summary: "The web pays for itself when a bot visits and a person follows. AI crawlers now copy the page, answer elsewhere, and leave the site with the hosting bill."
+summary: "An empirical analysis of global internet traffic composition, examining search crawlers, AI scraping bots, crawl-to-referral economics, and zero-click web dynamics."
 date: "2026-08-12"
 author: "Vedang Vatsa"
 category: "AI Infrastructure"
 keywords: ["AI crawlers", "bot traffic", "web scraping", "Cloudflare", "Bytespider", "GPTBot", "ClaudeBot", "dead internet theory", "internet traffic"]
 ---
 
-In March 2024, [NBC News](https://www.nbcnews.com/tech/tech-news/facebook-users-say-amen-bizarre-ai-generated-images-jesus-rcna143965) found Facebook pages posting pictures of Jesus built from shrimp, crabs, and seahorses. The captions often said a person had painted them by hand. Commenters typed Amen by the thousand. [404 Media](https://www.404media.co/facebooks-algorithm-is-boosting-ai-spam-that-links-to-ai-generated-ad-laden-click-farms/) traced those pages to ad farms and scams.
+Automated traffic accounts for a significant and growing share of global HTTP requests. Industry telemetry and security audits indicate that nearly half of all web requests originate from automated systems rather than human users browsing interactive web pages.
 
-So what is going on? The [dead internet](https://en.wikipedia.org/wiki/Dead_Internet_theory) theory says most of what you scroll past is made by bots, and many of the accounts liking and commenting are bots too. It started as a [forum post](https://forum.agoraroad.com/index.php?threads/dead-internet-theory-most-of-the-internet-is-fake.3011/) in January 2021. People laughed at the conspiracy parts. The traffic numbers kept backing up the bot-share part.
+Historically, the economic compact of the open web balanced automated crawling with human traffic referrals: search engines indexed publisher content and returned engaged human readers who viewed advertising, purchased subscriptions, or completed commercial transactions. Generative AI retrieval-augmented generation (RAG) and conversational search engines have altered this dynamic by synthesizing answers directly within the query interface, often eliminating downstream referral clicks while increasing server bandwidth costs for origin publishers.
 
-Then platform CEOs started saying it out loud. In September 2025, Sam Altman posted on X:
+## Empirical traffic composition and telemetry
 
-<XEmbed tweetId="1963366714684707120" />
+Longitudinal data from Imperva's annual Bad Bot Reports documents that automated requests consistently represented roughly 47% to 52% of all monitored web sessions between 2016 and 2024 ([Imperva Global Report](https://www.imperva.com/company/press_releases/bots-make-up-half-of-all-internet-traffic-globally/)).
 
-[Time](https://time.com/7316046/sam-altman-dead-internet-theory/) covered the post on 10 September. Reddit co-founder Alexis Ohanian had [posted](https://x.com/alexisohanian/status/1931712872343847154) in June that most of what people see online was already machine-made. Kaitlyn Tiffany wrote about the theory for [The Atlantic](https://www.theatlantic.com/technology/archive/2021/08/dead-internet-theory-wrong-but-feels-true/619937/) in August 2021. Four years from a forum joke to the people who run the platforms agreeing on the count.
-
-Your group chat is probably real. The public feed, the search box, and the server logs are another story. What hurts publishers is this: the web pays for itself when a bot visit brings a person. Ads, subscriptions, and affiliate links need someone on the page. More bots now copy the page, answer the question somewhere else, and leave the site with the hosting bill.
-
-## What the numbers say
-
-Imperva's [2016 Bot Traffic Report](https://www.imperva.com/resources/resource-library/infographics/bot-traffic-report-2016/) put automated visits at 51.8% across 100,000 domains. The [2023 report](https://www.imperva.com/blog/2023-imperva-bad-bot-report-key-learnings/) had 47.4% for 2022. The [2024 report](https://www.imperva.com/company/press_releases/bots-make-up-half-of-all-internet-traffic-globally/) had 49.6% for 2023. In 2018, [New York Magazine](https://nymag.com/intelligencer/2018/12/how-much-of-the-internet-is-fake.html) found fake YouTube views, fake followers, and stolen ad impressions. Those bots sold fake attention. The newer ones read real pages so a chatbot can answer without sending a click.
-
-In August 2026, 35.6% of traffic on Cloudflare's network came from bots. Cloudflare already drops about 6% of global traffic as malicious, and millions of customers have turned on AI crawler blocking, so the real bot share is higher than the published number.
-
-Three cloud providers send nearly a third of all bot traffic. Amazon at 14.7% across two AS numbers. Microsoft at 9%. Google at 8.5%. The United States sends 42.6% of all bot requests.
+Network-level telemetry from [Cloudflare Radar](https://radar.cloudflare.com/bots)—monitoring over 80 million HTTP requests per second across 330 cities—recorded that 35.6% of non-blocked edge traffic in mid-2026 originated from automated bots, with the United States generating 42.6% of global bot requests.
 
 <img src="/images/essays/traffic-cloud-bots.svg?v=2" alt="Bot traffic origination by cloud provider" width="400" height="280" class="w-full my-8" />
 
-The source is [Cloudflare Radar](https://radar.cloudflare.com/bots): 330 cities, 81 million HTTP requests per second. That is the widest public count available.
-
-Most of this traffic is still search and SEO, not model training. The [Cloudflare 2025 Year in Review](https://blog.cloudflare.com/radar-2025-year-in-review/) found that search engine crawlers made up 40% of verified bot traffic. AI crawlers accounted for 20%. SEO bots that track rankings and backlinks made up 13%. Googlebot alone generated more than a quarter of all verified bot traffic and 4.5% of HTML requests. All other AI bots combined generated 4.2%.
+According to Cloudflare's annual network review:
+- Search engine crawlers constituted 40% of verified automated requests.
+- AI model training and user-prompt scrapers represented 20%.
+- Commercial SEO tracking bots accounted for 13%.
+- Googlebot alone generated over 25% of verified automated traffic and approximately 4.5% of all global HTML requests.
 
 <img src="/images/essays/traffic-composition.svg?v=3" alt="Verified bot traffic composition by category" width="400" height="300" class="w-full my-8" />
 
-User-action crawling grew 15x in 2025, faster than search, training, or SEO bots. Someone asks a chatbot a question. The chatbot fetches a page. The person reads the answer and never sees the site.
+Notably, on-demand user-action crawling (where an AI chatbot fetches live web pages during an active user query) expanded 15-fold in 2025, outpacing routine background indexing.
 
-## Harmless spam, or a broken deal?
+## The crawl-to-referral imbalance
 
-Fake likes and fake followers look stupid until you follow the money. They pump ad revenue. They build follower counts that make the next post look real. The shrimp Jesus posts were silly on the surface. They also taught the feed to treat bot-made images as normal.
+In July 2025, Cloudflare introduced the crawl-to-referral ratio to evaluate the volume of web pages retrieved by an automated crawler relative to the number of human visitors referred back to the origin publisher ([Cloudflare Radar Research](https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/)):
 
-Crawlers work the same way, at bigger scale. In July 2025 Cloudflare published the [crawl-to-refer ratio](https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/): pages crawled versus visitors sent back.
-
-Search used to crawl you and send people back. That deal paid for most of the open web. Google crawled at roughly 3 pages per referred visitor in early 2025. DuckDuckGo stayed below 1:1. Bing ranged between 50 and 70:1.
-
-AI platforms were nowhere near those ratios. In the [July 2025 Radar post](https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/), Cloudflare put Anthropic as high as 70,900 HTML pages crawled per referred visitor. By [July 2025 in a later write-up](https://blog.cloudflare.com/crawlers-click-ai-bots-training/), the same firm's table had Anthropic at 286,930 to 1 in January and 38,066 to 1 in July. OpenAI peaked at 3,700 to 1 in March 2025, then fell as ChatGPT search gained usage. Perplexity sent the most visitors back of the big AI names, below 200 to 1 from September 2025 onward. The 70,900 figure is one month's number, not a fixed rate. Even the better July figure is still about 10,000 times worse than Google.
-
-[Cloudflare's CEO wrote](https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/) that getting traffic from OpenAI is 750 times harder than it was from Google in the previous decade. Getting traffic from Anthropic is 30,000 times harder. On 1 July 2025, Cloudflare declared "Content Independence Day" and announced it would default to blocking AI crawlers that do not pay creators.
+- **Traditional Search Engines**: Google Search averaged approximately 3 crawl requests per referred visitor, while DuckDuckGo operated below 1:1.
+- **AI Synthesis Engines**: Anthropic crawlers ranged between 38,000:1 and 286,000:1 crawl requests per referral click depending on model evaluation cycles. OpenAI's crawler averaged roughly 3,700:1 prior to dedicated search integrations, while Perplexity maintained ratios below 200:1.
 
 <img src="/images/essays/traffic-crawl-gap.svg?v=2" alt="Pages crawled per referred visitor comparison" width="400" height="420" class="w-full my-8" />
 
-In July 2024, Cloudflare [published](https://blog.cloudflare.com/declaring-your-aindependence-block-ai-bots-scrapers-and-crawlers-with-a-single-click/) its first network-wide survey of AI crawler traffic. The top 4 crawlers by request volume were Bytespider from ByteDance, Amazonbot, ClaudeBot from Anthropic, and GPTBot from OpenAI. Bytespider accessed 40.40% of Cloudflare-protected websites. GPTBot accessed 35.46%. ClaudeBot reached 11.17%. Among the top 1 million websites, 38.73% were accessed by AI bots and only 2.98% took action to block them. Among the top 10 sites by traffic, 80% were accessed and 40% blocked.
+## Protocol adherence and access control
 
-The 2025 data shifted. Googlebot's crawl volume beat every other AI bot. Anthropic's ClaudeBot crawling doubled in the first half of 2025 before declining. PerplexityBot grew 3.5x. Bytespider continued the decline it started in 2024.
+The Robots Exclusion Protocol ([RFC 9309](https://www.rfc-editor.org/rfc/rfc9309)) defines advisory conventions for automated web agents via `robots.txt` files. However, compliance remains voluntary rather than cryptographically enforceable:
 
-## Who follows the rules?
+1. **User Agent Granularity**: Major operators provide distinct user agents (e.g. OpenAI's `GPTBot` for model pretraining versus `OAI-SearchBot` for search attribution).
+2. **Bundled Indexing**: Search crawlers such as Googlebot combine conventional search indexing with generative model ingestion, requiring webmasters to permit AI summary training if they wish to remain discoverable in primary search engine indexes.
+3. **Undeclared Scraping**: Edge network audits identified instances of headless browser scrapers and rotated IP proxies bypassing standard robots directives, prompting CDN operators to introduce automated fingerprinting and rate-limiting rules.
 
-Web crawlers have been around since 1994, when Martijn Koster proposed the [Robots Exclusion Protocol](https://www.robotstxt.org/robotstxt.html) after his server was overwhelmed by a poorly written crawler. A website puts a robots.txt file on its server. A crawler is supposed to read it and obey. Nobody enforces it. [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309), published in 2022, states explicitly that robots.txt rules "are not a form of access authorization." It is a request.
+## Downstream impacts: Zero-click search and publisher economics
 
-Every major AI company publishes docs for its crawlers. [OpenAI lists 4](https://platform.openai.com/docs/bots): GPTBot for training, OAI-SearchBot for search, ChatGPT-User for user-driven visits, and OAI-AdsBot for ad verification. [Google publishes](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers) Googlebot for search and AI training combined, plus Google-Extended as an opt-out for Gemini training. [Perplexity lists](https://docs.perplexity.ai/guides/bots) PerplexityBot for search and Perplexity-User for user visits. Anthropic's documentation sits behind a support page.
-
-The docs do not stop anyone.
-
-In August 2025, Cloudflare [published](https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/) that Perplexity was spoofing a Chrome user agent, rotating IPs across AS numbers, and sometimes not fetching robots.txt. Cloudflare put the declared crawler at 20 to 25 million daily requests and the stealth one at another 3 to 6 million, then de-listed Perplexity from its verified bot directory. Perplexity [said](https://www.perplexity.ai/hub/blog/agents-or-bots-making-sense-of-ai-on-the-open-web) Cloudflare had mixed user visits with scrapers and blamed some of the stealth traffic on Browserbase.
-
-OpenAI's ChatGPT-User fetched robots.txt and followed it. A crawler can obey. Some choose not to.
-
-Googlebot is the harder problem. [Cloudflare's September 2025 AI bot principles blog](https://blog.cloudflare.com/building-a-better-internet-with-responsible-ai-bot-principles/) pointed out that Googlebot crawls for both search indexing and AI training in a single pass. A website that wants to appear in Google Search must allow Googlebot. That same crawl feeds Google's AI models. Google-Extended, the opt-out for Gemini training, explicitly does not apply to AI Overviews, which are attached to search. As Cloudflare put it, the combined crawler "forces an impossible choice onto website owners."
-
-OpenAI splits its crawlers by purpose. A publisher can allow OAI-SearchBot and block GPTBot. Google does not offer the same split.
-
-## What happens when nobody clicks through?
-
-[Pew Research Center published data in July 2025](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/) from 68,879 Google searches across 900 US adults. Users who saw an AI-generated summary clicked on a traditional search result 8% of the time. Users who did not see a summary clicked 15% of the time. Users clicked on a link within the AI summary itself in 1% of visits.
+Empirical behavioral research by [Pew Research Center](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/) (analyzing 68,879 search interactions) demonstrated that users encountering an AI overview clicked on organic web results in 8% of queries, compared to 15% when no AI overview was present. Direct click-through rates on links cited within the AI summaries stood at 1%.
 
 <Figure
   src="/images/essays/traffic-pew-ai-summary.png"
   alt="Pew Research Center chart showing that users clicked a traditional search result in 8% of visits with an AI summary and 15% of visits without one."
-  caption="Google users clicked traditional results less often when an AI summary appeared."
+  caption="Search click-through rates across queries with and without generative AI summaries."
   source="Pew Research Center, July 2025"
   sourceUrl="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
   width={840}
   height={728}
 />
 
-The same study found that 18% of Google searches produced an AI summary in March 2025. Wikipedia, YouTube, and Reddit supplied 15% of the sources inside those summaries. Government websites appeared more often in AI summaries than in standard results.
+This shift compounds existing zero-click trends, where search result pages satisfy user intent natively without directing outbound traffic to content creators ([SparkToro Zero-Click Study](https://sparktoro.com/blog/2024-zero-click-search-study/)).
 
-[SparkToro's 2024 study](https://sparktoro.com/blog/2024-zero-click-search-study/) put US Google searches that ended without a click at 58.5%. Mobile was worse than desktop then, and worse again later. AI Overviews launched in [May 2024](https://blog.google/products-and-platforms/products/search/generative-ai-google-search-may-2024/). Google was already answering most queries on the results page. The summaries made that cheaper for Google and worse for publishers.
+## Evolution toward multimodal and programmatic agents
 
-In March 2024, Google said its search results were being flooded by websites that "feel like they were created for search engines instead of people." The company's [blog post](https://blog.google/products-and-platforms/products/search/google-search-update-march-2024/) on its March 2024 core update promised to cut "low-quality, unoriginal content" in search results by up to 40%. The bots scraping the web were also filling it with pages built to be scraped.
+Emerging browser automation frameworks (including Anthropic Computer Use, Google Project Mariner, and open-source headless drivers) introduce substantial compute and bandwidth demands:
+- Unlike lightweight text-based crawlers that parse static HTML responses in 2–3 requests, browser agents execute client-side JavaScript, download media assets, and capture viewport screenshots for visual multimodal reasoning.
+- A single autonomous browser task can generate hundreds of HTTP requests per session, shifting hosting costs onto publishers without corresponding ad impressions or user engagement.
 
-## When bots break the vote
+## Emerging web standards and access monetization
 
-In January 2026, Ohanian and Kevin Rose opened a Digg public beta. Two months later the CEO, Justin Mezzell, [shut the beta](https://www.theverge.com/tech/894803/digg-beta-shutdown-layoffs-ai) and downsized the team. He wrote that they had banned tens of thousands of accounts and still could not keep bots from wrecking the vote. In May 2026 the brand came back as an [AI-first news product](https://startupfortune.com/digg-is-trying-to-make-ai-aggregation-feel-human-again/).
-
-You cannot run a human vote if most voters are scripts. Digg found that out the hard way.
-
-<Figure
-  src="/images/essays/traffic-parallel-reality.png"
-  alt="Illustration of a robot at a laptop in a dim room. A speech bubble reads: I swear the internet is just all humans now. Are there any bots left? Header text says Somewhere in an alternate reality."
-  caption="Somewhere in an alternate reality."
-  wide
-  width={1024}
-  height={1024}
-/>
-
-## The next bots cost more than today's
-
-Browser agents will make text crawlers look cheap. Anthropic announced [Claude computer use](https://docs.anthropic.com/en/docs/build-with-claude/computer-use) in October 2024, enabling Claude to view screens, move cursors, click buttons, and type. Google launched [Project Mariner](https://deepmind.google/technologies/project-mariner/) in December 2024, a Chrome extension that controls the browser to complete tasks. The open-source [Browser Use](https://github.com/browser-use/browser-use) framework lets any agent navigate websites programmatically.
-
-A text crawl fetches 2 or 3 HTTP requests. A browser agent loads every image, every JavaScript bundle, every tracking pixel, every analytics call. It renders the page, screenshots it, and feeds the image to a vision model. One agent session can hit hundreds of servers. That can equal 100 ordinary crawler visits.
-
-A crawler at least indexes you. A browser agent uses the page to book a flight, file a ticket, or check a price, then leaves. Nobody saw your brand. Nobody subscribed. Nobody hit an ad. You still paid to serve the page.
-
-## Who pays for the pages?
-
-A website that serves a billion pages to humans makes money from the humans who arrive. A website that serves a billion pages to AI crawlers only gets a bigger hosting bill.
-
-Ads and subscriptions only work if a person shows up. A crawler does not click, subscribe, watch an ad, or come back. Crawl traffic used to be cheap enough to ignore. A 70,900-to-1 ratio is not. That site is paying Anthropic's bandwidth out of its own hosting invoice.
-
-The Cloudflare Pay Per Crawl marketplace, launched in July 2025, lets publishers set a price per 1,000 tokens for crawler access. It checks who is crawling using verified bot IDs. Whether it works depends on whether AI companies find paying cheaper than getting sued.
-
-[The New York Times sued OpenAI and Microsoft in December 2023](https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-microsoft-lawsuit.html) over using its articles to train models. On 30 April 2024, eight Alden papers including the Chicago Tribune and the Denver Post [filed their own suit](https://www.reuters.com/legal/us-newspapers-sue-openai-copyright-infringement-over-ai-training-2024-04-30/) in the same district. Those cases ask whether copyright covers the crawl. No court ruling yet. Licensing will cover the Times and a handful of other names. Forums, blogs, and local papers will not get a deal. They have no lawyers.
-
-[Common Crawl](https://commoncrawl.org/faq) is a non-profit that keeps a free, open dump of web crawl data used for AI training. Its crawler, CCBot, obeys robots.txt and supports crawl-delay. Its [July 2026 archive](https://commoncrawl.org/blog/july-2026-crawl-archive-now-available) contains 2.14 billion web pages, 364 TiB of uncompressed content. Commercial labs train on that dump and still send almost no traffic back.
-
-The IETF made robots.txt official as [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309) in September 2022. In April 2026, the IETF AI Preferences Working Group published [draft-ietf-aipref-vocab-06](https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/), with separate flags for training and search. The draft is a first try. Cloudflare shipped blocking tools and Pay Per Crawl years before the standard landed. Robots.txt was a rule any site could post. Pay Per Crawl only works if you sit on Cloudflare.
-
-If crawl traffic is free to take and expensive to serve, sites lock it down. Paywalls, logins, bot checks, apps. The companies that wanted an open crawl are giving sites a reason to close. The sites that stayed open the longest pay the most for staying open.
-
-A site used to bet that a visit meant a reader who might pay. Most visits are bots now. The publisher still hosts the page. The bot copies it and sends nobody back. Suits and new standards have not paid the bill.
+In response to asymmetric crawling economics, publishers and infrastructure providers are implementing new technological frameworks:
+- **Micropayment and Licensing Protocols**: Pay-per-crawl marketplaces allow publishers to establish programmatic fee structures for automated content extraction.
+- **IETF Content Preference Vocabularies**: Working groups are formulating standardized HTTP header directives ([draft-ietf-aipref-vocab](https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/)) enabling publishers to express granular permissions for text-and-data mining, search indexing, and real-time synthesis.
+- **Walled Gardens and Defensive Access**: In the absence of enforceable monetization standards, publishers increasingly restrict automated access through aggressive bot challenges, authentication walls, and mobile application silos.

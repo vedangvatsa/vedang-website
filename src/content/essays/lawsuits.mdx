@@ -1,82 +1,65 @@
 ---
 title: "The AI Lawsuit Ledger"
-summary: "Two hundred AI suits sit on public dockets. One produced a $1.5 billion cheque. The Times has spent $28 million and does not have a verdict. The paid column is almost entirely people who did not sue."
+summary: "An analysis of landmark copyright litigation surrounding AI training datasets, examining fair use doctrines, statutory damages, licensing contracts, and jurisdictional precedents across US and European courts."
 date: "2026-08-06"
 author: "Vedang Vatsa"
 category: "AI Policy"
 keywords: ["AI copyright", "NYT OpenAI", "Bartz Anthropic", "Getty Stability", "Kadrey Meta", "Thomson Reuters Ross", "GEMA"]
 ---
 
-On 20 July 2026 a federal judge in San Francisco signed the largest copyright settlement in US history. Anthropic will put $1.5 billion into a fund for authors and publishers whose books sat in a pirate library the company used to train Claude. [Reuters](https://www.reuters.com/world/us-judge-approves-anthropics-15-billion-settlement-copyright-lawsuit-2026-07-20/) called it the record. Three authors had filed the case. About half a million titles ended up in the class.
+In July 2026, a federal district court in San Francisco approved a $1.5 billion settlement in *Bartz v. Anthropic*, establishing the largest copyright settlement in US legal history concerning the ingestion of unauthorized book archives for model training ([Reuters](https://www.reuters.com/world/us-judge-approves-anthropics-15-billion-settlement-copyright-lawsuit-2026-07-20/)).
 
-The same week, the New York Times was still in discovery against OpenAI and Microsoft. [Variety](https://variety.com/2026/digital/news/new-york-times-news-outlets-accuse-openai-of-lying-lawsuit-1236805648/), citing the paper's own figures, put the Times's legal spend above $28 million, $4.2 million of that in one quarter. No verdict. No cheque from the other side.
+Concurrently, ongoing litigation between *The New York Times* and OpenAI/Microsoft in the Southern District of New York has generated over $28 million in plaintiff legal expenses without reaching an initial liability verdict ([Variety](https://variety.com/2026/digital/news/new-york-times-news-outlets-accuse-openai-of-lying-lawsuit-1236805648/)).
 
-Coverage treats those two facts as one story: AI companies are being sued, therefore copyright is being decided. Bartz priced a torrent. The Times is still fighting over logs. Neither case has produced a circuit holding on whether training on a lawfully bought book is legal.
-
-The [AI Lawsuit Tracker](https://ailawsuittracker.com/) snapshot of 1 June 2026 counted 200 cases, 68 defendants, 130 of them copyright, and more than $6 billion in disclosed stakes. Most of the $6 billion is a demand in a complaint. A demand is a number a lawyer typed. It is not money that moved.
+While aggregate legal trackers catalog more than 200 active AI disputes representing billions in theoretical damages claims ([AI Lawsuit Tracker](https://ailawsuittracker.com/)), judicial outcomes remain fragmented across distinct factual contexts—including shadow library scraping, structured database extraction, direct output memorization, and commercial licensing.
 
 <img src="/images/essays/lawsuits-ledger.svg?v=3" alt="Ledger of six AI copyright cases: status and money" class="w-full my-8" />
 
-## Bartz. The cheque was for the torrent
+## Landmark US district and appellate precedents
 
-[Bartz v. Anthropic](https://www.anthropiccopyrightsettlement.com/), N.D. Cal. 3:24-cv-05417, started with Andrea Bartz, Charles Graeber, and Kirk Wallace Johnson. They did not need a court to say that training is always illegal. They needed a court to look at LibGen and Pirate Library Mirror.
+### 1. *Bartz v. Anthropic* (N.D. Cal.)
+- **Legal Issue**: The download and curation of central training corpora from unauthorized repositories (LibGen and Pirate Library Mirror).
+- **Substantive Finding**: Judge William Alsup ruled that while algorithmic training on lawfully acquired text constitutes transformative fair use, the unauthorized bulk acquisition and retention of pirated digital libraries constituted actionable copyright infringement ([Justia Docket Analysis](https://docs.justia.com/cases/federal/district-courts/california/candce/3:2024cv05417/434709/231)).
+- **Settlement Resolution**: Anthropic agreed to a $1.5 billion settlement fund covering past conduct across an eligible class of approximately 482,000 works (~$3,000 per claimed title), approved by Judge Araceli Martínez-Olguín on 20 July 2026. The settlement resolves historical training liabilities through August 2025 without granting prospective training licenses.
 
-In June 2025 Judge William Alsup [split the case](https://docs.justia.com/cases/federal/district-courts/california/candce/3:2024cv05417/434709/231). Training on lawfully acquired books was "quintessentially transformative" and fair use. Building a central library from torrented files was not. That split is why the case settled instead of becoming a clean win for the labs, and why it is a bad template for the Times.
+### 2. *Kadrey v. Meta Platforms* (N.D. Cal.)
+- **Legal Issue**: Training of Llama foundation models on dataset collections containing works by authors including Richard Kadrey.
+- **Substantive Finding**: Judge Vince Chhabria granted summary judgment in favor of Meta in June 2025, holding that the plaintiffs had failed to demonstrate quantifiable market dilution under the fourth fair use factor, as the models did not reproduce the plaintiffs' expressive content in user outputs ([Justia Docket](https://law.justia.com/cases/federal/district-courts/california/candce/3:2023cv03417/415175/598/)).
 
-Anthropic agreed in August 2025 to $1.5 billion, about $3,000 a title after fees, on a class of roughly 500,000 works. Class counsel told the court in April 2026 that [440,490 of 482,460 eligible works](https://authorsguild.org/news/anthropic-settlement-update-91-percent-of-books-claimed/) had been claimed: 91.3%. Ordinary class actions clear about 10%. Authors wanted the money. The [Authors Guild](https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/) published the installment plan: $300 million already in escrow, $300 million after final approval, $450 million by 25 September 2026, $450 million by 25 September 2027. Claims closed 30 March 2026. Judge Araceli Martínez-Olguín granted final approval on 20 July.
+### 3. *Thomson Reuters v. Ross Intelligence* (D. Del. / 3rd Cir.)
+- **Legal Issue**: Direct competitive substitution through the unauthorized reproduction of 2,243 proprietary Westlaw headnotes to train a legal research tool.
+- **Substantive Finding**: Judge Stephanos Bibas held in February 2025 that Ross's commercial use of structured editorial headnotes was non-transformative and caused direct market harm to Thomson Reuters' core product. Oral arguments for the appeal were heard before the Third Circuit in June 2026 ([Baker Botts Analysis](https://www.bakerbotts.com/thought-leadership/publications/2026/july/third-circuit-hears-oral-argument)).
 
-The release covers past conduct through 25 August 2025. It does not license the next training run. It does not cover outputs. A lab that wants more books still has to buy them or take another complaint. $1.5 billion is the record. It is also small next to Anthropic's last published valuation, and it is a price for a library Anthropic should not have built, not a price for training. The first sentence is about authors. The second is about whether the number changes how labs ingest text. It changes how they acquire the pile. It does not tell you what a San Francisco jury would do with a purchased pile.
+### 4. *The New York Times Co. v. Microsoft and OpenAI* (S.D.N.Y.)
+- **Legal Issue**: Synthetic reproduction of paywalled journalistic articles, synthetic search summaries, and alleged removal of Copyright Management Information (CMI).
+- **Procedural Status**: Following Judge Sidney Stein's March 2025 ruling upholding the core copyright claims, litigation expanded into extensive discovery disputes regarding model training logs and synthetic output benchmarks across 17 publisher plaintiffs ([CourtListener Docket](https://www.courtlistener.com/docket/68117049/the-new-york-times-company-v-microsoft-corporation/)).
 
-## Kadrey. Same month, other judge, other pirate result
+## European and UK jurisdictional rulings
 
-[Kadrey v. Meta](https://law.justia.com/cases/federal/district-courts/california/candce/3:2023cv03417/415175/598/), N.D. Cal. 3:23-cv-03417. Thirteen authors, including Richard Kadrey. Llama, not Claude. Judge Vince Chhabria granted Meta summary judgment on 25 June 2025, two days after Alsup's split.
+### 1. *Getty Images v. Stability AI* (UK High Court)
+- **Legal Issue**: Whether importing pre-trained neural network weights (`.safetensors`) into the UK constitutes the importation of an infringing article under the Copyright, Designs and Patents Act 1988 (CDPA).
+- **Substantive Finding**: Mrs Justice Joanna Smith ruled in November 2025 that model parameters and latent representations do not store static reproductions of training images ([2025] EWHC 2863 (Ch)), dismissing the primary copyright infringement claims while preserving narrow trademark claims concerning synthetic watermarks.
 
-Chhabria also called the training transformative. He put the weight on factor four, market harm. The authors, he wrote, had not shown a real market for licensing books into training, and Llama did not spit their books back out. On that record he treated even the pirate-site copies as fair use. Then he wrote the sentence labs quote less often: in cases like this, "it seems like the plaintiffs will often win," if they build a record on market dilution. [Debevoise](https://www.debevoise.com/insights/publications/2025/06/anthropic-and-meta-decisions-on-fair-use) and the [Authors Alliance](https://www.authorsalliance.org/2025/06/26/meta-wins-on-fair-use-for-now-but-court-leaves-door-open-for-market-dilution/) both read it as a win with an asterisk.
+### 2. *GEMA v. OpenAI* (Regional Court of Munich I)
+- **Legal Issue**: The memorization and verbatim emission of copyrighted musical lyrics within GPT-4 outputs.
+- **Substantive Finding**: In November 2025, the court held that verbatim output generation constitutes an unauthorized reproduction not shielded by text and data mining (TDM) exemptions under Sections 44b and 60d of the German Copyright Act (UrhG).
 
-Two Northern District judges, same week, same subject: Alsup treated the library as infringement, Chhabria treated the pirate copies as fair use on this record. In July 2026 Chhabria [refused to certify](https://www.courtlistener.com/docket/67569326/kadrey-v-meta-platforms-inc/) an interlocutory appeal of the downloading piece. There is still no Ninth Circuit opinion. Averaging those two judges into "California held that training is fair use" skips the torrent disagreement and the missing appeal.
+## Summary of core litigation tracks
 
-After Alsup, a lab that torrented LibGen has a settlement template and a bad fact. After Chhabria, the same lab has a district opinion and a paragraph that tells the next plaintiff how to plead. A risk desk should price those differently.
+| Case | Jurisdiction | Central Legal Question | Judicial Determination / Status |
+| --- | --- | --- | --- |
+| **Bartz v. Anthropic** | US (N.D. Cal.) | Scraping and storing pirated book repositories | $1.5B class settlement approved July 2026 |
+| **Kadrey v. Meta** | US (N.D. Cal.) | Fair use defense for pretraining on internet text | Summary judgment for Meta; appeal denied |
+| **Thomson Reuters v. Ross** | US (3rd Cir.) | Training competitive products on proprietary headnotes | Partial summary judgment for TR; on appeal |
+| **NYT v. OpenAI** | US (S.D.N.Y.) | Ingestion of paywalled news & conversational RAG | Active discovery & sanctions phase |
+| **Getty v. Stability** | UK (High Court) | Model weights as infringing articles under CDPA | Infringement dismissed; weights do not store copies |
+| **GEMA v. OpenAI** | Germany (Munich I) | Verbatim lyric reproduction in model responses | Injunction granted against verbatim output; on appeal |
 
-## Ross. The first "no," and the first appeals court to hear it
+## Commercial bilateral licensing market
 
-[Thomson Reuters v. Ross Intelligence](https://www.loeb.com/en/insights/publications/2025/02/thomson-reuters-v-ross-intelligence-inc), D. Del. 1:20-cv-613, is not a chatbot case. Ross built a competing legal-research tool and trained on Westlaw headnotes. Judge Stephanos Bibas granted Thomson Reuters partial summary judgment on 11 February 2025. Ross copied 2,243 headnotes. The use was commercial. It was not transformative because the point was a substitute for Westlaw. Market harm went to Thomson Reuters.
+Alongside active litigation, major AI model developers have established substantial commercial licensing agreements with content holders:
+- **News Corp & OpenAI**: Disclosed multi-year partnership covering major international news titles, reported at over $250 million over five years ([Wall Street Journal](https://www.wsj.com/business/media/openai-news-corp-strike-deal-23f186ba)).
+- **Axel Springer & OpenAI**: Multi-year licensing agreement for real-time news retrieval and training access ([OpenAI Announcement](https://openai.com/index/axel-springer-partnership/)).
+- **Reddit & Google / OpenAI**: Multi-million-dollar annual API licensing agreements providing real-time data ingestion for search synthesis and model training.
 
-Ross gave the first federal holding that AI training is not fair use. The case was about Westlaw headnotes, not novels. Headnotes are Thomson Reuters's product. A novel is not Westlaw. If the Third Circuit affirms, labs will say Ross is about a substitute legal database. If it reverses, labs will say fair use covers training. Both readings will be too big for the facts.
-
-The [Third Circuit took the appeal](https://legalblogs.wolterskluwer.com/copyright-blog/copyright-case-thomson-reuters-centre-gmbh-v-ross-intelligence-inc-usa/) in June 2025. On 11 June 2026 a panel of Judges Restrepo, Montgomery Reeves, and Bove [heard argument](https://www.bakerbotts.com/thought-leadership/publications/2026/july/third-circuit-hears-oral-argument). The certified questions are whether the headnotes are original and whether Ross's use was fair. A decision is expected later in 2026. Until Philadelphia rules, Bibas is one district judge and Alsup is another. The first appellate sentence in this field will be about Westlaw, and it will be quoted as if it were about ChatGPT.
-
-## The Times. Money out, nothing back
-
-[The New York Times Company v. Microsoft and OpenAI](https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-microsoft-lawsuit.html), S.D.N.Y. 1:23-cv-11195, filed 27 December 2023. The complaint asked for billions. Judge Sidney Stein let the core copyright claims through in March 2025 and cut some DMCA counts. The Daily News, the Center for Investigative Reporting, the Intercept, Ziff Davis, and more sit in the same cluster. By July 2026 the sanctions motion named [seventeen publishers](https://www.nytimes.com/2026/07/09/technology/new-york-times-openai.html).
-
-What has actually happened is discovery. In May 2025 the court ordered OpenAI to keep ChatGPT logs. In January 2026 Stein affirmed a 20 million log sample. On 9 July 2026 the publishers [moved for sanctions](https://variety.com/2026/digital/news/new-york-times-news-outlets-accuse-openai-of-lying-lawsuit-1236805648/), saying OpenAI hid its ability to search training sets and output logs for two years, and deleted conversation logs. The [docket](https://www.courtlistener.com/docket/68117049/the-new-york-times-company-v-microsoft-corporation/) was still taking paper on 7 August 2026. In June the Times asked to amend to allege Microsoft had encouraged OpenAI to use the paper without authorisation.
-
-The $28 million went to the Times's lawyers. OpenAI has not paid a judgement. The case that would actually price news has produced the least law and the most process, because OpenAI's defence lives in the training set and the logs, and the publishers need those. The sanctions motion is the fight over whether the set is inspectable. If Stein never reaches fair use, the industry will still quote Bartz and Kadrey as "the law of training." Those opinions stop at the Northern District.
-
-## Getty lost the weights theory. GEMA won the lyric
-
-Getty sued Stability AI in London. Training had happened outside the UK, so Getty dropped the primary infringement count. What remained: importing the model into Britain was importing an infringing copy.
-
-Mrs Justice Joanna Smith decided [Getty Images v Stability AI](https://www.judiciary.uk/judgments/getty-images-v-stability-ai/), [2025] EWHC 2863 (Ch), on 4 November 2025. The model is an "article." The weights, on the facts the parties agreed, do not store Getty's photographs. At paragraph 600 she wrote that the weights "are purely the product of the patterns and features which they have learnt." They are not an infringing copy under the CDPA. Getty kept a narrow trademark win on watermarks that leaked into outputs. That holding stays in England. It is a loss on the theory that a `.safetensors` file is a stack of stolen pictures.
-
-Germany's collecting society [GEMA beat OpenAI](https://www.twobirds.com/en/insights/2025/landmark-ruling-of-the-munich-regional-court-(gema-v-openai)-on-copyright-and-ai-training) at LG München I in November 2025, case 42 O 14139/24. Nine German songs, including "Atemlos," "Männer," and "Über den Wolken." Memorized lyrics in GPT-4 were reproduction. The TDM exceptions in sections 60d and 44b UrhG did not save the lab. OpenAI is appealing to the Munich Higher Regional Court. A first-instance European holding is not the CJEU.
-
-Getty and GEMA can both be right. Smith was asked whether the imported file is a copy of a photograph. Munich was asked whether the model stores and emits a lyric. Those are different legal objects. Labs that quote Getty as "Europe said weights are fine" are quoting a UK import case on an agreed technical fact. Collecting societies that quote GEMA as "Europe said training is illegal" are quoting a German output-and-memorization case about nine songs. The brief that matters in Brussels is the one the AI Office will write, not either judgment.
-
-## Music closed a docket without a number. Studios sued the image box
-
-The major labels sued Suno and Udio in 2024. Warner [settled with Udio](https://ailawsuittracker.com/) in April 2026 as a "strategic partnership." Terms confidential. UMG and Sony stayed in against Suno. A confidential partnership can include cash, a licence, equity, or a product credit. From outside the room you cannot put a dollar in the paid column. You can only say the docket went quiet.
-
-[Authors Guild v. OpenAI](https://ailawsuittracker.com/cases/authors-guild-v-openai/), filed September 2023, is still live. George R.R. Martin and David Baldacci are in the caption. Stein let output-infringement claims survive in October 2025. No class cheque. Reddit sued Perplexity in April 2026, S.D.N.Y. 1:25-cv-08713, on RAG outputs and database rights. A retrieval case, not a pretraining case. Filed is still cheap.
-
-Disney, Universal, and then Warner did not sue OpenAI. They sued Midjourney. The [11 June 2025 complaint](https://www.bbc.com/news/articles/cg5vjqdm1ypo) in Los Angeles called the generator a "bottomless pit of plagiarism" and put Midjourney's 2024 revenue at $300 million. Yoda, Spider-Man, the Hulk. In September 2025 Disney, Universal, and Warner added [MiniMax and Hailuo](https://www.mckoolsmith.com/newsroom-ailitigation-38) on video. Both dockets were still active in mid-2026. A studio that wants a licence from a frontier lab does not put that lab in the Central District. It puts Midjourney there, where the outputs are the product and the characters are the proof. The Midjourney cases are about substitution you can screenshot. The Times case is about substitution you have to prove with logs.
-
-## The money that moved sat in contracts
-
-Subtract Bartz and the paid column for training-data copyright is almost empty. Warner-Udio is empty on purpose.
-
-The cheques that did clear were private. The [Wall Street Journal](https://www.wsj.com/business/media/openai-news-corp-strike-deal-23f186ba) put OpenAI's May 2024 News Corp deal at more than $250 million over five years. That is a reported figure, not a filed close. It covers the Journal, Barron's, the Times of London, the New York Post, and Australian titles. [Axel Springer](https://openai.com/index/axel-springer-partnership/) signed in December 2023. The companies did not disclose terms. [Nieman Lab](https://www.niemanlab.org/2024/12/publishers-find-the-ai-era-not-all-that-lucrative/) later wrote the deal was "said to be worth about $10 million per year." AP was first, summer 2023, terms undisclosed. Reddit-Google was [reported around $60 million a year](https://www.reuters.com/technology/reddit-ai-content-licensing-deal-with-google-sources-say-2024-02-22/) for API access. A [June 2026 census](https://mediaandthemachine.substack.com/p/ai-content-licensing-deals-june-2026) counted 48 news licences against 16 music and 12 image, with OpenAI far ahead on volume.
-
-Those are paid. They are also private. They do not bind the Times, the Authors Guild, or GEMA. Mixing them into "the lawsuits" hides the fact that the people who sued still have not been paid, except the Bartz class. The market that exists is a market for access. The Journal sold a feed. The Times filed a complaint. One of those produced a number you can put in a cell. The other produced a $28 million legal bill and a sanctions motion.
-
-Labs will keep buying the publishers who will sell, and litigating the publishers who will not. Courts will keep deciding the case in front of them: a torrent, a headnote, a lyric, a watermark. There is no single case called "the law of AI training." There are five holdings, one historic cheque, a stack of private licences, and a New York docket that still has not reached the question the headlines already answered.
+These commercial agreements create established market pricing for authenticated, real-time data access feeds, operating alongside ongoing court determinations of fair use boundaries.
