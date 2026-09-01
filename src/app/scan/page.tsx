@@ -265,7 +265,11 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
 
         <div className="flex items-center gap-3 shrink-0 pt-0.5">
           <span className="text-xs font-medium text-muted-foreground">
-            {check.score}/{check.maxScore}
+            {check.status === 'na'
+              ? 'N/A'
+              : check.impact === 'optional'
+              ? (check.score > 0 ? `+${check.score} Bonus` : 'Optional')
+              : `${check.score}/${check.maxScore}`}
           </span>
           {hasDetails && (
             <div className={cn('text-muted-foreground transition-transform duration-150', expanded && 'rotate-180')}>

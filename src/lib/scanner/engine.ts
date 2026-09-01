@@ -50,8 +50,16 @@ async function safeFetch(url: string, init?: RequestInit): Promise<FetchResult> 
 
 function scoreLayer(checks: CheckResult[]) {
   const score = checks.reduce((a, c) => a + c.score, 0);
-  const maxScore = checks.reduce((a, c) => a + c.maxScore, 0);
-  return { score, maxScore, percentage: Math.round((score / Math.max(1, maxScore)) * 100) };
+  // Total displayed max score for applicable checks
+  const layerMaxScore = checks.reduce((a, c) => (c.status === 'na' ? a : a + c.maxScore), 0);
+  // Baseline denominator for 100% mastery (excludes optional bonus checks from dragging down percentage)
+  const baselineMax = checks.reduce((a, c) => {
+    if (c.status === 'na' || c.impact === 'optional') return a;
+    return a + c.maxScore;
+  }, 0);
+  const effectiveMax = Math.max(1, baselineMax);
+  const percentage = Math.min(100, Math.round((score / effectiveMax) * 100));
+  return { score, maxScore: Math.max(score, layerMaxScore), percentage };
 }
 
 export async function scanDomain(targetInput: string): Promise<ScanResult> {
@@ -753,7 +761,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   if (mcpOk) {
     usabilityChecks.push({
       id: 'mcp-server-live', name: 'Model Context Protocol (MCP) Server', layer: 'usability',
-      status: 'pass', score: 4, maxScore: 4, impact: 'critical',
+      status: 'pass', score: 3, maxScore: 3, impact: 'recommended',
       details: 'Live MCP Streamable HTTP server detected with valid JSON-RPC 2.0 initialize handshake.',
       why: 'MCP (Model Context Protocol) is the open standard backed by Anthropic and the AI ecosystem that allows Claude, Cursor, and autonomous agents to connect directly to your tools and data sources.',
       referenceUrl: 'https://spec.modelcontextprotocol.io',
@@ -761,7 +769,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   } else {
     usabilityChecks.push({
       id: 'mcp-server-live', name: 'Model Context Protocol (MCP) Server', layer: 'usability',
-      status: 'warning', score: 0, maxScore: 4, impact: 'critical',
+      status: 'warning', score: 0, maxScore: 2, impact: 'recommended',
       details: 'No live MCP server found at /.well-known/mcp or /api/mcp.',
       why: 'An MCP server allows AI agents (Claude, Cursor, Antigravity) to directly execute tools, query your databases, and read your resources through an open protocol.',
       recommendation: 'Deploy an MCP Streamable HTTP endpoint at /.well-known/mcp.',
@@ -778,7 +786,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     usabilityChecks.push({
       id: 'mcp-schema-handshake', name: 'MCP Schema Handshake Validation', layer: 'usability',
       status: hasCapabilities ? 'pass' : 'warning',
-      score: hasCapabilities ? 2 : 1, maxScore: 2, impact: 'important',
+      score: hasCapabilities ? 2 : 1, maxScore: 2, impact: 'recommended',
       details: hasCapabilities
         ? `MCP initialized successfully with protocol version: ${parsedMcp.result?.protocolVersion || '2024-11-05'}.`
         : 'MCP responded to JSON-RPC probe but omitted standard capabilities dictionary.',
@@ -788,8 +796,8 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   } else {
     usabilityChecks.push({
       id: 'mcp-schema-handshake', name: 'MCP Schema Handshake Validation', layer: 'usability',
-      status: 'na', score: 0, maxScore: 2, impact: 'important',
-      details: 'Skipped: No active MCP server endpoint detected.',
+      status: 'na', score: 0, maxScore: 0, impact: 'optional',
+      details: 'Skipped: Relevant when active MCP server endpoints are present.',
       why: 'Evaluates MCP server capability negotiation.',
       referenceUrl: 'https://spec.modelcontextprotocol.io',
     });
@@ -815,7 +823,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     usabilityChecks.push({
       id: 'openapi-spec', name: 'OpenAPI Specification (openapi.json)', layer: 'usability',
       status: isValidJson ? 'pass' : 'warning',
-      score: isValidJson ? 3 : 2, maxScore: 3, impact: 'critical',
+      score: isValidJson ? 3 : 2, maxScore: 3, impact: 'recommended',
       details: isValidJson
         ? `Valid OpenAPI 3.x specification found${title ? ` (${title})` : ''} at /openapi.json.`
         : 'openapi.json exists but is not valid JSON or lacks openapi version field.',
@@ -825,7 +833,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   } else {
     usabilityChecks.push({
       id: 'openapi-spec', name: 'OpenAPI Specification (openapi.json)', layer: 'usability',
-      status: 'warning', score: 0, maxScore: 3, impact: 'critical',
+      status: 'warning', score: 0, maxScore: 2, impact: 'recommended',
       details: 'No OpenAPI specification found at /openapi.json.',
       why: 'Without an OpenAPI spec, AI agents cannot reliably discover endpoint parameters, authentication requirements, or response schemas.',
       recommendation: 'Publish an OpenAPI 3.1 specification at /openapi.json.',
@@ -839,7 +847,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     usabilityChecks.push({
       id: 'openapi-examples', name: 'OpenAPI Example Documentation', layer: 'usability',
       status: hasExamples ? 'pass' : 'warning',
-      score: hasExamples ? 2 : 1, maxScore: 2, impact: 'important',
+      score: hasExamples ? 2 : 1, maxScore: 2, impact: 'recommended',
       details: hasExamples
         ? 'OpenAPI schema includes concrete parameter and response examples.'
         : 'OpenAPI schema detected, but lacks parameter/response examples.',
@@ -849,8 +857,8 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   } else {
     usabilityChecks.push({
       id: 'openapi-examples', name: 'OpenAPI Example Documentation', layer: 'usability',
-      status: 'na', score: 0, maxScore: 2, impact: 'important',
-      details: 'Skipped: No OpenAPI spec detected to evaluate.',
+      status: 'na', score: 0, maxScore: 0, impact: 'optional',
+      details: 'Skipped: Relevant when OpenAPI specifications are present.',
       why: 'Example payloads prevent LLM parameter formatting errors during automated tool execution.',
       referenceUrl: 'https://openapis.org',
     });
@@ -860,7 +868,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   if (authRes?.ok && authRes.text && authRes.text.length > 30) {
     usabilityChecks.push({
       id: 'auth-guide', name: 'Authentication & Access Guide (/auth.md)', layer: 'usability',
-      status: 'pass', score: 2, maxScore: 2, impact: 'important',
+      status: 'pass', score: 2, maxScore: 2, impact: 'recommended',
       details: 'Machine-readable authentication guide found at /auth.md.',
       why: 'AI agents need clear, structured documentation on how to authenticate (API keys, OAuth2, keyless access, rate limits).',
       referenceUrl: 'https://veda.ng/aistandards',
@@ -868,7 +876,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   } else {
     usabilityChecks.push({
       id: 'auth-guide', name: 'Authentication & Access Guide (/auth.md)', layer: 'usability',
-      status: 'warning', score: 0, maxScore: 2, impact: 'important',
+      status: 'warning', score: 0, maxScore: 2, impact: 'recommended',
       details: 'No authentication guide found at /auth.md.',
       why: 'Clear authentication documentation prevents agent auth failures and keyless access confusion.',
       recommendation: 'Publish a concise /auth.md explaining how machines should authenticate or declaring keyless open access.',
@@ -881,7 +889,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   if (oauthAuthServerRes?.ok || oauthProtectedRes?.ok) {
     usabilityChecks.push({
       id: 'oauth-agent-discovery', name: 'OAuth 2.0 Agent Discovery (RFC 8414)', layer: 'usability',
-      status: 'pass', score: 2, maxScore: 2, impact: 'recommended',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
       details: 'OAuth 2.0 Authorization Server / Protected Resource metadata detected.',
       why: 'Enables autonomous token negotiation and secure delegated agent authorization without hardcoded API keys.',
       referenceUrl: 'https://datatracker.ietf.org/doc/html/rfc8414',
@@ -889,7 +897,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   } else {
     usabilityChecks.push({
       id: 'oauth-agent-discovery', name: 'OAuth 2.0 Agent Discovery (RFC 8414)', layer: 'usability',
-      status: 'warning', score: 0, maxScore: 2, impact: 'recommended',
+      status: 'warning', score: 0, maxScore: 1, impact: 'optional',
       details: 'No RFC 8414 OAuth 2.0 metadata found at /.well-known/oauth-authorization-server.',
       why: 'OAuth metadata discovery allows automated agent tool servers to negotiate scoped access.',
       recommendation: 'Provide RFC 8414 metadata if your API requires authenticated user authorization.',
@@ -919,29 +927,46 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
 
   // 3.8 Standardized Error Formatting (RFC 7807)
   const isProblemJson = Boolean(apiRootRes && (apiRootRes.headers.get('content-type') || '').includes('application/problem+json'));
-  usabilityChecks.push({
-    id: 'rfc-7807-errors', name: 'Standardized Error Formatting (RFC 7807)', layer: 'usability',
-    status: isProblemJson ? 'pass' : 'warning',
-    score: isProblemJson ? 1 : 0, maxScore: 1, impact: 'recommended',
-    details: isProblemJson
-      ? 'RFC 7807 problem+json error formatting detected.'
-      : 'Standard application/problem+json headers not returned on API probes.',
-    why: 'When AI tool calls fail, structured RFC 7807 error objects allow the agent to self-correct parameters rather than aborting the task.',
-    referenceUrl: 'https://datatracker.ietf.org/doc/html/rfc7807',
-  });
+  if (isProblemJson) {
+    usabilityChecks.push({
+      id: 'rfc-7807-errors', name: 'Standardized Error Formatting (RFC 7807)', layer: 'usability',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+      details: 'RFC 7807 problem+json error formatting detected.',
+      why: 'When AI tool calls fail, structured RFC 7807 error objects allow the agent to self-correct parameters rather than aborting the task.',
+      referenceUrl: 'https://datatracker.ietf.org/doc/html/rfc7807',
+    });
+  } else {
+    usabilityChecks.push({
+      id: 'rfc-7807-errors', name: 'Standardized Error Formatting (RFC 7807)', layer: 'usability',
+      status: 'na', score: 0, maxScore: 0, impact: 'optional',
+      details: 'Skipped: Relevant when active API endpoints are exposed.',
+      why: 'When AI tool calls fail, structured RFC 7807 error objects allow the agent to self-correct parameters rather than aborting the task.',
+      referenceUrl: 'https://datatracker.ietf.org/doc/html/rfc7807',
+    });
+  }
 
   // 3.9 API Dry-Run / Idempotency
   const supportsDryRun = Boolean(activeOpenApiRes && /"dry_run"|"dryRun"|"validate_only"|"idempotency_key"|"Idempotency-Key"/i.test(activeOpenApiRes.text));
-  usabilityChecks.push({
-    id: 'api-dry-run', name: 'API Dry-Run & Idempotency Support', layer: 'usability',
-    status: supportsDryRun ? 'pass' : 'warning',
-    score: supportsDryRun ? 1 : 0, maxScore: 1, impact: 'recommended',
-    details: supportsDryRun
-      ? 'OpenAPI schema specifies dry-run parameters or idempotency headers.'
-      : 'No dry-run parameters or idempotency keys detected in API specifications.',
-    why: 'Autonomous agents need dry-run and idempotency validation to safely simulate state changes before executing financial or mutating actions.',
-    referenceUrl: 'https://veda.ng/aistandards',
-  });
+  if (activeOpenApiRes) {
+    usabilityChecks.push({
+      id: 'api-dry-run', name: 'API Dry-Run & Idempotency Support', layer: 'usability',
+      status: supportsDryRun ? 'pass' : 'warning',
+      score: supportsDryRun ? 1 : 0, maxScore: 1, impact: 'recommended',
+      details: supportsDryRun
+        ? 'OpenAPI schema specifies dry-run parameters or idempotency headers.'
+        : 'No dry-run parameters or idempotency keys detected in API specifications.',
+      why: 'Autonomous agents need dry-run and idempotency validation to safely simulate state changes before executing financial or mutating actions.',
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  } else {
+    usabilityChecks.push({
+      id: 'api-dry-run', name: 'API Dry-Run & Idempotency Support', layer: 'usability',
+      status: 'na', score: 0, maxScore: 0, impact: 'optional',
+      details: 'Skipped: Relevant when OpenAPI specifications are present.',
+      why: 'Autonomous agents need dry-run and idempotency validation to safely simulate state changes before executing financial or mutating actions.',
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  }
 
   // 3.10 CORS Configuration for AI Interfaces
   const acao = (homepageRes?.headers.get('access-control-allow-origin') ||
@@ -1468,7 +1493,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   if (has402Header) {
     paymentsChecks.push({
       id: 'agent-payments', name: 'Agent Micropayments (x402 / L402)', layer: 'payments',
-      status: 'pass', score: 3, maxScore: 3, impact: 'recommended',
+      status: 'pass', score: 3, maxScore: 3, impact: 'optional',
       details: 'Autonomous micropayment headers detected (L402 / HTTP 402 macaroons).',
       why: 'Allows AI agents to pay per-query or per-API-call autonomously using cryptographic Lightning Network invoices without human subscription cards.',
       referenceUrl: 'https://l402.org',
@@ -1476,10 +1501,10 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   } else {
     paymentsChecks.push({
       id: 'agent-payments', name: 'Agent Micropayments (x402 / L402)', layer: 'payments',
-      status: 'warning', score: 0, maxScore: 3, impact: 'recommended',
-      details: 'No autonomous micropayment headers (L402 / HTTP 402) detected.',
-      why: 'Machine-to-machine commerce protocols allow agents to access paid premium resources programmatically.',
-      recommendation: 'Implement L402 or x402 headers on monetization endpoints.',
+      status: 'na', score: 0, maxScore: 0, impact: 'optional',
+      details: 'No autonomous micropayment headers (L402 / HTTP 402) detected. (Optional: applicable to paid APIs and monetization paywalls).',
+      why: 'Machine-to-machine commerce protocols allow agents to access paid premium resources programmatically without credit cards.',
+      recommendation: 'Implement L402 or x402 headers if you plan to monetize agent API calls or premium content.',
       referenceUrl: 'https://l402.org',
     });
   }
@@ -1488,11 +1513,11 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   const hasWebLn = Boolean(homepageHtml.includes('webln') || homepageHtml.includes('lightning:'));
   paymentsChecks.push({
     id: 'payments-webln', name: 'WebLN / Lightning Wallet Discovery', layer: 'payments',
-    status: hasWebLn ? 'pass' : 'warning',
-    score: hasWebLn ? 1 : 0, maxScore: 1, impact: 'optional',
+    status: hasWebLn ? 'pass' : 'na',
+    score: hasWebLn ? 1 : 0, maxScore: hasWebLn ? 1 : 0, impact: 'optional',
     details: hasWebLn
       ? 'WebLN or Lightning address metadata detected in DOM.'
-      : 'No WebLN or Lightning payment tags detected.',
+      : 'No WebLN or Lightning payment tags detected. (Optional: relevant for Web3 / Lightning web apps).',
     why: 'WebLN allows browser-based autonomous agents to trigger micro-transactions with zero friction.',
     referenceUrl: 'https://webln.guide',
   });
@@ -1507,6 +1532,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       ? 'Machine-readable terms of use detected (/terms-of-use.md).'
       : 'No machine-readable terms of use found at /terms-of-use.md.',
     why: 'Defines commercial usage terms, rate limits, and liability boundaries for autonomous agent transactions.',
+    recommendation: 'Add /terms-of-use.md to establish clear machine terms for automated agents.',
     referenceUrl: 'https://veda.ng/aistandards',
   });
 
@@ -1520,12 +1546,14 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   const seoScore       = scoreLayer(seoChecks);
   const paymentsScore  = scoreLayer(paymentsChecks);
 
-  const totalRawScore = discoveryScore.score + accessScore.score + usabilityScore.score +
-                        securityScore.score + seoScore.score + paymentsScore.score;
-  const totalMaxScore = discoveryScore.maxScore + accessScore.maxScore + usabilityScore.maxScore +
-                        securityScore.maxScore + seoScore.maxScore + paymentsScore.maxScore;
+  const allChecks = discoveryChecks.concat(accessChecks, usabilityChecks, securityChecks, seoChecks, paymentsChecks);
+  const totalRawScore = allChecks.reduce((a, c) => a + c.score, 0);
+  const totalBaselineMax = allChecks.reduce((a, c) => {
+    if (c.status === 'na' || c.impact === 'optional') return a;
+    return a + c.maxScore;
+  }, 0);
 
-  const score = Math.min(100, Math.max(0, Math.round((totalRawScore / Math.max(1, totalMaxScore)) * 100)));
+  const score = Math.min(100, Math.max(0, Math.round((totalRawScore / Math.max(1, totalBaselineMax)) * 100)));
 
   let grade: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F';
   if (score >= 95) grade = 'A+';
