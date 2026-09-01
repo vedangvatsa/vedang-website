@@ -115,6 +115,67 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   const homepageHtml = homepageRes?.text || mdAcceptRes?.text || '';
   const secHeaders = homepageRes?.headers ?? mdAcceptRes?.headers ?? botUaRes?.headers;
 
+  // Extract custom sitemap from robots.txt if declared
+  let customSitemapUrl: string | null = null;
+  if (robotsRes?.ok && robotsRes.text) {
+    const smMatch = robotsRes.text.match(/Sitemap:\s*(https?:\/\/[^\s\r\n]+)/i);
+    if (smMatch) {
+      customSitemapUrl = smMatch[1].trim();
+    }
+  }
+
+  // Extract custom RSS/Atom feed from HTML <head> if declared
+  let customFeedUrl: string | null = null;
+  if (homepageHtml) {
+    const feedMatch = homepageHtml.match(/<link[^>]+(?:rel=["']alternate["'][^>]+type=["']application\/(?:rss\+xml|atom\+xml|feed\+json)["']|type=["']application\/(?:rss\+xml|atom\+xml|feed\+json)["'][^>]+rel=["']alternate["'])[^>]+href=["']([^"']+)["']/i);
+    if (feedMatch) {
+      const rawHref = feedMatch[1].trim();
+      customFeedUrl = rawHref.startsWith('http') ? rawHref : `${origin}${rawHref.startsWith('/') ? '' : '/'}${rawHref}`;
+    }
+  }
+
+  // Second-stage targeted fallbacks
+  const [
+    customSitemapRes, sitemapIndexRes,
+    securityTxtLegacyRes, llmsWellKnownRes,
+    openapiYamlRes, customFeedRes,
+  ] = await Promise.all([
+    customSitemapUrl ? safeFetch(customSitemapUrl) : Promise.resolve(null),
+    (!sitemapRes?.ok || !sitemapRes.text) ? safeFetch(`${origin}/sitemap_index.xml`) : Promise.resolve(null),
+    (!securityTxtRes?.ok || !securityTxtRes.text) ? safeFetch(`${origin}/security.txt`) : Promise.resolve(null),
+    (!llmsRes?.ok || !llmsRes.text) ? safeFetch(`${origin}/.well-known/llms.txt`) : Promise.resolve(null),
+    (!openapiRes?.ok && !openapiWellKnownRes?.ok) ? safeFetch(`${origin}/openapi.yaml`) : Promise.resolve(null),
+    customFeedUrl ? safeFetch(customFeedUrl) : Promise.resolve(null),
+  ]);
+
+  const activeSitemapRes = (sitemapRes?.ok && (sitemapRes.text.includes('<urlset') || sitemapRes.text.includes('<sitemapindex')))
+    ? sitemapRes
+    : (customSitemapRes?.ok && (customSitemapRes.text.includes('<urlset') || customSitemapRes.text.includes('<sitemapindex')))
+    ? customSitemapRes
+    : (sitemapIndexRes?.ok && (sitemapIndexRes.text.includes('<urlset') || sitemapIndexRes.text.includes('<sitemapindex')))
+    ? sitemapIndexRes
+    : null;
+
+  const activeSecurityTxtRes = (securityTxtRes?.ok && securityTxtRes.text.includes('Contact:'))
+    ? securityTxtRes
+    : (securityTxtLegacyRes?.ok && securityTxtLegacyRes.text.includes('Contact:'))
+    ? securityTxtLegacyRes
+    : null;
+
+  const activeLlmsRes = (llmsRes?.ok && llmsRes.text.length > 50)
+    ? llmsRes
+    : (llmsWellKnownRes?.ok && llmsWellKnownRes.text.length > 50)
+    ? llmsWellKnownRes
+    : null;
+
+  const activeFeedRes = (feedRes?.ok && (feedRes.text.includes('<rss') || feedRes.text.includes('<feed')))
+    ? feedRes
+    : (feedJsonRes?.ok)
+    ? feedJsonRes
+    : (customFeedRes?.ok && (customFeedRes.text.includes('<rss') || customFeedRes.text.includes('<feed') || customFeedRes.text.includes('version')))
+    ? customFeedRes
+    : null;
+
   const isHttps = origin.startsWith('https://');
   const hsts = secHeaders?.get('strict-transport-security') || '';
   const csp = secHeaders?.get('content-security-policy') || '';
@@ -185,14 +246,14 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   }
 
   // 1.2 llms.txt
-  if (llmsRes?.ok && llmsRes.text && llmsRes.text.length > 50) {
-    const hasStructure = /^#\s+/m.test(llmsRes.text) && /\[.*?\]\(.*?\)/.test(llmsRes.text);
+  if (activeLlmsRes?.ok && activeLlmsRes.text && activeLlmsRes.text.length > 50) {
+    const hasStructure = /^#\s+/m.test(activeLlmsRes.text) && /\[.*?\]\(.*?\)/.test(activeLlmsRes.text);
     discoveryChecks.push({
       id: 'llms-txt', name: 'LLM Index (llms.txt)', layer: 'discovery',
       status: hasStructure ? 'pass' : 'warning',
       score: hasStructure ? 3 : 2, maxScore: 3, impact: 'critical',
       details: hasStructure
-        ? `Valid llms.txt found (${(llmsRes.text.length / 1024).toFixed(1)} KB) with structured markdown links.`
+        ? `Valid llms.txt found (${(activeLlmsRes.text.length / 1024).toFixed(1)} KB) with structured markdown links.`
         : 'llms.txt exists but lacks standard markdown structure (# title and [link](url) syntax).',
       why: 'llms.txt is the emerging standard (llmstxt.org) for feeding clean, condensed context to LLMs, IDE agents (Cursor, Windsurf), and autonomous models without HTML boilerplate.',
       referenceUrl: 'https://llmstxt.org',
@@ -304,15 +365,15 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   }
 
   // 1.7 XML Sitemap
-  if (sitemapRes?.ok && sitemapRes.text && sitemapRes.text.includes('<urlset') || sitemapRes?.text.includes('<sitemapindex')) {
+  if (activeSitemapRes?.ok && activeSitemapRes.text && (activeSitemapRes.text.includes('<urlset') || activeSitemapRes.text.includes('<sitemapindex') || activeSitemapRes.text.includes('<sitemap'))) {
     const isLinkedFromRobots = Boolean(robotsRes?.text && /Sitemap:\s*https?:\/\//i.test(robotsRes.text));
     discoveryChecks.push({
       id: 'sitemap-xml', name: 'XML Sitemap (sitemap.xml)', layer: 'discovery',
       status: isLinkedFromRobots ? 'pass' : 'warning',
       score: isLinkedFromRobots ? 2 : 1, maxScore: 2, impact: 'critical',
       details: isLinkedFromRobots
-        ? 'Valid sitemap.xml found and referenced in robots.txt.'
-        : 'sitemap.xml found, but not referenced in robots.txt.',
+        ? 'Valid XML sitemap found and referenced in robots.txt.'
+        : 'Valid XML sitemap found, but not referenced in robots.txt.',
       why: 'Search bots and AI indexers use sitemaps to discover all canonical URLs on your domain without needing to brute-force crawl every internal link.',
       recommendation: isLinkedFromRobots ? undefined : 'Add a Sitemap directive to your robots.txt file so crawlers can discover it automatically.',
       fixSnippet: isLinkedFromRobots ? undefined : { language: 'robots.txt', filename: 'public/robots.txt', code: `Sitemap: ${origin}/sitemap.xml` },
@@ -322,7 +383,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     discoveryChecks.push({
       id: 'sitemap-xml', name: 'XML Sitemap (sitemap.xml)', layer: 'discovery',
       status: 'fail', score: 0, maxScore: 2, impact: 'critical',
-      details: 'No valid XML sitemap found at /sitemap.xml.',
+      details: 'No valid XML sitemap found at /sitemap.xml, /sitemap_index.xml, or declared in robots.txt.',
       why: 'Without a sitemap, new pages may take weeks to be discovered by AI search bots (Perplexity, SearchGPT, Google).',
       recommendation: 'Generate and serve a standard sitemap.xml and reference it in your robots.txt.',
       fixSnippet: { language: 'xml', filename: 'public/sitemap.xml', code: `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${origin}</loc>\n    <lastmod>${new Date().toISOString().slice(0, 10)}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>` },
@@ -736,7 +797,8 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
 
   // 3.3 OpenAPI Specification
   const activeOpenApiRes = (openapiRes?.ok && openapiRes.text.length > 50) ? openapiRes :
-                           (openapiWellKnownRes?.ok && openapiWellKnownRes.text.length > 50) ? openapiWellKnownRes : null;
+                           (openapiWellKnownRes?.ok && openapiWellKnownRes.text.length > 50) ? openapiWellKnownRes :
+                           (openapiYamlRes?.ok && openapiYamlRes.text.length > 50) ? openapiYamlRes : null;
   if (activeOpenApiRes) {
     let isValidJson = false;
     let title = '';
@@ -744,7 +806,12 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       const parsed = JSON.parse(activeOpenApiRes.text);
       isValidJson = Boolean(parsed.openapi || parsed.swagger);
       title = parsed.info?.title || '';
-    } catch { /* ignore */ }
+    } catch {
+      // Could be YAML
+      if (activeOpenApiRes.text.includes('openapi:') || activeOpenApiRes.text.includes('swagger:')) {
+        isValidJson = true;
+      }
+    }
     usabilityChecks.push({
       id: 'openapi-spec', name: 'OpenAPI Specification (openapi.json)', layer: 'usability',
       status: isValidJson ? 'pass' : 'warning',
@@ -975,7 +1042,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   });
 
   // 4.8 RFC 9116 security.txt
-  if (securityTxtRes?.ok && securityTxtRes.text && securityTxtRes.text.includes('Contact:')) {
+  if (activeSecurityTxtRes?.ok && activeSecurityTxtRes.text && activeSecurityTxtRes.text.includes('Contact:')) {
     securityChecks.push({
       id: 'security-txt', name: 'Security Vulnerability Contact (RFC 9116)', layer: 'security',
       status: 'pass', score: 2, maxScore: 2, impact: 'important',
@@ -1358,9 +1425,12 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
 
   // 5.15 RSS / Atom / JSON Syndication Feed
   const hasFeed = Boolean(
-    (feedRes?.ok && feedRes.text.includes('<rss') || feedRes?.text.includes('<feed')) ||
-    (feedJsonRes?.ok && feedJsonRes.text.includes('version')) ||
-    homepageHtml.match(/<link[^>]+type=["']application\/(?:rss\+xml|atom\+xml|feed\+json)["']/i)
+    activeFeedRes?.ok && (
+      activeFeedRes.text.includes('<rss') ||
+      activeFeedRes.text.includes('<feed') ||
+      activeFeedRes.text.includes('"version"') ||
+      activeFeedRes.text.includes('xmlns="http://www.w3.org/2005/Atom"')
+    )
   );
   if (hasFeed) {
     seoChecks.push({
@@ -1487,7 +1557,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
 
   const badges = {
     mcpServer: mcpOk,
-    llmsTxt: Boolean(llmsRes?.ok && llmsRes.text && llmsRes.text.length > 50),
+    llmsTxt: Boolean(activeLlmsRes?.ok && activeLlmsRes.text && activeLlmsRes.text.length > 50),
     ardCatalog: Boolean(ardRes?.ok),
     apiCatalog: Boolean(apiCatalogRes?.ok),
     markdownTwins: Boolean(mdTwinRes?.ok),
@@ -1498,7 +1568,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     authorEeat: hasEeat,
     robotsMetaAi: !isNoIndex && !isNoSnippet && (hasMaxSnippet || hasMaxImage),
     jsRenderingSelfSufficient: textContentLength > 300,
-    xmlOrJsonSitemap: Boolean(sitemapRes?.ok || sitemapJsonRes?.ok),
+    xmlOrJsonSitemap: Boolean(activeSitemapRes?.ok || sitemapJsonRes?.ok),
     schemaEntityGraph: hasGraphLinking,
     openapiExamplesReady: Boolean(activeOpenApiRes && /"example":|"examples":/i.test(activeOpenApiRes.text)),
     micropaymentsSupported: has402Header || hasWebLn,
