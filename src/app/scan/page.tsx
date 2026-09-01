@@ -6,6 +6,9 @@ import { PageLayout } from '@/components/page-layout';
 import { PageHero } from '@/components/page-hero';
 import { AuthorByline } from '@/components/author-byline';
 import { Button } from '@/components/ui/button';
+import { StatusPill } from '@/components/ui/status-pill';
+import { CodeBlock } from '@/components/ui/code-block';
+import { SectionHeader } from '@/components/ui/section-header';
 import { copyText } from '@/lib/copy-text';
 import { cn } from '@/lib/utils';
 import { ScanResult, CheckResult } from '@/lib/scanner/types';
@@ -50,25 +53,6 @@ const LAYER_LABELS: Record<string, string> = {
   security: 'Security',
   seo: 'SEO & Structured Data',
   payments: 'Micropayments',
-};
-
-const IMPACT_STYLES: Record<string, { label: string; badge: string }> = {
-  critical: {
-    label: 'Critical',
-    badge: 'text-rose-700 dark:text-rose-300 bg-rose-500/10 border-rose-500/30',
-  },
-  important: {
-    label: 'Important',
-    badge: 'text-amber-700 dark:text-amber-300 bg-amber-500/10 border-amber-500/30',
-  },
-  recommended: {
-    label: 'Recommended',
-    badge: 'text-blue-700 dark:text-blue-300 bg-blue-500/10 border-blue-500/30',
-  },
-  optional: {
-    label: 'Optional',
-    badge: 'text-muted-foreground bg-muted border-border',
-  },
 };
 
 // ─── Minimal Icons (Pure SVGs) ─────────────────────────────────────────────
@@ -141,34 +125,7 @@ function IconRefresh({ className = 'w-3.5 h-3.5' }: { className?: string }) {
 
 function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defaultExpanded?: boolean }) {
   const [expanded, setExpanded] = useState(defaultExpanded);
-  const [copiedCode, setCopiedCode] = useState(false);
-
-  async function handleCopySnippet(code: string) {
-    try {
-      await copyText(code);
-      setCopiedCode(true);
-      setTimeout(() => setCopiedCode(false), 2000);
-    } catch {
-      // keep UI resilient
-    }
-  }
-
-  const impact = IMPACT_STYLES[check.impact || 'optional'] || IMPACT_STYLES.optional;
   const hasDetails = Boolean(check.why || check.recommendation || check.fixSnippet || check.referenceUrl);
-
-  const statusBadge = {
-    pass: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/25',
-    warning: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/25',
-    fail: 'bg-rose-500/10 text-rose-700 dark:text-rose-400 border-rose-500/25',
-    na: 'bg-muted text-muted-foreground border-border',
-  }[check.status];
-
-  const statusText = {
-    pass: 'Pass',
-    warning: 'Warn',
-    fail: 'Fail',
-    na: 'N/A',
-  }[check.status];
 
   return (
     <div className="border border-border rounded-lg bg-card transition-colors hover:border-primary/40">
@@ -183,9 +140,7 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
       >
         <div className="space-y-1.5 min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <span className={cn('text-[11px] font-medium px-2 py-0.5 rounded-full border', statusBadge)}>
-              {statusText}
-            </span>
+            <StatusPill status={check.status} />
             <span className="font-semibold text-sm sm:text-base text-foreground tracking-tight">
               {check.name}
             </span>
@@ -193,9 +148,7 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
               {check.layer}
             </span>
             {check.impact && (
-              <span className={cn('text-[11px] font-medium px-2 py-0.5 rounded-full border', impact.badge)}>
-                {impact.label}
-              </span>
+              <StatusPill status={check.impact} />
             )}
           </div>
 
@@ -250,34 +203,11 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
 
           {check.fixSnippet && (
             <div className="space-y-1.5 pt-1">
-              <div className="flex items-center justify-between text-muted-foreground text-xs">
-                <span className="font-mono">{check.fixSnippet.filename || check.fixSnippet.language || 'snippet'}</span>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={e => {
-                    e.stopPropagation();
-                    handleCopySnippet(check.fixSnippet!.code);
-                  }}
-                  className="h-7 px-2 text-xs"
-                >
-                  {copiedCode ? (
-                    <>
-                      <IconCheck className="w-3 h-3 text-emerald-500" />
-                      <span className="text-emerald-600 dark:text-emerald-400">Copied</span>
-                    </>
-                  ) : (
-                    <>
-                      <IconCopy className="w-3 h-3" />
-                      <span>Copy snippet</span>
-                    </>
-                  )}
-                </Button>
-              </div>
-              <pre className="p-3.5 rounded-lg border border-border bg-muted/60 text-foreground font-mono text-xs overflow-x-auto leading-relaxed whitespace-pre-wrap break-words">
-                <code>{check.fixSnippet.code}</code>
-              </pre>
+              <CodeBlock
+                code={check.fixSnippet.code}
+                filename={check.fixSnippet.filename}
+                language={check.fixSnippet.language}
+              />
             </div>
           )}
 
@@ -477,14 +407,10 @@ export default function ScanPage() {
         {/* ── Default Educational State (Pre-scan) ── */}
         {!result && !loading && !error && (
           <section className="w-full border border-border rounded-lg bg-card p-5 sm:p-6 space-y-4">
-            <div className="space-y-1">
-              <h2 className="text-base font-semibold text-foreground">
-                What This Audit Checks
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                Deterministic probes evaluate whether autonomous LLM agents, crawler bots, and machine consumers can discover, parse, authenticate, and interact with your web services.
-              </p>
-            </div>
+            <SectionHeader
+              title="What This Audit Checks"
+              subtitle="Deterministic probes evaluate whether autonomous LLM agents, crawler bots, and machine consumers can discover, parse, authenticate, and interact with your web services."
+            />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-1 text-xs">
               {AUDIT_LAYERS_INFO.map(layer => (
                 <div key={layer.name} className="p-3.5 rounded-lg border border-border bg-muted/20 space-y-1">
@@ -578,9 +504,9 @@ export default function ScanPage() {
 
             {/* ── Capabilities Matrix ── */}
             <div className="border border-border rounded-lg bg-card p-5 space-y-3">
-              <h3 className="text-sm font-semibold text-foreground">
-                Machine Interface Capabilities
-              </h3>
+              <SectionHeader
+                title="Machine Interface Capabilities"
+              />
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
                 {[
                   { label: 'robots.txt AI Policy', active: result.badges.aiBotFriendly },
@@ -620,9 +546,9 @@ export default function ScanPage() {
 
             {/* ── Layer Performance Grid ── */}
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold text-foreground">
-                Layer Breakdown
-              </h3>
+              <SectionHeader
+                title="Layer Breakdown"
+              />
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {result.layers.map(layer => {
                   const isSelected = filterLayer === layer.id;
@@ -676,10 +602,9 @@ export default function ScanPage() {
             {/* ── Priority Action Items (if issues exist) ── */}
             {criticalIssues.length > 0 && (
               <div className="border border-border rounded-lg bg-card p-5 space-y-3">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-semibold text-foreground">
-                    High Priority Action Items ({criticalIssues.length})
-                  </h3>
+                <SectionHeader
+                  title={`High Priority Action Items (${criticalIssues.length})`}
+                >
                   <button
                     type="button"
                     onClick={() => {
@@ -690,7 +615,7 @@ export default function ScanPage() {
                   >
                     Filter Attention Only
                   </button>
-                </div>
+                </SectionHeader>
                 <div className="space-y-2">
                   {criticalIssues.slice(0, 4).map(c => (
                     <div key={c.id} className="p-3 rounded-lg border border-border bg-muted/20 flex items-start justify-between gap-3 text-xs">
@@ -701,9 +626,7 @@ export default function ScanPage() {
                         </div>
                         <p className="text-muted-foreground leading-relaxed truncate">{c.details}</p>
                       </div>
-                      <span className={cn('text-[11px] font-medium shrink-0 px-2 py-0.5 rounded-full border', IMPACT_STYLES[c.impact || 'optional']?.badge)}>
-                        {c.impact}
-                      </span>
+                      <StatusPill status={c.impact || 'optional'} />
                     </div>
                   ))}
                 </div>
@@ -797,22 +720,17 @@ export default function ScanPage() {
             </div>
 
             {/* ── API & Automation Reference ── */}
-            <div className="p-5 rounded-lg border border-border bg-card text-xs space-y-2.5">
-              <div className="flex items-center justify-between">
-                <span className="font-semibold text-foreground text-sm">
-                  Programmatic Audit API
-                </span>
-                <span className="text-muted-foreground font-medium">HTTP & MCP</span>
-              </div>
-              <p className="text-muted-foreground text-xs leading-relaxed">
-                Run agent-readiness scans directly in CI/CD pipelines, autonomous scripts, or via the <code className="px-1 py-0.5 rounded bg-muted text-foreground font-mono">scan_agent_readiness</code> tool in the veda.ng MCP server.
-              </p>
-              <div className="space-y-1.5 pt-1">
-                <div className="p-2.5 rounded-lg bg-muted/60 text-foreground overflow-x-auto border border-border font-mono text-xs">
-                  <code>curl -X POST https://veda.ng/api/v1/scan -H &quot;Content-Type: application/json&quot; -d &apos;&#123;&quot;url&quot;:&quot;{result.domain}&quot;&#125;&apos;</code>
-                </div>
-              </div>
-              <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-medium">
+            <div className="p-5 rounded-lg border border-border bg-card text-xs space-y-3">
+              <SectionHeader
+                title="Programmatic Audit API"
+                subtitle="Run agent-readiness scans directly in CI/CD pipelines, autonomous scripts, or via the scan_agent_readiness tool in the veda.ng MCP server."
+              >
+                <span className="text-muted-foreground font-medium text-xs">HTTP & MCP</span>
+              </SectionHeader>
+              <CodeBlock
+                code={`curl -X POST https://veda.ng/api/v1/scan -H "Content-Type: application/json" -d '{"url":"${result.domain}"}'`}
+              />
+              <div className="pt-1 flex flex-wrap items-center gap-4 text-xs font-medium">
                 <Link href="/developers" className="text-primary hover:underline inline-flex items-center gap-1">
                   <span>API Documentation</span>
                   <IconArrowRight className="w-3 h-3" />

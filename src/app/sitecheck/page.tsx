@@ -1,5 +1,10 @@
 import Link from 'next/link';
+import { PageLayout } from '@/components/page-layout';
+import { PageHero } from '@/components/page-hero';
 import { AuthorByline } from '@/components/author-byline';
+import { SectionHeader } from '@/components/ui/section-header';
+import { StatusPill } from '@/components/ui/status-pill';
+import { JumpNav } from '@/components/ui/jump-nav';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -275,14 +280,33 @@ export default function WebsiteSpecificationPage() {
     Avoid: SPEC.reduce((sum, cat) => sum + cat.items.filter(i => i.status === 'Avoid').length, 0),
   };
 
+  const navItems = SPEC.map((cat) => ({
+    name: cat.name,
+    href: `#${cat.slug}`,
+    count: cat.items.length,
+  }));
+
   return (
-    <>
-      {/* ── Header ── */}
-      <header className="pt-12 md:pt-20 pb-8">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-            The Site Checklist
-          </h1>
+    <PageLayout>
+      <div className="w-full space-y-12 sm:space-y-16 pb-20">
+        {/* ── Header ── */}
+        <header>
+          <PageHero
+            title="The Site Checklist"
+            subtitle={
+              <>
+                {TOTAL_ITEMS} requirements across {SPEC.length} categories.<br />
+                What to do, how to do it, and where the standard lives.
+              </>
+            }
+          />
+          <div className="-mt-3">
+            <AuthorByline links={[{ label: 'Web Standards Checklist' }]} />
+          </div>
+
+          <div className="pt-4">
+            <JumpNav items={navItems} />
+          </div>
 
           {/* Semantic definition block for AI engines */}
           <div className="sr-only">
@@ -291,68 +315,57 @@ export default function WebsiteSpecificationPage() {
               The Site Checklist is an exhaustive technical specification of modern web standards, structured data requirements, security protocols, performance optimizations, and AI discoverability best practices for production web applications.
             </p>
           </div>
+        </header>
 
-          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            {TOTAL_ITEMS} requirements across {SPEC.length} categories.<br />
-            What to do, how to do it, and where the standard lives.
-          </p>
-          <AuthorByline links={[{ label: 'May 2026' }]} />
-        </div>
-      </header>
-
-      <div className="py-10 md:py-14">
-        <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto">
-          <div className="space-y-20 not-prose">
-
-        {/* ── Stats ── */}
-        <section>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {(['Required', 'Recommended', 'Optional', 'Avoid'] as Status[]).map((status) => (
-              <div key={status} className="rounded-lg border bg-card p-5">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={`w-2.5 h-2.5 rounded-full ${STATUS_DOT[status]}`} />
-                  <span className="text-sm font-medium">{status}</span>
+        <article className="space-y-12 sm:space-y-14">
+          {/* ── Stats ── */}
+          <section className="space-y-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5">
+              {(['Required', 'Recommended', 'Optional', 'Avoid'] as Status[]).map((status) => (
+                <div key={status} className="rounded-lg border border-border bg-card p-4 sm:p-5 flex flex-col justify-between">
+                  <div className="flex items-center gap-2 mb-2">
+                    <StatusPill status={status} />
+                  </div>
+                  <p className="text-3xl font-bold tracking-tight text-foreground">{statusCounts[status]}</p>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    {status === 'Required' && 'Breaks without it'}
+                    {status === 'Recommended' && 'Expected in 2026'}
+                    {status === 'Optional' && 'Context-dependent'}
+                    {status === 'Avoid' && 'Causes harm'}
+                  </p>
                 </div>
-                <p className="text-3xl font-semibold tracking-tight">{statusCounts[status]}</p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {status === 'Required' && 'Breaks without it'}
-                  {status === 'Recommended' && 'Expected in 2026'}
-                  {status === 'Optional' && 'Context-dependent'}
-                  {status === 'Avoid' && 'Causes harm'}
-                </p>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Master Prompt ── */}
+          <section id="master-prompt" className="space-y-4 scroll-mt-20">
+            <SectionHeader
+              title="Master Prompt"
+              subtitle="Copy this prompt, paste it into ChatGPT / Claude / Gemini with your site URL, and get a full audit with fixes."
+            />
+            <div className="rounded-lg overflow-hidden border border-border bg-card">
+              <div className="bg-muted/40 px-4 py-2.5 border-b border-border flex items-center justify-between">
+                <span className="text-xs font-medium text-muted-foreground">Paste into any AI — replace [PASTE YOUR URL] and [tech stack]</span>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Master Prompt ── */}
-        <section id="master-prompt">
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">Master Prompt</h2>
-          <p className="text-sm text-muted-foreground mb-4">
-            Copy this prompt, paste it into ChatGPT / Claude / Gemini with your site URL, and get a full audit with fixes.
-          </p>
-          <div className="rounded-lg overflow-hidden border">
-            <div className="bg-muted px-4 py-2 border-b flex items-center justify-between">
-              <span className="text-xs font-medium text-muted-foreground">Paste into any AI - replace [PASTE YOUR URL] and [tech stack]</span>
+              <pre className="p-4 overflow-x-auto text-xs leading-relaxed bg-muted/20 max-h-[400px] overflow-y-auto font-mono text-foreground">
+                <code>{MASTER_PROMPT}</code>
+              </pre>
             </div>
-            <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card max-h-[400px] overflow-y-auto">
-              <code>{MASTER_PROMPT}</code>
-            </pre>
-          </div>
-        </section>
+          </section>
 
-        {/* ── Quick Verification ── */}
-        <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">Quick Verification</h2>
-          <p className="text-sm text-muted-foreground mb-4">
-            Run against your live site. Replace example.com with your domain.
-          </p>
-          <div className="terminal-chrome rounded-lg overflow-hidden border">
-            <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
-              <span className="text-xs font-medium">Terminal</span>
-            </div>
-            <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed">
-              <code>{`# Security headers
+          {/* ── Quick Verification ── */}
+          <section className="space-y-4 scroll-mt-20">
+            <SectionHeader
+              title="Quick Verification"
+              subtitle="Run against your live site. Replace example.com with your domain."
+            />
+            <div className="rounded-lg overflow-hidden border border-border bg-card">
+              <div className="bg-muted/40 px-4 py-2.5 border-b border-border flex items-center gap-2">
+                <span className="text-xs font-medium text-foreground">Terminal Probes</span>
+              </div>
+              <pre className="p-4 overflow-x-auto text-xs font-mono leading-relaxed bg-muted/20 text-foreground">
+                <code>{`# Security headers
 curl -sI https://example.com | grep -iE "strict-transport|content-security|x-content-type|referrer-policy|permissions-policy"
 
 # Soft 404 check (should return 404, not 200)
@@ -379,102 +392,88 @@ dig CAA example.com +short
 
 # Full security header audit
 # https://securityheaders.com/?q=example.com`}</code>
-            </pre>
-          </div>
-        </section>
+              </pre>
+            </div>
+          </section>
 
-        {/* ── Category Navigation ── */}
-        <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">Full Specification</h2>
-          <p className="text-sm text-muted-foreground mb-6">{SPEC.length} categories. Click any item to see implementation details.</p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-            {SPEC.map((cat) => (
-              <a key={cat.slug} href={`#${cat.slug}`} className="rounded-lg border bg-card p-3 hover:border-primary/50 transition-colors text-center">
-                <span className="text-sm font-medium">{cat.name}</span>
-                <span className="block text-xs text-muted-foreground mt-0.5">{cat.items.length} items</span>
-              </a>
-            ))}
-          </div>
-        </section>
+          {/* ── Spec Categories ── */}
+          {SPEC.map((category) => (
+            <section key={category.slug} id={category.slug} className="space-y-4 scroll-mt-20">
+              <SectionHeader
+                title={category.name}
+                subtitle={`${category.items.length} checks in this category`}
+              />
+              <div className="space-y-px rounded-lg overflow-hidden border border-border bg-card">
+                {category.items.map((item) => (
+                  <details key={item.name} className="bg-card group border-b border-border last:border-b-0">
+                    <summary className="flex items-start gap-3.5 p-4 cursor-pointer select-none hover:bg-muted/30 transition-colors">
+                      <div className="shrink-0 mt-0.5">
+                        <StatusPill status={item.status} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="font-semibold text-sm text-foreground">{item.name}</span>
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mt-0.5">{item.what}</p>
+                      </div>
+                      <svg className="w-4 h-4 shrink-0 mt-1 text-muted-foreground/40 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                    </summary>
+                    <div className="px-4 pb-4 pt-1 ml-[72px] sm:ml-[76px] space-y-2">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.how}</p>
+                      {item.ref && (
+                        <Link href={item.ref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary underline underline-offset-4 hover:text-primary/80 font-medium">
+                          <span>Official specification</span>
+                          <span>↗</span>
+                        </Link>
+                      )}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          ))}
 
-        {/* ── Spec Categories ── */}
-        {SPEC.map((category) => (
-          <section key={category.slug} id={category.slug}>
-            <h2 className="text-2xl font-semibold tracking-tight mb-6">{category.name}</h2>
-            <div className="space-y-px rounded-lg overflow-hidden border">
-              {category.items.map((item) => (
-                <details key={item.name} className="bg-card group">
-                  <summary className="flex items-start gap-4 p-4 cursor-pointer select-none hover:bg-muted/30 transition-colors">
-                    <div className="shrink-0 mt-0.5">
-                      <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${STATUS_STYLES[item.status]}`}>
-                        {item.status}
-                      </span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <span className="font-medium text-sm">{item.name}</span>
-                      <p className="text-sm text-muted-foreground leading-relaxed mt-0.5">{item.what}</p>
-                    </div>
-                    <svg className="w-4 h-4 shrink-0 mt-1 text-muted-foreground/40 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
-                  </summary>
-                  <div className="px-4 pb-4 pt-1 ml-[72px] sm:ml-[76px]">
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.how}</p>
-                    {item.ref && (
-                      <Link href={item.ref} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-xs text-muted-foreground/60 hover:text-primary transition-colors">
-                        Official specification ↗
-                      </Link>
-                    )}
-                  </div>
-                </details>
+          {/* ── Related ── */}
+          <section className="space-y-4 scroll-mt-20">
+            <SectionHeader title="Related Specifications & Tools" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="/aistandards" className="rounded-lg border border-border bg-card p-4 sm:p-5 hover:border-primary/40 transition-colors block">
+                <span className="font-semibold text-sm text-foreground">AI Discovery Standards</span>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">
+                  llms.txt, structured data for agents, robots.txt AI crawler rules, MCP endpoints, and agent skill files.
+                </p>
+              </Link>
+              <Link href="/scan" className="rounded-lg border border-border bg-card p-4 sm:p-5 hover:border-primary/40 transition-colors block">
+                <span className="font-semibold text-sm text-foreground">Agentic Readiness Scanner</span>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">
+                  Run a deterministic audit for AI agent discovery, MCP servers, OpenAPI schemas, and HTTPS security.
+                </p>
+              </Link>
+            </div>
+          </section>
+
+          {/* ── Sources ── */}
+          <section className="space-y-4 scroll-mt-20">
+            <SectionHeader title="Standards Bodies & Documentation Sources" />
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+              {[
+                { name: 'WHATWG HTML', url: 'https://html.spec.whatwg.org/' },
+                { name: 'WCAG 2.2', url: 'https://www.w3.org/TR/WCAG22/' },
+                { name: 'MDN Web Docs', url: 'https://developer.mozilla.org/' },
+                { name: 'web.dev', url: 'https://web.dev/' },
+                { name: 'IETF RFCs', url: 'https://www.rfc-editor.org/' },
+                { name: 'schema.org', url: 'https://schema.org/' },
+                { name: 'Google Search Central', url: 'https://developers.google.com/search' },
+                { name: 'securityheaders.com', url: 'https://securityheaders.com/' },
+              ].map((s) => (
+                <Link key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-border bg-card px-4 py-3 hover:border-primary/40 transition-colors block text-xs sm:text-sm font-medium text-foreground">
+                  {s.name}
+                </Link>
               ))}
             </div>
           </section>
-        ))}
 
-        {/* ── Related ── */}
-        <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-4">Related</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/aistandards" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
-              <span className="font-medium text-sm">AI Discovery Standards</span>
-              <p className="text-sm text-muted-foreground mt-1">
-                llms.txt, structured data for agents, robots.txt AI crawler rules, MCP endpoints, and agent skill files.
-              </p>
-            </Link>
-            <Link href="/agentic" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
-              <span className="font-medium text-sm">The Agentic Web</span>
-              <p className="text-sm text-muted-foreground mt-1">
-                How autonomous AI agents interact with the web, and what your site needs to be ready for them.
-              </p>
-            </Link>
-          </div>
-        </section>
-
-        {/* ── Sources ── */}
-        <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-4">Sources</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {[
-              { name: 'WHATWG HTML', url: 'https://html.spec.whatwg.org/' },
-              { name: 'WCAG 2.2', url: 'https://www.w3.org/TR/WCAG22/' },
-              { name: 'MDN Web Docs', url: 'https://developer.mozilla.org/' },
-              { name: 'web.dev', url: 'https://web.dev/' },
-              { name: 'IETF RFCs', url: 'https://www.rfc-editor.org/' },
-              { name: 'schema.org', url: 'https://schema.org/' },
-              { name: 'Google Search Central', url: 'https://developers.google.com/search' },
-              { name: 'securityheaders.com', url: 'https://securityheaders.com/' },
-            ].map((s) => (
-              <Link key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="rounded-lg border bg-card px-4 py-3 hover:border-primary/50 transition-colors block text-sm font-medium">
-                {s.name}
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <p className="text-xs text-muted-foreground/60 text-center">Last updated May 2026.</p>
-
-          </div>
+          <p className="text-xs text-muted-foreground text-center">Last updated May 2026.</p>
         </article>
       </div>
-    </>
+    </PageLayout>
   );
 }

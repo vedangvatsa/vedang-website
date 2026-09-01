@@ -1,5 +1,10 @@
 import Link from 'next/link';
+import { PageLayout } from '@/components/page-layout';
+import { PageHero } from '@/components/page-hero';
 import { AuthorByline } from '@/components/author-byline';
+import { SectionHeader } from '@/components/ui/section-header';
+import { StatusPill } from '@/components/ui/status-pill';
+import { JumpNav } from '@/components/ui/jump-nav';
 
 // Landing page for https://github.com/vedangvatsa/aistandards
 // Voice: third person. No first-person plural. Follows AGENTS.md / ai-slop rules.
@@ -280,13 +285,35 @@ const PRIORITY_STYLES: Record<Priority, string> = {
 };
 
 export default function AiDiscoveryStandardsPage() {
+  const navItems = [
+    { name: 'Install', href: '#install' },
+    { name: 'Why it exists', href: '#basics' },
+    { name: 'Training vs search', href: '#training-vs-search' },
+    { name: 'Catalog', href: '#registry' },
+    { name: 'Content techniques', href: '#content-techniques' },
+    { name: 'Agent files', href: '#developer-agent-files' },
+    { name: 'Standards', href: '#standards-progress' },
+    { name: 'Crawlers', href: '#crawlers' },
+    { name: 'Verify', href: '#verify' },
+  ];
+
   return (
-    <>
-      <header className="pt-10 sm:pt-12 md:pt-20 pb-6 sm:pb-8">
-        <div className="text-center min-w-0 px-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] break-words">
-            AI Discovery Standards
-          </h1>
+    <PageLayout>
+      <div className="w-full space-y-12 sm:space-y-16 pb-20">
+        <header>
+          <PageHero
+            title="AI Discovery Standards"
+            subtitle="Reference files and an installer for declaring identity, content maps, and crawl preferences that AI systems may use. Outcomes vary by product and are not guaranteed."
+          />
+          <div className="-mt-3">
+            <AuthorByline
+              links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/aistandards' }]}
+            />
+          </div>
+
+          <div className="pt-4">
+            <JumpNav items={navItems} />
+          </div>
 
           {/* Semantic definition block for AI engines */}
           <div className="sr-only">
@@ -295,48 +322,7 @@ export default function AiDiscoveryStandardsPage() {
               AI Discovery Standards are machine-readable file formats (llms.txt, brand.txt, agents.json, ai-catalog.json, RFC 9727 api-catalog, RFC 9728 oauth-protected-resource) and HTTP content negotiation protocols that enable search engines, LLM answer engines, and autonomous agents to index, authenticate, and interact with web resources.
             </p>
           </div>
-
-          <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-0">
-            Reference files and an installer for declaring identity, content maps, and crawl preferences that AI systems
-            may use. Outcomes vary by product and are not guaranteed.
-          </p>
-          <AuthorByline
-            links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/aistandards' }]}
-          />
-          <nav
-            aria-label="On this page"
-            className="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-2 text-xs sm:text-sm text-muted-foreground"
-          >
-            <a href="#install" className="hover:text-primary transition-colors">
-              Install
-            </a>
-            <a href="#basics" className="hover:text-primary transition-colors">
-              Why it exists
-            </a>
-            <a href="#training-vs-search" className="hover:text-primary transition-colors">
-              Training vs search
-            </a>
-            <a href="#registry" className="hover:text-primary transition-colors">
-              Catalog
-            </a>
-            <a href="#content-techniques" className="hover:text-primary transition-colors">
-              Content techniques
-            </a>
-            <a href="#developer-agent-files" className="hover:text-primary transition-colors">
-              Agent files
-            </a>
-            <a href="#standards-progress" className="hover:text-primary transition-colors">
-              Standards
-            </a>
-            <a href="#crawlers" className="hover:text-primary transition-colors">
-              Crawlers
-            </a>
-            <a href="#verify" className="hover:text-primary transition-colors">
-              Verify
-            </a>
-          </nav>
-        </div>
-      </header>
+        </header>
 
       <div className="py-8 sm:py-10 md:py-14 min-w-0">
         <article className="notion-article prose prose-neutral max-w-5xl w-full min-w-0 mx-auto">
@@ -501,9 +487,7 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
                         >
                           <summary className="p-3 cursor-pointer select-none hover:bg-muted/40 transition-colors list-none [&::-webkit-details-marker]:hidden min-w-0">
                             <div className="flex flex-wrap items-center gap-1 mb-1.5">
-                              <span className={`inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded border ${PRIORITY_STYLES[file.priority]}`}>
-                                {file.priority}
-                              </span>
+                              <StatusPill status={file.priority} size="sm" />
                             </div>
                             <p className="text-sm font-medium text-foreground leading-snug break-words">{file.name}</p>
                             <p className="text-[11px] font-mono text-muted-foreground truncate mt-0.5" title={file.path}>{file.path}</p>
@@ -808,6 +792,7 @@ curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
           </div>
         </article>
       </div>
-    </>
+    </div>
+  </PageLayout>
   );
 }

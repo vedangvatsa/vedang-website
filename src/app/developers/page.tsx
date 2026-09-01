@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { CommandBlock } from '@/app/noslop/command-block';
 import { generateMetadata } from '@/lib/metadata';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+import { SectionHeader } from '@/components/ui/section-header';
+import { JumpNav } from '@/components/ui/jump-nav';
+import { ResourceCard } from '@/components/ui/resource-card';
 
 export const metadata: Metadata = generateMetadata({
   title: 'Developer Resources, API Documentation & MCP Server | Vedang Vatsa (veda.ng)',
@@ -228,59 +231,29 @@ export default function DevelopersPage() {
             subtitle="Official machine and developer interfaces for Vedang Vatsa (veda.ng): public research search API, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, Python SDK, syndication feeds, and agent discovery manifests. Keyless and open-access."
           />
 
-          {/* Quick jump nav pills */}
-          <nav aria-label="Developer Navigation" className="flex flex-wrap items-center justify-center gap-1.5 pt-2">
-            {NAV_SECTIONS.map((sec) => (
-              <a
-                key={sec.href}
-                href={sec.href}
-                className="px-3 py-1 text-xs font-medium rounded-full border border-border bg-card text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
-              >
-                {sec.name}
-              </a>
-            ))}
-          </nav>
+          <div className="pt-2">
+            <JumpNav items={NAV_SECTIONS} />
+          </div>
         </header>
 
         <article className="space-y-12 sm:space-y-14">
           {/* ── Section 1: Quick Index & Predictable Endpoints ── */}
           <section id="quick-index" className="space-y-4 scroll-mt-20">
-            <div className="space-y-1">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
-                Quick Index & Predictable Endpoints
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                All endpoints are keyless, unauthenticated, and return structured payloads with standard RFC rate limit headers:
-              </p>
-            </div>
+            <SectionHeader
+              title="Quick Index & Predictable Endpoints"
+              subtitle="All endpoints are keyless, unauthenticated, and return structured payloads with standard RFC rate limit headers:"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               {QUICK_ENDPOINTS.map((ep) => (
-                <div
+                <ResourceCard
                   key={ep.url}
-                  className="rounded-lg border border-border bg-card p-4 sm:p-5 flex flex-col justify-between gap-3 hover:border-primary/40 transition-colors"
-                >
-                  <div className="space-y-1.5">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="font-semibold text-sm text-foreground">{ep.title}</span>
-                      <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-muted text-muted-foreground border border-border shrink-0">
-                        {ep.method}
-                      </span>
-                    </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{ep.description}</p>
-                  </div>
-
-                  <div className="pt-2.5 border-t border-border/60 flex items-center justify-between gap-2 text-xs">
-                    <Link
-                      href={ep.url}
-                      className="font-mono text-xs text-primary underline underline-offset-4 hover:text-primary/80 font-medium truncate"
-                      title={`Open ${ep.url}`}
-                    >
-                      {ep.url}
-                    </Link>
-                    <span className="text-[11px] font-medium text-muted-foreground shrink-0">{ep.format}</span>
-                  </div>
-                </div>
+                  title={ep.title}
+                  description={ep.description}
+                  href={ep.url}
+                  method={ep.method}
+                  format={ep.format}
+                />
               ))}
             </div>
 
@@ -299,14 +272,10 @@ export default function DevelopersPage() {
 
           {/* ── Section 2: Report Search API & REST Endpoints ── */}
           <section id="api" className="space-y-4 scroll-mt-20">
-            <div className="space-y-1">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
-                Report Search API & REST Endpoints
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                Search 233,000+ indexed academic papers across the AI and Web3 corpora, backed by OpenAlex and sorted by citations. Results are cached for one hour.
-              </p>
-            </div>
+            <SectionHeader
+              title="Report Search API & REST Endpoints"
+              subtitle="Search 233,000+ indexed academic papers across the AI and Web3 corpora, backed by OpenAlex and sorted by citations. Results are cached for one hour."
+            />
 
             <div className="space-y-2">
               <Code>{`GET /api/reports/search?q=stablecoin+regulation&corpus=ai&page=1&per_page=20`}</Code>
@@ -364,14 +333,10 @@ export default function DevelopersPage() {
 
           {/* ── Section 3: Model Context Protocol (MCP) Servers ── */}
           <section id="mcp" className="space-y-4 scroll-mt-20">
-            <div className="space-y-1">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
-                Model Context Protocol (MCP) Servers
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                Vedang runs dual, production-ready MCP servers over Streamable HTTP (JSON-RPC 2.0) with zero authentication required:
-              </p>
-            </div>
+            <SectionHeader
+              title="Model Context Protocol (MCP) Servers"
+              subtitle="Vedang runs dual, production-ready MCP servers over Streamable HTTP (JSON-RPC 2.0) with zero authentication required:"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="rounded-lg border border-border p-4 sm:p-5 bg-card space-y-3 flex flex-col justify-between">
@@ -452,14 +417,10 @@ export default function DevelopersPage() {
 
           {/* ── Section 4: OpenAPI 3.1 Specification ── */}
           <section id="openapi" className="space-y-4 scroll-mt-20">
-            <div className="space-y-1">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
-                OpenAPI 3.1 Specification
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                The machine-readable OpenAPI specification documents 100% typed response schemas, RFC rate-limit headers, cursor pagination, batch execution, and async polling:
-              </p>
-            </div>
+            <SectionHeader
+              title="OpenAPI 3.1 Specification"
+              subtitle="The machine-readable OpenAPI specification documents 100% typed response schemas, RFC rate-limit headers, cursor pagination, batch execution, and async polling:"
+            />
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 text-xs">
               {[
@@ -482,14 +443,10 @@ export default function DevelopersPage() {
 
           {/* ── Section 5: Multi-Language SDK Packages & Tooling ── */}
           <section id="sdk" className="space-y-4 scroll-mt-20">
-            <div className="space-y-1">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
-                Multi-Language SDK Packages & Tooling
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                Programmatic SDK packages and CLI tools for Python, TypeScript/JavaScript, and Go:
-              </p>
-            </div>
+            <SectionHeader
+              title="Multi-Language SDK Packages & Tooling"
+              subtitle="Programmatic SDK packages and CLI tools for Python, TypeScript/JavaScript, and Go:"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="rounded-lg border border-border p-4 sm:p-5 bg-card space-y-3">
@@ -532,36 +489,36 @@ export default function DevelopersPage() {
 
           {/* ── Section 6: Authentication & Security Guide ── */}
           <section id="auth" className="space-y-4 scroll-mt-20">
-            <div className="space-y-1">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
-                Authentication & Security Protocols
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                All public reading and search APIs on veda.ng are keyless and require no API token. The complete WorkOS-format authentication specification is documented at{' '}
-                <Link href="/auth.md" className="text-primary underline underline-offset-4 hover:text-foreground font-medium">
-                  /auth.md
-                </Link>{' '}
-                (interactive page at{' '}
-                <Link href="/auth" className="text-primary underline underline-offset-4 hover:text-foreground font-medium">
-                  /auth
-                </Link>). Security vulnerability disclosure instructions are published at{' '}
-                <Link href="/.well-known/security.txt" className="text-primary underline underline-offset-4 hover:text-foreground font-mono">
-                  /.well-known/security.txt
-                </Link>.
-              </p>
-            </div>
+            <SectionHeader
+              title="Authentication & Security Protocols"
+              subtitle={
+                <>
+                  All public reading and search APIs on veda.ng are keyless and require no API token. The complete WorkOS-format authentication specification is documented at{' '}
+                  <Link href="/auth.md" className="text-primary underline underline-offset-4 hover:text-foreground font-medium">
+                    /auth.md
+                  </Link>{' '}
+                  (interactive page at{' '}
+                  <Link href="/auth" className="text-primary underline underline-offset-4 hover:text-foreground font-medium">
+                    /auth
+                  </Link>). Security vulnerability disclosure instructions are published at{' '}
+                  <Link href="/.well-known/security.txt" className="text-primary underline underline-offset-4 hover:text-foreground font-mono">
+                    /.well-known/security.txt
+                  </Link>.
+                </>
+              }
+            />
           </section>
 
           {/* ── Section 7: Markdown Content Negotiation ── */}
           <section id="markdown" className="space-y-4 scroll-mt-20">
-            <div className="space-y-1">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
-                Markdown Content Negotiation
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                Every essay, every glossary term, and key pages serve clean Markdown twins to autonomous machines. Send an <code className="font-mono text-xs px-1 py-0.5 rounded bg-muted text-foreground">Accept: text/markdown</code> header instead of parsing heavy HTML:
-              </p>
-            </div>
+            <SectionHeader
+              title="Markdown Content Negotiation"
+              subtitle={
+                <>
+                  Every essay, every glossary term, and key pages serve clean Markdown twins to autonomous machines. Send an <code className="font-mono text-xs px-1 py-0.5 rounded bg-muted text-foreground">Accept: text/markdown</code> header instead of parsing heavy HTML:
+                </>
+              }
+            />
 
             <CommandBlock command={markdownExample} />
 
@@ -588,14 +545,10 @@ export default function DevelopersPage() {
 
           {/* ── Section 8: Discovery Feeds & Machine Manifests ── */}
           <section id="manifests" className="space-y-4 scroll-mt-20">
-            <div className="space-y-1">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
-                Discovery Feeds & Machine Manifests
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                Standardized machine endpoints and discovery catalogs for autonomous agents and web spiders:
-              </p>
-            </div>
+            <SectionHeader
+              title="Discovery Feeds & Machine Manifests"
+              subtitle="Standardized machine endpoints and discovery catalogs for autonomous agents and web spiders:"
+            />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
               {[
