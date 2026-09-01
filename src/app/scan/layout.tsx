@@ -2,30 +2,31 @@ import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'Agentic Readiness Scanner | Audit AI Agents & LLM Discovery',
+  title: 'AI & Web Readiness Scanner | Audit SEO, LLM Citations & AI Agents',
   description:
-    'Free live scanner for AI agent-readiness and machine discovery: audit robots.txt AI bot policies, llms.txt, Model Context Protocol (MCP) servers, OpenAPI schemas, and Markdown twins.',
+    'Free live scanner for AI & web readiness: audit technical SEO, structured data, robots.txt AI bot policies, llms.txt, Model Context Protocol (MCP) servers, OpenAPI schemas, and Markdown twins.',
   alternates: {
     canonical: 'https://veda.ng/scan',
   },
   openGraph: {
-    title: 'Agentic Readiness Scanner | veda.ng',
+    title: 'AI & Web Readiness Scanner | veda.ng',
     description:
-      'Test your website for AI agents, LLM search engines, and MCP servers with an instant 0-100 score and actionable fix snippets.',
+      'Test your website for AI search engines (SearchGPT, Perplexity, Claude), technical SEO, structured schemas, and MCP servers with an instant 0-100 score.',
     url: 'https://veda.ng/scan',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agentic Readiness Scanner',
-    description: 'Deterministic audit for AI agent discovery, MCP servers, OpenAPI schemas, and structured data.',
+    title: 'AI & Web Readiness Scanner',
+    description: 'Deterministic audit for AI search discovery, technical SEO, MCP servers, OpenAPI schemas, and structured data.',
   },
 };
 
 const scanAppSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'Agentic Readiness Scanner',
+  name: 'AI & Web Readiness Scanner',
+  alternateName: ['Agentic Readiness Scanner', 'AI Web Scanner', 'veda.ng Scanner'],
   url: 'https://veda.ng/scan',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'All',
@@ -35,7 +36,7 @@ const scanAppSchema = {
     priceCurrency: 'USD',
   },
   description:
-    'Instant deterministic audit for website AI agent readiness: verifies robots.txt crawler policies, llms.txt, MCP endpoints, OpenAPI schemas, HTTPS security, and structured data.',
+    'Instant deterministic audit for website AI & web readiness: verifies technical SEO, JSON-LD schemas, robots.txt AI policies, llms.txt, MCP endpoints, OpenAPI schemas, and HTTPS security.',
   author: {
     '@type': 'Person',
     name: 'Vedang Vatsa',

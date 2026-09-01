@@ -529,8 +529,8 @@ export default function ScanPage() {
       <div className="w-full space-y-8 sm:space-y-10 pb-16">
         <header>
           <PageHero
-            title="Agentic Readiness Scanner"
-            subtitle="Deterministic audit for AI agent discovery, MCP servers, OpenAPI schemas, markdown twins, HTTPS security, and structured data."
+            title="AI & Web Readiness Scanner"
+            subtitle="Deterministic audit for AI answer engines (SearchGPT, Claude, Perplexity), technical SEO, structured data, MCP endpoints, and modern web standards."
           />
           <div className="-mt-3">
             <AuthorByline links={[{ label: 'Audit Tool' }]} />
