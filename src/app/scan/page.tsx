@@ -672,11 +672,11 @@ export default function ScanPage() {
                   </p>
 
                   <div className="flex items-center gap-3 pt-1 text-xs">
-                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold">{passingCount} Passed</span>
+                    <span className="text-emerald-600 font-semibold">{passingCount} Passed</span>
                     <span className="text-border">·</span>
-                    <span className="text-amber-600 dark:text-amber-400 font-semibold">{warningCount} Warnings</span>
+                    <span className="text-amber-600 font-semibold">{warningCount} Warnings</span>
                     <span className="text-border">·</span>
-                    <span className="text-rose-600 dark:text-rose-400 font-semibold">{failingCount} Failed</span>
+                    <span className="text-rose-600 font-semibold">{failingCount} Failed</span>
                   </div>
                 </div>
 
@@ -761,7 +761,7 @@ export default function ScanPage() {
                   {copiedFixPrompt ? (
                     <>
                       <IconCheck className="w-3.5 h-3.5 text-emerald-500" />
-                      <span className="text-emerald-600 dark:text-emerald-400">Copied Prompt</span>
+                      <span className="text-emerald-600">Copied Prompt</span>
                     </>
                   ) : (
                     <>
@@ -811,7 +811,7 @@ export default function ScanPage() {
                     )}
                   >
                     <span className="truncate">{item.label}</span>
-                    <span className={cn('text-[11px] font-semibold', item.active ? 'text-emerald-600 dark:text-emerald-400' : 'text-muted-foreground')}>
+                    <span className={cn('text-[11px] font-semibold', item.active ? 'text-emerald-600' : 'text-muted-foreground')}>
                       {item.active ? 'Yes' : 'No'}
                     </span>
                   </div>
