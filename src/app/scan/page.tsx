@@ -746,55 +746,64 @@ export default function ScanPage() {
               </div>
             </div>
 
-            {/* ── AI Remediation Master Prompt (Collapsible) ── */}
-            <div className="border border-border rounded-lg bg-card p-5 space-y-3">
-              <SectionHeader
-                title="AI Remediation Master Prompt"
-                subtitle="Copy the tailored prompt for fixing all failing checks. Click to expand for the full prompt."
-              >
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setShowPrompt(prev => !prev)}
-                  className="h-8 px-3 text-xs gap-1.5 shrink-0"
-                >
-                  {showPrompt ? (
-                    <>
-                      <IconCheck className="w-3.5 h-3.5 text-emerald-500" />
-                      <span className="text-emerald-600">Hide Prompt</span>
-                    </>
-                  ) : (
-                    <>
-                      <IconCopy className="w-3.5 h-3.5 text-muted-foreground" />
-                      <span>Show Prompt</span>
-                    </>
-                  )}
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={handleCopyFixPrompt}
-                  className="h-8 px-3 text-xs gap-1.5 shrink-0 ml-2"
-                >
-                  {copiedFixPrompt ? (
-                    <>
-                      <IconCheck className="w-3.5 h-3.5 text-emerald-500" />
-                      <span className="text-emerald-600">Copied Prompt</span>
-                    </>
-                  ) : (
-                    <>
-                      <IconCopy className="w-3.5 h-3.5 text-muted-foreground" />
-                      <span>Copy Full Prompt</span>
-                    </>
-                  )}
-                </Button>
-              </SectionHeader>
-              <CodeBlock
-                code={generateFixPrompt(result)}
-                filename={`${result.domain}-remediation-prompt.md`}
-              />
+            {/* ── AI Remediation Prompt Bar (Compact & Minimal) ── */}
+            <div className="border border-border rounded-lg bg-card p-4 space-y-3">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+                <div className="space-y-0.5 min-w-0">
+                  <div className="font-semibold text-foreground flex items-center gap-1.5">
+                    <IconSparkles className="w-3.5 h-3.5 text-muted-foreground shrink-0" />
+                    <span>AI Remediation Prompt</span>
+                  </div>
+                  <p className="text-muted-foreground text-[11px]">
+                    Tailored code & header fixes for Claude, ChatGPT, or Cursor to resolve all failing checks.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0 w-full sm:w-auto">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setShowPrompt(prev => !prev)}
+                    className="h-8 px-3 text-xs gap-1.5 flex-1 sm:flex-none"
+                  >
+                    <span>{showPrompt ? 'Hide Prompt' : 'View Prompt'}</span>
+                  </Button>
+
+                  <Button
+                    type="button"
+                    variant="default"
+                    size="sm"
+                    onClick={handleCopyFixPrompt}
+                    className="h-8 px-3 text-xs gap-1.5 flex-1 sm:flex-none"
+                  >
+                    {copiedFixPrompt ? (
+                      <>
+                        <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
+                        <span>Copied Prompt</span>
+                      </>
+                    ) : (
+                      <>
+                        <IconCopy className="w-3.5 h-3.5" />
+                        <span>Copy Fix Prompt</span>
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </div>
+
+              {showPrompt && (
+                <div className="pt-2 border-t border-border space-y-2">
+                  <div className="text-[11px] font-mono text-muted-foreground">
+                    {result.domain}-remediation-prompt.md
+                  </div>
+                  <div className="max-h-72 overflow-y-auto rounded-md border border-border bg-muted/40 p-3">
+                    <pre className="text-xs font-mono whitespace-pre-wrap text-foreground leading-relaxed select-all">
+                      {generateFixPrompt(result)}
+                    </pre>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* ── Capabilities Matrix ── */}
