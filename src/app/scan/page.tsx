@@ -11,7 +11,7 @@ import { CodeBlock } from '@/components/ui/code-block';
 import { SectionHeader } from '@/components/ui/section-header';
 import { copyText } from '@/lib/copy-text';
 import { cn } from '@/lib/utils';
-import { ScanResult, CheckResult } from '@/lib/scanner/types';
+import { ScanResult, CheckResult, LayerScore } from '@/lib/scanner/types';
 
 // ─── Presets & Constants ───────────────────────────────────────────────────
 
@@ -91,6 +91,66 @@ Please implement the following 6 layers of machine-readiness upgrades in our cod
    - Add L402 / HTTP 402 payment headers or machine terms of service at /terms-of-use.md.
 
 Provide the exact code files, server configuration, and curl commands to verify each check.`;
+
+function generateCheckPrompt(check: CheckResult, domain: string): string {
+  let p = `You are an expert full-stack developer fixing an agentic readiness issue on ${domain}.\n\n`;
+  p += `### Issue: [${check.layer.toUpperCase()}] ${check.name}\n`;
+  p += `- Status: ${check.status.toUpperCase()}\n`;
+  p += `- Current Finding: ${check.details}\n`;
+  if (check.why) p += `- Why this matters for AI/LLMs: ${check.why}\n`;
+  if (check.recommendation) p += `- Recommended Fix: ${check.recommendation}\n`;
+  if (check.fixSnippet) {
+    p += `\n### Reference Implementation Snippet (${check.fixSnippet.filename || check.fixSnippet.language || 'code'}):\n\`\`\`${check.fixSnippet.language || ''}\n${check.fixSnippet.code}\n\`\`\`\n`;
+  }
+  if (check.referenceUrl) p += `\n- Technical Specification: ${check.referenceUrl}\n`;
+  p += `\n### Instructions:\n`;
+  p += `1. Review our codebase and identify where to apply this configuration or source code.\n`;
+  p += `2. Implement the fix cleanly and verify there are no syntax, lint, or build errors.\n`;
+  p += `3. Provide verification curl commands to test against the live endpoint.`;
+  return p;
+}
+
+function generateLayerPrompt(layer: LayerScore, domain: string): string {
+  const failing = layer.checks.filter(c => c.status === 'fail');
+  const warnings = layer.checks.filter(c => c.status === 'warning');
+
+  let p = `You are an expert engineer resolving ${layer.name} layer issues for ${domain} identified by the Agentic Readiness Scanner (https://veda.ng/scan).\n\n`;
+  p += `### Layer: ${layer.name} (Current Score: ${layer.score}/${layer.maxScore} - ${layer.percentage}%)\n`;
+  p += `Overview: ${layer.description}\n\n`;
+
+  if (failing.length > 0) {
+    p += `#### Critical Failures (${failing.length}):\n`;
+    failing.forEach((c, idx) => {
+      p += `\n${idx + 1}. ${c.name}\n`;
+      p += `   - Issue: ${c.details}\n`;
+      if (c.why) p += `   - Rationale: ${c.why}\n`;
+      if (c.recommendation) p += `   - Fix: ${c.recommendation}\n`;
+      if (c.fixSnippet) {
+        p += `   - Snippet (${c.fixSnippet.filename || c.fixSnippet.language}):\n\`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
+      }
+    });
+  }
+
+  if (warnings.length > 0) {
+    p += `\n#### Recommended Improvements (${warnings.length}):\n`;
+    warnings.forEach((c, idx) => {
+      p += `\n${idx + 1}. ${c.name}\n`;
+      p += `   - Issue: ${c.details}\n`;
+      if (c.why) p += `   - Rationale: ${c.why}\n`;
+      if (c.recommendation) p += `   - Fix: ${c.recommendation}\n`;
+      if (c.fixSnippet) {
+        p += `   - Snippet (${c.fixSnippet.filename || c.fixSnippet.language}):\n\`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
+      }
+    });
+  }
+
+  if (failing.length === 0 && warnings.length === 0) {
+    p += `\nAll checks in this layer are passing! Maintain compliance with regular automated tests.\n`;
+  }
+
+  p += `\n### Instructions:\n1. Apply the static files and server headers to resolve these issues.\n2. Ensure full compatibility with our application framework.\n3. Provide verification curl commands to test against the live deployment.`;
+  return p;
+}
 
 function generateFixPrompt(result: ScanResult): string {
   const failing = result.layers.flatMap(l => l.checks).filter(c => c.status === 'fail');
@@ -229,9 +289,18 @@ function IconRefresh({ className = 'w-3.5 h-3.5' }: { className?: string }) {
 
 // ─── Individual Check Item ─────────────────────────────────────────────────
 
-function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defaultExpanded?: boolean }) {
+function CheckRow({ check, domain, defaultExpanded = false }: { check: CheckResult; domain: string; defaultExpanded?: boolean }) {
   const [expanded, setExpanded] = useState(defaultExpanded);
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
   const hasDetails = Boolean(check.why || check.recommendation || check.fixSnippet || check.referenceUrl);
+
+  const handleCopyCheckPrompt = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const prompt = generateCheckPrompt(check, domain);
+    copyText(prompt).catch(() => {});
+    setCopiedPrompt(true);
+    setTimeout(() => setCopiedPrompt(false), 2000);
+  };
 
   return (
     <div className="border border-border rounded-lg bg-card transition-colors hover:border-primary/40">
@@ -297,16 +366,6 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
               </span>
               <p className="text-muted-foreground leading-relaxed">
                 {check.recommendation}
-                {check.referenceUrl && (
-                  <Link
-                    href={check.referenceUrl}
-                    className="ml-2 inline-flex items-center gap-1 text-primary hover:underline underline-offset-2 font-medium"
-                    onClick={e => e.stopPropagation()}
-                  >
-                    <span>Read specification</span>
-                    <IconExternalLink className="w-3 h-3" />
-                  </Link>
-                )}
               </p>
             </div>
           )}
@@ -321,18 +380,36 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
             </div>
           )}
 
-          {!check.recommendation && check.referenceUrl && (
-            <div className="pt-1 text-right">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-border/50">
+            <button
+              type="button"
+              onClick={handleCopyCheckPrompt}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
+            >
+              {copiedPrompt ? (
+                <>
+                  <IconCheck className="w-3.5 h-3.5" />
+                  <span>Copied Issue Prompt</span>
+                </>
+              ) : (
+                <>
+                  <IconSparkles className="w-3.5 h-3.5" />
+                  <span>Copy AI Fix Prompt for this Issue</span>
+                </>
+              )}
+            </button>
+
+            {check.referenceUrl && (
               <Link
                 href={check.referenceUrl}
                 className="inline-flex items-center gap-1 text-primary text-xs hover:underline underline-offset-2 font-medium"
                 onClick={e => e.stopPropagation()}
               >
-                <span>View full specification</span>
+                <span>Read specification</span>
                 <IconExternalLink className="w-3 h-3" />
               </Link>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
     </div>
@@ -351,7 +428,17 @@ export default function ScanPage() {
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [copiedShare, setCopiedShare] = useState(false);
   const [copiedFixPrompt, setCopiedFixPrompt] = useState(false);
+  const [copiedLayerId, setCopiedLayerId] = useState<string | null>(null);
   const [, startTransition] = useTransition();
+
+  const handleCopyLayerPrompt = (e: React.MouseEvent, layer: LayerScore) => {
+    e.stopPropagation();
+    if (!result) return;
+    const prompt = generateLayerPrompt(layer, result.domain);
+    copyText(prompt).catch(() => {});
+    setCopiedLayerId(layer.id);
+    setTimeout(() => setCopiedLayerId(null), 2000);
+  };
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -756,13 +843,31 @@ export default function ScanPage() {
                       )}
                     >
                       <div className="space-y-1">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between gap-2">
                           <span className="font-semibold text-sm text-foreground">
                             {layer.name}
                           </span>
-                          <span className="text-xs font-semibold text-muted-foreground">
-                            {layer.score}/{layer.maxScore}
-                          </span>
+                          <div className="flex items-center gap-1.5">
+                            <span
+                              role="button"
+                              tabIndex={0}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleCopyLayerPrompt(e, layer);
+                              }}
+                              title={`Copy AI fix prompt for ${layer.name} layer`}
+                              className="p-1 rounded text-muted-foreground hover:text-foreground hover:bg-muted transition-colors cursor-pointer"
+                            >
+                              {copiedLayerId === layer.id ? (
+                                <IconCheck className="w-3.5 h-3.5 text-emerald-500" />
+                              ) : (
+                                <IconSparkles className="w-3.5 h-3.5 text-primary" />
+                              )}
+                            </span>
+                            <span className="text-xs font-semibold text-muted-foreground">
+                              {layer.score}/{layer.maxScore}
+                            </span>
+                          </div>
                         </div>
                         <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
                           {layer.description}
@@ -855,7 +960,19 @@ export default function ScanPage() {
 
                 {/* Layer filter buttons */}
                 <div className="flex flex-wrap gap-1.5 text-xs">
-                  {(['all', 'discovery', 'access', 'usability', 'security', 'seo', 'payments'] as const).map(layer => (
+                  <button
+                    type="button"
+                    onClick={() => setFilterLayer('all')}
+                    className={cn(
+                      'px-2.5 py-1 rounded-md border transition font-medium',
+                      filterLayer === 'all'
+                        ? 'border-primary bg-primary text-primary-foreground font-semibold'
+                        : 'border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground'
+                    )}
+                  >
+                    All Layers
+                  </button>
+                  {(['discovery', 'access', 'usability', 'security', 'seo', 'payments'] as const).map(layer => (
                     <button
                       key={layer}
                       type="button"
@@ -900,6 +1017,7 @@ export default function ScanPage() {
                     <CheckRow
                       key={check.id}
                       check={check}
+                      domain={result.domain}
                       defaultExpanded={check.status === 'fail'}
                     />
                   ))}
