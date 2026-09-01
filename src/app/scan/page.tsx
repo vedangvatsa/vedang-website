@@ -55,6 +55,104 @@ const LAYER_LABELS: Record<string, string> = {
   payments: 'Micropayments',
 };
 
+const BASELINE_MASTER_PROMPT = `You are an expert full-stack engineer and AI web readiness architect.
+Audit and upgrade our web application to achieve 100/100 readiness on the Agentic Readiness Scanner (https://veda.ng/scan).
+
+Our website URL: [PASTE YOUR URL]
+Our tech stack: [e.g. Next.js / Astro / Remix / Django / FastAPI / Express / Laravel]
+
+Please implement the following 6 layers of machine-readiness upgrades in our codebase:
+1. DISCOVERY LAYER:
+   - Add a permissive /robots.txt differentiating training bots (CCBot) from search/answer bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot).
+   - Generate a concise /llms.txt and full-text /llms-full.txt digest.
+   - Add /.well-known/agents.json, /.well-known/api-catalog (RFC 9727), and /.well-known/ard.json (ARD v0.91).
+   - Reference canonical XML sitemaps in robots.txt.
+
+2. ACCESS & RENDERING LAYER:
+   - Implement Markdown content negotiation: return clean Markdown when receiving header 'Accept: text/markdown'.
+   - Ensure initial SSR HTML contains complete, self-sufficient semantic text without requiring JavaScript execution.
+   - Add standard RateLimit-* and Sunset headers on all API endpoints.
+
+3. USABILITY & MCP LAYER:
+   - Expose a Streamable HTTP MCP (Model Context Protocol) server at /.well-known/mcp supporting JSON-RPC 2.0.
+   - Publish a 100% typed OpenAPI 3.1 schema at /openapi.json with concrete request/response examples.
+   - Provide a machine-readable authentication specification at /auth.md.
+
+4. SECURITY LAYER:
+   - Enforce HTTPS, HSTS preload (max-age=63072000; includeSubDomains; preload), and strict CSP.
+   - Publish cryptographic security contact info at /.well-known/security.txt (RFC 9116).
+
+5. SEO & CITATIONS LAYER:
+   - Embed complete JSON-LD @graph structured data (Organization, WebSite, Article/TechArticle) with E-E-A-T sameAs profile links.
+   - Structure articles with answer-first inverted pyramid headings (h1 -> h2 -> h3).
+   - Publish an active RSS/Atom feed at /feed.xml.
+
+6. MICROPAYMENTS & ACTION LAYER:
+   - Add L402 / HTTP 402 payment headers or machine terms of service at /terms-of-use.md.
+
+Provide the exact code files, server configuration, and curl commands to verify each check.`;
+
+function generateFixPrompt(result: ScanResult): string {
+  const failing = result.layers.flatMap(l => l.checks).filter(c => c.status === 'fail');
+  const warnings = result.layers.flatMap(l => l.checks).filter(c => c.status === 'warning');
+
+  let prompt = `You are an expert full-stack engineer and AI web readiness architect.
+Our website (${result.url}) was audited on the Agentic Readiness Scanner (https://veda.ng/scan) with a score of ${result.score}/100 (Grade ${result.grade}).
+
+Your objective is to update our codebase, server response headers, and static files to achieve a 100/100 score for autonomous AI agents, LLM answer engines (SearchGPT, Claude, Perplexity), and MCP clients.
+
+---
+### SUMMARY OF AUDIT FINDINGS:
+- Target Domain: ${result.domain}
+- Current Score: ${result.score}/100 (Grade ${result.grade})
+- Issues to resolve: ${failing.length} Failures, ${warnings.length} Warnings
+
+---
+### ACTION ITEMS & REMEDIATION SPECIFICATIONS:
+`;
+
+  if (failing.length > 0) {
+    prompt += `\n#### 🔴 CRITICAL FAILURES (${failing.length}):\n`;
+    failing.forEach((c, idx) => {
+      prompt += `\n${idx + 1}. [${c.layer.toUpperCase()}] ${c.name}\n`;
+      prompt += `   - Issue: ${c.details}\n`;
+      if (c.why) prompt += `   - Rationale: ${c.why}\n`;
+      if (c.recommendation) prompt += `   - Fix: ${c.recommendation}\n`;
+      if (c.fixSnippet) {
+        prompt += `   - Code/Config snippet (${c.fixSnippet.filename || c.fixSnippet.language || 'code'}):\n\`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
+      }
+    });
+  }
+
+  if (warnings.length > 0) {
+    prompt += `\n#### 🟡 RECOMMENDED IMPROVEMENTS & WARNINGS (${warnings.length}):\n`;
+    warnings.forEach((c, idx) => {
+      prompt += `\n${idx + 1}. [${c.layer.toUpperCase()}] ${c.name}\n`;
+      prompt += `   - Issue: ${c.details}\n`;
+      if (c.why) prompt += `   - Rationale: ${c.why}\n`;
+      if (c.recommendation) prompt += `   - Fix: ${c.recommendation}\n`;
+      if (c.fixSnippet) {
+        prompt += `   - Code/Config snippet (${c.fixSnippet.filename || c.fixSnippet.language || 'code'}):\n\`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
+      }
+    });
+  }
+
+  if (failing.length === 0 && warnings.length === 0) {
+    prompt += `\n🎉 All 61 checks passed! Maintain your agentic readiness by running regular CI/CD checks against https://veda.ng/api/v1/scan.\n`;
+  }
+
+  prompt += `
+---
+### IMPLEMENTATION INSTRUCTIONS:
+1. Review the existing codebase and detect our tech stack (e.g. Next.js, Astro, Remix, Django, FastAPI, Laravel, Express, etc.).
+2. Apply the exact static files (e.g. /robots.txt, /llms.txt, /llms-full.txt, /.well-known/agents.json, /.well-known/api-catalog, /.well-known/security.txt) in the public/static folder.
+3. Configure server response headers (Content-Security-Policy, HSTS, X-Content-Type-Options, RateLimit headers, and Markdown content negotiation for Accept: text/markdown).
+4. Implement or expose the Model Context Protocol (MCP) endpoint if applicable.
+5. Provide verification curl commands to confirm each fix after deploying.`;
+
+  return prompt;
+}
+
 // ─── Minimal Icons (Pure SVGs) ─────────────────────────────────────────────
 
 function IconSearch({ className = 'w-4 h-4' }: { className?: string }) {
@@ -79,6 +177,14 @@ function IconCopy({ className = 'w-3.5 h-3.5' }: { className?: string }) {
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
       <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+    </svg>
+  );
+}
+
+function IconSparkles({ className = 'w-3.5 h-3.5' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z" />
     </svg>
   );
 }
@@ -240,6 +346,7 @@ export default function ScanPage() {
   const [filterLayer, setFilterLayer] = useState<string>('all');
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [copiedShare, setCopiedShare] = useState(false);
+  const [copiedFixPrompt, setCopiedFixPrompt] = useState(false);
   const [, startTransition] = useTransition();
 
   useEffect(() => {
@@ -294,6 +401,18 @@ export default function ScanPage() {
       await copyText(text);
       setCopiedShare(true);
       setTimeout(() => setCopiedShare(false), 2000);
+    } catch {
+      // keep UI resilient
+    }
+  }
+
+  async function handleCopyFixPrompt() {
+    if (!result) return;
+    const prompt = generateFixPrompt(result);
+    try {
+      await copyText(prompt);
+      setCopiedFixPrompt(true);
+      setTimeout(() => setCopiedFixPrompt(false), 2000);
     } catch {
       // keep UI resilient
     }
@@ -406,20 +525,34 @@ export default function ScanPage() {
 
         {/* ── Default Educational State (Pre-scan) ── */}
         {!result && !loading && !error && (
-          <section className="w-full border border-border rounded-lg bg-card p-5 sm:p-6 space-y-4">
-            <SectionHeader
-              title="What This Audit Checks"
-              subtitle="Deterministic probes evaluate whether autonomous LLM agents, crawler bots, and machine consumers can discover, parse, authenticate, and interact with your web services."
-            />
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-1 text-xs">
-              {AUDIT_LAYERS_INFO.map(layer => (
-                <div key={layer.name} className="p-3.5 rounded-lg border border-border bg-muted/20 space-y-1">
-                  <div className="font-semibold text-foreground text-sm">{layer.name}</div>
-                  <p className="text-muted-foreground leading-relaxed text-xs">{layer.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <div className="space-y-6 sm:space-y-8">
+            <section className="w-full border border-border rounded-lg bg-card p-5 sm:p-6 space-y-4">
+              <SectionHeader
+                title="What This Audit Checks"
+                subtitle="Deterministic probes evaluate whether autonomous LLM agents, crawler bots, and machine consumers can discover, parse, authenticate, and interact with your web services."
+              />
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-1 text-xs">
+                {AUDIT_LAYERS_INFO.map(layer => (
+                  <div key={layer.name} className="p-3.5 rounded-lg border border-border bg-muted/20 space-y-1">
+                    <div className="font-semibold text-foreground text-sm">{layer.name}</div>
+                    <p className="text-muted-foreground leading-relaxed text-xs">{layer.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* ── Master Implementation Prompt for Pre-scan ── */}
+            <section className="w-full border border-border rounded-lg bg-card p-5 sm:p-6 space-y-3">
+              <SectionHeader
+                title="Master AI Remediation Prompt"
+                subtitle="Copy this master prompt into Claude, ChatGPT, Cursor, or your AI coding agent to implement all 6 layers of agentic readiness in your codebase."
+              />
+              <CodeBlock
+                code={BASELINE_MASTER_PROMPT}
+                filename="ai-readiness-master-prompt.md"
+              />
+            </section>
+          </div>
         )}
 
         {/* ══════════════════════════════════════════════════════════════════
@@ -467,7 +600,26 @@ export default function ScanPage() {
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-2 w-full sm:w-auto">
+                  <div className="flex items-center gap-2 w-full sm:w-auto flex-wrap">
+                    <Button
+                      type="button"
+                      variant="default"
+                      size="sm"
+                      onClick={handleCopyFixPrompt}
+                      className="flex-1 sm:flex-none text-xs gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90"
+                    >
+                      {copiedFixPrompt ? (
+                        <>
+                          <IconCheck className="w-3.5 h-3.5" />
+                          <span>Copied Fix Prompt</span>
+                        </>
+                      ) : (
+                        <>
+                          <IconSparkles className="w-3.5 h-3.5" />
+                          <span>Copy AI Fix Prompt</span>
+                        </>
+                      )}
+                    </Button>
                     <Button
                       type="button"
                       variant="outline"
@@ -500,6 +652,38 @@ export default function ScanPage() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* ── AI Remediation Master Prompt Card (Tailored to Audit) ── */}
+            <div id="ai-prompt" className="border border-border rounded-lg bg-card p-5 space-y-3">
+              <SectionHeader
+                title="AI Remediation Master Prompt"
+                subtitle="Paste this tailored prompt directly into Claude, ChatGPT, Cursor, Copilot, or Antigravity to fix all failing checks, generate missing files, and configure response headers for this website:"
+              >
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={handleCopyFixPrompt}
+                  className="h-8 px-3 text-xs gap-1.5 shrink-0"
+                >
+                  {copiedFixPrompt ? (
+                    <>
+                      <IconCheck className="w-3.5 h-3.5 text-emerald-500" />
+                      <span className="text-emerald-600 dark:text-emerald-400">Copied Prompt</span>
+                    </>
+                  ) : (
+                    <>
+                      <IconCopy className="w-3.5 h-3.5 text-muted-foreground" />
+                      <span>Copy Full Prompt</span>
+                    </>
+                  )}
+                </Button>
+              </SectionHeader>
+              <CodeBlock
+                code={generateFixPrompt(result)}
+                filename={`${result.domain}-remediation-prompt.md`}
+              />
             </div>
 
             {/* ── Capabilities Matrix ── */}

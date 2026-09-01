@@ -44,7 +44,7 @@ async function testUserExperience() {
 
   // Wait for scan to complete and results dashboard to appear
   console.log('⏳ Waiting for scan audit results...');
-  const scoreLocator = page.locator('text=/100');
+  const scoreLocator = page.locator('span:text-is("/100")');
   await scoreLocator.waitFor({ state: 'visible', timeout: 30000 });
   console.log('✅ Scan results rendered!');
 
@@ -72,6 +72,20 @@ async function testUserExperience() {
     await firstCheck.click();
     await page.waitForTimeout(300);
     console.log('✅ Check row expanded');
+  }
+
+  // Test Copy AI Fix Prompt button
+  const copyPromptBtn = page.locator('button:has-text("Copy AI Fix Prompt")');
+  if (await copyPromptBtn.isVisible()) {
+    await copyPromptBtn.click();
+    await page.waitForTimeout(300);
+    console.log('✅ Copy AI Fix Prompt button clicked successfully');
+  }
+
+  // Test AI Remediation Master Prompt card
+  const aiPromptCard = page.locator('#ai-prompt');
+  if (await aiPromptCard.isVisible()) {
+    console.log('✅ AI Remediation Master Prompt card is rendered');
   }
 
   // Test copy summary button
@@ -106,7 +120,7 @@ async function testUserExperience() {
   console.log('\n--- 5. Testing Mobile Viewport on /scan ---');
   await page.setViewportSize({ width: 375, height: 667 });
   await page.goto('http://localhost:3000/scan?url=veda.ng', { waitUntil: 'networkidle' });
-  await page.locator('text=/100').waitFor({ state: 'visible', timeout: 30000 });
+  await page.locator('span:text-is("/100")').waitFor({ state: 'visible', timeout: 30000 });
   await page.screenshot({ path: path.join(screenshotsDir, '07_scan_mobile.png'), fullPage: true });
   console.log('📸 Captured 07_scan_mobile.png');
 
