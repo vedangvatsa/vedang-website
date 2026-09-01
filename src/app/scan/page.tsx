@@ -67,7 +67,7 @@ const IMPACT_STYLES: Record<string, { label: string; badge: string }> = {
   },
   optional: {
     label: 'Optional',
-    badge: 'text-zinc-600 dark:text-zinc-400 bg-zinc-500/10 border-zinc-500/30',
+    badge: 'text-muted-foreground bg-muted border-border',
   },
 };
 
@@ -164,14 +164,14 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
   }[check.status];
 
   const statusText = {
-    pass: 'PASS',
-    warning: 'WARN',
-    fail: 'FAIL',
+    pass: 'Pass',
+    warning: 'Warn',
+    fail: 'Fail',
     na: 'N/A',
   }[check.status];
 
   return (
-    <div className="border border-border rounded-lg bg-card transition-colors hover:border-foreground/30">
+    <div className="border border-border rounded-lg bg-card transition-colors hover:border-primary/40">
       <div
         className={cn(
           'p-4 sm:p-5 flex items-start justify-between gap-4',
@@ -183,17 +183,17 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
       >
         <div className="space-y-1.5 min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <span className={cn('text-[11px] font-mono font-semibold px-2 py-0.5 rounded border', statusBadge)}>
+            <span className={cn('text-[11px] font-medium px-2 py-0.5 rounded-full border', statusBadge)}>
               {statusText}
             </span>
             <span className="font-semibold text-sm sm:text-base text-foreground tracking-tight">
               {check.name}
             </span>
-            <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-muted text-muted-foreground border border-border">
+            <span className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-muted text-muted-foreground border border-border">
               {check.layer}
             </span>
             {check.impact && (
-              <span className={cn('text-[10px] uppercase font-semibold px-1.5 py-0.5 rounded border', impact.badge)}>
+              <span className={cn('text-[11px] font-medium px-2 py-0.5 rounded-full border', impact.badge)}>
                 {impact.label}
               </span>
             )}
@@ -205,7 +205,7 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
         </div>
 
         <div className="flex items-center gap-3 shrink-0 pt-0.5">
-          <span className="font-mono text-xs font-semibold text-muted-foreground">
+          <span className="text-xs font-medium text-muted-foreground">
             {check.score}/{check.maxScore}
           </span>
           {hasDetails && (
@@ -220,19 +220,19 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
         <div className="border-t border-border px-4 sm:px-5 py-4 space-y-4 bg-muted/15 text-xs sm:text-sm">
           {check.why && (
             <div className="space-y-1">
-              <span className="text-[11px] font-mono uppercase tracking-wider font-semibold text-muted-foreground">
+              <span className="text-xs font-semibold text-foreground">
                 Rationale
               </span>
-              <p className="text-foreground/90 leading-relaxed">{check.why}</p>
+              <p className="text-muted-foreground leading-relaxed">{check.why}</p>
             </div>
           )}
 
           {check.recommendation && (
             <div className="space-y-1">
-              <span className="text-[11px] font-mono uppercase tracking-wider font-semibold text-foreground">
+              <span className="text-xs font-semibold text-foreground">
                 How to Fix
               </span>
-              <p className="text-foreground/90 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {check.recommendation}
                 {check.referenceUrl && (
                   <Link
@@ -250,8 +250,8 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
 
           {check.fixSnippet && (
             <div className="space-y-1.5 pt-1">
-              <div className="flex items-center justify-between text-muted-foreground text-[11px] font-mono">
-                <span>{check.fixSnippet.filename || check.fixSnippet.language || 'snippet'}</span>
+              <div className="flex items-center justify-between text-muted-foreground text-xs">
+                <span className="font-mono">{check.fixSnippet.filename || check.fixSnippet.language || 'snippet'}</span>
                 <Button
                   type="button"
                   variant="outline"
@@ -260,7 +260,7 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
                     e.stopPropagation();
                     handleCopySnippet(check.fixSnippet!.code);
                   }}
-                  className="h-7 px-2 text-xs font-mono"
+                  className="h-7 px-2 text-xs"
                 >
                   {copiedCode ? (
                     <>
@@ -275,7 +275,7 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
                   )}
                 </Button>
               </div>
-              <pre className="p-3.5 rounded-lg border border-border bg-zinc-950 text-zinc-200 font-mono text-xs overflow-x-auto leading-relaxed whitespace-pre-wrap break-words">
+              <pre className="p-3.5 rounded-lg border border-border bg-muted/60 text-foreground font-mono text-xs overflow-x-auto leading-relaxed whitespace-pre-wrap break-words">
                 <code>{check.fixSnippet.code}</code>
               </pre>
             </div>
@@ -285,7 +285,7 @@ function CheckRow({ check, defaultExpanded = false }: { check: CheckResult; defa
             <div className="pt-1 text-right">
               <Link
                 href={check.referenceUrl}
-                className="inline-flex items-center gap-1 text-primary text-xs hover:underline underline-offset-2"
+                className="inline-flex items-center gap-1 text-primary text-xs hover:underline underline-offset-2 font-medium"
                 onClick={e => e.stopPropagation()}
               >
                 <span>View full specification</span>
@@ -429,7 +429,7 @@ export default function ScanPage() {
           </form>
 
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-            <span className="font-mono">Presets:</span>
+            <span>Presets:</span>
             {PRESETS.map(p => (
               <button
                 key={p.name}
@@ -439,7 +439,7 @@ export default function ScanPage() {
                   executeScan(p.url);
                 }}
                 disabled={loading}
-                className="px-2 py-0.5 rounded border border-border bg-muted/40 hover:bg-muted text-foreground/90 font-mono transition"
+                className="px-2.5 py-1 rounded-md border border-border bg-muted/40 hover:bg-muted text-foreground/90 transition text-xs font-medium"
               >
                 {p.name}
               </button>
@@ -451,17 +451,17 @@ export default function ScanPage() {
         {loading && (
           <section className="w-full p-8 rounded-lg border border-border bg-card text-center space-y-3">
             <div className="text-sm font-medium">Scanning {urlInput}</div>
-            <p className="text-xs font-mono text-muted-foreground min-h-[1.25rem]">
+            <p className="text-xs text-muted-foreground min-h-[1.25rem]">
               {SCAN_STEPS[activeStepIndex]}
             </p>
-            <div className="w-full bg-muted rounded-full h-1 overflow-hidden">
+            <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
               <div
                 className="bg-primary h-full transition-all duration-300 rounded-full"
                 style={{ width: `${((activeStepIndex + 1) / SCAN_STEPS.length) * 100}%` }}
               />
             </div>
-            <p className="text-[11px] text-muted-foreground font-mono">
-              Probing 61 machine-readiness & AI citation standards across 6 layers
+            <p className="text-xs text-muted-foreground">
+              Probing 61 machine-readiness and AI citation standards across 6 layers
             </p>
           </section>
         )}
@@ -469,7 +469,7 @@ export default function ScanPage() {
         {/* ── Error State ── */}
         {error && !loading && (
           <section className="w-full p-4 rounded-lg border border-destructive/30 bg-destructive/5 text-destructive text-sm space-y-1">
-            <div className="font-semibold text-xs uppercase tracking-wider font-mono">Audit Failed</div>
+            <div className="font-semibold text-xs uppercase tracking-wider">Audit Failed</div>
             <p className="text-foreground/90">{error}</p>
           </section>
         )}
@@ -478,18 +478,18 @@ export default function ScanPage() {
         {!result && !loading && !error && (
           <section className="w-full border border-border rounded-lg bg-card p-5 sm:p-6 space-y-4">
             <div className="space-y-1">
-              <h2 className="text-sm font-bold uppercase tracking-wider font-mono text-foreground">
+              <h2 className="text-base font-semibold text-foreground">
                 What This Audit Checks
               </h2>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Deterministic probes evaluate whether autonomous LLM agents, crawler bots, and machine consumers can read, parse, authenticate, and transact with your web services.
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Deterministic probes evaluate whether autonomous LLM agents, crawler bots, and machine consumers can discover, parse, authenticate, and interact with your web services.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-1 text-xs">
               {AUDIT_LAYERS_INFO.map(layer => (
-                <div key={layer.name} className="p-3 rounded border border-border bg-muted/20 space-y-1">
-                  <div className="font-semibold text-foreground">{layer.name}</div>
-                  <p className="text-muted-foreground leading-relaxed text-[11px]">{layer.desc}</p>
+                <div key={layer.name} className="p-3.5 rounded-lg border border-border bg-muted/20 space-y-1">
+                  <div className="font-semibold text-foreground text-sm">{layer.name}</div>
+                  <p className="text-muted-foreground leading-relaxed text-xs">{layer.desc}</p>
                 </div>
               ))}
             </div>
@@ -505,14 +505,14 @@ export default function ScanPage() {
             <div className="p-5 sm:p-6 rounded-lg border border-border bg-card">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-3 flex-wrap">
+                  <div className="flex items-center gap-2.5 flex-wrap">
                     <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
                       {result.domain}
                     </h2>
-                    <span className="font-mono text-xs px-2 py-0.5 rounded border border-border bg-muted text-muted-foreground">
+                    <span className="text-xs px-2.5 py-0.5 rounded-full border border-border bg-muted text-muted-foreground font-medium">
                       {result.durationMs}ms
                     </span>
-                    <span className="font-mono text-xs px-2 py-0.5 rounded border border-border bg-muted text-muted-foreground">
+                    <span className="text-xs px-2.5 py-0.5 rounded-full border border-border bg-muted text-muted-foreground font-medium">
                       {new Date(result.scannedAt).toLocaleDateString()}
                     </span>
                   </div>
@@ -521,7 +521,7 @@ export default function ScanPage() {
                     {result.summary}
                   </p>
 
-                  <div className="flex items-center gap-3 pt-1 text-xs font-mono">
+                  <div className="flex items-center gap-3 pt-1 text-xs">
                     <span className="text-emerald-600 dark:text-emerald-400 font-semibold">{passingCount} Passed</span>
                     <span className="text-border">·</span>
                     <span className="text-amber-600 dark:text-amber-400 font-semibold">{warningCount} Warnings</span>
@@ -532,11 +532,11 @@ export default function ScanPage() {
 
                 <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-3 shrink-0">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl sm:text-5xl font-extrabold font-mono tracking-tight text-foreground">
+                    <span className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
                       {result.score}
                     </span>
-                    <span className="text-sm font-mono text-muted-foreground">/100</span>
-                    <span className="ml-1 text-xs font-mono uppercase font-bold px-2 py-0.5 rounded border border-border bg-muted">
+                    <span className="text-sm text-muted-foreground font-medium">/100</span>
+                    <span className="ml-1 text-xs font-semibold px-2.5 py-1 rounded-full border border-border bg-muted text-foreground">
                       Grade {result.grade}
                     </span>
                   </div>
@@ -578,9 +578,9 @@ export default function ScanPage() {
 
             {/* ── Capabilities Matrix ── */}
             <div className="border border-border rounded-lg bg-card p-5 space-y-3">
-              <div className="text-xs font-mono uppercase tracking-wider text-muted-foreground font-semibold">
+              <h3 className="text-sm font-semibold text-foreground">
                 Machine Interface Capabilities
-              </div>
+              </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
                 {[
                   { label: 'robots.txt AI Policy', active: result.badges.aiBotFriendly },
@@ -603,15 +603,15 @@ export default function ScanPage() {
                   <div
                     key={item.label}
                     className={cn(
-                      'p-2.5 rounded border font-mono text-[11px] flex items-center justify-between gap-2',
+                      'p-2.5 rounded-lg border text-xs font-medium flex items-center justify-between gap-2',
                       item.active
                         ? 'border-emerald-500/30 bg-emerald-500/5 text-foreground'
-                        : 'border-border/70 bg-muted/20 text-muted-foreground'
+                        : 'border-border bg-muted/20 text-muted-foreground'
                     )}
                   >
                     <span className="truncate">{item.label}</span>
-                    <span className={cn('text-[10px] font-bold', item.active ? 'text-emerald-600 dark:text-emerald-400' : 'text-zinc-400 dark:text-zinc-600')}>
-                      {item.active ? 'YES' : 'NO'}
+                    <span className={cn('text-[11px] font-semibold', item.active ? 'text-emerald-600 dark:text-emerald-400' : 'text-muted-foreground')}>
+                      {item.active ? 'Yes' : 'No'}
                     </span>
                   </div>
                 ))}
@@ -620,9 +620,9 @@ export default function ScanPage() {
 
             {/* ── Layer Performance Grid ── */}
             <div className="space-y-3">
-              <div className="text-xs font-mono uppercase tracking-wider text-muted-foreground font-semibold">
+              <h3 className="text-sm font-semibold text-foreground">
                 Layer Breakdown
-              </div>
+              </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {result.layers.map(layer => {
                   const isSelected = filterLayer === layer.id;
@@ -637,8 +637,8 @@ export default function ScanPage() {
                       className={cn(
                         'p-4 rounded-lg border text-left flex flex-col justify-between transition-colors',
                         isSelected
-                          ? 'border-foreground bg-muted/60 ring-1 ring-border'
-                          : 'border-border bg-card hover:border-border/80 hover:bg-muted/30'
+                          ? 'border-primary bg-muted/60 ring-1 ring-primary'
+                          : 'border-border bg-card hover:border-primary/40 hover:bg-muted/30'
                       )}
                     >
                       <div className="space-y-1">
@@ -646,7 +646,7 @@ export default function ScanPage() {
                           <span className="font-semibold text-sm text-foreground">
                             {layer.name}
                           </span>
-                          <span className="font-mono text-xs font-semibold text-muted-foreground">
+                          <span className="text-xs font-semibold text-muted-foreground">
                             {layer.score}/{layer.maxScore}
                           </span>
                         </div>
@@ -656,14 +656,14 @@ export default function ScanPage() {
                       </div>
 
                       <div className="mt-3 space-y-1.5">
-                        <div className="w-full bg-muted rounded-full h-1 overflow-hidden">
+                        <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
                           <div
-                            className="bg-foreground h-full rounded-full transition-all duration-300"
+                            className="bg-primary h-full rounded-full transition-all duration-300"
                             style={{ width: `${layer.percentage}%` }}
                           />
                         </div>
-                        <div className="flex items-center justify-between text-[11px] font-mono text-muted-foreground">
-                          <span>{layer.checks.filter(c => c.status === 'pass').length}/{layer.checks.length} pass</span>
+                        <div className="flex items-center justify-between text-xs text-muted-foreground font-medium">
+                          <span>{layer.checks.filter(c => c.status === 'pass').length}/{layer.checks.length} passed</span>
                           <span>{layer.percentage}%</span>
                         </div>
                       </div>
@@ -677,31 +677,31 @@ export default function ScanPage() {
             {criticalIssues.length > 0 && (
               <div className="border border-border rounded-lg bg-card p-5 space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono uppercase tracking-wider font-semibold text-foreground">
+                  <h3 className="text-sm font-semibold text-foreground">
                     High Priority Action Items ({criticalIssues.length})
-                  </span>
+                  </h3>
                   <button
                     type="button"
                     onClick={() => {
                       setFilterStatus('attention');
                       setFilterLayer('all');
                     }}
-                    className="text-xs text-primary hover:underline font-mono"
+                    className="text-xs text-primary hover:underline font-medium"
                   >
                     Filter Attention Only
                   </button>
                 </div>
                 <div className="space-y-2">
                   {criticalIssues.slice(0, 4).map(c => (
-                    <div key={c.id} className="p-3 rounded border border-border bg-muted/20 flex items-start justify-between gap-3 text-xs">
+                    <div key={c.id} className="p-3 rounded-lg border border-border bg-muted/20 flex items-start justify-between gap-3 text-xs">
                       <div className="space-y-0.5 min-w-0">
                         <div className="flex items-center gap-2">
                           <span className="font-semibold text-foreground">{c.name}</span>
-                          <span className="text-[10px] font-mono uppercase text-muted-foreground">({c.layer})</span>
+                          <span className="text-[11px] text-muted-foreground font-medium">({c.layer})</span>
                         </div>
                         <p className="text-muted-foreground leading-relaxed truncate">{c.details}</p>
                       </div>
-                      <span className={cn('text-[10px] font-mono uppercase font-semibold shrink-0 px-1.5 py-0.5 rounded border', IMPACT_STYLES[c.impact || 'optional']?.badge)}>
+                      <span className={cn('text-[11px] font-medium shrink-0 px-2 py-0.5 rounded-full border', IMPACT_STYLES[c.impact || 'optional']?.badge)}>
                         {c.impact}
                       </span>
                     </div>
@@ -719,7 +719,7 @@ export default function ScanPage() {
                   </h3>
 
                   {/* Status filter buttons */}
-                  <div className="flex items-center bg-muted/60 p-0.5 rounded border border-border text-xs font-mono">
+                  <div className="flex items-center bg-muted/60 p-0.5 rounded-lg border border-border text-xs">
                     {[
                       { key: 'all', label: `All (${allChecks.length})` },
                       { key: 'attention', label: `Attention (${warningCount + failingCount})` },
@@ -730,7 +730,7 @@ export default function ScanPage() {
                         type="button"
                         onClick={() => setFilterStatus(f.key)}
                         className={cn(
-                          'px-2.5 py-1 rounded transition font-medium',
+                          'px-2.5 py-1 rounded-md transition font-medium',
                           filterStatus === f.key
                             ? 'bg-card text-foreground shadow-xs font-semibold'
                             : 'text-muted-foreground hover:text-foreground'
@@ -743,17 +743,17 @@ export default function ScanPage() {
                 </div>
 
                 {/* Layer filter buttons */}
-                <div className="flex flex-wrap gap-1.5 text-xs font-mono">
+                <div className="flex flex-wrap gap-1.5 text-xs">
                   {(['all', 'discovery', 'access', 'usability', 'security', 'seo', 'payments'] as const).map(layer => (
                     <button
                       key={layer}
                       type="button"
                       onClick={() => setFilterLayer(layer)}
                       className={cn(
-                        'px-2.5 py-1 rounded border transition',
+                        'px-2.5 py-1 rounded-md border transition font-medium',
                         filterLayer === layer
-                          ? 'border-foreground bg-foreground text-background font-semibold'
-                          : 'border-border bg-card text-muted-foreground hover:border-foreground/40 hover:text-foreground'
+                          ? 'border-primary bg-primary text-primary-foreground font-semibold'
+                          : 'border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground'
                       )}
                     >
                       {LAYER_LABELS[layer] || layer}
@@ -762,7 +762,7 @@ export default function ScanPage() {
                 </div>
 
                 {(filterLayer !== 'all' || filterStatus !== 'all') && (
-                  <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <span>Showing {filteredChecks.length} of {allChecks.length} checks</span>
                     <button
                       type="button"
@@ -770,7 +770,7 @@ export default function ScanPage() {
                         setFilterLayer('all');
                         setFilterStatus('all');
                       }}
-                      className="text-primary hover:underline"
+                      className="text-primary hover:underline font-medium"
                     >
                       Reset filters
                     </button>
@@ -780,7 +780,7 @@ export default function ScanPage() {
 
               {/* Check items list */}
               {filteredChecks.length === 0 ? (
-                <div className="py-12 text-center text-xs font-mono text-muted-foreground border border-dashed border-border rounded-lg">
+                <div className="py-12 text-center text-xs text-muted-foreground border border-dashed border-border rounded-lg">
                   No checks match the selected filter.
                 </div>
               ) : (
@@ -797,22 +797,22 @@ export default function ScanPage() {
             </div>
 
             {/* ── API & Automation Reference ── */}
-            <div className="p-5 rounded-lg border border-border bg-card text-xs space-y-2.5 font-mono">
+            <div className="p-5 rounded-lg border border-border bg-card text-xs space-y-2.5">
               <div className="flex items-center justify-between">
-                <span className="font-semibold text-foreground uppercase tracking-wider">
+                <span className="font-semibold text-foreground text-sm">
                   Programmatic Audit API
                 </span>
-                <span className="text-muted-foreground">HTTP & MCP</span>
+                <span className="text-muted-foreground font-medium">HTTP & MCP</span>
               </div>
-              <p className="text-muted-foreground font-sans text-xs leading-relaxed">
+              <p className="text-muted-foreground text-xs leading-relaxed">
                 Run agent-readiness scans directly in CI/CD pipelines, autonomous scripts, or via the <code className="px-1 py-0.5 rounded bg-muted text-foreground font-mono">scan_agent_readiness</code> tool in the veda.ng MCP server.
               </p>
               <div className="space-y-1.5 pt-1">
-                <div className="p-2.5 rounded bg-zinc-950 text-zinc-300 overflow-x-auto border border-border">
+                <div className="p-2.5 rounded-lg bg-muted/60 text-foreground overflow-x-auto border border-border font-mono text-xs">
                   <code>curl -X POST https://veda.ng/api/v1/scan -H &quot;Content-Type: application/json&quot; -d &apos;&#123;&quot;url&quot;:&quot;{result.domain}&quot;&#125;&apos;</code>
                 </div>
               </div>
-              <div className="pt-1 flex flex-wrap items-center gap-4 text-xs font-sans">
+              <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-medium">
                 <Link href="/developers" className="text-primary hover:underline inline-flex items-center gap-1">
                   <span>API Documentation</span>
                   <IconArrowRight className="w-3 h-3" />
