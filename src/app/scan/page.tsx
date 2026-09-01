@@ -427,6 +427,7 @@ export default function ScanPage() {
   const [filterLayer, setFilterLayer] = useState<string>('all');
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [copiedShare, setCopiedShare] = useState(false);
+  const [showPrompt, setShowPrompt] = useState(false);
   const [copiedFixPrompt, setCopiedFixPrompt] = useState(false);
   const [copiedLayerId, setCopiedLayerId] = useState<string | null>(null);
   const [, startTransition] = useTransition();
@@ -745,18 +746,37 @@ export default function ScanPage() {
               </div>
             </div>
 
-            {/* ── AI Remediation Master Prompt Card (Tailored to Audit) ── */}
-            <div id="ai-prompt" className="border border-border rounded-lg bg-card p-5 space-y-3">
+            {/* ── AI Remediation Master Prompt (Collapsible) ── */}
+            <div className="border border-border rounded-lg bg-card p-5 space-y-3">
               <SectionHeader
                 title="AI Remediation Master Prompt"
-                subtitle="Paste this tailored prompt directly into Claude, ChatGPT, Cursor, Copilot, or Antigravity to fix all failing checks, generate missing files, and configure response headers for this website:"
+                subtitle="Copy the tailored prompt for fixing all failing checks. Click to expand for the full prompt."
               >
                 <Button
                   type="button"
                   variant="outline"
                   size="sm"
-                  onClick={handleCopyFixPrompt}
+                  onClick={() => setShowPrompt(prev => !prev)}
                   className="h-8 px-3 text-xs gap-1.5 shrink-0"
+                >
+                  {showPrompt ? (
+                    <>
+                      <IconCheck className="w-3.5 h-3.5 text-emerald-500" />
+                      <span className="text-emerald-600">Hide Prompt</span>
+                    </>
+                  ) : (
+                    <>
+                      <IconCopy className="w-3.5 h-3.5 text-muted-foreground" />
+                      <span>Show Prompt</span>
+                    </>
+                  )}
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={handleCopyFixPrompt}
+                  className="h-8 px-3 text-xs gap-1.5 shrink-0 ml-2"
                 >
                   {copiedFixPrompt ? (
                     <>
