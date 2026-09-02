@@ -1398,9 +1398,11 @@
     "id": "ig-daytrading-liar",
     "scheduleDate": "2026-09-02",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "When the CEO says \"we have no plans for layoffs.\"\n\nThen two weeks later, the company restructures.\n\nAlways watch what they do.\n\nNever just what they say.",
-    "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4"
+    "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4",
+    "postedAt": "2026-09-02T08:07:16.060Z",
+    "castHash": "0xb6c2bfaa61533ba0cd85d0e73ab475af23e610cc"
   },
   {
     "id": "ig-ai-canon-events",
