@@ -262,6 +262,27 @@ const referenceLinks = [
             { name: 'Firebase App Hosting', url: 'https://firebase.google.com/docs/app-hosting' },
         ],
     },
+    // Templates, Infra & UI Registries
+    {
+        name: 'Templates & App Forking',
+        links: [
+            { name: 'Vercel Marketplace', url: 'https://vercel.com/marketplace' },
+            { name: 'Vercel Templates', url: 'https://vercel.com/templates' },
+            { name: 'v0 Templates', url: 'https://v0.app/templates' },
+            { name: 'Lovable Templates', url: 'https://lovable.dev/templates' },
+            { name: 'Lovable Academy', url: 'https://academy.lovable.app/academy/templates' },
+            { name: 'Bolt.new Remix Engine', url: 'https://bolt.new' },
+        ],
+    },
+    {
+        name: 'UI Component Registries',
+        links: [
+            { name: 'shadcn/ui Registry', url: 'https://ui.shadcn.com' },
+            { name: '21st.dev Component Index', url: 'https://21st.dev' },
+            { name: 'Magic UI Design', url: 'https://magicui.design' },
+            { name: 'Shadcnblocks Catalog', url: 'https://shadcnblocks.com' },
+        ],
+    },
 ];
 
 const faqItems = [
