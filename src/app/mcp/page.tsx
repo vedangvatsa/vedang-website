@@ -35,44 +35,65 @@ const curriculumItems = [
 ];
 
 const referenceLinks = [
-    {
-        name: 'Official MCP',
-        links: [
-            { name: 'MCP Specification', url: 'https://spec.modelcontextprotocol.io' },
-            { name: 'MCP Documentation', url: 'https://modelcontextprotocol.io/docs' },
-            { name: 'MCP TypeScript SDK', url: 'https://github.com/modelcontextprotocol/typescript-sdk' },
-            { name: 'MCP Python SDK', url: 'https://github.com/modelcontextprotocol/python-sdk' },
-            { name: 'MCP Go SDK', url: 'https://github.com/modelcontextprotocol/go-sdk' },
-        ],
-    },
-    {
-        name: 'Tools & Registries',
-        links: [
-            { name: 'MCP Inspector', url: 'https://github.com/modelcontextprotocol/inspector' },
-            { name: 'Smithery (MCP Registry)', url: 'https://smithery.ai' },
-            { name: 'Glama (MCP Registry)', url: 'https://glama.ai/mcp/servers' },
-            { name: 'MCP.run', url: 'https://mcp.run' },
-        ],
-    },
-    {
-        name: 'Client Documentation',
-        links: [
-            { name: 'Claude Desktop MCP Guide', url: 'https://modelcontextprotocol.io/quickstart/user' },
-            { name: 'Claude Code MCP Docs', url: 'https://docs.anthropic.com/en/docs/claude-code/mcp' },
-            { name: 'Cursor MCP Docs', url: 'https://docs.cursor.com/context/model-context-protocol' },
-            { name: 'Windsurf MCP Docs', url: 'https://docs.windsurf.com/windsurf/mcp' },
-            { name: 'VS Code MCP Support', url: 'https://code.visualstudio.com/docs/copilot/chat/mcp-servers' },
-            { name: 'Antigravity MCP Docs', url: 'https://antigravity.dev/docs/mcp' },
-            { name: 'Zed MCP Support', url: 'https://zed.dev/docs/assistant/model-context-protocol' },
-        ],
-    },
-    {
-        name: 'Example Servers',
-        links: [
-            { name: 'Official MCP Servers Repo', url: 'https://github.com/modelcontextprotocol/servers' },
-            { name: 'Awesome MCP Servers', url: 'https://github.com/punkpeye/awesome-mcp-servers' },
-        ],
-    },
+  {
+    name: 'Canonical Registries (The "npm" Layer)',
+    links: [
+      { name: 'Official MCP Registry', url: 'https://registry.modelcontextprotocol.io' },
+      { name: 'MCP Registry GitHub', url: 'https://github.com/modelcontextprotocol/registry' },
+      { name: 'Agent Skills Standard (SKILL.md)', url: 'https://agentskills.io' },
+      { name: 'Vercel Skills Leaderboard (skills.sh)', url: 'https://skills.sh' },
+      { name: 'ClawHub Registry (OpenClaw)', url: 'https://clawhub.ai' },
+      { name: 'Docker MCP Catalog', url: 'https://hub.docker.com/mcp' },
+      { name: 'Smithery Registry', url: 'https://smithery.ai' },
+      { name: 'Glama MCP Directory', url: 'https://glama.ai/mcp/servers' },
+    ],
+  },
+  {
+    name: 'First-Party Stores & Marketplaces',
+    links: [
+      { name: 'OpenAI ChatGPT Apps', url: 'https://chatgpt.com/apps' },
+      { name: 'ChatGPT GPTs Store', url: 'https://chatgpt.com/gpts' },
+      { name: 'OpenAI Plugin & Skills Spec', url: 'https://developers.openai.com/plugins' },
+      { name: 'Claude Platform Marketplace', url: 'https://claude.com/platform/marketplace' },
+      { name: 'Claude Plugins Directory', url: 'https://claude.com/plugins' },
+      { name: 'Claude Code Official Plugins', url: 'https://github.com/anthropics/claude-plugins-official' },
+      { name: 'Anthropic Agent Skills', url: 'https://github.com/anthropics/skills' },
+      { name: 'Cursor Marketplace', url: 'https://cursor.com/marketplace' },
+      { name: 'GitHub Copilot Plugins', url: 'https://github.com/github/copilot-plugins' },
+      { name: 'Windsurf Cascade MCP', url: 'https://docs.windsurf.com/windsurf/cascade/mcp' },
+      { name: 'Cline MCP Marketplace', url: 'https://docs.cline.bot/mcp/mcp-marketplace' },
+      { name: 'Google Antigravity Plugins', url: 'https://antigravity.google/docs/plugins' },
+      { name: 'Gemini CLI Extensions', url: 'https://geminicli.com/docs/extensions' },
+      { name: 'xAI Grok Bot Docs', url: 'https://docs.x.ai/grok-bot' },
+      { name: 'Grok Plugin Marketplace', url: 'https://github.com/xai-org/plugin-marketplace' },
+      { name: 'Hermes Skills Hub (Nous Research)', url: 'https://hermes-agent.nousresearch.com/docs/skills' },
+      { name: 'Zinc (Agent Autonomous Commerce)', url: 'https://zinc.com' },
+    ],
+  },
+  {
+    name: 'Official MCP Specifications & SDKs',
+    links: [
+      { name: 'MCP Specification', url: 'https://spec.modelcontextprotocol.io' },
+      { name: 'MCP Documentation', url: 'https://modelcontextprotocol.io/docs' },
+      { name: 'MCP TypeScript SDK', url: 'https://github.com/modelcontextprotocol/typescript-sdk' },
+      { name: 'MCP Python SDK', url: 'https://github.com/modelcontextprotocol/python-sdk' },
+      { name: 'MCP Go SDK', url: 'https://github.com/modelcontextprotocol/go-sdk' },
+      { name: 'MCP Inspector', url: 'https://github.com/modelcontextprotocol/inspector' },
+      { name: 'Official MCP Servers Repo', url: 'https://github.com/modelcontextprotocol/servers' },
+    ],
+  },
+  {
+    name: 'Client Integration Guides',
+    links: [
+      { name: 'Claude Desktop MCP Guide', url: 'https://modelcontextprotocol.io/quickstart/user' },
+      { name: 'Claude Code MCP Docs', url: 'https://docs.anthropic.com/en/docs/claude-code/mcp' },
+      { name: 'Cursor MCP Docs', url: 'https://docs.cursor.com/context/model-context-protocol' },
+      { name: 'Windsurf MCP Docs', url: 'https://docs.windsurf.com/windsurf/mcp' },
+      { name: 'VS Code MCP Support', url: 'https://code.visualstudio.com/docs/copilot/chat/mcp-servers' },
+      { name: 'Antigravity MCP Docs', url: 'https://antigravity.dev/docs/mcp' },
+      { name: 'Zed MCP Support', url: 'https://zed.dev/docs/assistant/model-context-protocol' },
+    ],
+  },
 ];
 
 const faqItems = [
