@@ -416,7 +416,7 @@ dig CAA example.com +short
                       </div>
                       <svg className="w-4 h-4 shrink-0 mt-1 text-muted-foreground/40 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
                     </summary>
-                    <div className="px-4 pb-4 pt-1 ml-[72px] sm:ml-[76px] space-y-2">
+                    <div className="px-4 pb-4 pt-1 ml-2 sm:ml-[76px] pl-4 sm:pl-0 border-l border-border/60 sm:border-l-0 space-y-2">
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.how}</p>
                       {item.ref && (
                         <Link href={item.ref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary underline underline-offset-4 hover:text-primary/80 font-medium">

@@ -303,20 +303,20 @@ export default function DevelopersPage() {
               </div>
               <div className="divide-y divide-border text-xs">
                 {REST_ROUTES.map((route) => (
-                  <div key={route.path} className="p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-muted/10 transition-colors">
-                    <div className="flex items-center gap-2.5">
+                  <div key={route.path} className="p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-muted/10 transition-colors min-w-0">
+                    <div className="flex items-center gap-2.5 min-w-0">
                       <span className="font-mono text-[10px] font-medium px-2 py-0.5 rounded-full bg-muted text-foreground border border-border shrink-0">
                         {route.method}
                       </span>
                       <Link
                         href={route.href}
-                        className="font-mono text-xs text-primary underline underline-offset-4 hover:text-primary/80 font-medium"
+                        className="font-mono text-xs text-primary underline underline-offset-4 hover:text-primary/80 font-medium truncate"
                       >
                         {route.path}
                       </Link>
                     </div>
-                    <div className="flex items-center gap-3 text-muted-foreground">
-                      <span className="text-xs truncate">{route.summary}</span>
+                    <div className="flex items-center gap-3 text-muted-foreground min-w-0">
+                      <span className="text-xs truncate min-w-0">{route.summary}</span>
                       <span className="hidden sm:inline-block text-[10px] font-medium text-muted-foreground px-2 py-0.5 rounded-full bg-muted border border-border shrink-0">
                         {route.tag}
                       </span>

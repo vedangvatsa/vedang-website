@@ -32,7 +32,7 @@ export function PageHero({ title, subtitle, showAvatar = false, children }: Page
           priority
         />
       )}
-      <h1 className={`text-4xl md:text-5xl font-semibold tracking-tight${showAvatar ? ' mt-5' : ''}`}>
+      <h1 className={`text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight${showAvatar ? ' mt-5' : ''}`}>
         {title}
       </h1>
       {subtitle && (

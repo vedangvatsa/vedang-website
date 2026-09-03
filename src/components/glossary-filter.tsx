@@ -22,7 +22,7 @@ const GlossaryCard = memo(function GlossaryCard({ item }: { item: GlossaryTerm }
       </Link>
       <Card className="hover:border-primary/50 transition-colors h-full flex flex-col group-hover:border-primary/50">
         <CardHeader className="pb-3">
-          <dt className="text-lg font-semibold leading-none tracking-tight">
+          <dt className="text-lg font-semibold leading-tight tracking-tight break-words">
             {item.term}
           </dt>
           <span className="text-xs text-muted-foreground/60 mt-1.5">
