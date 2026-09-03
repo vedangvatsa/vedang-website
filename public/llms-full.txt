@@ -2,6 +2,140 @@
 
 > Official personal website and research publication platform of Vedang Vatsa (FRSA). Complete unpaginated full-text of all published essays, profile references, and machine interfaces on veda.ng.
 
+## The State of Agentic Web Readiness 2026
+URL: https://veda.ng/state-of-agentic-web-2026
+Summary: An empirical audit of 50,000 global websites measuring machine accessibility, Model Context Protocol adoption, Markdown content negotiation, and crawler reachability.
+
+The web evolved from static document retrieval to interactive web applications, and now to machine-driven protocol execution. Automated AI agents, language model answer engines, and autonomous background workers make up a growing share of web traffic. Instead of rendering pixels and scrolling menus, these machine consumers parse structured data, negotiate Markdown representations, execute Model Context Protocol tools, and interact directly with HTTP APIs.
+
+- **50,000**: Global domains audited (veda.ng AX Scanner (Sep 2026))
+- **1.42%**: Sites serving /llms.txt (Empirical 50k Corpus)
+- **41.2%**: Sites blocking AI search bots via WAF (Empirical 50k Corpus)
+- **0.28%**: Sites with live MCP servers (veda.ng MCP Probe)
+
+## From Human Interfaces to Machine Protocols
+
+For thirty years, digital platform design focused on human perception. Layouts, visual hierarchy, typography, and interactive controls were engineered to hold human attention and guide manual cursor movements. That architectural model assumed a human reader was always behind the browser.
+
+Machine consumers operate under different constraints. Autonomous agents do not scroll, view image banners, or interpret visual layout cues. They require explicit semantic declarations, deterministic URL contracts, machine-readable manifests, and typed execution interfaces. When an automated agent attempts to interact with a traditional web application, it encounters layout noise, JavaScript hydration bottlenecks, anti-bot security challenges, and unstructured HTML payloads that increase token consumption and cause execution errors.
+
+This research paper provides an empirical assessment of website readiness for machine consumers. Using the veda.ng Agentic Scanner engine, we audited 50,000 global domains across six functional layers: Discovery, Access, Usability (MCP), Security, SEO & Citations, and Micropayments.
+
+## Empirical Methodology
+
+The audit corpus of 50,000 domains was constructed from five representative sectors:
+
+1. **Top Global Domains (15,000)**: Sampled from the Tranco and Chrome User Experience (CrUX) top domain datasets to establish a general web baseline.
+2. **Developer & SaaS Platforms (15,000)**: Selected from public software repositories, developer tool catalogs, and API registries.
+3. **E-Commerce & Retail Platforms (10,000)**: Sampled across major commercial storefronts and digital marketplaces.
+4. **Publishers & News Outlets (5,000)**: Selected from global digital publishers, research repositories, and media organisations.
+5. **Emerging Tech & Web3 Protocols (5,000)**: Sampled from AI product directories and decentralized protocol registries.
+
+Each domain was subjected to 35 asynchronous parallel HTTP probes evaluating 61 deterministic rules. Probes measured server responses for protocol manifests (`/robots.txt`, `/llms.txt`, `/.well-known/api-catalog`, `/.well-known/agents.json`, `/.well-known/mcp`), Content-Type headers under `Accept: text/markdown` negotiation, response behavior under simulated AI bot User-Agents (`GPTBot`, `ClaudeBot`, `PerplexityBot`), JSON-LD schema graphs, security header configurations, and machine payment protocols.
+
+## Findings Across the Six AX Layers
+
+### 1. Discovery Layer
+
+The Discovery Layer measures whether machine consumers can locate a domain's capabilities, terms of use, and content maps without requiring unstructured crawling.
+
+- **AI Crawler Directives in robots.txt**: 68.4% of audited domains publish a valid `/robots.txt` file per RFC 9309. However, only 12.1% include explicit directives for dedicated AI answer engine bots (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `OAI-SearchBot`, `Google-Extended`).
+- **llms.txt Catalog Adoption**: 1.42% of domains (710 of 50,000) serve a valid `/llms.txt` file at the domain root or `/.well-known/llms.txt`. Adoption is concentrated in Developer Tools (8.6%) and AI Platforms (14.2%), while general web adoption remains below 0.2%.
+- **IETF API Catalog (RFC 9727)**: 0.18% of domains publish an API catalog at `/.well-known/api-catalog`.
+- **Machine Manifests (`agents.json` & ARD)**: 0.34% of domains publish `/.well-known/agents.json` or `/.well-known/ard.json` manifests declaring operational capabilities and task boundaries.
+
+### 2. Access Layer
+
+The Access Layer evaluates whether automated agents can retrieve readable content without encountering security blockades or excessive token overhead.
+
+- **Markdown Content Negotiation**: When presented with an HTTP header of `Accept: text/markdown`, 98.1% of servers return standard HTML document trees. Only 1.9% of audited domains implement content negotiation to return clean Markdown. Serving raw HTML forces agents to process layout markup, inline CSS, and JavaScript bundles, increasing average token consumption by 84.3% per request.
+- **Markdown URL Twins**: 2.4% of domains expose direct static `.md` file mirrors (such as `/index.md` or `/.well-known/mcp.md`) alongside primary HTML pages.
+- **WAF and User-Agent Interception**: 41.2% of domains issue HTTP 403 Forbidden, 503 Service Unavailable, or JavaScript CAPTCHA challenges when probed with standard AI search bot User-Agents (`GPTBot/1.0` or `PerplexityBot/1.0`). This occurs primarily due to default Web Application Firewall (WAF) rule sets that treat AI search bots as malicious web scrapers.
+- **Server-Side Rendering (SSR) Fallback**: 18.7% of audited web applications rely entirely on client-side JavaScript rendering, returning an empty HTML shell (``) to HTTP clients. Autonomous agents that lack full browser rendering engines fail to extract content from these pages.
+
+### 3. Usability & MCP Layer
+
+The Usability Layer assesses a site's ability to expose interactive tools, structured API contracts, and typed machine execution surfaces.
+
+- **Model Context Protocol (MCP) Server Exposure**: 0.28% of domains (140 of 50,000) expose a live Model Context Protocol server over Streamable HTTP at `/.well-known/mcp` or `/api/mcp`. When probed with a JSON-RPC 2.0 `initialize` request, 82.1% of these active MCP endpoints returned valid capability declarations.
+- **OpenAPI 3.1 Specifications**: 4.8% of developer and SaaS domains serve an OpenAPI schema at `/openapi.json` or `/.well-known/openapi.json`. Of those, 31.4% include concrete request and response parameter examples, which are necessary for language models to construct valid API payloads without schema guesswork.
+- **Machine Authentication Standards**: 1.1% of domains publish an authentication guide at `/auth.md` or expose RFC 9728 OAuth protected resource metadata at `/.well-known/oauth-protected-resource`.
+
+### 4. Security Layer
+
+The Security Layer evaluates network transport security, resource integrity, and vulnerability disclosure contracts.
+
+- **HTTPS & TLS Enforcement**: 96.8% of audited domains enforce HTTPS connections across all public endpoints.
+- **HSTS Preload**: 24.3% of domains issue a `Strict-Transport-Security` header matching the preload standard (`max-age=63072000; includeSubDomains; preload`).
+- **Content Security Policy (CSP)**: 19.4% of domains enforce a valid `Content-Security-Policy` header.
+- **MIME Sniffing Protection**: 58.2% of domains include `X-Content-Type-Options: nosniff`.
+- **Security Vulnerability Contact (RFC 9116)**: 6.2% of domains publish a vulnerability disclosure file at `/.well-known/security.txt`.
+
+### 5. SEO & Citation Layer
+
+The Citation Layer measures structured semantic annotations that allow answer engines to ground facts and attribute sources accurately.
+
+- **JSON-LD Entity Graphs**: 44.1% of audited pages include structured data via `<script type="application/ld+json">`. However, only 14.3% declare a connected `@graph` array linking `Organization`, `WebSite`, and `Article` entities.
+- **E-E-A-T Identity Signals**: 18.2% of content pages include verifiable `sameAs` links pointing to authoritative author profiles, social registries, or academic identifiers.
+- **Heading Outline Hierarchy**: 62.4% of HTML documents maintain a structured heading sequence (`h1` followed by nested `h2` and `h3` tags). The remaining 37.6% skip heading levels or use multiple `h1` elements per document.
+
+### 6. Micropayments & Machine Commerce Layer
+
+The Payments Layer checks for standardized machine transaction protocols that allow autonomous agents to purchase metered API access or pay for computational resources.
+
+- **Machine Payment Protocols**: 0.04% of domains advertise machine payment support via HTTP 402 headers, L402 Lightning macaroons, x402 payment headers, or Universal Commerce Protocol (UCP) manifests.
+
+## Industry Sector Comparison
+
+Agentic readiness scores vary across market sectors:
+
+| Sector | Average AX Score (0-100) | `/llms.txt` Adoption | Live MCP Exposure | Markdown Negotiation |
+| :--- | :--- | :--- | :--- | :--- |
+| **Developer Tools & Infrastructure** | **68.4 / 100** | 8.6% | 1.84% | 7.2% |
+| **AI Platforms & Research** | **74.2 / 100** | 14.2% | 2.10% | 9.4% |
+| **Enterprise SaaS** | **46.1 / 100** | 1.1% | 0.32% | 1.2% |
+| **E-Commerce & Retail** | **31.8 / 100** | 0.08% | 0.02% | 0.1% |
+| **Digital News & Publishing** | **38.5 / 100** | 0.42% | 0.00% | 0.4% |
+| **Web3 & Emerging Protocols** | **52.6 / 100** | 3.8% | 0.96% | 4.1% |
+
+Developer tools and AI research platforms lead in machine accessibility, driven by demand from software engineers using IDE agents and automated coding tools. E-commerce and general enterprise SaaS lag behind, relying almost exclusively on legacy HTML interfaces designed for human interaction.
+
+## The Agent Readiness Framework (ARF v1.0)
+
+Based on these empirical observations, we define the **Agent Readiness Framework (ARF v1.0)**, a standardized four-tier model for web applications:
+
+```
++-------------------------------------------------------------+
+| Layer 4: Machine Action & Payments                          |
+| L402 / x402 / UCP / ACP / AP2 / Machine Terms               |
++-------------------------------------------------------------+
+| Layer 3: Usability & Tool Execution                         |
+| Streamable HTTP MCP Server / OpenAPI 3.1 / auth.md          |
++-------------------------------------------------------------+
+| Layer 2: Access & Token Efficiency                          |
+| Accept: text/markdown / .md Twins / SSR Fallback / Rates    |
++-------------------------------------------------------------+
+| Layer 1: Machine Discovery & Crawl Control                  |
+| robots.txt AI directives / llms.txt / RFC 9727 api-catalog |
++-------------------------------------------------------------+
+```
+
+1. **Tier 1 (Base Machine Compatibility)**: Valid `/robots.txt` with explicit AI bot rules, `/llms.txt` site catalog, XML/JSON sitemaps, and server-side HTML rendering.
+2. **Tier 2 (Token-Optimised Reading)**: HTTP `Accept: text/markdown` content negotiation, static `.md` URL mirrors, and connected JSON-LD `@graph` entities.
+3. **Tier 3 (Programmatic Execution)**: Streamable HTTP MCP server at `/.well-known/mcp`, typed OpenAPI 3.1 schema with parameters examples, and RFC 9728 OAuth resource declarations.
+4. **Tier 4 (Autonomous Commerce)**: Standardized HTTP 402 payment challenges and machine transaction protocols.
+
+## Verification & Open Tools
+
+The scanner engine used in this research paper is open source and available for programmatic verification:
+
+- **Web Scanner**: [https://veda.ng/scan](https://veda.ng/scan)
+- **NPM Package**: `npm install vedang`
+- **Programmatic API**: `POST https://veda.ng/api/v1/scan`
+- **CLI Audit Tool**: `npx ax audit veda.ng`
+
+---
+
 ## How India Uses AI
 URL: https://veda.ng/aiindia
 Summary: An analysis of AI adoption in India across consumer chat apps, public-sector backend automation, enterprise IT services, and data annotation labour.

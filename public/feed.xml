@@ -8,6 +8,13 @@
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The State of Agentic Web Readiness 2026</title>
+      <link>https://veda.ng/state-of-agentic-web-2026</link>
+      <guid>https://veda.ng/state-of-agentic-web-2026</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+      <description>An empirical audit of 50,000 global websites measuring machine accessibility, Model Context Protocol adoption, Markdown content negotiation, and crawler reachability.</description>
+    </item>
+    <item>
       <title>How India Uses AI</title>
       <link>https://veda.ng/aiindia</link>
       <guid>https://veda.ng/aiindia</guid>
