@@ -38,6 +38,11 @@
       "name": "search_reports",
       "description": "Search 233,000+ academic papers via OpenAlex in the AI or Web3 corpus.",
       "input": { "query": "string (required)", "corpus": "'ai' | 'web3'", "per_page": "number (1-20)" }
+    },
+    {
+      "name": "scan_agent_readiness",
+      "description": "Audit any public domain's AI and agentic web readiness. Returns a 0-100 score, grade, and per-check findings across Discovery, Access, Usability, Security, SEO, and Micropayments layers.",
+      "input": { "url": "string (required — domain or full URL, e.g. 'stripe.com' or 'https://github.com')" }
     }
   ],
   "docs": "https://veda.ng/developers"

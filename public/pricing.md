@@ -1,20 +1,86 @@
-# Pricing & Access - Vedang Vatsa (veda.ng)
+# Pricing & Access — Vedang Vatsa (veda.ng)
 
-Veda is 100% Free and Open-Access for humans and autonomous AI agents.
+Last updated: 2025-09-03  
+Canonical URL: https://veda.ng/pricing
 
-## Pricing Tiers
+---
 
-### 1. Public & Developer Tier ($0 / month)
-- **Cost**: $0 USD (Free, Keyless, Open Access)
-- **Academic Research Search**: Unlimited queries across 233,000+ indexed papers in AI and Web3 (backed by OpenAlex)
-- **Model Context Protocol (MCP)**: Unauthenticated access to Product MCP (`/.well-known/mcp`) and Docs MCP (`/.well-known/mcp/docs`)
-- **Long-Form Essays & Research**: Full-text reading and Markdown twins (`.md`) across all publications
-- **Educational Curriculum**: Free access to Prompt Engineering, MCP Development, Vibe Coding, and Agentic Web courses
-- **Technical Glossary**: 100+ plain-language definitions
-- **REST API Rate Limit**: Standard RFC 60 requests/minute keyless bucket
-- **Authentication Required**: None (No credit card, no account required)
+## Summary
 
-### 2. Commercial & Enterprise Usage
-- **Terms**: Open access under standard web usage policies
-- **Machine Readability**: 100% supported via OpenAPI 3.1, JSON-RPC 2.0, and Markdown content negotiation
-- **SLA / Custom Integrations**: Contact Vedang Vatsa via https://veda.ng/contact
+veda.ng is free and open-access for humans and autonomous AI agents. There are no API keys, no accounts, and no credit cards required for any read operation.
+
+---
+
+## Plans
+
+### Free — $0 / month
+
+Available to everyone, including AI agents and automated systems.
+
+| Feature | Limit |
+|---|---|
+| Academic paper search (233,000+ papers, OpenAlex) | Unlimited |
+| Long-form essay reading (68 essays, full Markdown) | Unlimited |
+| Technical glossary lookups (100+ AI & Web3 terms) | Unlimited |
+| MCP server access (Product + Docs) | Unlimited, keyless |
+| REST API calls | 60 requests / minute |
+| Markdown content negotiation (Accept: text/markdown) | All pages |
+| OpenAPI 3.1 spec download | Unlimited |
+| RSS / Atom feed | Unlimited |
+| Education courses (Prompt, MCP, Vibe Coding, Agentic Web, Automation, Web3) | Unlimited |
+| AI & Web Readiness scanner (/scan) | Unlimited |
+| Swarm prediction engine | Unlimited |
+| Authentication required | None |
+| API key required | None |
+
+**Rate limits**: Standard keyless bucket — 60 requests/minute per IP. Headers returned on all API responses:
+```
+RateLimit-Policy: 60;w=60
+RateLimit-Limit: 60
+RateLimit-Remaining: <n>
+RateLimit-Reset: <epoch>
+```
+
+---
+
+### Enterprise / Custom — Contact
+
+For high-volume ingestion, SLA guarantees, white-label access, or custom integrations:
+
+- **Contact**: https://veda.ng/contact
+- **Machine-readable request**: POST https://veda.ng/api/v1/batch with `{"intent": "enterprise-inquiry"}`
+- **Response time**: 2 business days
+
+Custom options include:
+- Dedicated rate-limit tier
+- Private OpenAPI schema snapshots
+- Bulk essay / glossary data exports (JSONL)
+- Custom MCP tool exposure for internal agent workflows
+
+---
+
+## Machine Endpoints
+
+All endpoints are accessible without authentication:
+
+| Endpoint | Description |
+|---|---|
+| `POST /api/v1/scan` | AI & web readiness audit (returns JSON score + check results) |
+| `GET /api/v1/essays` | Essay index (JSON) |
+| `GET /api/v1/glossary` | Glossary term index (JSON) |
+| `POST /api/v1/reports/search` | Academic paper search (JSON) |
+| `GET /openapi.json` | OpenAPI 3.1 specification |
+| `POST /.well-known/mcp` | MCP Product Server (JSON-RPC 2.0) |
+| `POST /.well-known/mcp/docs` | MCP Docs Server (JSON-RPC 2.0) |
+| `GET /llms.txt` | LLM site catalog (Markdown) |
+| `GET /llms-full.txt` | Full-text LLM digest (Markdown) |
+| `GET /feed.xml` | RSS feed (68 essays) |
+
+---
+
+## Usage Policy
+
+- All content is available for reading, research, and machine consumption.
+- Training on the content is subject to veda.ng's robots.txt AI-bot directives.
+- Commercial redistribution or repackaging of the data is not permitted without written consent.
+- See: https://veda.ng/auth.md for the authentication and access specification.

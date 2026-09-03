@@ -13,7 +13,7 @@ import { copyText } from '@/lib/copy-text';
 import { cn } from '@/lib/utils';
 import { ScanResult, CheckResult, LayerScore } from '@/lib/scanner/types';
 
-// ─── Presets & Constants ───────────────────────────────────────────────────
+// ─── Constants ───────────────────────────────────────────────────────────────
 
 const PRESETS = [
   { name: 'veda.ng', url: 'https://veda.ng' },
@@ -36,61 +36,17 @@ const SCAN_STEPS = [
   'Aggregating 0–100 Agentic Readiness Score...',
 ];
 
-const AUDIT_LAYERS_INFO = [
-  { name: 'Discovery (13 Probes)', desc: 'robots.txt AI bot policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, XML/JSON sitemaps' },
-  { name: 'Access (9 Probes)', desc: 'Markdown content negotiation (Accept: text/markdown), .md twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
-  { name: 'Usability & MCP (10 Probes)', desc: 'Streamable MCP servers, OpenAPI 3.1 schema & examples, auth guides, RFC 8414 OAuth, TDMRep rights' },
-  { name: 'Security (11 Probes)', desc: 'HTTPS, HSTS preload, CSP, nosniff, frame protection, RFC 9116 security.txt, RFC 9421 signatures' },
-  { name: 'SEO & Citations (15 Probes)', desc: 'Title/Meta tags, JSON-LD @graph schemas, E-E-A-T sameAs links, inverted pyramid Q&A, favicons, RSS feeds' },
-  { name: 'Micropayments (3 Probes)', desc: 'L402 / HTTP 402 macaroons, WebLN wallet discovery, machine terms of service' },
-];
-
 const LAYER_LABELS: Record<string, string> = {
-  all: 'All Checks',
+  all: 'All',
   discovery: 'Discovery',
   access: 'Access',
-  usability: 'Usability & MCP',
+  usability: 'Usability',
   security: 'Security',
-  seo: 'SEO & Structured Data',
-  payments: 'Micropayments',
+  seo: 'SEO',
+  payments: 'Payments',
 };
 
-const BASELINE_MASTER_PROMPT = `You are an expert full-stack engineer and AI web readiness architect.
-Audit and upgrade our web application to achieve 100/100 readiness on the Agentic Readiness Scanner (https://veda.ng/scan).
-
-Our website URL: [PASTE YOUR URL]
-Our tech stack: [e.g. Next.js / Astro / Remix / Django / FastAPI / Express / Laravel]
-
-Please implement the following 6 layers of machine-readiness upgrades in our codebase:
-1. DISCOVERY LAYER:
-   - Add a permissive /robots.txt differentiating training bots (CCBot) from search/answer bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot).
-   - Generate a concise /llms.txt and full-text /llms-full.txt digest.
-   - Add /.well-known/agents.json, /.well-known/api-catalog (RFC 9727), and /.well-known/ard.json (ARD v0.91).
-   - Reference canonical XML sitemaps in robots.txt.
-
-2. ACCESS & RENDERING LAYER:
-   - Implement Markdown content negotiation: return clean Markdown when receiving header 'Accept: text/markdown'.
-   - Ensure initial SSR HTML contains complete, self-sufficient semantic text without requiring JavaScript execution.
-   - Add standard RateLimit-* and Sunset headers on all API endpoints.
-
-3. USABILITY & MCP LAYER:
-   - Expose a Streamable HTTP MCP (Model Context Protocol) server at /.well-known/mcp supporting JSON-RPC 2.0.
-   - Publish a 100% typed OpenAPI 3.1 schema at /openapi.json with concrete request/response examples.
-   - Provide a machine-readable authentication specification at /auth.md.
-
-4. SECURITY LAYER:
-   - Enforce HTTPS, HSTS preload (max-age=63072000; includeSubDomains; preload), and strict CSP.
-   - Publish cryptographic security contact info at /.well-known/security.txt (RFC 9116).
-
-5. SEO & CITATIONS LAYER:
-   - Embed complete JSON-LD @graph structured data (Organization, WebSite, Article/TechArticle) with E-E-A-T sameAs profile links.
-   - Structure articles with answer-first inverted pyramid headings (h1 -> h2 -> h3).
-   - Publish an active RSS/Atom feed at /feed.xml.
-
-6. MICROPAYMENTS & ACTION LAYER:
-   - Add L402 / HTTP 402 payment headers or machine terms of service at /terms-of-use.md.
-
-Provide the exact code files, server configuration, and curl commands to verify each check.`;
+// ─── Prompt generators ───────────────────────────────────────────────────────
 
 function generateCheckPrompt(check: CheckResult, domain: string): string {
   let p = `You are an expert full-stack developer fixing an agentic readiness issue on ${domain}.\n\n`;
@@ -114,41 +70,30 @@ function generateLayerPrompt(layer: LayerScore, domain: string): string {
   const failing = layer.checks.filter(c => c.status === 'fail');
   const warnings = layer.checks.filter(c => c.status === 'warning');
 
-  let p = `You are an expert engineer resolving ${layer.name} layer issues for ${domain} identified by the Agentic Readiness Scanner (https://veda.ng/scan).\n\n`;
-  p += `### Layer: ${layer.name} (Current Score: ${layer.score}/${layer.maxScore} - ${layer.percentage}%)\n`;
-  p += `Overview: ${layer.description}\n\n`;
+  let p = `You are an expert engineer resolving ${layer.name} layer issues for ${domain}.\n\n`;
+  p += `### Layer: ${layer.name} (Score: ${layer.score}/${layer.maxScore} — ${layer.percentage}%)\n`;
+  p += `${layer.description}\n\n`;
 
   if (failing.length > 0) {
-    p += `#### Critical Failures (${failing.length}):\n`;
-    failing.forEach((c, idx) => {
-      p += `\n${idx + 1}. ${c.name}\n`;
+    p += `#### Failures (${failing.length}):\n`;
+    failing.forEach((c, i) => {
+      p += `\n${i + 1}. ${c.name}\n`;
       p += `   - Issue: ${c.details}\n`;
       if (c.why) p += `   - Rationale: ${c.why}\n`;
       if (c.recommendation) p += `   - Fix: ${c.recommendation}\n`;
-      if (c.fixSnippet) {
-        p += `   - Snippet (${c.fixSnippet.filename || c.fixSnippet.language}):\n\`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
-      }
+      if (c.fixSnippet) p += `   \`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
     });
   }
-
   if (warnings.length > 0) {
-    p += `\n#### Recommended Improvements (${warnings.length}):\n`;
-    warnings.forEach((c, idx) => {
-      p += `\n${idx + 1}. ${c.name}\n`;
+    p += `\n#### Warnings (${warnings.length}):\n`;
+    warnings.forEach((c, i) => {
+      p += `\n${i + 1}. ${c.name}\n`;
       p += `   - Issue: ${c.details}\n`;
       if (c.why) p += `   - Rationale: ${c.why}\n`;
       if (c.recommendation) p += `   - Fix: ${c.recommendation}\n`;
-      if (c.fixSnippet) {
-        p += `   - Snippet (${c.fixSnippet.filename || c.fixSnippet.language}):\n\`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
-      }
     });
   }
-
-  if (failing.length === 0 && warnings.length === 0) {
-    p += `\nAll checks in this layer are passing! Maintain compliance with regular automated tests.\n`;
-  }
-
-  p += `\n### Instructions:\n1. Apply the static files and server headers to resolve these issues.\n2. Ensure full compatibility with our application framework.\n3. Provide verification curl commands to test against the live deployment.`;
+  p += `\n### Instructions:\n1. Apply static files and headers to resolve these issues.\n2. Ensure full compatibility with our application framework.\n3. Provide verification curl commands to test against the live deployment.`;
   return p;
 }
 
@@ -157,63 +102,54 @@ function generateFixPrompt(result: ScanResult): string {
   const warnings = result.layers.flatMap(l => l.checks).filter(c => c.status === 'warning');
 
   let prompt = `You are an expert full-stack engineer and AI web readiness architect.
-Our website (${result.url}) was audited on the Agentic Readiness Scanner (https://veda.ng/scan) with a score of ${result.score}/100 (Grade ${result.grade}).
+Our website (${result.url}) scored ${result.score}/100 (Grade ${result.grade}) on the AI & Web Readiness Scanner (https://veda.ng/scan).
 
-Your objective is to update our codebase, server response headers, and static files to achieve a 100/100 score for autonomous AI agents, LLM answer engines (SearchGPT, Claude, Perplexity), and MCP clients.
-
----
-### SUMMARY OF AUDIT FINDINGS:
-- Target Domain: ${result.domain}
-- Current Score: ${result.score}/100 (Grade ${result.grade})
-- Issues to resolve: ${failing.length} Failures, ${warnings.length} Warnings
+Fix everything below to reach 100/100.
 
 ---
-### ACTION ITEMS & REMEDIATION SPECIFICATIONS:
+Domain: ${result.domain}
+Score: ${result.score}/100 · Grade ${result.grade}
+Issues: ${failing.length} failures, ${warnings.length} warnings
+
+---
 `;
 
   if (failing.length > 0) {
-    prompt += `\n#### CRITICAL FAILURES (${failing.length}):\n`;
-    failing.forEach((c, idx) => {
-      prompt += `\n${idx + 1}. [${c.layer.toUpperCase()}] ${c.name}\n`;
-      prompt += `   - Issue: ${c.details}\n`;
-      if (c.why) prompt += `   - Rationale: ${c.why}\n`;
-      if (c.recommendation) prompt += `   - Fix: ${c.recommendation}\n`;
-      if (c.fixSnippet) {
-        prompt += `   - Code/Config snippet (${c.fixSnippet.filename || c.fixSnippet.language || 'code'}):\n\`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
-      }
+    prompt += `\n### FAILURES (${failing.length}):\n`;
+    failing.forEach((c, i) => {
+      prompt += `\n${i + 1}. [${c.layer.toUpperCase()}] ${c.name}\n`;
+      prompt += `   Issue: ${c.details}\n`;
+      if (c.why) prompt += `   Why: ${c.why}\n`;
+      if (c.recommendation) prompt += `   Fix: ${c.recommendation}\n`;
+      if (c.fixSnippet) prompt += `   \`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
     });
   }
 
   if (warnings.length > 0) {
-    prompt += `\n#### RECOMMENDED IMPROVEMENTS & WARNINGS (${warnings.length}):\n`;
-    warnings.forEach((c, idx) => {
-      prompt += `\n${idx + 1}. [${c.layer.toUpperCase()}] ${c.name}\n`;
-      prompt += `   - Issue: ${c.details}\n`;
-      if (c.why) prompt += `   - Rationale: ${c.why}\n`;
-      if (c.recommendation) prompt += `   - Fix: ${c.recommendation}\n`;
-      if (c.fixSnippet) {
-        prompt += `   - Code/Config snippet (${c.fixSnippet.filename || c.fixSnippet.language || 'code'}):\n\`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
-      }
+    prompt += `\n### WARNINGS (${warnings.length}):\n`;
+    warnings.forEach((c, i) => {
+      prompt += `\n${i + 1}. [${c.layer.toUpperCase()}] ${c.name}\n`;
+      prompt += `   Issue: ${c.details}\n`;
+      if (c.why) prompt += `   Why: ${c.why}\n`;
+      if (c.recommendation) prompt += `   Fix: ${c.recommendation}\n`;
     });
   }
 
   if (failing.length === 0 && warnings.length === 0) {
-    prompt += `\nAll 61 checks passed. Maintain agentic readiness by running regular CI/CD checks against https://veda.ng/api/v1/scan.\n`;
+    prompt += `\nAll checks passed. Run regular CI checks at https://veda.ng/api/v1/scan.\n`;
   }
 
   prompt += `
 ---
-### IMPLEMENTATION INSTRUCTIONS:
-1. Review the existing codebase and detect our tech stack (e.g. Next.js, Astro, Remix, Django, FastAPI, Laravel, Express, etc.).
-2. Apply the exact static files (e.g. /robots.txt, /llms.txt, /llms-full.txt, /.well-known/agents.json, /.well-known/api-catalog, /.well-known/security.txt) in the public/static folder.
-3. Configure server response headers (Content-Security-Policy, HSTS, X-Content-Type-Options, RateLimit headers, and Markdown content negotiation for Accept: text/markdown).
-4. Implement or expose the Model Context Protocol (MCP) endpoint if applicable.
-5. Provide verification curl commands to confirm each fix after deploying.`;
+Instructions:
+1. Detect the tech stack and apply static file + header fixes.
+2. Implement missing endpoints (robots.txt, llms.txt, /.well-known/*, MCP, OpenAPI).
+3. Return verification curl commands for each fix.`;
 
   return prompt;
 }
 
-// ─── Minimal Icons (Pure SVGs) ─────────────────────────────────────────────
+// ─── Icons ────────────────────────────────────────────────────────────────────
 
 function IconSearch({ className = 'w-4 h-4' }: { className?: string }) {
   return (
@@ -267,7 +203,7 @@ function IconExternalLink({ className = 'w-3 h-3' }: { className?: string }) {
   );
 }
 
-function IconArrowRight({ className = 'w-3.5 h-3.5' }: { className?: string }) {
+function IconArrowRight({ className = 'w-3 h-3' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <line x1="5" y1="12" x2="19" y2="12" />
@@ -287,126 +223,101 @@ function IconRefresh({ className = 'w-3.5 h-3.5' }: { className?: string }) {
   );
 }
 
-// ─── Individual Check Item ─────────────────────────────────────────────────
+// ─── Check Row ────────────────────────────────────────────────────────────────
 
-function CheckRow({ check, domain, defaultExpanded = false }: { check: CheckResult; domain: string; defaultExpanded?: boolean }) {
-  const [expanded, setExpanded] = useState(defaultExpanded);
-  const [copiedPrompt, setCopiedPrompt] = useState(false);
+function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
+  const [expanded, setExpanded] = useState(check.status === 'fail');
+  const [copied, setCopied] = useState(false);
   const hasDetails = Boolean(check.why || check.recommendation || check.fixSnippet || check.referenceUrl);
 
-  const handleCopyCheckPrompt = (e: React.MouseEvent) => {
+  const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const prompt = generateCheckPrompt(check, domain);
-    copyText(prompt).catch(() => {});
-    setCopiedPrompt(true);
-    setTimeout(() => setCopiedPrompt(false), 2000);
+    copyText(generateCheckPrompt(check, domain)).catch(() => {});
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <div className="border border-border rounded-lg bg-card transition-colors hover:border-primary/40">
+    <div className="border border-border rounded-lg bg-card">
       <div
-        className={cn(
-          'p-4 sm:p-5 flex items-start justify-between gap-4',
-          hasDetails && 'cursor-pointer select-none'
-        )}
+        className={cn('px-4 py-3 flex items-start justify-between gap-4', hasDetails && 'cursor-pointer select-none')}
         onClick={() => hasDetails && setExpanded(!expanded)}
         role={hasDetails ? 'button' : undefined}
         aria-expanded={hasDetails ? expanded : undefined}
       >
-        <div className="space-y-1.5 min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2">
+        <div className="flex items-start gap-3 min-w-0 flex-1">
+          <div className="mt-0.5 shrink-0">
             <StatusPill status={check.status} />
-            <span className="font-semibold text-sm sm:text-base text-foreground tracking-tight">
-              {check.name}
-            </span>
-            <span className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-muted text-muted-foreground border border-border">
-              {check.layer}
-            </span>
-            {check.impact && (
-              <StatusPill status={check.impact} />
-            )}
           </div>
-
-          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-            {check.details}
-          </p>
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span className="font-medium text-sm text-foreground">{check.name}</span>
+              <span className="text-[10px] font-medium text-muted-foreground">{check.layer}</span>
+              {check.impact && check.impact !== 'optional' && (
+                <StatusPill status={check.impact} />
+              )}
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{check.details}</p>
+          </div>
         </div>
 
-        <div className="flex items-center gap-3 shrink-0 pt-0.5">
-          <span className="text-xs font-medium text-muted-foreground">
+        <div className="flex items-center gap-2 shrink-0 pt-0.5">
+          <span className="text-xs font-medium text-muted-foreground tabular-nums">
             {check.status === 'na'
               ? 'N/A'
               : check.impact === 'optional'
-              ? (check.score > 0 ? `+${check.score} Bonus` : 'Optional')
+              ? (check.score > 0 ? `+${check.score}` : '—')
               : `${check.score}/${check.maxScore}`}
           </span>
           {hasDetails && (
             <div className={cn('text-muted-foreground transition-transform duration-150', expanded && 'rotate-180')}>
-              <IconChevronDown className="w-4 h-4" />
+              <IconChevronDown className="w-3.5 h-3.5" />
             </div>
           )}
         </div>
       </div>
 
       {expanded && hasDetails && (
-        <div className="border-t border-border px-4 sm:px-5 py-4 space-y-4 bg-muted/15 text-xs sm:text-sm">
+        <div className="border-t border-border px-4 py-3 space-y-3 bg-muted/10 text-xs">
           {check.why && (
-            <div className="space-y-1">
-              <span className="text-xs font-semibold text-foreground">
-                Rationale
-              </span>
+            <div>
+              <p className="text-[11px] font-semibold text-foreground uppercase tracking-wider mb-1">Why it matters</p>
               <p className="text-muted-foreground leading-relaxed">{check.why}</p>
             </div>
           )}
-
           {check.recommendation && (
-            <div className="space-y-1">
-              <span className="text-xs font-semibold text-foreground">
-                How to Fix
-              </span>
-              <p className="text-muted-foreground leading-relaxed">
-                {check.recommendation}
-              </p>
+            <div>
+              <p className="text-[11px] font-semibold text-foreground uppercase tracking-wider mb-1">How to fix</p>
+              <p className="text-muted-foreground leading-relaxed">{check.recommendation}</p>
             </div>
           )}
-
           {check.fixSnippet && (
-            <div className="space-y-1.5 pt-1">
-              <CodeBlock
-                code={check.fixSnippet.code}
-                filename={check.fixSnippet.filename}
-                language={check.fixSnippet.language}
-              />
-            </div>
+            <CodeBlock
+              code={check.fixSnippet.code}
+              filename={check.fixSnippet.filename}
+              language={check.fixSnippet.language}
+            />
           )}
-
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-border/50">
+          <div className="flex items-center justify-between gap-3 pt-1">
             <button
               type="button"
-              onClick={handleCopyCheckPrompt}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
+              onClick={handleCopy}
+              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
-              {copiedPrompt ? (
-                <>
-                  <IconCheck className="w-3.5 h-3.5" />
-                  <span>Copied Issue Prompt</span>
-                </>
+              {copied ? (
+                <><IconCheck className="w-3 h-3" /><span>Copied</span></>
               ) : (
-                <>
-                  <IconSparkles className="w-3.5 h-3.5" />
-                  <span>Copy AI Fix Prompt for this Issue</span>
-                </>
+                <><IconSparkles className="w-3 h-3" /><span>Copy AI fix prompt</span></>
               )}
             </button>
-
             {check.referenceUrl && (
               <Link
                 href={check.referenceUrl}
-                className="inline-flex items-center gap-1 text-primary text-xs hover:underline underline-offset-2 font-medium"
+                className="inline-flex items-center gap-1 text-primary text-xs hover:underline underline-offset-2"
                 onClick={e => e.stopPropagation()}
               >
-                <span>Read specification</span>
-                <IconExternalLink className="w-3 h-3" />
+                <span>Specification</span>
+                <IconExternalLink className="w-2.5 h-2.5" />
               </Link>
             )}
           </div>
@@ -416,7 +327,7 @@ function CheckRow({ check, domain, defaultExpanded = false }: { check: CheckResu
   );
 }
 
-// ─── Scan Page Component ───────────────────────────────────────────────────
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ScanPage() {
   const [urlInput, setUrlInput] = useState('');
@@ -427,19 +338,9 @@ export default function ScanPage() {
   const [filterLayer, setFilterLayer] = useState<string>('all');
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [copiedShare, setCopiedShare] = useState(false);
-  const [showPrompt, setShowPrompt] = useState(false);
   const [copiedFixPrompt, setCopiedFixPrompt] = useState(false);
   const [copiedLayerId, setCopiedLayerId] = useState<string | null>(null);
   const [, startTransition] = useTransition();
-
-  const handleCopyLayerPrompt = (e: React.MouseEvent, layer: LayerScore) => {
-    e.stopPropagation();
-    if (!result) return;
-    const prompt = generateLayerPrompt(layer, result.domain);
-    copyText(prompt).catch(() => {});
-    setCopiedLayerId(layer.id);
-    setTimeout(() => setCopiedLayerId(null), 2000);
-  };
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -488,27 +389,30 @@ export default function ScanPage() {
 
   async function handleShareResult() {
     if (!result) return;
-    const text = `Agentic Readiness Audit for ${result.domain}: Score ${result.score}/100 (Grade ${result.grade})\nhttps://veda.ng/scan?url=${encodeURIComponent(result.domain)}`;
+    const text = `${result.domain} scored ${result.score}/100 (Grade ${result.grade}) on the AI & Web Readiness Scanner\nhttps://veda.ng/scan?url=${encodeURIComponent(result.domain)}`;
     try {
       await copyText(text);
       setCopiedShare(true);
       setTimeout(() => setCopiedShare(false), 2000);
-    } catch {
-      // keep UI resilient
-    }
+    } catch { /* keep UI resilient */ }
   }
 
   async function handleCopyFixPrompt() {
     if (!result) return;
-    const prompt = generateFixPrompt(result);
     try {
-      await copyText(prompt);
+      await copyText(generateFixPrompt(result));
       setCopiedFixPrompt(true);
       setTimeout(() => setCopiedFixPrompt(false), 2000);
-    } catch {
-      // keep UI resilient
-    }
+    } catch { /* keep UI resilient */ }
   }
+
+  const handleCopyLayerPrompt = (e: React.MouseEvent, layer: LayerScore) => {
+    e.stopPropagation();
+    if (!result) return;
+    copyText(generateLayerPrompt(layer, result.domain)).catch(() => {});
+    setCopiedLayerId(layer.id);
+    setTimeout(() => setCopiedLayerId(null), 2000);
+  };
 
   const allChecks = result?.layers.flatMap(l => l.checks) || [];
   const passingCount = allChecks.filter(c => c.status === 'pass').length;
@@ -522,15 +426,13 @@ export default function ScanPage() {
     return true;
   });
 
-  const criticalIssues = allChecks.filter(c => (c.status === 'fail' || c.status === 'warning') && (c.impact === 'critical' || c.impact === 'important'));
-
   return (
     <PageLayout>
       <div className="w-full space-y-8 sm:space-y-10 pb-16">
         <header>
           <PageHero
             title="AI & Web Readiness Scanner"
-            subtitle="Deterministic audit for AI answer engines (SearchGPT, Claude, Perplexity), technical SEO, structured data, MCP endpoints, and modern web standards."
+            subtitle="Deterministic audit for AI answer engines, MCP clients, and machine consumers. Scores your site across Discovery, Access, Usability, Security, SEO, and Payments."
           />
           <div className="-mt-3">
             <AuthorByline links={[{ label: 'Audit Tool' }]} />
@@ -538,7 +440,7 @@ export default function ScanPage() {
         </header>
 
         {/* ── Input Form ── */}
-        <section aria-label="Website Audit Target" className="w-full space-y-3">
+        <section aria-label="Scan Target" className="w-full space-y-3">
           <form
             onSubmit={e => {
               e.preventDefault();
@@ -548,16 +450,16 @@ export default function ScanPage() {
             className="flex flex-col sm:flex-row gap-2"
           >
             <div className="relative flex-grow">
-              <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none">
+              <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none">
                 <IconSearch className="w-4 h-4" />
               </div>
               <input
                 type="text"
-                placeholder="Enter domain or URL (e.g. stripe.com, github.com, veda.ng)..."
+                placeholder="Enter domain or URL — e.g. stripe.com or https://github.com"
                 value={urlInput}
                 onChange={e => setUrlInput(e.target.value)}
                 disabled={loading}
-                className="w-full pl-11 pr-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary text-sm transition"
+                className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary text-sm transition"
               />
             </div>
             <Button
@@ -569,18 +471,15 @@ export default function ScanPage() {
             </Button>
           </form>
 
-          <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-            <span>Presets:</span>
+          <div className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
+            <span className="text-muted-foreground/60">Try:</span>
             {PRESETS.map(p => (
               <button
                 key={p.name}
                 type="button"
-                onClick={() => {
-                  setUrlInput(p.url);
-                  executeScan(p.url);
-                }}
+                onClick={() => { setUrlInput(p.url); executeScan(p.url); }}
                 disabled={loading}
-                className="px-2.5 py-1 rounded-md border border-border bg-muted/40 hover:bg-muted text-foreground/90 transition text-xs font-medium"
+                className="px-2 py-0.5 rounded border border-border bg-muted/40 hover:bg-muted text-foreground/80 transition text-xs"
               >
                 {p.name}
               </button>
@@ -588,128 +487,130 @@ export default function ScanPage() {
           </div>
         </section>
 
-        {/* ── Loading State ── */}
+        {/* ── Loading ── */}
         {loading && (
-          <section className="w-full p-8 rounded-lg border border-border bg-card text-center space-y-3">
-            <div className="text-sm font-medium">Scanning {urlInput}</div>
-            <p className="text-xs text-muted-foreground min-h-[1.25rem]">
-              {SCAN_STEPS[activeStepIndex]}
-            </p>
-            <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
+          <section className="w-full py-12 rounded-lg border border-border bg-card text-center space-y-4">
+            <div className="text-sm font-medium text-foreground">{urlInput}</div>
+            <p className="text-xs text-muted-foreground min-h-[1rem]">{SCAN_STEPS[activeStepIndex]}</p>
+            <div className="w-48 mx-auto bg-muted rounded-full h-1 overflow-hidden">
               <div
                 className="bg-primary h-full transition-all duration-300 rounded-full"
                 style={{ width: `${((activeStepIndex + 1) / SCAN_STEPS.length) * 100}%` }}
               />
             </div>
-            <p className="text-xs text-muted-foreground">
-              Probing 61 machine-readiness and AI citation standards across 6 layers
-            </p>
+            <p className="text-[11px] text-muted-foreground">Probing across 6 machine-readiness layers</p>
           </section>
         )}
 
-        {/* ── Error State ── */}
+        {/* ── Error ── */}
         {error && !loading && (
-          <section className="w-full p-4 rounded-lg border border-destructive/30 bg-destructive/5 text-destructive text-sm space-y-1">
-            <div className="font-semibold text-xs uppercase tracking-wider">Audit Failed</div>
-            <p className="text-foreground/90">{error}</p>
+          <section className="w-full px-4 py-3 rounded-lg border border-destructive/30 bg-destructive/5 text-destructive text-sm">
+            <span className="font-semibold">Scan failed — </span>{error}
           </section>
         )}
 
-        {/* ── Default Educational State (Pre-scan) ── */}
+        {/* ── Pre-scan info ── */}
         {!result && !loading && !error && (
-          <div className="space-y-6 sm:space-y-8">
-            <section className="w-full border border-border rounded-lg bg-card p-5 sm:p-6 space-y-4">
-              <SectionHeader
-                title="What This Audit Checks"
-                subtitle="Deterministic probes evaluate whether autonomous LLM agents, crawler bots, and machine consumers can discover, parse, authenticate, and interact with your web services."
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-1 text-xs">
-                {AUDIT_LAYERS_INFO.map(layer => (
-                  <div key={layer.name} className="p-3.5 rounded-lg border border-border bg-muted/20 space-y-1">
-                    <div className="font-semibold text-foreground text-sm">{layer.name}</div>
-                    <p className="text-muted-foreground leading-relaxed text-xs">{layer.desc}</p>
-                  </div>
-                ))}
-              </div>
+          <div className="space-y-6">
+            <section className="border border-border rounded-lg bg-card divide-y divide-border">
+              {[
+                { layer: 'Discovery', probes: '13', desc: 'robots.txt AI policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, sitemaps' },
+                { layer: 'Access', probes: '9', desc: 'Markdown content negotiation, .md URL twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
+                { layer: 'Usability & MCP', probes: '10', desc: 'Streamable MCP servers, OpenAPI 3.1 with examples, auth guides, RFC 8414 OAuth, TDMRep' },
+                { layer: 'Security', probes: '11', desc: 'HTTPS, HSTS preload, CSP, nosniff, frame protection, RFC 9116 security.txt, RFC 9421 signatures' },
+                { layer: 'SEO & Citations', probes: '15', desc: 'Title/Meta tags, JSON-LD @graph, E-E-A-T sameAs links, inverted pyramid Q&A, RSS feeds' },
+                { layer: 'Micropayments', probes: '3', desc: 'L402 / HTTP 402, WebLN wallet discovery, machine terms of service' },
+              ].map(item => (
+                <div key={item.layer} className="flex items-baseline gap-4 px-4 py-3 text-sm">
+                  <span className="font-medium text-foreground w-40 shrink-0">{item.layer}</span>
+                  <span className="text-muted-foreground/60 text-xs tabular-nums w-8 shrink-0">{item.probes} probes</span>
+                  <span className="text-muted-foreground text-xs leading-relaxed">{item.desc}</span>
+                </div>
+              ))}
             </section>
 
-            {/* ── Master Implementation Prompt for Pre-scan ── */}
-            <section className="w-full border border-border rounded-lg bg-card p-5 sm:p-6 space-y-3">
-              <SectionHeader
-                title="Master AI Remediation Prompt"
-                subtitle="Copy this master prompt into Claude, ChatGPT, Cursor, or your AI coding agent to implement all 6 layers of agentic readiness in your codebase."
-              />
+            <section className="border border-border rounded-lg bg-card p-4 sm:p-5 space-y-3">
+              <p className="text-sm text-muted-foreground">
+                Enter any domain above to run the audit, or copy the prompt below into your AI coding agent to implement all 6 layers in your codebase.
+              </p>
               <CodeBlock
-                code={BASELINE_MASTER_PROMPT}
+                code={`# AI & Web Readiness — Master Implementation Prompt
+# Paste into Claude, ChatGPT, Cursor, or your AI coding agent
+
+You are an expert full-stack engineer and AI web readiness architect.
+Audit and upgrade our web application to achieve 100/100 on https://veda.ng/scan.
+
+Our website URL: [PASTE YOUR URL]
+Our tech stack: [e.g. Next.js / Astro / Django / FastAPI / Express]
+
+Implement the following 6 layers:
+
+1. DISCOVERY — robots.txt AI bot rules, /llms.txt, /llms-full.txt,
+   /.well-known/agents.json, /.well-known/api-catalog (RFC 9727), /.well-known/ard.json
+
+2. ACCESS — Markdown content negotiation (Accept: text/markdown),
+   .md URL twins for each page, SSR no-JS fallback, RateLimit-* headers
+
+3. MCP & USABILITY — Streamable HTTP MCP server at /.well-known/mcp,
+   OpenAPI 3.1 at /openapi.json with concrete examples, /auth.md spec
+
+4. SECURITY — HTTPS, HSTS preload (max-age=63072000; includeSubDomains; preload),
+   strict CSP, /.well-known/security.txt (RFC 9116)
+
+5. SEO & CITATIONS — JSON-LD @graph (Organization, WebSite, Article),
+   E-E-A-T sameAs links, inverted pyramid headings, active RSS feed
+
+6. MICROPAYMENTS — L402 / HTTP 402 payment headers or /terms-of-use.md
+
+Provide exact code files, server configuration, and curl verification commands.`}
                 filename="ai-readiness-master-prompt.md"
               />
             </section>
           </div>
         )}
 
-        {/* ══════════════════════════════════════════════════════════════════
-            RESULTS DASHBOARD (POST SCAN)
-        ══════════════════════════════════════════════════════════════════ */}
+        {/* ══════════════════════════════════════════════
+            RESULTS
+        ══════════════════════════════════════════════ */}
         {result && !loading && (
-          <section className="w-full space-y-6 sm:space-y-8 animate-in fade-in duration-200">
-            {/* ── Score Header ── */}
-            <div className="p-5 sm:p-6 rounded-lg border border-border bg-card">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2.5 flex-wrap">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
-                      {result.domain}
-                    </h2>
-                    <span className="text-xs px-2.5 py-0.5 rounded-full border border-border bg-muted text-muted-foreground font-medium">
-                      {result.durationMs}ms
-                    </span>
-                    <span className="text-xs px-2.5 py-0.5 rounded-full border border-border bg-muted text-muted-foreground font-medium">
-                      {new Date(result.scannedAt).toLocaleDateString()}
-                    </span>
+          <section className="w-full space-y-6 animate-in fade-in duration-200">
+
+            {/* ── Score header ── */}
+            <div className="p-5 rounded-lg border border-border bg-card">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h2 className="text-xl font-bold tracking-tight text-foreground">{result.domain}</h2>
+                    <span className="text-[11px] px-2 py-0.5 rounded-full border border-border bg-muted text-muted-foreground">{result.durationMs}ms</span>
+                    <span className="text-[11px] px-2 py-0.5 rounded-full border border-border bg-muted text-muted-foreground">{new Date(result.scannedAt).toLocaleDateString()}</span>
                   </div>
-
-                  <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl leading-relaxed">
-                    {result.summary}
-                  </p>
-
-                  <div className="flex items-center gap-3 pt-1 text-xs">
-                    <span className="text-emerald-600 font-semibold">{passingCount} Passed</span>
+                  <p className="text-sm text-muted-foreground max-w-xl leading-relaxed">{result.summary}</p>
+                  <div className="flex items-center gap-3 text-xs font-medium pt-0.5">
+                    <span className="text-emerald-600">{passingCount} passed</span>
                     <span className="text-border">·</span>
-                    <span className="text-amber-600 font-semibold">{warningCount} Warnings</span>
+                    <span className="text-amber-600">{warningCount} warnings</span>
                     <span className="text-border">·</span>
-                    <span className="text-rose-600 font-semibold">{failingCount} Failed</span>
+                    <span className="text-rose-600">{failingCount} failed</span>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-3 shrink-0">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
-                      {result.score}
-                    </span>
-                    <span className="text-sm text-muted-foreground font-medium">/100</span>
-                    <span className="ml-1 text-xs font-semibold px-2.5 py-1 rounded-full border border-border bg-muted text-foreground">
-                      Grade {result.grade}
-                    </span>
+                <div className="flex flex-col items-start sm:items-end gap-3 shrink-0">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-4xl font-bold tracking-tight">{result.score}</span>
+                    <span className="text-sm text-muted-foreground">/100</span>
+                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full border border-border bg-muted">Grade {result.grade}</span>
                   </div>
-
-                  <div className="flex items-center gap-2 w-full sm:w-auto flex-wrap">
+                  <div className="flex items-center gap-2 flex-wrap">
                     <Button
                       type="button"
-                      variant="default"
                       size="sm"
                       onClick={handleCopyFixPrompt}
-                      className="flex-1 sm:flex-none text-xs gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90"
+                      className="text-xs gap-1.5 h-8 px-3"
                     >
                       {copiedFixPrompt ? (
-                        <>
-                          <IconCheck className="w-3.5 h-3.5" />
-                          <span>Copied Fix Prompt</span>
-                        </>
+                        <><IconCheck className="w-3 h-3" /><span>Copied</span></>
                       ) : (
-                        <>
-                          <IconSparkles className="w-3.5 h-3.5" />
-                          <span>Copy AI Fix Prompt</span>
-                        </>
+                        <><IconSparkles className="w-3 h-3" /><span>Copy fix prompt</span></>
                       )}
                     </Button>
                     <Button
@@ -717,18 +618,12 @@ export default function ScanPage() {
                       variant="outline"
                       size="sm"
                       onClick={handleShareResult}
-                      className="flex-1 sm:flex-none text-xs"
+                      className="text-xs gap-1.5 h-8 px-3"
                     >
                       {copiedShare ? (
-                        <>
-                          <IconCheck className="w-3.5 h-3.5 text-emerald-500" />
-                          <span>Copied</span>
-                        </>
+                        <><IconCheck className="w-3 h-3 text-emerald-500" /><span>Copied</span></>
                       ) : (
-                        <>
-                          <IconCopy className="w-3.5 h-3.5 text-muted-foreground" />
-                          <span>Copy Summary</span>
-                        </>
+                        <><IconCopy className="w-3 h-3 text-muted-foreground" /><span>Share</span></>
                       )}
                     </Button>
                     <Button
@@ -736,9 +631,9 @@ export default function ScanPage() {
                       variant="outline"
                       size="sm"
                       onClick={() => executeScan(result.url, true)}
-                      className="flex-1 sm:flex-none text-xs"
+                      className="text-xs gap-1.5 h-8 px-3"
                     >
-                      <IconRefresh className="w-3.5 h-3.5 text-muted-foreground" />
+                      <IconRefresh className="w-3 h-3 text-muted-foreground" />
                       <span>Re-scan</span>
                     </Button>
                   </div>
@@ -746,337 +641,191 @@ export default function ScanPage() {
               </div>
             </div>
 
-            {/* ── AI Remediation Prompt Bar (Compact & Minimal) ── */}
-            <div className="border border-border rounded-lg bg-card p-4 space-y-3">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-                <div className="space-y-0.5 min-w-0">
-                  <div className="font-semibold text-foreground flex items-center gap-1.5">
-                    <IconSparkles className="w-3.5 h-3.5 text-muted-foreground shrink-0" />
-                    <span>AI Remediation Prompt</span>
-                  </div>
-                  <p className="text-muted-foreground text-[11px]">
-                    Tailored code & header fixes for Claude, ChatGPT, or Cursor to resolve all failing checks.
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-2 shrink-0 w-full sm:w-auto">
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setShowPrompt(prev => !prev)}
-                    className="h-8 px-3 text-xs gap-1.5 flex-1 sm:flex-none"
-                  >
-                    <span>{showPrompt ? 'Hide Prompt' : 'View Prompt'}</span>
-                  </Button>
-
-                  <Button
-                    type="button"
-                    variant="default"
-                    size="sm"
-                    onClick={handleCopyFixPrompt}
-                    className="h-8 px-3 text-xs gap-1.5 flex-1 sm:flex-none"
-                  >
-                    {copiedFixPrompt ? (
-                      <>
-                        <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
-                        <span>Copied Prompt</span>
-                      </>
-                    ) : (
-                      <>
-                        <IconCopy className="w-3.5 h-3.5" />
-                        <span>Copy Fix Prompt</span>
-                      </>
-                    )}
-                  </Button>
-                </div>
-              </div>
-
-              {showPrompt && (
-                <div className="pt-2 border-t border-border space-y-2">
-                  <div className="text-[11px] font-mono text-muted-foreground">
-                    {result.domain}-remediation-prompt.md
-                  </div>
-                  <div className="max-h-72 overflow-y-auto rounded-md border border-border bg-muted/40 p-3">
-                    <pre className="text-xs font-mono whitespace-pre-wrap text-foreground leading-relaxed select-all">
-                      {generateFixPrompt(result)}
-                    </pre>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* ── Capabilities Matrix ── */}
-            <div className="border border-border rounded-lg bg-card p-5 space-y-3">
-              <SectionHeader
-                title="Machine Interface Capabilities"
-              />
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
-                {[
-                  { label: 'robots.txt AI Policy', active: result.badges.aiBotFriendly },
-                  { label: 'llms.txt Catalog', active: result.badges.llmsTxt },
-                  { label: 'ARD Registry', active: result.badges.ardCatalog },
-                  { label: 'RFC 9727 API Catalog', active: result.badges.apiCatalog },
-                  { label: 'Markdown Twins', active: result.badges.markdownTwins },
-                  { label: 'OpenAPI 3.1 Spec', active: result.badges.openapiSpec },
-                  { label: 'Live MCP Server', active: result.badges.mcpServer },
-                  { label: 'HTTPS & HSTS', active: result.badges.httpsSecure },
-                  { label: 'Robots Meta Directives', active: result.badges.robotsMetaAi },
-                  { label: 'Author E-E-A-T Signals', active: result.badges.authorEeat },
-                  { label: 'No-JS HTML Fallback', active: result.badges.jsRenderingSelfSufficient },
-                  { label: 'JSON-LD Entity Graph', active: result.badges.schemaEntityGraph },
-                  { label: 'Structured Sitemap', active: result.badges.xmlOrJsonSitemap },
-                  { label: 'API Examples', active: result.badges.openapiExamplesReady },
-                  { label: 'Structured Data', active: result.badges.structuredData },
-                  { label: 'Micropayments (L402)', active: result.badges.micropaymentsSupported },
-                ].map(item => (
-                  <div
-                    key={item.label}
-                    className={cn(
-                      'p-2.5 rounded-lg border text-xs font-medium flex items-center justify-between gap-2',
-                      item.active
-                        ? 'border-emerald-500/30 bg-emerald-500/5 text-foreground'
-                        : 'border-border bg-muted/20 text-muted-foreground'
-                    )}
-                  >
-                    <span className="truncate">{item.label}</span>
-                    <span className={cn('text-[11px] font-semibold', item.active ? 'text-emerald-600' : 'text-muted-foreground')}>
-                      {item.active ? 'Yes' : 'No'}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* ── Layer Performance Grid ── */}
-            <div className="space-y-3">
-              <SectionHeader
-                title="Layer Breakdown"
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {result.layers.map(layer => {
-                  const isSelected = filterLayer === layer.id;
-                  return (
-                    <button
-                      key={layer.id}
-                      type="button"
-                      onClick={() => {
-                        setFilterLayer(isSelected ? 'all' : layer.id);
-                        setFilterStatus('all');
-                      }}
-                      className={cn(
-                        'p-4 rounded-lg border text-left flex flex-col justify-between transition-colors',
-                        isSelected
-                          ? 'border-primary bg-muted/60 ring-1 ring-primary'
-                          : 'border-border bg-card hover:border-primary/40 hover:bg-muted/30'
-                      )}
-                    >
-                      <div className="space-y-1">
-                        <div className="flex items-center justify-between gap-2">
-                          <span className="font-semibold text-sm text-foreground">
-                            {layer.name}
-                          </span>
-                          <div className="flex items-center gap-1.5">
-                            <span
-                              role="button"
-                              tabIndex={0}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleCopyLayerPrompt(e, layer);
-                              }}
-                              title={`Copy AI fix prompt for ${layer.name} layer`}
-                              className="p-1 rounded text-muted-foreground hover:text-foreground hover:bg-muted transition-colors cursor-pointer"
-                            >
-                              {copiedLayerId === layer.id ? (
-                                <IconCheck className="w-3.5 h-3.5 text-emerald-500" />
-                              ) : (
-                                <IconSparkles className="w-3.5 h-3.5 text-primary" />
-                              )}
-                            </span>
-                            <span className="text-xs font-semibold text-muted-foreground">
-                              {layer.score}/{layer.maxScore}
-                            </span>
-                          </div>
-                        </div>
-                        <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
-                          {layer.description}
-                        </p>
-                      </div>
-
-                      <div className="mt-3 space-y-1.5">
-                        <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
-                          <div
-                            className="bg-primary h-full rounded-full transition-all duration-300"
-                            style={{ width: `${layer.percentage}%` }}
-                          />
-                        </div>
-                        <div className="flex items-center justify-between text-xs text-muted-foreground font-medium">
-                          <span>{layer.checks.filter(c => c.status === 'pass').length}/{layer.checks.length} passed</span>
-                          <span>{layer.percentage}%</span>
-                        </div>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* ── Priority Action Items (if issues exist) ── */}
-            {criticalIssues.length > 0 && (
-              <div className="border border-border rounded-lg bg-card p-5 space-y-3">
-                <SectionHeader
-                  title={`High Priority Action Items (${criticalIssues.length})`}
-                >
+            {/* ── Layer breakdown ── */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {result.layers.map(layer => {
+                const isSelected = filterLayer === layer.id;
+                return (
                   <button
+                    key={layer.id}
                     type="button"
                     onClick={() => {
-                      setFilterStatus('attention');
-                      setFilterLayer('all');
+                      setFilterLayer(isSelected ? 'all' : layer.id);
+                      setFilterStatus('all');
                     }}
-                    className="text-xs text-primary hover:underline font-medium"
-                  >
-                    Filter Attention Only
-                  </button>
-                </SectionHeader>
-                <div className="space-y-2">
-                  {criticalIssues.slice(0, 4).map(c => (
-                    <div key={c.id} className="p-3 rounded-lg border border-border bg-muted/20 flex items-start justify-between gap-3 text-xs">
-                      <div className="space-y-0.5 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="font-semibold text-foreground">{c.name}</span>
-                          <span className="text-[11px] text-muted-foreground font-medium">({c.layer})</span>
-                        </div>
-                        <p className="text-muted-foreground leading-relaxed truncate">{c.details}</p>
-                      </div>
-                      <StatusPill status={c.impact || 'optional'} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* ── Detailed Checks & Findings ── */}
-            <div className="space-y-4 pt-2">
-              <div className="flex flex-col gap-3 border-b border-border pb-4">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                  <h3 className="text-base font-bold tracking-tight text-foreground">
-                    Audit Findings & Specifications
-                  </h3>
-
-                  {/* Status filter buttons */}
-                  <div className="flex items-center bg-muted/60 p-0.5 rounded-lg border border-border text-xs">
-                    {[
-                      { key: 'all', label: `All (${allChecks.length})` },
-                      { key: 'attention', label: `Attention (${warningCount + failingCount})` },
-                      { key: 'pass', label: `Passed (${passingCount})` },
-                    ].map(f => (
-                      <button
-                        key={f.key}
-                        type="button"
-                        onClick={() => setFilterStatus(f.key)}
-                        className={cn(
-                          'px-2.5 py-1 rounded-md transition font-medium',
-                          filterStatus === f.key
-                            ? 'bg-card text-foreground shadow-xs font-semibold'
-                            : 'text-muted-foreground hover:text-foreground'
-                        )}
-                      >
-                        {f.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Layer filter buttons */}
-                <div className="flex flex-wrap gap-1.5 text-xs">
-                  <button
-                    type="button"
-                    onClick={() => setFilterLayer('all')}
                     className={cn(
-                      'px-2.5 py-1 rounded-md border transition font-medium',
-                      filterLayer === 'all'
-                        ? 'border-primary bg-primary text-primary-foreground font-semibold'
-                        : 'border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground'
+                      'p-3.5 rounded-lg border text-left flex flex-col gap-2 transition-colors',
+                      isSelected
+                        ? 'border-primary bg-muted/60 ring-1 ring-primary'
+                        : 'border-border bg-card hover:border-primary/40'
                     )}
                   >
-                    All Layers
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-medium text-xs text-foreground">{layer.name}</span>
+                      <div className="flex items-center gap-1">
+                        <button
+                          type="button"
+                          onClick={(e) => handleCopyLayerPrompt(e, layer)}
+                          title="Copy AI fix prompt for this layer"
+                          className="p-0.5 rounded text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          {copiedLayerId === layer.id
+                            ? <IconCheck className="w-3 h-3 text-emerald-500" />
+                            : <IconSparkles className="w-3 h-3" />
+                          }
+                        </button>
+                        <span className="text-xs font-semibold text-muted-foreground">{layer.score}/{layer.maxScore}</span>
+                      </div>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-1 overflow-hidden">
+                      <div className="bg-primary h-full rounded-full" style={{ width: `${layer.percentage}%` }} />
+                    </div>
+                    <span className="text-[11px] text-muted-foreground">{layer.percentage}% · {layer.checks.filter(c => c.status === 'pass').length}/{layer.checks.length} passed</span>
                   </button>
-                  {(['discovery', 'access', 'usability', 'security', 'seo', 'payments'] as const).map(layer => (
+                );
+              })}
+            </div>
+
+            {/* ── Capabilities ── */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {[
+                { label: 'robots.txt AI policy', active: result.badges.aiBotFriendly },
+                { label: 'llms.txt catalog', active: result.badges.llmsTxt },
+                { label: 'ARD registry', active: result.badges.ardCatalog },
+                { label: 'RFC 9727 API catalog', active: result.badges.apiCatalog },
+                { label: 'Markdown twins', active: result.badges.markdownTwins },
+                { label: 'OpenAPI 3.1 spec', active: result.badges.openapiSpec },
+                { label: 'Live MCP server', active: result.badges.mcpServer },
+                { label: 'HTTPS & HSTS', active: result.badges.httpsSecure },
+                { label: 'Robots meta directives', active: result.badges.robotsMetaAi },
+                { label: 'E-E-A-T signals', active: result.badges.authorEeat },
+                { label: 'No-JS HTML fallback', active: result.badges.jsRenderingSelfSufficient },
+                { label: 'JSON-LD entity graph', active: result.badges.schemaEntityGraph },
+                { label: 'XML/JSON sitemap', active: result.badges.xmlOrJsonSitemap },
+                { label: 'API examples', active: result.badges.openapiExamplesReady },
+                { label: 'Structured data', active: result.badges.structuredData },
+                { label: 'Micropayments', active: result.badges.micropaymentsSupported },
+              ].map(item => (
+                <div
+                  key={item.label}
+                  className={cn(
+                    'px-3 py-2 rounded-lg border text-xs font-medium flex items-center justify-between gap-2',
+                    item.active
+                      ? 'border-emerald-500/30 bg-emerald-500/5 text-foreground'
+                      : 'border-border bg-muted/10 text-muted-foreground'
+                  )}
+                >
+                  <span className="truncate">{item.label}</span>
+                  <span className={cn('text-[11px] font-semibold shrink-0', item.active ? 'text-emerald-600' : 'text-muted-foreground/50')}>
+                    {item.active ? '✓' : '—'}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* ── Check filters & list ── */}
+            <div className="space-y-3">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                <h3 className="text-sm font-semibold text-foreground flex-1">Audit Findings</h3>
+                {/* Status toggle */}
+                <div className="flex items-center bg-muted/60 p-0.5 rounded-lg border border-border text-xs">
+                  {[
+                    { key: 'all', label: `All (${allChecks.length})` },
+                    { key: 'attention', label: `Issues (${warningCount + failingCount})` },
+                    { key: 'pass', label: `Passed (${passingCount})` },
+                  ].map(f => (
                     <button
-                      key={layer}
+                      key={f.key}
                       type="button"
-                      onClick={() => setFilterLayer(layer)}
+                      onClick={() => setFilterStatus(f.key)}
                       className={cn(
-                        'px-2.5 py-1 rounded-md border transition font-medium',
-                        filterLayer === layer
-                          ? 'border-primary bg-primary text-primary-foreground font-semibold'
-                          : 'border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground'
+                        'px-2.5 py-1 rounded-md transition font-medium',
+                        filterStatus === f.key ? 'bg-card text-foreground shadow-xs' : 'text-muted-foreground hover:text-foreground'
                       )}
                     >
-                      {LAYER_LABELS[layer] || layer}
+                      {f.label}
                     </button>
                   ))}
                 </div>
-
-                {(filterLayer !== 'all' || filterStatus !== 'all') && (
-                  <div className="flex items-center justify-between text-xs text-muted-foreground">
-                    <span>Showing {filteredChecks.length} of {allChecks.length} checks</span>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setFilterLayer('all');
-                        setFilterStatus('all');
-                      }}
-                      className="text-primary hover:underline font-medium"
-                    >
-                      Reset filters
-                    </button>
-                  </div>
-                )}
               </div>
 
-              {/* Check items list */}
+              {/* Layer filter pills */}
+              <div className="flex flex-wrap gap-1.5 text-xs">
+                <button
+                  type="button"
+                  onClick={() => setFilterLayer('all')}
+                  className={cn(
+                    'px-2.5 py-1 rounded-full border transition',
+                    filterLayer === 'all'
+                      ? 'border-primary bg-primary text-primary-foreground'
+                      : 'border-border text-muted-foreground hover:text-foreground hover:border-primary/40'
+                  )}
+                >
+                  All layers
+                </button>
+                {(['discovery', 'access', 'usability', 'security', 'seo', 'payments'] as const).map(layer => (
+                  <button
+                    key={layer}
+                    type="button"
+                    onClick={() => setFilterLayer(layer)}
+                    className={cn(
+                      'px-2.5 py-1 rounded-full border transition',
+                      filterLayer === layer
+                        ? 'border-primary bg-primary text-primary-foreground'
+                        : 'border-border text-muted-foreground hover:text-foreground hover:border-primary/40'
+                    )}
+                  >
+                    {LAYER_LABELS[layer]}
+                  </button>
+                ))}
+              </div>
+
+              {(filterLayer !== 'all' || filterStatus !== 'all') && (
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
+                  <span>Showing {filteredChecks.length} of {allChecks.length} checks</span>
+                  <button
+                    type="button"
+                    onClick={() => { setFilterLayer('all'); setFilterStatus('all'); }}
+                    className="text-primary hover:underline"
+                  >
+                    Clear filters
+                  </button>
+                </div>
+              )}
+
               {filteredChecks.length === 0 ? (
-                <div className="py-12 text-center text-xs text-muted-foreground border border-dashed border-border rounded-lg">
+                <div className="py-10 text-center text-xs text-muted-foreground border border-dashed border-border rounded-lg">
                   No checks match the selected filter.
                 </div>
               ) : (
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   {filteredChecks.map(check => (
-                    <CheckRow
-                      key={check.id}
-                      check={check}
-                      domain={result.domain}
-                      defaultExpanded={check.status === 'fail'}
-                    />
+                    <CheckRow key={check.id} check={check} domain={result.domain} />
                   ))}
                 </div>
               )}
             </div>
 
-            {/* ── API & Automation Reference ── */}
-            <div className="p-5 rounded-lg border border-border bg-card text-xs space-y-3">
+            {/* ── API reference ── */}
+            <div className="p-4 rounded-lg border border-border bg-card text-xs space-y-3">
               <SectionHeader
-                title="Programmatic Audit API"
-                subtitle="Run agent-readiness scans directly in CI/CD pipelines, autonomous scripts, or via the scan_agent_readiness tool in the veda.ng MCP server."
-              >
-                <span className="text-muted-foreground font-medium text-xs">HTTP & MCP</span>
-              </SectionHeader>
-              <CodeBlock
-                code={`curl -X POST https://veda.ng/api/v1/scan -H "Content-Type: application/json" -d '{"url":"${result.domain}"}'`}
+                title="Programmatic API"
+                subtitle="Run audits in CI/CD pipelines or from the veda.ng MCP server."
               />
-              <div className="pt-1 flex flex-wrap items-center gap-4 text-xs font-medium">
+              <CodeBlock
+                code={`curl -X POST https://veda.ng/api/v1/scan \\
+  -H "Content-Type: application/json" \\
+  -d '{"url":"${result.domain}"}'`}
+              />
+              <div className="flex flex-wrap gap-4 text-xs font-medium pt-1">
                 <Link href="/developers" className="text-primary hover:underline inline-flex items-center gap-1">
-                  <span>API Documentation</span>
-                  <IconArrowRight className="w-3 h-3" />
+                  <span>API docs</span><IconArrowRight className="w-2.5 h-2.5" />
                 </Link>
                 <Link href="/aistandards" className="text-primary hover:underline inline-flex items-center gap-1">
-                  <span>AI Discovery Standards</span>
-                  <IconArrowRight className="w-3 h-3" />
+                  <span>AI standards</span><IconArrowRight className="w-2.5 h-2.5" />
                 </Link>
                 <Link href="/sitecheck" className="text-primary hover:underline inline-flex items-center gap-1">
-                  <span>Web Standards Checklist</span>
-                  <IconArrowRight className="w-3 h-3" />
+                  <span>Web checklist</span><IconArrowRight className="w-2.5 h-2.5" />
                 </Link>
               </div>
             </div>
