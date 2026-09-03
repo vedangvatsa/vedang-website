@@ -181,6 +181,47 @@ ${trustPages}
 
   fs.writeFileSync(path.join(PUBLIC_DIR, 'llms-full.txt'), llmsFullContent);
   console.log('✅ Generated public/llms-full.txt successfully!');
+
+  // Generate public/.well-known/sitemap.json
+  const wellKnownDir = path.join(PUBLIC_DIR, '.well-known');
+  if (!fs.existsSync(wellKnownDir)) {
+    fs.mkdirSync(wellKnownDir, { recursive: true });
+  }
+
+  const jsonSitemap = {
+    $schema: 'https://schema.org/sitemap',
+    generatedAt: new Date().toISOString(),
+    publisher: {
+      name: 'Vedang Vatsa',
+      url: 'https://veda.ng'
+    },
+    urls: [
+      { url: 'https://veda.ng', priority: 1.0, changefreq: 'daily' },
+      { url: 'https://veda.ng/about', priority: 0.9, changefreq: 'monthly' },
+      { url: 'https://veda.ng/scan', priority: 0.9, changefreq: 'daily' },
+      { url: 'https://veda.ng/developers', priority: 0.9, changefreq: 'weekly' },
+      { url: 'https://veda.ng/essays', priority: 0.9, changefreq: 'daily' },
+      { url: 'https://veda.ng/glossary', priority: 0.8, changefreq: 'weekly' },
+      { url: 'https://veda.ng/ailib', priority: 0.8, changefreq: 'weekly' },
+      { url: 'https://veda.ng/web3lib', priority: 0.8, changefreq: 'weekly' },
+      ...essaysData.map(essay => ({
+        url: essay.url,
+        title: essay.title,
+        lastmod: essay.date,
+        changefreq: 'monthly',
+        priority: 0.8
+      })),
+      ...glossaryTerms.map(term => ({
+        url: `https://veda.ng/glossary/${term.slug}`,
+        title: term.term,
+        changefreq: 'monthly',
+        priority: 0.6
+      }))
+    ]
+  };
+
+  fs.writeFileSync(path.join(wellKnownDir, 'sitemap.json'), JSON.stringify(jsonSitemap, null, 2));
+  console.log('✅ Generated public/.well-known/sitemap.json successfully!');
 }
 
 generateFiles();

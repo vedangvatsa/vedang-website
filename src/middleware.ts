@@ -49,12 +49,18 @@ export function middleware(req: NextRequest) {
       res.headers.set('Vary', 'Accept, User-Agent, Accept-Encoding');
       res.headers.set('Content-Type', 'text/markdown; charset=utf-8');
       res.headers.set('Access-Control-Allow-Origin', '*');
+      res.headers.set('RateLimit-Limit', '120');
+      res.headers.set('RateLimit-Remaining', '119');
+      res.headers.set('RateLimit-Reset', '60');
       return res;
     }
   }
 
   const res = NextResponse.next();
   res.headers.set('Vary', 'Accept, User-Agent, Accept-Encoding');
+  res.headers.set('RateLimit-Limit', '120');
+  res.headers.set('RateLimit-Remaining', '119');
+  res.headers.set('RateLimit-Reset', '60');
   const link = buildLinkHeader(pathname);
   if (link) res.headers.set('Link', link);
   return res;

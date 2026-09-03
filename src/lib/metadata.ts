@@ -198,5 +198,9 @@ export function generateMetadata(params: MetadataParams): Metadata {
     },
     openGraph,
     twitter,
+    other: {
+      'article:modified_time': '2026-09-03T00:00:00.000Z',
+      'dateModified': '2026-09-03',
+    },
   };
 }

@@ -1,0 +1,2248 @@
+{
+  "$schema": "https://schema.org/sitemap",
+  "generatedAt": "2026-09-03T14:11:44.084Z",
+  "publisher": {
+    "name": "Vedang Vatsa",
+    "url": "https://veda.ng"
+  },
+  "urls": [
+    {
+      "url": "https://veda.ng",
+      "priority": 1,
+      "changefreq": "daily"
+    },
+    {
+      "url": "https://veda.ng/about",
+      "priority": 0.9,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://veda.ng/scan",
+      "priority": 0.9,
+      "changefreq": "daily"
+    },
+    {
+      "url": "https://veda.ng/developers",
+      "priority": 0.9,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://veda.ng/essays",
+      "priority": 0.9,
+      "changefreq": "daily"
+    },
+    {
+      "url": "https://veda.ng/glossary",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://veda.ng/ailib",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://veda.ng/web3lib",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://veda.ng/aiindia",
+      "title": "How India Uses AI",
+      "lastmod": "2026-08-20",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/india",
+      "title": "Cities of India",
+      "lastmod": "2026-08-18",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/receipts",
+      "title": "Who Buys After the Layoff",
+      "lastmod": "2026-08-16",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/agentspeak",
+      "title": "When Agents Stop Speaking English",
+      "lastmod": "2026-08-14",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/indiaai",
+      "title": "The IndiaAI Mission",
+      "lastmod": "2026-08-14",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/neocloud",
+      "title": "The Neocloud",
+      "lastmod": "2026-08-14",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/outlives",
+      "title": "A Mind That Outlives You",
+      "lastmod": "2026-08-14",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/private",
+      "title": "Private Cognition",
+      "lastmod": "2026-08-14",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/traffic",
+      "title": "Does Half the Web Run on Bots?",
+      "lastmod": "2026-08-12",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/licenses",
+      "title": "Open-Weight Licences",
+      "lastmod": "2026-08-11",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/compute",
+      "title": "The National AI Compute Scorecard",
+      "lastmod": "2026-08-10",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/aidebt",
+      "title": "Sovereign AI Debt",
+      "lastmod": "2026-08-09",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/safety",
+      "title": "AI Safety Institutes",
+      "lastmod": "2026-08-07",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/lawsuits",
+      "title": "The AI Lawsuit Ledger",
+      "lastmod": "2026-08-06",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/intelligence",
+      "title": "Intelligence is a Commodity",
+      "lastmod": "2026-07-24",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/ai-detector",
+      "title": "Building an AI Text Detector",
+      "lastmod": "2026-07-09",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/stateofai",
+      "title": "The State of AI",
+      "lastmod": "2026-06-12",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/stateofweb3",
+      "title": "The State of Web3",
+      "lastmod": "2026-06-12",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/agentstack",
+      "title": "The Agent Infrastructure Stack",
+      "lastmod": "2026-05-28",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/funding",
+      "title": "The Great Funding Realignment",
+      "lastmod": "2026-05-25",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/playbook",
+      "title": "The AI Implementation Playbook",
+      "lastmod": "2026-05-06",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/postinterface",
+      "title": "The Post-Interface Internet",
+      "lastmod": "2026-04-25",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/agentsaas",
+      "title": "Agents Eating SaaS",
+      "lastmod": "2026-04-12",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/stateagents",
+      "title": "The Agentic State",
+      "lastmod": "2026-04-10",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/textui",
+      "title": "The Text Field is the New Dashboard",
+      "lastmod": "2026-04-08",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/stepwise",
+      "title": "The Stepwise Approach to Enterprise AI",
+      "lastmod": "2026-04-06",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/yc",
+      "title": "The YC Portfolio, Decoded",
+      "lastmod": "2026-04-04",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/postscarcity",
+      "title": "Post-Scarcity Technology",
+      "lastmod": "2026-04-01",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/agentcommerce",
+      "title": "Agentic Commerce",
+      "lastmod": "2026-03-24",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/agenticweb",
+      "title": "Towards the Agentic Web",
+      "lastmod": "2026-03-16",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/infinity",
+      "title": "The Infinity Economy",
+      "lastmod": "2026-03-11",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/aieconomy",
+      "title": "The AI Economy",
+      "lastmod": "2026-03-07",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/singapore",
+      "title": "Lessons from Singapore's Arc",
+      "lastmod": "2026-03-02",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/competitive",
+      "title": "From Cheap to Competitive",
+      "lastmod": "2026-02-26",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/revision",
+      "title": "The Revision Gap",
+      "lastmod": "2026-02-21",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/twilight",
+      "title": "Twilight Economy",
+      "lastmod": "2026-02-16",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/simulation",
+      "title": "Are We in a Computer Simulation?",
+      "lastmod": "2026-02-12",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/paradox",
+      "title": "The Singularity Paradox",
+      "lastmod": "2026-02-07",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/empathy",
+      "title": "Synthetic Empathy",
+      "lastmod": "2026-01-29",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/agenteconomy",
+      "title": "The AI Agent Economy",
+      "lastmod": "2026-01-20",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/asi",
+      "title": "AI Superintelligence Timeline",
+      "lastmod": "2026-01-15",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/liminal",
+      "title": "The In-Between State",
+      "lastmod": "2026-01-01",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/hustle",
+      "title": "The Hustle Trap",
+      "lastmod": "2025-12-30",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/lies",
+      "title": "An Internet of Lies",
+      "lastmod": "2025-12-28",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/instinct",
+      "title": "Intuitive Singularity",
+      "lastmod": "2025-12-23",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/governance",
+      "title": "Governance for AGI",
+      "lastmod": "2025-12-14",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/substrate",
+      "title": "The Substrate Shift",
+      "lastmod": "2025-12-09",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/ambient",
+      "title": "The World as an Interface",
+      "lastmod": "2025-11-30",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/singularity",
+      "title": "What is the Singularity?",
+      "lastmod": "2025-11-25",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/apis",
+      "title": "API States",
+      "lastmod": "2025-11-07",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/cognition",
+      "title": "Cognitive Load Crisis",
+      "lastmod": "2025-10-24",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/intuition",
+      "title": "Artificial Intuition",
+      "lastmod": "2025-10-20",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/bureaucracy",
+      "title": "Bureaucracy is the friction tax everyone pays",
+      "lastmod": "2025-10-15",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/darkforest",
+      "title": "The Dark Forest Internet",
+      "lastmod": "2025-10-10",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/rationality",
+      "title": "Rationality in AI",
+      "lastmod": "2025-10-06",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/monasticism",
+      "title": "Digital Monasticism",
+      "lastmod": "2025-10-03",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/attention",
+      "title": "Attention Refinery",
+      "lastmod": "2025-10-01",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/blockchain",
+      "title": "What Blockchain Kept",
+      "lastmod": "2025-09-22",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/algorithms",
+      "title": "Sacred Algorithms",
+      "lastmod": "2025-09-19",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/socialscience",
+      "title": "Computational Social Science",
+      "lastmod": "2025-09-05",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/constitutions",
+      "title": "Computational Constitutions",
+      "lastmod": "2025-08-22",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/pseudonymity",
+      "title": "Pseudonymous Agency",
+      "lastmod": "2025-08-08",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/trust",
+      "title": "Programmable Trust",
+      "lastmod": "2025-07-25",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/godprotocol",
+      "title": "The God Protocol",
+      "lastmod": "2025-07-11",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/sensory",
+      "title": "The Sensory Internet",
+      "lastmod": "2025-06-27",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/mesh",
+      "title": "The Mesh Economy",
+      "lastmod": "2025-06-13",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/plurality",
+      "title": "The Plurality Trap",
+      "lastmod": "2025-05-30",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/simulayer",
+      "title": "The Simulation Layer",
+      "lastmod": "2025-05-16",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/glossary/agi",
+      "title": "Artificial General Intelligence (AGI)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/llm",
+      "title": "Large Language Model (LLM)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/prompt-engineering",
+      "title": "Prompt Engineering",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/fine-tuning",
+      "title": "Fine-Tuning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/rag",
+      "title": "Retrieval-Augmented Generation (RAG)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/hallucination",
+      "title": "Hallucination",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/alignment",
+      "title": "Alignment",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/constitutional-ai",
+      "title": "Constitutional AI",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/zero-shot-learning",
+      "title": "Zero-Shot Learning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/rlhf",
+      "title": "Reinforcement Learning from Human Feedback (RLHF)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/transformer",
+      "title": "Transformer",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/token",
+      "title": "Token",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/embeddings",
+      "title": "Embeddings",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/agent",
+      "title": "Agent",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/multimodal-ai",
+      "title": "Multimodal AI",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/blockchain",
+      "title": "Blockchain",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/smart-contract",
+      "title": "Smart Contract",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/defi",
+      "title": "Decentralized Finance (DeFi)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/nft",
+      "title": "Non-Fungible Token (NFT)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/dao",
+      "title": "Decentralized Autonomous Organization (DAO)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/consensus-mechanism",
+      "title": "Consensus Mechanism",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/gas-fees",
+      "title": "Gas Fees",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/layer-2",
+      "title": "Layer 2",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/wallet",
+      "title": "Wallet",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/governance-token",
+      "title": "Governance Token",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/stablecoin",
+      "title": "Stablecoin",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/bridge",
+      "title": "Bridge",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/oracle",
+      "title": "Oracle",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/validator",
+      "title": "Validator",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/liquid-staking",
+      "title": "Liquid Staking",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/api",
+      "title": "API (Application Programming Interface)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/microservices",
+      "title": "Microservices",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/kubernetes",
+      "title": "Kubernetes",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/serverless",
+      "title": "Serverless",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cicd",
+      "title": "CI/CD",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/edge-computing",
+      "title": "Edge Computing",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/zero-knowledge-proof",
+      "title": "Zero-Knowledge Proof",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/merkle-tree",
+      "title": "Merkle Tree",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/sharding",
+      "title": "Sharding",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/ipfs",
+      "title": "IPFS (InterPlanetary File System)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/webassembly",
+      "title": "WebAssembly (Wasm)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/graphql",
+      "title": "GraphQL",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/docker",
+      "title": "Docker",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/message-queue",
+      "title": "Message Queue",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/rate-limiting",
+      "title": "Rate Limiting",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/context-window",
+      "title": "Context Window",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/temperature",
+      "title": "Temperature",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/inference",
+      "title": "Inference",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/chain-of-thought",
+      "title": "Chain-of-Thought Prompting",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/reasoning-model",
+      "title": "Reasoning Model",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/mcp",
+      "title": "Model Context Protocol (MCP)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/vector-database",
+      "title": "Vector Database",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/model-distillation",
+      "title": "Model Distillation",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/tokenization",
+      "title": "Tokenization",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/amm",
+      "title": "Automated Market Maker (AMM)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/seed-phrase",
+      "title": "Seed Phrase",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/mev",
+      "title": "Maximal Extractable Value (MEV)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/depin",
+      "title": "DePIN",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/restaking",
+      "title": "Restaking",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/airdrop",
+      "title": "Airdrop",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/tokenomics",
+      "title": "Tokenomics",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/attention-mechanism",
+      "title": "Attention Mechanism",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/quantization",
+      "title": "Quantization",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/agentic-loop",
+      "title": "Agentic Loop",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/synthetic-data",
+      "title": "Synthetic Data",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/prompt-injection",
+      "title": "Prompt Injection",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/mixture-of-experts",
+      "title": "Mixture of Experts (MoE)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/grounding",
+      "title": "Grounding",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/liquidity-pool",
+      "title": "Liquidity Pool",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/yield-farming",
+      "title": "Yield Farming",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/flash-loan",
+      "title": "Flash Loan",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/layer-1",
+      "title": "Layer 1",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/proof-of-work",
+      "title": "Proof of Work",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/proof-of-stake",
+      "title": "Proof of Stake",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cold-wallet",
+      "title": "Cold Wallet",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/wrapped-token",
+      "title": "Wrapped Token",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/websocket",
+      "title": "WebSocket",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/oauth",
+      "title": "OAuth",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/load-balancer",
+      "title": "Load Balancer",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/monorepo",
+      "title": "Monorepo",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/attention-head",
+      "title": "Attention Head",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/positional-encoding",
+      "title": "Positional Encoding",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/batch-normalization",
+      "title": "Batch Normalization",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/beam-search",
+      "title": "Beam Search",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/latency",
+      "title": "Latency",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/perplexity",
+      "title": "Perplexity",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/activation-function",
+      "title": "Activation Function",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/softmax",
+      "title": "Softmax",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cross-entropy-loss",
+      "title": "Cross-Entropy Loss",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/perplexity-trap",
+      "title": "Perplexity Trap",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/throughput",
+      "title": "Throughput",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/protobuf",
+      "title": "Protocol Buffer",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/grpc",
+      "title": "gRPC",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/idempotency",
+      "title": "Idempotency",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/circuit-breaker",
+      "title": "Circuit Breaker",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/database-index",
+      "title": "Database Index",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/acid-properties",
+      "title": "ACID Properties",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/consistency-hashing",
+      "title": "Consistency Hashing",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cors",
+      "title": "CORS",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/database-sharding",
+      "title": "Database Sharding",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/caching-strategy",
+      "title": "Caching Strategy",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/yield",
+      "title": "Yield",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/impermanent-loss",
+      "title": "Impermanent Loss",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/slashing",
+      "title": "Slashing",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/mev-burn",
+      "title": "MEV Burn",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/composability",
+      "title": "Composability",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cross-chain-bridge",
+      "title": "Cross-Chain Bridge",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/state-channel",
+      "title": "State Channel",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/payment-channel",
+      "title": "Payment Channel",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/atomic-swap",
+      "title": "Atomic Swap",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/rug-pull",
+      "title": "Rug Pull",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/sparse-expert",
+      "title": "Sparse Expert",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/knowledge-distillation",
+      "title": "Knowledge Distillation",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/scaling-law",
+      "title": "Scaling Law",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/reward-model",
+      "title": "Reward Model",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/scaffold",
+      "title": "Scaffold",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/few-shot-prompting",
+      "title": "Few-Shot Prompting",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/hyperparameter",
+      "title": "Hyperparameter",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/dropout",
+      "title": "Dropout",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/overfitting",
+      "title": "Overfitting",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/generalization",
+      "title": "Generalization",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/sybil-attack",
+      "title": "Sybil Attack",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/double-spend",
+      "title": "Double Spend",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/dust-attack",
+      "title": "Dust Attack",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/51-percent-attack",
+      "title": "51% Attack",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/liquidity-pool-volume",
+      "title": "Liquidity Pool Volume",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/slippage",
+      "title": "Slippage",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/value-at-risk",
+      "title": "Value at Risk",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/apy-vs-apr",
+      "title": "APY vs APR",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/twap",
+      "title": "Time-Weighted Average Price",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/backpropagation",
+      "title": "Backpropagation",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/gradient-descent",
+      "title": "Gradient Descent",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/neural-network",
+      "title": "Neural Network",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cnn",
+      "title": "Convolutional Neural Network",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/rnn",
+      "title": "Recurrent Neural Network",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/lstm",
+      "title": "LSTM",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/autoencoder",
+      "title": "Autoencoder",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/vae",
+      "title": "Variational Autoencoder",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/gan",
+      "title": "Generative Adversarial Network",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/diffusion-model",
+      "title": "Diffusion Model",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/generative-model",
+      "title": "Generative Model",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/transfer-learning",
+      "title": "Transfer Learning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/foundation-model",
+      "title": "Foundation Model",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/bert",
+      "title": "BERT",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/attention-score",
+      "title": "Attention Score",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/self-attention",
+      "title": "Self-Attention",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cross-attention",
+      "title": "Cross-Attention",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/layer-normalization",
+      "title": "Layer Normalization",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/residual-connection",
+      "title": "Residual Connection",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/feedforward-network",
+      "title": "Feedforward Network",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/causal-masking",
+      "title": "Causal Masking",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/tokenizer",
+      "title": "Tokenizer",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/bpe",
+      "title": "Byte-Pair Encoding",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/vocabulary",
+      "title": "Vocabulary",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/logit",
+      "title": "Logit",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/top-k-sampling",
+      "title": "Top-k Sampling",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/top-p-sampling",
+      "title": "Top-p Sampling",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/speculative-decoding",
+      "title": "Speculative Decoding",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/kv-cache",
+      "title": "KV Cache",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/prefix-tuning",
+      "title": "Prefix Tuning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/lora",
+      "title": "LoRA",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/adapter",
+      "title": "Adapter",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/prompt-tuning",
+      "title": "Prompt Tuning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/instruction-tuning",
+      "title": "Instruction Tuning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/dpo",
+      "title": "Direct Preference Optimization",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/contrastive-learning",
+      "title": "Contrastive Learning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/clip",
+      "title": "CLIP",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/vit",
+      "title": "Vision Transformer",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/object-detection",
+      "title": "Object Detection",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/image-segmentation",
+      "title": "Image Segmentation",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/sam",
+      "title": "SAM",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/ocr",
+      "title": "Optical Character Recognition",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/computer-vision",
+      "title": "Computer Vision",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/speech-recognition",
+      "title": "Speech Recognition",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/tts",
+      "title": "Text-to-Speech",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/ner",
+      "title": "Named Entity Recognition",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/sentiment-analysis",
+      "title": "Sentiment Analysis",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/question-answering",
+      "title": "Question Answering",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/machine-translation",
+      "title": "Machine Translation",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/semantic-similarity",
+      "title": "Semantic Similarity",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/document-retrieval",
+      "title": "Document Retrieval",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/re-ranking",
+      "title": "Re-ranking",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/chunking",
+      "title": "Chunking",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/market-cap",
+      "title": "Market Cap",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/circulating-supply",
+      "title": "Circulating Supply",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/vesting-schedule",
+      "title": "Vesting Schedule",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/token-burn",
+      "title": "Token Burn",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/emission-rate",
+      "title": "Emission Rate",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/order-book",
+      "title": "Order Book",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/limit-order",
+      "title": "Limit Order",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/market-order",
+      "title": "Market Order",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/liquidity-provider",
+      "title": "Liquidity Provider",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/concentrated-liquidity",
+      "title": "Concentrated Liquidity",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/tvl",
+      "title": "Total Value Locked",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/protocol-revenue",
+      "title": "Protocol Revenue",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/collateralization-ratio",
+      "title": "Collateralization Ratio",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/liquidation",
+      "title": "Liquidation",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/borrow-rate",
+      "title": "Borrow Rate",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/supply-rate",
+      "title": "Supply Rate",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/utilization-rate",
+      "title": "Utilization Rate",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/perpetual-futures",
+      "title": "Perpetual Futures",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/funding-rate",
+      "title": "Funding Rate",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/leverage",
+      "title": "Leverage",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/margin",
+      "title": "Margin",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/delta-neutral",
+      "title": "Delta Neutral",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/basis-trade",
+      "title": "Basis Trade",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/rollup",
+      "title": "Rollup",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/optimistic-rollup",
+      "title": "Optimistic Rollup",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/zk-rollup",
+      "title": "ZK Rollup",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/data-availability",
+      "title": "Data Availability",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/sequencer",
+      "title": "Sequencer",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/account-abstraction",
+      "title": "Account Abstraction",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/social-recovery",
+      "title": "Social Recovery",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/intent",
+      "title": "Intent",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/modular-blockchain",
+      "title": "Modular Blockchain",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/liquid-restaking",
+      "title": "Liquid Restaking",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/agentic-workflow",
+      "title": "Agentic Workflow",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/real-world-assets",
+      "title": "Real World Assets (RWA)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/ethereum-virtual-machine",
+      "title": "Ethereum Virtual Machine (EVM)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/decentralized-identity",
+      "title": "Decentralized Identity (DID)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/soulbound-token",
+      "title": "Soulbound Token (SBT)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/zkevm",
+      "title": "Zero-Knowledge EVM (zkEVM)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/self-sovereign-identity",
+      "title": "Self-Sovereign Identity (SSI)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/federated-learning",
+      "title": "Federated Learning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/autonomous-agents",
+      "title": "Autonomous Agents",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/reinforcement-learning",
+      "title": "Reinforcement Learning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/supervised-learning",
+      "title": "Supervised Learning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/deep-learning",
+      "title": "Deep Learning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/generative-ai",
+      "title": "Generative AI",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/transformer-architecture",
+      "title": "Transformer Architecture",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/semi-supervised-learning",
+      "title": "Semi-Supervised Learning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/expert-systems",
+      "title": "Expert Systems",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/ai-alignment",
+      "title": "AI Alignment",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/artificial-superintelligence-asi",
+      "title": "Artificial Superintelligence (ASI)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/ai-safety",
+      "title": "AI Safety",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/feature-extraction",
+      "title": "Feature Extraction",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/support-vector-machine-svm",
+      "title": "Support Vector Machine (SVM)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/random-forest",
+      "title": "Random Forest",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cluster-analysis",
+      "title": "Cluster Analysis",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/word-embeddings",
+      "title": "Word Embeddings",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/algorithmic-bias",
+      "title": "Algorithmic Bias",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/explainable-ai-xai",
+      "title": "Explainable AI (XAI)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/knowledge-graph",
+      "title": "Knowledge Graph",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/predictive-analytics",
+      "title": "Predictive Analytics",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/low-rank-adaptation-lora",
+      "title": "Low-Rank Adaptation (LoRA)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/model-quantization",
+      "title": "Model Quantization",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/multi-agent-systems",
+      "title": "Multi-Agent Systems",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/edge-ai",
+      "title": "Edge AI",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/hyperparameter-tuning",
+      "title": "Hyperparameter Tuning",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/pattern-recognition",
+      "title": "Pattern Recognition",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/vision-transformers-vit",
+      "title": "Vision Transformers (ViT)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/delegated-proof-of-stake-dpos",
+      "title": "Delegated Proof of Stake (DPoS)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cryptocurrency-wallet",
+      "title": "Cryptocurrency Wallet",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/public-key-cryptography",
+      "title": "Public-Key Cryptography",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cryptographic-hash-function",
+      "title": "Cryptographic Hash Function",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/mining-pool",
+      "title": "Mining Pool",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/genesis-block",
+      "title": "Genesis Block",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/hard-fork",
+      "title": "Hard Fork",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/soft-fork",
+      "title": "Soft Fork",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/zero-knowledge-proofs-zkps",
+      "title": "Zero-Knowledge Proofs (ZKPs)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/peer-to-peer-p2p",
+      "title": "Peer-to-Peer (P2P)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/double-spending",
+      "title": "Double-Spending",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cold-storage",
+      "title": "Cold Storage",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/hot-wallet",
+      "title": "Hot Wallet",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/proof-of-history-poh",
+      "title": "Proof of History (PoH)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/directed-acyclic-graph-dag",
+      "title": "Directed Acyclic Graph (DAG)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/depin-networks",
+      "title": "Decentralized Physical Infrastructure Networks (DePIN)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/intent-centric-architecture",
+      "title": "Intent-Centric Architecture",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/parallelized-evm",
+      "title": "Parallelized EVM",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/decentralized-sequencer",
+      "title": "Decentralized Sequencer",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/data-availability-sampling-das",
+      "title": "Data Availability Sampling (DAS)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/decentralized-exchange-dex",
+      "title": "Decentralized Exchange (DEX)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/web2",
+      "title": "Web2",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/internet-of-things-iot",
+      "title": "Internet of Things (IoT)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/quantum-computing",
+      "title": "Quantum Computing",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/serverless-architecture",
+      "title": "Serverless Architecture",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/ci-cd",
+      "title": "Continuous Integration / Continuous Deployment (CI/CD)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/containerization",
+      "title": "Containerization (Docker)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/spatial-computing",
+      "title": "Spatial Computing",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/digital-twin",
+      "title": "Digital Twin",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/dns",
+      "title": "DNS (Domain Name System)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/rest-api",
+      "title": "REST API",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/tcp-ip",
+      "title": "TCP/IP",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/cdn",
+      "title": "CDN (Content Delivery Network)",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/ssl-tls",
+      "title": "SSL/TLS",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/git",
+      "title": "Git",
+      "changefreq": "monthly",
+      "priority": 0.6
+    },
+    {
+      "url": "https://veda.ng/glossary/webhook",
+      "title": "Webhook",
+      "changefreq": "monthly",
+      "priority": 0.6
+    }
+  ]
+}
