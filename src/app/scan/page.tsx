@@ -262,11 +262,11 @@ function PromptSection() {
 
   return (
     <section className="border border-border rounded-lg bg-card">
-      <div className="flex items-center justify-between gap-3 px-4 py-3">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-4 py-3">
         <p className="text-sm text-muted-foreground">
           Not sure where to start? Copy the master prompt into your AI coding agent.
         </p>
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
           <button
             type="button"
             onClick={handleCopy}
@@ -333,7 +333,7 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
                 <StatusPill status={check.impact} />
               )}
             </div>
-            <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{check.details}</p>
+            <p className="text-xs text-muted-foreground leading-relaxed mt-0.5 break-words">{check.details}</p>
           </div>
         </div>
 
@@ -598,10 +598,13 @@ export default function ScanPage() {
                 { layer: 'SEO & Citations', probes: 15, desc: 'Title/Meta tags, JSON-LD @graph, E-E-A-T sameAs links, inverted pyramid Q&A, RSS feeds' },
                 { layer: 'Micropayments',  probes: 3,  desc: 'L402 / HTTP 402, WebLN wallet discovery, machine terms of service' },
               ].map(item => (
-                <div key={item.layer} className="flex items-start gap-3 px-4 py-2.5">
-                  <span className="font-medium text-sm text-foreground shrink-0 w-36 pt-px">{item.layer}</span>
-                  <span className="text-[11px] text-muted-foreground/40 tabular-nums shrink-0 w-5 pt-1">{item.probes}</span>
-                  <span className="text-xs text-muted-foreground leading-relaxed pt-px">{item.desc}</span>
+                <div key={item.layer} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 px-4 py-2.5">
+                  <div className="flex items-center justify-between sm:justify-start gap-2 shrink-0 sm:w-36 pt-px">
+                    <span className="font-medium text-sm text-foreground">{item.layer}</span>
+                    <span className="text-[11px] text-muted-foreground/50 tabular-nums font-mono sm:hidden">{item.probes} probes</span>
+                  </div>
+                  <span className="hidden sm:inline text-[11px] text-muted-foreground/40 tabular-nums shrink-0 w-5 pt-1">{item.probes}</span>
+                  <span className="text-xs text-muted-foreground leading-relaxed pt-px min-w-0 flex-1">{item.desc}</span>
                 </div>
               ))}
             </section>
@@ -660,7 +663,7 @@ export default function ScanPage() {
             </div>
 
             {/* Layer cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
               {result.layers.map(layer => {
                 const isSelected = filterLayer === layer.id;
                 return (
@@ -701,7 +704,7 @@ export default function ScanPage() {
             </div>
 
             {/* Capabilities grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
               {[
                 { label: 'robots.txt AI policy',   active: result.badges.aiBotFriendly },
                 { label: 'llms.txt catalog',        active: result.badges.llmsTxt },
@@ -723,13 +726,13 @@ export default function ScanPage() {
                 <div
                   key={item.label}
                   className={cn(
-                    'px-3 py-2 rounded-lg border text-xs font-medium flex items-center justify-between gap-2',
+                    'px-3 py-2 rounded-lg border text-xs font-medium flex items-center justify-between gap-2 min-w-0',
                     item.active
                       ? 'border-emerald-500/30 bg-emerald-500/5 text-foreground'
                       : 'border-border bg-muted/10 text-muted-foreground'
                   )}
                 >
-                  <span>{item.label}</span>
+                  <span className="truncate min-w-0">{item.label}</span>
                   <span className={cn('font-semibold shrink-0', item.active ? 'text-emerald-600' : 'text-muted-foreground/40')}>
                     {item.active ? '✓' : '—'}
                   </span>
