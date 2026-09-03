@@ -53,7 +53,7 @@ export function shouldSkipNegotiation(
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/md/') ||
-    pathname.startsWith('/.well-known/') ||
+    (pathname.startsWith('/.well-known/') && !pathname.endsWith('.md')) ||
     pathname.startsWith('/agent/') ||
     pathname === '/md'
   ) {
