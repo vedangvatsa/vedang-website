@@ -1,64 +1,112 @@
 import fs from 'fs';
 import path from 'path';
 import { scanDomain } from '../src/lib/scanner/engine';
-import { ScanResult } from '../src/lib/scanner/types';
 
-// Batch runner script for 50,000 domain scans
 const OUTPUT_PATH = path.join(process.cwd(), 'src', 'data', '50k-scan-results.json');
 const PROGRESS_PATH = path.join(process.cwd(), 'src', 'data', '50k-scan-progress.json');
 
-// Default target domains list generator (sample top domains across sectors)
-function getTargetDomains(count = 50000): string[] {
-  const seedDomains = [
-    'stripe.com', 'github.com', 'anthropic.com', 'cloudflare.com', 'openai.com',
-    'vercel.com', 'nextjs.org', 'tailwindcss.com', 'react.dev', 'python.org',
-    'npmjs.com', 'pypi.org', 'huggingface.co', 'replicate.com', 'supabase.com',
-    'resend.com', 'posthog.com', 'linear.app', 'notion.so', 'figma.com',
-    'slack.com', 'atlassian.com', 'salesforce.com', 'shopify.com', 'wordpress.org',
-    'medium.com', 'substack.com', 'arxiv.org', 'wikipedia.org', 'github.io',
-    'coinbase.com', 'ethereum.org', 'solana.com', 'polygon.technology', 'base.org',
-    'uniswap.org', 'aave.com', 'opensea.io', 'chainlink.labs', 'alchemy.com',
-    'infura.io', 'quicknode.com', 'moralis.io', 'dune.com', 'defillama.com',
-    'techcrunch.com', 'theverge.com', 'wired.com', 'arstechnica.com', 'bloomberg.com',
-  ];
+// Real empirical domain targets across 6 sectors
+const REAL_DOMAINS = [
+  // AI Platforms & Research (Sector 1)
+  'openai.com', 'anthropic.com', 'huggingface.co', 'replicate.com', 'mistral.ai',
+  'cohere.com', 'deepseek.com', 'midjourney.com', 'stability.ai', 'langchain.com',
+  'llamaindex.ai', 'crewai.com', 'modal.com', 'groq.com', 'together.ai',
+  'fireworks.ai', 'baseten.co', 'pinecone.io', 'weaviate.io', 'qdrant.tech',
+  
+  // Developer Tools & Infrastructure (Sector 2)
+  'stripe.com', 'github.com', 'cloudflare.com', 'vercel.com', 'nextjs.org',
+  'tailwindcss.com', 'react.dev', 'python.org', 'npmjs.com', 'pypi.org',
+  'supabase.com', 'resend.com', 'posthog.com', 'linear.app', 'notion.so',
+  'figma.com', 'slack.com', 'datadoghq.com', 'sentry.io', 'grafana.com',
+  'elastic.co', 'mongodb.com', 'redis.io', 'postgresql.org', 'neon.tech',
+  
+  // Web3 & Emerging Protocols (Sector 3)
+  'ethereum.org', 'solana.com', 'polygon.technology', 'base.org', 'uniswap.org',
+  'aave.com', 'opensea.io', 'alchemy.com', 'infura.io', 'quicknode.com',
+  'moralis.io', 'dune.com', 'defillama.com', 'coinbase.com', 'binance.com',
+  
+  // Enterprise SaaS & Cloud (Sector 4)
+  'salesforce.com', 'atlassian.com', 'workos.com', 'clerk.com', 'okta.com',
+  'auth0.com', 'segment.com', 'mixpanel.com', 'amplitude.com', 'launchdarkly.com',
+  'digitalocean.com', 'fly.io', 'railway.app', 'render.com', 'fastly.com',
+  
+  // E-Commerce & Retail (Sector 5)
+  'shopify.com', 'wordpress.org', 'amazon.com', 'ebay.com', 'etsy.com',
+  'target.com', 'walmart.com', 'bestbuy.com', 'nike.com', 'adidas.com',
+  
+  // Digital News & Publishers (Sector 6)
+  'arxiv.org', 'wikipedia.org', 'techcrunch.com', 'theverge.com', 'wired.com',
+  'arstechnica.com', 'bloomberg.com', 'nytimes.com', 'wsj.com', 'bbc.com',
+  'reuters.com', 'cnbc.com', 'forbes.com', 'medium.com', 'substack.com',
+];
 
-  const list: string[] = [];
-  while (list.length < count) {
-    for (const d of seedDomains) {
-      if (list.length >= count) break;
-      if (list.length < seedDomains.length) {
-        list.push(d);
-      } else {
-        const sub = `sub${list.length}.${d}`;
-        list.push(sub);
-      }
-    }
-  }
-  return list;
-}
+async function runEmpiricalAudit() {
+  console.log(`🚀 Starting real empirical domain scan audit across ${REAL_DOMAINS.length} target domains...`);
+  
+  const results: Record<string, {
+    score: number;
+    grade: string;
+    passedCount: number;
+    durationMs: number;
+    hasRobotsTxt: boolean;
+    hasLlmsTxt: boolean;
+    hasMcpServer: boolean;
+    hasOpenApi: boolean;
+    hasMarkdown: boolean;
+    blockedByWaf: boolean;
+  }> = {};
 
-async function runBatchAudit() {
-  console.log('🚀 Starting 50,000 domain batch scan pipeline...');
-  const domains = getTargetDomains(50000);
-  console.log(`Loaded ${domains.length} target domains for scanning.`);
-
-  const batchSize = 100;
-  const results: Record<string, { score: number; grade: string; passedCount: number; durationMs: number }> = {};
   let totalScanned = 0;
   let successCount = 0;
   let failCount = 0;
 
   const startTime = Date.now();
+  const batchSize = 10;
 
-  for (let i = 0; i < domains.length; i += batchSize) {
-    const chunk = domains.slice(i, i + batchSize);
+  for (let i = 0; i < REAL_DOMAINS.length; i += batchSize) {
+    const chunk = REAL_DOMAINS.slice(i, i + batchSize);
     const promises = chunk.map(async (domain) => {
       try {
         const res = await scanDomain(domain);
-        const passedCount = res.layers.flatMap(l => l.checks).filter(c => c.status === 'pass').length;
-        return { domain, score: res.score, grade: res.grade, passedCount, durationMs: res.durationMs, ok: true };
-      } catch {
-        return { domain, score: 0, grade: 'F', passedCount: 0, durationMs: 0, ok: false };
+        const allChecks = res.layers.flatMap(l => l.checks);
+        const passedCount = allChecks.filter(c => c.status === 'pass').length;
+        
+        const hasRobotsTxt = allChecks.some(c => c.id === 'robots-txt' && c.status === 'pass');
+        const hasLlmsTxt = allChecks.some(c => c.id === 'llms-txt' && c.status === 'pass');
+        const hasMcpServer = allChecks.some(c => c.id === 'mcp-server' && c.status === 'pass');
+        const hasOpenApi = allChecks.some(c => c.id === 'openapi-spec' && c.status === 'pass');
+        const hasMarkdown = allChecks.some(c => c.id === 'markdown-negotiation' && c.status === 'pass');
+        const blockedByWaf = allChecks.some(c => c.id === 'bot-ua-access' && c.status === 'fail');
+
+        return {
+          domain,
+          score: res.score,
+          grade: res.grade,
+          passedCount,
+          durationMs: res.durationMs,
+          hasRobotsTxt,
+          hasLlmsTxt,
+          hasMcpServer,
+          hasOpenApi,
+          hasMarkdown,
+          blockedByWaf,
+          ok: true,
+        };
+      } catch (e) {
+        return {
+          domain,
+          score: 0,
+          grade: 'F',
+          passedCount: 0,
+          durationMs: 0,
+          hasRobotsTxt: false,
+          hasLlmsTxt: false,
+          hasMcpServer: false,
+          hasOpenApi: false,
+          hasMarkdown: false,
+          blockedByWaf: true,
+          ok: false,
+        };
       }
     });
 
@@ -67,48 +115,45 @@ async function runBatchAudit() {
       totalScanned++;
       if (r.ok) {
         successCount++;
-        results[r.domain] = { score: r.score, grade: r.grade, passedCount: r.passedCount, durationMs: r.durationMs };
+        results[r.domain] = r;
       } else {
         failCount++;
       }
     }
 
-    if (totalScanned % 1000 === 0 || totalScanned === domains.length) {
-      const elapsedSec = ((Date.now() - startTime) / 1000).toFixed(1);
-      console.log(`Progress: ${totalScanned}/${domains.length} scanned (${successCount} succeeded, ${failCount} failed) - ${elapsedSec}s elapsed`);
-      
-      // Save checkpoint progress
-      fs.writeFileSync(PROGRESS_PATH, JSON.stringify({
-        totalScanned,
-        successCount,
-        failCount,
-        elapsedSec: parseFloat(elapsedSec),
-        sampleResults: Object.entries(results).slice(0, 10),
-      }, null, 2));
-    }
-
-    // Yield back to event loop
-    await new Promise(r => setTimeout(r, 10));
+    console.log(`Progress: ${totalScanned}/${REAL_DOMAINS.length} scanned (${successCount} succeeded, ${failCount} failed)...`);
   }
+
+  const durationTotalSec = ((Date.now() - startTime) / 1000).toFixed(1);
+  const successResults = Object.values(results);
+  const totalValid = successResults.length || 1;
+
+  const summaryStats = {
+    totalScanned,
+    successCount,
+    failCount,
+    durationTotalSec,
+    meanAXScore: (successResults.reduce((a, b) => a + b.score, 0) / totalValid).toFixed(1),
+    robotsTxtRate: ((successResults.filter(r => r.hasRobotsTxt).length / totalValid) * 100).toFixed(2),
+    llmsTxtRate: ((successResults.filter(r => r.hasLlmsTxt).length / totalValid) * 100).toFixed(2),
+    mcpServerRate: ((successResults.filter(r => r.hasMcpServer).length / totalValid) * 100).toFixed(2),
+    openApiRate: ((successResults.filter(r => r.hasOpenApi).length / totalValid) * 100).toFixed(2),
+    markdownRate: ((successResults.filter(r => r.hasMarkdown).length / totalValid) * 100).toFixed(2),
+    wafBlockRate: ((successResults.filter(r => r.blockedByWaf).length / totalValid) * 100).toFixed(2),
+  };
 
   const finalOutput = {
     scannedAt: new Date().toISOString(),
-    totalDomains: domains.length,
-    successCount,
-    failCount,
-    durationTotalSec: ((Date.now() - startTime) / 1000).toFixed(1),
-    summary: {
-      meanScore: (Object.values(results).reduce((a, b) => a + b.score, 0) / (successCount || 1)).toFixed(1),
-    },
+    summary: summaryStats,
     domainResults: results,
   };
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(finalOutput, null, 2));
-  console.log(`✅ Finished 50,000 domain batch scan! Saved results to ${OUTPUT_PATH}`);
+  console.log('✅ Real empirical audit complete! Summary:', summaryStats);
 }
 
-runBatchAudit().catch(err => {
-  console.error('Batch scan error:', err);
+runEmpiricalAudit().catch(err => {
+  console.error('Audit error:', err);
   process.exit(1);
 });
