@@ -1,6 +1,6 @@
 ---
 title: The State of Agentic Web Readiness 2026
-summary: Empirical statistical analysis of 50,000 global website scans measuring machine accessibility, Model Context Protocol adoption, Markdown content negotiation, and crawler reachability.
+summary: A 50,000-domain empirical study examining machine legibility, protocol adoption, content negotiation, and crawler accessibility across the modern web.
 date: '2026-09-03'
 author: Vedang Vatsa
 keywords: ['agentic web', 'AX audit', 'MCP', 'llms.txt', 'web standards', 'machine readability', 'agent readiness']
@@ -8,7 +8,7 @@ keywords: ['agentic web', 'AX audit', 'MCP', 'llms.txt', 'web standards', 'machi
 
 The web evolved from static document retrieval to interactive web applications, and now to machine-driven protocol execution. Automated AI agents, language model answer engines, and background execution workers make up a growing share of web traffic. Instead of rendering pixels and scrolling menus, these machine consumers parse structured data, negotiate Markdown representations, execute Model Context Protocol tools, and interact directly with HTTP APIs.
 
-This paper presents a comprehensive empirical analysis of the scan results from 50,000 global websites evaluated across the six layers of Agent Experience (AX): Discovery, Access, Usability (MCP), Security, SEO & Citations, and Micropayments.
+This paper provides an empirical study of 50,000 global websites evaluated across the six functional layers of Agent Experience (AX): Discovery, Access, Usability (MCP), Security, SEO & Citations, and Micropayments. We document why each metric was selected, review the underlying standards literature, detail the sampling and scan methodology, analyze the empirical scan results, and discuss the architectural implications for future web engineering.
 
 <StatRow>
 <Stat value="50,000" label="Global domains scanned" source="veda.ng AX Scanner (Sep 2026)" />
@@ -17,25 +17,159 @@ This paper presents a comprehensive empirical analysis of the scan results from 
 <Stat value="0.28%" label="Sites with live MCP servers" source="veda.ng MCP Probe" />
 </StatRow>
 
-## 1. Corpus Selection & Scanning Methodology
+## 1. Introduction
 
-The dataset consists of 50,000 unique domains sampled across five distinct sectors:
+For thirty years, digital platform architecture focused on human visual perception. Page layout, typographic hierarchy, responsive viewport rules, and interactive DOM elements were engineered to capture human attention and support manual cursor interactions. That paradigm implicitly assumed that an active human user was behind every HTTP client.
 
-- **Top Global Web Baseline (15,000 domains)**: Sampled from the Tranco and Chrome User Experience (CrUX) top domain rankings.
-- **Developer Tools & SaaS Infrastructure (15,000 domains)**: Sampled from public code repositories, developer tool catalogs, Y Combinator startup directories, and API indexers.
-- **E-Commerce & Retail Storefronts (10,000 domains)**: Sampled from Shopify, WooCommerce, Magento, and custom retail platforms.
-- **Digital Publishers & News Outlets (5,000 domains)**: Sampled from news publishers, academic repositories, and media networks.
-- **Web3 & AI Ecosystem Protocols (5,000 domains)**: Sampled from AI product directories and protocol registries.
+Autonomous software agents operate under different constraints. Machine consumers do not scroll viewports, view image banners, or execute manual DOM event handlers. They require explicit semantic declarations, deterministic URL contracts, machine-readable catalogs, and typed protocol interfaces. When an automated agent attempts to interact with a traditional web application, it encounters layout noise, client-side JavaScript execution bottlenecks, anti-bot security challenges, and unstructured HTML payloads that inflate language model token context by an average of 84.3% per request.
 
-Each domain was audited using the veda.ng Agentic Scanner engine. The scanning pipeline executes 35 asynchronous parallel HTTP probes evaluating 61 protocol rules per domain. Out of 50,000 target domains, 49,692 (99.38%) returned valid HTTP responses within the 4,500ms probe timeout, while 308 (0.62%) failed due to DNS resolution errors or connection timeouts.
+This paper addresses the lack of large-scale empirical data on website readiness for machine consumers. We establish a comprehensive evaluation framework covering 61 protocol rules, audit 50,000 global domains, and propose the Agent Readiness Framework (ARF v1.0).
 
-## 2. Statistical Breakdown of the 50,000 Scan Results
+## 2. Literature Review & Protocol Foundations
+
+### 2.1 Crawl Control & Robot Directives
+Web crawler management originated with the Robot Exclusion Protocol created by Martijn Koster in 1994, later formalized by the IETF as RFC 9309. Historically, `robots.txt` managed search engine crawlers (such as `Googlebot` and `Bingbot`). The rise of large language models introduced two distinct categories of automated crawlers:
+
+1. **Real-time Search & Citation Bots**: Crawlers such as `GPTBot`, `OAI-SearchBot`, `ClaudeBot`, `Claude-SearchBot`, `PerplexityBot`, and `Google-Extended`. These crawlers fetch web pages during user sessions to retrieve real-time facts, cite sources, and answer user queries.
+2. **Mass Dataset Scraping Bots**: Crawlers such as `CCBot` (Common Crawl), `ByteSpider`, `Diffbot`, and `Cohere-ai`. These crawlers harvest bulk text datasets for offline model training.
+
+Many site operators lack granular controls, using broad `Disallow: /` directives that block search citation bots alongside training scrapers, inadvertently removing their sites from AI answer engine results.
+
+### 2.2 Machine Discovery & Indexing Standards
+Traditional sitemaps (sitemaps.org, 2006) provide XML lists of canonical URLs for search indexers. However, XML parsing introduces parsing overhead for language models. Three machine discovery standards have emerged:
+
+- **llms.txt (llmstxt.org, 2024)**: A standardized Markdown index file located at `/llms.txt` or `/.well-known/llms.txt`. It provides language models with a structured, human-readable overview of a domain's identity, core documentation links, and full-text digest files (`/llms-full.txt`).
+- **IETF API Catalog (RFC 9727, Foucher et al., 2025)**: A standardized discovery document located at `/.well-known/api-catalog` that lists API entry points, documentation links, and OpenAPI schema locations.
+- **Agent Readiness Declarations & Manifests**: Standards such as `/.well-known/agents.json` and `/.well-known/ard.json` declare task suitability, rate boundaries, and support contacts for autonomous agents.
+
+### 2.3 Content Negotiation & Token Economics
+HTTP/1.1 Content Negotiation (Fielding et al., 1999; RFC 7231 / RFC 9110) allows clients to specify preferred representation formats using the `Accept` header. In agentic contexts, serving raw HTML requires agents to process layout markup, inline CSS, SVG paths, and JavaScript bundles. Serving clean Markdown (`Accept: text/markdown`) or providing static `.md` URL mirrors (such as `/index.md`) eliminates visual noise, reduces language model context consumption, and prevents parsing errors.
+
+### 2.4 Tool Execution & Agent Protocols
+For interactive web applications, static content retrieval is insufficient. Autonomous agents require programmatic execution interfaces:
+
+- **Model Context Protocol (MCP, Anthropic 2024)**: Transferred to the Agentic AI Foundation (AAIF) under the Linux Foundation in 2025, MCP defines a standardized JSON-RPC 2.0 protocol for language models to discover and execute tools, read resources, and prompt templates over Streamable HTTP (`/.well-known/mcp`).
+- **OpenAPI 3.1 Specification (OAI 2021)**: Provides typed machine contracts for HTTP APIs. For language models, concrete request and response parameter examples are essential to prevent argument hallucination.
+- **Machine Authentication (RFC 9728 & auth.md)**: Standardized OAuth protected resource metadata (RFC 9728) and keyless authentication guides (`/auth.md`) allow agents to authenticate and execute actions without human intervention.
+
+### 2.5 Transport Security & Vulnerability Disclosure
+Machine interactions require verified transport security and clear vulnerability disclosure paths:
+- **HTTPS & HSTS (RFC 6797)**: Transport Layer Security ensures data integrity and prevents man-in-the-middle tampering during automated API calls.
+- **Content Security Policy (W3C CSP Level 3)**: Restricts unauthorized script execution and data exfiltration.
+- **RFC 9116 security.txt**: Located at `/.well-known/security.txt`, this standard defines cryptographic contacts and vulnerability reporting policies.
+
+### 2.6 Semantic Knowledge Graphs
+Structured entity annotations enable answer engines to verify identity and cross-reference facts:
+- **W3C JSON-LD 1.1 (Sporny et al., 2020)**: Embeds typed linked data inside HTML documents.
+- **Schema.org @graph Arrays**: Nesting `Organization`, `WebSite`, `Article`, and `FAQPage` entities inside a single `@graph` array allows machines to construct complete knowledge graphs rather than parsing disconnected metadata objects.
+- **E-E-A-T sameAs Assertions**: Explicit `sameAs` arrays link organizational identities and authors to authoritative registries (ORCID, Wikidata, Wikipedia, official social profiles).
+
+### 2.7 Machine Micropayments
+Autonomous software agents cannot hold credit cards or complete manual 3D-Secure checkout flows. Standards including HTTP 402 Payment Required, L402 Lightning macaroons, x402 payment headers, Universal Commerce Protocol (UCP), Agentic Commerce Protocol (ACP), and Google AP2 enable metered machine-to-machine financial settlement.
+
+## 3. Rationale for the 61 Scanned Metrics
+
+The veda.ng Agentic Scanner probes 61 specific metrics across six functional layers. Each metric was selected to address a specific technical barrier in machine interaction:
+
+### Discovery Layer (13 Metrics)
+1. `robots-ai-policy`: Checks whether `/robots.txt` explicitly permits AI search bots (`GPTBot`, `ClaudeBot`, `PerplexityBot`). *Rationale*: AI answer engines check `robots.txt` before crawling. Lack of explicit rules leads to accidental exclusions.
+2. `llms-txt`: Probes for `/llms.txt` or `/.well-known/llms.txt`. *Rationale*: Provides language models with a curated map of key domain pages.
+3. `llms-full-txt`: Probes for `/llms-full.txt`. *Rationale*: Combines documentation into a single file, eliminating multi-page crawling overhead.
+4. `api-catalog`: Probes for `/.well-known/api-catalog` (RFC 9727). *Rationale*: Standardizes API discovery for automated agents.
+5. `agents-json`: Probes for `/.well-known/agents.json`. *Rationale*: Declares agent task boundaries and supported operational roles.
+6. `ard-registry`: Probes for `/.well-known/ard.json`. *Rationale*: Assesses machine readiness declarations against the ARD v0.91 specification.
+7. `sitemap-xml`: Probes for `/sitemap.xml` or custom sitemap declarations in `robots.txt`. *Rationale*: Ensures crawlers can discover all canonical URLs.
+8. `sitemap-json`: Probes for `/.well-known/sitemap.json`. *Rationale*: Offers a JSON sitemap representation for machine parsers.
+9. `openai-plugin`: Probes for `/.well-known/ai-plugin.json`. *Rationale*: Checks legacy ChatGPT plugin compatibility.
+10. `agent-card`: Probes for `/.well-known/agent-card.json`. *Rationale*: Checks A2A (Agent-to-Agent) protocol readiness.
+11. `tdmrep`: Probes for `/.well-known/tdmrep.json`. *Rationale*: Evaluates EU Text and Data Mining Rights Reservation signals.
+12. `robots-selective-ai-policy`: Evaluates whether `robots.txt` distinguishes search bots from mass scrapers (`CCBot`, `ByteSpider`). *Rationale*: Prevents blanket blocks from removing sites from AI citations.
+13. `sitemap-validity`: Validates XML structure and link integrity. *Rationale*: Broken sitemaps waste crawler budget.
+
+### Access Layer (9 Metrics)
+14. `markdown-negotiation`: Sends HTTP `Accept: text/markdown` and checks for clean Markdown responses. *Rationale*: Eliminates HTML parsing noise and reduces token overhead.
+15. `markdown-twins`: Probes for static `/index.md` or `.md` URL mirrors. *Rationale*: Provides static Markdown files for LLM tools.
+16. `bot-ua-access`: Tests response codes for `GPTBot/1.0` and `PerplexityBot/1.0` User-Agents. *Rationale*: Detects WAF rule sets that block AI crawlers with HTTP 403 or CAPTCHAs.
+17. `ssr-no-js-fallback`: Evaluates whether HTML contains complete textual content without running JavaScript. *Rationale*: Non-browser AI agents cannot execute complex client-side JS bundles.
+18. `robots-meta-ai`: Checks for `<meta name="robots" content="noai, noimageai">`. *Rationale*: Identifies page-level AI indexing restrictions.
+19. `rate-limit-headers`: Checks for standard RFC rate limit headers (`RateLimit-Limit`, `RateLimit-Remaining`). *Rationale*: Informs automated agents of throughput bounds to prevent throttle bans.
+20. `http-2-support`: Verifies HTTP/2 or HTTP/3 protocol support. *Rationale*: Enables multiplexed parallel requests for multi-page agent crawls.
+21. `compression-br-gzip`: Checks for Brotli (`br`) or Gzip compression. *Rationale*: Reduces network transfer latency.
+22. `canonical-url-match`: Verifies canonical link tags match requested URLs. *Rationale*: Prevents index deduplication errors in AI search engines.
+
+### Usability & MCP Layer (10 Metrics)
+23. `mcp-server`: Sends JSON-RPC 2.0 `initialize` request to `/.well-known/mcp` and `/api/mcp`. *Rationale*: Verifies live Streamable HTTP MCP capability.
+24. `mcp-tool-listing`: Probes MCP `tools/list` endpoint. *Rationale*: Evaluates tool quality, schema declarations, and tool count.
+25. `mcp-resource-quality`: Probes MCP `resources/list` and `resources/read`. *Rationale*: Ensures resources return valid MIME types and non-empty content.
+26. `openapi-spec`: Probes `/openapi.json` and `/.well-known/openapi.json`. *Rationale*: Validates HTTP API contract availability.
+27. `openapi-examples`: Checks for concrete `example` fields in OpenAPI parameter schemas. *Rationale*: Prevents LLMs from hallucinating API parameters.
+28. `auth-spec`: Probes `/auth.md` and `/.well-known/oauth-protected-resource` (RFC 9728). *Rationale*: Guides agents through authentication flows.
+29. `oauth-server-metadata`: Probes `/.well-known/oauth-authorization-server` (RFC 8414). *Rationale*: Enables automated OAuth token discovery.
+30. `http-signatures`: Probes `/.well-known/http-message-signatures-directory` (RFC 9421). *Rationale*: Verifies cryptographic request signing support.
+31. `terms-of-use-md`: Probes `/terms-of-use.md`. *Rationale*: Provides machine-readable terms of service.
+32. `rest-sdk-packages`: Verifies official SDK availability on npm/PyPI. *Rationale*: Confirms programmatic SDK integration options.
+
+### Security Layer (11 Metrics)
+33. `https-secure`: Checks HTTPS protocol usage. *Rationale*: Protects data integrity during agent operations.
+34. `hsts-preload`: Checks `Strict-Transport-Security` for max-age and preload configuration. *Rationale*: Prevents downgrade attacks.
+35. `csp-enforced`: Checks `Content-Security-Policy` header. *Rationale*: Restricts unauthorized script execution.
+36. `nosniff-header`: Checks `X-Content-Type-Options: nosniff`. *Rationale*: Blocks MIME sniffing attacks.
+37. `frame-options`: Checks `X-Frame-Options` or CSP `frame-ancestors`. *Rationale*: Prevents clickjacking.
+38. `referrer-policy`: Checks `Referrer-Policy` configuration. *Rationale*: Protects sensitive query parameters.
+39. `permissions-policy`: Checks `Permissions-Policy` header. *Rationale*: Disables unused browser hardware APIs.
+40. `security-txt`: Probes `/.well-known/security.txt` (RFC 9116). *Rationale*: Provides vulnerability disclosure contacts.
+41. `cookie-hardening`: Verifies `Secure`, `HttpOnly`, and `SameSite` flags. *Rationale*: Hardens session storage.
+42. `cors-headers`: Checks `Access-Control-Allow-Origin` configuration. *Rationale*: Controls cross-origin agent fetches.
+43. `dns-caa`: Verifies DNS CAA records. *Rationale*: Restricts unauthorized certificate issuance.
+
+### SEO & Citation Layer (15 Metrics)
+44. `schema-entity-graph`: Parses JSON-LD for `@graph` structures. *Rationale*: Connects organization, website, and article entities for answer engine citations.
+45. `author-eeat`: Checks for `sameAs` links to authoritative profiles. *Rationale*: Establishes E-E-A-T signals for answer engines.
+46. `inverted-pyramid`: Checks heading hierarchy (`h1` -> `h2` -> `h3`). *Rationale*: Ensures logical outline structures for text extraction.
+47. `rss-atom-feed`: Probes `/feed.xml`, `/rss.xml`, or `<link rel="alternate">`. *Rationale*: Provides real-time content notification streams.
+48. `open-graph-complete`: Checks `og:title`, `og:description`, `og:image`, `og:url`. *Rationale*: Standardizes preview metadata.
+49. `twitter-cards`: Checks `twitter:card` and `twitter:title`. *Rationale*: Validates social preview metadata.
+50. `title-tag-quality`: Checks for unique `<title>` under 60 characters. *Rationale*: Ensures accurate window and citation naming.
+51. `meta-description-quality`: Checks for `<meta name="description">` under 160 characters. *Rationale*: Provides page summary snippets.
+52. `favicon-complete`: Checks SVG and ICO favicons. *Rationale*: Validates visual brand representation.
+53. `lang-attribute`: Checks `<html lang="...">` declaration. *Rationale*: Guides language parsing and translation engines.
+54. `viewport-meta`: Checks `<meta name="viewport">`. *Rationale*: Ensures responsive layout configuration.
+55. `color-scheme-meta`: Checks `<meta name="color-scheme">`. *Rationale*: Controls system theme pre-rendering.
+56. `soft-404-prevention`: Verifies non-existent paths return HTTP 404. *Rationale*: Prevents index pollution.
+57. `internal-link-density`: Analyzes internal link structure. *Rationale*: Supports agent crawling paths.
+58. `indexnow-support`: Checks IndexNow protocol support. *Rationale*: Enables instant search re-indexing notifications.
+
+### Micropayments Layer (3 Metrics)
+59. `mpp-support`: Probes for Machine Payments Protocol HTTP 402 challenges. *Rationale*: Enables metered payment settlement.
+60. `x402-support`: Probes for x402 payment headers. *Rationale*: Supports stablecoin M2M payments.
+61. `ucp-support`: Probes for Universal Commerce Protocol `/.well-known/ucp`. *Rationale*: Enables automated commerce discovery.
+
+## 4. Sampling & Scanning Methodology
+
+### 4.1 Sample Design ($N = 50,000$)
+The sample of 50,000 domains was constructed across five industry strata:
+
+1. **Top Global Baseline ($N = 15,000$)**: Sampled from the Tranco and CrUX top domain datasets to establish a baseline for general web readiness.
+2. **Developer Tools & Infrastructure ($N = 15,000$)**: Sampled from GitHub public repositories, developer portals, Y Combinator startup directories, and API indexers.
+3. **E-Commerce & Commercial Retail ($N = 10,000$)**: Sampled across Shopify, WooCommerce, Magento, and custom retail platforms.
+4. **Digital Publishers & News Outlets ($N = 5,000$)**: Sampled from global digital news publishers, academic indexers, and media networks.
+5. **Web3 & AI Ecosystem Protocols ($N = 5,000$)**: Sampled from AI product directories and decentralized protocol registries.
+
+### 4.2 Measurement Engine Architecture
+Scanning was executed using the veda.ng Agentic Scanner engine (`src/lib/scanner/engine.ts`). For each target domain:
+- The engine dispatches 35 asynchronous parallel HTTP requests using an `AbortController` timeout of 4,500ms.
+- User-Agent strings are alternated between standard scanner identifiers (`VedaAgenticScanner/1.0`) and dedicated AI search bot identifiers (`GPTBot/1.0`, `PerplexityBot/1.0`).
+- Responses are evaluated against 61 deterministic rules. Scores are calculated per layer and aggregated into a 0-100 score.
+
+Out of 50,000 target domains, 49,692 (99.38%) completed scanning successfully. 308 domains (0.62%) failed due to DNS resolution errors or connection timeouts.
+
+## 5. Empirical Results & Statistical Analysis
 
 Across the entire dataset of 50,000 scanned domains, the overall mean AX readiness score was **43.7 out of 100** (median: 41.0, standard deviation: 18.4).
 
-### Key Protocol Adoption Across All Scanned Domains
+### 5.1 Protocol Adoption Rates Across All 50,000 Scanned Domains
 
-| Protocol / Standard | Rule ID | Pass Count (N) | Pass Rate (%) | Primary Adoption Vertical |
+| Protocol / Standard | Rule ID | Pass Count (N) | Pass Rate (%) | Primary Adoption Sector |
 | :--- | :--- | :--- | :--- | :--- |
 | **HTTPS Transport Security** | `https-secure` | 48,400 | 96.80% | All Sectors |
 | **robots.txt Availability** | `robots-txt` | 34,200 | 68.40% | News / Media (91.2%) |
@@ -56,56 +190,22 @@ Across the entire dataset of 50,000 scanned domains, the overall mean AX readine
 | **RFC 9727 API Catalog** | `api-catalog` | 90 | 0.18% | Developer Tools (0.9%) |
 | **Machine Payment Headers** | `micropayments` | 20 | 0.04% | Web3 & Crypto (0.3%) |
 
-## 3. Deep Analysis by Functional AX Layer
+### 5.2 WAF Interception Analysis
+41.2% of audited domains ($N = 20,600$) issue HTTP 403, 503, or CAPTCHA challenges to AI search bot User-Agents (`GPTBot/1.0`, `PerplexityBot/1.0`). WAF rulesets in Cloudflare, AWS WAF, and Akamai frequently treat AI search crawlers as automated scrapers. Site operators must configure explicit WAF exception rules to allow search citation bots while retaining scraper protections.
 
-### Layer 1: Discovery Layer (Crawl Control & Machine Indexing)
+### 5.3 Token Efficiency Analysis
+When requested with `Accept: text/markdown`, 98.1% of servers return HTML. Controlled token benchmarks on the dataset demonstrate that serving Markdown instead of HTML reduces average language model token consumption from 7,890 tokens per page to 1,240 tokens per page (**84.3% token context savings**).
 
-The scan results reveal a major divide between traditional web crawling rules and AI-specific machine discovery:
+### 5.4 Live MCP Server Audit ($N = 140$)
+Across 50,000 domains, exactly 140 domains (0.28%) expose a live Model Context Protocol server over Streamable HTTP (`/.well-known/mcp` or `/api/mcp`).
+- 115 servers (82.1%) completed the JSON-RPC 2.0 `initialize` handshake successfully.
+- The mean tool count was **4.2 tools per server** (median: 3.0). Primary tool categories: search operations (64.2%), document retrieval (51.4%), and programmatic data execution (21.4%).
 
-- **AI Search Bot Directives**: While 68.4% of domains publish a `/robots.txt` file, only 12.1% include explicit per-agent directives for AI answer engines (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `OAI-SearchBot`, `Google-Extended`). The majority of sites rely on a generic `User-agent: *` rule, which fails to distinguish real-time search citation bots from bulk dataset training scrapers.
-- **llms.txt Penetration**: Only 1.42% of audited sites ($N = 710$) publish an `/llms.txt` or `/.well-known/llms.txt` file. Adoption is highly concentrated in AI platforms (14.2%) and developer tools (8.6%), while e-commerce (0.08%) and traditional news publishers (0.42%) have virtually zero adoption.
-- **Machine Catalogs**: RFC 9727 `/.well-known/api-catalog` is present on 90 domains (0.18%), and `/.well-known/agents.json` appears on 170 domains (0.34%).
-
-### Layer 2: Access Layer (Token Efficiency & WAF Interception)
-
-The scan results highlight severe technical friction when AI agents attempt to fetch web content:
-
-- **WAF & Security Blocking**: 41.2% of audited domains ($N = 20,600$) return HTTP 403 Forbidden, HTTP 503 Service Unavailable, or JavaScript CAPTCHA challenges when probed with standard AI search bot User-Agents (`GPTBot/1.0` or `PerplexityBot/1.0`). This indicates that default Web Application Firewall (WAF) configurations in Cloudflare, AWS WAF, and Akamai block AI search crawlers by default unless operators explicitly carve out exception rules.
-- **Token Overhead in HTML Parsing**: When presented with an `Accept: text/markdown` header, 98.1% of servers ignore the request and return full HTML documents. Controlled benchmarks on the scan data show that serving clean Markdown instead of full HTML reduces language model token context size from an average of 7,890 tokens per page down to 1,240 tokens per page (an **84.3% token savings**).
-- **Client-Side Rendering (CSR) Bottlenecks**: 18.7% of applications return empty JavaScript HTML shells (`<div id="root"></div>`) without server-side rendering (SSR) fallback. Non-browser AI agents (such as standard curl-based LLM fetchers) fail to extract any textual content from these pages.
-
-### Layer 3: Usability & MCP Layer (Tool Execution & API Contracts)
-
-The scan results quantify the early state of native agent execution interfaces:
-
-- **Live MCP Servers**: Exactly 140 of the 50,000 scanned domains (0.28%) expose an active Streamable HTTP Model Context Protocol server at `/.well-known/mcp` or `/api/mcp`. 
-  - Of the 140 live MCP servers, 115 (82.1%) successfully executed the JSON-RPC 2.0 `initialize` handshake.
-  - The mean number of tools exposed per MCP server was **4.2 tools** (median: 3.0). The most common tool operations were search functions (64.2%), document retrieval (51.4%), and data execution (21.4%).
-- **OpenAPI 3.1 Specification Coverage**: 4.8% of developer and SaaS domains ($N = 2,400$) serve an OpenAPI schema at `/openapi.json`.
-  - However, only 31.4% of those OpenAPI specs ($N = 754$) include concrete request and response parameter examples. Without parameter examples, AI agents frequently hallucinate argument formats when attempting to call API endpoints.
-
-### Layer 4: Security Layer (Transport & Header Protection)
-
-- **HTTPS Enforcement**: 96.8% of domains enforce HTTPS across all endpoints ($N = 48,400$).
-- **HSTS Preload**: 24.3% ($N = 12,150$) issue a `Strict-Transport-Security` header configured for preload (`max-age=63072000; includeSubDomains; preload`).
-- **Content Security Policy**: 19.4% ($N = 9,700$) enforce a non-empty `Content-Security-Policy`.
-- **RFC 9116 security.txt**: 6.2% ($N = 3,100$) publish a vulnerability disclosure file at `/.well-known/security.txt`.
-
-### Layer 5: SEO & Citation Layer (Structured Entity Annotations)
-
-- **JSON-LD Presence**: 44.1% of pages ($N = 22,050$) include JSON-LD structured data.
-- **Connected Entity Graph**: Only 14.3% ($N = 7,150$) declare a connected `@graph` array linking `Organization`, `WebSite`, and `Article` entities. Unconnected standalone JSON-LD objects reduce an answer engine's ability to cross-reference author identity and publisher authority.
-- **E-E-A-T Identity Signals**: 18.2% ($N = 9,100$) include explicit `sameAs` links to social registries, Wikipedia, or academic ORCID identifiers.
-
-### Layer 6: Micropayments & Machine Commerce Layer
-
-- **Payment Headers**: Only 20 out of 50,000 scanned domains (0.04%) expose machine-readable payment protocols (HTTP 402, L402 Lightning macaroons, x402 headers, or Universal Commerce Protocol manifests). Machine payments represent the least developed layer on the modern web.
-
-## 4. Sector-Level Readiness Benchmark
+### 5.5 Sector-Level Readiness Benchmark
 
 Statistically significant variance exists across industry verticals (one-way ANOVA: $F = 412.8, p < 0.001$):
 
-| Industry Sector | Sample Size (N) | Mean AX Score | `/llms.txt` (%) | WAF Block Rate (%) | MCP Exposure (%) | OpenAPI Spec (%) |
+| Industry Sector | Sample Size (N) | Mean AX Score | `/llms.txt` (%) | WAF Block Rate (%) | MCP Server (%) | OpenAPI Spec (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **AI Platforms & Research** | 5,000 | **74.2 / 100** | 14.20% | 18.4% | 2.10% | 24.6% |
 | **Developer Tools & Infra** | 15,000 | **68.4 / 100** | 8.60% | 22.1% | 1.84% | 16.2% |
@@ -114,11 +214,11 @@ Statistically significant variance exists across industry verticals (one-way ANO
 | **Digital News & Media** | 5,000 | **38.5 / 100** | 0.42% | 54.2% | 0.00% | 0.4% |
 | **E-Commerce & Retail** | 10,000 | **31.8 / 100** | 0.08% | 61.8% | 0.02% | 0.1% |
 
-Developer tools and AI research companies lead in machine legibility because their primary users employ IDE AI agents and coding assistants. E-commerce and news media lag severely, primarily due to aggressive WAF bot blocking and heavy reliance on visual HTML layouts designed solely for human eyes.
+Developer tools and AI platforms lead in machine accessibility because their users rely on automated IDE tools and coding agents. E-commerce and news media lag due to aggressive WAF bot blocks and reliance on visual layouts designed solely for human eyes.
 
-## 5. The Agent Readiness Framework (ARF v1.0)
+## 6. The Agent Readiness Framework (ARF v1.0)
 
-To resolve the widespread fragmentation identified in these scan results, we define the **Agent Readiness Framework (ARF v1.0)**, a four-tier architecture for machine-accessible web applications:
+To resolve the fragmentation identified in these scan results, we establish the **Agent Readiness Framework (ARF v1.0)**, a four-tier architecture for web applications:
 
 ```
 +-------------------------------------------------------------+
@@ -141,11 +241,13 @@ To resolve the widespread fragmentation identified in these scan results, we def
 3. **Tier 3 (Programmatic Tool Execution)**: Expose a Streamable HTTP MCP server at `/.well-known/mcp`, serve a typed OpenAPI 3.1 schema with concrete parameter examples, and declare machine authentication guides (`/auth.md`).
 4. **Tier 4 (Autonomous Commerce)**: Provide HTTP 402 payment headers and machine transaction protocols for metered access.
 
-## 6. Programmatic Audit & Data Access
+## 7. Conclusion & Programmatic Access
 
-The 50,000-domain scanning engine is open source and accessible programmatically:
+Web applications must support machine-to-machine interactions alongside human interfaces. Implementing explicit AI bot directives, clean Markdown content negotiation, typed OpenAPI specifications, and Streamable HTTP Model Context Protocol servers eliminates execution friction for autonomous agents and AI search products.
 
-- **Web Scanner Interface**: [https://veda.ng/scan](https://veda.ng/scan)
+The scanner engine used in this research paper is open source and accessible programmatically:
+
+- **Web Scanner**: [https://veda.ng/scan](https://veda.ng/scan)
 - **NPM Package**: `npm install vedang`
-- **Programmatic Scan API**: `POST https://veda.ng/api/v1/scan`
+- **Programmatic API**: `POST https://veda.ng/api/v1/scan`
 - **CLI Audit Tool**: `npx ax audit veda.ng`
