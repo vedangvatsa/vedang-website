@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T09:30:45.066Z",
+  "generatedAt": "2026-09-03T12:16:36.677Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -654,6 +654,8 @@
   ],
   "markdownPaths": [
     "/",
+    "/.well-known/mcp",
+    "/.well-known/mcp/docs",
     "/about",
     "/agentcommerce",
     "/agenteconomy",

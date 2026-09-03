@@ -107,3 +107,4 @@ scripts/tiktok-demo/
 scripts/.*token.json
 scripts/.x-oauth2-*.json
 scripts/.tiktok-token.json
+.npmrc

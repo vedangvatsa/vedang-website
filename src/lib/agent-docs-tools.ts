@@ -15,7 +15,7 @@ function errorText(message: string): ToolOutput {
 export const MCP_DOCS_TOOLS: McpToolDefinition[] = [
   {
     name: 'get_api_documentation',
-    description: 'Fetch complete developer documentation and available endpoints on veda.ng.',
+    description: 'Fetch complete developer documentation, OpenAPI 3.1 specification, and API endpoints on veda.ng.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -25,26 +25,8 @@ export const MCP_DOCS_TOOLS: McpToolDefinition[] = [
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
   {
-    name: 'get_openapi_specification',
-    description: 'Fetch the OpenAPI 3.1 specification for veda.ng public APIs.',
-    inputSchema: {
-      type: 'object',
-      properties: {},
-    },
-    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
-  },
-  {
-    name: 'get_auth_guide',
-    description: 'Fetch keyless access and security guidelines for veda.ng APIs.',
-    inputSchema: {
-      type: 'object',
-      properties: {},
-    },
-    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
-  },
-  {
     name: 'search_documentation',
-    description: 'Search documentation, guide pages, and courses on veda.ng by keyword.',
+    description: 'Search documentation, guide pages, courses, and glossaries on veda.ng by keyword.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -56,7 +38,7 @@ export const MCP_DOCS_TOOLS: McpToolDefinition[] = [
   },
   {
     name: 'get_course_curriculum',
-    description: 'Fetch full curriculum modules for any course: prompt, web3, vibecoding, mcp, or agentic.',
+    description: 'Fetch full curriculum modules for any course: prompt, web3, vibecoding, mcp, agentic, or automation.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -71,26 +53,14 @@ export const MCP_DOCS_TOOLS: McpToolDefinition[] = [
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
   {
-    name: 'get_glossary_term',
-    description: 'Fetch the full Markdown definition of one glossary term by slug, e.g. "mcp".',
+    name: 'get_doc_page',
+    description: 'Fetch the full Markdown content for any documentation page, essay, glossary term, or guide by path or slug.',
     inputSchema: {
       type: 'object',
       properties: {
-        slug: { type: 'string', description: 'Glossary term slug.' },
+        path: { type: 'string', description: 'Path or slug to fetch (e.g. "/developers", "auth.md", "pricing", or "zk-rollup").' },
       },
-      required: ['slug'],
-    },
-    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
-  },
-  {
-    name: 'get_essay',
-    description: 'Fetch the full Markdown text of one essay by its URL slug.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        slug: { type: 'string', description: 'Essay slug.' },
-      },
-      required: ['slug'],
+      required: ['path'],
     },
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
@@ -160,6 +130,15 @@ export function getEssay(args: Record<string, unknown>): ToolOutput {
   return text(markdown);
 }
 
+export function getDocPage(args: Record<string, unknown>): ToolOutput {
+  const targetPath = typeof args.path === 'string' ? args.path.trim() : '';
+  if (!targetPath) return errorText('path is required.');
+  const normalized = targetPath.startsWith('/') ? targetPath : `/${targetPath}`;
+  const markdown = getMarkdownForPath(normalized) || getMarkdownForPath(targetPath);
+  if (markdown === null) return errorText(`No documentation page found for "${targetPath}".`);
+  return text(markdown);
+}
+
 export const DOCS_TOOL_HANDLERS: Record<string, (args: Record<string, unknown>) => Promise<ToolOutput> | ToolOutput> = {
   get_api_documentation: getApiDocumentation,
   get_openapi_specification: getOpenapiSpecification,
@@ -168,4 +147,5 @@ export const DOCS_TOOL_HANDLERS: Record<string, (args: Record<string, unknown>) 
   get_course_curriculum: getCourseCurriculum,
   get_glossary_term: getGlossaryTerm,
   get_essay: getEssay,
+  get_doc_page: getDocPage,
 };

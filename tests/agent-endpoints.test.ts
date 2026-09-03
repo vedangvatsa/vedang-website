@@ -90,6 +90,15 @@ describe('Agent & Machine Endpoints', () => {
     assert.equal(wantsMarkdown(null, 'Mozilla/5.0 (compatible; ClaudeBot/1.0; +claudebot@anthropic.com)'), true);
     assert.equal(wantsMarkdown(null, 'Mozilla/5.0 (compatible; GPTBot/1.0; +https://openai.com/gptbot)'), true);
     assert.equal(wantsMarkdown('text/markdown'), true);
+
+    const { getMarkdownForPath } = await import('../src/lib/agent-md');
+    const mcpDocsMd = getMarkdownForPath('/.well-known/mcp/docs');
+    assert.ok(mcpDocsMd);
+    assert.ok(mcpDocsMd.includes('# Vedang Vatsa Documentation MCP Server'));
+
+    const mcpProdMd = getMarkdownForPath('/.well-known/mcp');
+    assert.ok(mcpProdMd);
+    assert.ok(mcpProdMd.includes('# Vedang Vatsa Product MCP Server'));
   });
 });
 

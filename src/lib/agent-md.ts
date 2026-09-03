@@ -501,6 +501,34 @@ function getMarkdownBodyForPath(pathname: string): string | null {
         '',
         'Full reference guide to biomarker tracking, longevity science, and routines with transcript data.',
       ].join('\n');
+    case '/.well-known/mcp':
+      return [
+        '# Vedang Vatsa Product MCP Server (veda.ng)',
+        '',
+        frontmatterFor('Product MCP Server', '/.well-known/mcp').trimEnd(),
+        '',
+        'Official Product MCP Server exposing live tools for searching academic papers, essays, glossaries, and running agent-readiness scans.',
+        '',
+        '## Handshake & Configuration',
+        '- **Endpoint**: `https://veda.ng/.well-known/mcp`',
+        '- **Protocol**: Model Context Protocol (JSON-RPC 2.0 via Streamable HTTP)',
+        '- **Authentication**: Keyless / Open Access',
+        '- **OpenAPI Spec**: https://veda.ng/openapi.json',
+      ].join('\n');
+    case '/.well-known/mcp/docs':
+      return [
+        '# Vedang Vatsa Documentation MCP Server (veda.ng)',
+        '',
+        frontmatterFor('Documentation MCP Server', '/.well-known/mcp/docs').trimEnd(),
+        '',
+        'Official Documentation MCP Server exposing documentation, course curricula, and reference materials.',
+        '',
+        '## Handshake & Configuration',
+        '- **Endpoint**: `https://veda.ng/.well-known/mcp/docs`',
+        '- **Protocol**: Model Context Protocol (JSON-RPC 2.0 via Streamable HTTP)',
+        '- **Developer Documentation**: https://veda.ng/developers',
+        '- **Authentication**: Keyless / Open Access',
+      ].join('\n');
     default:
       break;
   }

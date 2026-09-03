@@ -72,6 +72,8 @@ const MARKDOWN_STATIC_PAGES = [
   '/ailib',
   '/web3lib',
   '/job-boards',
+  '/.well-known/mcp',
+  '/.well-known/mcp/docs',
 ];
 
 const AGENT_INFRA_PATHS = ['/md', '/.well-known/mcp', '/.well-known/mcp/docs'];
