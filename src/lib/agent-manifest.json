@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T12:16:36.677Z",
+  "generatedAt": "2026-09-03T13:26:16.284Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -540,6 +540,7 @@
     "/sitecheck",
     "/socialscience",
     "/speaking",
+    "/state-of-agentic-web-2026",
     "/state-of-ai",
     "/state-of-web3",
     "/stateagents",
@@ -1061,6 +1062,7 @@
     "/singularity",
     "/sitecheck",
     "/socialscience",
+    "/state-of-agentic-web-2026",
     "/stateagents",
     "/stateofai",
     "/stateofweb3",
