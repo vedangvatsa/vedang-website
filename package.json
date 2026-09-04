@@ -38,6 +38,7 @@
     "x:thread": "npx tsx scripts/x-post-thread.ts",
     "indexnow": "bash scripts/submit-indexnow.sh",
     "indexnow:ts": "npx tsx scripts/submit-indexnow.ts",
+    "build:leaderboard": "npx tsx scripts/build-leaderboard.ts",
     "backlink:matrix": "npx tsx scripts/backlink-tool.ts",
     "backlink:ping": "npx tsx scripts/mass-1000-backlink-indexer.ts"
   },
