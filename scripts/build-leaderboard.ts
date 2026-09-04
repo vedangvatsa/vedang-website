@@ -48,7 +48,7 @@ const HEADLINE_CHECKS = [
   "json-ld", "agent-payments",
 ];
 
-function main() {
+async function main() {
   const gentle = path.join(DATA, "results-gentle.jsonl");
   const files = fs.existsSync(gentle)
     ? [gentle]
@@ -122,6 +122,44 @@ function main() {
     console.log(`${f}: ${kb} KB`);
   }
   console.log(`domains=${byDomain.size} scored=${scored.length} errors=${errors} mean=${summary.meanScore}`);
+
+  // Self-hosted favicons for the top 500 (no external tracker at page-view time)
+  const favDir = path.join(OUT, "favicons");
+  fs.mkdirSync(favDir, { recursive: true });
+  async function fetchIcon(domain: string): Promise<boolean> {
+    const dest = path.join(favDir, `${domain}.ico`);
+    if (fs.existsSync(dest)) return true;
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 8000);
+    try {
+      const res = await fetch(`https://${domain}/favicon.ico`, {
+        signal: ctrl.signal,
+        headers: { "User-Agent": "VedaLeaderboardBuilder/1.0 (+https://veda.ng/scan)" },
+        redirect: "follow",
+      });
+      const ct = res.headers.get("content-type") ?? "";
+      if (!res.ok || !(ct.includes("image") || ct.includes("icon"))) return false;
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (buf.length < 50 || buf.length > 200000) return false;
+      fs.writeFileSync(dest, buf);
+      return true;
+    } catch {
+      return false;
+    } finally {
+      clearTimeout(t);
+    }
+  }
+  const queue = top500.map((e) => e.domain);
+  let fetched = 0;
+  await Promise.all(
+    Array.from({ length: 20 }, async () => {
+      while (queue.length) {
+        const d = queue.pop() as string;
+        if (await fetchIcon(d)) fetched++;
+      }
+    })
+  );
+  console.log(`favicons: ${fetched}/${top500.length}`);
 }
 
 main();

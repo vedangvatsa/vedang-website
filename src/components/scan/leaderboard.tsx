@@ -32,6 +32,28 @@ function gradeClass(grade: string): string {
   return 'text-red-500';
 }
 
+function DomainIcon({ domain }: { domain: string }) {
+  const [failed, setFailed] = useState(false);
+  if (failed) {
+    return (
+      <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-muted text-[10px] font-semibold text-muted-foreground shrink-0">
+        {domain.charAt(0).toUpperCase()}
+      </span>
+    );
+  }
+  return (
+    <img
+      src={`/data/leaderboard/favicons/${domain}.ico`}
+      alt=""
+      width={16}
+      height={16}
+      loading="lazy"
+      onError={() => setFailed(true)}
+      className="w-4 h-4 rounded-sm shrink-0"
+    />
+  );
+}
+
 export function LeaderboardSection() {
   const ref = useRef<HTMLDivElement>(null);
   const [summary, setSummary] = useState<Summary | null>(null);
@@ -168,7 +190,8 @@ export function LeaderboardSection() {
                 <tr key={e.domain} className="border-b border-border/50 last:border-0 hover:bg-muted/20">
                   <td className="px-3 py-1.5 tabular-nums text-muted-foreground">{e.rank}</td>
                   <td className="px-3 py-1.5 font-medium truncate max-w-45">
-                    <a href={`/scan?url=${encodeURIComponent(e.domain)}`} className="hover:text-primary hover:underline" title="Run a fresh scan">
+                    <a href={`/scan?url=${encodeURIComponent(e.domain)}`} className="hover:text-primary hover:underline inline-flex items-center gap-1.5" title="Run a fresh scan">
+                      <DomainIcon domain={e.domain} />
                       {e.domain}
                     </a>
                   </td>
@@ -212,7 +235,8 @@ export function LeaderboardSection() {
                 {results.map(([d, s, g, , dt]) => (
                   <tr key={d} className="border-b border-border/50 last:border-0 hover:bg-muted/20">
                     <td className="px-3 py-1.5 font-medium truncate max-w-45">
-                      <a href={`/scan?url=${encodeURIComponent(d)}`} className="hover:text-primary hover:underline" title="Run a fresh scan">
+                      <a href={`/scan?url=${encodeURIComponent(d)}`} className="hover:text-primary hover:underline inline-flex items-center gap-1.5" title="Run a fresh scan">
+                        <DomainIcon domain={d} />
                         {d}
                       </a>
                     </td>

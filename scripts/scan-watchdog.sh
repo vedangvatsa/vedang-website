@@ -15,8 +15,8 @@ run_one() {
   fi
 }
 while true; do
-  for k in 0 1 2 3 4; do
-    run_one "$D/r2bshard$k.txt" "$D/results-r2b-shard$k.jsonl" "/tmp/scan-r2b-s$k.log"
+  for k in 0 1 2 3; do
+    run_one "$D/r3shard$k.txt" "$D/results-r3-shard$k.jsonl" "/tmp/scan-r3-s$k.log"
   done
   sleep 45
 done
