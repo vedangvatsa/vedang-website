@@ -167,7 +167,7 @@ export function LeaderboardSection() {
           <table className="w-full text-xs">
             <thead>
               <tr className="text-left text-muted-foreground border-b border-border">
-                <th className="px-2 sm:px-3 py-2 font-medium w-8 sm:w-12">#</th>
+                <th className="px-2 sm:px-3 py-2 font-medium w-8 sm:w-12 hidden min-[420px]:table-cell">#</th>
                 <th className="px-2 sm:px-3 py-2 font-medium">Domain</th>
                 <th className="px-2 sm:px-3 py-2 font-medium w-16 sm:w-20 text-right">Score</th>
                 <th className="px-2 sm:px-3 py-2 font-medium w-12 sm:w-16 text-right">Grade</th>
@@ -177,8 +177,8 @@ export function LeaderboardSection() {
             <tbody>
               {visible.map((e) => (
                 <tr key={e.domain} className="border-b border-border/50 last:border-0 hover:bg-muted/20">
-                  <td className="px-2 sm:px-3 py-1.5 tabular-nums text-muted-foreground">{e.rank}</td>
-                  <td className="px-2 sm:px-3 py-1.5 font-medium truncate max-w-45">
+                  <td className="px-2 sm:px-3 py-1.5 tabular-nums text-muted-foreground hidden min-[420px]:table-cell">{e.rank}</td>
+                  <td className="px-2 sm:px-3 py-1.5 font-medium truncate max-w-28 min-[420px]:max-w-45">
                     <a href={`/scan?url=${encodeURIComponent(e.domain)}`} className="hover:text-primary hover:underline inline-flex items-center gap-1.5" title="Run a fresh scan">
                       <DomainIcon domain={e.domain} />
                       {e.domain}
@@ -223,7 +223,7 @@ export function LeaderboardSection() {
               <tbody>
                 {results.map(([d, s, g, , dt]) => (
                   <tr key={d} className="border-b border-border/50 last:border-0 hover:bg-muted/20">
-                    <td className="px-2 sm:px-3 py-1.5 font-medium truncate max-w-45">
+                    <td className="px-2 sm:px-3 py-1.5 font-medium truncate max-w-28 min-[420px]:max-w-45">
                       <a href={`/scan?url=${encodeURIComponent(d)}`} className="hover:text-primary hover:underline inline-flex items-center gap-1.5" title="Run a fresh scan">
                         <DomainIcon domain={d} />
                         {d}
