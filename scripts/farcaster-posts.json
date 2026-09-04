@@ -1418,9 +1418,11 @@
     "id": "ig-send-to-chatgpt",
     "scheduleDate": "2026-09-04",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The moment you realize you argued with a human for hours when ChatGPT would agree with you instantly.\n\nWe train ourselves to prefer AI conversations over human ones.\n\nThat should concern all of us.",
-    "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4",
+    "postedAt": "2026-09-04T08:26:34.039Z",
+    "castHash": "0x39edeb341b51b2a6c2cc9b526b52e6acf68d18d5"
   },
   {
     "id": "ig-knowledge-worth-zero",
