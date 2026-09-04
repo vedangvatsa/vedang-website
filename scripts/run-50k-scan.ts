@@ -19,6 +19,7 @@ const IN = arg("in", "/Users/vedang/ZCodeProject/research-paper-framework/papers
 const OUT = arg("out", "/Users/vedang/ZCodeProject/research-paper-framework/papers/agentic-web-readiness/data/results.jsonl");
 const LIMIT = parseInt(arg("limit", "0"), 10);
 const CONCURRENCY = parseInt(arg("concurrency", "15"), 10);
+const DELAY_MS = parseInt(arg("delay-ms", "0"), 10);
 
 async function main() {
   const all = fs.readFileSync(IN, "utf8").split("\n").map((s) => s.trim()).filter(Boolean);
@@ -37,9 +38,11 @@ async function main() {
   const t0 = Date.now();
   let idx = 0;
 
-  async function worker() {
+  async function worker(id: number) {
+    if (DELAY_MS > 0) await new Promise((r) => setTimeout(r, id * DELAY_MS));
     while (idx < queue.length) {
       const domain = queue[idx++];
+      if (DELAY_MS > 0) await new Promise((r) => setTimeout(r, DELAY_MS));
       try {
         const r = await scanDomain(domain);
         const checks: Record<string, string> = {};
@@ -64,7 +67,7 @@ async function main() {
     }
   }
 
-  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, queue.length) }, worker));
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, queue.length) }, (_, i) => worker(i)));
   out.close();
   console.log(`finished ok=${ok} fail=${fail} total=${domains.length} out=${OUT}`);
 }
