@@ -1,48 +1,48 @@
 {
-  "snapshotStart": "2026-09-03T15:53:05.992Z",
-  "snapshotEnd": "2026-09-04T03:15:13.184Z",
+  "snapshotStart": "2026-09-03T15:53:07.404Z",
+  "snapshotEnd": "2026-09-04T10:39:29.683Z",
   "domainsAttempted": 50000,
   "domainsScored": 50000,
   "errors": 0,
-  "meanScore": 22.7,
-  "medianScore": 16,
+  "meanScore": 25.7,
+  "medianScore": 22,
   "grades": {
     "A": 4,
-    "B": 419,
-    "C": 3189,
-    "D": 8205,
-    "F": 38183
+    "B": 496,
+    "C": 3616,
+    "D": 9740,
+    "F": 36144
   },
   "adoption": {
     "robots-ai-policy": {
-      "pass": 18496,
+      "pass": 21881,
       "n": 50000,
-      "share": 0.3699
+      "share": 0.4376
     },
     "llms-txt": {
-      "pass": 2848,
+      "pass": 3310,
       "n": 50000,
-      "share": 0.057
+      "share": 0.0662
     },
     "markdown-negotiation": {
-      "pass": 1303,
+      "pass": 1474,
       "n": 50000,
-      "share": 0.0261
+      "share": 0.0295
     },
     "bot-ua-access": {
-      "pass": 15910,
+      "pass": 18912,
       "n": 50000,
-      "share": 0.3182
+      "share": 0.3782
     },
     "mcp-server-live": {
-      "pass": 826,
+      "pass": 910,
       "n": 50000,
-      "share": 0.0165
+      "share": 0.0182
     },
     "openapi-spec": {
-      "pass": 66,
+      "pass": 78,
       "n": 50000,
-      "share": 0.0013
+      "share": 0.0016
     },
     "https-tls": {
       "pass": 50000,
@@ -50,19 +50,19 @@
       "share": 1
     },
     "security-txt": {
-      "pass": 1923,
+      "pass": 2288,
       "n": 50000,
-      "share": 0.0385
+      "share": 0.0458
     },
     "json-ld": {
-      "pass": 9006,
+      "pass": 10687,
       "n": 50000,
-      "share": 0.1801
+      "share": 0.2137
     },
     "agent-payments": {
-      "pass": 139,
+      "pass": 163,
       "n": 50000,
-      "share": 0.0028
+      "share": 0.0033
     }
   },
   "vantage": "single network vantage point; homepage + well-known paths; 4,500ms probe timeout"
