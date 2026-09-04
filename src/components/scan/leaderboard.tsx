@@ -66,23 +66,12 @@ export function LeaderboardSection() {
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (!entries[0].isIntersecting) return;
-        io.disconnect();
-        Promise.all([
-          fetch('/data/leaderboard/summary.json').then((r) => { if (!r.ok) throw new Error(); return r.json(); }),
-          fetch('/data/leaderboard/top500.json').then((r) => { if (!r.ok) throw new Error(); return r.json(); }),
-        ])
-          .then(([s, t]) => { setSummary(s); setTop(t); })
-          .catch(() => setFailed(true));
-      },
-      { rootMargin: '400px' }
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    Promise.all([
+      fetch('/data/leaderboard/summary.json').then((r) => { if (!r.ok) throw new Error(); return r.json(); }),
+      fetch('/data/leaderboard/top500.json').then((r) => { if (!r.ok) throw new Error(); return r.json(); }),
+    ])
+      .then(([s, t]) => { setSummary(s); setTop(t); })
+      .catch(() => setFailed(true));
   }, []);
 
   function onSearch(q: string) {
