@@ -417,17 +417,12 @@ export default function ScanPage() {
   const [copiedShare, setCopiedShare] = useState(false);
   const [copiedFixPrompt, setCopiedFixPrompt] = useState(false);
   const [copiedLayerId, setCopiedLayerId] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'scanner' | 'leaderboard'>('scanner');
   const [, startTransition] = useTransition();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const params = new URLSearchParams(window.location.search);
     const qUrl = params.get('url') || params.get('domain') || params.get('q');
-    const qTab = params.get('tab');
-    if (qTab === 'leaderboard') {
-      setActiveTab('leaderboard');
-    }
     if (qUrl && !result && !loading) {
       setUrlInput(qUrl);
       executeScan(qUrl);
@@ -516,40 +511,8 @@ export default function ScanPage() {
             title="AI & Web Readiness Scanner"
             subtitle="Deterministic audit for AI answer engines, MCP clients, and machine consumers. Scores your site across Discovery, Access, Usability, Security, SEO, and Payments."
           />
-          <div className="-mt-3 flex flex-wrap items-center justify-between gap-3">
+          <div className="-mt-3">
             <AuthorByline links={[{ label: 'Audit Tool' }]} />
-            <div className="flex items-center gap-1.5 bg-muted/30 p-1 rounded-lg border border-border/50 text-xs">
-              <button
-                type="button"
-                onClick={() => setActiveTab('scanner')}
-                className={cn(
-                  'px-3 py-1.5 rounded-md font-medium transition flex items-center gap-1.5',
-                  activeTab === 'scanner'
-                    ? 'bg-card text-foreground shadow-xs border border-border/80'
-                    : 'text-muted-foreground hover:text-foreground'
-                )}
-              >
-                <IconSearch className="w-3.5 h-3.5" />
-                <span>Live Audit</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setActiveTab('leaderboard');
-                  setTimeout(() => {
-                    document.getElementById('leaderboard-heading')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 50);
-                }}
-                className={cn(
-                  'px-3 py-1.5 rounded-md font-medium transition flex items-center gap-1.5',
-                  activeTab === 'leaderboard'
-                    ? 'bg-card text-foreground shadow-xs border border-border/80'
-                    : 'text-muted-foreground hover:text-foreground'
-                )}
-              >
-                <span>🏆 50,000-Domain Leaderboard</span>
-              </button>
-            </div>
           </div>
         </header>
 

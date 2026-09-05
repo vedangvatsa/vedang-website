@@ -97,7 +97,7 @@ export function LeaderboardSection() {
     <div ref={ref} className="p-4 rounded-lg border border-border bg-card text-xs space-y-4">
       <SectionHeader
         title="50,000-Domain Leaderboard"
-        subtitle="Ranked agentic-readiness scores from the Tranco + CrUX crawl."
+        subtitle="Top 500 domains ordered by readiness score, from the Tranco + CrUX crawl."
       />
       {failed && (
         <p className="text-xs text-muted-foreground">Leaderboard data is not published yet. Check back after the crawl completes.</p>
