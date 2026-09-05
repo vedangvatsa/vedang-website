@@ -1428,9 +1428,11 @@
     "id": "ig-knowledge-worth-zero",
     "scheduleDate": "2026-09-05",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Raoul Pal said it clearly.\n\nKnowledge is approaching zero value.\n\nAnyone can ask AI the same question you spent 10 years learning to answer.\n\nThe advantage now is judgment, taste, and the ability to ask the right questions.",
-    "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4",
+    "postedAt": "2026-09-05T07:51:16.871Z",
+    "castHash": "0x8605278c096439fbbbabab9caa06836168d585f8"
   },
   {
     "id": "ig-solo-billionaire",
