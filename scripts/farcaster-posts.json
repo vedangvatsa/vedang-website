@@ -1438,9 +1438,11 @@
     "id": "ig-solo-billionaire",
     "scheduleDate": "2026-09-06",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Sam Altman thinks one person with a laptop can build a billion dollar company.\n\nNo co-founders. No employees. Just AI tools.\n\nWe are closer to this than most people realize.\n\nThe question is not if. It is who does it first.",
-    "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4"
+    "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4",
+    "postedAt": "2026-09-06T08:06:34.675Z",
+    "castHash": "0x8bfa527a47f3ff029ce786cfb065bd1fd8c7d196"
   },
   {
     "id": "ig-too-real",
