@@ -3013,9 +3013,11 @@
     "id": "viral-rewrite-155",
     "scheduleDate": "2026-08-22",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Readiness is usually a feeling that arrives after you act, not before. Most people become capable by doing the thing they didn't feel ready to do.",
-    "image": "scripts/post-images/post_93_1.jpg"
+    "image": "scripts/post-images/post_93_1.jpg",
+    "postedAt": "2026-09-06T21:40:15.985Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3muuxghnzl52f"
   },
   {
     "id": "viral-rewrite-156",
