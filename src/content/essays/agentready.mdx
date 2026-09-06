@@ -1,0 +1,118 @@
+---
+title: "How Agent-Ready Is the Web? A 50,000-Domain Census"
+date: '2026-09-05'
+author: 'Vedang Vatsa'
+description: 'We probed 50,000 websites with 61 machine-readability checks. Mean score: 25.7 out of 100. Here is what agents actually face.'
+keywords: ['agentic web', 'AI agents', 'llms.txt', 'MCP', 'web measurement', 'Tranco', 'agent readiness']
+---
+
+Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it will read reviews, compare prices, and hand you a shortlist. What you never see is the friction underneath. On roughly three of every five websites it visits, the bot that fetches pages for that answer gets refused at the door. On most of the rest, it must scrape layout markup built for human eyes. I spent a week measuring exactly how bad it is, across 50,000 domains, with the same 61 checks on every one. The average score came back 25.7 out of 100.
+
+<Figure src="/images/essays/agentready-hero.svg" alt="Title card: How Agent-Ready Is the Web, mean score 25.7 of 100 across 50,000 domains" wide />
+
+## What we measured, and why those things
+
+An agent does six jobs on a website, in order. It finds the site, reads it, acts on it through tools, trusts the connection, cites facts, and pays. So the checklist has six layers with 61 checks between them: discovery files like robots.txt and llms.txt, readable formats like Markdown, live tool endpoints like MCP servers, transport security, structured data for citations, and machine payment rails. Each check is one HTTP request with a pass rule a second run can repeat. No logins, no browser, no judgment calls.
+
+<StatRow>
+<Stat value="50,000" label="Domains probed, Tranco top-1M sample" source="Census data files" sourceUrl="https://veda.ng/scan" />
+<Stat value="25.7" label="Mean readiness score out of 100" source="50,000-domain census, Sep 2026" sourceUrl="https://veda.ng/scan" />
+<Stat value="61" label="Deterministic checks per domain" source="Scanner probe table" sourceUrl="https://veda.ng/scan" />
+<Stat value="0" label="Domains skipped, full coverage" source="Census manifest" sourceUrl="https://veda.ng/scan" />
+</StatRow>
+
+The sample deserves a word because most web statistics quietly cherry-pick. We took the [Tranco top-1M list](https://tranco-list.eu/), the research ranking built to fix the flaws of vendor lists, and drew three bands: every domain in ranks 1 to 10,000, plus 20,000 random draws each from ranks 10,001 to 100,000 and 100,001 to 1,000,000, all under a published seed anyone can replay. A [Chrome User Experience Report](https://developer.chrome.com/docs/crux) overlap flag marks which domains real users actually visit. Nothing hand-picked, nothing excluded for looking bad.
+
+## The headline numbers
+
+Fewer than 7 in 100 sites publish an llms.txt file. Fewer than 3 in 100 serve Markdown when asked. Fewer than 2 in 100 expose a live MCP server. Fewer than 1 in 600 publish a usable OpenAPI contract at a standard address. These are not exotic asks. An llms.txt file is a Markdown index a junior developer writes in an afternoon. Content negotiation is a twenty-year-old HTTP feature. Yet three quarters of audited domains fail outright, and only 4 in 50,000 score above 85.
+
+<CensusAdoptionBars />
+
+Compare with independent counts and the numbers rhyme. A [Thunderbit crawl of the Tranco top 10,000](https://thunderbit.com/blog/llms-txt-website-trend) found 5.86% valid llms.txt files where we find 6.62% across all tiers. Server-log data from [137,000 Ahrefs-monitored domains](https://ahrefs.com/blog/llmstxt-study/) found 97% of published llms.txt files got zero requests, which is the consumption side of our publication numbers. Different instruments, same web.
+
+## How we scanned without corrupting the results
+
+Each domain got 34 parallel requests plus a few conditional follow-ups, with a 4.5-second timeout and an identifying user agent, three domains at a time. The gentleness is load-bearing, not decorative. Our first full pass ran hot and returned a 95% homepage-failure rate that looked decisive and was wrong. Three failed top sites re-scanned gently scored 37 to 46 after recording 6. We threw the hurried pass away, calibrated concurrency down with control runs, and re-scanned everything, then re-scanned the entire low-scoring band once more. A supervisor script relaunched workers that died overnight. Fetch verdicts from an overloaded source network describe that network, and any web census that skips this calibration step is reporting its own infrastructure.
+
+## Security transfers free, agency costs extra
+
+Split scores by layer and a pattern jumps out. Security averages 41.0, the only layer where the old human web does the work. Everything invented for agents sits near zero: usability 7.4, payments 9.8, discovery 20.7. Transport hardening won over decades of browser wars transfers to machines untouched. Tool contracts and machine indexes, which nobody was paid to build until recently, barely exist. The lesson for operators is sequencing. You do not need an agent strategy. You need Markdown output, an llms.txt file, explicit crawler rules that match your firewall, and an OpenAPI file with examples. Four artifacts, each an afternoon, covering the layers that lag most.
+
+## Fame buys nothing
+
+Here is the result that surprised me. Split the sample by rank and the means read 26.1, 25.2, and 25.9 from top tier to tail. The most prominent sites on earth score no better than random long-tail pages. Bot refusal even falls toward the tail. The top of the ranking is thick with API endpoints, CDN hosts, and aggressive firewalls, all of which fail machine-readability checks while serving their human or programmatic purpose fine. Rank measures popularity. It does not measure readiness.
+
+<CensusTierBars />
+
+Popularity measured properly tells a sharper story. Domains on the CrUX most-visited list adopt at roughly twice the rate of unlisted ones on every headline check. Traffic predicts readiness. Rank position does not.
+
+## The readable web is a different web
+
+Six in ten audited origins return nothing usable to any tested identity. Dead hosts, parked pages, geo-fenced government sites, and infrastructure endpoints that legitimately serve nothing at their root. Strip those away and look only at the 22,855 readable sites, and everything roughly doubles. Mean score 41.1. Sitemaps on half. Both crawler identities served on two thirds. The unreadiness problem is half reachability, half missing standards, and the two halves need different fixes.
+
+<KeyTakeaway>Judge the web agents face by readable sites, not raw domains. The headline 25.7 mixes genuinely walled sites with hosts that were never pages to begin with.</KeyTakeaway>
+
+## One site in five says yes and means no
+
+The cheapest finding in the whole census needs no new standard. Among 21,881 domains whose robots.txt permits AI crawlers, 4,619 refuse the same crawlers over HTTP anyway. The policy file says come in. The firewall says go away. Somebody configured one without telling the other, and 21.1% is the measured size of that misconfiguration. Server templates that align the two would fix it everywhere at once.
+
+<CensusPolicyBars />
+
+The reverse gap is smaller: 13.0% of domains with no AI policy at all serve both crawler identities anyway. Defaults, not decisions, run this part of the web.
+
+## MCP lives on one company's servers
+
+Manual follow-up on the 910 domains with live MCP servers found byte-identical handshake replies across unrelated clothing stores, golf shops, and booksellers. Every one exposed the same catalog-search tool from the same commerce platform. Genuine servers, zero independent deployments. Strip out that single platform default and agent tool presence on the public web rounds to noise. This is also the shape of the only fix that works: nothing spread without a platform shipping it as a default.
+
+<PullQuote>Nothing on the agentic web spreads without a platform shipping it as a default.</PullQuote>
+
+## No minimal fix set exists
+
+The natural next question is what three things every site should do. The data refuses the premise. Counting every failed and partial check as one failure instance gives 2,145,053 across the corpus, and the fifteen most-failed checks cover only a third of them. There is no three-file remedy. There is a long tail of misses across all 61 checks, which is why the answer keeps coming back to defaults: frameworks, commerce platforms, and CDNs moving dozens of checks at once.
+
+## The files agents wish you had
+
+Four artifacts cover most of the gap, and none takes more than an afternoon.
+
+An **llms.txt** file is a Markdown index at your domain root: what the site is, plus links to the pages that matter. Language models read it instead of crawling hundreds of URLs. Ours passes on 6.62% of domains, and the bar is a 50-character structured file.
+
+**Markdown negotiation** means answering `Accept: text/markdown` with Markdown instead of HTML. No new files, just content negotiation, a twenty-year-old HTTP feature most frameworks support in middleware. It passes on 2.95%.
+
+**Explicit crawler rules** mean naming AI bots in robots.txt instead of leaving them to the wildcard default, and separating citation bots you want (GPTBot, PerplexityBot, OAI-SearchBot) from bulk trainers you may not (CCBot, ByteSpider). Our pass rate is 43.76% including partial credit, which overstates strict compliance. The [robot-blocking censuses agree directionally](https://ustechautomations.com/resources/blog/closing-web-index-august-2026): about 19% of top-100k sites with parseable robots.txt fully block at least one AI crawler, and GPTBot tops every block list.
+
+An **MCP server** exposes typed tools over HTTP so agents can act instead of just read. Only platform defaults have moved this number. Unless you run a framework that ships one, this is the one item to defer.
+
+## What to do Monday morning
+
+If you run a static site or docs, add llms.txt and Markdown mirrors today. If you run Next.js or similar, add content negotiation middleware plus explicit robots.txt stanzas for the six named bots. If you run Shopify, check whether your platform already exposes the catalog MCP endpoint before building anything. If you run Cloudflare or any WAF, compare your robots.txt against your firewall rules, because one site in five currently contradicts itself. Then run this page's scanner on your domain and watch the grade move.
+
+## Layer by layer, in numbers
+
+Security averages 41.0 out of 100 across the corpus, the only layer where decades of browser-era hardening transfer to machines untouched. Everything else lags: discovery 20.7, access 23.9, SEO and citations 28.9, payments 9.8, usability 7.4. Read that ordering as history. Transport encryption, security headers, and metadata formats were built and enforced over twenty years. Machine catalogs, Markdown mirrors, and tool contracts are a few years old with no enforcement behind them. The gap is youth plus missing defaults, not technical difficulty.
+
+Access deserves a closer look because it decides whether an agent reads at all. Markdown twins exist on 10.67% of domains, full content negotiation on 2.95%. Rate-limit headers, which let agents pace themselves instead of tripping blind throttles, appear on 0.72%. Two thirds of readable sites serve both tested crawler identities, which means the access story splits cleanly: reachable sites mostly cooperate, and the failures concentrate in dead hosts plus one genuinely walled quarter.
+
+## Popular sites behave better, rank does not matter
+
+Domains that real users visit, measured through Chrome field data, adopt at roughly twice the rate of unvisited ones on every headline check. Rank position itself predicts almost nothing once that split is accounted for. The practical upshot is targeting. Platform defaults aimed at trafficked sites propagate furthest per integration, which is exactly how the single commerce MCP default became the largest agent-tool footprint on the web. Twenty-five agent-forward companies also appearing on a curated industry board average 65.8 on our 100-point scale against the 25.7 background, so outside eyes and our instrument agree on who leads.
+
+## Questions this raises
+
+**Is llms.txt worth writing if nearly all files go unread?** Server logs say 97% of published files got zero requests in a month. Publication is not consumption. But files cost an afternoon, agents fetch them when directed rather than speculatively, and every coding agent that reads your docs is a reader the logs undercount. Write it, then link it from pages agents actually land on.
+
+**Does blocking AI crawlers hurt?** If you sell words, blocking training harvesters while allowing citation bots is the configuration a third of top sites now run. Blanket blocks cost AI-search citations within months. The file and the firewall should agree, and on one site in five they currently do not.
+
+**Will scores improve on their own?** Only through defaults. Nothing in 50,000 domains suggests organic per-operator adoption moves any needle. Frameworks, commerce platforms, and CDNs shipping machine-readable defaults is the entire historical record of things that worked.
+
+## What we could not see
+
+One network location, eleven hours, no JavaScript rendering, homepages only, apex domains with no www fallback. Firewall behavior varies by source network, so bot-blocking numbers describe our vantage point. Single-pass rows can freeze transient failures, so we re-scanned the entire low-scoring band and merged by latest verdict. Cutoffs like the 300-character readability floor are published heuristics nobody has sensitivity-tested yet. Sector labels were deliberately skipped in favor of rank tiers. Every one of these is documented in the paper so the next census can do better.
+
+<Callout type="insight" title="Reproduce everything">
+  The full paper with all 61 probe definitions, per-domain records for all 50,000 domains, and the sampler code are published alongside. Every number above traces to a stored row.
+</Callout>
+
+## What changes it
+
+No new protocol is needed for the largest tractable wins. Align robots.txt with firewall behavior. Serve Markdown next to HTML. Ship machine manifests as framework defaults. The commerce platform that turned on MCP for every storefront at once did more for agent tool presence than years of specification work. Until defaults like that spread, agents venturing onto the public web will keep finding most doors unmarked, many locked, and a few wide open. The full results, the ranked [50,000-domain leaderboard](https://veda.ng/scan), and a scanner for any single domain all live on the scan page.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="0" y="0" width="8" height="630" fill="#6366f1"/>
+  <text x="80" y="150" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800" fill="#0f172a">How Agent-Ready</text>
+  <text x="80" y="225" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800" fill="#0f172a">Is the Web?</text>
+  <text x="80" y="285" font-family="Inter, Arial, sans-serif" font-size="28" fill="#475569">A 50,000-domain census of machine readability</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">
+    <rect x="80" y="340" width="300" height="72" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="110" y="386" fill="#0f172a">25.7 / 100</text>
+    <rect x="410" y="340" width="300" height="72" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="440" y="386" fill="#0f172a">6.62% llms.txt</text>
+    <rect x="740" y="340" width="320" height="72" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="770" y="386" fill="#0f172a">1.82% MCP live</text>
+  </g>
+  <text x="80" y="470" font-family="Inter, Arial, sans-serif" font-size="24" fill="#64748b">61 checks across discovery, access, usability, security, SEO, payments</text>
+  <text x="80" y="560" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#6366f1">veda.ng</text>
+</svg>

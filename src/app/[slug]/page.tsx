@@ -27,6 +27,7 @@ import { EnterpriseAdoption, CoaseDisruption, AgentMarketGrowth } from '@/compon
 import { RegulatoryFriction, EGovernanceMaturity, RegulatoryGrowth } from '@/components/mdx/bureaucracy-charts';
 import { RecentBatchComposition, AgentLayerTaxonomy, YCGeoConcentration, AgentForXPattern, DefenseHardwareSurge, TaglineArchaeology, YCIndustryBreakdown, BatchSizeTimeline } from '@/components/mdx/yc-charts';
 import { UIComplexityComparison, APIAbstractionLayer, TextUIAdoption, PlatformShiftTimeline } from '@/components/mdx/universal-charts';
+import { CensusAdoptionBars, CensusTierBars, CensusPolicyBars } from '@/components/mdx/agentready-charts';
 import { StepwiseMaturityModel, ROIImpactStats } from '@/components/mdx/stepwise-charts';
 import { DigitalGovMaturity, EResidencyImpact, AgenticStateArchitecture } from '@/components/mdx/stateagents-charts';
 import { ZeroUIMarketMap, SaaSPricingShift, GUITimeline, HardwarePivotGrid, ApiTrafficChart, AttentionCollapseChart, FrontendDeclineChart } from '@/components/mdx/post-interface-charts';
@@ -428,6 +429,9 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               APIAbstractionLayer,
               TextUIAdoption,
               PlatformShiftTimeline,
+              CensusAdoptionBars,
+              CensusTierBars,
+              CensusPolicyBars,
               StepwiseMaturityModel,
               ROIImpactStats,
               DigitalGovMaturity,
