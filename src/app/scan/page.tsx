@@ -206,14 +206,6 @@ function IconCopy({ className = 'w-3.5 h-3.5' }: { className?: string }) {
   );
 }
 
-function IconSparkles({ className = 'w-3.5 h-3.5' }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z" />
-    </svg>
-  );
-}
-
 function IconChevronDown({ className = 'w-4 h-4' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -271,12 +263,12 @@ function PromptSection() {
           <button
             type="button"
             onClick={handleCopy}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium bg-black text-white hover:bg-zinc-800 transition-colors"
           >
             {copied ? (
               <><IconCheck className="w-3 h-3" /><span>Copied</span></>
             ) : (
-              <><IconSparkles className="w-3 h-3" /><span>Copy prompt</span></>
+              <span>Copy prompt</span>
             )}
           </button>
           <button
@@ -373,12 +365,12 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
             <button
               type="button"
               onClick={handleCopy}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded text-xs font-medium bg-black text-white hover:bg-zinc-800 transition-colors"
             >
               {copied ? (
                 <><IconCheck className="w-3 h-3" /><span>Copied</span></>
               ) : (
-                <><IconSparkles className="w-3 h-3" /><span>Copy AI fix prompt</span></>
+                <span>Copy AI fix prompt</span>
               )}
             </button>
             {check.referenceUrl && (
@@ -530,13 +522,13 @@ export default function ScanPage() {
                 value={urlInput}
                 onChange={e => setUrlInput(e.target.value)}
                 disabled={loading}
-                className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary text-sm transition"
+                className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-zinc-400 text-sm transition"
               />
             </div>
             <Button
               type="submit"
               disabled={loading || !urlInput.trim()}
-              className="h-auto py-3 px-5 text-sm shrink-0"
+              className="h-auto py-3 px-5 text-sm shrink-0 bg-black text-white hover:bg-zinc-800"
             >
               {loading ? 'Auditing…' : 'Run Audit'}
             </Button>
@@ -565,7 +557,7 @@ export default function ScanPage() {
             <p className="text-xs text-muted-foreground">{SCAN_STEPS[activeStepIndex]}</p>
             <div className="w-48 mx-auto bg-muted rounded-full h-1 overflow-hidden">
               <div
-                className="bg-primary h-full transition-all duration-300 rounded-full"
+                className="bg-zinc-900 h-full transition-all duration-300 rounded-full"
                 style={{ width: `${((activeStepIndex + 1) / SCAN_STEPS.length) * 100}%` }}
               />
             </div>
@@ -584,7 +576,14 @@ export default function ScanPage() {
         {!result && !loading && !error && (
           <div className="space-y-4">
             {/* Layer breakdown table */}
-            <section className="border border-border rounded-lg bg-card divide-y divide-border">
+            <details className="border border-border rounded-lg bg-card group">
+              <summary className="px-4 py-2.5 text-sm text-muted-foreground cursor-pointer list-none flex items-center justify-between gap-2 hover:text-foreground transition-colors">
+                <span>What gets checked: 61 probes across 6 layers</span>
+                <span className="transition-transform duration-150 group-open:rotate-180">
+                  <IconChevronDown className="w-3.5 h-3.5" />
+                </span>
+              </summary>
+              <div className="border-t border-border divide-y divide-border">
               {[
                 { layer: 'Discovery',      probes: 13, desc: 'robots.txt AI policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, sitemaps' },
                 { layer: 'Access',         probes: 9,  desc: 'Markdown content negotiation, .md URL twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
@@ -602,7 +601,8 @@ export default function ScanPage() {
                   <span className="text-xs text-muted-foreground leading-relaxed pt-px min-w-0 flex-1">{item.desc}</span>
                 </div>
               ))}
-            </section>
+              </div>
+            </details>
 
             {/* Prompt section — collapsed by default */}
             <PromptSection />
@@ -619,8 +619,7 @@ export default function ScanPage() {
                 <div className="space-y-1.5 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
                     <h2 className="text-xl font-bold tracking-tight text-foreground">{result.domain}</h2>
-                    <span className="text-[11px] px-2 py-0.5 rounded-full border border-border bg-muted text-muted-foreground">{result.durationMs}ms</span>
-                    <span className="text-[11px] px-2 py-0.5 rounded-full border border-border bg-muted text-muted-foreground">{new Date(result.scannedAt).toLocaleDateString()}</span>
+                    <span className="text-[11px] text-muted-foreground tabular-nums">{result.durationMs}ms · {new Date(result.scannedAt).toLocaleDateString()}</span>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">{result.summary}</p>
                   <div className="flex items-center gap-3 text-xs font-medium">
@@ -636,13 +635,13 @@ export default function ScanPage() {
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-4xl font-bold tracking-tight">{result.score}</span>
                     <span className="text-sm text-muted-foreground">/100</span>
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full border border-border bg-muted ml-1">Grade {result.grade}</span>
+                    <span className="text-xs font-semibold text-muted-foreground ml-1">Grade {result.grade}</span>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <Button type="button" size="sm" onClick={handleCopyFixPrompt} className="text-xs gap-1.5 h-8 px-3">
+                    <Button type="button" size="sm" onClick={handleCopyFixPrompt} className="text-xs gap-1.5 h-8 px-3 bg-black text-white hover:bg-zinc-800">
                       {copiedFixPrompt
                         ? <><IconCheck className="w-3 h-3" /><span>Copied</span></>
-                        : <><IconSparkles className="w-3 h-3" /><span>Fix prompt</span></>}
+                        : <span>Fix prompt</span>}
                     </Button>
                     <Button type="button" variant="outline" size="sm" onClick={handleShareResult} className="text-xs gap-1.5 h-8 px-3">
                       {copiedShare
@@ -669,8 +668,8 @@ export default function ScanPage() {
                     className={cn(
                       'p-3.5 rounded-lg border text-left flex flex-col gap-2 transition-colors group',
                       isSelected
-                        ? 'border-primary bg-primary/5 ring-1 ring-primary'
-                        : 'border-border bg-card hover:border-primary/40'
+                        ? 'border-zinc-900 bg-zinc-50 ring-1 ring-zinc-900'
+                        : 'border-border bg-card hover:border-zinc-400'
                     )}
                   >
                     <div className="flex items-center justify-between gap-2">
@@ -684,13 +683,13 @@ export default function ScanPage() {
                         >
                           {copiedLayerId === layer.id
                             ? <IconCheck className="w-3 h-3 text-emerald-500" />
-                            : <IconSparkles className="w-3 h-3" />}
+                            : <IconCopy className="w-3 h-3" />}
                         </button>
                         <span className="text-xs font-semibold text-muted-foreground tabular-nums">{layer.score}/{layer.maxScore}</span>
                       </div>
                     </div>
                     <div className="w-full bg-muted rounded-full h-1 overflow-hidden">
-                      <div className="bg-primary h-full rounded-full" style={{ width: `${layer.percentage}%` }} />
+                      <div className="bg-zinc-900 h-full rounded-full" style={{ width: `${layer.percentage}%` }} />
                     </div>
                     <span className="text-[11px] text-muted-foreground">{layer.percentage}% · {layer.checks.filter(c => c.status === 'pass').length}/{layer.checks.length} passed</span>
                   </button>
@@ -760,16 +759,16 @@ export default function ScanPage() {
                 </div>
               </div>
 
-              {/* Layer pills */}
-              <div className="flex flex-wrap gap-1.5">
+              {/* Layer filter */}
+              <div className="flex flex-wrap gap-x-4 gap-y-1">
                 <button
                   type="button"
                   onClick={() => setFilterLayer('all')}
                   className={cn(
-                    'px-2.5 py-1 rounded-full border text-xs transition',
+                    'py-1 text-xs transition border-b-2 -mb-px',
                     filterLayer === 'all'
-                      ? 'border-primary bg-primary text-primary-foreground'
-                      : 'border-border text-muted-foreground hover:text-foreground hover:border-primary/40'
+                      ? 'border-foreground text-foreground font-semibold'
+                      : 'border-transparent text-muted-foreground hover:text-foreground'
                   )}
                 >
                   All layers
@@ -780,10 +779,10 @@ export default function ScanPage() {
                     type="button"
                     onClick={() => setFilterLayer(layer)}
                     className={cn(
-                      'px-2.5 py-1 rounded-full border text-xs transition',
+                      'py-1 text-xs transition border-b-2 -mb-px',
                       filterLayer === layer
-                        ? 'border-primary bg-primary text-primary-foreground'
-                        : 'border-border text-muted-foreground hover:text-foreground hover:border-primary/40'
+                        ? 'border-foreground text-foreground font-semibold'
+                        : 'border-transparent text-muted-foreground hover:text-foreground'
                     )}
                   >
                     {LAYER_LABELS[layer]}

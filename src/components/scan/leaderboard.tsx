@@ -113,22 +113,23 @@ export function LeaderboardSection() {
       )}
       {summary && (
         <>
-          <div className="flex flex-wrap items-center gap-2 text-xs">
-            <span className="px-2 py-1 rounded-full border border-border text-muted-foreground tabular-nums">
-              {summary.domainsScored.toLocaleString()} domains scored
-            </span>
-            <span className="px-2 py-1 rounded-full border border-border text-muted-foreground tabular-nums">
-              mean {summary.meanScore} · median {summary.medianScore}
-            </span>
+          <p className="text-xs text-muted-foreground tabular-nums">
+            {summary.domainsScored.toLocaleString()} domains scored
+            <span className="mx-2 text-border">·</span>
+            mean {summary.meanScore} · median {summary.medianScore}
             {partial && (
-              <span className="px-2 py-1 rounded-full border border-amber-500/40 text-amber-600">
+              <span className="text-amber-600">
+                <span className="mx-2 text-border">·</span>
                 crawl in progress, numbers will move
               </span>
             )}
             {summary.snapshotEnd && (
-              <span className="text-muted-foreground">snapshot {summary.snapshotEnd.slice(0, 10)}</span>
+              <span>
+                <span className="mx-2 text-border">·</span>
+                snapshot {summary.snapshotEnd.slice(0, 10)}
+              </span>
             )}
-          </div>
+          </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {[
               { label: 'llms.txt', key: 'llms-txt' },
@@ -153,7 +154,7 @@ export function LeaderboardSection() {
           value={query}
           onChange={(e) => onSearch(e.target.value)}
           placeholder="Search all scored domains (min 2 chars)"
-          className="w-full px-3 py-2 rounded-lg border border-border bg-background text-xs outline-none focus:border-primary/50"
+          className="w-full px-3 py-2 rounded-lg border border-border bg-background text-xs outline-none focus:border-zinc-400"
           type="search"
         />
         {indexLoading && <p className="text-muted-foreground">Loading domain index…</p>}
@@ -190,7 +191,7 @@ export function LeaderboardSection() {
       </div>
       {top.length > 0 && !results && (
         <>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
             {[
               { key: 0, label: 'All tiers' },
               { key: 1, label: 'Ranks 1-10k' },
@@ -202,10 +203,10 @@ export function LeaderboardSection() {
                 type="button"
                 onClick={() => setTierFilter(f.key)}
                 className={cn(
-                  'px-2.5 py-1 rounded-full border text-xs transition',
+                  'py-1 text-xs transition border-b-2 -mb-px',
                   tierFilter === f.key
-                    ? 'border-primary bg-primary text-primary-foreground'
-                    : 'border-border text-muted-foreground hover:text-foreground hover:border-primary/40'
+                    ? 'border-foreground text-foreground font-semibold'
+                    : 'border-transparent text-muted-foreground hover:text-foreground'
                 )}
               >
                 {f.label}
