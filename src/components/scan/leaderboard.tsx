@@ -239,10 +239,6 @@ export function LeaderboardSection() {
           </div>
         )}
       </div>
-      <p className="text-[11px] text-muted-foreground">
-        Single network vantage point, homepage plus well-known paths, 4,500ms probe timeout.
-        Scores describe the snapshot date, not a live verdict. Run a fresh scan above for any domain.
-      </p>
     </div>
   );
 }
