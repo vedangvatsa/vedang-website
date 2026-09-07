@@ -468,21 +468,6 @@ function ScoreDialCard({
   const clampedScore = Math.max(0, Math.min(100, Math.round(score)));
   const strokeDashoffset = circumference - (clampedScore / 100) * circumference;
 
-  const isGood = clampedScore >= 90;
-  const isFair = clampedScore >= 50 && clampedScore < 90;
-
-  const strokeColor = isGood ? '#10b981' : isFair ? '#f59e0b' : '#ef4444';
-  const textColor = isGood
-    ? 'text-emerald-700 dark:text-emerald-400'
-    : isFair
-    ? 'text-amber-700 dark:text-amber-400'
-    : 'text-rose-700 dark:text-rose-400';
-  const circleFill = isGood
-    ? 'fill-emerald-500/10'
-    : isFair
-    ? 'fill-amber-500/10'
-    : 'fill-rose-500/10';
-
   return (
     <button
       type="button"
@@ -490,47 +475,43 @@ function ScoreDialCard({
       className={cn(
         'flex flex-col items-center text-center p-3 sm:p-3.5 rounded-xl border transition-all select-none group focus:outline-none',
         active
-          ? 'border-zinc-900 bg-zinc-50 dark:bg-zinc-900 dark:border-zinc-100 shadow-sm ring-1 ring-zinc-900'
-          : 'border-border bg-card hover:border-zinc-400 hover:bg-muted/30'
+          ? 'border-foreground bg-muted/40 shadow-xs ring-1 ring-foreground'
+          : 'border-border bg-card hover:border-zinc-400 hover:bg-muted/20'
       )}
     >
       <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center">
         <svg className="w-14 h-14 sm:w-16 sm:h-16 -rotate-90" viewBox="0 0 60 60" aria-hidden="true">
-          <circle
-            cx="30"
-            cy="30"
-            r={radius}
-            className={circleFill}
-          />
+          {/* Faint track circle */}
           <circle
             cx="30"
             cy="30"
             r={radius}
             fill="transparent"
             stroke="currentColor"
-            strokeWidth="4"
-            className="text-muted/20"
+            strokeWidth="3.5"
+            className="text-muted/30"
           />
+          {/* Greyscale progress arc */}
           <circle
             cx="30"
             cy="30"
             r={radius}
             fill="transparent"
-            stroke={strokeColor}
-            strokeWidth="4"
+            stroke="currentColor"
+            strokeWidth="3.5"
             strokeLinecap="round"
             strokeDasharray={circumference}
             strokeDashoffset={strokeDashoffset}
-            className="transition-all duration-700 ease-out"
+            className="text-foreground transition-all duration-700 ease-out"
           />
         </svg>
-        <span className={cn('absolute text-sm sm:text-base font-bold tabular-nums tracking-tight', textColor)}>
+        <span className="absolute text-sm sm:text-base font-bold tabular-nums tracking-tight text-foreground">
           {clampedScore}
         </span>
       </div>
 
       <div className="mt-2 space-y-0.5">
-        <div className="text-xs font-bold text-foreground tracking-tight group-hover:text-primary transition-colors">
+        <div className="text-xs font-semibold text-foreground tracking-tight">
           {label}
         </div>
         <div className="text-[10px] text-muted-foreground leading-tight">
@@ -779,12 +760,12 @@ export default function ScanPage() {
                     <span className="text-[11px] text-muted-foreground tabular-nums">{result.durationMs}ms · {new Date(result.scannedAt).toLocaleDateString()}</span>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">{result.summary}</p>
-                  <div className="flex items-center gap-3 text-xs font-medium">
-                    <span className="text-emerald-600">{passingCount} passed</span>
+                  <div className="flex items-center gap-3 text-xs font-medium text-muted-foreground">
+                    <span className="text-foreground">{passingCount} passed</span>
                     <span className="text-border">·</span>
-                    <span className="text-amber-600">{warningCount} warnings</span>
+                    <span>{warningCount} warnings</span>
                     <span className="text-border">·</span>
-                    <span className="text-rose-600">{failingCount} failed</span>
+                    <span>{failingCount} failed</span>
                   </div>
                 </div>
 
@@ -797,12 +778,12 @@ export default function ScanPage() {
                   <div className="flex items-center gap-2 flex-wrap">
                     <Button type="button" size="sm" onClick={handleCopyFixPrompt} className="text-xs gap-1.5 h-8 px-3 bg-black text-white hover:bg-zinc-800">
                       {copiedFixPrompt
-                        ? <><IconCheck className="w-3 h-3" /><span>Copied</span></>
+                        ? <><IconCheck className="w-3 h-3 text-white" /><span>Copied</span></>
                         : <span>Fix prompt</span>}
                     </Button>
                     <Button type="button" variant="outline" size="sm" onClick={handleShareResult} className="text-xs gap-1.5 h-8 px-3">
                       {copiedShare
-                        ? <><IconCheck className="w-3 h-3 text-emerald-500" /><span>Copied</span></>
+                        ? <><IconCheck className="w-3 h-3 text-foreground" /><span>Copied</span></>
                         : <><IconCopy className="w-3 h-3 text-muted-foreground" /><span>Share</span></>}
                     </Button>
                     <Button type="button" variant="outline" size="sm" onClick={() => executeScan(result.url, true)} className="text-xs gap-1.5 h-8 px-3">
@@ -888,7 +869,7 @@ export default function ScanPage() {
                           className="p-1 rounded text-muted-foreground hover:text-foreground hover:bg-muted transition-colors opacity-0 group-hover:opacity-100"
                         >
                           {copiedLayerId === layer.id
-                            ? <IconCheck className="w-3 h-3 text-emerald-500" />
+                            ? <IconCheck className="w-3 h-3 text-foreground" />
                             : <IconCopy className="w-3 h-3" />}
                         </button>
                         <span className="text-xs font-semibold text-muted-foreground tabular-nums">{layer.score}/{layer.maxScore}</span>
@@ -928,12 +909,12 @@ export default function ScanPage() {
                   className={cn(
                     'px-3 py-2 rounded-lg border text-xs font-medium flex items-center justify-between gap-2 min-w-0',
                     item.active
-                      ? 'border-emerald-500/30 bg-emerald-500/5 text-foreground'
-                      : 'border-border bg-muted/10 text-muted-foreground'
+                      ? 'border-zinc-300 dark:border-zinc-700 bg-muted/30 text-foreground'
+                      : 'border-border/60 bg-muted/5 text-muted-foreground/60'
                   )}
                 >
                   <span className="truncate min-w-0">{item.label}</span>
-                  <span className={cn('font-semibold shrink-0', item.active ? 'text-emerald-600' : 'text-muted-foreground/40')}>
+                  <span className={cn('font-semibold shrink-0', item.active ? 'text-foreground' : 'text-muted-foreground/40')}>
                     {item.active ? '✓' : '×'}
                   </span>
                 </div>
