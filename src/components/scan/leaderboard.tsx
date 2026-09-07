@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { SectionHeader } from '@/components/ui/section-header';
 import { cn } from '@/lib/utils';
 
 interface TopEntry {
@@ -107,9 +106,9 @@ export function LeaderboardSection() {
 
   return (
     <div ref={ref} className="text-xs space-y-4 pt-4 border-t border-border">
-      <SectionHeader
-        title="Leaderboard"
-      />
+      <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">
+        Leaderboard
+      </h3>
       {failed && (
         <p className="text-xs text-muted-foreground">Leaderboard data is not published yet.</p>
       )}

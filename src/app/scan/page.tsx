@@ -8,7 +8,6 @@ import { AuthorByline } from '@/components/author-byline';
 import { Button } from '@/components/ui/button';
 import { StatusPill } from '@/components/ui/status-pill';
 import { CodeBlock } from '@/components/ui/code-block';
-import { SectionHeader } from '@/components/ui/section-header';
 import { LeaderboardSection } from '@/components/scan/leaderboard';
 import { copyText } from '@/lib/copy-text';
 import { cn } from '@/lib/utils';
