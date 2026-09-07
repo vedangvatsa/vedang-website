@@ -106,7 +106,7 @@ export function LeaderboardSection() {
   const partial = summary && summary.domainsScored < TARGET_N;
 
   return (
-    <div ref={ref} className="p-4 rounded-lg border border-border bg-card text-xs space-y-4">
+    <div ref={ref} className="text-xs space-y-4 pt-4 border-t border-border">
       <SectionHeader
         title="Leaderboard"
       />
@@ -132,7 +132,7 @@ export function LeaderboardSection() {
               </span>
             )}
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
               { label: 'llms.txt', key: 'llms-txt' },
               { label: 'Markdown negotiation', key: 'markdown-negotiation' },
@@ -142,9 +142,9 @@ export function LeaderboardSection() {
               const a = summary.adoption[s.key];
               if (!a) return null;
               return (
-                <div key={s.key} className="px-3 py-2 rounded-lg border border-border bg-muted/10">
+                <div key={s.key} className="py-2 border-b border-border/40">
                   <div className="text-[11px] text-muted-foreground">{s.label}</div>
-                  <div className="text-sm font-semibold tabular-nums">{(a.share * 100).toFixed(2)}%</div>
+                  <div className="text-sm font-semibold tabular-nums">{a ? (a.share * 100).toFixed(2) : 0}%</div>
                 </div>
               );
             })}
@@ -156,7 +156,7 @@ export function LeaderboardSection() {
           value={query}
           onChange={(e) => onSearch(e.target.value)}
           placeholder="Search scored domains (min 2 chars)"
-          className="w-full px-3 py-2 rounded-lg border border-border bg-background text-xs outline-none focus:border-zinc-400"
+          className="w-full px-3 py-2 rounded-lg border border-border bg-background text-xs outline-none focus:border-foreground"
           type="search"
         />
         {indexLoading && <p className="text-muted-foreground">Loading domain index…</p>}
@@ -166,11 +166,11 @@ export function LeaderboardSection() {
           </p>
         )}
         {results && results.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
             {results.map(([d, s, g, , , ic]) => (
               <div
                 key={d}
-                className="flex items-center justify-between gap-2 px-3 py-2 rounded-md border border-border bg-background/50 hover:bg-muted/30 transition-colors"
+                className="flex items-center justify-between gap-2 py-2 px-1 border-b border-border/40 hover:bg-muted/20 transition-colors"
               >
                 <a
                   href={`/scan?url=${encodeURIComponent(d)}`}
@@ -193,7 +193,7 @@ export function LeaderboardSection() {
       </div>
       {top.length > 0 && !results && (
         <>
-          <div className="flex flex-wrap gap-x-4 gap-y-1">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1 border-b border-border/40">
             {[
               { key: 0, label: 'All tiers' },
               { key: 1, label: 'Ranks 1-10k' },
@@ -215,11 +215,11 @@ export function LeaderboardSection() {
               </button>
             ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-0.5 pt-1">
             {visible.map((e) => (
               <div
                 key={e.domain}
-                className="flex items-center justify-between gap-2 px-3 py-2 rounded-md border border-border bg-background/50 hover:bg-muted/30 transition-colors"
+                className="flex items-center justify-between gap-2 py-2 px-1 border-b border-border/40 hover:bg-muted/20 transition-colors"
               >
                 <div className="flex items-center gap-2 min-w-0">
                   <span className="text-[11px] tabular-nums text-muted-foreground w-6 shrink-0 text-right font-medium">

@@ -254,8 +254,8 @@ function PromptSection() {
   };
 
   return (
-    <section className="border border-border rounded-lg bg-card">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-4 py-3">
+    <section className="py-2 border-t border-border">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-1">
         <p className="text-sm text-muted-foreground">
           Master prompt for AI coding agents.
         </p>
@@ -284,7 +284,7 @@ function PromptSection() {
         </div>
       </div>
       {open && (
-        <div className="border-t border-border p-4">
+        <div className="pt-3">
           <CodeBlock code={MASTER_PROMPT} filename="ai-readiness-master-prompt.md" />
         </div>
       )}
@@ -307,9 +307,9 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
   };
 
   return (
-    <div className="border border-border rounded-lg bg-card">
+    <div className="border-b border-border/50 py-2.5 space-y-2">
       <div
-        className={cn('px-4 py-3 flex items-start justify-between gap-3', hasDetails && 'cursor-pointer select-none')}
+        className={cn('flex items-start justify-between gap-3', hasDetails && 'cursor-pointer select-none')}
         onClick={() => hasDetails && setExpanded(!expanded)}
         role={hasDetails ? 'button' : undefined}
         aria-expanded={hasDetails ? expanded : undefined}
@@ -347,7 +347,7 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
       </div>
 
       {expanded && hasDetails && (
-        <div className="border-t border-border px-4 py-3 space-y-3 bg-muted/20 text-xs rounded-b-lg">
+        <div className="pt-2 space-y-2.5 text-xs">
           {check.why && (
             <p className="text-muted-foreground leading-relaxed">{check.why}</p>
           )}
@@ -361,7 +361,7 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
               language={check.fixSnippet.language}
             />
           )}
-          <div className="flex items-center justify-between gap-3 pt-1 border-t border-border/50">
+          <div className="flex items-center justify-between gap-3 pt-1">
             <button
               type="button"
               onClick={handleCopy}
@@ -488,10 +488,10 @@ function ScoreDialCard({
       type="button"
       onClick={onClick}
       className={cn(
-        'flex flex-col items-center text-center p-3 sm:p-3.5 rounded-xl border transition-all select-none group focus:outline-none',
+        'flex flex-col items-center text-center p-2.5 sm:p-3 rounded-lg border transition-colors select-none group focus:outline-none',
         active
-          ? 'border-zinc-900 bg-zinc-50 dark:bg-zinc-900 dark:border-zinc-100 shadow-sm ring-1 ring-zinc-900'
-          : 'border-border bg-card hover:border-zinc-400 hover:bg-muted/30'
+          ? 'border-foreground bg-muted/40'
+          : 'border-border/50 hover:border-foreground/30'
       )}
     >
       <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center">
@@ -733,14 +733,14 @@ export default function ScanPage() {
         {!result && !loading && !error && (
           <div className="space-y-4">
             {/* Layer breakdown table */}
-            <details className="border border-border rounded-lg bg-card group">
-              <summary className="px-4 py-2.5 text-sm text-muted-foreground cursor-pointer list-none flex items-center justify-between gap-2 hover:text-foreground transition-colors">
+            <details className="border-b border-border pb-3 group">
+              <summary className="py-2 text-sm text-muted-foreground cursor-pointer list-none flex items-center justify-between gap-2 hover:text-foreground transition-colors font-medium">
                 <span>67 probes across 6 layers</span>
                 <span className="transition-transform duration-150 group-open:rotate-180">
                   <IconChevronDown className="w-3.5 h-3.5" />
                 </span>
               </summary>
-              <div className="border-t border-border divide-y divide-border">
+              <div className="border-t border-border divide-y divide-border/60 pt-1">
               {[
                 { layer: 'Discovery',           probes: 13, desc: 'robots.txt AI policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, sitemaps' },
                 { layer: 'Access',              probes: 9,  desc: 'Markdown content negotiation, .md URL twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
@@ -749,7 +749,7 @@ export default function ScanPage() {
                 { layer: 'SEO & Web Standards', probes: 21, desc: 'HTML5 doctype, WCAG 2.2 a11y, viewport, headings, JSON-LD @graph, E-E-A-T sameAs, RSS feeds' },
                 { layer: 'Micropayments',       probes: 3,  desc: 'L402 / HTTP 402, WebLN wallet discovery, machine terms of service' },
               ].map(item => (
-                <div key={item.layer} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 px-4 py-2.5">
+                <div key={item.layer} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 py-2.5">
                   <div className="flex items-center justify-between sm:justify-start gap-2 shrink-0 sm:w-36 pt-px">
                     <span className="font-medium text-sm text-foreground">{item.layer}</span>
                     <span className="text-[11px] text-muted-foreground/50 tabular-nums font-mono sm:hidden">{item.probes} probes</span>
@@ -768,10 +768,10 @@ export default function ScanPage() {
 
         {/* ── Results ── */}
         {result && !loading && (
-          <section className="w-full space-y-5 animate-in fade-in duration-200">
+          <section className="w-full space-y-6 animate-in fade-in duration-200">
 
             {/* Score header */}
-            <div className="p-5 rounded-lg border border-border bg-card">
+            <div className="border-b border-border pb-5">
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                 <div className="space-y-1.5 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
@@ -779,12 +779,12 @@ export default function ScanPage() {
                     <span className="text-[11px] text-muted-foreground tabular-nums">{result.durationMs}ms · {new Date(result.scannedAt).toLocaleDateString()}</span>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">{result.summary}</p>
-                  <div className="flex items-center gap-3 text-xs font-medium">
-                    <span className="text-emerald-600">{passingCount} passed</span>
+                  <div className="flex items-center gap-3 text-xs font-medium pt-1">
+                    <span className="text-emerald-600 dark:text-emerald-400">{passingCount} passed</span>
                     <span className="text-border">·</span>
-                    <span className="text-amber-600">{warningCount} warnings</span>
+                    <span className="text-amber-600 dark:text-amber-400">{warningCount} warnings</span>
                     <span className="text-border">·</span>
-                    <span className="text-rose-600">{failingCount} failed</span>
+                    <span className="text-rose-600 dark:text-rose-400">{failingCount} failed</span>
                   </div>
                 </div>
 
@@ -815,7 +815,7 @@ export default function ScanPage() {
 
             {/* Category Scorecards (Circular Dials) */}
             {categoryScores && (
-              <div className="p-4 sm:p-5 rounded-xl border border-border bg-card space-y-3.5">
+              <div className="py-2 space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">
                     Scorecards
@@ -831,7 +831,7 @@ export default function ScanPage() {
                   )}
                 </div>
 
-                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5 sm:gap-3">
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-2.5">
                   {CATEGORY_DIAL_CONFIG.map(dial => {
                     const categoryScore = categoryScores[dial.key as keyof typeof categoryScores] ?? 0;
                     const isActive = activeCategory === dial.key;
@@ -867,10 +867,10 @@ export default function ScanPage() {
                       setFilterStatus('all');
                     }}
                     className={cn(
-                      'p-3.5 rounded-lg border text-left flex flex-col gap-2 transition-colors group',
+                      'p-3 rounded-lg border text-left flex flex-col gap-1.5 transition-colors group',
                       isSelected
-                        ? 'border-zinc-900 bg-zinc-50 ring-1 ring-zinc-900'
-                        : 'border-border bg-card hover:border-zinc-400'
+                        ? 'border-foreground bg-muted/40'
+                        : 'border-border/60 hover:border-foreground/30'
                     )}
                   >
                     <div className="flex items-center justify-between gap-2">
@@ -890,7 +890,7 @@ export default function ScanPage() {
                       </div>
                     </div>
                     <div className="w-full bg-muted rounded-full h-1 overflow-hidden">
-                      <div className="bg-zinc-900 h-full rounded-full" style={{ width: `${layer.percentage}%` }} />
+                      <div className="bg-zinc-900 dark:bg-zinc-100 h-full rounded-full" style={{ width: `${layer.percentage}%` }} />
                     </div>
                     <span className="text-[11px] text-muted-foreground">{layer.percentage}% · {layer.checks.filter(c => c.status === 'pass').length}/{layer.checks.length} passed</span>
                   </button>
@@ -920,15 +920,10 @@ export default function ScanPage() {
               ].map(item => (
                 <div
                   key={item.label}
-                  className={cn(
-                    'px-3 py-2 rounded-lg border text-xs font-medium flex items-center justify-between gap-2 min-w-0',
-                    item.active
-                      ? 'border-emerald-500/30 bg-emerald-500/5 text-foreground'
-                      : 'border-border bg-muted/10 text-muted-foreground'
-                  )}
+                  className="py-1.5 px-2.5 text-xs font-medium flex items-center justify-between gap-2 min-w-0 border-b border-border/40"
                 >
-                  <span className="truncate min-w-0">{item.label}</span>
-                  <span className={cn('font-semibold shrink-0', item.active ? 'text-emerald-600' : 'text-muted-foreground/40')}>
+                  <span className="truncate min-w-0 text-muted-foreground">{item.label}</span>
+                  <span className={cn('font-semibold shrink-0', item.active ? 'text-emerald-600 dark:text-emerald-400' : 'text-muted-foreground/30')}>
                     {item.active ? '✓' : '×'}
                   </span>
                 </div>
@@ -936,10 +931,10 @@ export default function ScanPage() {
             </div>
 
             {/* Findings */}
-            <div className="space-y-3">
+            <div className="space-y-3 pt-2">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                <h3 className="text-sm font-semibold text-foreground flex-1">Findings</h3>
-                <div className="flex items-center bg-muted/60 p-0.5 rounded-lg border border-border text-xs">
+                <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider flex-1">Findings</h3>
+                <div className="flex items-center gap-1.5 text-xs">
                   {[
                     { key: 'all',       label: `All (${allChecks.length})` },
                     { key: 'attention', label: `Issues (${warningCount + failingCount})` },
