@@ -139,6 +139,42 @@ export function LeaderboardSection() {
           </div>
         </>
       )}
+      <div className="space-y-2">
+        <input
+          value={query}
+          onChange={(e) => onSearch(e.target.value)}
+          placeholder="Search all scored domains (min 2 chars)"
+          className="w-full px-3 py-2 rounded-lg border border-border bg-background text-xs outline-none focus:border-primary/50"
+          type="search"
+        />
+        {indexLoading && <p className="text-muted-foreground">Loading domain index…</p>}
+        {results && (
+          <p className="text-muted-foreground">
+            {results.length === 0 ? 'No matches.' : `Top ${results.length} matches:`}
+          </p>
+        )}
+        {results && results.length > 0 && (
+          <div className="overflow-x-auto rounded-lg border border-border">
+            <table className="w-full text-xs">
+              <tbody>
+                {results.map(([d, s, g, , dt, ic]) => (
+                  <tr key={d} className="border-b border-border/50 last:border-0 hover:bg-muted/20">
+                    <td className="px-2 sm:px-3 py-1.5 font-medium truncate max-w-28 min-[420px]:max-w-45">
+                      <a href={`/scan?url=${encodeURIComponent(d)}`} className="hover:text-primary hover:underline inline-flex items-center gap-1.5" title="Run a fresh scan">
+                        <DomainIcon domain={d} file={ic} />
+                        {d}
+                      </a>
+                    </td>
+                    <td className="px-2 sm:px-3 py-1.5 text-right tabular-nums w-16 sm:w-20">{s}</td>
+                    <td className={cn('px-2 sm:px-3 py-1.5 text-right font-semibold w-12 sm:w-16', gradeClass(g))}>{g}</td>
+                    <td className="px-2 sm:px-3 py-1.5 text-right tabular-nums text-muted-foreground w-28 whitespace-nowrap hidden md:table-cell">{dt}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
       {top.length > 0 && !results && (
         <>
           <div className="flex flex-wrap gap-1.5">
@@ -203,42 +239,6 @@ export function LeaderboardSection() {
           {expanded ? 'Show top 100' : 'Show all 500'}
         </button>
       )}
-      <div className="space-y-2">
-        <input
-          value={query}
-          onChange={(e) => onSearch(e.target.value)}
-          placeholder="Search all scored domains (min 2 chars)"
-          className="w-full px-3 py-2 rounded-lg border border-border bg-background text-xs outline-none focus:border-primary/50"
-          type="search"
-        />
-        {indexLoading && <p className="text-muted-foreground">Loading domain index…</p>}
-        {results && (
-          <p className="text-muted-foreground">
-            {results.length === 0 ? 'No matches.' : `Top ${results.length} matches:`}
-          </p>
-        )}
-        {results && results.length > 0 && (
-          <div className="overflow-x-auto rounded-lg border border-border">
-            <table className="w-full text-xs">
-              <tbody>
-                {results.map(([d, s, g, , dt, ic]) => (
-                  <tr key={d} className="border-b border-border/50 last:border-0 hover:bg-muted/20">
-                    <td className="px-2 sm:px-3 py-1.5 font-medium truncate max-w-28 min-[420px]:max-w-45">
-                      <a href={`/scan?url=${encodeURIComponent(d)}`} className="hover:text-primary hover:underline inline-flex items-center gap-1.5" title="Run a fresh scan">
-                        <DomainIcon domain={d} file={ic} />
-                        {d}
-                      </a>
-                    </td>
-                    <td className="px-2 sm:px-3 py-1.5 text-right tabular-nums w-16 sm:w-20">{s}</td>
-                    <td className={cn('px-2 sm:px-3 py-1.5 text-right font-semibold w-12 sm:w-16', gradeClass(g))}>{g}</td>
-                    <td className="px-2 sm:px-3 py-1.5 text-right tabular-nums text-muted-foreground w-28 whitespace-nowrap hidden md:table-cell">{dt}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
     </div>
   );
 }
