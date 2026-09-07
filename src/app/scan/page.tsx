@@ -34,7 +34,7 @@ const SCAN_STEPS = [
   'Verifying HTTPS, HSTS, CSP, and security disclosures...',
   'Inspecting JSON-LD entity graph & structured feeds...',
   'Checking micropayments & x402 payment headers...',
-  'Aggregating 0–100 Agentic Readiness Score...',
+  'Aggregating 0-100 Agentic Readiness Score...',
 ];
 
 const LAYER_LABELS: Record<string, string> = {
@@ -47,7 +47,7 @@ const LAYER_LABELS: Record<string, string> = {
   payments: 'Payments',
 };
 
-const MASTER_PROMPT = `# AI & Web Readiness — Master Implementation Prompt
+const MASTER_PROMPT = `# AI & Web Readiness - Master Implementation Prompt
 # Paste into Claude, ChatGPT, Cursor, or your AI coding agent
 
 You are an expert full-stack engineer and AI web readiness architect.
@@ -58,22 +58,22 @@ Our tech stack: [e.g. Next.js / Astro / Django / FastAPI / Express]
 
 Implement the following 6 layers:
 
-1. DISCOVERY — robots.txt AI bot rules, /llms.txt, /llms-full.txt,
+1. DISCOVERY - robots.txt AI bot rules, /llms.txt, /llms-full.txt,
    /.well-known/agents.json, /.well-known/api-catalog (RFC 9727), /.well-known/ard.json
 
-2. ACCESS — Markdown content negotiation (Accept: text/markdown),
+2. ACCESS - Markdown content negotiation (Accept: text/markdown),
    .md URL twins for each page, SSR no-JS fallback, RateLimit-* headers
 
-3. MCP & USABILITY — Streamable HTTP MCP server at /.well-known/mcp,
+3. MCP & USABILITY - Streamable HTTP MCP server at /.well-known/mcp,
    OpenAPI 3.1 at /openapi.json with concrete examples, /auth.md spec
 
-4. SECURITY — HTTPS, HSTS preload (max-age=63072000; includeSubDomains; preload),
+4. SECURITY - HTTPS, HSTS preload (max-age=63072000; includeSubDomains; preload),
    strict CSP, /.well-known/security.txt (RFC 9116)
 
-5. SEO & CITATIONS — JSON-LD @graph (Organization, WebSite, Article),
+5. SEO & CITATIONS - JSON-LD @graph (Organization, WebSite, Article),
    E-E-A-T sameAs links, inverted pyramid headings, active RSS feed
 
-6. MICROPAYMENTS — L402 / HTTP 402 payment headers or /terms-of-use.md
+6. MICROPAYMENTS - L402 / HTTP 402 payment headers or /terms-of-use.md
 
 Provide exact code files, server configuration, and curl verification commands.`;
 
@@ -102,7 +102,7 @@ function generateLayerPrompt(layer: LayerScore, domain: string): string {
   const warnings = layer.checks.filter(c => c.status === 'warning');
 
   let p = `You are an expert engineer resolving ${layer.name} layer issues for ${domain}.\n\n`;
-  p += `### Layer: ${layer.name} (Score: ${layer.score}/${layer.maxScore} — ${layer.percentage}%)\n`;
+  p += `### Layer: ${layer.name} (Score: ${layer.score}/${layer.maxScore} - ${layer.percentage}%)\n`;
   p += `${layer.description}\n\n`;
 
   if (failing.length > 0) {
@@ -112,7 +112,7 @@ function generateLayerPrompt(layer: LayerScore, domain: string): string {
       p += `   - Issue: ${c.details}\n`;
       if (c.why) p += `   - Rationale: ${c.why}\n`;
       if (c.recommendation) p += `   - Fix: ${c.recommendation}\n`;
-      if (c.fixSnippet) p += `   \`\`\`\n${c.fixSnippet.code}\n\`\`\`\n`;
+      if (c.fixSnippet) p += `   \`\`\`${c.fixSnippet.language || ''}\n${c.fixSnippet.code}\n\`\`\`\n`;
     });
   }
   if (warnings.length > 0) {
@@ -135,7 +135,7 @@ function generateFixPrompt(result: ScanResult): string {
   let prompt = `You are an expert full-stack engineer and AI web readiness architect.
 Our website (${result.url}) scored ${result.score}/100 (Grade ${result.grade}) on the AI & Web Readiness Scanner (https://veda.ng/scan).
 
-Fix everything below to reach 100/100.
+Fix everything below to raise the score as far as this stack allows. Some checks do not apply to every kind of site.
 
 ---
 Domain: ${result.domain}
@@ -343,7 +343,7 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
             {check.status === 'na'
               ? 'N/A'
               : check.impact === 'optional'
-              ? (check.score > 0 ? `+${check.score}` : '—')
+              ? (check.score > 0 ? `+${check.score}` : '0')
               : `${check.score}/${check.maxScore}`}
           </span>
           {hasDetails && (
@@ -526,7 +526,7 @@ export default function ScanPage() {
               </div>
               <input
                 type="text"
-                placeholder="Enter domain or URL — e.g. stripe.com"
+                placeholder="Enter domain or URL - e.g. stripe.com"
                 value={urlInput}
                 onChange={e => setUrlInput(e.target.value)}
                 disabled={loading}
@@ -576,7 +576,7 @@ export default function ScanPage() {
         {/* ── Error ── */}
         {error && !loading && (
           <section className="px-4 py-3 rounded-lg border border-destructive/30 bg-destructive/5 text-destructive text-sm">
-            <span className="font-semibold">Scan failed — </span>{error}
+            <span className="font-semibold">Scan failed: </span>{error}
           </section>
         )}
 
@@ -729,7 +729,7 @@ export default function ScanPage() {
                 >
                   <span className="truncate min-w-0">{item.label}</span>
                   <span className={cn('font-semibold shrink-0', item.active ? 'text-emerald-600' : 'text-muted-foreground/40')}>
-                    {item.active ? '✓' : '—'}
+                    {item.active ? '✓' : '×'}
                   </span>
                 </div>
               ))}

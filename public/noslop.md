@@ -720,6 +720,7 @@ NoSlop absorbs useful tells from public anti-slop skills and guides, then keeps 
 8. [anti-slop](https://skills.sh/elithrar/dotfiles/anti-slop) (@elithrar)
 9. [humanize](https://skills.sh/aashaexo/soundshuman/humanize) (@aashatwt)
 10. [anti-ai-slop-writing](https://skills.sh/jalaalrd/anti-ai-slop-writing/anti-ai-slop-writing) (@jalaal_tweets)
+11. [vibecoded-design-tells](https://github.com/JCarterJohnson/vibecoded-design-tells) (@JCarterJohnson - unslop-ui, unslop-ai-code, unslop-ai-text)
 
 Conflicts are resolved toward NoSlop defaults: hard em-dash ban, user overrides, and craft/UI sections that those skills do not cover.
 

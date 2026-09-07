@@ -271,7 +271,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       id: 'llms-txt', name: 'LLM Index (llms.txt)', layer: 'discovery',
       status: 'fail', score: 0, maxScore: 3, impact: 'critical',
       details: 'No /llms.txt found at domain root (returned 404).',
-      why: 'When AI agents research your site, an llms.txt file gives them a structured index of your core pages, dramatically improving the accuracy of agent-generated responses.',
+      why: 'When AI agents research your site, an llms.txt file gives them a structured index of your core pages, improving the accuracy of agent-generated responses.',
       recommendation: 'Create a plain-markdown /llms.txt index with links to your documentation and key resources.',
       fixSnippet: { language: 'markdown', filename: 'public/llms.txt', code: `# ${domain}\n\n> Concise summary of what ${domain} does and who it is for.\n\n## Core Resources\n- [Documentation](${origin}/docs): Complete guides and API reference.\n- [About](${origin}/about): Overview and architecture.\n- [Pricing](${origin}/pricing): Access tiers and pricing models.` },
       referenceUrl: 'https://llmstxt.org',
@@ -547,7 +547,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       id: 'markdown-negotiation', name: 'Markdown Content Negotiation (Accept: text/markdown)', layer: 'access',
       status: 'pass', score: 3, maxScore: 3, impact: 'critical',
       details: 'Server respects Accept: text/markdown and returns clean markdown.',
-      why: 'Serving Markdown to LLMs saves 70–90% of token context, eliminates HTML parsing hallucinations, and guarantees clean citation extraction.',
+      why: 'Serving Markdown to LLMs cuts HTML boilerplate from token context and reduces parsing errors, which keeps citation extraction clean.',
       referenceUrl: 'https://veda.ng/aistandards',
     });
   } else {
@@ -851,7 +851,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: hasExamples
         ? 'OpenAPI schema includes concrete parameter and response examples.'
         : 'OpenAPI schema detected, but lacks parameter/response examples.',
-      why: 'LLMs perform significantly better when tool definitions include realistic concrete examples alongside type definitions.',
+      why: 'LLMs perform better when tool definitions include realistic concrete examples alongside type definitions.',
       referenceUrl: 'https://openapis.org',
     });
   } else {
@@ -991,12 +991,15 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   // ──────────────────────────────────────────────────────────────────────────
   const securityChecks: CheckResult[] = [];
 
-  // 4.1 HTTPS / TLS
+  // 4.1 HTTPS / TLS (scheme alone is not proof: require a completed TLS fetch)
+  const httpsWorks = Boolean(
+    isHttps && (homepageRes || mdAcceptRes || robotsRes || sitemapRes || openapiRes)
+  );
   securityChecks.push({
     id: 'https-tls', name: 'HTTPS & TLS Transport Security', layer: 'security',
-    status: isHttps ? 'pass' : 'fail',
-    score: isHttps ? 3 : 0, maxScore: 3, impact: 'critical',
-    details: isHttps ? 'Domain serves traffic over secure HTTPS.' : 'Domain is not using HTTPS. Insecure HTTP is deprecated.',
+    status: httpsWorks ? 'pass' : 'fail',
+    score: httpsWorks ? 3 : 0, maxScore: 3, impact: 'critical',
+    details: httpsWorks ? 'Domain serves traffic over secure HTTPS.' : 'Domain did not complete any request over HTTPS.',
     why: 'AI agents and search crawlers expect secure HTTPS endpoints for tool execution and data exchange.',
   });
 
