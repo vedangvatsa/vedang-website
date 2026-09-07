@@ -38,7 +38,7 @@ function DomainIcon({ domain, file }: { domain: string; file: string | null }) {
 
   if (stage === 'letter') {
     return (
-      <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-muted text-[10px] font-semibold text-muted-foreground shrink-0 select-none">
+      <span className="w-4 h-4 min-w-[16px] min-h-[16px] max-w-[16px] max-h-[16px] rounded bg-muted text-[10px] font-semibold text-muted-foreground shrink-0 select-none flex items-center justify-center">
         {domain.charAt(0).toUpperCase()}
       </span>
     );
@@ -49,18 +49,20 @@ function DomainIcon({ domain, file }: { domain: string; file: string | null }) {
     : `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=32`;
 
   return (
-    <img
-      src={src}
-      alt=""
-      width={16}
-      height={16}
-      loading="lazy"
-      onError={() => {
-        if (stage === 'file') setStage('google');
-        else setStage('letter');
-      }}
-      className="w-4 h-4 rounded-sm shrink-0"
-    />
+    <div className="w-4 h-4 min-w-[16px] min-h-[16px] max-w-[16px] max-h-[16px] rounded-sm shrink-0 overflow-hidden flex items-center justify-center bg-muted/20">
+      <img
+        src={src}
+        alt=""
+        width={16}
+        height={16}
+        loading="lazy"
+        onError={() => {
+          if (stage === 'file') setStage('google');
+          else setStage('letter');
+        }}
+        className="w-full h-full object-contain max-w-full max-h-full block"
+      />
+    </div>
   );
 }
 
