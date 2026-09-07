@@ -45,7 +45,7 @@ import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, State
 import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable, InfraFundingByLayer, FundingVelocityChart, CapitalConcentrationChart } from '@/components/mdx/agentstack-charts';
 import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts';
 import { ReceiptsExposureChart, ReceiptsLaborFacts, ReceiptsDemandChart } from '@/components/mdx/receipts-charts';
-import { AgentreadyHeroCard, AgentreadyAdoptionChart, AgentreadyTiersChart, AgentreadyPolicyChart } from '@/components/mdx/agentready-charts';
+import { AgentreadyHeroCard, AgentreadyAdoptionChart, AgentreadyTiersChart, AgentreadyPolicyChart, AgentreadyLeaderboard } from '@/components/mdx/agentready-charts';
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -533,6 +533,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               AgentreadyAdoptionChart,
               AgentreadyTiersChart,
               AgentreadyPolicyChart,
+              AgentreadyLeaderboard,
               ResearchPaper,
               img: (props: any) => (
                 <ZoomableImage

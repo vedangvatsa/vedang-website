@@ -200,3 +200,14 @@ export function AgentreadyPolicyChart() {
     </figure>
   );
 }
+
+/* ─── Embedded Leaderboard Section ─── */
+import { LeaderboardSection } from '@/components/scan/leaderboard';
+
+export function AgentreadyLeaderboard() {
+  return (
+    <figure className="not-prose my-8">
+      <LeaderboardSection />
+    </figure>
+  );
+}
