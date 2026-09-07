@@ -103,6 +103,16 @@ Manual verification of the 910 domains reporting live MCP endpoints revealed ide
 
 Removing this single platform implementation reduces public web MCP availability to near zero. Machine-readability standards adopt quickly when platform providers ship them as default features rather than requiring manual setup by individual site owners.
 
+## Takeaways by role and domain
+
+Different teams face distinct priorities when upgrading origins for machine consumers:
+
+- **Full-Stack & Frontend Engineers:** Add Markdown negotiation (`Accept: text/markdown`) middleware and ensure static SSR HTML fallbacks exist without client-JS rendering dependencies.
+- **SEO & Growth Specialists:** Maintain structured JSON-LD `@graph` entity graphs and publish an `llms.txt` index to preserve citations in AI search products.
+- **Security & Infrastructure Engineers:** Reconcile WAF edge rules with `robots.txt` policies so legitimate citation crawlers are not blocked by accidental 403/429 status codes.
+- **Product Managers & Founders:** Prioritize platform-level defaults over one-off custom integrations. Frameworks and hosting platforms move adoption faster than custom code.
+- **AI & Agent Developers:** Design agents to handle high HTTP refusal rates gracefully and rely on explicit `RateLimit-*` headers to pace requests.
+
 ## Recommended implementation steps
 
 Site operators can improve machine readiness through four straightforward additions:
@@ -118,4 +128,5 @@ All dataset files, probe definitions, and analysis scripts are available under o
 - **Full Research Paper & Data:** [GitHub Research Repository](https://github.com/vedangvatsa/research-paper-framework/tree/main/papers/agentic-web-readiness)
 - **Live Single-Domain Audit Tool:** [veda.ng/scan](https://veda.ng/scan)
 - **Ranked 50,000-Domain Leaderboard:** [veda.ng/scan?tab=leaderboard](https://veda.ng/scan)
+
 
