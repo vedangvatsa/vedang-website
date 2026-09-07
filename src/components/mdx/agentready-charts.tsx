@@ -18,18 +18,18 @@ export function AgentreadyHeroCard() {
           </p>
         </div>
         
-        <div className="flex flex-wrap md:flex-nowrap items-center gap-4 w-full md:w-auto">
-          <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
+        <div className="flex flex-wrap md:flex-nowrap items-center gap-3 w-full md:w-auto">
+          <div className="p-3.5 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[110px]">
             <div className="text-2xl md:text-3xl font-extrabold text-foreground tabular-nums">25.7</div>
-            <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">Mean Score / 100</div>
+            <div className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">Mean Score</div>
           </div>
-          <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
-            <div className="text-2xl md:text-3xl font-extrabold text-primary tabular-nums">6.62%</div>
-            <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">llms.txt Rate</div>
+          <div className="p-3.5 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[110px]">
+            <div className="text-2xl md:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 tabular-nums">6.62%</div>
+            <div className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">llms.txt Rate</div>
           </div>
-          <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
-            <div className="text-2xl md:text-3xl font-extrabold text-amber-600 tabular-nums">21.1%</div>
-            <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">WAF Refusal Gap</div>
+          <div className="p-3.5 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[110px]">
+            <div className="text-2xl md:text-3xl font-extrabold text-rose-600 dark:text-rose-400 tabular-nums">21.1%</div>
+            <div className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">WAF Refusal Gap</div>
           </div>
         </div>
       </div>
@@ -40,26 +40,35 @@ export function AgentreadyHeroCard() {
 /* ─── Headline Check Adoption Chart ─── */
 export function AgentreadyAdoptionChart() {
   const checks = [
-    { label: 'robots.txt AI policy', share: 43.76 },
-    { label: 'Both bot identities served', share: 37.82 },
-    { label: 'JSON-LD structured data', share: 21.37 },
-    { label: 'Author E-E-A-T signals', share: 13.82 },
-    { label: 'llms.txt catalog', share: 6.62 },
-    { label: 'security.txt', share: 4.58 },
-    { label: 'Markdown negotiation', share: 2.95 },
-    { label: 'Live MCP server', share: 1.82 },
-    { label: 'Machine payments', share: 0.33 },
-    { label: 'OpenAPI spec', share: 0.16 },
+    { label: 'robots.txt AI policy', share: 43.76, tier: 'high' },
+    { label: 'Both bot identities served', share: 37.82, tier: 'high' },
+    { label: 'JSON-LD structured data', share: 21.37, tier: 'medium' },
+    { label: 'Author E-E-A-T signals', share: 13.82, tier: 'medium' },
+    { label: 'llms.txt catalog', share: 6.62, tier: 'low' },
+    { label: 'security.txt', share: 4.58, tier: 'low' },
+    { label: 'Markdown negotiation', share: 2.95, tier: 'critical' },
+    { label: 'Live MCP server', share: 1.82, tier: 'critical' },
+    { label: 'Machine payments', share: 0.33, tier: 'critical' },
+    { label: 'OpenAPI spec', share: 0.16, tier: 'critical' },
   ];
 
   const maxVal = 50;
+
+  const barColor = (tier: string) => {
+    switch (tier) {
+      case 'high': return 'bg-emerald-600 dark:bg-emerald-500';
+      case 'medium': return 'bg-teal-600 dark:bg-teal-500';
+      case 'low': return 'bg-amber-500';
+      default: return 'bg-rose-500';
+    }
+  };
 
   return (
     <ChartCard
       title="Adoption Across 10 Headline Machine Checks"
       subtitle="Share of 50,000 audited domains passing each check (%)"
     >
-      <div className="space-y-3">
+      <div className="space-y-3.5">
         {checks.map((c) => {
           const widthPct = (c.share / maxVal) * 100;
           return (
@@ -68,10 +77,10 @@ export function AgentreadyAdoptionChart() {
                 <span className="font-medium text-foreground">{c.label}</span>
                 <span className="font-semibold text-muted-foreground tabular-nums">{c.share.toFixed(2)}%</span>
               </div>
-              <div className="w-full bg-muted/40 h-3.5 rounded-full overflow-hidden flex">
+              <div className="w-full bg-muted/40 h-3 rounded-full overflow-hidden flex">
                 <div
-                  className="bg-primary h-full rounded-full transition-all duration-500"
-                  style={{ width: `${Math.max(widthPct, 1)}%` }}
+                  className={`${barColor(c.tier)} h-full rounded-full transition-all duration-500`}
+                  style={{ width: `${Math.max(widthPct, 1.5)}%` }}
                 />
               </div>
             </div>
@@ -97,13 +106,13 @@ export function AgentreadyTiersChart() {
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {tiers.map((t) => (
-          <div key={t.name} className="p-4 rounded-xl border border-border bg-card/60 space-y-3">
-            <div className="text-xs font-bold text-foreground">{t.name}</div>
-            <div className="space-y-2">
+          <div key={t.name} className="p-4 rounded-xl border border-border bg-card space-y-3">
+            <div className="text-xs font-bold text-foreground uppercase tracking-wider">{t.name}</div>
+            <div className="space-y-3 pt-1">
               <div>
-                <div className="flex justify-between text-[11px] text-muted-foreground mb-1">
+                <div className="flex justify-between text-xs text-muted-foreground mb-1">
                   <span>Mean Score</span>
-                  <span className="font-semibold text-foreground">{t.meanScore} / 100</span>
+                  <span className="font-semibold text-foreground tabular-nums">{t.meanScore} / 100</span>
                 </div>
                 <div className="w-full bg-muted/40 h-2.5 rounded-full overflow-hidden">
                   <div className="bg-primary h-full rounded-full" style={{ width: `${t.meanScore}%` }} />
@@ -111,12 +120,12 @@ export function AgentreadyTiersChart() {
               </div>
 
               <div>
-                <div className="flex justify-between text-[11px] text-muted-foreground mb-1">
+                <div className="flex justify-between text-xs text-muted-foreground mb-1">
                   <span>Both-Bot Refusal</span>
-                  <span className="font-semibold text-amber-600">{t.refusalRate}%</span>
+                  <span className="font-semibold text-rose-600 dark:text-rose-400 tabular-nums">{t.refusalRate}%</span>
                 </div>
                 <div className="w-full bg-muted/40 h-2.5 rounded-full overflow-hidden">
-                  <div className="bg-amber-500 h-full rounded-full" style={{ width: `${t.refusalRate}%` }} />
+                  <div className="bg-rose-500 h-full rounded-full" style={{ width: `${t.refusalRate}%` }} />
                 </div>
               </div>
             </div>
@@ -144,33 +153,36 @@ export function AgentreadyPolicyChart() {
         {groups.map((g) => (
           <div key={g.policy} className="space-y-2">
             <div className="text-xs font-semibold text-foreground">{g.policy}</div>
-            <div className="w-full bg-muted/30 h-7 rounded-lg overflow-hidden flex text-[11px] font-bold text-white">
+            <div className="w-full bg-muted/30 h-6 rounded-lg overflow-hidden flex">
               <div
-                className="bg-emerald-600 flex items-center justify-center transition-all"
+                className="bg-emerald-600 transition-all"
                 style={{ width: `${g.serves}%` }}
                 title={`Serves: ${g.serves}%`}
-              >
-                {g.serves > 15 ? `${g.serves}%` : ''}
-              </div>
+              />
               <div
-                className="bg-amber-500 flex items-center justify-center transition-all"
+                className="bg-amber-500 transition-all"
                 style={{ width: `${g.partial}%` }}
                 title={`Partial: ${g.partial}%`}
-              >
-                {g.partial > 10 ? `${g.partial}%` : ''}
-              </div>
+              />
               <div
-                className="bg-red-500 flex items-center justify-center transition-all"
+                className="bg-rose-600 transition-all"
                 style={{ width: `${g.refuses}%` }}
                 title={`Refuses: ${g.refuses}%`}
-              >
-                {g.refuses > 15 ? `${g.refuses}%` : ''}
-              </div>
+              />
             </div>
-            <div className="flex items-center gap-4 text-[10px] text-muted-foreground pt-0.5">
-              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-600 inline-block" /> Serves ({g.serves}%)</span>
-              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-amber-500 inline-block" /> Partial ({g.partial}%)</span>
-              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-500 inline-block" /> Refuses ({g.refuses}%)</span>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-xs text-muted-foreground pt-0.5">
+              <span className="inline-flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 shrink-0" />
+                <span>Serves: <strong className="text-foreground font-semibold">{g.serves}%</strong></span>
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0" />
+                <span>Partial: <strong className="text-foreground font-semibold">{g.partial}%</strong></span>
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-600 shrink-0" />
+                <span>Refuses: <strong className="text-foreground font-semibold">{g.refuses}%</strong></span>
+              </span>
             </div>
           </div>
         ))}
