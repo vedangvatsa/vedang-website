@@ -218,7 +218,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
         status: 'pass', score: 3, maxScore: 3, impact: 'critical',
         details: 'robots.txt explicitly allows GPTBot, ClaudeBot, and PerplexityBot with dedicated Allow directives.',
         why: 'ChatGPT, Perplexity, and Claude\'s web search bots consult robots.txt before crawling. If your site isn\'t explicitly allowed, you won\'t appear in AI-generated answers — even if your content is publicly accessible via a browser.',
-        referenceUrl: 'https://veda.ng/aistandards',
+        referenceUrl: 'https://veda.ng/scan',
       });
     } else if (allowsGptBot || allowsClaudeBot) {
       discoveryChecks.push({
@@ -228,7 +228,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
         why: 'Partial AI bot coverage means some answer engines (e.g. Perplexity, DeepSeek) may not crawl your content, reducing your citation surface in AI search results.',
         recommendation: 'Add explicit per-agent directives for all major AI answer engines and distinguish them from scraper bots.',
         fixSnippet: { language: 'robots.txt', filename: 'public/robots.txt', code: `# Allow AI Answer Engines\nUser-agent: GPTBot\nUser-agent: ClaudeBot\nUser-agent: PerplexityBot\nUser-agent: OAI-SearchBot\nUser-agent: Google-Extended\nUser-agent: DeepSeekBot\nUser-agent: Applebot-Extended\nAllow: /\n\n# Block Mass Dataset Harvesters\nUser-agent: CCBot\nUser-agent: ByteSpider\nDisallow: /` },
-        referenceUrl: 'https://veda.ng/aistandards',
+        referenceUrl: 'https://veda.ng/scan',
       });
     } else {
       discoveryChecks.push({
@@ -238,7 +238,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
         why: 'Without explicit AI bot rules, answer engines like ChatGPT and Perplexity may not index your content. A catch-all `Allow: *` is insufficient — dedicated per-agent rules signal intent and prevent over-broad blocks from applying.',
         recommendation: 'Add explicit Allow rules for AI answer engines. You can separately block training crawlers (CCBot, ByteSpider) while keeping search bots open.',
         fixSnippet: { language: 'robots.txt', filename: 'public/robots.txt', code: `# Allow AI Answer Engines & Search Bots\nUser-agent: GPTBot\nUser-agent: ClaudeBot\nUser-agent: PerplexityBot\nUser-agent: OAI-SearchBot\nUser-agent: Google-Extended\nUser-agent: DeepSeekBot\nAllow: /\n\n# Block Scraping / Mass Dataset Harvesters\nUser-agent: CCBot\nUser-agent: ByteSpider\nDisallow: /` },
-        referenceUrl: 'https://veda.ng/aistandards',
+        referenceUrl: 'https://veda.ng/scan',
       });
     }
   } else {
@@ -249,7 +249,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       why: 'robots.txt is the first thing AI crawlers check before visiting any page. Without it, bots must assume default behaviour — some may avoid your site entirely, costing you citations in AI search products.',
       recommendation: 'Publish a robots.txt file at the root of your domain with explicit AI bot directives and a Sitemap reference.',
       fixSnippet: { language: 'robots.txt', filename: 'public/robots.txt', code: `User-agent: *\nAllow: /\n\n# Allow AI Answer Engines explicitly\nUser-agent: GPTBot\nUser-agent: ClaudeBot\nUser-agent: PerplexityBot\nAllow: /\n\nSitemap: ${origin}/sitemap.xml` },
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -317,7 +317,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       score: isValidJson ? 2 : 1, maxScore: 2, impact: 'recommended',
       details: isValidJson ? 'Valid ARD catalog found at /.well-known/ard.json.' : 'ard.json exists but contains invalid JSON.',
       why: 'The ARD specification provides a machine-readable directory of agent interfaces, MCP endpoints, and OpenAPI schemas at a standardized .well-known location.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     discoveryChecks.push({
@@ -327,7 +327,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       why: 'Autonomous agents check /.well-known/ard.json to discover MCP endpoints, OpenAPI specs, and authentication requirements in one standardized call.',
       recommendation: 'Publish an ard.json catalog at /.well-known/ard.json describing your machine interfaces.',
       fixSnippet: { language: 'json', filename: 'public/.well-known/ard.json', code: `{\n  "version": "0.91",\n  "name": "${domain}",\n  "description": "Agent interface directory for ${domain}",\n  "mcp": { "endpoint": "${origin}/.well-known/mcp", "transport": "streamable-http" },\n  "openapi": "${origin}/openapi.json",\n  "llmstxt": "${origin}/llms.txt"\n}` },
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -338,7 +338,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 1, maxScore: 1, impact: 'optional',
       details: 'AI catalog found at /.well-known/ai-catalog.json.',
       why: 'Discloses available AI services, models, and integrations to discovery engines.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     discoveryChecks.push({
@@ -347,7 +347,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No AI catalog found at /.well-known/ai-catalog.json.',
       why: 'An AI catalog helps aggregators index the machine interfaces and models your platform supports.',
       recommendation: 'Add /.well-known/ai-catalog.json if your site exposes AI tools or APIs.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -406,7 +406,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 1, maxScore: 1, impact: 'recommended',
       details: 'agents.txt found at domain root specifying machine interaction boundaries.',
       why: 'agents.txt lets you declare what autonomous agents are permitted to do on your site (e.g. read-only, transactions permitted, tool usage boundaries).',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     discoveryChecks.push({
@@ -416,7 +416,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       why: 'Declares operational permissions and boundaries specifically for autonomous agents.',
       recommendation: 'Create an /agents.txt file defining agent permissions.',
       fixSnippet: { language: 'text', filename: 'public/agents.txt', code: `User-agent: *\nAllow-action: read\nAllow-action: search\nDisallow-action: write\nContact: ${origin}/contact` },
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -427,7 +427,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 1, maxScore: 1, impact: 'optional',
       details: 'agents.json found at /.well-known/agents.json.',
       why: 'Provides a structured machine-readable manifest of available agents and tools.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     discoveryChecks.push({
@@ -436,7 +436,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No /.well-known/agents.json found.',
       why: 'Structured agent manifests allow automated agent registries to index your capabilities.',
       recommendation: 'Add /.well-known/agents.json if your site exposes autonomous agents.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -447,7 +447,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 1, maxScore: 1, impact: 'optional',
       details: 'A2A Agent Card found at /.well-known/agent-card.json.',
       why: 'The Agent-to-Agent (A2A) protocol uses agent cards for agent identity and capability negotiation.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     discoveryChecks.push({
@@ -456,7 +456,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No /.well-known/agent-card.json found.',
       why: 'Enables autonomous agent-to-agent capability discovery.',
       recommendation: 'Add /.well-known/agent-card.json if your platform supports A2A interactions.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -471,7 +471,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
         status: 'pass', score: 2, maxScore: 2, impact: 'important',
         details: 'robots.txt clearly distinguishes search bots from mass dataset training scrapers.',
         why: 'Allows your content to be cited in real-time AI search answers (ChatGPT, Perplexity) while protecting against unpaid bulk training scrapers.',
-        referenceUrl: 'https://veda.ng/aistandards',
+        referenceUrl: 'https://veda.ng/scan',
       });
     } else {
       discoveryChecks.push({
@@ -481,7 +481,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
         why: 'Without granular rules, blanket blocks unintentionally remove you from AI citations.',
         recommendation: 'Allow OAI-SearchBot and PerplexityBot while disallowing CCBot and ByteSpider.',
         fixSnippet: { language: 'robots.txt', filename: 'public/robots.txt', code: `# Allow real-time search & citation bots\nUser-agent: OAI-SearchBot\nUser-agent: PerplexityBot\nAllow: /\n\n# Disallow mass training scrapers\nUser-agent: CCBot\nUser-agent: ByteSpider\nDisallow: /` },
-        referenceUrl: 'https://veda.ng/aistandards',
+        referenceUrl: 'https://veda.ng/scan',
       });
     }
   } else {
@@ -490,7 +490,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'fail', score: 0, maxScore: 2, impact: 'important',
       details: 'No robots.txt available to evaluate selective crawler policies.',
       why: 'Granular crawler rules ensure maximum visibility in AI search.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -501,7 +501,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 1, maxScore: 1, impact: 'optional',
       details: 'AI plugin manifest detected at standard location.',
       why: 'Standardizes tool schemas for ChatGPT and assistant extensions.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     discoveryChecks.push({
@@ -510,7 +510,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No plugin manifest found at /.well-known/ai-plugin.json.',
       why: 'Enables ChatGPT and other assistant platforms to discover APIs as interactive plugins.',
       recommendation: 'Provide an ai-plugin.json manifest if exposing assistant tools.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -521,7 +521,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 1, maxScore: 1, impact: 'optional',
       details: 'Machine-optimized JSON sitemap detected.',
       why: 'JSON sitemaps are faster for LLMs to parse than XML representations.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     discoveryChecks.push({
@@ -530,7 +530,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No machine-readable JSON sitemap found at /.well-known/sitemap.json.',
       why: 'JSON sitemaps reduce parsing tokens for autonomous agents.',
       recommendation: 'Generate a lightweight JSON sitemap alongside your XML sitemap.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -548,7 +548,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 3, maxScore: 3, impact: 'critical',
       details: 'Server respects Accept: text/markdown and returns clean markdown.',
       why: 'Serving Markdown to LLMs cuts HTML boilerplate from token context and reduces parsing errors, which keeps citation extraction clean.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     accessChecks.push({
@@ -558,7 +558,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       why: 'AI agents (like Cloudflare\'s Markdown for Agents, LangChain, and Claude) request text/markdown to avoid noisy HTML tags, scripts, and layout elements.',
       recommendation: 'Implement middleware to detect Accept: text/markdown and serve a clean Markdown representation of your content.',
       fixSnippet: { language: 'typescript', filename: 'middleware.ts', code: `export function middleware(req: Request) {\n  const accept = req.headers.get('accept') || '';\n  if (accept.includes('text/markdown')) {\n    // rewrite or return markdown twin\n    return NextResponse.rewrite(new URL('/md' + new URL(req.url).pathname, req.url));\n  }\n}` },
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -569,7 +569,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 2, maxScore: 2, impact: 'important',
       details: 'Direct markdown URL twins detected (e.g. /index.md).',
       why: 'Provides static, deterministic URLs that AI agents can directly fetch and cache.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     accessChecks.push({
@@ -578,7 +578,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No direct .md URL twin served at /index.md.',
       why: 'Many LLM developer tools look for direct .md mirrors of documentation pages.',
       recommendation: 'Serve direct .md file mirrors alongside your HTML pages.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -591,7 +591,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 3, maxScore: 3, impact: 'critical',
       details: 'Server responded 200 OK to GPTBot and PerplexityBot User-Agents without WAF challenges.',
       why: 'Cloudflare and other WAFs often inadvertently block AI User-Agents with 403 Forbidden or JS CAPTCHAs, preventing real-time citations.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else if (botUaOk || perplexityOk) {
     accessChecks.push({
@@ -600,7 +600,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'Partial reachability: one or more AI User-Agents were blocked or challenged.',
       why: 'Inconsistent WAF rules can prevent specific answer engines from indexing your site.',
       recommendation: 'Check your WAF rules and allow verified AI bot User-Agents.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     accessChecks.push({
@@ -609,7 +609,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: `Server returned ${botUaRes?.status || 'error'} when accessed with AI bot User-Agents.`,
       why: 'A WAF or security rule is blocking legitimate AI crawlers from accessing your content.',
       recommendation: 'Whitelist GPTBot, ClaudeBot, and PerplexityBot in your CDN/WAF security settings.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -871,7 +871,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 2, maxScore: 2, impact: 'recommended',
       details: 'Machine-readable authentication guide found at /auth.md.',
       why: 'AI agents need clear, structured documentation on how to authenticate (API keys, OAuth2, keyless access, rate limits).',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     usabilityChecks.push({
@@ -881,7 +881,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       why: 'Clear authentication documentation prevents agent auth failures and keyless access confusion.',
       recommendation: 'Publish a concise /auth.md explaining how machines should authenticate or declaring keyless open access.',
       fixSnippet: { language: 'markdown', filename: 'public/auth.md', code: `# Authentication Guide\n\nAll public endpoints on ${domain} are keyless and open access.\nNo API key or registration is required.\n\n## Rate Limits\n- Standard: 60 requests per minute per IP\n- Headers: RFC standard RateLimit-* headers are returned with every response.` },
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -958,7 +958,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
         ? 'OpenAPI schema specifies dry-run parameters or idempotency headers.'
         : 'No dry-run parameters or idempotency keys detected in API specifications.',
       why: 'Autonomous agents need dry-run and idempotency validation to safely simulate state changes before executing financial or mutating actions.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   } else {
     usabilityChecks.push({
@@ -966,7 +966,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'na', score: 0, maxScore: 0, impact: 'optional',
       details: 'Skipped: Relevant when OpenAPI specifications are present.',
       why: 'Autonomous agents need dry-run and idempotency validation to safely simulate state changes before executing financial or mutating actions.',
-      referenceUrl: 'https://veda.ng/aistandards',
+      referenceUrl: 'https://veda.ng/scan',
     });
   }
 
@@ -1136,7 +1136,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       ? 'Security or terms text mentions AI safety, prompt injection, or automated agent handling (keyword match, not a verified policy).'
       : 'Security disclosures do not explicitly address AI or prompt-injection vulnerability reporting.',
     why: 'Helps red-teamers and researchers report prompt injection, SSRF, or tool-calling security flaws responsibly.',
-    referenceUrl: 'https://veda.ng/aistandards',
+    referenceUrl: 'https://veda.ng/scan',
   });
 
   // ──────────────────────────────────────────────────────────────────────────
@@ -1482,6 +1482,97 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     });
   }
 
+  // 5.16 HTML5 Doctype & Standards Mode
+  const hasDoctype = Boolean(homepageHtml.match(/<!doctype\s+html/i));
+  seoChecks.push({
+    id: 'web-doctype', name: 'HTML5 Standards Mode (<!doctype html>)', layer: 'seo',
+    status: hasDoctype ? 'pass' : 'fail',
+    score: hasDoctype ? 1 : 0, maxScore: 1, impact: 'important',
+    details: hasDoctype
+      ? '<!doctype html> declared on first line, ensuring modern standards rendering mode.'
+      : 'Missing <!doctype html> declaration; browsers and headless agents may enter quirks mode.',
+    why: 'Without standard doctype declaration, rendering engines enter quirks mode, causing CSS layout failures and unpredictable headless DOM parsing.',
+    referenceUrl: 'https://html.spec.whatwg.org/multipage/syntax.html#the-doctype',
+  });
+
+  // 5.17 Mobile Viewport Meta Tag
+  const hasViewport = Boolean(homepageHtml.match(/<meta[^>]+name=["']viewport["'][^>]+content=["'][^"']*width=device-width[^"']*["']/i));
+  seoChecks.push({
+    id: 'web-viewport', name: 'Responsive Mobile Viewport', layer: 'seo',
+    status: hasViewport ? 'pass' : 'warning',
+    score: hasViewport ? 1 : 0, maxScore: 1, impact: 'important',
+    details: hasViewport
+      ? 'Valid responsive viewport declared with width=device-width.'
+      : 'Missing or non-standard viewport meta tag; mobile browsers may render at desktop scale.',
+    why: 'Mobile crawlers and multimodal vision agents require responsive viewport declarations to render content accurately for inspection.',
+    referenceUrl: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag',
+  });
+
+  // 5.18 Heading Hierarchy Integrity
+  const hasH1 = Boolean(homepageHtml.match(/<h1\b[^>]*>/i));
+  const hasH3 = Boolean(homepageHtml.match(/<h3\b[^>]*>/i));
+  const hasH2 = Boolean(homepageHtml.match(/<h2\b[^>]*>/i));
+  const headingHierarchyValid = hasH1 && (!hasH3 || hasH2);
+  seoChecks.push({
+    id: 'web-heading-hierarchy', name: 'Heading Hierarchy Integrity (H1 -> H2 -> H3)', layer: 'seo',
+    status: headingHierarchyValid ? 'pass' : 'warning',
+    score: headingHierarchyValid ? 1 : 0, maxScore: 1, impact: 'important',
+    details: headingHierarchyValid
+      ? (hasH1 ? 'Semantic heading outline begins with <h1> and maintains logical level nesting.' : 'No heading tags present.')
+      : 'Heading levels skip hierarchy (e.g. <h3> without preceding <h2>, or missing primary <h1>).',
+    why: 'Screen readers, search crawlers, and LLM text chunkers construct document outlines from nested headings; skipping levels confuses hierarchical context.',
+    referenceUrl: 'https://www.w3.org/WAI/tutorials/page-structure/headings/',
+  });
+
+  // 5.19 Color Scheme & Contrast Support
+  const hasColorScheme = Boolean(
+    homepageHtml.match(/<meta[^>]+name=["']color-scheme["']/i) ||
+    homepageHtml.match(/prefers-color-scheme/i) ||
+    homepageHtml.match(/class=["'][^"']*(?:dark|theme-)[^"']*["']/i)
+  );
+  seoChecks.push({
+    id: 'web-color-scheme', name: 'Theme & Contrast Adaptability (color-scheme)', layer: 'seo',
+    status: hasColorScheme ? 'pass' : 'warning',
+    score: hasColorScheme ? 1 : 0, maxScore: 1, impact: 'recommended',
+    details: hasColorScheme
+      ? 'Color scheme or dark/light theme signals detected for background paint and contrast adaptation.'
+      : 'No color-scheme meta tag or media query signals detected.',
+    why: 'Declaring color-scheme prevents flash-of-white in dark mode and assists vision models and accessibility engines in evaluating high-contrast palettes.',
+    referenceUrl: 'https://web.dev/articles/color-scheme',
+  });
+
+  // 5.20 Form Labels & ARIA Landmarks
+  const hasInputs = Boolean(homepageHtml.match(/<input\b|<textarea\b|<select\b/i));
+  const hasLabels = Boolean(homepageHtml.match(/<label\b|aria-label=|aria-labelledby=/i));
+  const hasLandmarks = Boolean(homepageHtml.match(/<header\b|<nav\b|<main\b|<footer\b|<aside\b|role=["']main["']/i));
+  const accessibilityPass = (!hasInputs || hasLabels) && hasLandmarks;
+  seoChecks.push({
+    id: 'web-a11y-landmarks', name: 'Semantic Landmarks & Form Accessibility (WCAG 2.2)', layer: 'seo',
+    status: accessibilityPass ? 'pass' : 'warning',
+    score: accessibilityPass ? 1 : 0, maxScore: 1, impact: 'important',
+    details: accessibilityPass
+      ? 'Semantic HTML landmarks (<main>, <header>, <nav>, <footer>) and accessible form controls detected.'
+      : 'Missing semantic landmark regions (<main>, <header>) or unlabelled interactive form inputs.',
+    why: 'Screen readers and browser automation agents (Playwright, Puppeteer, Claude Computer Use) navigate via ARIA landmarks and accessible control names.',
+    referenceUrl: 'https://www.w3.org/TR/WCAG22/',
+  });
+
+  // 5.21 Privacy Policy & Compliance Notice
+  const hasPrivacy = Boolean(
+    homepageHtml.match(/href=["'][^"']*(?:privacy|privacy-policy|terms)["']/i) ||
+    secHeaders?.get('link')?.includes('privacy')
+  );
+  seoChecks.push({
+    id: 'web-privacy-policy', name: 'Privacy Policy & Transparency Link', layer: 'seo',
+    status: hasPrivacy ? 'pass' : 'warning',
+    score: hasPrivacy ? 1 : 0, maxScore: 1, impact: 'recommended',
+    details: hasPrivacy
+      ? 'Privacy policy link detected on landing page.'
+      : 'No link to a privacy policy found on the landing page.',
+    why: 'Search engines, app stores, and enterprise AI procurement agents require explicit privacy disclosures for trust verification.',
+    referenceUrl: 'https://gdpr.eu/privacy-notice/',
+  });
+
   // ──────────────────────────────────────────────────────────────────────────
   // LAYER 6 — Micropayments & Machine Commerce (3 checks)
   // ──────────────────────────────────────────────────────────────────────────
@@ -1538,7 +1629,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       : 'No machine-readable terms of use found at /terms-of-use.md.',
     why: 'Defines commercial usage terms, rate limits, and liability boundaries for autonomous agent transactions.',
     recommendation: 'Add /terms-of-use.md to establish clear machine terms for automated agents.',
-    referenceUrl: 'https://veda.ng/aistandards',
+    referenceUrl: 'https://veda.ng/scan',
   });
 
   // ──────────────────────────────────────────────────────────────────────────
@@ -1584,7 +1675,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     { id: 'access' as const, name: 'Access', description: 'Markdown twins, Accept: text/markdown, SSR content, bot reachability', ...accessScore, checks: accessChecks },
     { id: 'usability' as const, name: 'Usability & MCP', description: 'MCP Streamable servers, OpenAPI 3.1 schema, examples, auth guide', ...usabilityScore, checks: usabilityChecks },
     { id: 'security' as const, name: 'Security', description: 'HTTPS, HSTS preload, CSP, nosniff, RFC 9116 security.txt', ...securityScore, checks: securityChecks },
-    { id: 'seo' as const, name: 'SEO & Structured Data', description: 'Title, Meta Description, JSON-LD @graph, E-E-A-T sameAs, RSS feeds', ...seoScore, checks: seoChecks },
+    { id: 'seo' as const, name: 'SEO & Web Standards', description: 'HTML5, A11y, Title/Meta, JSON-LD @graph, E-E-A-T sameAs, RSS feeds', ...seoScore, checks: seoChecks },
     { id: 'payments' as const, name: 'Micropayments', description: 'x402 / L402 macaroons, WebLN, machine terms of use', ...paymentsScore, checks: paymentsChecks },
   ];
 

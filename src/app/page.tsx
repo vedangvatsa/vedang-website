@@ -28,8 +28,6 @@ const resources = [
   { title: 'LinkedIn Translator', url: '/lit' },
   { title: 'Swarm Prediction', url: '/swarm-prediction' },
   { title: 'Agentic Readiness Scanner', url: '/scan' },
-  { title: 'AI Discovery Standards', url: '/aistandards' },
-  { title: 'Website Checklist', url: '/sitecheck' },
   { title: 'AI Reports Library', url: '/ailib' },
   { title: 'Web3 Reports Library', url: '/web3lib' },
   { title: 'Web3 & AI Glossary', url: '/glossary' },

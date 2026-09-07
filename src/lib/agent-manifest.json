@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:43:58.632Z",
+  "generatedAt": "2026-09-07T13:48:44.865Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -25,6 +25,7 @@
     "/agentic/module-6-protocols",
     "/agentic/module-7-build-agent",
     "/agenticweb",
+    "/agentready",
     "/agents-eating-saas",
     "/agentsaas",
     "/agentspeak",
@@ -669,6 +670,7 @@
     "/agentic/module-6-protocols",
     "/agentic/module-7-build-agent",
     "/agenticweb",
+    "/agentready",
     "/agentsaas",
     "/agentspeak",
     "/agentstack",
@@ -677,7 +679,6 @@
     "/aieconomy",
     "/aiindia",
     "/ailib",
-    "/aistandards",
     "/algorithms",
     "/ambient",
     "/api",
@@ -1059,7 +1060,6 @@
     "/simulayer",
     "/singapore",
     "/singularity",
-    "/sitecheck",
     "/socialscience",
     "/stateagents",
     "/stateofai",

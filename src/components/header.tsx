@@ -83,12 +83,6 @@ export function Header() {
                   <Link href="/scan">Agentic Scanner</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/aistandards">AI Discovery Standards</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/sitecheck">Site Checklist</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
                   <Link href="/glossary">Glossary</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -162,8 +156,6 @@ export function Header() {
                   <MobileNavLink href="/glossary" onClose={closeMobile}>Glossary</MobileNavLink>
                   <MobileNavLink href="/lit" onClose={closeMobile}>LinkedIn Translator</MobileNavLink>
                   <MobileNavLink href="/swarm-prediction" onClose={closeMobile}>Swarm Prediction</MobileNavLink>
-                  <MobileNavLink href="/aistandards" onClose={closeMobile}>AI Discovery Standards</MobileNavLink>
-                  <MobileNavLink href="/sitecheck" onClose={closeMobile}>Site Checklist</MobileNavLink>
                   <MobileNavLink href="/noslop" onClose={closeMobile}>NoSlop</MobileNavLink>
                 </MobileNavSection>
 

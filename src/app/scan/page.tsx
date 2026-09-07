@@ -43,7 +43,7 @@ const LAYER_LABELS: Record<string, string> = {
   access: 'Access',
   usability: 'Usability',
   security: 'Security',
-  seo: 'SEO',
+  seo: 'SEO & Web Standards',
   payments: 'Payments',
 };
 
@@ -578,19 +578,19 @@ export default function ScanPage() {
             {/* Layer breakdown table */}
             <details className="border border-border rounded-lg bg-card group">
               <summary className="px-4 py-2.5 text-sm text-muted-foreground cursor-pointer list-none flex items-center justify-between gap-2 hover:text-foreground transition-colors">
-                <span>What gets checked: 61 probes across 6 layers</span>
+                <span>What gets checked: 67 probes across 6 layers</span>
                 <span className="transition-transform duration-150 group-open:rotate-180">
                   <IconChevronDown className="w-3.5 h-3.5" />
                 </span>
               </summary>
               <div className="border-t border-border divide-y divide-border">
               {[
-                { layer: 'Discovery',      probes: 13, desc: 'robots.txt AI policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, sitemaps' },
-                { layer: 'Access',         probes: 9,  desc: 'Markdown content negotiation, .md URL twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
-                { layer: 'Usability & MCP', probes: 10, desc: 'Streamable MCP servers, OpenAPI 3.1 with examples, auth guides, RFC 8414 OAuth, TDMRep' },
-                { layer: 'Security',       probes: 11, desc: 'HTTPS, HSTS preload, CSP, nosniff, frame protection, RFC 9116 security.txt, RFC 9421 signatures' },
-                { layer: 'SEO & Citations', probes: 15, desc: 'Title/Meta tags, JSON-LD @graph, E-E-A-T sameAs links, inverted pyramid Q&A, RSS feeds' },
-                { layer: 'Micropayments',  probes: 3,  desc: 'L402 / HTTP 402, WebLN wallet discovery, machine terms of service' },
+                { layer: 'Discovery',           probes: 13, desc: 'robots.txt AI policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, sitemaps' },
+                { layer: 'Access',              probes: 9,  desc: 'Markdown content negotiation, .md URL twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
+                { layer: 'Usability & MCP',      probes: 10, desc: 'Streamable MCP servers, OpenAPI 3.1 with examples, auth guides, RFC 8414 OAuth, TDMRep' },
+                { layer: 'Security',            probes: 11, desc: 'HTTPS, HSTS preload, CSP, nosniff, frame protection, RFC 9116 security.txt, RFC 9421 signatures' },
+                { layer: 'SEO & Web Standards', probes: 21, desc: 'HTML5 doctype, WCAG 2.2 a11y, viewport, headings, JSON-LD @graph, E-E-A-T sameAs, RSS feeds' },
+                { layer: 'Micropayments',       probes: 3,  desc: 'L402 / HTTP 402, WebLN wallet discovery, machine terms of service' },
               ].map(item => (
                 <div key={item.layer} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 px-4 py-2.5">
                   <div className="flex items-center justify-between sm:justify-start gap-2 shrink-0 sm:w-36 pt-px">
@@ -829,11 +829,11 @@ export default function ScanPage() {
                 <Link href="/developers" className="text-primary hover:underline inline-flex items-center gap-1">
                   <span>API docs</span><IconArrowRight className="w-2.5 h-2.5" />
                 </Link>
-                <Link href="/aistandards" className="text-primary hover:underline inline-flex items-center gap-1">
-                  <span>AI standards</span><IconArrowRight className="w-2.5 h-2.5" />
+                <Link href="/openapi.json" target="_blank" className="text-primary hover:underline inline-flex items-center gap-1">
+                  <span>OpenAPI spec</span><IconArrowRight className="w-2.5 h-2.5" />
                 </Link>
-                <Link href="/sitecheck" className="text-primary hover:underline inline-flex items-center gap-1">
-                  <span>Web checklist</span><IconArrowRight className="w-2.5 h-2.5" />
+                <Link href="/.well-known/mcp" className="text-primary hover:underline inline-flex items-center gap-1">
+                  <span>MCP endpoint</span><IconArrowRight className="w-2.5 h-2.5" />
                 </Link>
               </div>
             </div>

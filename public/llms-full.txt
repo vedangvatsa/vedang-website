@@ -2,6 +2,125 @@
 
 > Official personal website and research publication platform of Vedang Vatsa (FRSA). Complete unpaginated full-text of all published essays, profile references, and machine interfaces on veda.ng.
 
+## How Agent-Ready Is the Web? A 50,000-Domain Census
+URL: https://veda.ng/agentready
+Summary: 
+
+Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it reads reviews, compares prices, and hands you a shortlist. What you never see is the friction underneath. On roughly three of every five websites it visits, the bot fetching pages for that answer gets refused at the door. On most of the rest, it must scrape layout markup built for human eyes. I spent a week measuring exactly how bad it is across 50,000 domains, applying the same 61 machine-readability checks to every origin. The mean score came back 25.7 out of 100.
+
+## What we measured, and why those things
+
+An autonomous agent performs six consecutive jobs on a website: it finds the origin, reads its content, invokes tools, relies on secure transport, cites facts, and executes payments. The audit framework maps directly to these steps across six layers:
+
+1. **Discovery (13 checks):** `robots.txt` AI crawler rules, [`llms.txt`](https://llmstxt.org/) index specifications, `llms-full.txt`, ARD catalog (`/.well-known/ard.json`), [RFC 9727 API Catalog](https://datatracker.ietf.org/doc/rfc9727/), `agents.txt`, and XML/JSON sitemaps.
+2. **Access (9 checks):** Markdown content negotiation (`Accept: text/markdown`), `.md` static URL twins, AI-specific robots meta tags (`max-snippet`, `max-image-preview`), SSR no-JS fallbacks, and `RateLimit-*` HTTP response headers.
+3. **Usability & MCP (10 checks):** Live [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) HTTP endpoints (`/.well-known/mcp`), [OpenAPI 3.1](https://spec.openapis.org/oas/v3.1.0) specifications with concrete parameters, machine authentication guides (`/auth.md`), and [RFC 8414 OAuth Metadata](https://datatracker.ietf.org/doc/html/rfc8414).
+4. **Security (11 checks):** HTTPS enforcement, [HSTS Preload](https://hstspreload.org/) (`max-age=63072000; includeSubDomains; preload`), Content Security Policy (CSP), `X-Content-Type-Options: nosniff`, [RFC 9116 security.txt](https://datatracker.ietf.org/doc/html/rfc9116), and HTTP Message Signatures ([RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421)).
+5. **SEO & Citations (15 checks):** Standard title/meta tags, [JSON-LD `@graph`](https://json-ld.org/) entity schemas (`Organization`, `WebSite`, `Article`), E-E-A-T `sameAs` authority links, inverted pyramid content structure, and active RSS/Atom feeds.
+6. **Payments (3 checks):** [L402 / HTTP 402](https://l402.org/) payment headers, [WebLN](https://webln.guide/) wallet discovery, and machine terms of service (`/terms-of-use.md`).
+
+Each check consists of a single deterministic HTTP request with a clear, automated pass rule. No logins, no browser rendering overhead, and no manual rating.
+
+- **50,000**: Domains audited from Tranco top-1M sample (Census dataset)
+- **25.7**: Mean agentic readiness score / 100 (50,000-domain census)
+- **61**: Deterministic probes per domain (Scanner probe specification)
+- **0**: Origins excluded or hand-picked (Sampling manifest)
+
+The sample avoids hand-picked bias. We drew from the [Tranco top-1M research ranking](https://tranco-list.eu/) across three stratified bands under a published random seed:
+- Ranks 1 to 10,000 (all 10,000 domains)
+- Ranks 10,001 to 100,000 (20,000 randomly selected domains)
+- Ranks 100,001 to 1,000,000 (20,000 randomly selected domains)
+
+A [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux) cross-reference flag identifies origins with verified human browser traffic. The entire dataset, code, and 50,000-domain leaderboard are published on the [scan page](https://veda.ng/scan) and in the [research repository](https://github.com/vedangvatsa/research-paper-framework/tree/main/papers/agentic-web-readiness).
+
+## The headline adoption numbers
+
+The public web shows minimal adoption for machine-specific standards:
+- **llms.txt catalog:** 6.62% of domains publish a valid index file at root.
+- **Markdown content negotiation:** 2.95% respond to `Accept: text/markdown` with clean Markdown text.
+- **Live MCP server:** 1.82% expose an active Model Context Protocol endpoint.
+- **OpenAPI specification:** 0.16% publish a parseable OpenAPI 3.0/3.1 contract at a standard location.
+
+An `llms.txt` file is a plain Markdown file outlining core site URLs. Content negotiation uses standard HTTP headers supported by web servers for decades. Yet 75.4% of audited origins score below 30 out of 100, and only 4 domains in 50,000 reach a score above 85.
+
+These findings align with independent research. A [Thunderbit crawl of the Tranco top 10,000](https://thunderbit.com/blog/llms-txt-website-trend) recorded 5.86% valid `llms.txt` files, matching our 6.62% overall figure. Server-side log analysis from [137,000 Ahrefs-monitored domains](https://ahrefs.com/blog/llmstxt-study/) recorded that 97% of published `llms.txt` files received zero requests over a 30-day window.
+
+## Measurement methodology and rate limits
+
+Scanning 50,000 origins without triggering network artifacts requires careful rate control:
+- 34 parallel probes per domain with a 4,500ms timeout per request.
+- Maximum concurrency capped at 3 target domains simultaneously.
+- Standardized custom User-Agent identifying the crawler and purpose.
+
+Initial test runs at high concurrency yielded a 95% origin failure rate caused by source-network throttling. Re-scanning failed origins with controlled rate limits adjusted scores from 6 up to 46. We discarded the high-speed pass, implemented strict worker pacing, and performed a secondary verification pass across all low-scoring domains.
+
+## Layer-by-layer breakdown
+
+Measuring readiness across functional layers highlights where infrastructure succeeds and where machine support lags:
+
+1. **Security (Mean: 41.0 / 100):** Transport security headers (HTTPS, HSTS, basic CSP) carry over directly from browser-focused web standards.
+2. **SEO & Citations (Mean: 28.9 / 100):** Basic meta tags and JSON-LD structured data are common on commercial sites, though missing on utility endpoints.
+3. **Access (Mean: 23.9 / 100):** While static pages allow standard crawling, Markdown mirrors (`.md` twins) and explicit `RateLimit-*` headers remain rare.
+4. **Discovery (Mean: 20.7 / 100):** `robots.txt` is common, but machine discovery formats (`llms.txt`, ARD catalogs) are infrequently deployed.
+5. **Payments (Mean: 9.8 / 100):** Programmatic payment headers (L402 / HTTP 402) and machine Terms of Service are almost nonexistent outside specialized crypto/developer services.
+6. **Usability & MCP (Mean: 7.4 / 100):** Interactive tool interfaces and machine API contracts represent the lowest-scoring category.
+
+## Domain rank versus readiness
+
+Dividing results across Tranco rank tiers shows almost no correlation between domain popularity and machine readiness:
+
+- **Ranks 1 to 10,000:** Mean score 26.1 / 100 (Both-bot refusal rate: 56.2%)
+- **Ranks 10,001 to 100,000:** Mean score 25.2 / 100 (Both-bot refusal rate: 55.6%)
+- **Ranks 100,001 to 1,000,000:** Mean score 25.9 / 100 (Both-bot refusal rate: 52.2%)
+
+High-traffic domains often employ strict WAF rules, CDN edge security, and anti-scraping protections that block automated bots by default. Consequently, top-tier origins score similarly to tail domains.
+
+However, cross-referencing with CrUX field data reveals a different trend: origins with verified human browser traffic demonstrate roughly double the adoption rates for `llms.txt` and structured data compared to unvisited domains.
+
+## WAF rules and policy contradictions
+
+Comparing `robots.txt` declarations against HTTP response status codes reveals a major configuration gap:
+
+- **Explicit Allow Policy:** Among 21,881 domains whose `robots.txt` explicitly allows AI crawlers, 21.1% (4,619 domains) still block those same crawlers with HTTP 403, 429, or 503 status codes at the WAF/CDN layer.
+- **Explicit Restrict Policy:** Out of domains restricting AI crawlers in `robots.txt`, 28.4% still serve full page content over HTTP without enforcement.
+- **No Declared Policy:** Among origins with no AI-specific rules, 82.4% block AI crawler identities at the edge.
+
+This mismatch occurs when security teams manage WAF settings independently from marketing or engineering teams updating `robots.txt`.
+
+## Platform-driven adoption patterns
+
+Manual verification of the 910 domains reporting live MCP endpoints revealed identical JSON-RPC responses across unrelated retail stores. Every instance originated from a single major e-commerce platform that enabled a default catalog-search MCP tool for its hosted storefronts.
+
+Removing this single platform implementation reduces public web MCP availability to near zero. Machine-readability standards adopt quickly when platform providers ship them as default features rather than requiring manual setup by individual site owners.
+
+## Takeaways by role and domain
+
+Different teams face distinct priorities when upgrading origins for machine consumers:
+
+- **Full-Stack & Frontend Engineers:** Add Markdown negotiation (`Accept: text/markdown`) middleware and ensure static SSR HTML fallbacks exist without client-JS rendering dependencies.
+- **SEO & Growth Specialists:** Maintain structured JSON-LD `@graph` entity graphs and publish an `llms.txt` index to preserve citations in AI search products.
+- **Security & Infrastructure Engineers:** Reconcile WAF edge rules with `robots.txt` policies so legitimate citation crawlers are not blocked by accidental 403/429 status codes.
+- **Product Managers & Founders:** Prioritize platform-level defaults over one-off custom integrations. Frameworks and hosting platforms move adoption faster than custom code.
+- **AI & Agent Developers:** Design agents to handle high HTTP refusal rates gracefully and rely on explicit `RateLimit-*` headers to pace requests.
+
+## Recommended implementation steps
+
+Site operators can improve machine readiness through four straightforward additions:
+
+1. **Publish an `llms.txt` index:** Add a clean Markdown file at `/llms.txt` following the [llmstxt.org specification](https://llmstxt.org/).
+2. **Enable Markdown negotiation:** Configure server middleware to handle `Accept: text/markdown` headers by returning clean Markdown content.
+3. **Align crawler policies:** Update `robots.txt` with clear directives for specific AI agents (`GPTBot`, `ClaudeBot`, `PerplexityBot`), and match WAF/CDN rules to those policies.
+4. **Expose structured schemas:** Provide an OpenAPI 3.1 specification at `/openapi.json` or `/.well-known/openapi.json` with concrete parameter examples.
+
+## Reproducing the audit
+
+All dataset files, probe definitions, and analysis scripts are available under open-source licenses:
+- **Full Research Paper & Data:** [GitHub Research Repository](https://github.com/vedangvatsa/research-paper-framework/tree/main/papers/agentic-web-readiness)
+- **Live Single-Domain Audit Tool:** [veda.ng/scan](https://veda.ng/scan)
+- **Ranked 50,000-Domain Leaderboard:** [veda.ng/scan?tab=leaderboard](https://veda.ng/scan)
+
+---
+
 ## How India Uses AI
 URL: https://veda.ng/aiindia
 Summary: An analysis of AI adoption in India across consumer chat apps, public-sector backend automation, enterprise IT services, and data annotation labour.
