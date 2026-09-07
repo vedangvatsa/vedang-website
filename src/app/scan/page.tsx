@@ -1031,17 +1031,15 @@ export default function ScanPage() {
             </div>
 
             {/* API reference */}
-            <div className="p-4 rounded-lg border border-border bg-card text-xs space-y-3">
-              <SectionHeader
-                title="API"
-              />
+            <div className="space-y-2.5 pt-2">
+              <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">
+                API
+              </h3>
               <CodeBlock
+                filename="curl"
                 code={`curl -X POST https://veda.ng/api/v1/scan \\\n  -H "Content-Type: application/json" \\\n  -d '{"url":"${result.domain}"}'`}
               />
               <div className="flex flex-wrap gap-4 text-xs font-medium pt-1">
-                <Link href="/developers" className="text-primary hover:underline inline-flex items-center gap-1">
-                  <span>API docs</span><IconArrowRight className="w-2.5 h-2.5" />
-                </Link>
                 <Link href="/openapi.json" target="_blank" className="text-primary hover:underline inline-flex items-center gap-1">
                   <span>OpenAPI spec</span><IconArrowRight className="w-2.5 h-2.5" />
                 </Link>
