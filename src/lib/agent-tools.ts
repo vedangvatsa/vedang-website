@@ -163,7 +163,6 @@ export const MCP_TOOLS: McpToolDefinition[] = [
       type: 'object',
       properties: {
         url: { type: 'string', description: 'Domain or URL to audit (e.g. "stripe.com" or "https://example.com").' },
-        refresh: { type: 'boolean', description: 'Bypass cache and force a fresh live scan.' },
       },
       required: ['url'],
     },

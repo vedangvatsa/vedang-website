@@ -13,6 +13,31 @@ interface CacheEntry {
 const cache = new Map<string, CacheEntry>();
 const CACHE_TTL_MS = 10 * 60 * 1000; // 10 minutes cache
 
+// Best-effort per-IP throttle: one inbound scan fans out to ~40 outbound
+// probes, so uncapped callers can turn this endpoint into an amplifier.
+// Single-instance memory only; treat as a safety valve, not a quota system.
+const rateBuckets = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 20;
+const RATE_WINDOW_MS = 60 * 1000;
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const bucket = rateBuckets.get(ip);
+  if (!bucket || now >= bucket.resetAt) {
+    rateBuckets.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    if (rateBuckets.size > 5000) rateBuckets.delete(rateBuckets.keys().next().value as string);
+    return false;
+  }
+  bucket.count += 1;
+  return bucket.count > RATE_LIMIT;
+}
+
+function clientIp(request: NextRequest): string {
+  const forwarded = request.headers.get('x-forwarded-for');
+  if (forwarded) return forwarded.split(',')[0].trim();
+  return request.headers.get('x-real-ip')?.trim() || 'unknown';
+}
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const targetUrl = searchParams.get('url') || searchParams.get('domain') || searchParams.get('q');
@@ -22,7 +47,7 @@ export async function GET(request: NextRequest) {
     return jsonError('MISSING_URL', 'Missing required query parameter "url" (e.g. /api/v1/scan?url=example.com)', 400);
   }
 
-  return handleScan(targetUrl, bypassCache);
+  return handleScan(targetUrl, bypassCache, request);
 }
 
 export async function POST(request: NextRequest) {
@@ -41,10 +66,13 @@ export async function POST(request: NextRequest) {
     return jsonError('MISSING_URL', 'Missing "url" in JSON request body', 400);
   }
 
-  return handleScan(targetUrl, bypassCache);
+  return handleScan(targetUrl, bypassCache, request);
 }
 
-async function handleScan(targetUrl: string, bypassCache: boolean) {
+async function handleScan(targetUrl: string, bypassCache: boolean, request: NextRequest) {
+  if (isRateLimited(clientIp(request))) {
+    return jsonError('RATE_LIMITED', 'Too many scan requests. Wait a minute and retry.', 429);
+  }
   const cacheKey = targetUrl.toLowerCase().trim().replace(/^https?:\/\//, '').replace(/\/+$/, '');
 
   if (!bypassCache) {

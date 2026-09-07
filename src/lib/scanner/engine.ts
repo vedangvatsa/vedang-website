@@ -885,8 +885,10 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     });
   }
 
-  // 3.6 OAuth 2.0 Agent Discovery
-  if (oauthAuthServerRes?.ok || oauthProtectedRes?.ok) {
+  // 3.6 OAuth 2.0 Agent Discovery (body required: an empty 200 proves nothing)
+  const oauthAuthOk = Boolean(oauthAuthServerRes?.ok && oauthAuthServerRes.text && oauthAuthServerRes.text.length > 20);
+  const oauthProtectedOk = Boolean(oauthProtectedRes?.ok && oauthProtectedRes.text && oauthProtectedRes.text.length > 20);
+  if (oauthAuthOk || oauthProtectedOk) {
     usabilityChecks.push({
       id: 'oauth-agent-discovery', name: 'OAuth 2.0 Agent Discovery (RFC 8414)', layer: 'usability',
       status: 'pass', score: 1, maxScore: 1, impact: 'optional',
@@ -912,7 +914,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       status: 'pass', score: 1, maxScore: 1, impact: 'recommended',
       details: 'W3C TDMRep reservation detected at /.well-known/tdmrep.json.',
       why: 'The W3C TDM Reservation Protocol provides legal and technical clarity on AI text and data mining rights under EU and international copyright frameworks.',
-      referenceUrl: 'https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240214/',
+      referenceUrl: 'https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240510/',
     });
   } else {
     usabilityChecks.push({
@@ -921,7 +923,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No TDMRep file found at /.well-known/tdmrep.json.',
       why: 'Declaring TDM rights provides explicit machine-readable copyright terms for AI training vs inference.',
       recommendation: 'Add a tdmrep.json file declaring your text and data mining policies.',
-      referenceUrl: 'https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240214/',
+      referenceUrl: 'https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240510/',
     });
   }
 
@@ -995,7 +997,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     status: isHttps ? 'pass' : 'fail',
     score: isHttps ? 3 : 0, maxScore: 3, impact: 'critical',
     details: isHttps ? 'Domain serves traffic over secure HTTPS.' : 'Domain is not using HTTPS. Insecure HTTP is deprecated.',
-    why: 'All modern AI agents and search crawlers reject insecure HTTP endpoints for tool execution and data exchange.',
+    why: 'AI agents and search crawlers expect secure HTTPS endpoints for tool execution and data exchange.',
   });
 
   // 4.2 HSTS
@@ -1127,8 +1129,8 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     id: 'security-ai-disclosure', name: 'AI Safety Vulnerability Policy', layer: 'security',
     status: mentionsAiSafety ? 'pass' : 'warning',
     score: mentionsAiSafety ? 1 : 0, maxScore: 1, impact: 'optional',
-    details: mentionsAiSafety
-      ? 'Security policy includes explicit guidance for AI safety, prompt injection, or automated agent vulnerabilities.'
+      details: mentionsAiSafety
+      ? 'Security or terms text mentions AI safety, prompt injection, or automated agent handling (keyword match, not a verified policy).'
       : 'Security disclosures do not explicitly address AI or prompt-injection vulnerability reporting.',
     why: 'Helps red-teamers and researchers report prompt injection, SSRF, or tool-calling security flaws responsibly.',
     referenceUrl: 'https://veda.ng/aistandards',
@@ -1154,9 +1156,9 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     seoChecks.push({
       id: 'title-tag', name: 'Document Title Tag Optimization', layer: 'seo',
       status: 'warning', score: 1, maxScore: 2, impact: 'critical',
-      details: `Title tag exists but has sub-optimal length (${titleText.length} characters): "${titleText}". Ideal length is 30–65 characters.`,
+      details: `Title tag exists but has sub-optimal length (${titleText.length} characters): "${titleText}". Ideal length is 10-75 characters.`,
       why: 'Overly long titles are truncated in Google Search snippets and AI citation badges.',
-      recommendation: 'Keep title tags between 30 and 65 characters with clear branding.',
+      recommendation: 'Keep title tags between 10 and 75 characters with clear branding.',
       referenceUrl: 'https://developers.google.com/search/docs/appearance/title-link',
     });
   } else {
@@ -1166,7 +1168,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No <title> tag found in HTML document.',
       why: 'Pages without a title tag suffer severe ranking penalties in Google and are difficult for LLMs to categorize.',
       recommendation: 'Add a descriptive <title> tag to your HTML <head>.',
-      fixSnippet: { language: 'html', filename: 'index.html', code: `<title>${domain} - AI & Web3 Platform</title>` },
+      fixSnippet: { language: 'html', filename: 'index.html', code: `<title>${domain} - Home</title>` },
       referenceUrl: 'https://developers.google.com/search/docs/appearance/title-link',
     });
   }
@@ -1185,9 +1187,9 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     seoChecks.push({
       id: 'meta-description', name: 'Meta Description Optimization', layer: 'seo',
       status: 'warning', score: 1, maxScore: 2, impact: 'critical',
-      details: `Meta description found but length (${metaDesc.length} chars) is outside optimal 70–160 char range.`,
+      details: `Meta description found but length (${metaDesc.length} chars) is outside the 50-170 char pass band.`,
       why: 'Short descriptions lack sufficient context; long descriptions are truncated in search results.',
-      recommendation: 'Tune meta descriptions to be between 70 and 160 characters.',
+      recommendation: 'Tune meta descriptions to be between 50 and 170 characters.',
       referenceUrl: 'https://developers.google.com/search/docs/appearance/snippet',
     });
   } else {
@@ -1263,7 +1265,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     details: hasFavicon
       ? 'Brand icon / favicon detected for visual search badge attribution.'
       : 'No standard favicon.ico or <link rel="icon"> detected.',
-    why: 'AI search engines (Perplexity, SearchGPT, Google AI Overviews, Arc Search) display your site favicon next to citations for brand trust.',
+    why: 'Many answer engines display your site favicon next to citations for brand trust.',
     referenceUrl: 'https://developers.google.com/search/docs/appearance/favicon-in-search',
   });
 
@@ -1565,13 +1567,13 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
 
   let summary = '';
   if (score >= 90) {
-    summary = `${domain} demonstrates exceptional agentic readiness and AI search optimization with comprehensive MCP tooling, structured JSON-LD entity graphs, llms.txt catalogs, and keyless open discovery.`;
+    summary = `${domain} shows top-tier agentic readiness with working MCP tooling, structured JSON-LD entity graphs, llms.txt catalogs, and keyless open discovery.`;
   } else if (score >= 75) {
     summary = `${domain} is well-positioned for AI answer engines and search crawlers, with strong metadata fundamentals and modern HTTPS security, but could improve MCP endpoint exposure and markdown content negotiation.`;
   } else if (score >= 50) {
     summary = `${domain} has baseline SEO and HTTPS in place, but lacks specialized AI agent discovery files (llms.txt, ard.json), MCP servers, and explicit crawler policy directives for top answer engines.`;
   } else {
-    summary = `${domain} has significant gaps in machine discoverability and agentic standards. It lacks structured AI indexes, robots directives, and machine-readable API specifications.`;
+    summary = `${domain} has wide gaps in machine discoverability and agentic standards. It lacks structured AI indexes, robots directives, and machine-readable API specifications.`;
   }
 
   const layers = [
