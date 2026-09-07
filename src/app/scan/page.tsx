@@ -798,14 +798,9 @@ export default function ScanPage() {
             {categoryScores && (
               <div className="p-4 sm:p-5 rounded-xl border border-border bg-card space-y-3.5">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                  <div>
-                    <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">
-                      Strategic Optimization Scorecards
-                    </h3>
-                    <p className="text-xs text-muted-foreground">
-                      Deterministic 0–100 benchmark scores across search, answer engines, and autonomous AI agents
-                    </p>
-                  </div>
+                  <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">
+                    Scorecards
+                  </h3>
                   {activeCategory && (
                     <button
                       type="button"
