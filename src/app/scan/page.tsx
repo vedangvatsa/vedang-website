@@ -357,16 +357,10 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
       {expanded && hasDetails && (
         <div className="border-t border-border px-4 py-3 space-y-3 bg-muted/20 text-xs rounded-b-lg">
           {check.why && (
-            <div>
-              <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-1">Why it matters</p>
-              <p className="text-muted-foreground leading-relaxed">{check.why}</p>
-            </div>
+            <p className="text-muted-foreground leading-relaxed">{check.why}</p>
           )}
           {check.recommendation && (
-            <div>
-              <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-1">How to fix</p>
-              <p className="text-muted-foreground leading-relaxed">{check.recommendation}</p>
-            </div>
+            <p className="text-muted-foreground leading-relaxed">{check.recommendation}</p>
           )}
           {check.fixSnippet && (
             <CodeBlock
