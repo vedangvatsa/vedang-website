@@ -25,16 +25,16 @@ const PRESETS = [
 ];
 
 const SCAN_STEPS = [
-  'Probing robots.txt AI bot rules & crawler policies...',
-  'Checking llms.txt, llms-full.txt, and ARD catalogs...',
-  'Evaluating markdown content negotiation & URL twins...',
+  'Probing robots.txt AI bot policies...',
+  'Checking llms.txt and ARD catalogs...',
+  'Testing markdown negotiation & URL twins...',
   'Inspecting no-JS fallback and SSR payload...',
-  'Testing Model Context Protocol (MCP) endpoints...',
-  'Auditing OpenAPI schemas & parameter examples...',
-  'Verifying HTTPS, HSTS, CSP, and security disclosures...',
-  'Inspecting JSON-LD entity graph & structured feeds...',
-  'Checking micropayments & x402 payment headers...',
-  'Aggregating 0-100 Agentic Readiness Score...',
+  'Testing MCP endpoints...',
+  'Auditing OpenAPI schemas & examples...',
+  'Verifying HTTPS, HSTS, and CSP...',
+  'Inspecting JSON-LD entity graph...',
+  'Checking micropayments & payment headers...',
+  'Aggregating readiness scores...',
 ];
 
 const LAYER_LABELS: Record<string, string> = {
@@ -257,7 +257,7 @@ function PromptSection() {
     <section className="border border-border rounded-lg bg-card">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-4 py-3">
         <p className="text-sm text-muted-foreground">
-          Not sure where to start? Copy the master prompt into your AI coding agent.
+          Master prompt for AI coding agents.
         </p>
         <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
           <button
@@ -370,7 +370,7 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
               {copied ? (
                 <><IconCheck className="w-3 h-3" /><span>Copied</span></>
               ) : (
-                <span>Copy AI fix prompt</span>
+                <span>Fix prompt</span>
               )}
             </button>
             {check.referenceUrl && (
@@ -652,7 +652,7 @@ export default function ScanPage() {
         <div>
           <PageHero
             title="AI & Web Readiness Scanner"
-            subtitle="Deterministic audit for AI answer engines, MCP clients, and machine consumers. Scores your site across Discovery, Access, Usability, Security, SEO, and Payments."
+            subtitle="Deterministic audit for AI answer engines, MCP clients, and machine consumers."
           />
           <div className="-mt-3">
             <AuthorByline links={[{ label: 'Audit Tool' }]} />
@@ -675,7 +675,7 @@ export default function ScanPage() {
               </div>
               <input
                 type="text"
-                placeholder="Enter domain or URL - e.g. stripe.com"
+                placeholder="Enter domain or URL (e.g. stripe.com)"
                 value={urlInput}
                 onChange={e => setUrlInput(e.target.value)}
                 disabled={loading}
@@ -687,7 +687,7 @@ export default function ScanPage() {
               disabled={loading || !urlInput.trim()}
               className="h-auto py-3 px-5 text-sm shrink-0 bg-black text-white hover:bg-zinc-800"
             >
-              {loading ? 'Auditing…' : 'Run Audit'}
+              {loading ? 'Scanning…' : 'Scan'}
             </Button>
           </form>
 
@@ -718,7 +718,7 @@ export default function ScanPage() {
                 style={{ width: `${((activeStepIndex + 1) / SCAN_STEPS.length) * 100}%` }}
               />
             </div>
-            <p className="text-[11px] text-muted-foreground">Probing across 6 machine-readiness layers</p>
+            <p className="text-[11px] text-muted-foreground">Probing 6 layers</p>
           </section>
         )}
 
@@ -735,7 +735,7 @@ export default function ScanPage() {
             {/* Layer breakdown table */}
             <details className="border border-border rounded-lg bg-card group">
               <summary className="px-4 py-2.5 text-sm text-muted-foreground cursor-pointer list-none flex items-center justify-between gap-2 hover:text-foreground transition-colors">
-                <span>What gets checked: 67 probes across 6 layers</span>
+                <span>67 probes across 6 layers</span>
                 <span className="transition-transform duration-150 group-open:rotate-180">
                   <IconChevronDown className="w-3.5 h-3.5" />
                 </span>
@@ -826,7 +826,7 @@ export default function ScanPage() {
                       onClick={() => setActiveCategory(null)}
                       className="text-xs text-primary hover:underline self-start sm:self-auto font-medium"
                     >
-                      Reset score filter ({activeCategory.toUpperCase()})
+                      Show all
                     </button>
                   )}
                 </div>
@@ -879,7 +879,7 @@ export default function ScanPage() {
                         <button
                           type="button"
                           onClick={e => handleCopyLayerPrompt(e, layer)}
-                          title="Copy AI fix prompt for this layer"
+                          title="Copy fix prompt"
                           className="p-1 rounded text-muted-foreground hover:text-foreground hover:bg-muted transition-colors opacity-0 group-hover:opacity-100"
                         >
                           {copiedLayerId === layer.id
@@ -938,7 +938,7 @@ export default function ScanPage() {
             {/* Findings */}
             <div className="space-y-3">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                <h3 className="text-sm font-semibold text-foreground flex-1">Audit Findings</h3>
+                <h3 className="text-sm font-semibold text-foreground flex-1">Findings</h3>
                 <div className="flex items-center bg-muted/60 p-0.5 rounded-lg border border-border text-xs">
                   {[
                     { key: 'all',       label: `All (${allChecks.length})` },
@@ -1001,7 +1001,7 @@ export default function ScanPage() {
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <span>
                     Showing {filteredChecks.length} of {allChecks.length} checks
-                    {activeCategory && ` (${activeCategory.toUpperCase()} score dial)`}
+                    {activeCategory && ` (${activeCategory.toUpperCase()})`}
                   </span>
                   <button
                     type="button"
@@ -1033,8 +1033,7 @@ export default function ScanPage() {
             {/* API reference */}
             <div className="p-4 rounded-lg border border-border bg-card text-xs space-y-3">
               <SectionHeader
-                title="Programmatic API"
-                subtitle="Run audits in CI/CD pipelines or from the veda.ng MCP server."
+                title="API"
               />
               <CodeBlock
                 code={`curl -X POST https://veda.ng/api/v1/scan \\\n  -H "Content-Type: application/json" \\\n  -d '{"url":"${result.domain}"}'`}

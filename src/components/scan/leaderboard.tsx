@@ -109,7 +109,7 @@ export function LeaderboardSection() {
         title="Leaderboard"
       />
       {failed && (
-        <p className="text-xs text-muted-foreground">Leaderboard data is not published yet. Check back after the crawl completes.</p>
+        <p className="text-xs text-muted-foreground">Leaderboard data is not published yet.</p>
       )}
       {summary && (
         <>
@@ -153,14 +153,14 @@ export function LeaderboardSection() {
         <input
           value={query}
           onChange={(e) => onSearch(e.target.value)}
-          placeholder="Search all scored domains (min 2 chars)"
+          placeholder="Search scored domains (min 2 chars)"
           className="w-full px-3 py-2 rounded-lg border border-border bg-background text-xs outline-none focus:border-zinc-400"
           type="search"
         />
         {indexLoading && <p className="text-muted-foreground">Loading domain index…</p>}
         {results && (
           <p className="text-muted-foreground">
-            {results.length === 0 ? 'No matches.' : `Top ${results.length} matches:`}
+            {results.length === 0 ? 'No matches' : `${results.length} matches:`}
           </p>
         )}
         {results && results.length > 0 && (
