@@ -111,12 +111,10 @@ async function main() {
     rank: i + 1, domain: r.domain, score: r.score, grade: r.grade,
     layers: r.layers ?? {}, scannedAt: r.scannedAt, tier: tierOf(r.domain),
   }));
-  const index = scored.map((r) => [r.domain, r.score, r.grade, tierOf(r.domain), (r.scannedAt ?? "").slice(0, 10)]);
+  // index.json is written after favicons resolve (needs the icon map)
 
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, "summary.json"), JSON.stringify(summary, null, 2));
-  fs.writeFileSync(path.join(OUT, "top500.json"), JSON.stringify(top500));
-  fs.writeFileSync(path.join(OUT, "index.json"), JSON.stringify(index));
   for (const f of ["summary.json", "top500.json", "index.json"]) {
     const kb = (fs.statSync(path.join(OUT, f)).size / 1024).toFixed(1);
     console.log(`${f}: ${kb} KB`);
@@ -127,27 +125,34 @@ async function main() {
   const favDir = path.join(OUT, "favicons");
   fs.mkdirSync(favDir, { recursive: true });
   async function fetchIcon(domain: string): Promise<boolean> {
-    const dest = path.join(favDir, `${domain}.ico`);
-    if (fs.existsSync(dest)) return true;
-    const ctrl = new AbortController();
-    const t = setTimeout(() => ctrl.abort(), 8000);
-    try {
-      const res = await fetch(`https://${domain}/favicon.ico`, {
-        signal: ctrl.signal,
-        headers: { "User-Agent": "VedaLeaderboardBuilder/1.0 (+https://veda.ng/scan)" },
-        redirect: "follow",
-      });
-      const ct = res.headers.get("content-type") ?? "";
-      if (!res.ok || !(ct.includes("image") || ct.includes("icon"))) return false;
-      const buf = Buffer.from(await res.arrayBuffer());
-      if (buf.length < 50 || buf.length > 200000) return false;
-      fs.writeFileSync(dest, buf);
-      return true;
-    } catch {
-      return false;
-    } finally {
-      clearTimeout(t);
+    for (const [iconPath, ext, kinds] of [
+      ["/favicon.svg", ".svg", ["svg"]],
+      ["/favicon.ico", ".ico", ["image", "icon"]],
+    ] as const) {
+      const dest = path.join(favDir, `${domain}${ext}`);
+      if (fs.existsSync(dest)) return true;
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 8000);
+      try {
+        const res = await fetch(`https://${domain}${iconPath}`, {
+          signal: ctrl.signal,
+          headers: { "User-Agent": "VedaLeaderboardBuilder/1.0 (+https://veda.ng/scan)" },
+          redirect: "follow",
+        });
+        const ct = res.headers.get("content-type") ?? "";
+        if (!res.ok || !kinds.some((k) => ct.includes(k))) continue;
+        const buf = Buffer.from(await res.arrayBuffer());
+        if (buf.length < 50 || buf.length > 200000) continue;
+        if (ext === ".svg" && !buf.toString("utf8", 0, 400).includes("<svg")) continue;
+        fs.writeFileSync(dest, buf);
+        return true;
+      } catch {
+        continue;
+      } finally {
+        clearTimeout(t);
+      }
     }
+    return false;
   }
   const queue = top500.map((e) => e.domain);
   let fetched = 0;
@@ -160,6 +165,19 @@ async function main() {
     })
   );
   console.log(`favicons: ${fetched}/${top500.length}`);
+  const iconFor = new Map<string, string>();
+  for (const e of top500) {
+    for (const ext of ["svg", "ico", "png"]) {
+      if (fs.existsSync(path.join(favDir, `${e.domain}.${ext}`))) {
+        iconFor.set(e.domain, `${e.domain}.${ext}`);
+        break;
+      }
+    }
+  }
+  const top500WithIcons = top500.map((e) => ({ ...e, icon: iconFor.get(e.domain) ?? null }));
+  fs.writeFileSync(path.join(OUT, "top500.json"), JSON.stringify(top500WithIcons));
+  const indexWithIcons = scored.map((r) => [r.domain, r.score, r.grade, tierOf(r.domain), (r.scannedAt ?? "").slice(0, 10), iconFor.get(r.domain) ?? null]);
+  fs.writeFileSync(path.join(OUT, "index.json"), JSON.stringify(indexWithIcons));
 }
 
 main();

@@ -12,6 +12,7 @@ interface TopEntry {
   layers: Record<string, number>;
   scannedAt: string;
   tier: number;
+  icon: string | null;
 }
 
 interface Summary {
@@ -32,9 +33,9 @@ function gradeClass(grade: string): string {
   return 'text-red-500';
 }
 
-function DomainIcon({ domain }: { domain: string }) {
+function DomainIcon({ domain, file }: { domain: string; file: string | null }) {
   const [failed, setFailed] = useState(false);
-  if (failed) {
+  if (!file || failed) {
     return (
       <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-muted text-[10px] font-semibold text-muted-foreground shrink-0">
         {domain.charAt(0).toUpperCase()}
@@ -43,7 +44,7 @@ function DomainIcon({ domain }: { domain: string }) {
   }
   return (
     <img
-      src={`/data/leaderboard/favicons/${domain}.ico`}
+      src={`/data/leaderboard/favicons/${file}`}
       alt=""
       width={16}
       height={16}
@@ -61,7 +62,7 @@ export function LeaderboardSection() {
   const [expanded, setExpanded] = useState(false);
   const [query, setQuery] = useState('');
   const [tierFilter, setTierFilter] = useState<number>(0);
-  const [index, setIndex] = useState<[string, number, string, number, string][] | null>(null);
+  const [index, setIndex] = useState<[string, number, string, number, string, string | null][] | null>(null);
   const [indexLoading, setIndexLoading] = useState(false);
   const [failed, setFailed] = useState(false);
 
@@ -180,7 +181,7 @@ export function LeaderboardSection() {
                   <td className="px-2 sm:px-3 py-1.5 tabular-nums text-muted-foreground hidden min-[420px]:table-cell">{e.rank}</td>
                   <td className="px-2 sm:px-3 py-1.5 font-medium truncate max-w-28 min-[420px]:max-w-45">
                     <a href={`/scan?url=${encodeURIComponent(e.domain)}`} className="hover:text-primary hover:underline inline-flex items-center gap-1.5" title="Run a fresh scan">
-                      <DomainIcon domain={e.domain} />
+                      <DomainIcon domain={e.domain} file={e.icon ?? null} />
                       {e.domain}
                     </a>
                   </td>
@@ -221,11 +222,11 @@ export function LeaderboardSection() {
           <div className="overflow-x-auto rounded-lg border border-border">
             <table className="w-full text-xs">
               <tbody>
-                {results.map(([d, s, g, , dt]) => (
+                {results.map(([d, s, g, , dt, ic]) => (
                   <tr key={d} className="border-b border-border/50 last:border-0 hover:bg-muted/20">
                     <td className="px-2 sm:px-3 py-1.5 font-medium truncate max-w-28 min-[420px]:max-w-45">
                       <a href={`/scan?url=${encodeURIComponent(d)}`} className="hover:text-primary hover:underline inline-flex items-center gap-1.5" title="Run a fresh scan">
-                        <DomainIcon domain={d} />
+                        <DomainIcon domain={d} file={ic} />
                         {d}
                       </a>
                     </td>
