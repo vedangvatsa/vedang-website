@@ -2,46 +2,42 @@
 
 import React from 'react';
 import { ChartCard } from './chart-card';
+import { LeaderboardSection } from '@/components/scan/leaderboard';
 
 /* ─── Hero Summary Card ─── */
 export function AgentreadyHeroCard() {
   return (
-    <figure className="not-prose my-8">
-      <div className="rounded-xl border border-border bg-card p-6 md:p-8 shadow-xs">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-lg">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-              50,000-Domain Web Census
-            </span>
-            <h3 className="text-xl md:text-2xl font-bold tracking-tight text-foreground">
-              How Agent-Ready Is the Web?
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Empirical measurement of 50,000 domains sampled from the Tranco top-1M ranking, evaluated across 61 machine-readability checks.
-            </p>
+    <div className="not-prose my-8 rounded-xl border border-border bg-card p-6 md:p-8 shadow-xs">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="space-y-2 max-w-lg">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+            50,000-Domain Web Census
+          </span>
+          <p className="text-sm text-muted-foreground leading-relaxed pt-1">
+            Empirical measurement of 50,000 domains sampled from the Tranco top-1M ranking, evaluated across 61 machine-readability checks.
+          </p>
+        </div>
+        
+        <div className="flex flex-wrap md:flex-nowrap items-center gap-4 w-full md:w-auto">
+          <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
+            <div className="text-2xl md:text-3xl font-extrabold text-foreground tabular-nums">25.7</div>
+            <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">Mean Score / 100</div>
           </div>
-          
-          <div className="flex flex-wrap md:flex-nowrap items-center gap-4 w-full md:w-auto">
-            <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
-              <div className="text-2xl md:text-3xl font-extrabold text-foreground tabular-nums">25.7</div>
-              <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">Mean Score / 100</div>
-            </div>
-            <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
-              <div className="text-2xl md:text-3xl font-extrabold text-primary tabular-nums">6.62%</div>
-              <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">llms.txt Rate</div>
-            </div>
-            <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
-              <div className="text-2xl md:text-3xl font-extrabold text-amber-600 tabular-nums">21.1%</div>
-              <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">WAF Refusal Gap</div>
-            </div>
+          <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
+            <div className="text-2xl md:text-3xl font-extrabold text-primary tabular-nums">6.62%</div>
+            <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">llms.txt Rate</div>
+          </div>
+          <div className="p-4 rounded-xl border border-border bg-muted/20 flex-1 md:flex-initial text-center min-w-[120px]">
+            <div className="text-2xl md:text-3xl font-extrabold text-amber-600 tabular-nums">21.1%</div>
+            <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">WAF Refusal Gap</div>
           </div>
         </div>
       </div>
-    </figure>
+    </div>
   );
 }
 
-/* ─── Headline Check Adoption Chart (Vector SVG) ─── */
+/* ─── Headline Check Adoption Chart ─── */
 export function AgentreadyAdoptionChart() {
   const checks = [
     { label: 'robots.txt AI policy', share: 43.76 },
@@ -59,40 +55,34 @@ export function AgentreadyAdoptionChart() {
   const maxVal = 50;
 
   return (
-    <figure className="not-prose chart-card my-8">
-      <div className="p-6 md:p-8">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-foreground">
-          Adoption Across 10 Headline Machine Checks
-        </h3>
-        <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">
-          Share of 50,000 audited domains passing each check (%)
-        </p>
-
-        <div className="space-y-3">
-          {checks.map((c) => {
-            const widthPct = (c.share / maxVal) * 100;
-            return (
-              <div key={c.label} className="space-y-1">
-                <div className="flex justify-between items-center text-xs">
-                  <span className="font-medium text-foreground">{c.label}</span>
-                  <span className="font-semibold text-muted-foreground tabular-nums">{c.share.toFixed(2)}%</span>
-                </div>
-                <div className="w-full bg-muted/40 h-3.5 rounded-full overflow-hidden flex">
-                  <div
-                    className="bg-primary h-full rounded-full transition-all duration-500"
-                    style={{ width: `${Math.max(widthPct, 1)}%` }}
-                  />
-                </div>
+    <ChartCard
+      title="Adoption Across 10 Headline Machine Checks"
+      subtitle="Share of 50,000 audited domains passing each check (%)"
+    >
+      <div className="space-y-3">
+        {checks.map((c) => {
+          const widthPct = (c.share / maxVal) * 100;
+          return (
+            <div key={c.label} className="space-y-1">
+              <div className="flex justify-between items-center text-xs">
+                <span className="font-medium text-foreground">{c.label}</span>
+                <span className="font-semibold text-muted-foreground tabular-nums">{c.share.toFixed(2)}%</span>
               </div>
-            );
-          })}
-        </div>
+              <div className="w-full bg-muted/40 h-3.5 rounded-full overflow-hidden flex">
+                <div
+                  className="bg-primary h-full rounded-full transition-all duration-500"
+                  style={{ width: `${Math.max(widthPct, 1)}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </figure>
+    </ChartCard>
   );
 }
 
-/* ─── Rank Tiers Comparison Chart (Vector SVG) ─── */
+/* ─── Rank Tiers Comparison Chart ─── */
 export function AgentreadyTiersChart() {
   const tiers = [
     { name: 'Ranks 1–10k', meanScore: 26.1, refusalRate: 56.2 },
@@ -101,49 +91,43 @@ export function AgentreadyTiersChart() {
   ];
 
   return (
-    <figure className="not-prose chart-card my-8">
-      <div className="p-6 md:p-8">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-foreground">
-          Mean Score & Bot Refusal Rate by Tranco Rank Tier
-        </h3>
-        <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">
-          Famous sites score no better than tail domains
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {tiers.map((t) => (
-            <div key={t.name} className="p-4 rounded-xl border border-border bg-card/60 space-y-3">
-              <div className="text-xs font-bold text-foreground">{t.name}</div>
-              <div className="space-y-2">
-                <div>
-                  <div className="flex justify-between text-[11px] text-muted-foreground mb-1">
-                    <span>Mean Score</span>
-                    <span className="font-semibold text-foreground">{t.meanScore} / 100</span>
-                  </div>
-                  <div className="w-full bg-muted/40 h-2.5 rounded-full overflow-hidden">
-                    <div className="bg-primary h-full rounded-full" style={{ width: `${t.meanScore}%` }} />
-                  </div>
+    <ChartCard
+      title="Mean Score & Bot Refusal Rate by Tranco Rank Tier"
+      subtitle="Famous sites score no better than tail domains"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {tiers.map((t) => (
+          <div key={t.name} className="p-4 rounded-xl border border-border bg-card/60 space-y-3">
+            <div className="text-xs font-bold text-foreground">{t.name}</div>
+            <div className="space-y-2">
+              <div>
+                <div className="flex justify-between text-[11px] text-muted-foreground mb-1">
+                  <span>Mean Score</span>
+                  <span className="font-semibold text-foreground">{t.meanScore} / 100</span>
                 </div>
+                <div className="w-full bg-muted/40 h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-primary h-full rounded-full" style={{ width: `${t.meanScore}%` }} />
+                </div>
+              </div>
 
-                <div>
-                  <div className="flex justify-between text-[11px] text-muted-foreground mb-1">
-                    <span>Both-Bot Refusal</span>
-                    <span className="font-semibold text-amber-600">{t.refusalRate}%</span>
-                  </div>
-                  <div className="w-full bg-muted/40 h-2.5 rounded-full overflow-hidden">
-                    <div className="bg-amber-500 h-full rounded-full" style={{ width: `${t.refusalRate}%` }} />
-                  </div>
+              <div>
+                <div className="flex justify-between text-[11px] text-muted-foreground mb-1">
+                  <span>Both-Bot Refusal</span>
+                  <span className="font-semibold text-amber-600">{t.refusalRate}%</span>
+                </div>
+                <div className="w-full bg-muted/40 h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-amber-500 h-full rounded-full" style={{ width: `${t.refusalRate}%` }} />
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </figure>
+    </ChartCard>
   );
 }
 
-/* ─── Robots.txt Policy vs HTTP Behavior Chart (Vector SVG) ─── */
+/* ─── Robots.txt Policy vs HTTP Behavior Chart ─── */
 export function AgentreadyPolicyChart() {
   const groups = [
     { policy: 'Policy Allows AI Bots', serves: 67.2, partial: 11.7, refuses: 21.1 },
@@ -152,62 +136,54 @@ export function AgentreadyPolicyChart() {
   ];
 
   return (
-    <figure className="not-prose chart-card my-8">
-      <div className="p-6 md:p-8">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-foreground">
-          HTTP Behavior Grouped by robots.txt Policy
-        </h3>
-        <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">
-          21.1% of sites declaring allow policies still block crawlers over HTTP
-        </p>
-
-        <div className="space-y-6">
-          {groups.map((g) => (
-            <div key={g.policy} className="space-y-2">
-              <div className="text-xs font-semibold text-foreground">{g.policy}</div>
-              <div className="w-full bg-muted/30 h-7 rounded-lg overflow-hidden flex text-[11px] font-bold text-white">
-                <div
-                  className="bg-emerald-600 flex items-center justify-center transition-all"
-                  style={{ width: `${g.serves}%` }}
-                  title={`Serves: ${g.serves}%`}
-                >
-                  {g.serves > 15 ? `${g.serves}%` : ''}
-                </div>
-                <div
-                  className="bg-amber-500 flex items-center justify-center transition-all"
-                  style={{ width: `${g.partial}%` }}
-                  title={`Partial: ${g.partial}%`}
-                >
-                  {g.partial > 10 ? `${g.partial}%` : ''}
-                </div>
-                <div
-                  className="bg-red-500 flex items-center justify-center transition-all"
-                  style={{ width: `${g.refuses}%` }}
-                  title={`Refuses: ${g.refuses}%`}
-                >
-                  {g.refuses > 15 ? `${g.refuses}%` : ''}
-                </div>
+    <ChartCard
+      title="HTTP Behavior Grouped by robots.txt Policy"
+      subtitle="21.1% of sites declaring allow policies still block crawlers over HTTP"
+    >
+      <div className="space-y-6">
+        {groups.map((g) => (
+          <div key={g.policy} className="space-y-2">
+            <div className="text-xs font-semibold text-foreground">{g.policy}</div>
+            <div className="w-full bg-muted/30 h-7 rounded-lg overflow-hidden flex text-[11px] font-bold text-white">
+              <div
+                className="bg-emerald-600 flex items-center justify-center transition-all"
+                style={{ width: `${g.serves}%` }}
+                title={`Serves: ${g.serves}%`}
+              >
+                {g.serves > 15 ? `${g.serves}%` : ''}
               </div>
-              <div className="flex items-center gap-4 text-[10px] text-muted-foreground pt-0.5">
-                <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-600 inline-block" /> Serves ({g.serves}%)</span>
-                <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-amber-500 inline-block" /> Partial ({g.partial}%)</span>
-                <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-500 inline-block" /> Refuses ({g.refuses}%)</span>
+              <div
+                className="bg-amber-500 flex items-center justify-center transition-all"
+                style={{ width: `${g.partial}%` }}
+                title={`Partial: ${g.partial}%`}
+              >
+                {g.partial > 10 ? `${g.partial}%` : ''}
+              </div>
+              <div
+                className="bg-red-500 flex items-center justify-center transition-all"
+                style={{ width: `${g.refuses}%` }}
+                title={`Refuses: ${g.refuses}%`}
+              >
+                {g.refuses > 15 ? `${g.refuses}%` : ''}
               </div>
             </div>
-          ))}
-        </div>
+            <div className="flex items-center gap-4 text-[10px] text-muted-foreground pt-0.5">
+              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-600 inline-block" /> Serves ({g.serves}%)</span>
+              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-amber-500 inline-block" /> Partial ({g.partial}%)</span>
+              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-500 inline-block" /> Refuses ({g.refuses}%)</span>
+            </div>
+          </div>
+        ))}
       </div>
-    </figure>
+    </ChartCard>
   );
 }
 
 /* ─── Embedded Leaderboard Section ─── */
-import { LeaderboardSection } from '@/components/scan/leaderboard';
-
 export function AgentreadyLeaderboard() {
   return (
-    <figure className="not-prose my-8">
+    <div className="not-prose my-8">
       <LeaderboardSection />
-    </figure>
+    </div>
   );
 }
