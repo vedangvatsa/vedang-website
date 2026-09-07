@@ -34,22 +34,31 @@ function gradeClass(grade: string): string {
 }
 
 function DomainIcon({ domain, file }: { domain: string; file: string | null }) {
-  const [failed, setFailed] = useState(false);
-  if (!file || failed) {
+  const [stage, setStage] = useState<'file' | 'google' | 'letter'>(file ? 'file' : 'google');
+
+  if (stage === 'letter') {
     return (
-      <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-muted text-[10px] font-semibold text-muted-foreground shrink-0">
+      <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-muted text-[10px] font-semibold text-muted-foreground shrink-0 select-none">
         {domain.charAt(0).toUpperCase()}
       </span>
     );
   }
+
+  const src = stage === 'file' && file
+    ? `/data/leaderboard/favicons/${file}`
+    : `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=32`;
+
   return (
     <img
-      src={`/data/leaderboard/favicons/${file}`}
+      src={src}
       alt=""
       width={16}
       height={16}
       loading="lazy"
-      onError={() => setFailed(true)}
+      onError={() => {
+        if (stage === 'file') setStage('google');
+        else setStage('letter');
+      }}
       className="w-4 h-4 rounded-sm shrink-0"
     />
   );
