@@ -699,7 +699,7 @@ export default function ScanPage() {
                 type="button"
                 onClick={() => { setUrlInput(p.url); executeScan(p.url); }}
                 disabled={loading}
-                className="px-2 py-0.5 rounded border border-border bg-muted/30 hover:bg-muted text-foreground/70 hover:text-foreground transition text-xs"
+                className="text-xs text-muted-foreground hover:text-foreground hover:underline font-mono px-1 py-0.5"
               >
                 {p.name}
               </button>
