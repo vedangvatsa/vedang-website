@@ -293,12 +293,7 @@ export default function WebsiteSpecificationPage() {
         <div>
           <PageHero
             title="The Site Checklist"
-            subtitle={
-              <>
-                {TOTAL_ITEMS} requirements across {SPEC.length} categories.<br />
-                What to do, how to do it, and where the standard lives.
-              </>
-            }
+            subtitle="A clear checklist for building fast, secure, accessible, and search-friendly websites. Covers 46 practical checks across HTML, SEO, Accessibility, and Security."
           />
           <div className="-mt-3">
             <AuthorByline links={[{ label: 'Web Standards Checklist' }]} />
