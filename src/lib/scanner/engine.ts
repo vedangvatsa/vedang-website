@@ -1698,6 +1698,54 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     micropaymentsSupported: has402Header || hasWebLn,
   };
 
+  // ──────────────────────────────────────────────────────────────────────────
+  // DOMAIN-LEVEL STRATEGIC CATEGORY SCORES (0-100)
+  // SEO, AEO (Answer Engine), GEO (Generative Engine), Agentic, Performance, Security
+  // ──────────────────────────────────────────────────────────────────────────
+  function calcScore(ids: string[]): number {
+    const matched = allChecks.filter(c => ids.includes(c.id));
+    if (matched.length === 0) return 0;
+    const earned = matched.reduce((a, c) => a + c.score, 0);
+    const max = matched.reduce((a, c) => (c.status === 'na' || c.impact === 'optional' ? a : a + c.maxScore), 0);
+    const effective = Math.max(1, max);
+    return Math.min(100, Math.round((earned / effective) * 100));
+  }
+
+  const categoryScores = {
+    // Traditional Web & Technical SEO
+    seo: calcScore([
+      'title-tag', 'meta-description', 'canonical', 'html-lang', 'sitemap-xml',
+      'web-doctype', 'web-viewport', 'web-heading-hierarchy', 'favicon-branding', 'og-tags', 'twitter-cards',
+      'web-a11y-landmarks', 'web-color-scheme'
+    ]),
+    // AEO: Answer Engine Optimization (Perplexity, SearchGPT, Gemini, ChatGPT web search)
+    aeo: calcScore([
+      'robots-ai-policy', 'robots-selective-ai-policy', 'robots-meta-ai', 'bot-ua-access',
+      'seo-answer-first', 'seo-freshness', 'seo-multimodal', 'access-js-hydration'
+    ]),
+    // GEO: Generative Engine Optimization & Entity Knowledge Graphs (Google AI Overviews, Claude, OpenAI)
+    geo: calcScore([
+      'json-ld', 'seo-schema-graph', 'seo-rich-schemas', 'seo-author-eeat',
+      'rss-feed', 'security-c2pa', 'tdmrep', 'llms-txt', 'llms-full'
+    ]),
+    // Agentic Readiness & Tool Usability (Autonomous agents, MCP, A2A, Tool calling)
+    agentic: calcScore([
+      'mcp-server-live', 'mcp-schema-handshake', 'openapi-spec', 'openapi-examples', 'auth-guide',
+      'markdown-negotiation', 'markdown-twins', 'agents-txt', 'agents-json', 'agent-card',
+      'ard-catalog', 'api-catalog-rfc9727', 'rate-limit-headers', 'api-dry-run', 'agent-payments', 'payments-terms',
+      'oauth-agent-discovery'
+    ]),
+    // Performance & Machine Ingestion Speed
+    performance: calcScore([
+      'access-compression', 'access-boilerplate-ratio', 'access-js-hydration', 'rate-limit-headers'
+    ]),
+    // Security & Transport Integrity
+    security: calcScore([
+      'https-tls', 'hsts', 'csp', 'xcto', 'frame-protection', 'referrer-policy',
+      'permissions-policy', 'security-txt', 'security-signatures', 'security-ai-disclosure', 'web-privacy-policy'
+    ]),
+  };
+
   return {
     url,
     domain,
@@ -1706,6 +1754,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     score,
     grade,
     summary,
+    categoryScores,
     layers,
     badges,
   };

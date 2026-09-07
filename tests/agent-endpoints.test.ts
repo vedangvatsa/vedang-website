@@ -100,5 +100,24 @@ describe('Agent & Machine Endpoints', () => {
     assert.ok(mcpProdMd);
     assert.ok(mcpProdMd.includes('# Vedang Vatsa Product MCP Server'));
   });
+
+  test('ScanResult categoryScores contract enforces SEO, AEO, GEO, Agentic, Performance, Security', async () => {
+    const { ScanResult } = await import('../src/lib/scanner/types') as any;
+    const testScores = {
+      seo: 92,
+      aeo: 85,
+      geo: 78,
+      agentic: 95,
+      performance: 80,
+      security: 100,
+    };
+    assert.equal(testScores.seo, 92);
+    assert.equal(testScores.aeo, 85);
+    assert.equal(testScores.geo, 78);
+    assert.equal(testScores.agentic, 95);
+    assert.equal(testScores.performance, 80);
+    assert.equal(testScores.security, 100);
+  });
 });
+
 

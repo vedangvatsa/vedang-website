@@ -390,6 +390,157 @@ function CheckRow({ check, domain }: { check: CheckResult; domain: string }) {
   );
 }
 
+// ─── Optimization Category Dials ───────────────────────────────────────────
+
+const CATEGORY_CHECK_IDS: Record<string, string[]> = {
+  seo: [
+    'title-tag', 'meta-description', 'canonical', 'html-lang', 'sitemap-xml',
+    'web-doctype', 'web-viewport', 'web-heading-hierarchy', 'favicon-branding', 'og-tags', 'twitter-cards',
+    'web-a11y-landmarks', 'web-color-scheme'
+  ],
+  aeo: [
+    'robots-ai-policy', 'robots-selective-ai-policy', 'robots-meta-ai', 'bot-ua-access',
+    'seo-answer-first', 'seo-freshness', 'seo-multimodal', 'access-js-hydration'
+  ],
+  geo: [
+    'json-ld', 'seo-schema-graph', 'seo-rich-schemas', 'seo-author-eeat',
+    'rss-feed', 'security-c2pa', 'tdmrep', 'llms-txt', 'llms-full'
+  ],
+  agentic: [
+    'mcp-server-live', 'mcp-schema-handshake', 'openapi-spec', 'openapi-examples', 'auth-guide',
+    'markdown-negotiation', 'markdown-twins', 'agents-txt', 'agents-json', 'agent-card',
+    'ard-catalog', 'api-catalog-rfc9727', 'rate-limit-headers', 'api-dry-run', 'agent-payments', 'payments-terms',
+    'oauth-agent-discovery'
+  ],
+  performance: [
+    'access-compression', 'access-boilerplate-ratio', 'access-js-hydration', 'rate-limit-headers'
+  ],
+  security: [
+    'https-tls', 'hsts', 'csp', 'xcto', 'frame-protection', 'referrer-policy',
+    'permissions-policy', 'security-txt', 'security-signatures', 'security-ai-disclosure', 'web-privacy-policy'
+  ],
+};
+
+const CATEGORY_DIAL_CONFIG = [
+  { key: 'seo', label: 'SEO', subtitle: 'Web Standards', tip: 'HTML5 doctype, metadata, sitemaps, open graph & a11y' },
+  { key: 'aeo', label: 'AEO', subtitle: 'Answer Engines', tip: 'Perplexity, SearchGPT, bot reachability & inverted pyramid' },
+  { key: 'geo', label: 'GEO', subtitle: 'Generative Engine', tip: 'JSON-LD @graph entity linking, E-E-A-T credentials & digests' },
+  { key: 'agentic', label: 'Agentic', subtitle: 'Autonomous APIs', tip: 'Live MCP server, OpenAPI schemas, markdown twins & dry-run' },
+  { key: 'performance', label: 'Performance', subtitle: 'Speed & SSR', tip: 'Brotli compression, clean HTML payload & server rendering' },
+  { key: 'security', label: 'Security', subtitle: 'Transport & Trust', tip: 'HTTPS TLS, HSTS preload, strict CSP & security.txt' },
+] as const;
+
+function getCategoryScores(result: ScanResult) {
+  if (result.categoryScores) return result.categoryScores;
+  const all = result.layers.flatMap(l => l.checks);
+  const calc = (ids: string[]) => {
+    const matched = all.filter(c => ids.includes(c.id));
+    if (matched.length === 0) return 0;
+    const earned = matched.reduce((a, c) => a + c.score, 0);
+    const max = matched.reduce((a, c) => (c.status === 'na' || c.impact === 'optional' ? a : a + c.maxScore), 0);
+    return Math.min(100, Math.round((earned / Math.max(1, max)) * 100));
+  };
+  return {
+    seo: calc(CATEGORY_CHECK_IDS.seo),
+    aeo: calc(CATEGORY_CHECK_IDS.aeo),
+    geo: calc(CATEGORY_CHECK_IDS.geo),
+    agentic: calc(CATEGORY_CHECK_IDS.agentic),
+    performance: calc(CATEGORY_CHECK_IDS.performance),
+    security: calc(CATEGORY_CHECK_IDS.security),
+  };
+}
+
+function ScoreDialCard({
+  score,
+  label,
+  subtitle,
+  active,
+  onClick,
+}: {
+  score: number;
+  label: string;
+  subtitle: string;
+  active: boolean;
+  onClick: () => void;
+}) {
+  const radius = 24;
+  const circumference = 2 * Math.PI * radius;
+  const clampedScore = Math.max(0, Math.min(100, Math.round(score)));
+  const strokeDashoffset = circumference - (clampedScore / 100) * circumference;
+
+  const isGood = clampedScore >= 90;
+  const isFair = clampedScore >= 50 && clampedScore < 90;
+
+  const strokeColor = isGood ? '#10b981' : isFair ? '#f59e0b' : '#ef4444';
+  const textColor = isGood
+    ? 'text-emerald-700 dark:text-emerald-400'
+    : isFair
+    ? 'text-amber-700 dark:text-amber-400'
+    : 'text-rose-700 dark:text-rose-400';
+  const circleFill = isGood
+    ? 'fill-emerald-500/10'
+    : isFair
+    ? 'fill-amber-500/10'
+    : 'fill-rose-500/10';
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(
+        'flex flex-col items-center text-center p-3 sm:p-3.5 rounded-xl border transition-all select-none group focus:outline-none',
+        active
+          ? 'border-zinc-900 bg-zinc-50 dark:bg-zinc-900 dark:border-zinc-100 shadow-sm ring-1 ring-zinc-900'
+          : 'border-border bg-card hover:border-zinc-400 hover:bg-muted/30'
+      )}
+    >
+      <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center">
+        <svg className="w-14 h-14 sm:w-16 sm:h-16 -rotate-90" viewBox="0 0 60 60" aria-hidden="true">
+          <circle
+            cx="30"
+            cy="30"
+            r={radius}
+            className={circleFill}
+          />
+          <circle
+            cx="30"
+            cy="30"
+            r={radius}
+            fill="transparent"
+            stroke="currentColor"
+            strokeWidth="4"
+            className="text-muted/20"
+          />
+          <circle
+            cx="30"
+            cy="30"
+            r={radius}
+            fill="transparent"
+            stroke={strokeColor}
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeDasharray={circumference}
+            strokeDashoffset={strokeDashoffset}
+            className="transition-all duration-700 ease-out"
+          />
+        </svg>
+        <span className={cn('absolute text-sm sm:text-base font-bold tabular-nums tracking-tight', textColor)}>
+          {clampedScore}
+        </span>
+      </div>
+
+      <div className="mt-2 space-y-0.5">
+        <div className="text-xs font-bold text-foreground tracking-tight group-hover:text-primary transition-colors">
+          {label}
+        </div>
+        <div className="text-[10px] text-muted-foreground leading-tight">
+          {subtitle}
+        </div>
+      </div>
+    </button>
+  );
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ScanPage() {
@@ -400,6 +551,7 @@ export default function ScanPage() {
   const [error, setError] = useState<string | null>(null);
   const [filterLayer, setFilterLayer] = useState<string>('all');
   const [filterStatus, setFilterStatus] = useState<string>('all');
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [copiedShare, setCopiedShare] = useState(false);
   const [copiedFixPrompt, setCopiedFixPrompt] = useState(false);
   const [copiedLayerId, setCopiedLayerId] = useState<string | null>(null);
@@ -427,6 +579,7 @@ export default function ScanPage() {
     setLoading(true);
     setError(null);
     setActiveStepIndex(0);
+    setActiveCategory(null);
     try {
       const res = await fetch('/api/v1/scan', {
         method: 'POST',
@@ -452,7 +605,8 @@ export default function ScanPage() {
 
   async function handleShareResult() {
     if (!result) return;
-    const text = `${result.domain} scored ${result.score}/100 (Grade ${result.grade}) on the AI & Web Readiness Scanner\nhttps://veda.ng/scan?url=${encodeURIComponent(result.domain)}`;
+    const scores = getCategoryScores(result);
+    const text = `${result.domain} scored ${result.score}/100 (Grade ${result.grade}) on the AI & Web Readiness Scanner\nSEO: ${scores.seo}/100 · AEO: ${scores.aeo}/100 · GEO: ${scores.geo}/100 · Agentic: ${scores.agentic}/100 · Perf: ${scores.performance}/100 · Sec: ${scores.security}/100\nhttps://veda.ng/scan?url=${encodeURIComponent(result.domain)}`;
     try {
       await copyText(text);
       setCopiedShare(true);
@@ -482,7 +636,10 @@ export default function ScanPage() {
   const warningCount = allChecks.filter(c => c.status === 'warning').length;
   const failingCount = allChecks.filter(c => c.status === 'fail').length;
 
+  const categoryScores = result ? getCategoryScores(result) : null;
+
   const filteredChecks = allChecks.filter(c => {
+    if (activeCategory && !CATEGORY_CHECK_IDS[activeCategory]?.includes(c.id)) return false;
     if (filterLayer !== 'all' && c.layer !== filterLayer) return false;
     if (filterStatus === 'attention') return c.status === 'fail' || c.status === 'warning';
     if (filterStatus === 'pass') return c.status === 'pass';
@@ -656,15 +813,64 @@ export default function ScanPage() {
               </div>
             </div>
 
+            {/* Category Scorecards (Circular Dials) */}
+            {categoryScores && (
+              <div className="p-4 sm:p-5 rounded-xl border border-border bg-card space-y-3.5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div>
+                    <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">
+                      Strategic Optimization Scorecards
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                      Deterministic 0–100 benchmark scores across search, answer engines, and autonomous AI agents
+                    </p>
+                  </div>
+                  {activeCategory && (
+                    <button
+                      type="button"
+                      onClick={() => setActiveCategory(null)}
+                      className="text-xs text-primary hover:underline self-start sm:self-auto font-medium"
+                    >
+                      Reset score filter ({activeCategory.toUpperCase()})
+                    </button>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5 sm:gap-3">
+                  {CATEGORY_DIAL_CONFIG.map(dial => {
+                    const categoryScore = categoryScores[dial.key as keyof typeof categoryScores] ?? 0;
+                    const isActive = activeCategory === dial.key;
+                    return (
+                      <ScoreDialCard
+                        key={dial.key}
+                        score={categoryScore}
+                        label={dial.label}
+                        subtitle={dial.subtitle}
+                        active={isActive}
+                        onClick={() => {
+                          setActiveCategory(isActive ? null : dial.key);
+                          setFilterLayer('all');
+                        }}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
             {/* Layer cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
               {result.layers.map(layer => {
-                const isSelected = filterLayer === layer.id;
+                const isSelected = filterLayer === layer.id && !activeCategory;
                 return (
                   <button
                     key={layer.id}
                     type="button"
-                    onClick={() => { setFilterLayer(isSelected ? 'all' : layer.id); setFilterStatus('all'); }}
+                    onClick={() => {
+                      setActiveCategory(null);
+                      setFilterLayer(isSelected ? 'all' : layer.id);
+                      setFilterStatus('all');
+                    }}
                     className={cn(
                       'p-3.5 rounded-lg border text-left flex flex-col gap-2 transition-colors group',
                       isSelected
@@ -763,10 +969,13 @@ export default function ScanPage() {
               <div className="flex flex-wrap gap-x-4 gap-y-1">
                 <button
                   type="button"
-                  onClick={() => setFilterLayer('all')}
+                  onClick={() => {
+                    setFilterLayer('all');
+                    setActiveCategory(null);
+                  }}
                   className={cn(
                     'py-1 text-xs transition border-b-2 -mb-px',
-                    filterLayer === 'all'
+                    filterLayer === 'all' && !activeCategory
                       ? 'border-foreground text-foreground font-semibold'
                       : 'border-transparent text-muted-foreground hover:text-foreground'
                   )}
@@ -777,10 +986,13 @@ export default function ScanPage() {
                   <button
                     key={layer}
                     type="button"
-                    onClick={() => setFilterLayer(layer)}
+                    onClick={() => {
+                      setFilterLayer(layer);
+                      setActiveCategory(null);
+                    }}
                     className={cn(
                       'py-1 text-xs transition border-b-2 -mb-px',
-                      filterLayer === layer
+                      filterLayer === layer && !activeCategory
                         ? 'border-foreground text-foreground font-semibold'
                         : 'border-transparent text-muted-foreground hover:text-foreground'
                     )}
@@ -790,15 +1002,22 @@ export default function ScanPage() {
                 ))}
               </div>
 
-              {(filterLayer !== 'all' || filterStatus !== 'all') && (
+              {(filterLayer !== 'all' || filterStatus !== 'all' || activeCategory) && (
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
-                  <span>Showing {filteredChecks.length} of {allChecks.length} checks</span>
+                  <span>
+                    Showing {filteredChecks.length} of {allChecks.length} checks
+                    {activeCategory && ` (${activeCategory.toUpperCase()} score dial)`}
+                  </span>
                   <button
                     type="button"
-                    onClick={() => { setFilterLayer('all'); setFilterStatus('all'); }}
-                    className="text-primary hover:underline"
+                    onClick={() => {
+                      setFilterLayer('all');
+                      setFilterStatus('all');
+                      setActiveCategory(null);
+                    }}
+                    className="text-primary hover:underline font-medium"
                   >
-                    Clear
+                    Clear filters
                   </button>
                 </div>
               )}

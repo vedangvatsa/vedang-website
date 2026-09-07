@@ -45,6 +45,14 @@ export interface ScanResult {
   score: number; // 0 - 100
   grade: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F';
   summary: string;
+  categoryScores: {
+    seo: number;
+    aeo: number;
+    geo: number;
+    agentic: number;
+    performance: number;
+    security: number;
+  };
   layers: LayerScore[];
   badges: {
     mcpServer: boolean;
