@@ -290,7 +290,7 @@ export default function WebsiteSpecificationPage() {
     <PageLayout>
       <div className="w-full space-y-12 sm:space-y-16 pb-20">
         {/* ── Header ── */}
-        <header>
+        <div>
           <PageHero
             title="The Site Checklist"
             subtitle={
@@ -315,7 +315,7 @@ export default function WebsiteSpecificationPage() {
               The Site Checklist is an exhaustive technical specification of modern web standards, structured data requirements, security protocols, performance optimizations, and AI discoverability best practices for production web applications.
             </p>
           </div>
-        </header>
+        </div>
 
         <article className="space-y-12 sm:space-y-14">
           {/* ── Stats ── */}

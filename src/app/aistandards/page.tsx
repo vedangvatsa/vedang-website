@@ -299,8 +299,8 @@ export default function AiDiscoveryStandardsPage() {
 
   return (
     <PageLayout>
-      <div className="w-full space-y-12 sm:space-y-16 pb-20">
-        <header>
+      <div className="w-full space-y-8 pb-16 min-w-0">
+        <div>
           <PageHero
             title="AI Discovery Standards"
             subtitle="Reference files and an installer for declaring identity, content maps, and crawl preferences that AI systems may use. Outcomes vary by product and are not guaranteed."
@@ -322,11 +322,10 @@ export default function AiDiscoveryStandardsPage() {
               AI Discovery Standards are machine-readable file formats (llms.txt, brand.txt, agents.json, ai-catalog.json, RFC 9727 api-catalog, RFC 9728 oauth-protected-resource) and HTTP content negotiation protocols that enable search engines, LLM answer engines, and autonomous agents to index, authenticate, and interact with web resources.
             </p>
           </div>
-        </header>
+        </div>
 
-      <div className="py-8 sm:py-10 md:py-14 min-w-0">
-        <article className="notion-article prose prose-neutral max-w-5xl w-full min-w-0 mx-auto">
-          <div className="space-y-12 sm:space-y-14 not-prose min-w-0">
+        <article className="w-full min-w-0 mx-auto">
+          <div className="space-y-12 sm:space-y-14 min-w-0">
 
             <section id="install" className="min-w-0 scroll-mt-20">
               <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Install</h2>
@@ -792,7 +791,6 @@ curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
           </div>
         </article>
       </div>
-    </div>
-  </PageLayout>
+    </PageLayout>
   );
 }

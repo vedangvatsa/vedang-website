@@ -221,7 +221,7 @@ export default function DevelopersPage() {
       </div>
 
       <div className="w-full space-y-12 sm:space-y-16 pb-20">
-        <header>
+        <div>
           <PageHero
             title="Vedang Vatsa Developer Resources"
             subtitle="Official API documentation, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, and developer portal for Vedang Vatsa (veda.ng). Keyless, open-access machine interfaces for research paper search, essay catalogs, and agent tools."
@@ -230,7 +230,7 @@ export default function DevelopersPage() {
           <div className="pt-2">
             <JumpNav items={NAV_SECTIONS} />
           </div>
-        </header>
+        </div>
 
         <article className="space-y-12 sm:space-y-14">
           {/* ── Section 1: Quick Index & Predictable Endpoints ── */}

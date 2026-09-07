@@ -492,7 +492,7 @@ export default function ScanPage() {
   return (
     <PageLayout>
       <div className="w-full space-y-8 pb-16">
-        <header>
+        <div>
           <PageHero
             title="AI & Web Readiness Scanner"
             subtitle="Deterministic audit for AI answer engines, MCP clients, and machine consumers. Scores your site across Discovery, Access, Usability, Security, SEO, and Payments."
@@ -500,7 +500,7 @@ export default function ScanPage() {
           <div className="-mt-3">
             <AuthorByline links={[{ label: 'Audit Tool' }]} />
           </div>
-        </header>
+        </div>
 
         {/* ── Input form ── */}
         <section aria-label="Scan Target" className="w-full space-y-2.5">
