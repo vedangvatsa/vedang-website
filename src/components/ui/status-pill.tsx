@@ -25,21 +25,21 @@ interface StatusPillProps {
 
 const STATUS_CONFIG: Record<string, { label: string; style: string }> = {
   // Audit Scanner
-  pass: { label: 'Pass', style: 'bg-zinc-900 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 border-transparent font-medium' },
-  warning: { label: 'Warn', style: 'bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 font-medium' },
-  warn: { label: 'Warn', style: 'bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 font-medium' },
-  fail: { label: 'Fail', style: 'border border-foreground/80 text-foreground bg-transparent font-medium' },
-  na: { label: 'N/A', style: 'bg-muted/40 text-muted-foreground/60 border-border/40' },
+  pass: { label: 'Pass', style: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/25' },
+  warning: { label: 'Warn', style: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/25' },
+  warn: { label: 'Warn', style: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/25' },
+  fail: { label: 'Fail', style: 'bg-rose-500/10 text-rose-700 dark:text-rose-400 border-rose-500/25' },
+  na: { label: 'N/A', style: 'bg-muted text-muted-foreground border-border' },
 
   // Priorities & Specs
-  required: { label: 'Required', style: 'bg-zinc-900 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 border-transparent font-medium' },
-  critical: { label: 'Critical', style: 'border border-foreground/80 text-foreground bg-transparent font-medium' },
-  important: { label: 'Important', style: 'bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 font-medium' },
-  recommended: { label: 'Recommended', style: 'bg-muted text-muted-foreground border-border' },
-  start_here: { label: 'Start here', style: 'bg-zinc-900 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 border-transparent font-medium' },
-  when_applies: { label: 'When it applies', style: 'bg-muted text-muted-foreground border-border' },
-  optional: { label: 'Optional', style: 'bg-muted/40 text-muted-foreground/60 border-border/40' },
-  avoid: { label: 'Avoid', style: 'border border-foreground/80 text-foreground bg-transparent font-medium' },
+  required: { label: 'Required', style: 'bg-rose-500/10 text-rose-700 dark:text-rose-400 border-rose-500/25' },
+  critical: { label: 'Critical', style: 'bg-rose-500/10 text-rose-700 dark:text-rose-400 border-rose-500/25' },
+  important: { label: 'Important', style: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/25' },
+  recommended: { label: 'Recommended', style: 'bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/25' },
+  start_here: { label: 'Start here', style: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/25' },
+  when_applies: { label: 'When it applies', style: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/25' },
+  optional: { label: 'Optional', style: 'bg-muted text-muted-foreground border-border' },
+  avoid: { label: 'Avoid', style: 'bg-rose-500/10 text-rose-700 dark:text-rose-400 border-rose-500/25' },
 };
 
 export function StatusPill({ status, label, className, size = 'default' }: StatusPillProps) {

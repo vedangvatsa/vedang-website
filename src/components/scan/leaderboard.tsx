@@ -27,10 +27,10 @@ interface Summary {
 const TARGET_N = 50000;
 
 function gradeClass(grade: string): string {
-  if (grade === 'A+' || grade === 'A') return 'text-foreground font-bold';
-  if (grade === 'B') return 'text-foreground font-semibold';
-  if (grade === 'C') return 'text-muted-foreground';
-  return 'text-muted-foreground/70';
+  if (grade === 'A+' || grade === 'A') return 'text-emerald-600';
+  if (grade === 'B') return 'text-teal-600';
+  if (grade === 'C') return 'text-amber-600';
+  return 'text-red-500';
 }
 
 function DomainIcon({ domain, file }: { domain: string; file: string | null }) {
@@ -118,7 +118,7 @@ export function LeaderboardSection() {
             <span className="mx-2 text-border">·</span>
             mean {summary.meanScore} · median {summary.medianScore}
             {partial && (
-              <span className="text-muted-foreground">
+              <span className="text-amber-600">
                 <span className="mx-2 text-border">·</span>
                 crawl in progress, numbers will move
               </span>
