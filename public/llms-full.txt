@@ -4,7 +4,7 @@
 
 ## How Agent-Ready Is the Web? A 50,000-Domain Census
 URL: https://veda.ng/agentready
-Summary: 
+Summary: We probed 50,000 websites with 61 machine-readability checks. Mean score: 25.7 out of 100. Here is what agents actually face.
 
 Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it reads reviews, compares prices, and hands you a shortlist. What you never see is the friction underneath. On roughly three of every five websites it visits, the bot fetching pages for that answer gets refused at the door. On most of the rest, it must scrape layout markup built for human eyes. I spent a week measuring exactly how bad it is across 50,000 domains, applying the same 61 machine-readability checks to every origin. The mean score came back 25.7 out of 100.
 
@@ -21,12 +21,13 @@ An autonomous agent performs six consecutive jobs on a website: it finds the ori
 
 Each check consists of a single deterministic HTTP request with a clear, automated pass rule. No logins, no browser rendering overhead, and no manual rating.
 
-- **50,000**: Domains audited from Tranco top-1M sample (Census dataset)
-- **25.7**: Mean agentic readiness score / 100 (50,000-domain census)
-- **61**: Deterministic probes per domain (Scanner probe specification)
-- **0**: Origins excluded or hand-picked (Sampling manifest)
+  - **50,000**: Domains audited from Tranco top-1M sample (Census dataset)
+  - **25.7**: Mean agentic readiness score / 100 (50,000-domain census)
+  - **61**: Deterministic probes per domain (Scanner probe specification)
+  - **0**: Origins excluded or hand-picked (Sampling manifest)
 
 The sample avoids hand-picked bias. We drew from the [Tranco top-1M research ranking](https://tranco-list.eu/) across three stratified bands under a published random seed:
+
 - Ranks 1 to 10,000 (all 10,000 domains)
 - Ranks 10,001 to 100,000 (20,000 randomly selected domains)
 - Ranks 100,001 to 1,000,000 (20,000 randomly selected domains)
@@ -36,6 +37,7 @@ A [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux)
 ## The headline adoption numbers
 
 The public web shows minimal adoption for machine-specific standards:
+
 - **llms.txt catalog:** 6.62% of domains publish a valid index file at root.
 - **Markdown content negotiation:** 2.95% respond to `Accept: text/markdown` with clean Markdown text.
 - **Live MCP server:** 1.82% expose an active Model Context Protocol endpoint.
@@ -48,6 +50,7 @@ These findings align with independent research. A [Thunderbit crawl of the Tranc
 ## Measurement methodology and rate limits
 
 Scanning 50,000 origins without triggering network artifacts requires careful rate control:
+
 - 34 parallel probes per domain with a 4,500ms timeout per request.
 - Maximum concurrency capped at 3 target domains simultaneously.
 - Standardized custom User-Agent identifying the crawler and purpose.
@@ -115,6 +118,7 @@ Site operators can improve machine readiness through four straightforward additi
 ## Reproducing the audit
 
 All dataset files, probe definitions, and analysis scripts are available under open-source licenses:
+
 - **Full Research Paper & Data:** [GitHub Research Repository](https://github.com/vedangvatsa/research-paper-framework/tree/main/papers/agentic-web-readiness)
 - **Live Single-Domain Audit Tool:** [veda.ng/scan](https://veda.ng/scan)
 - **Ranked 50,000-Domain Leaderboard:** [veda.ng/scan?tab=leaderboard](https://veda.ng/scan)

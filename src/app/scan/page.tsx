@@ -253,7 +253,7 @@ function PromptSection() {
   };
 
   return (
-    <section className="py-2 border-t border-border">
+    <div className="pt-3">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-1">
         <p className="text-sm text-muted-foreground">
           Master prompt for AI coding agents.
@@ -287,7 +287,7 @@ function PromptSection() {
           <CodeBlock code={MASTER_PROMPT} filename="ai-readiness-master-prompt.md" />
         </div>
       )}
-    </section>
+    </div>
   );
 }
 
@@ -730,16 +730,16 @@ export default function ScanPage() {
 
         {/* ── Pre-scan state ── */}
         {!result && !loading && !error && (
-          <div className="space-y-4">
-            {/* Layer breakdown table */}
-            <details className="border-b border-border pb-3 group">
-              <summary className="py-2 text-sm text-muted-foreground cursor-pointer list-none flex items-center justify-between gap-2 hover:text-foreground transition-colors font-medium">
+          <div className="rounded-xl border border-border bg-card/40 p-4 sm:p-5 divide-y divide-border/60">
+            {/* Layer breakdown accordion */}
+            <details className="pb-3 group">
+              <summary className="py-1 text-sm text-muted-foreground cursor-pointer list-none flex items-center justify-between gap-2 hover:text-foreground transition-colors font-medium">
                 <span>67 probes across 6 layers</span>
                 <span className="transition-transform duration-150 group-open:rotate-180">
                   <IconChevronDown className="w-3.5 h-3.5" />
                 </span>
               </summary>
-              <div className="border-t border-border divide-y divide-border/60 pt-1">
+              <div className="border-t border-border divide-y divide-border/60 pt-2 mt-2">
               {[
                 { layer: 'Discovery',           probes: 13, desc: 'robots.txt AI policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, sitemaps' },
                 { layer: 'Access',              probes: 9,  desc: 'Markdown content negotiation, .md URL twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
@@ -760,7 +760,7 @@ export default function ScanPage() {
               </div>
             </details>
 
-            {/* Prompt section — collapsed by default */}
+            {/* Master prompt section */}
             <PromptSection />
           </div>
         )}
