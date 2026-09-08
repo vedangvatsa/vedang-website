@@ -112,44 +112,7 @@ export function LeaderboardSection() {
       {failed && (
         <p className="text-xs text-muted-foreground">Leaderboard data is not published yet.</p>
       )}
-      {summary && (
-        <>
-          <p className="text-xs text-muted-foreground tabular-nums">
-            {summary.domainsScored.toLocaleString()} domains scored
-            <span className="mx-2 text-border">·</span>
-            mean {summary.meanScore} · median {summary.medianScore}
-            {partial && (
-              <span className="text-amber-600">
-                <span className="mx-2 text-border">·</span>
-                crawl in progress, numbers will move
-              </span>
-            )}
-            {summary.snapshotEnd && (
-              <span>
-                <span className="mx-2 text-border">·</span>
-                snapshot {summary.snapshotEnd.slice(0, 10)}
-              </span>
-            )}
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[
-              { label: 'llms.txt', key: 'llms-txt' },
-              { label: 'Markdown negotiation', key: 'markdown-negotiation' },
-              { label: 'Live MCP server', key: 'mcp-server-live' },
-              { label: 'OpenAPI spec', key: 'openapi-spec' },
-            ].map((s) => {
-              const a = summary.adoption[s.key];
-              if (!a) return null;
-              return (
-                <div key={s.key} className="py-2 border-b border-border/40">
-                  <div className="text-[11px] text-muted-foreground">{s.label}</div>
-                  <div className="text-sm font-semibold tabular-nums">{a ? (a.share * 100).toFixed(2) : 0}%</div>
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
+
       <div className="space-y-2">
         <input
           value={query}
