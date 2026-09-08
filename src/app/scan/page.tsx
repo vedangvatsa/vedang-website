@@ -240,56 +240,7 @@ function IconRefresh({ className = 'w-3.5 h-3.5' }: { className?: string }) {
   );
 }
 
-// ─── Prompt toggle (pre-scan) ─────────────────────────────────────────────────
 
-function PromptSection() {
-  const [open, setOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    copyText(MASTER_PROMPT).catch(() => {});
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <div className="pt-3">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-1">
-        <p className="text-sm text-muted-foreground">
-          Master prompt for AI coding agents.
-        </p>
-        <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
-          <button
-            type="button"
-            onClick={handleCopy}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium bg-black text-white hover:bg-zinc-800 transition-colors"
-          >
-            {copied ? (
-              <><IconCheck className="w-3 h-3" /><span>Copied</span></>
-            ) : (
-              <span>Copy prompt</span>
-            )}
-          </button>
-          <button
-            type="button"
-            onClick={() => setOpen(o => !o)}
-            className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded border border-border text-xs text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <span>{open ? 'Hide' : 'Preview'}</span>
-            <span className={cn('transition-transform duration-150', open && 'rotate-180')}>
-              <IconChevronDown className="w-3 h-3" />
-            </span>
-          </button>
-        </div>
-      </div>
-      {open && (
-        <div className="pt-3">
-          <CodeBlock code={MASTER_PROMPT} filename="ai-readiness-master-prompt.md" />
-        </div>
-      )}
-    </div>
-  );
-}
 
 // ─── Check Row ────────────────────────────────────────────────────────────────
 
@@ -729,41 +680,6 @@ export default function ScanPage() {
         )}
 
         {/* ── Pre-scan state ── */}
-        {!result && !loading && !error && (
-          <div className="rounded-xl border border-border bg-card/40 p-4 sm:p-5 divide-y divide-border/60">
-            {/* Layer breakdown accordion */}
-            <details className="pb-3 group">
-              <summary className="py-1 text-sm text-muted-foreground cursor-pointer list-none flex items-center justify-between gap-2 hover:text-foreground transition-colors font-medium">
-                <span>67 probes across 6 layers</span>
-                <span className="transition-transform duration-150 group-open:rotate-180">
-                  <IconChevronDown className="w-3.5 h-3.5" />
-                </span>
-              </summary>
-              <div className="border-t border-border divide-y divide-border/60 pt-2 mt-2">
-              {[
-                { layer: 'Discovery',           probes: 13, desc: 'robots.txt AI policies, llms.txt, ARD v0.91, RFC 9727 API Catalog, agents.txt, sitemaps' },
-                { layer: 'Access',              probes: 9,  desc: 'Markdown content negotiation, .md URL twins, robots meta AI directives, SSR no-JS fallback, rate limits' },
-                { layer: 'Usability & MCP',      probes: 10, desc: 'Streamable MCP servers, OpenAPI 3.1 with examples, auth guides, RFC 8414 OAuth, TDMRep' },
-                { layer: 'Security',            probes: 11, desc: 'HTTPS, HSTS preload, CSP, nosniff, frame protection, RFC 9116 security.txt, RFC 9421 signatures' },
-                { layer: 'SEO & Web Standards', probes: 21, desc: 'HTML5 doctype, WCAG 2.2 a11y, viewport, headings, JSON-LD @graph, E-E-A-T sameAs, RSS feeds' },
-                { layer: 'Micropayments',       probes: 3,  desc: 'L402 / HTTP 402, WebLN wallet discovery, machine terms of service' },
-              ].map(item => (
-                <div key={item.layer} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 py-2.5">
-                  <div className="flex items-center justify-between sm:justify-start gap-2 shrink-0 sm:w-36 pt-px">
-                    <span className="font-medium text-sm text-foreground">{item.layer}</span>
-                    <span className="text-[11px] text-muted-foreground/50 tabular-nums font-mono sm:hidden">{item.probes} probes</span>
-                  </div>
-                  <span className="hidden sm:inline text-[11px] text-muted-foreground/40 tabular-nums shrink-0 w-5 pt-1">{item.probes}</span>
-                  <span className="text-xs text-muted-foreground leading-relaxed pt-px min-w-0 flex-1">{item.desc}</span>
-                </div>
-              ))}
-              </div>
-            </details>
-
-            {/* Master prompt section */}
-            <PromptSection />
-          </div>
-        )}
 
         {/* ── Results ── */}
         {result && !loading && (
