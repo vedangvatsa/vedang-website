@@ -29,7 +29,13 @@ async function main() {
     `https://${HOST}/essays`,
     `https://${HOST}/profile`,
     `https://${HOST}/glossary`,
-    `https://${HOST}/consulting`
+    `https://${HOST}/consulting`,
+    `https://${HOST}/developers`,
+    `https://${HOST}/docs`,
+    `https://${HOST}/pricing`,
+    `https://${HOST}/scan`,
+    `https://${HOST}/about`,
+    `https://${HOST}/api`,
   ];
 
   const allUrls = Array.from(new Set([...staticUrls, ...essayUrls]));

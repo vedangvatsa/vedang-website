@@ -3,6 +3,17 @@
   "version": "0.1.0",
   "private": false,
   "description": "Official repository and TypeScript/JavaScript SDK for Vedang Vatsa and Veda (veda.ng) APIs and Model Context Protocol (MCP) servers.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "agent-readiness",
+    "llms-txt",
+    "openapi",
+    "sdk",
+    "veda-ng",
+    "vedang-vatsa"
+  ],
   "homepage": "https://veda.ng",
   "repository": {
     "type": "git",
