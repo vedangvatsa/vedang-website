@@ -133,7 +133,7 @@ export default function Home() {
           action="/api/v1/reports/search"
           method="GET"
         >
-          <input name="q" placeholder="Keywords" />
+          <input name="q" placeholder="Keywords" aria-label="Search academic papers by keywords" />
           <button type="submit">Search Papers</button>
         </form>
         <form
@@ -144,7 +144,7 @@ export default function Home() {
           action="/api/v1/essays"
           method="GET"
         >
-          <input name="tag" placeholder="Topic Tag" />
+          <input name="tag" placeholder="Topic Tag" aria-label="Search essays by topic tag" />
           <button type="submit">Search Essays</button>
         </form>
       </section>
