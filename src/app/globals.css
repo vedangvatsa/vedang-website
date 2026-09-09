@@ -326,6 +326,11 @@
   overflow: hidden;
 }
 
+/* Article heading spacing must not create a blank band above chart titles. */
+.notion-article .chart-card h3 {
+  margin-top: 0;
+}
+
 .chart-card--sm {
   margin-top: 2rem;
   margin-bottom: 2rem;
