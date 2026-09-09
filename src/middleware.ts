@@ -49,6 +49,10 @@ export function middleware(req: NextRequest) {
       res.headers.set('Vary', 'Accept, User-Agent, Accept-Encoding');
       res.headers.set('Content-Type', 'text/markdown; charset=utf-8');
       res.headers.set('Access-Control-Allow-Origin', '*');
+      // Bot-negotiated representations must never be served from shared
+      // cache to a different identity: pin them out of edge caches.
+      res.headers.set('Cache-Control', 'no-store');
+      res.headers.set('CDN-Cache-Control', 'no-store');
       res.headers.set('RateLimit-Limit', '120');
       res.headers.set('RateLimit-Remaining', '119');
       res.headers.set('RateLimit-Reset', '60');

@@ -10,6 +10,7 @@ import { PageHero } from '@/components/page-hero';
 import { CardGrid } from '@/components/card-grid';
 import { recentPapers } from '@/components/recent-papers';
 import { essays } from '@/lib/essays';
+import { WebMCPRegister } from '@/components/webmcp-register';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.home.title,
@@ -123,6 +124,7 @@ export default function Home() {
         </ul>
 
         {/* WebMCP In-Page Tools (W3C Draft Standard) */}
+        <WebMCPRegister />
         <form
           {...({
             toolname: 'search_reports',
