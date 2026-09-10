@@ -9,6 +9,7 @@ from pathlib import Path
 
 OUT = Path("/Users/vedang/ZCodeProject/vedang-website/public/images/essays")
 plt.rcParams.update({
+    "font.family": "DejaVu Sans",
     "font.size": 13,
     "axes.spines.top": False,
     "axes.spines.right": False,
@@ -25,6 +26,21 @@ def save(fig, name):
     fig.savefig(OUT / name, format="svg")
     plt.close(fig)
     print("wrote", name)
+
+# 0. Census summary
+fig = plt.figure(figsize=(9, 3.4))
+fig.text(0.08, 0.84, "Agent-Readiness Census", fontsize=19, fontweight="bold")
+fig.text(0.08, 0.75, "50,000 domains from the Tranco top-1M sample, tested with 61 deterministic checks", fontsize=12, color="#555555")
+fig.add_artist(plt.Line2D([0.08, 0.92], [0.67, 0.67], color="#37352f", linewidth=0.8))
+for x, value, label in [
+    (0.08, "25.7 / 100", "Mean readiness score"),
+    (0.38, "6.62%", "Valid llms.txt files"),
+    (0.66, "1.82%", "Live MCP endpoints"),
+]:
+    fig.text(x, 0.45, value, fontsize=24, fontweight="bold")
+    fig.text(x, 0.34, label, fontsize=11, color="#555555")
+fig.text(0.08, 0.12, "Source: 50,000-domain census, September 2026", fontsize=10, color="#666666")
+save(fig, "agentready-hero.svg")
 
 # 1. Adoption bars (11 headline checks)
 checks = [

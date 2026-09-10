@@ -218,6 +218,11 @@
   object-fit: contain;
 }
 
+/* Research figures use square, paper-like plates rather than app-card styling. */
+.notion-article .figure-plate img {
+  border-radius: 0;
+}
+
 @media (min-width: 768px) {
   .notion-article img {
     max-height: min(40rem, 85vh);
