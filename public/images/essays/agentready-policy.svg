@@ -1,22 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
-  <title>robots.txt policy and observed HTTP response</title>
-  <rect width="1200" height="420" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210">
+  <title>Declared policy and observed HTTP response</title>
+  <rect width="1200" height="210" fill="#ffffff"/>
   <g font-family="Inter, Arial, sans-serif">
-    <text x="48" y="48" font-size="28" font-weight="700" fill="#18181b">Declared policy and actual HTTP response</text>
-    <text x="48" y="78" font-size="16" fill="#71717a">Response to the two crawler identities at the page edge</text>
-    <line x1="48" y1="104" x2="1152" y2="104" stroke="#e3e3e0"/>
-    <rect x="760" y="125" width="14" height="14" fill="#18181b"/><text x="782" y="137" font-size="14" fill="#52525b">Serves 200</text>
-    <rect x="910" y="125" width="14" height="14" fill="#a1a1aa"/><text x="932" y="137" font-size="14" fill="#52525b">Throttled</text>
-    <rect x="1050" y="125" width="14" height="14" fill="#e4e4e7"/><text x="1072" y="137" font-size="14" fill="#52525b">Refused</text>
-    <text x="48" y="181" font-size="17" font-weight="600" fill="#18181b">Policy explicitly allows AI bots</text><text x="48" y="204" font-size="14" fill="#71717a">21,881 domains</text>
-    <rect x="400" y="166" width="700" height="28" fill="#f4f4f5"/><rect x="400" y="166" width="470" height="28" fill="#18181b"/><rect x="870" y="166" width="82" height="28" fill="#a1a1aa"/><rect x="952" y="166" width="148" height="28" fill="#e4e4e7"/>
-    <text x="400" y="222" font-size="14" fill="#52525b">67.2% serves</text><text x="650" y="222" font-size="14" fill="#52525b">11.7% throttled</text><text x="921" y="222" font-size="14" fill="#52525b">21.1% refused</text>
-    <line x1="48" y1="246" x2="1152" y2="246" stroke="#e3e3e0"/>
-    <text x="48" y="281" font-size="17" font-weight="600" fill="#18181b">Policy restricts AI bots</text><text x="48" y="304" font-size="14" fill="#71717a">7,420 domains</text>
-    <rect x="400" y="266" width="700" height="28" fill="#f4f4f5"/><rect x="400" y="266" width="199" height="28" fill="#18181b"/><rect x="599" y="266" width="41" height="28" fill="#a1a1aa"/><rect x="640" y="266" width="460" height="28" fill="#e4e4e7"/>
-    <text x="400" y="322" font-size="14" fill="#52525b">28.4% serves</text><text x="566" y="322" font-size="14" fill="#52525b">5.8% throttled</text><text x="894" y="322" font-size="14" fill="#52525b">65.8% refused</text>
-    <line x1="48" y1="346" x2="1152" y2="346" stroke="#e3e3e0"/>
-    <text x="48" y="381" font-size="17" font-weight="600" fill="#18181b">No AI policy declared</text><text x="48" y="404" font-size="14" fill="#71717a">20,699 domains</text>
-    <rect x="400" y="366" width="700" height="28" fill="#f4f4f5"/><rect x="400" y="366" width="91" height="28" fill="#18181b"/><rect x="491" y="366" width="32" height="28" fill="#a1a1aa"/><rect x="523" y="366" width="577" height="28" fill="#e4e4e7"/>
+    <text x="48" y="38" font-size="14" font-weight="600" fill="#71717a">DECLARED POLICY · EDGE RESPONSE</text>
+    <line x1="48" y1="58" x2="1152" y2="58" stroke="#e3e3e0"/>
+    <text x="48" y="96" font-size="14" font-weight="600" fill="#71717a">POLICY ALLOWS</text>
+    <text x="48" y="148" font-size="46" font-weight="700" fill="#18181b">21.1%</text>
+    <text x="48" y="180" font-size="15" fill="#52525b">still refuse</text>
+    <line x1="400" y1="78" x2="400" y2="188" stroke="#e3e3e0"/>
+    <text x="440" y="96" font-size="14" font-weight="600" fill="#71717a">POLICY RESTRICTS</text>
+    <text x="440" y="148" font-size="46" font-weight="700" fill="#18181b">28.4%</text>
+    <text x="440" y="180" font-size="15" fill="#52525b">still serve</text>
+    <line x1="800" y1="78" x2="800" y2="188" stroke="#e3e3e0"/>
+    <text x="840" y="96" font-size="14" font-weight="600" fill="#71717a">NO POLICY</text>
+    <text x="840" y="148" font-size="46" font-weight="700" fill="#18181b">82.4%</text>
+    <text x="840" y="180" font-size="15" fill="#52525b">refuse both bots</text>
   </g>
 </svg>

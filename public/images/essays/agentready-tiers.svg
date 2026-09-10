@@ -1,23 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210">
   <title>Machine readiness by Tranco rank tier</title>
-  <rect width="1200" height="320" fill="#ffffff"/>
+  <rect width="1200" height="210" fill="#ffffff"/>
   <g font-family="Inter, Arial, sans-serif">
-    <text x="48" y="48" font-size="28" font-weight="700" fill="#18181b">Rank does not predict readiness</text>
-    <text x="48" y="78" font-size="16" fill="#71717a">Mean score and both-bot HTTP refusal by Tranco tier</text>
-    <line x1="48" y1="104" x2="1152" y2="104" stroke="#e3e3e0"/>
-    <text x="48" y="148" font-size="14" font-weight="600" fill="#71717a">RANKS 1 TO 10,000</text>
-    <text x="48" y="204" font-size="48" font-weight="700" fill="#18181b">26.1</text>
-    <text x="48" y="242" font-size="16" fill="#52525b">mean score</text>
-    <text x="48" y="278" font-size="14" fill="#71717a">56.2% both-bot refusal</text>
-    <line x1="400" y1="130" x2="400" y2="290" stroke="#e3e3e0"/>
-    <text x="440" y="148" font-size="14" font-weight="600" fill="#71717a">RANKS 10,001 TO 100,000</text>
-    <text x="440" y="204" font-size="48" font-weight="700" fill="#18181b">25.2</text>
-    <text x="440" y="242" font-size="16" fill="#52525b">mean score</text>
-    <text x="440" y="278" font-size="14" fill="#71717a">55.6% both-bot refusal</text>
-    <line x1="800" y1="130" x2="800" y2="290" stroke="#e3e3e0"/>
-    <text x="840" y="148" font-size="14" font-weight="600" fill="#71717a">RANKS 100,001 TO 1M</text>
-    <text x="840" y="204" font-size="48" font-weight="700" fill="#18181b">25.9</text>
-    <text x="840" y="242" font-size="16" fill="#52525b">mean score</text>
-    <text x="840" y="278" font-size="14" fill="#71717a">52.2% both-bot refusal</text>
+    <text x="48" y="38" font-size="14" font-weight="600" fill="#71717a">MEAN SCORE · BOTH-BOT REFUSAL</text>
+    <line x1="48" y1="58" x2="1152" y2="58" stroke="#e3e3e0"/>
+    <text x="48" y="96" font-size="14" font-weight="600" fill="#71717a">RANKS 1 TO 10K</text>
+    <text x="48" y="148" font-size="46" font-weight="700" fill="#18181b">26.1</text>
+    <text x="48" y="180" font-size="15" fill="#52525b">56.2% refused</text>
+    <line x1="400" y1="78" x2="400" y2="188" stroke="#e3e3e0"/>
+    <text x="440" y="96" font-size="14" font-weight="600" fill="#71717a">RANKS 10K TO 100K</text>
+    <text x="440" y="148" font-size="46" font-weight="700" fill="#18181b">25.2</text>
+    <text x="440" y="180" font-size="15" fill="#52525b">55.6% refused</text>
+    <line x1="800" y1="78" x2="800" y2="188" stroke="#e3e3e0"/>
+    <text x="840" y="96" font-size="14" font-weight="600" fill="#71717a">RANKS 100K TO 1M</text>
+    <text x="840" y="148" font-size="46" font-weight="700" fill="#18181b">25.9</text>
+    <text x="840" y="180" font-size="15" fill="#52525b">52.2% refused</text>
   </g>
 </svg>

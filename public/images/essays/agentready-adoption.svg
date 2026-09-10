@@ -1,20 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
-  <title>Machine-readability adoption rates</title>
-  <rect width="1200" height="560" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210">
+  <title>Headline machine-readability adoption</title>
+  <rect width="1200" height="210" fill="#ffffff"/>
   <g font-family="Inter, Arial, sans-serif">
-    <text x="48" y="48" font-size="28" font-weight="700" fill="#18181b">Machine-readability adoption</text>
-    <text x="48" y="78" font-size="16" fill="#71717a">Share of 50,000 audited domains</text>
-    <line x1="48" y1="104" x2="1152" y2="104" stroke="#e3e3e0"/>
-    <g font-size="16" fill="#18181b">
-      <text x="48" y="150">robots.txt AI policy</text><rect x="320" y="130" width="700" height="22" fill="#f4f4f5"/><rect x="320" y="130" width="681" height="22" fill="#18181b"/><text x="1128" y="150" font-weight="700" text-anchor="end">43.76%</text>
-      <text x="48" y="198">Both bot identities served</text><rect x="320" y="178" width="700" height="22" fill="#f4f4f5"/><rect x="320" y="178" width="588" height="22" fill="#18181b"/><text x="1128" y="198" font-weight="700" text-anchor="end">37.82%</text>
-      <text x="48" y="246">JSON-LD structured data</text><rect x="320" y="226" width="700" height="22" fill="#f4f4f5"/><rect x="320" y="226" width="333" height="22" fill="#18181b"/><text x="1128" y="246" font-weight="700" text-anchor="end">21.37%</text>
-      <text x="48" y="294">Author E-E-A-T signals</text><rect x="320" y="274" width="700" height="22" fill="#f4f4f5"/><rect x="320" y="274" width="215" height="22" fill="#18181b"/><text x="1128" y="294" font-weight="700" text-anchor="end">13.82%</text>
-      <text x="48" y="342">llms.txt catalog</text><rect x="320" y="322" width="700" height="22" fill="#f4f4f5"/><rect x="320" y="322" width="103" height="22" fill="#18181b"/><text x="1128" y="342" font-weight="700" text-anchor="end">6.62%</text>
-      <text x="48" y="390">security.txt</text><rect x="320" y="370" width="700" height="22" fill="#f4f4f5"/><rect x="320" y="370" width="71" height="22" fill="#18181b"/><text x="1128" y="390" font-weight="700" text-anchor="end">4.58%</text>
-      <text x="48" y="438">Markdown negotiation</text><rect x="320" y="418" width="700" height="22" fill="#f4f4f5"/><rect x="320" y="418" width="46" height="22" fill="#18181b"/><text x="1128" y="438" font-weight="700" text-anchor="end">2.95%</text>
-      <text x="48" y="486">Live MCP server</text><rect x="320" y="466" width="700" height="22" fill="#f4f4f5"/><rect x="320" y="466" width="28" height="22" fill="#18181b"/><text x="1128" y="486" font-weight="700" text-anchor="end">1.82%</text>
-    </g>
-    <text x="48" y="534" font-family="Inter, Arial, sans-serif" font-size="14" fill="#71717a">OpenAPI specifications and machine payments each appear on fewer than 1% of audited domains.</text>
+    <text x="48" y="38" font-size="14" font-weight="600" fill="#71717a">SHARE OF 50,000 DOMAINS</text>
+    <line x1="48" y1="58" x2="1152" y2="58" stroke="#e3e3e0"/>
+    <text x="48" y="96" font-size="14" font-weight="600" fill="#71717a">LLMS.TXT</text>
+    <text x="48" y="148" font-size="46" font-weight="700" fill="#18181b">6.62%</text>
+    <text x="48" y="180" font-size="15" fill="#52525b">valid index</text>
+    <line x1="400" y1="78" x2="400" y2="188" stroke="#e3e3e0"/>
+    <text x="440" y="96" font-size="14" font-weight="600" fill="#71717a">MARKDOWN</text>
+    <text x="440" y="148" font-size="46" font-weight="700" fill="#18181b">2.95%</text>
+    <text x="440" y="180" font-size="15" fill="#52525b">negotiation</text>
+    <line x1="800" y1="78" x2="800" y2="188" stroke="#e3e3e0"/>
+    <text x="840" y="96" font-size="14" font-weight="600" fill="#71717a">LIVE MCP</text>
+    <text x="840" y="148" font-size="46" font-weight="700" fill="#18181b">1.82%</text>
+    <text x="840" y="180" font-size="15" fill="#52525b">endpoint</text>
   </g>
 </svg>

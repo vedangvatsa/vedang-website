@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.org/sitemap",
-  "generatedAt": "2026-09-08T10:50:34.085Z",
+  "generatedAt": "2026-09-10T01:20:37.590Z",
   "publisher": {
     "name": "Vedang Vatsa",
     "url": "https://veda.ng"
@@ -48,7 +48,7 @@
     },
     {
       "url": "https://veda.ng/agentready",
-      "title": "How Agent-Ready Is the Web? A 50,000-Domain Census",
+      "title": "The Web Is Not Ready for Agents",
       "lastmod": "2026-09-05",
       "changefreq": "monthly",
       "priority": 0.8

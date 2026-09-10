@@ -9,15 +9,6 @@ keywords: ['agentic web', 'AI agents', 'llms.txt', 'MCP', 'web measurement', 'Tr
 
 Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it reads reviews, compares prices, and hands you a shortlist. What you never see is the friction underneath. On roughly three of every five websites it visits, the bot fetching pages for that answer gets refused at the door. On most of the rest, it must scrape layout markup built for human eyes. I spent a week measuring exactly how bad it is across 50,000 domains, applying the same 61 machine-readability checks to every origin. The average score came back 25.7 out of 100.
 
-<Figure
-  src="/images/essays/agentready-hero.svg"
-  alt="Summary of the 50,000-domain agent-readiness census, showing a 25.7 out of 100 mean score, 6.62% llms.txt adoption, and 1.82% live MCP adoption."
-  caption="Machine-readability results from the 50,000-domain census."
-  source="50,000-domain census"
-  sourceUrl="https://veda.ng/scan"
-  wide
-/>
-
 ## What I measured, and why those things
 
 An autonomous agent performs six consecutive jobs on a website: it finds the origin, reads its content, invokes tools, relies on secure transport, cites facts, and executes payments. The audit framework maps directly to these steps across six layers:
@@ -61,8 +52,6 @@ An `llms.txt` file is a plain Markdown file outlining core site URLs. Content ne
   src="/images/essays/agentready-adoption.svg"
   alt="Horizontal bar chart showing adoption rates across ten machine-readability checks in the 50,000-domain census."
   caption="Adoption rates across headline machine-readability checks."
-  source="50,000-domain census"
-  sourceUrl="https://veda.ng/scan"
   wide
 />
 
@@ -97,8 +86,6 @@ Dividing results across Tranco rank tiers shows almost no correlation between do
   src="/images/essays/agentready-tiers.svg"
   alt="Bar chart comparing mean readiness score and both-bot refusal rate across Tranco rank tiers."
   caption="Readiness score and both-bot refusal rate by Tranco rank tier."
-  source="50,000-domain census"
-  sourceUrl="https://veda.ng/scan"
   wide
 />
 
@@ -118,8 +105,6 @@ Comparing `robots.txt` declarations against HTTP response status codes reveals a
   src="/images/essays/agentready-policy.svg"
   alt="Grouped bar chart comparing robots.txt AI crawler policies against HTTP serving, throttling, and refusal behavior."
   caption="Declared crawler policy compared with observed HTTP behavior."
-  source="50,000-domain census"
-  sourceUrl="https://veda.ng/scan"
   wide
 />
 

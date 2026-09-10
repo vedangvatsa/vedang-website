@@ -8,11 +8,11 @@
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>How Agent-Ready Is the Web? A 50,000-Domain Census</title>
+      <title>The Web Is Not Ready for Agents</title>
       <link>https://veda.ng/agentready</link>
       <guid>https://veda.ng/agentready</guid>
       <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
-      <description>We probed 50,000 websites with 61 machine-readability checks. Mean score: 25.7 out of 100. Here is what agents actually face.</description>
+      <description>I probed 50,000 websites with 61 machine-readability checks. Mean score: 25.7 out of 100. Here is what agents actually face.</description>
     </item>
     <item>
       <title>How India Uses AI</title>
