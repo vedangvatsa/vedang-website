@@ -39,7 +39,6 @@ for x, value, label in [
 ]:
     fig.text(x, 0.45, value, fontsize=24, fontweight="bold")
     fig.text(x, 0.34, label, fontsize=11, color="#555555")
-fig.text(0.08, 0.12, "Source: 50,000-domain census, September 2026", fontsize=10, color="#666666")
 save(fig, "agentready-hero.svg")
 
 # 1. Adoption bars (11 headline checks)

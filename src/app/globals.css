@@ -223,6 +223,10 @@
   border-radius: 0;
 }
 
+.notion-article .figure-plate figcaption {
+  text-align: left;
+}
+
 @media (min-width: 768px) {
   .notion-article img {
     max-height: min(40rem, 85vh);
