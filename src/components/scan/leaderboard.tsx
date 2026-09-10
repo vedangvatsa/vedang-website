@@ -184,7 +184,7 @@ export function LeaderboardSection() {
                 className="flex items-center justify-between gap-2 py-2 px-1 border-b border-border/40 hover:bg-muted/20 transition-colors"
               >
                 <div className="flex items-center gap-2 min-w-0">
-                  <span className="text-[11px] tabular-nums text-muted-foreground w-6 shrink-0 text-right font-medium">
+                  <span className="text-[11px] tabular-nums text-muted-foreground w-12 shrink-0 text-right font-medium whitespace-nowrap break-normal">
                     #{e.rank}
                   </span>
                   <a
