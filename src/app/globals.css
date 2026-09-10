@@ -187,6 +187,25 @@
   font-weight: 600;
 }
 
+/* Keep technical tokens readable without prose-generated backticks or code pills. */
+.notion-article :not(pre) > code {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #18181b;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  font-weight: 600;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.notion-article :not(pre) > code::before,
+.notion-article :not(pre) > code::after {
+  content: none;
+}
+
 /* Images keep native size. A 400px table chart must not stretch to the column. */
 .notion-article img {
   border-radius: 0.5rem;
