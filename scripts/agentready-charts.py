@@ -5,11 +5,28 @@ Run with /usr/bin/python3 (system matplotlib).
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
+from fontTools.ttLib import TTFont
 from pathlib import Path
+from tempfile import gettempdir
 
-OUT = Path("/Users/vedang/ZCodeProject/vedang-website/public/images/essays")
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "public" / "images" / "essays"
+FONT_DIR = ROOT / "public" / "fonts"
+
+def add_inter_font(filename):
+    """Convert the bundled WOFF webfont to TrueType for Matplotlib."""
+    source = FONT_DIR / filename
+    target = Path(gettempdir()) / f"vedang-{source.stem}.ttf"
+    font = TTFont(source)
+    font.flavor = None
+    font.save(target)
+    font_manager.fontManager.addfont(str(target))
+
+add_inter_font("Inter-Regular.ttf")
+add_inter_font("Inter-Bold.ttf")
 plt.rcParams.update({
-    "font.family": "DejaVu Sans",
+    "font.family": "Inter",
     "font.size": 13,
     "axes.spines.top": False,
     "axes.spines.right": False,
