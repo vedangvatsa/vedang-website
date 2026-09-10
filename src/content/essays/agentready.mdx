@@ -7,7 +7,7 @@ description: 'I probed 50,000 websites with 61 machine-readability checks. Mean 
 keywords: ['agentic web', 'AI agents', 'llms.txt', 'MCP', 'web measurement', 'Tranco', 'agent readiness']
 ---
 
-Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it reads reviews, compares prices, and hands you a shortlist. What you never see is the friction underneath. On roughly three of every five websites it visits, the bot fetching pages for that answer gets refused at the door. On most of the rest, it must scrape layout markup built for human eyes. I spent a week measuring exactly how bad it is across 50,000 domains, applying the same 61 machine-readability checks to every origin. The average score came back 25.7 out of 100.
+Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it reads reviews, compares prices, and hands you a shortlist. What you never see is the friction underneath. In this scan, neither of two crawler-user-agent probes was classified as an HTTP-200 success for 54.37% of sampled roots. That can mean a non-200 response, timeout, connection problem, or another failed fetch; it does not prove intentional blocking. I measured the public signals across 50,000 domains, applying the same 61 checks to every sampled root. The final recorded mean score was 25.7 out of 100.
 
 ## What I measured, and why those things
 
@@ -20,13 +20,12 @@ An autonomous agent performs six consecutive jobs on a website: it finds the ori
 5. **SEO & Citations (15 checks):** Standard title/meta tags, [JSON-LD `@graph`](https://json-ld.org/) entity schemas (`Organization`, `WebSite`, `Article`), E-E-A-T `sameAs` authority links, inverted pyramid content structure, and active RSS/Atom feeds.
 6. **Payments (3 checks):** [L402 / HTTP 402](https://l402.org/) payment headers, [WebLN](https://webln.guide/) wallet discovery, and machine terms of service (`/terms-of-use.md`).
 
-Each check consists of a single deterministic HTTP request with a clear, automated pass rule. No logins, no browser rendering overhead, and no manual rating.
+Each check uses a fixed automated rule over ordinary HTTP responses. No logins, browser rendering, or manual rating. Some checks use several probes, and a `pass` status can still represent partial credit.
 
 <StatRow>
   <Stat value="50,000" label="Domains audited from Tranco top-1M sample" source="Census dataset" sourceUrl="https://veda.ng/scan" />
   <Stat value="25.7" label="Mean agentic readiness score / 100" source="50,000-domain census" sourceUrl="https://veda.ng/scan" />
   <Stat value="61" label="Deterministic probes per domain" source="Scanner probe specification" sourceUrl="https://veda.ng/scan" />
-  <Stat value="0" label="Origins excluded or hand-picked" source="Sampling manifest" sourceUrl="https://veda.ng/scan" />
 </StatRow>
 
 The sample avoids hand-picked bias. I drew from the [Tranco top-1M research ranking](https://tranco-list.eu/) across three stratified bands under a published random seed:
@@ -35,16 +34,16 @@ The sample avoids hand-picked bias. I drew from the [Tranco top-1M research rank
 - Ranks 10,001 to 100,000 (20,000 randomly selected domains)
 - Ranks 100,001 to 1,000,000 (20,000 randomly selected domains)
 
-A [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux) cross-reference flag identifies origins with verified human browser traffic. The entire dataset, code, and 50,000-domain leaderboard are published on the [scan page](https://veda.ng/scan), which also hosts the full research paper.
+A [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux) cross-reference flag identifies hostnames in Chrome's popular-site list. The scan page hosts the tool, leaderboard, and full paper; the raw scan rows and source snapshots are not currently tracked in the public repository.
 
 ## The headline adoption numbers
 
 The public web shows minimal adoption for machine-specific standards:
 
-- **llms.txt catalog:** 6.62% of domains publish a valid index file at root.
-- **Markdown content negotiation:** 2.95% respond to `Accept: text/markdown` with clean Markdown text.
-- **Live MCP server:** 1.82% expose an active Model Context Protocol endpoint.
-- **OpenAPI specification:** 0.16% publish a parseable OpenAPI 3.0/3.1 contract at a standard location.
+- **llms.txt catalog:** 6.62% receive a scanner `pass` status at the tested paths.
+- **Markdown probe:** 2.95% return a Markdown-like response to one `Accept` probe.
+- **Basic MCP screen:** 1.82% return an HTTP-2xx body containing `jsonrpc` at one of two guessed paths.
+- **OpenAPI marker:** 0.16% match an OpenAPI or Swagger marker in the selected candidate response.
 
 An `llms.txt` file is a plain Markdown file outlining core site URLs. Content negotiation uses standard HTTP headers supported by web servers for decades. Yet 75.4% of audited origins score below 30 out of 100, and only 4 domains in 50,000 reach a score above 85.
 
@@ -65,7 +64,7 @@ Scanning 50,000 origins without triggering network artifacts requires careful ra
 - Maximum concurrency capped at 3 target domains simultaneously.
 - Standardized custom User-Agent identifying the crawler and purpose.
 
-Initial test runs at high concurrency yielded a 95% origin failure rate caused by source-network throttling. Re-scanning failed origins with controlled rate limits adjusted scores from 6 up to 46. I discarded the high-speed pass, implemented strict worker pacing, and performed a secondary verification pass across all low-scoring domains.
+The final corpus is a two-wave, latest-result record. Every initial row scoring 10 or below received another scan; higher-scoring rows did not. This outcome-dependent refresh raised the mean from 22.7 to 25.7, so the final value is not a clean one-time snapshot.
 
 ## Layer-by-layer breakdown
 
@@ -84,8 +83,8 @@ Dividing results across Tranco rank tiers shows almost no correlation between do
 
 <Figure
   src="/images/essays/agentready-tiers.svg"
-  alt="Bar chart comparing mean readiness score and both-bot refusal rate across Tranco rank tiers."
-  caption="Readiness score and both-bot refusal rate by Tranco rank tier."
+  alt="Bar chart comparing mean recorded score and the share with no HTTP-200 success from either bot-user-agent probe across Tranco rank tiers."
+  caption="Recorded score and bot-user-agent HTTP-200 classifications by Tranco rank tier."
   wide
 />
 
@@ -93,9 +92,9 @@ Dividing results across Tranco rank tiers shows almost no correlation between do
 - **Ranks 10,001 to 100,000:** Mean score 25.2 / 100 (Both-bot refusal rate: 55.6%)
 - **Ranks 100,001 to 1,000,000:** Mean score 25.9 / 100 (Both-bot refusal rate: 52.2%)
 
-High-traffic domains often employ strict WAF rules, CDN edge security, and anti-scraping protections that block automated bots by default. Consequently, top-tier origins score similarly to tail domains.
+The final tier means are close, but the initial one-pass means differed more and the refresh affected tiers unevenly. The data do not identify the cause.
 
-However, cross-referencing with CrUX field data reveals a different trend: origins with verified human browser traffic demonstrate roughly double the adoption rates for `llms.txt` and structured data compared to unvisited domains.
+CrUX-listed hostnames show higher simple status-pass shares than unlisted hostnames, but the comparison does not adjust for rank, host type, or other factors.
 
 ## WAF rules and policy contradictions
 
@@ -116,9 +115,7 @@ This mismatch occurs when security teams manage WAF settings independently from 
 
 ## Platform-driven adoption patterns
 
-Manual verification of the 910 domains reporting live MCP endpoints revealed identical JSON-RPC responses across unrelated retail stores. Every instance originated from a single major e-commerce platform that enabled a default catalog-search MCP tool for its hosted storefronts.
-
-Removing this single platform implementation reduces public web MCP availability to near zero. Machine-readability standards adopt quickly when platform providers ship them as default features rather than requiring manual setup by individual site owners.
+The 910 basic MCP-screen passes are not proof of conforming MCP services, available tools, or authentication. Only 3 rows passed the stricter saved status for `result.capabilities`, and response bodies were not retained for later review.
 
 ## Takeaways by role and domain
 
@@ -126,7 +123,7 @@ Different teams face distinct priorities when upgrading origins for machine cons
 
 - **Full-Stack & Frontend Engineers:** Add Markdown negotiation (`Accept: text/markdown`) middleware and ensure static SSR HTML fallbacks exist without client-JS rendering dependencies.
 - **SEO & Growth Specialists:** Maintain structured JSON-LD `@graph` entity graphs and publish an `llms.txt` index to preserve citations in AI search products.
-- **Security & Infrastructure Engineers:** Reconcile WAF edge rules with `robots.txt` policies so legitimate citation crawlers are not blocked by accidental 403/429 status codes.
+- **Security & Infrastructure Engineers:** Test the exact crawler clients and network conditions they intend to support; this scan cannot distinguish blocking from transport failure.
 - **Product Managers & Founders:** Prioritize platform-level defaults over one-off custom integrations. Frameworks and hosting platforms move adoption faster than custom code.
 - **AI & Agent Developers:** Design agents to handle high HTTP refusal rates gracefully and rely on explicit `RateLimit-*` headers to pace requests.
 
@@ -134,14 +131,14 @@ Different teams face distinct priorities when upgrading origins for machine cons
 
 Site operators can improve machine readiness through four straightforward additions:
 
-1. **Publish an `llms.txt` index:** Add a clean Markdown file at `/llms.txt` following the [llmstxt.org specification](https://llmstxt.org/).
-2. **Enable Markdown negotiation:** Configure server middleware to handle `Accept: text/markdown` headers by returning clean Markdown content.
+1. **Publish an `llms.txt` index:** Add a clear Markdown file at `/llms.txt` following the [llmstxt.org proposal](https://llmstxt.org/).
+2. **Test Markdown responses:** If useful for your clients, support an `Accept: text/markdown` request and verify the returned representation.
 3. **Align crawler policies:** Update `robots.txt` with clear directives for specific AI agents (`GPTBot`, `ClaudeBot`, `PerplexityBot`), and match WAF/CDN rules to those policies.
 4. **Expose structured schemas:** Provide an OpenAPI 3.1 specification at `/openapi.json` or `/.well-known/openapi.json` with concrete parameter examples.
 
 ## Reproducing the audit
 
-All dataset files, probe definitions, and analysis scripts are available under open-source licenses:
+The probe definitions, analysis scripts, and derived summaries are available from the project. The raw corpus and dated source snapshots remain local and should be archived before claiming full independent reproduction:
 
 - **Full Research Paper & Data:** linked from the [scan page](https://veda.ng/scan)
 - **Live Single-Domain Audit Tool:** [veda.ng/scan](https://veda.ng/scan)
