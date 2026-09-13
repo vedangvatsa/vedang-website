@@ -158,6 +158,13 @@ const QUICK_ENDPOINTS = [
     description: 'Machine-readable agent guidance, tools, and operational boundaries.',
   },
   {
+    title: 'Agent Plugin Manifest',
+    method: 'GET',
+    url: '/plugin.json',
+    format: 'Agent Plugins 1.0',
+    description: 'Portable plugin package metadata with product and documentation MCP server configuration.',
+  },
+  {
     title: 'Authentication Specification',
     method: 'GET',
     url: '/auth.md',

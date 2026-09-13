@@ -1,5 +1,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
 import { mcpEndpointDescriptor, handleMcpPost } from '../src/lib/mcp-rpc';
 import { getStandardApiHeaders, jsonError } from '../src/lib/api-response';
 
@@ -101,6 +103,51 @@ describe('Agent & Machine Endpoints', () => {
     assert.ok(mcpProdMd.includes('# Vedang Vatsa Product MCP Server'));
   });
 
+  test('Agent Plugin package conforms and exposes product and documentation MCP servers', () => {
+    const root = process.cwd();
+    const pluginFiles = [
+      'plugin.json',
+      '.agent-plugins/plugin.json',
+      'public/plugin.json',
+      'public/.well-known/plugin.json',
+    ];
+    const mcpFiles = ['mcp.json', '.agent-plugins/mcp.json', 'public/mcp.json'];
+    const expectedPluginSchema = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json';
+    const expectedMcpSchema = 'https://agent-plugins.org/schemas/1.0.0/mcp.schema.json';
+
+    for (const file of pluginFiles) {
+      const plugin = JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+      assert.equal(plugin.$schema, expectedPluginSchema);
+      assert.equal(plugin.name, 'vedang');
+      assert.deepEqual(Object.keys(plugin).sort(), [
+        '$schema',
+        'author',
+        'description',
+        'homepage',
+        'keywords',
+        'name',
+        'repository',
+        'version',
+      ]);
+    }
+
+    for (const file of mcpFiles) {
+      const config = JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+      assert.equal(config.$schema, expectedMcpSchema);
+      assert.deepEqual(Object.keys(config.mcpServers).sort(), ['veda-docs', 'veda-product']);
+      assert.deepEqual(config.mcpServers['veda-product'], {
+        type: 'streamable-http',
+        url: 'https://veda.ng/.well-known/mcp',
+      });
+      assert.deepEqual(config.mcpServers['veda-docs'], {
+        type: 'streamable-http',
+        url: 'https://veda.ng/.well-known/mcp/docs',
+      });
+    }
+
+    assert.ok(fs.existsSync(path.join(root, 'skills', 'veda-research-hub', 'SKILL.md')));
+  });
+
   test('ScanResult categoryScores contract enforces SEO, AEO, GEO, Agentic, Performance, Security', async () => {
     const { ScanResult } = await import('../src/lib/scanner/types') as any;
     const testScores = {
@@ -119,5 +166,3 @@ describe('Agent & Machine Endpoints', () => {
     assert.equal(testScores.security, 100);
   });
 });
-
-

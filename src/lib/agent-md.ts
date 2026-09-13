@@ -186,7 +186,10 @@ export function developersSummaryLines(): string[] {
   return [
     `- Public report search API: GET ${SITE_URL}/api/reports/search?q=agents&corpus=ai (OpenAlex-backed; see ${OPENAPI_URL})`,
     `- OpenAPI 3.1 specification: ${OPENAPI_URL}`,
-    `- MCP server over Streamable HTTP (JSON-RPC 2.0): ${MCP_ENDPOINT}; tools: search_essays, get_essay, search_glossary, get_glossary_term, search_reports`,
+    `- Product MCP server over Streamable HTTP (JSON-RPC 2.0): ${MCP_ENDPOINT}; tools: search_essays, get_essay, search_glossary, get_glossary_term, search_reports`,
+    `- Documentation MCP server over Streamable HTTP: ${SITE_URL}/.well-known/mcp/docs; tools: get_api_documentation, get_openapi_specification, get_auth_guide, search_documentation, get_course_curriculum`,
+    `- Agent Plugin package: ${SITE_URL}/plugin.json (MCP configuration: ${SITE_URL}/mcp.json; source: https://github.com/vedangvatsa/vedang-website)`,
+    '- Official SDKs: JavaScript/TypeScript `npm install vedang` (https://www.npmjs.com/package/vedang) and Python `pip install vedang-cli` (https://pypi.org/project/vedang-cli/)',
     `- RSS feed: ${SITE_URL}/feed.xml`,
     `- Sitemap: ${SITEMAP_URL}`,
     `- Agent manifests: ${SITE_URL}/.well-known/agents.json, ${SITE_URL}/ai.json, ${SITE_URL}/ai.txt`,

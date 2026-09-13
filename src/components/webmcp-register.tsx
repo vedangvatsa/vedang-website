@@ -9,18 +9,22 @@ interface ModelContextTool {
   execute?: (args: Record<string, unknown>) => Promise<unknown>;
 }
 
+interface ModelContext {
+  registerTool?: (tool: ModelContextTool) => Promise<unknown> | unknown;
+}
+
 /**
- * Registers the homepage declarative WebMCP tools with the browser's
- * Model Context Protocol surface when present (Chrome origin trial).
+ * Registers homepage tools with the standard document surface, then falls
+ * back to the legacy navigator surface for early WebMCP implementations.
  * Fully guarded: renders nothing and never throws where unsupported.
  */
 export function WebMCPRegister() {
   useEffect(() => {
     try {
-      const doc = document as Document & {
-        modelContext?: { registerTool?: (tool: ModelContextTool) => Promise<unknown> | unknown };
-      };
-      const register = doc.modelContext?.registerTool;
+      const documentContext = (document as Document & { modelContext?: ModelContext }).modelContext;
+      const navigatorContext = (navigator as Navigator & { modelContext?: ModelContext }).modelContext;
+      const modelContext = documentContext ?? navigatorContext;
+      const register = modelContext?.registerTool;
       if (typeof register !== 'function') return;
       const tools: ModelContextTool[] = [
         {
@@ -51,7 +55,7 @@ export function WebMCPRegister() {
         },
       ];
       for (const tool of tools) {
-        Promise.resolve(register.call(doc.modelContext, tool)).catch(() => {});
+        Promise.resolve(register.call(modelContext, tool)).catch(() => {});
       }
     } catch {
       // WebMCP unavailable: declarative form fallback on the page still applies.

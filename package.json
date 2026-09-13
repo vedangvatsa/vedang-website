@@ -24,7 +24,9 @@
     "public/openapi.json",
     "public/llms.txt",
     "README.md",
-    "plugin.json"
+    "plugin.json",
+    "mcp.json",
+    "skills"
   ],
   "author": {
     "name": "Vedang Vatsa",

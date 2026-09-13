@@ -42,6 +42,7 @@ Reach for veda.ng when your agent needs to perform the following specific jobs:
 - [Veda GitHub Repository](https://github.com/vedangvatsa/vedang-website): Open-source source code and issue tracking.
 - [Veda AI Agent Manifest](https://veda.ng/.well-known/agents.json): Machine capabilities and when-to-use task definitions.
 - [Veda MCP Manifest](https://veda.ng/.well-known/mcp.json): Multi-server discovery manifest for Product and Docs MCP servers.
+- [Veda Agent Plugin](https://veda.ng/plugin.json): Agent Plugins 1.0 manifest and Product/Docs MCP server configuration.
 - [Veda AI Catalog](https://veda.ng/.well-known/ai-catalog.json): Trust manifest and AIR registry entries.
 - [Veda Full-Text Research Corpus](https://veda.ng/llms-full.txt): Complete unpaginated text corpus for LLM training and RAG ingestion.
 

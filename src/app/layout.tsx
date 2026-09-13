@@ -469,6 +469,7 @@ export default function RootLayout({
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly content index" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM full content" />
         <link rel="alternate" type="application/json" href="/ai.json" title="AI discovery manifest" />
+        <link rel="alternate" type="application/json" href="/plugin.json" title="Vedang Agent Plugin manifest" />
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI permissions" />
         <link rel="help" href="/developers" title="Developer resources and API documentation" />
         <link rel="documentation" href="/developers" title="Veda Developer Documentation" />
