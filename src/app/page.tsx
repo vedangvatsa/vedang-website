@@ -1,7 +1,6 @@
 
 
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { AsSeenIn } from '@/components/as-seen-in';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
@@ -19,19 +18,26 @@ export const metadata: Metadata = generateMetadata({
   ogImageAlt: 'Vedang Vatsa - AI & Web3 Innovator, Community Founder',
 });
 
-const resources = [
+const courses = [
   { title: 'Learn Web3', url: '/web3' },
   { title: 'Learn Agentic Web', url: '/agentic' },
   { title: 'Learn Prompt Engineering', url: '/prompt' },
   { title: 'Learn Vibe Coding', url: '/vibecoding' },
   { title: 'Learn MCP Development', url: '/mcp' },
   { title: 'Learn AI Automation', url: '/automation' },
+];
+
+const tools = [
   { title: 'LinkedIn Translator', url: '/lit' },
   { title: 'Swarm Prediction', url: '/swarm-prediction' },
   { title: 'Agentic Readiness Scanner', url: '/scan' },
+  { title: 'Web3 & AI Glossary', url: '/glossary' },
+  { title: 'NoSlop', url: '/noslop' },
+];
+
+const libraries = [
   { title: 'AI Reports Library', url: '/ailib' },
   { title: 'Web3 Reports Library', url: '/web3lib' },
-  { title: 'Web3 & AI Glossary', url: '/glossary' },
   { title: 'Health Protocols', url: '/health-protocols' },
 ];
 
@@ -71,15 +77,7 @@ export default function Home() {
         cta={{ label: 'View all essays', url: '/essays' }}
       />
 
-      <AsSeenIn />
-
-      <section className="py-8 text-center">
-        <div className="flex justify-center">
-          <Button variant="outline" asChild size="lg" className="w-full md:max-w-sm">
-            <Link href="/media">Speaking Engagements & Media Mentions</Link>
-          </Button>
-        </div>
-      </section>
+      <AsSeenIn cta={{ label: 'Speaking Engagements & Media Mentions', url: '/media' }} />
 
       {/* Semantic server-rendered content for crawlers & AI agents (invisible in visual UI) */}
       <section className="sr-only" aria-label="About Vedang Vatsa and veda.ng">
@@ -150,9 +148,21 @@ export default function Home() {
       </section>
 
       <CardGrid
-        id="learn"
-        title="Resources"
-        items={resources}
+        id="courses"
+        title="Courses"
+        items={courses}
+      />
+
+      <CardGrid
+        id="tools"
+        title="Tools"
+        items={tools}
+      />
+
+      <CardGrid
+        id="libraries"
+        title="Libraries"
+        items={libraries}
       />
     </PageLayout>
   );

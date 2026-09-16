@@ -1,5 +1,7 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const asSeenInLogos = [
     { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.webp' },
@@ -30,7 +32,11 @@ const asSeenInLogos = [
     { name: 'Investing.com', logo: '/images/press/investing_vedang.webp' },
 ];
 
-export function AsSeenIn() {
+interface AsSeenInProps {
+  cta?: { label: string; url: string; external?: boolean };
+}
+
+export function AsSeenIn({ cta }: AsSeenInProps) {
   return (
     <section className="py-8 bg-background" data-nosnippet>
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-5">As Seen In</h2>
@@ -50,6 +56,19 @@ export function AsSeenIn() {
             </div>
           ))}
         </div>
+        {cta && (
+          <div className="mt-5 flex justify-center">
+            <Button variant="outline" asChild className="w-full md:max-w-sm">
+              <Link
+                href={cta.url}
+                target={cta.external ? '_blank' : undefined}
+                rel={cta.external ? 'noopener noreferrer' : undefined}
+              >
+                {cta.label}
+              </Link>
+            </Button>
+          </div>
+        )}
     </section>
   );
 }

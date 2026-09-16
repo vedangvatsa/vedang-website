@@ -29,7 +29,7 @@ export function CardGrid({ title, items, cta, id }: CardGridProps) {
               target={item.external ? '_blank' : undefined}
               rel={item.external ? 'noopener noreferrer' : undefined}
             >
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 text-center md:text-left transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 text-left transition-colors duration-200 hover:border-primary/50">
                 <p className="font-medium text-foreground group-hover:text-primary transition-colors">
                   {item.title}
                 </p>
