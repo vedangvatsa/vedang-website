@@ -1,0 +1,116 @@
+name: Data-Viz Videos (Instagram, YouTube, TikTok)
+
+on:
+  schedule:
+    # 09:00, 14:00, 20:00 IST (3 runs/day, one video per platform per run)
+    - cron: "30 3,8,14 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preflight checks credentials only; dry-run validates files; publish sends due videos
+        type: choice
+        options: [preflight, dry-run, publish]
+        default: preflight
+      include_direct:
+        description: Also run direct integrations (requires working platform credentials)
+        type: boolean
+        default: false
+
+concurrency:
+  group: social-queue
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    env:
+      SMM_BOOST_ENABLED: 'false'
+      DRY_RUN: ${{ inputs.mode == 'dry-run' && '1' || '0' }}
+      VIZ_MEDIA_BASE_URL: ${{ vars.VIZ_MEDIA_BASE_URL }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      BUFFER_YOUTUBE_CHANNEL_ID: ${{ secrets.BUFFER_YOUTUBE_CHANNEL_ID }}
+      BUFFER_INSTAGRAM_CHANNEL_ID: ${{ secrets.BUFFER_INSTAGRAM_CHANNEL_ID }}
+      BUFFER_TIKTOK_CHANNEL_ID: ${{ secrets.BUFFER_TIKTOK_CHANNEL_ID }}
+      LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+      LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+      X_API_KEY: ${{ secrets.X_API_KEY }}
+      X_API_KEY_SECRET: ${{ secrets.X_API_KEY_SECRET }}
+      X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+      X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+      BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+      BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+      FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+      FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
+      THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+      THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+      TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
+      TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
+      TUMBLR_ACCESS_TOKEN: ${{ secrets.TUMBLR_ACCESS_TOKEN }}
+      TUMBLR_ACCESS_SECRET: ${{ secrets.TUMBLR_ACCESS_SECRET }}
+      TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
+      MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+      MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+      NEYNAR_API_KEY: ${{ secrets.NEYNAR_API_KEY }}
+      NEYNAR_SIGNER_UUID: ${{ secrets.NEYNAR_SIGNER_UUID }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm ci --prefix scripts
+
+      - name: Validate publishing logic and all captions offline
+        run: npx tsx --test scripts/viz-publishing.test.ts
+
+      - name: Read-only account preflight
+        if: inputs.mode == 'preflight'
+        run: npx tsx scripts/viz-platform-preflight.ts --only=buffer
+
+      - name: Publish due videos immediately through Buffer
+        if: inputs.mode != 'preflight'
+        id: buffer
+        continue-on-error: true
+        run: npx tsx scripts/buffer-viz-scheduled-executor.ts
+
+      - name: Publish due videos through direct integrations
+        if: inputs.mode != 'preflight' && inputs.include_direct == true
+        id: native
+        continue-on-error: true
+        run: npx tsx scripts/native-viz-scheduled-executor.ts
+
+      - name: Preserve queue receipts for recovery
+        if: always() && inputs.mode != 'preflight'
+        uses: actions/upload-artifact@v4
+        with:
+          name: viz-queue-receipts-${{ github.run_id }}-${{ github.run_attempt }}
+          path: scripts/viz-*-posts.json
+          retention-days: 90
+
+      - name: Commit updated viz queues
+        if: always() && inputs.mode != 'preflight' && inputs.mode != 'dry-run'
+        id: queues
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated: viz video queue status updated [skip ci]"
+          file_pattern: "scripts/viz-*-posts.json"
+          skip_push: true
+
+      - name: Rebase and persist receipts
+        if: always() && steps.queues.outputs.changes_detected == 'true'
+        run: git pull --rebase origin main && git push origin HEAD:main
+
+      - name: Report publishing failures
+        if: always() && (steps.buffer.outcome == 'failure' || steps.native.outcome == 'failure')
+        run: exit 1

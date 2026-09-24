@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import FormData from 'form-data';
 import fetch from 'node-fetch';
 import { triggerBoost } from './smm-boost-trigger.js';
+import { isMain, sleep } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -15,12 +16,14 @@ const ACCESS_TOKEN = process.env.LINKEDIN_ACCESS_TOKEN!;
 const PERSON_URN = process.env.LINKEDIN_PERSON_URN!; // e.g. urn:li:person:XXXXXXXX
 
 const TIMEZONE_OFFSET_HOURS = 5.5; // IST
-const POSTS_FILE = path.resolve(__dirname, 'linkedin-posts.json');
+const POSTS_FILE = path.resolve(__dirname, process.env.LI_POSTS_FILE || 'linkedin-posts.json');
+const COOLDOWN_HOURS = Number(process.env.LI_COOLDOWN_HOURS || '7');
 
 interface LinkedInPost {
   id: string;
   text: string;
   image?: string;
+  video?: string;
   scheduleDate: string;
   scheduleTime: string;
   posted: boolean;
@@ -120,6 +123,7 @@ async function uploadVideo(absPath: string): Promise<string | null> {
       return null;
     }
     const etag = uploadRes.headers.get('etag') || '';
+    if (!etag) throw new Error('LinkedIn upload returned no part ID');
     uploadedPartIds.push(etag);
   }
 
@@ -141,8 +145,15 @@ async function uploadVideo(absPath: string): Promise<string | null> {
     return null;
   }
 
-  console.log(`  🎬 Video uploaded: ${videoUrn}`);
-  return videoUrn;
+  for (let attempt = 0; attempt < 60; attempt++) {
+    const statusRes = await fetch(`https://api.linkedin.com/rest/videos/${encodeURIComponent(videoUrn)}`, { headers: LINKEDIN_HEADERS });
+    if (!statusRes.ok) throw new Error(`LinkedIn video status HTTP ${statusRes.status}`);
+    const status = (await statusRes.json() as any).status;
+    if (status === 'AVAILABLE') return videoUrn;
+    if (status === 'PROCESSING_FAILED') throw new Error('LinkedIn video processing failed');
+    await sleep(5000);
+  }
+  throw new Error('LinkedIn video processing timed out');
 }
 
 async function uploadMedia(mediaPath: string): Promise<{ urn: string; type: 'image' | 'video' } | null> {
@@ -169,7 +180,7 @@ async function uploadMedia(mediaPath: string): Promise<{ urn: string; type: 'ima
   }
 }
 
-async function postToLinkedIn(
+export async function postToLinkedIn(
   text: string,
   mediaPath?: string
 ): Promise<{ success: boolean; id?: string; error?: string }> {
@@ -217,7 +228,8 @@ async function postToLinkedIn(
     return { success: false, error: errText };
   }
 
-  const postUrn = res.headers.get('x-restli-id') ?? 'unknown';
+  const postUrn = res.headers.get('x-restli-id');
+  if (!postUrn) throw new Error('LinkedIn accepted the request without a post ID; reconcile before retrying');
   return { success: true, id: postUrn };
 }
 
@@ -244,8 +256,7 @@ async function main() {
 
   let modified = false;
 
-  // COOLDOWN: max 3 posts/day with 8h gap between each.
-  const COOLDOWN_HOURS = 7;
+  // COOLDOWN: max 3 posts/day with 8h gap between each (env-overridable).
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -266,7 +277,7 @@ async function main() {
 
     console.log(`🚀 Posting to LinkedIn: "${post.id}"`);
 
-    const result = await postToLinkedIn(post.text, post.image);
+    const result = await postToLinkedIn(post.text, post.video || post.image);
 
     if (result.success) {
       console.log(`✅ Posted! ID: ${result.id}`);
@@ -300,4 +311,4 @@ async function main() {
   }
 }
 
-main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(console.error);

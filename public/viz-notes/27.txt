@@ -1,0 +1,53 @@
+# Services · 2000–2024
+
+Metric: Services, value added (current US$) (NV.SRV.TOTL.CD).
+Definition: Services industries correspond to ISIC (Rev. 4) divisions 45-99 and includes wholesale and retail trade, repair of motor vehicles, hotels and restaurants, transport, storage and communication, financial intermediation, real estate, renting and business activities, public administration and defence, compulsory social security, education, health and social work, other community, social and personal service activities, private households with employed persons, and extra-territorial organizations and bodies. Value added is the contribution to the economy by a producer or an industry or an institutional sector, which is estimated by the total value of output produced and deducting the total value of intermediate consumption of goods and services used to produce that output. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.
+Original provider: Country official statistics, National Statistical Offices (NSOs);
+National Accounts data files, Central Banks;
+Staff estimates, World Bank (WB)
+Source: https://data.worldbank.org/indicator/NV.SRV.TOTL.CD
+
+Top 10 reporting economies in each displayed year, considering all non-aggregate
+World Bank country/economy records. Territories are included where the provider
+reports them separately. Coverage ranges from 175 to 203 economies per year.
+Missing observations are excluded for that year; they are never replaced with zero,
+carried forward, or invented. This is a ranking of available records, not a claim
+that every country has reported every year.
+
+Period selection: the longest contiguous interval within the requested source period
+with at least 153 reporting economies per year.
+For automatically selected periods this is at least 75% of peak annual coverage,
+with a topic minimum of 30. This avoids incomplete recent
+updates being presented as a comparable complete ranking. Country inclusion is never
+hand-picked. Excluded years and full annual coverage are recorded in the data audit.
+
+Exact source values determine the order. Exact ties share a competition rank;
+ISO3 code order selects/stabilizes the ten displayed rows at a tied cutoff.
+Displayed values are rounded to 2 decimal places after dividing by
+1,000,000,000,000. The metric definition and units above govern interpretation.
+Positive values below display precision use a less-than label instead of a false zero.
+Current-US-dollar comparisons reflect prices and exchange rates; they are not inflation-adjusted growth measures.
+
+Between published annual observations, bars and numbers glide by straight-line
+interpolation so motion is continuous; each published year anchors exact values
+at the segment ends. No observations outside the configured historical period and
+no forecasts are added. The source may itself contain estimates or revisions;
+provider definitions/observation flags are preserved in the source files and audit.
+Current flags and current provider entity names serve as identifiers, not a reconstruction
+of historical flags, borders, or political status.
+The Channel Islands reporting unit has a neutral geographic icon, not an invented flag.
+
+Verification: 4,837 nonmissing country/year observations
+cross-checked between World Bank JSON and its separately downloaded bulk CSV;
+zero mismatches. This checks faithful reproduction of the published dataset, not
+independent remeasurement of the underlying economic/demographic estimates.
+
+Retrieved: 2026-09-20T08:51:04.676359+00:00
+Provider release: 2026-07-13
+WDI data license: CC BY 4.0 (retain source attribution).
+
+Music
+Inspire by Wavecont
+https://www.chosic.com/download-audio/27970/
+Music promoted by https://www.chosic.com/free-music/all/
+30-second excerpt, fades and loudness adjustment. See the track page for license terms.

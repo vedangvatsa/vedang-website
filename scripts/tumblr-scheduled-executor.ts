@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import OAuth from 'oauth';
+import { isMain } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -93,6 +94,25 @@ async function publishPost(post: TumblrPost): Promise<string> {
   return idMatch ? idMatch[1] : 'posted';
 }
 
+export async function publishVideo(videoPath: string, text: string, tags: string[]): Promise<string> {
+  const url = `https://api.tumblr.com/v2/blog/${encodeURIComponent(BLOG_NAME)}/posts`;
+  const form = new FormData();
+  const content = [
+    { type: 'video', media: { type: 'video/mp4', identifier: 'video', width: 1080, height: 1920 } },
+    ...text.split('\n\n').map(text => ({ type: 'text', text })),
+  ];
+  form.append('json', new Blob([JSON.stringify({ content, tags: tags.join(','), state: 'published' })], { type: 'application/json' }));
+  form.append('video', new Blob([fs.readFileSync(videoPath)], { type: 'video/mp4' }), path.basename(videoPath));
+  const auth = createOAuth().authHeader(url, ACCESS_TOKEN, ACCESS_SECRET, 'POST');
+  const res = await fetch(url, {
+    method: 'POST', headers: { Authorization: auth, 'User-Agent': 'VedangViz/1.0 (https://veda.ng)' }, body: form,
+  });
+  if (!res.ok) throw new Error(`Tumblr video HTTP ${res.status}`);
+  const data = await res.json() as any;
+  if (typeof data.response?.id !== 'string') throw new Error('Tumblr returned no string post ID');
+  return data.response.id;
+}
+
 async function main() {
   if (!CONSUMER_KEY || !ACCESS_TOKEN || !BLOG_NAME) {
     console.log('⏭️ Tumblr credentials not set, skipping');
@@ -114,7 +134,7 @@ async function main() {
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
   // COOLDOWN: max 3 posts/day with 8h gap between each.
-  const COOLDOWN_HOURS = 7;
+  const COOLDOWN_HOURS = Number(process.env.TU_COOLDOWN_HOURS || '7');
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -153,4 +173,4 @@ async function main() {
   console.log('\n💾 Updated tumblr-posts.json');
 }
 
-main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(console.error);

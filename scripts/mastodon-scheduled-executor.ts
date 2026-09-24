@@ -8,6 +8,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { isMain, sleep } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -30,7 +31,7 @@ interface MastodonPost {
   error?: string;
 }
 
-async function uploadMedia(imagePath: string, altText: string): Promise<string | null> {
+export async function uploadMedia(imagePath: string, altText: string): Promise<string | null> {
   const absPath = path.isAbsolute(imagePath) ? imagePath : path.resolve(REPO_ROOT, imagePath);
   
   if (!fs.existsSync(absPath)) {
@@ -38,9 +39,9 @@ async function uploadMedia(imagePath: string, altText: string): Promise<string |
     return null;
   }
 
-  const FormData = (await import('form-data')).default;
   const form = new FormData();
-  form.append('file', fs.createReadStream(absPath));
+  const type = /\.mp4$/i.test(absPath) ? 'video/mp4' : /\.png$/i.test(absPath) ? 'image/png' : 'image/jpeg';
+  form.append('file', new Blob([fs.readFileSync(absPath)], { type }), path.basename(absPath));
   form.append('description', altText.substring(0, 100).replace(/\n/g, ' ').trim());
 
   const res = await fetch(`${MASTODON_INSTANCE}/api/v2/media`, {
@@ -57,10 +58,21 @@ async function uploadMedia(imagePath: string, altText: string): Promise<string |
   }
 
   const data = await res.json() as any;
-  return data.id;
+  if (!data.id) throw new Error('Mastodon returned no media ID');
+  if (data.url) return data.id;
+  for (let attempt = 0; attempt < 60; attempt++) {
+    await sleep(5000);
+    const poll = await fetch(`${MASTODON_INSTANCE}/api/v1/media/${data.id}`, {
+      headers: { Authorization: `Bearer ${MASTODON_TOKEN}` },
+    });
+    if (poll.status === 206) continue;
+    if (!poll.ok) throw new Error(`Mastodon media processing HTTP ${poll.status}`);
+    if ((await poll.json() as any).url) return data.id;
+  }
+  throw new Error('Mastodon media processing timed out');
 }
 
-async function postStatus(text: string, mediaId?: string | null): Promise<string> {
+export async function postStatus(text: string, mediaId?: string | null, idempotencyKey?: string): Promise<string> {
   const body: any = { status: text };
   if (mediaId) body.media_ids = [mediaId];
 
@@ -69,6 +81,7 @@ async function postStatus(text: string, mediaId?: string | null): Promise<string
     headers: {
       'Authorization': `Bearer ${MASTODON_TOKEN}`,
       'Content-Type': 'application/json',
+      ...(idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : {}),
     },
     body: JSON.stringify(body),
   });
@@ -101,7 +114,7 @@ async function main() {
   console.log(`🐘 Mastodon scheduler running at ${todayIST} ${currentTimeIST} IST`);
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
-  const COOLDOWN_HOURS = 7;
+  const COOLDOWN_HOURS = Number(process.env.MA_COOLDOWN_HOURS || '7');
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -144,12 +157,6 @@ async function main() {
       console.log(`  🔗 ${MASTODON_INSTANCE}/@vedangvatsa/${statusId}`);
       break; // Only 1 successful post per run
     } catch (err: any) {
-      if (err.message?.includes('skipped')) {
-        console.warn(`  ⏭️ ${err.message}`);
-        post.posted = true;
-        post.error = err.message;
-        continue; // Try next post
-      }
       post.error = err.message;
       console.error(`  ❌ Failed: ${err.message}`);
       break;
@@ -160,4 +167,4 @@ async function main() {
   console.log('\n💾 Updated mastodon-posts.json');
 }
 
-main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(console.error);

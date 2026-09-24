@@ -17,6 +17,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 import { triggerBoost } from './smm-boost-trigger.js';
+import { isMain, sleep } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -97,8 +98,18 @@ async function createVideoContainer(text: string, videoUrl: string): Promise<str
 }
 
 async function publishContainer(containerId: string, isVideoPost: boolean = false): Promise<string> {
-  const waitTime = isVideoPost ? 30000 : 15000;
-  await new Promise(r => setTimeout(r, waitTime));
+  let ready = false;
+  for (let attempt = 0; attempt < 60; attempt++) {
+    const poll = await fetch(`https://graph.threads.net/v1.0/${containerId}?fields=status,error_message`, {
+      headers: { Authorization: `Bearer ${THREADS_TOKEN}` },
+    });
+    if (!poll.ok) throw new Error(`Threads container status HTTP ${poll.status}`);
+    const status = (await poll.json() as any).status;
+    if (status === 'FINISHED') { ready = true; break; }
+    if (status === 'ERROR' || status === 'EXPIRED') throw new Error(`Threads container ${status}`);
+    await sleep(5000);
+  }
+  if (!ready) throw new Error('Threads container processing timed out');
 
   const params = new URLSearchParams({
     creation_id: containerId,
@@ -141,7 +152,7 @@ async function getPublicUrl(localPath: string): Promise<string> {
   return await uploadToCatbox(localPath);
 }
 
-async function postViaGraphAPI(text: string, mediaPath?: string): Promise<string> {
+export async function postViaGraphAPI(text: string, mediaPath?: string): Promise<string> {
   let containerId: string;
   let isVideoPost = false;
 
@@ -159,8 +170,7 @@ async function postViaGraphAPI(text: string, mediaPath?: string): Promise<string
     containerId = await createTextContainer(text);
   }
 
-  const waitLabel = isVideoPost ? '30s' : '15s';
-  console.log(`  ⏳ Publishing (${waitLabel} wait)...`);
+  console.log('  Waiting for the container to finish processing...');
   return await publishContainer(containerId, isVideoPost);
 }
 
@@ -219,7 +229,7 @@ async function postViaPython(text: string, mediaPath?: string): Promise<string> 
 }
 
 function isVideo(filePath: string): boolean {
-  return /\.(mp4|mov|webm)$/i.test(filePath);
+  return /\.(mp4|mov|webm)(?:[?#]|$)/i.test(filePath);
 }
 
 async function main() {
@@ -248,7 +258,7 @@ async function main() {
   console.log(`🔧 Graph API: ${hasGraphAPI ? '✅' : '❌'} | Python: ${hasPythonFallback ? '✅' : '❌'}`);
 
   // Cooldown
-  const COOLDOWN_HOURS = 7;
+  const COOLDOWN_HOURS = Number(process.env.TH_COOLDOWN_HOURS || '7');
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -306,5 +316,4 @@ async function main() {
   console.log('\n💾 Updated threads-posts.json');
 }
 
-main().catch(console.error);
-
+if (isMain(import.meta.url)) main().catch(console.error);

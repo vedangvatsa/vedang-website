@@ -1,0 +1,802 @@
+[
+  {
+    "id": "viz-x-01",
+    "video": "scripts/viz-assets/videos/01-population-2000-2024.mp4",
+    "text": "How the largest populations changed.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/01.txt",
+    "tags": [
+      "data visualization",
+      "population"
+    ],
+    "altText": "Population, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/01.txt",
+    "scheduleDate": "2026-09-25",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-02",
+    "video": "scripts/viz-assets/videos/02-gdp-2000-2024.mp4",
+    "text": "The largest economies, measured in US dollars.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/02.txt",
+    "tags": [
+      "data visualization",
+      "gdp"
+    ],
+    "altText": "GDP, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/02.txt",
+    "scheduleDate": "2026-09-25",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-03",
+    "video": "scripts/viz-assets/videos/03-internet-2000-2024.mp4",
+    "text": "How much of the population uses the internet?\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/03.txt",
+    "tags": [
+      "data visualization",
+      "internet"
+    ],
+    "altText": "Internet use, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/03.txt",
+    "scheduleDate": "2026-09-25",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-04",
+    "video": "scripts/viz-assets/videos/04-urbanization-2000-2024.mp4",
+    "text": "Where city living makes up the largest share.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/04.txt",
+    "tags": [
+      "data visualization",
+      "urbanization"
+    ],
+    "altText": "Urban population share, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/04.txt",
+    "scheduleDate": "2026-09-26",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-05",
+    "video": "scripts/viz-assets/videos/05-life-expectancy-2000-2024.mp4",
+    "text": "Life expectancy at birth, year by year.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/05.txt",
+    "tags": [
+      "data visualization",
+      "life expectancy"
+    ],
+    "altText": "Life expectancy, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/05.txt",
+    "scheduleDate": "2026-09-26",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-06",
+    "video": "scripts/viz-assets/videos/06-fertility-2000-2024.mp4",
+    "text": "Births per woman across the years.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/06.txt",
+    "tags": [
+      "data visualization",
+      "fertility"
+    ],
+    "altText": "Fertility rates, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/06.txt",
+    "scheduleDate": "2026-09-26",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-07",
+    "video": "scripts/viz-assets/videos/07-birth-rate-2000-2024.mp4",
+    "text": "Annual births for every 1,000 people.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/07.txt",
+    "tags": [
+      "data visualization",
+      "birth rate"
+    ],
+    "altText": "Birth rates, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/07.txt",
+    "scheduleDate": "2026-09-27",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-08",
+    "video": "scripts/viz-assets/videos/08-ageing-2000-2024.mp4",
+    "text": "Where older people make up the largest share.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/08.txt",
+    "tags": [
+      "data visualization",
+      "ageing"
+    ],
+    "altText": "People aged 65 and over, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/08.txt",
+    "scheduleDate": "2026-09-27",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-09",
+    "video": "scripts/viz-assets/videos/09-young-population-2000-2024.mp4",
+    "text": "Where children make up the largest share.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/09.txt",
+    "tags": [
+      "data visualization",
+      "young population"
+    ],
+    "altText": "Children aged 0-14, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/09.txt",
+    "scheduleDate": "2026-09-27",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-10",
+    "video": "scripts/viz-assets/videos/10-working-age-2000-2024.mp4",
+    "text": "The share of residents aged 15-64.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/10.txt",
+    "tags": [
+      "data visualization",
+      "working age"
+    ],
+    "altText": "Working-age population, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/10.txt",
+    "scheduleDate": "2026-09-28",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-11",
+    "video": "scripts/viz-assets/videos/11-population-density-2000-2023.mp4",
+    "text": "People per square kilometre of land.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/11.txt",
+    "tags": [
+      "data visualization",
+      "population density"
+    ],
+    "altText": "Population density, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/11.txt",
+    "scheduleDate": "2026-09-28",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-12",
+    "video": "scripts/viz-assets/videos/12-urban-population-2000-2024.mp4",
+    "text": "The number of people living in urban areas.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/12.txt",
+    "tags": [
+      "data visualization",
+      "urban population"
+    ],
+    "altText": "Urban population, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/12.txt",
+    "scheduleDate": "2026-09-28",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-13",
+    "video": "scripts/viz-assets/videos/13-rural-population-2000-2024.mp4",
+    "text": "The number of people living in rural areas.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/13.txt",
+    "tags": [
+      "data visualization",
+      "rural population"
+    ],
+    "altText": "Rural population, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/13.txt",
+    "scheduleDate": "2026-09-29",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-14",
+    "video": "scripts/viz-assets/videos/14-mobile-subscriptions-2000-2023.mp4",
+    "text": "Mobile connections counted across the years.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/14.txt",
+    "tags": [
+      "data visualization",
+      "mobile subscriptions"
+    ],
+    "altText": "Mobile subscriptions, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/14.txt",
+    "scheduleDate": "2026-09-29",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-15",
+    "video": "scripts/viz-assets/videos/15-fixed-broadband-2005-2023.mp4",
+    "text": "Fixed broadband subscriptions, year by year.\n2005-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/15.txt",
+    "tags": [
+      "data visualization",
+      "fixed broadband"
+    ],
+    "altText": "Fixed broadband, 2005-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/15.txt",
+    "scheduleDate": "2026-09-29",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-16",
+    "video": "scripts/viz-assets/videos/16-mobile-density-2000-2023.mp4",
+    "text": "Why mobile subscriptions can exceed 100 per 100 people.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/16.txt",
+    "tags": [
+      "data visualization",
+      "mobile density"
+    ],
+    "altText": "Mobile subscriptions per 100 people, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/16.txt",
+    "scheduleDate": "2026-09-30",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-17",
+    "video": "scripts/viz-assets/videos/17-female-labour-2000-2024.mp4",
+    "text": "Women aged 15+ working or looking for work.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/17.txt",
+    "tags": [
+      "data visualization",
+      "female labour"
+    ],
+    "altText": "Women's labour force participation, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/17.txt",
+    "scheduleDate": "2026-09-30",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-18",
+    "video": "scripts/viz-assets/videos/18-trade-openness-2000-2024.mp4",
+    "text": "Imports and exports relative to the size of the economy.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/18.txt",
+    "tags": [
+      "data visualization",
+      "trade openness"
+    ],
+    "altText": "Trade as a share of GDP, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/18.txt",
+    "scheduleDate": "2026-09-30",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-19",
+    "video": "scripts/viz-assets/videos/19-exports-2000-2024.mp4",
+    "text": "Goods and services sold abroad, in US dollars.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/19.txt",
+    "tags": [
+      "data visualization",
+      "exports"
+    ],
+    "altText": "Exports, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/19.txt",
+    "scheduleDate": "2026-10-01",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-20",
+    "video": "scripts/viz-assets/videos/20-imports-2000-2024.mp4",
+    "text": "Goods and services bought from abroad, in US dollars.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/20.txt",
+    "tags": [
+      "data visualization",
+      "imports"
+    ],
+    "altText": "Imports, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/20.txt",
+    "scheduleDate": "2026-10-01",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-21",
+    "video": "scripts/viz-assets/videos/21-gdp-per-person-2000-2024.mp4",
+    "text": "Economic output divided by population.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/21.txt",
+    "tags": [
+      "data visualization",
+      "gdp per person"
+    ],
+    "altText": "GDP per person, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/21.txt",
+    "scheduleDate": "2026-10-01",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-22",
+    "video": "scripts/viz-assets/videos/22-export-share-2000-2024.mp4",
+    "text": "Exports relative to domestic output.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/22.txt",
+    "tags": [
+      "data visualization",
+      "export share"
+    ],
+    "altText": "Exports as a share of GDP, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/22.txt",
+    "scheduleDate": "2026-10-02",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-23",
+    "video": "scripts/viz-assets/videos/23-import-share-2000-2024.mp4",
+    "text": "Imports relative to domestic output.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/23.txt",
+    "tags": [
+      "data visualization",
+      "import share"
+    ],
+    "altText": "Imports as a share of GDP, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/23.txt",
+    "scheduleDate": "2026-10-02",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-24",
+    "video": "scripts/viz-assets/videos/24-industry-2000-2024.mp4",
+    "text": "Industry's contribution to economic output.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/24.txt",
+    "tags": [
+      "data visualization",
+      "industry"
+    ],
+    "altText": "Industrial value added, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/24.txt",
+    "scheduleDate": "2026-10-02",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-25",
+    "video": "scripts/viz-assets/videos/25-manufacturing-2000-2024.mp4",
+    "text": "Manufacturing output after subtracting intermediate inputs.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/25.txt",
+    "tags": [
+      "data visualization",
+      "manufacturing"
+    ],
+    "altText": "Manufacturing value added, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/25.txt",
+    "scheduleDate": "2026-10-03",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-26",
+    "video": "scripts/viz-assets/videos/26-health-spending-2000-2023.mp4",
+    "text": "How much of the economy goes to current healthcare spending.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/26.txt",
+    "tags": [
+      "data visualization",
+      "health spending"
+    ],
+    "altText": "Health spending as a share of GDP, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/26.txt",
+    "scheduleDate": "2026-10-03",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-27",
+    "video": "scripts/viz-assets/videos/27-services-2000-2024.mp4",
+    "text": "The services sector's contribution to output.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/27.txt",
+    "tags": [
+      "data visualization",
+      "services"
+    ],
+    "altText": "Services value added, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/27.txt",
+    "scheduleDate": "2026-10-03",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-28",
+    "video": "scripts/viz-assets/videos/28-remittances-2000-2024.mp4",
+    "text": "Money reaching home through personal remittances.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/28.txt",
+    "tags": [
+      "data visualization",
+      "remittances"
+    ],
+    "altText": "Remittances received, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/28.txt",
+    "scheduleDate": "2026-10-04",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-29",
+    "video": "scripts/viz-assets/videos/29-reserves-2000-2024.mp4",
+    "text": "Official reserves, including gold.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/29.txt",
+    "tags": [
+      "data visualization",
+      "reserves"
+    ],
+    "altText": "Total reserves, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/29.txt",
+    "scheduleDate": "2026-10-04",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-30",
+    "video": "scripts/viz-assets/videos/30-unemployment-2000-2024.mp4",
+    "text": "People without work who are available and looking for it.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/30.txt",
+    "tags": [
+      "data visualization",
+      "unemployment"
+    ],
+    "altText": "Unemployment rates, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/30.txt",
+    "scheduleDate": "2026-10-04",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-31",
+    "video": "scripts/viz-assets/videos/31-air-travel-2000-2023.mp4",
+    "text": "Passenger journeys carried by registered airlines.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/31.txt",
+    "tags": [
+      "data visualization",
+      "air travel"
+    ],
+    "altText": "Air passengers carried, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/31.txt",
+    "scheduleDate": "2026-10-05",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-32",
+    "video": "scripts/viz-assets/videos/32-container-ports-2010-2020.mp4",
+    "text": "Container traffic through ports.\n2010-2020. World Bank data.\n\nData + music https://veda.ng/viz-notes/32.txt",
+    "tags": [
+      "data visualization",
+      "container ports"
+    ],
+    "altText": "Container port traffic, 2010-2020. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/32.txt",
+    "scheduleDate": "2026-10-05",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-33",
+    "video": "scripts/viz-assets/videos/33-rail-freight-2000-2011.mp4",
+    "text": "Goods moved by rail, weighted by distance.\n2000-2011. World Bank data.\n\nData + music https://veda.ng/viz-notes/33.txt",
+    "tags": [
+      "data visualization",
+      "rail freight"
+    ],
+    "altText": "Rail freight, 2000-2011. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/33.txt",
+    "scheduleDate": "2026-10-05",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-34",
+    "video": "scripts/viz-assets/videos/34-rail-travel-2000-2012.mp4",
+    "text": "Rail journeys measured by distance travelled.\n2000-2012. World Bank data.\n\nData + music https://veda.ng/viz-notes/34.txt",
+    "tags": [
+      "data visualization",
+      "rail travel"
+    ],
+    "altText": "Rail passenger travel, 2000-2012. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/34.txt",
+    "scheduleDate": "2026-10-06",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-35",
+    "video": "scripts/viz-assets/videos/35-electricity-access-2000-2024.mp4",
+    "text": "The share of people with electricity access.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/35.txt",
+    "tags": [
+      "data visualization",
+      "electricity access"
+    ],
+    "altText": "Access to electricity, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/35.txt",
+    "scheduleDate": "2026-10-06",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-36",
+    "video": "scripts/viz-assets/videos/36-clean-cooking-2000-2023.mp4",
+    "text": "The share of people mainly using clean cooking fuels.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/36.txt",
+    "tags": [
+      "data visualization",
+      "clean cooking"
+    ],
+    "altText": "Clean cooking, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/36.txt",
+    "scheduleDate": "2026-10-06",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-37",
+    "video": "scripts/viz-assets/videos/37-renewable-power-2000-2021.mp4",
+    "text": "The share of electricity generated from renewable sources.\n2000-2021. World Bank data.\n\nData + music https://veda.ng/viz-notes/37.txt",
+    "tags": [
+      "data visualization",
+      "renewable power"
+    ],
+    "altText": "Renewable electricity share, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/37.txt",
+    "scheduleDate": "2026-10-07",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-38",
+    "video": "scripts/viz-assets/videos/38-hydropower-2000-2021.mp4",
+    "text": "How much electricity comes from water.\n2000-2021. World Bank data.\n\nData + music https://veda.ng/viz-notes/38.txt",
+    "tags": [
+      "data visualization",
+      "hydropower"
+    ],
+    "altText": "Hydropower share, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/38.txt",
+    "scheduleDate": "2026-10-07",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-39",
+    "video": "scripts/viz-assets/videos/39-nuclear-power-2000-2021.mp4",
+    "text": "The share of electricity generated by nuclear plants.\n2000-2021. World Bank data.\n\nData + music https://veda.ng/viz-notes/39.txt",
+    "tags": [
+      "data visualization",
+      "nuclear power"
+    ],
+    "altText": "Nuclear electricity share, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/39.txt",
+    "scheduleDate": "2026-10-07",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-40",
+    "video": "scripts/viz-assets/videos/40-energy-intensity-2000-2021.mp4",
+    "text": "How much primary energy each unit of output requires.\n2000-2021. World Bank data.\n\nData + music https://veda.ng/viz-notes/40.txt",
+    "tags": [
+      "data visualization",
+      "energy intensity"
+    ],
+    "altText": "Energy use per unit of GDP, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/40.txt",
+    "scheduleDate": "2026-10-08",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-41",
+    "video": "scripts/viz-assets/videos/41-forest-area-2000-2023.mp4",
+    "text": "Forest area in square kilometres.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/41.txt",
+    "tags": [
+      "data visualization",
+      "forest area"
+    ],
+    "altText": "Forest area, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/41.txt",
+    "scheduleDate": "2026-10-08",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-42",
+    "video": "scripts/viz-assets/videos/42-agricultural-land-2000-2023.mp4",
+    "text": "Land used for agriculture.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/42.txt",
+    "tags": [
+      "data visualization",
+      "agricultural land"
+    ],
+    "altText": "Agricultural land, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/42.txt",
+    "scheduleDate": "2026-10-08",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-43",
+    "video": "scripts/viz-assets/videos/43-cereal-production-2000-2023.mp4",
+    "text": "Cereal harvests measured in tonnes.\n2000-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/43.txt",
+    "tags": [
+      "data visualization",
+      "cereal production"
+    ],
+    "altText": "Cereal production, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/43.txt",
+    "scheduleDate": "2026-10-09",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-44",
+    "video": "scripts/viz-assets/videos/44-coal-electricity-2000-2021.mp4",
+    "text": "The share of electricity generated from coal.\n2000-2021. World Bank data.\n\nData + music https://veda.ng/viz-notes/44.txt",
+    "tags": [
+      "data visualization",
+      "coal electricity"
+    ],
+    "altText": "Coal electricity share, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/44.txt",
+    "scheduleDate": "2026-10-09",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-45",
+    "video": "scripts/viz-assets/videos/45-capture-fisheries-2000-2024.mp4",
+    "text": "Wild fish catches measured in tonnes.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/45.txt",
+    "tags": [
+      "data visualization",
+      "capture fisheries"
+    ],
+    "altText": "Capture fisheries, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/45.txt",
+    "scheduleDate": "2026-10-09",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-46",
+    "video": "scripts/viz-assets/videos/46-aquaculture-2000-2024.mp4",
+    "text": "Farmed aquatic production, year by year.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/46.txt",
+    "tags": [
+      "data visualization",
+      "aquaculture"
+    ],
+    "altText": "Aquaculture production, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/46.txt",
+    "scheduleDate": "2026-10-10",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-47",
+    "video": "scripts/viz-assets/videos/47-research-spending-2001-2023.mp4",
+    "text": "Research spending relative to the size of the economy.\n2001-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/47.txt",
+    "tags": [
+      "data visualization",
+      "research spending"
+    ],
+    "altText": "R&D spending as a share of GDP, 2001-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/47.txt",
+    "scheduleDate": "2026-10-10",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-48",
+    "video": "scripts/viz-assets/videos/48-patents-2010-2021.mp4",
+    "text": "Patent applications filed by residents.\n2010-2021. World Bank data.\n\nData + music https://veda.ng/viz-notes/48.txt",
+    "tags": [
+      "data visualization",
+      "patents"
+    ],
+    "altText": "Resident patent applications, 2010-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/48.txt",
+    "scheduleDate": "2026-10-10",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-49",
+    "video": "scripts/viz-assets/videos/49-researchers-2007-2023.mp4",
+    "text": "Research staffing relative to population.\n2007-2023. World Bank data.\n\nData + music https://veda.ng/viz-notes/49.txt",
+    "tags": [
+      "data visualization",
+      "researchers"
+    ],
+    "altText": "Researchers per million people, 2007-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/49.txt",
+    "scheduleDate": "2026-10-11",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  },
+  {
+    "id": "viz-x-50",
+    "video": "scripts/viz-assets/videos/50-labour-force-2000-2024.mp4",
+    "text": "People working or available and looking for work.\n2000-2024. World Bank data.\n\nData + music https://veda.ng/viz-notes/50.txt",
+    "tags": [
+      "data visualization",
+      "labour force"
+    ],
+    "altText": "Labour force, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/50.txt",
+    "scheduleDate": "2026-10-11",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "error": null
+  }
+]

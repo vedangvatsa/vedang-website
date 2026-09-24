@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import fetch from 'node-fetch';
 import FormData from 'form-data';
 import { triggerBoost } from './smm-boost-trigger.js';
+import { isMain, sleep } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -60,22 +61,22 @@ async function uploadPhoto(imagePath: string, message: string): Promise<string> 
   return data.post_id || data.id;
 }
 
-async function uploadVideo(videoPath: string, message: string): Promise<string> {
+export async function uploadVideo(videoPath: string, message: string): Promise<string> {
   const absPath = path.isAbsolute(videoPath)
     ? videoPath
     : path.resolve(REPO_ROOT, videoPath);
 
   if (!fs.existsSync(absPath)) {
-    console.warn(`  ⚠️ Video not found: ${absPath}`);
-    return await postText(message);
+    throw new Error(`Video not found: ${absPath}`);
   }
 
   const form = new FormData();
   form.append('source', fs.createReadStream(absPath));
   form.append('description', message);
+  form.append('published', 'true');
   form.append('access_token', PAGE_TOKEN);
 
-  const res = await fetch(`https://graph.facebook.com/v19.0/${PAGE_ID}/videos`, {
+  const res = await fetch(`https://graph-video.facebook.com/v23.0/${PAGE_ID}/videos`, {
     method: 'POST',
     body: form,
   });
@@ -85,7 +86,18 @@ async function uploadVideo(videoPath: string, message: string): Promise<string> 
   }
 
   const data = await res.json() as any;
-  return data.id;
+  if (!data.id) throw new Error('Facebook returned no video ID');
+  for (let attempt = 0; attempt < 60; attempt++) {
+    const poll = await fetch(`https://graph.facebook.com/v23.0/${data.id}?fields=status`, {
+      headers: { Authorization: `Bearer ${PAGE_TOKEN}` },
+    });
+    if (!poll.ok) throw new Error(`Facebook video ${data.id} status HTTP ${poll.status}; reconcile before retrying`);
+    const status = (await poll.json() as any).status;
+    if (status?.video_status === 'ready') return data.id;
+    if (status?.video_status === 'error') throw new Error(`Facebook video ${data.id} processing failed`);
+    await sleep(5000);
+  }
+  throw new Error(`Facebook video ${data.id} is still processing; reconcile before retrying`);
 }
 
 async function postText(message: string): Promise<string> {
@@ -140,7 +152,7 @@ async function main() {
   console.log(`📋 Total posts: ${posts.length} (after dedup), Posted: ${posts.filter(p => p.posted).length}`);
 
   // COOLDOWN: max 3 posts/day with 8h gap between each.
-  const COOLDOWN_HOURS = 7;
+  const COOLDOWN_HOURS = Number(process.env.FB_COOLDOWN_HOURS || '7');
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -184,9 +196,11 @@ async function main() {
   }
 
   
-    try { triggerBoost('facebook', post.postUri || `https://facebook.com/`); } catch(e) {}
+    if (post.posted && post.fbPostId) {
+      try { triggerBoost('facebook', `https://facebook.com/${post.fbPostId}`); } catch(e) {}
+    }
     fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
   console.log('\n💾 Updated facebook-posts.json');
 }
 
-main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(console.error);

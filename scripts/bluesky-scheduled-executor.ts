@@ -5,6 +5,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import fetch from 'node-fetch';
 import { triggerBoost } from './smm-boost-trigger.js';
+import { isMain, sleep } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -15,12 +16,15 @@ const BLUESKY_APP_PASSWORD = process.env.BLUESKY_APP_PASSWORD!;
 const BLUESKY_SERVICE = 'https://bsky.social';
 
 const TIMEZONE_OFFSET_HOURS = 5.5; // IST
-const POSTS_FILE = path.resolve(__dirname, 'bluesky-posts.json');
+const POSTS_FILE = path.resolve(__dirname, process.env.BS_POSTS_FILE || 'bluesky-posts.json');
+const COOLDOWN_HOURS = Number(process.env.BS_COOLDOWN_HOURS || '7');
+const VIDEO_MAX_BYTES = 50 * 1024 * 1024; // Bluesky blob limit
 
 interface BlueskyPost {
   id: string;
   text: string;
   image?: string;
+  video?: string;
   scheduleDate: string;
   scheduleTime: string;
   posted: boolean;
@@ -32,9 +36,11 @@ interface BlueskyPost {
 interface Session {
   did: string;
   accessJwt: string;
+  pds: string;
+  emailConfirmed: boolean;
 }
 
-async function createSession(): Promise<Session> {
+export async function createSession(): Promise<Session> {
   const res = await fetch(`${BLUESKY_SERVICE}/xrpc/com.atproto.server.createSession`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -49,7 +55,9 @@ async function createSession(): Promise<Session> {
   }
 
   const data = await res.json() as any;
-  return { did: data.did, accessJwt: data.accessJwt };
+  const pds = data.didDoc?.service?.find((s: any) => s.id.endsWith('#atproto_pds'))?.serviceEndpoint;
+  if (!pds || new URL(pds).protocol !== 'https:') throw new Error('Bluesky session has no HTTPS PDS endpoint');
+  return { did: data.did, accessJwt: data.accessJwt, pds, emailConfirmed: data.emailConfirmed === true };
 }
 
 function isVideo(filePath: string): boolean {
@@ -73,7 +81,7 @@ async function compressImage(absPath: string): Promise<{ buffer: Buffer; mimeTyp
     return { buffer: buf, mimeType: 'image/jpeg' };
   }
 
-  let buf = fs.readFileSync(absPath);
+  let buf: Buffer = fs.readFileSync(absPath);
   if (buf.length <= MAX_BYTES) {
     const mimeType = ext === '.png' ? 'image/png' : 'image/jpeg';
     return { buffer: buf, mimeType };
@@ -92,6 +100,58 @@ async function compressImage(absPath: string): Promise<{ buffer: Buffer; mimeTyp
   return { buffer: buf, mimeType: 'image/jpeg' };
 }
 
+async function uploadVideo(session: Session, videoPath: string): Promise<any | null> {
+  const absPath = path.isAbsolute(videoPath)
+    ? videoPath
+    : path.resolve(REPO_ROOT, videoPath);
+
+  if (!fs.existsSync(absPath)) {
+    console.warn(`  ⚠️ Video not found: ${absPath}`);
+    return null;
+  }
+
+  const stat = fs.statSync(absPath);
+  if (stat.size > VIDEO_MAX_BYTES) {
+    console.warn(`  ⚠️ Video too large (${(stat.size / 1024 / 1024).toFixed(1)}MB > 50MB): ${absPath}`);
+    return null;
+  }
+
+  if (!session.emailConfirmed) throw new Error('Bluesky video requires verified email');
+  const authParams = new URLSearchParams({
+    aud: `did:web:${new URL(session.pds).host}`, lxm: 'com.atproto.repo.uploadBlob',
+    exp: String(Math.floor(Date.now() / 1000) + 1800),
+  });
+  const auth = await fetch(`${session.pds}/xrpc/com.atproto.server.getServiceAuth?${authParams}`, {
+    headers: { Authorization: `Bearer ${session.accessJwt}` },
+  });
+  if (!auth.ok) throw new Error(`Bluesky video authorization HTTP ${auth.status}`);
+  const { token } = await auth.json() as any;
+  const params = new URLSearchParams({ did: session.did, name: path.basename(absPath) });
+  const res = await fetch(`https://video.bsky.app/xrpc/app.bsky.video.uploadVideo?${params}`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'video/mp4',
+      'Content-Length': String(stat.size),
+    },
+    body: fs.readFileSync(absPath) as any,
+  });
+
+  const data = await res.json() as any;
+  let status = data.jobStatus || data;
+  if (!res.ok && !status.blob && !status.jobId) throw new Error(`Bluesky video upload HTTP ${res.status}`);
+  for (let attempt = 0; attempt < 120; attempt++) {
+    if (status.blob) return status.blob;
+    if (status.error || status.state === 'JOB_STATE_FAILED') throw new Error('Bluesky video processing failed');
+    if (!status.jobId) throw new Error('Bluesky video returned no job ID');
+    await sleep(2500);
+    const poll = await fetch(`https://video.bsky.app/xrpc/app.bsky.video.getJobStatus?jobId=${encodeURIComponent(status.jobId)}`);
+    if (!poll.ok) throw new Error(`Bluesky video status HTTP ${poll.status}`);
+    status = (await poll.json() as any).jobStatus;
+  }
+  throw new Error('Bluesky video processing timed out');
+}
+
 async function uploadImage(session: Session, imagePath: string): Promise<any | null> {
   const absPath = path.isAbsolute(imagePath)
     ? imagePath
@@ -102,10 +162,9 @@ async function uploadImage(session: Session, imagePath: string): Promise<any | n
     return null;
   }
 
-  // AT Protocol doesn't support video uploads — skip video files
+  // Videos use the preprocessing path above.
   if (isVideo(absPath)) {
-    console.warn(`  ⚠️ Bluesky doesn't support video uploads, posting text-only`);
-    return null;
+    throw new Error('Video passed to the image uploader');
   }
 
   const { buffer, mimeType } = await compressImage(absPath);
@@ -163,7 +222,7 @@ function detectFacets(text: string): any[] {
   return facets;
 }
 
-async function createPost(session: Session, post: BlueskyPost): Promise<string> {
+export async function createPost(session: Session, post: BlueskyPost): Promise<string> {
   // Enforce 300 grapheme limit for Bluesky
   const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
   const segments = Array.from(segmenter.segment(post.text));
@@ -188,8 +247,20 @@ async function createPost(session: Session, post: BlueskyPost): Promise<string> 
     record.facets = facets;
   }
 
-  // Upload and attach image if present (skip video — AT Protocol doesn't support it)
-  if (post.image && !isVideo(post.image)) {
+  // Upload and attach video if present, else image
+  const videoPath = post.video || (post.image && isVideo(post.image) ? post.image : undefined);
+  if (videoPath) {
+    const blob = await uploadVideo(session, videoPath);
+    if (!blob) {
+      throw new Error(`Video failed: ${videoPath} — skipped`);
+    }
+    record.embed = {
+      $type: 'app.bsky.embed.video',
+      video: blob,
+      alt: post.text,
+      ...(post.id.startsWith('viz-') ? { aspectRatio: { width: 1080, height: 1920 } } : {}),
+    };
+  } else if (post.image) {
     const blob = await uploadImage(session, post.image);
     if (!blob) {
       throw new Error(`Media failed: ${post.image} — skipped`);
@@ -203,7 +274,7 @@ async function createPost(session: Session, post: BlueskyPost): Promise<string> 
     };
   }
 
-  const res = await fetch(`${BLUESKY_SERVICE}/xrpc/com.atproto.repo.createRecord`, {
+  const res = await fetch(`${session.pds}/xrpc/com.atproto.repo.createRecord`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${session.accessJwt}`,
@@ -245,7 +316,6 @@ async function main() {
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
   // COOLDOWN: max 3 posts/day with 8h gap between each.
-  const COOLDOWN_HOURS = 7;
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -283,12 +353,6 @@ async function main() {
       posted = true;
       break; // Only 1 successful post per run
     } catch (err: any) {
-      if (err.message?.includes('skipped')) {
-        console.warn(`  ⏭️ ${err.message}`);
-        post.posted = true;
-        post.error = err.message;
-        continue; // Try next post
-      }
       post.error = err.message;
       console.error(`  ❌ Failed: ${err.message}`);
       break; // Stop on real failure
@@ -299,4 +363,4 @@ async function main() {
   console.log('\n💾 Updated bluesky-posts.json');
 }
 
-main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(console.error);

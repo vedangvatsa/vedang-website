@@ -58,6 +58,7 @@ scripts/analytics-report.json
 # Temp files & scratch scripts
 *.test.js
 *.test.ts
+!scripts/viz-publishing.test.ts
 __pycache__/
 .wp-browser-session/
 .health-protocols-data/

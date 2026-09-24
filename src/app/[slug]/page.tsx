@@ -245,7 +245,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
 
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': ['Article', 'TechArticle'],
+    '@type': essay.frontmatter.category === 'News' ? 'NewsArticle' : ['Article', 'TechArticle'],
     headline: essay.frontmatter.title,
     description: flattenMeta(essay.frontmatter.summary) || essay.frontmatter.title,
     inLanguage: 'en-US',

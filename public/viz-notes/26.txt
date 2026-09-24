@@ -1,0 +1,51 @@
+# Health spending · 2000–2023
+
+Metric: Current health expenditure (% of GDP) (SH.XPD.CHEX.GD.ZS).
+Definition: Level of current health expenditure expressed as a percentage of GDP.  Estimates of current health expenditures include healthcare goods and services consumed during each year. This indicator does not include capital health expenditures such as buildings, machinery, IT and stocks of vaccines for emergency or outbreaks.
+Original provider: Global Health Expenditure Database, updated December 12th, 2025, World Health Organization (WHO), uri: https://apps.who.int/nha/database
+Source: https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS
+
+Top 10 reporting economies in each displayed year, considering all non-aggregate
+World Bank country/economy records. Territories are included where the provider
+reports them separately. Coverage ranges from 184 to 193 economies per year.
+Missing observations are excluded for that year; they are never replaced with zero,
+carried forward, or invented. This is a ranking of available records, not a claim
+that every country has reported every year.
+
+Period selection: the longest contiguous interval within the requested source period
+with at least 145 reporting economies per year.
+For automatically selected periods this is at least 75% of peak annual coverage,
+with a topic minimum of 30. This avoids incomplete recent
+updates being presented as a comparable complete ranking. Country inclusion is never
+hand-picked. Excluded years and full annual coverage are recorded in the data audit.
+
+Exact source values determine the order. Exact ties share a competition rank;
+ISO3 code order selects/stabilizes the ten displayed rows at a tied cutoff.
+Displayed values are rounded to 1 decimal places after dividing by
+1. The metric definition and units above govern interpretation.
+Positive values below display precision use a less-than label instead of a false zero.
+Percentages below 100 that round to 100 are marked ≈100; only exact source values of 100 display 100.
+
+Between published annual observations, bars and numbers glide by straight-line
+interpolation so motion is continuous; each published year anchors exact values
+at the segment ends. No observations outside the configured historical period and
+no forecasts are added. The source may itself contain estimates or revisions;
+provider definitions/observation flags are preserved in the source files and audit.
+Current flags and current provider entity names serve as identifiers, not a reconstruction
+of historical flags, borders, or political status.
+The Channel Islands reporting unit has a neutral geographic icon, not an invented flag.
+
+Verification: 4,562 nonmissing country/year observations
+cross-checked between World Bank JSON and its separately downloaded bulk CSV;
+zero mismatches. This checks faithful reproduction of the published dataset, not
+independent remeasurement of the underlying economic/demographic estimates.
+
+Retrieved: 2026-09-20T08:51:29.748758+00:00
+Provider release: 2026-07-13
+WDI data license: CC BY 4.0 (retain source attribution).
+
+Music
+Spark Of Inspiration by Shane Ivers
+https://www.chosic.com/download-audio/27274/
+Music promoted by https://www.chosic.com/free-music/all/
+30-second excerpt, fades and loudness adjustment. See the track page for license terms.

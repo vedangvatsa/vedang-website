@@ -5,6 +5,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { TwitterApi } from 'twitter-api-v2';
 import { triggerBoost } from './smm-boost-trigger.js';
+import { isMain } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -18,9 +19,10 @@ const client = new TwitterApi({
 });
 
 const TIMEZONE_OFFSET_HOURS = 5.5; // IST
-const POSTS_FILE = path.resolve(__dirname, 'x-posts.json');
+const POSTS_FILE = path.resolve(__dirname, process.env.X_POSTS_FILE || 'x-posts.json');
 const QUOTE_POSTS_FILE = path.resolve(__dirname, 'x-quote-posts.json');
 const REPLY_POSTS_FILE = path.resolve(__dirname, 'x-reply-posts.json');
+const COOLDOWN_HOURS = Number(process.env.X_COOLDOWN_HOURS || '7');
 
 interface TweetItem {
   text: string;
@@ -32,6 +34,7 @@ interface XPost {
   type?: 'single' | 'thread' | 'quote' | 'reply';
   text?: string;
   image?: string;
+  video?: string;
   tweets?: TweetItem[];
   quote_tweet_id?: string;
   reply_to_tweet_id?: string;
@@ -44,7 +47,7 @@ interface XPost {
   error?: string;
 }
 
-async function postSingleTweet(text: string, image?: string): Promise<{ success: boolean; id?: string; error?: string }> {
+export async function postSingleTweet(text: string, image?: string): Promise<{ success: boolean; id?: string; error?: string }> {
   try {
     const params: Record<string, unknown> = { text };
 
@@ -138,11 +141,11 @@ async function main() {
     const regular = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8')) as XPost[];
     posts.push(...regular);
   }
-  if (fs.existsSync(QUOTE_POSTS_FILE)) {
+  if (!process.env.X_POSTS_FILE && fs.existsSync(QUOTE_POSTS_FILE)) {
     const quotes = JSON.parse(fs.readFileSync(QUOTE_POSTS_FILE, 'utf-8')) as XPost[];
     posts.push(...quotes);
   }
-  if (fs.existsSync(REPLY_POSTS_FILE)) {
+  if (!process.env.X_POSTS_FILE && fs.existsSync(REPLY_POSTS_FILE)) {
     const replies = JSON.parse(fs.readFileSync(REPLY_POSTS_FILE, 'utf-8')) as XPost[];
     posts.push(...replies);
   }
@@ -174,8 +177,7 @@ async function main() {
 
   let modified = false;
 
-  // COOLDOWN: max 3 posts/day with 8h gap between each.
-  const COOLDOWN_HOURS = 7;
+  // COOLDOWN: max 3 posts/day with 8h gap between each (env-overridable).
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -207,7 +209,7 @@ async function main() {
     } else if (isThread) {
       result = await postThread(post.tweets!);
     } else {
-      result = await postSingleTweet(post.text!, post.image);
+      result = await postSingleTweet(post.text!, post.video || post.image);
     }
 
     if (result.success) {
@@ -231,14 +233,13 @@ async function main() {
     if (fs.existsSync(POSTS_FILE)) {
       const regular = posts.filter(p => p.type !== 'quote' && p.type !== 'reply');
       
-    try { triggerBoost('twitter', `https://twitter.com/vedangvatsa/status/${post.postUri}`); } catch(e) {}
     fs.writeFileSync(POSTS_FILE, JSON.stringify(regular, null, 2));
     }
-    if (fs.existsSync(QUOTE_POSTS_FILE)) {
+    if (!process.env.X_POSTS_FILE && fs.existsSync(QUOTE_POSTS_FILE)) {
       const quotes = posts.filter(p => p.type === 'quote');
       fs.writeFileSync(QUOTE_POSTS_FILE, JSON.stringify(quotes, null, 2));
     }
-    if (fs.existsSync(REPLY_POSTS_FILE)) {
+    if (!process.env.X_POSTS_FILE && fs.existsSync(REPLY_POSTS_FILE)) {
       const replies = posts.filter(p => p.type === 'reply');
       fs.writeFileSync(REPLY_POSTS_FILE, JSON.stringify(replies, null, 2));
     }
@@ -249,4 +250,4 @@ async function main() {
   }
 }
 
-main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(console.error);

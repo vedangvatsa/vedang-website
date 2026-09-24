@@ -1,0 +1,51 @@
+# Container ports · 2010–2020
+
+Metric: Container port traffic (TEU: 20 foot equivalent units) (IS.SHP.GOOD.TU).
+Definition: Port container traffic measures the flow of containers from land to sea transport modes, and vice versa, in twenty-foot equivalent units (TEUs), a standard-size container. Data refer to coastal shipping as well as international journeys. Transshipment traffic is counted as two lifts at the intermediate port (once to off-load and again as an outbound lift) and includes empty units.
+Original provider: UN Conference on Trade and Development (UNCTAD), uri: http://unctad.org/en/Pages/statistics.aspx
+Source: https://data.worldbank.org/indicator/IS.SHP.GOOD.TU
+
+Top 10 reporting economies in each displayed year, considering all non-aggregate
+World Bank country/economy records. Territories are included where the provider
+reports them separately. Coverage ranges from 125 to 166 economies per year.
+Missing observations are excluded for that year; they are never replaced with zero,
+carried forward, or invented. This is a ranking of available records, not a claim
+that every country has reported every year.
+
+Period selection: the longest contiguous interval within the requested source period
+with at least 125 reporting economies per year.
+For automatically selected periods this is at least 75% of peak annual coverage,
+with a topic minimum of 30. This avoids incomplete recent
+updates being presented as a comparable complete ranking. Country inclusion is never
+hand-picked. Excluded years and full annual coverage are recorded in the data audit.
+
+Exact source values determine the order. Exact ties share a competition rank;
+ISO3 code order selects/stabilizes the ten displayed rows at a tied cutoff.
+Displayed values are rounded to 1 decimal places after dividing by
+1,000,000. The metric definition and units above govern interpretation.
+Positive values below display precision use a less-than label instead of a false zero.
+The publisher’s indicator definition above governs interpretation.
+
+Between published annual observations, bars and numbers glide by straight-line
+interpolation so motion is continuous; each published year anchors exact values
+at the segment ends. No observations outside the configured historical period and
+no forecasts are added. The source may itself contain estimates or revisions;
+provider definitions/observation flags are preserved in the source files and audit.
+Current flags and current provider entity names serve as identifiers, not a reconstruction
+of historical flags, borders, or political status.
+The Channel Islands reporting unit has a neutral geographic icon, not an invented flag.
+
+Verification: 2,232 nonmissing country/year observations
+cross-checked between World Bank JSON and its separately downloaded bulk CSV;
+zero mismatches. This checks faithful reproduction of the published dataset, not
+independent remeasurement of the underlying economic/demographic estimates.
+
+Retrieved: 2026-09-20T08:51:10.677436+00:00
+Provider release: 2026-07-13
+WDI data license: CC BY 4.0 (retain source attribution).
+
+Music
+Last Hero by Alex-Productions
+https://www.chosic.com/download-audio/54081/
+Music promoted by https://www.chosic.com/free-music/all/
+30-second excerpt, fades and loudness adjustment. See the track page for license terms.

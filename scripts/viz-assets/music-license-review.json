@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-09-25",
+  "complete": false,
+  "note": "The original catalog's generic CC-BY labels are not a completed license audit. Verify each source's exact terms before publication.",
+  "tracks": {
+    "1": {
+      "title": "Ascension",
+      "artist": "Scott Buckley",
+      "source": "https://www.scottbuckley.com.au/library/ascension/",
+      "page_url": "https://www.scottbuckley.com.au/library/ascension/",
+      "mp3_url": "https://www.scottbuckley.com.au/library/wp-content/uploads/2019/02/sb_ascension.mp3",
+      "cache_file": "01-population-ascension.mp3",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "artistUrl": "https://www.scottbuckley.com.au/",
+      "attribution": "'Ascension' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au/",
+      "finding": "Replaces An Epic Story, whose source required CC BY-SA 3.0. Ascension's license and attribution were verified on the composer's own page."
+    }
+  }
+}

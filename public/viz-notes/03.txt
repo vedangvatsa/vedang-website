@@ -1,0 +1,53 @@
+# Internet use · 2000–2024
+
+Metric: Individuals using the Internet (% of population) (IT.NET.USER.ZS).
+Definition: Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.
+Original provider: World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/
+Source: https://data.worldbank.org/indicator/IT.NET.USER.ZS
+
+Top 10 reporting economies in each displayed year, considering all non-aggregate
+World Bank country/economy records. Territories are included where the provider
+reports them separately. Coverage ranges from 180 to 204 economies per year.
+Missing observations are excluded for that year; they are never replaced with zero,
+carried forward, or invented. This is a ranking of available records, not a claim
+that every country has reported every year.
+
+Period selection: the longest contiguous interval within the requested source period
+with at least 153 reporting economies per year.
+For automatically selected periods this is at least 75% of peak annual coverage,
+with a topic minimum of 30. This avoids incomplete recent
+updates being presented as a comparable complete ranking. Country inclusion is never
+hand-picked. Excluded years and full annual coverage are recorded in the data audit.
+
+Exact source values determine the order. Exact ties share a competition rank;
+ISO3 code order selects/stabilizes the ten displayed rows at a tied cutoff.
+Displayed values are rounded to 1 decimal places after dividing by
+1. The metric definition and units above govern interpretation.
+Positive values below display precision use a less-than label instead of a false zero.
+Percentages below 100 that round to 100 are marked ≈100; only exact source values of 100 display 100.
+
+Between published annual observations, bars and numbers glide by straight-line
+interpolation so motion is continuous; each published year anchors exact values
+at the segment ends. No observations outside the configured historical period and
+no forecasts are added. The source may itself contain estimates or revisions;
+provider definitions/observation flags are preserved in the source files and audit.
+Current flags and current provider entity names serve as identifiers, not a reconstruction
+of historical flags, borders, or political status.
+The Channel Islands reporting unit has a neutral geographic icon, not an invented flag.
+
+Verification: 4,890 nonmissing country/year observations
+cross-checked between World Bank JSON and its separately downloaded bulk CSV;
+zero mismatches. This checks faithful reproduction of the published dataset, not
+independent remeasurement of the underlying economic/demographic estimates.
+
+Retrieved: 2026-09-20T07:49:24.376633+00:00
+Provider release: 2026-07-13
+WDI data license: CC BY 4.0 (retain source attribution).
+
+Editorial note: Early-2000s values mix operator reports and ITU estimates; from 2002 several European series switch to harmonized Eurostat collection (flagged by the provider as a break in comparability), contributing to the visible 2001→2002 uplift. All levels shown are the published values.
+
+Music
+Adventures by A Himitsu
+https://www.chosic.com/download-audio/25837/
+Music promoted by https://www.chosic.com/free-music/all/
+30-second excerpt, fades and loudness adjustment. See the track page for license terms.

@@ -1,0 +1,53 @@
+# Labour force · 2000–2024
+
+Metric: Labor force, total (SL.TLF.TOTL.IN).
+Definition: Labor force comprises people ages 15 and older who supply labor for the production of goods and services during a specified period. It includes people who are currently employed and people who are unemployed but seeking work as well as first-time job-seekers. Not everyone who works is included, however. Unpaid workers, family workers, and students are often omitted, and some countries do not count members of the armed forces. Labor force size tends to vary during the year as seasonal workers enter and leave.
+Original provider: International Labour Organization (ILO), type: estimates based on external database;
+United Nations (UN), publisher: UN Population Division;
+Staff estimates, World Bank (WB)
+Source: https://data.worldbank.org/indicator/SL.TLF.TOTL.IN
+
+Top 10 reporting economies in each displayed year, considering all non-aggregate
+World Bank country/economy records. Territories are included where the provider
+reports them separately. Coverage ranges from 182 to 187 economies per year.
+Missing observations are excluded for that year; they are never replaced with zero,
+carried forward, or invented. This is a ranking of available records, not a claim
+that every country has reported every year.
+
+Period selection: the longest contiguous interval within the requested source period
+with at least 141 reporting economies per year.
+For automatically selected periods this is at least 75% of peak annual coverage,
+with a topic minimum of 30. This avoids incomplete recent
+updates being presented as a comparable complete ranking. Country inclusion is never
+hand-picked. Excluded years and full annual coverage are recorded in the data audit.
+
+Exact source values determine the order. Exact ties share a competition rank;
+ISO3 code order selects/stabilizes the ten displayed rows at a tied cutoff.
+Displayed values are rounded to 3 decimal places after dividing by
+1,000,000,000. The metric definition and units above govern interpretation.
+Positive values below display precision use a less-than label instead of a false zero.
+The publisher’s indicator definition above governs interpretation.
+
+Between published annual observations, bars and numbers glide by straight-line
+interpolation so motion is continuous; each published year anchors exact values
+at the segment ends. No observations outside the configured historical period and
+no forecasts are added. The source may itself contain estimates or revisions;
+provider definitions/observation flags are preserved in the source files and audit.
+Current flags and current provider entity names serve as identifiers, not a reconstruction
+of historical flags, borders, or political status.
+The Channel Islands reporting unit has a neutral geographic icon, not an invented flag.
+
+Verification: 4,666 nonmissing country/year observations
+cross-checked between World Bank JSON and its separately downloaded bulk CSV;
+zero mismatches. This checks faithful reproduction of the published dataset, not
+independent remeasurement of the underlying economic/demographic estimates.
+
+Retrieved: 2026-09-20T08:51:26.963063+00:00
+Provider release: 2026-07-13
+WDI data license: CC BY 4.0 (retain source attribution).
+
+Music
+Sweet Dreams by BatchBug
+https://www.chosic.com/download-audio/26757/
+Music promoted by https://www.chosic.com/free-music/all/
+30-second excerpt, fades and loudness adjustment. See the track page for license terms.

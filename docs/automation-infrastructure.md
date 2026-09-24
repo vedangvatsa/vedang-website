@@ -11,6 +11,8 @@
 | Tumblr | `scripts/tumblr-scheduled-executor.ts` | `scripts/tumblr-posts.json` | `tumblr-scheduler.yml` | Every 30 min | `TUMBLR_CONSUMER_KEY`, `TUMBLR_CONSUMER_SECRET`, `TUMBLR_ACCESS_TOKEN`, `TUMBLR_ACCESS_SECRET`, `TUMBLR_BLOG_NAME` |
 | Dev.to | `scripts/devto-scheduled-executor.ts` | `scripts/devto-posts.json` | `devto-scheduler.yml` | Daily 6AM UTC | `DEVTO_API_KEY` |
 | Hashnode | `scripts/hashnode-scheduled-executor.ts` | `scripts/hashnode-posts.json` | `hashnode-scheduler.yml` | Daily 8AM UTC | `HASHNODE_TOKEN`, `HASHNODE_PUBLICATION_ID` |
+| YouTube Shorts + IG Reels + TikTok (viz via Buffer) | `scripts/buffer-viz-scheduled-executor.ts` | `scripts/viz-{youtube,instagram,tiktok}-posts.json` | `viz-scheduler.yml` | 09:00/14:00/20:00 IST, `shareNow` when due | `BUFFER_API_KEY`; optional explicit channel IDs |
+| LinkedIn, X, Bluesky, Facebook, Threads, Tumblr, Mastodon, Farcaster (viz direct) | `scripts/native-viz-scheduled-executor.ts` reuses platform upload functions | `scripts/viz-{platform}-posts.json` | `viz-scheduler.yml` | One video per platform per due slot | Existing platform secrets; public MP4 hosting for Threads and Farcaster |
 
 ## Token Expiration & Renewal
 
@@ -20,11 +22,32 @@
 | X (Twitter) | OAuth 1.0a | Never | Permanent unless revoked |
 | Bluesky | App Password | Never | Permanent unless revoked |
 | Facebook Page | Page Token | **Never** | Derived from long-lived user token; permanent |
+| Google (YouTube) | OAuth 2.0 refresh token | Non-expiring | Re-authorize via `scripts/youtube-oauth.mjs` if revoked |
+| TikTok | OAuth access token | ~24h | Auto-refreshed per run from `TIKTOK_REFRESH_TOKEN` (manual rotation if TikTok rotates it) |
+| Buffer | API key | Non-expiring | Regenerate in Buffer dashboard if revoked. Free plan: 10 queued posts/channel (rolling); Essentials ~$5–6/mo per channel lifts caps |
 | Tumblr | OAuth 1.0a | Never | Permanent unless revoked |
 | Dev.to | API Key | Never | Permanent unless regenerated |
 | Hashnode | PAT | Never | Permanent unless regenerated |
 
-⚠️ **LinkedIn is the only token that expires.** Set a calendar reminder for ~55 days to renew.
+Tokens can expire or be revoked, and account permissions can change. A stored secret or a green scheduler run does not establish that publishing works. Use the read-only preflight and inspect returned post IDs/statuses.
+
+### Viz video queues (eleven platforms)
+
+- 50 data-viz videos with individual soundtracks, 11 queues, 550 distinct platform captions.
+- Our workflow owns the timing. At a due slot Buffer receives `mode: shareNow` and `schedulingType: automatic`, **without `dueAt`**. It never receives `addToQueue` or `customScheduled` from the viz executors.
+- Slots are 09:00/14:00/20:00 IST. GitHub Actions and platform video processing can delay publication; these are target times, not an exact-time guarantee.
+- `VIZ_MEDIA_BASE_URL` must serve repository-relative MP4 paths over public HTTPS. There is no Catbox fallback in the viz path. Deploy `public/viz-notes/` too, since short captions link to those source and music notes.
+- Buffer entries are marked posted only when its API reports `sent`. Accepted/processing posts retain their Buffer IDs for reconciliation. Uncertain outcomes stop that platform's queue rather than sending duplicates.
+- Direct adapters use video upload/processing flows; Farcaster uses a public MP4 embed. Client playback still needs an end-to-end check.
+- Queue generation preserves attempted/submitted/published entries. Regenerate with `node scripts/generate-viz-queues.mjs --manifest … --chart-dir … --start … --slots 09:00,14:00,20:00`.
+- `scripts/viz-caption-copy.json` holds topic-specific editorial copy. `scripts/viz-captions.mjs` adapts it to each platform and rejects overlong captions and banned wording. Short captions link to full attribution instead of truncating it.
+- Workflow dispatch defaults to `preflight`, which checks Buffer credentials without publishing. `dry-run` checks local media and every caption with no network calls or queue writes. Scheduled runs send due entries to YouTube, Instagram and TikTok through Buffer. Direct integrations run only when a manual dispatch explicitly sets `include_direct`.
+- Failures make the new workflow fail visibly, while queue receipts are retained as artifacts and committed for recovery. Check receipts before rerunning a job interrupted during publishing or before queue persistence; GitHub filesystem state alone cannot guarantee exactly-once delivery after a runner crash.
+- YouTube OAuth (fallback path only): run `npx tsx scripts/youtube-oauth.mjs` once, store the refresh token.
+  TikTok OAuth (fallback path only): existing `scripts/tiktok-oauth.ts`.
+- Buffer uses its connected integrations, but account restrictions, disconnections and media-processing errors can still prevent publication. Channel access and schema checks are not a successful publish test.
+- GitHub Secrets cannot be read back into `.env.local`. Run checks inside Actions to use those credentials without exposing them. `BUFFER_API_KEY` was added to GitHub Secrets on 2026-09-24.
+- Current evidence and activation blockers are in [viz-publishing-status.md](viz-publishing-status.md).
 
 ## Post JSON Structure
 

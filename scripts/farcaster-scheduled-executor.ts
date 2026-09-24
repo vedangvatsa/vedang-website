@@ -8,6 +8,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { isMain } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -92,7 +93,7 @@ function truncateForFarcaster(text: string): string {
   return text.substring(0, MAX_CAST_LENGTH - 3) + '...';
 }
 
-async function postCast(text: string, imageUrl?: string | null): Promise<{ success: boolean; hash?: string; error?: string }> {
+export async function postCast(text: string, imageUrl?: string | null): Promise<{ success: boolean; hash?: string; error?: string }> {
   const castText = truncateForFarcaster(text);
 
   const body: Record<string, unknown> = {
@@ -142,7 +143,7 @@ async function main() {
   console.log(`🟪 Farcaster scheduler running at ${todayIST} ${currentTimeIST} IST`);
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
-  const COOLDOWN_HOURS = 7;
+  const COOLDOWN_HOURS = Number(process.env.FC_COOLDOWN_HOURS || '7');
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt || !p.castHash) return false; // Only count posts actually cast on Farcaster
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -202,4 +203,4 @@ async function main() {
   console.log('\n💾 Updated farcaster-posts.json');
 }
 
-main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(console.error);

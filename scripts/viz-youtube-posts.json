@@ -1,0 +1,952 @@
+[
+  {
+    "id": "viz-yt-01",
+    "video": "scripts/viz-assets/videos/01-population-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/population.png",
+    "title": "Population | 2000-2024",
+    "description": "How the largest populations changed.\n\n2000-2024. The totals count residents, regardless of citizenship.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.POP.TOTL\nMusic 'Ascension' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au/\nhttps://creativecommons.org/licenses/by/4.0/\n30-second excerpt with fades and adjusted loudness.\nFull notes and credits https://veda.ng/viz-notes/01.txt",
+    "tags": [
+      "data visualization",
+      "population"
+    ],
+    "scheduleDate": "2026-09-25",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Population, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/01.txt"
+  },
+  {
+    "id": "viz-yt-02",
+    "video": "scripts/viz-assets/videos/02-gdp-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/gdp.png",
+    "title": "GDP | 2000-2024",
+    "description": "The largest economies, measured in US dollars.\n\n2000-2024. Current-dollar GDP reflects exchange rates and prices as well as output.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NY.GDP.MKTP.CD\nMusic Inspirational Corporate by MaxKoMusic. https://www.chosic.com/download-audio/27878/\nFull notes and credits https://veda.ng/viz-notes/02.txt",
+    "tags": [
+      "data visualization",
+      "gdp"
+    ],
+    "scheduleDate": "2026-09-25",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "GDP, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/02.txt"
+  },
+  {
+    "id": "viz-yt-03",
+    "video": "scripts/viz-assets/videos/03-internet-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/internet.png",
+    "title": "Internet use | 2000-2024",
+    "description": "How much of the population uses the internet?\n\n2000-2024. The measure counts people who used the internet in the previous three months.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IT.NET.USER.ZS\nMusic Adventures by A Himitsu. https://www.chosic.com/download-audio/25837/\nFull notes and credits https://veda.ng/viz-notes/03.txt",
+    "tags": [
+      "data visualization",
+      "internet"
+    ],
+    "scheduleDate": "2026-09-25",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Internet use, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/03.txt"
+  },
+  {
+    "id": "viz-yt-04",
+    "video": "scripts/viz-assets/videos/04-urbanization-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/urbanization.png",
+    "title": "Urban population share | 2000-2024",
+    "description": "Where city living makes up the largest share.\n\n2000-2024. National definitions of urban areas differ, so these percentages need that context.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS\nMusic Upbeat by Wavecont. https://www.chosic.com/download-audio/27967/\nFull notes and credits https://veda.ng/viz-notes/04.txt",
+    "tags": [
+      "data visualization",
+      "urbanization"
+    ],
+    "scheduleDate": "2026-09-26",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Urban population share, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/04.txt"
+  },
+  {
+    "id": "viz-yt-05",
+    "video": "scripts/viz-assets/videos/05-life-expectancy-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/life-expectancy.png",
+    "title": "Life expectancy | 2000-2024",
+    "description": "Life expectancy at birth, year by year.\n\n2000-2024. These estimates reflect mortality rates in each year, rather than predicting an individual lifespan.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.DYN.LE00.IN\nMusic Warm Memories - Emotional Inspiring Piano by Keys of Moon. https://www.chosic.com/download-audio/27281/\nFull notes and credits https://veda.ng/viz-notes/05.txt",
+    "tags": [
+      "data visualization",
+      "life expectancy"
+    ],
+    "scheduleDate": "2026-09-26",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Life expectancy, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/05.txt"
+  },
+  {
+    "id": "viz-yt-06",
+    "video": "scripts/viz-assets/videos/06-fertility-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/fertility.png",
+    "title": "Fertility rates | 2000-2024",
+    "description": "Births per woman across the years.\n\n2000-2024. This estimate applies each year's age-specific birth rates across a woman's reproductive life.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.DYN.TFRT.IN\nMusic White Petals by Keys of Moon. https://www.chosic.com/download-audio/27279/\nFull notes and credits https://veda.ng/viz-notes/06.txt",
+    "tags": [
+      "data visualization",
+      "fertility"
+    ],
+    "scheduleDate": "2026-09-26",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Fertility rates, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/06.txt"
+  },
+  {
+    "id": "viz-yt-07",
+    "video": "scripts/viz-assets/videos/07-birth-rate-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/birth-rate.png",
+    "title": "Birth rates | 2000-2024",
+    "description": "Annual births for every 1,000 people.\n\n2000-2024. The denominator includes the whole population, which makes age structure part of the comparison.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.DYN.CBRT.IN\nMusic Cheer Up! by Keys of Moon. https://www.chosic.com/download-audio/25942/\nFull notes and credits https://veda.ng/viz-notes/07.txt",
+    "tags": [
+      "data visualization",
+      "birth rate"
+    ],
+    "scheduleDate": "2026-09-27",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Birth rates, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/07.txt"
+  },
+  {
+    "id": "viz-yt-08",
+    "video": "scripts/viz-assets/videos/08-ageing-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/ageing.png",
+    "title": "People aged 65 and over | 2000-2024",
+    "description": "Where older people make up the largest share.\n\n2000-2024. This chart tracks the percentage of residents aged 65 and over.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS\nMusic Precious Memories by Shane Ivers. https://www.chosic.com/download-audio/27271/\nFull notes and credits https://veda.ng/viz-notes/08.txt",
+    "tags": [
+      "data visualization",
+      "ageing"
+    ],
+    "scheduleDate": "2026-09-27",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "People aged 65 and over, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/08.txt"
+  },
+  {
+    "id": "viz-yt-09",
+    "video": "scripts/viz-assets/videos/09-young-population-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/young-population.png",
+    "title": "Children aged 0-14 | 2000-2024",
+    "description": "Where children make up the largest share.\n\n2000-2024. The chart measures residents aged 0-14 as a percentage of the total population.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS\nMusic Feel Good by MusicbyAden. https://www.chosic.com/download-audio/29064/\nFull notes and credits https://veda.ng/viz-notes/09.txt",
+    "tags": [
+      "data visualization",
+      "young population"
+    ],
+    "scheduleDate": "2026-09-27",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Children aged 0-14, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/09.txt"
+  },
+  {
+    "id": "viz-yt-10",
+    "video": "scripts/viz-assets/videos/10-working-age-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/working-age.png",
+    "title": "Working-age population | 2000-2024",
+    "description": "The share of residents aged 15-64.\n\n2000-2024. Working-age population includes people outside the labour force.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.POP.1564.TO.ZS\nMusic Inspire 2 by Wavecont. https://www.chosic.com/download-audio/27971/\nFull notes and credits https://veda.ng/viz-notes/10.txt",
+    "tags": [
+      "data visualization",
+      "working age"
+    ],
+    "scheduleDate": "2026-09-28",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Working-age population, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/10.txt"
+  },
+  {
+    "id": "viz-yt-11",
+    "video": "scripts/viz-assets/videos/11-population-density-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/population-density.png",
+    "title": "Population density | 2000-2023",
+    "description": "People per square kilometre of land.\n\n2000-2023. Small territories feature prominently because the measure divides population by land area.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/EN.POP.DNST\nMusic Powerful Trap Beat | Strong by Alex-Productions. https://www.chosic.com/download-audio/31959/\nFull notes and credits https://veda.ng/viz-notes/11.txt",
+    "tags": [
+      "data visualization",
+      "population density"
+    ],
+    "scheduleDate": "2026-09-28",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Population density, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/11.txt"
+  },
+  {
+    "id": "viz-yt-12",
+    "video": "scripts/viz-assets/videos/12-urban-population-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/urban-population.png",
+    "title": "Urban population | 2000-2024",
+    "description": "The number of people living in urban areas.\n\n2000-2024. Large populations matter here. National definitions of urban areas also differ.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.URB.TOTL\nMusic Bliss by Luke Bergs. https://www.chosic.com/download-audio/27880/\nFull notes and credits https://veda.ng/viz-notes/12.txt",
+    "tags": [
+      "data visualization",
+      "urban population"
+    ],
+    "scheduleDate": "2026-09-28",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Urban population, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/12.txt"
+  },
+  {
+    "id": "viz-yt-13",
+    "video": "scripts/viz-assets/videos/13-rural-population-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/rural-population.png",
+    "title": "Rural population | 2000-2024",
+    "description": "The number of people living in rural areas.\n\n2000-2024. Rural totals can remain large even as the urban share grows.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.RUR.TOTL\nMusic West In Africa by John Bartmann. https://www.chosic.com/download-audio/24447/\nFull notes and credits https://veda.ng/viz-notes/13.txt",
+    "tags": [
+      "data visualization",
+      "rural population"
+    ],
+    "scheduleDate": "2026-09-29",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Rural population, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/13.txt"
+  },
+  {
+    "id": "viz-yt-14",
+    "video": "scripts/viz-assets/videos/14-mobile-subscriptions-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/mobile-subscriptions.png",
+    "title": "Mobile subscriptions | 2000-2023",
+    "description": "Mobile connections counted across the years.\n\n2000-2023. One person can hold several subscriptions, so this does not count unique users.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IT.CEL.SETS\nMusic Future Technology by MaxKoMusic. https://www.chosic.com/download-audio/28680/\nFull notes and credits https://veda.ng/viz-notes/14.txt",
+    "tags": [
+      "data visualization",
+      "mobile subscriptions"
+    ],
+    "scheduleDate": "2026-09-29",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Mobile subscriptions, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/14.txt"
+  },
+  {
+    "id": "viz-yt-15",
+    "video": "scripts/viz-assets/videos/15-fixed-broadband-2005-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/fixed-broadband.png",
+    "title": "Fixed broadband | 2005-2023",
+    "description": "Fixed broadband subscriptions, year by year.\n\n2005-2023. Subscriptions measure connections; households and workplaces can share them.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IT.NET.BBND\nMusic Advertising by Alex-Productions. https://www.chosic.com/download-audio/57970/\nFull notes and credits https://veda.ng/viz-notes/15.txt",
+    "tags": [
+      "data visualization",
+      "fixed broadband"
+    ],
+    "scheduleDate": "2026-09-29",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Fixed broadband, 2005-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/15.txt"
+  },
+  {
+    "id": "viz-yt-16",
+    "video": "scripts/viz-assets/videos/16-mobile-density-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/mobile-density.png",
+    "title": "Mobile subscriptions per 100 people | 2000-2023",
+    "description": "Why mobile subscriptions can exceed 100 per 100 people.\n\n2000-2023. Multiple SIMs and business subscriptions push this measure above the number of residents.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IT.CEL.SETS.P2\nMusic Sport Racing Car | DRIVE by Alex-Productions. https://www.chosic.com/download-audio/53218/\nFull notes and credits https://veda.ng/viz-notes/16.txt",
+    "tags": [
+      "data visualization",
+      "mobile density"
+    ],
+    "scheduleDate": "2026-09-30",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Mobile subscriptions per 100 people, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/16.txt"
+  },
+  {
+    "id": "viz-yt-17",
+    "video": "scripts/viz-assets/videos/17-female-labour-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/female-labour.png",
+    "title": "Women's labour force participation | 2000-2024",
+    "description": "Women aged 15+ working or looking for work.\n\n2000-2024. ILO modelled estimates count both employed women and those available for and seeking work.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS\nMusic The Inspiration by Keys of Moon. https://www.chosic.com/download-audio/27962/\nFull notes and credits https://veda.ng/viz-notes/17.txt",
+    "tags": [
+      "data visualization",
+      "female labour"
+    ],
+    "scheduleDate": "2026-09-30",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Women's labour force participation, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/17.txt"
+  },
+  {
+    "id": "viz-yt-18",
+    "video": "scripts/viz-assets/videos/18-trade-openness-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/trade-openness.png",
+    "title": "Trade as a share of GDP | 2000-2024",
+    "description": "Imports and exports relative to the size of the economy.\n\n2000-2024. Gross trade flows can exceed GDP, which measures domestic value added.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS\nMusic Powerful by MaxKoMusic. https://www.chosic.com/download-audio/45440/\nFull notes and credits https://veda.ng/viz-notes/18.txt",
+    "tags": [
+      "data visualization",
+      "trade openness"
+    ],
+    "scheduleDate": "2026-09-30",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Trade as a share of GDP, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/18.txt"
+  },
+  {
+    "id": "viz-yt-19",
+    "video": "scripts/viz-assets/videos/19-exports-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/exports.png",
+    "title": "Exports | 2000-2024",
+    "description": "Goods and services sold abroad, in US dollars.\n\n2000-2024. Current-dollar totals reflect prices and exchange rates as well as trade volumes.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NE.EXP.GNFS.CD\nMusic Ultra Lag by Alex-Productions. https://www.chosic.com/download-audio/59911/\nFull notes and credits https://veda.ng/viz-notes/19.txt",
+    "tags": [
+      "data visualization",
+      "exports"
+    ],
+    "scheduleDate": "2026-10-01",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Exports, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/19.txt"
+  },
+  {
+    "id": "viz-yt-20",
+    "video": "scripts/viz-assets/videos/20-imports-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/imports.png",
+    "title": "Imports | 2000-2024",
+    "description": "Goods and services bought from abroad, in US dollars.\n\n2000-2024. Current-dollar totals reflect prices and exchange rates as well as trade volumes.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NE.IMP.GNFS.CD\nMusic Inspiring by Wavecont. https://www.chosic.com/download-audio/27965/\nFull notes and credits https://veda.ng/viz-notes/20.txt",
+    "tags": [
+      "data visualization",
+      "imports"
+    ],
+    "scheduleDate": "2026-10-01",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Imports, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/20.txt"
+  },
+  {
+    "id": "viz-yt-21",
+    "video": "scripts/viz-assets/videos/21-gdp-per-person-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/gdp-per-person.png",
+    "title": "GDP per person | 2000-2024",
+    "description": "Economic output divided by population.\n\n2000-2024. GDP per person measures average output. It does not show how income is distributed.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NY.GDP.PCAP.CD\nMusic Carefree by Kevin MacLeod. https://www.chosic.com/download-audio/25863/\nFull notes and credits https://veda.ng/viz-notes/21.txt",
+    "tags": [
+      "data visualization",
+      "gdp per person"
+    ],
+    "scheduleDate": "2026-10-01",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "GDP per person, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/21.txt"
+  },
+  {
+    "id": "viz-yt-22",
+    "video": "scripts/viz-assets/videos/22-export-share-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/export-share.png",
+    "title": "Exports as a share of GDP | 2000-2024",
+    "description": "Exports relative to domestic output.\n\n2000-2024. Exports include gross flows, while GDP counts value added. The ratio can exceed 100%.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NE.EXP.GNFS.ZS\nMusic Tropical Soul by Luke Bergs. https://www.chosic.com/download-audio/31985/\nFull notes and credits https://veda.ng/viz-notes/22.txt",
+    "tags": [
+      "data visualization",
+      "export share"
+    ],
+    "scheduleDate": "2026-10-02",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Exports as a share of GDP, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/22.txt"
+  },
+  {
+    "id": "viz-yt-23",
+    "video": "scripts/viz-assets/videos/23-import-share-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/import-share.png",
+    "title": "Imports as a share of GDP | 2000-2024",
+    "description": "Imports relative to domestic output.\n\n2000-2024. Imports include gross flows, while GDP counts value added. The ratio can exceed 100%.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NE.IMP.GNFS.ZS\nMusic Good Morning by MaxKoMusic. https://www.chosic.com/download-audio/28682/\nFull notes and credits https://veda.ng/viz-notes/23.txt",
+    "tags": [
+      "data visualization",
+      "import share"
+    ],
+    "scheduleDate": "2026-10-02",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Imports as a share of GDP, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/23.txt"
+  },
+  {
+    "id": "viz-yt-24",
+    "video": "scripts/viz-assets/videos/24-industry-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/industry.png",
+    "title": "Industrial value added | 2000-2024",
+    "description": "Industry's contribution to economic output.\n\n2000-2024. This measure includes construction, mining, utilities and manufacturing, in current US dollars.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NV.IND.TOTL.CD\nMusic Perfection by MaxKoMusic. https://www.chosic.com/download-audio/45442/\nFull notes and credits https://veda.ng/viz-notes/24.txt",
+    "tags": [
+      "data visualization",
+      "industry"
+    ],
+    "scheduleDate": "2026-10-02",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Industrial value added, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/24.txt"
+  },
+  {
+    "id": "viz-yt-25",
+    "video": "scripts/viz-assets/videos/25-manufacturing-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/manufacturing.png",
+    "title": "Manufacturing value added | 2000-2024",
+    "description": "Manufacturing output after subtracting intermediate inputs.\n\n2000-2024. The chart uses current US dollars, so prices and exchange rates affect the totals.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NV.IND.MANF.CD\nMusic Cutting Edge by Shane Ivers. https://www.chosic.com/download-audio/27275/\nFull notes and credits https://veda.ng/viz-notes/25.txt",
+    "tags": [
+      "data visualization",
+      "manufacturing"
+    ],
+    "scheduleDate": "2026-10-03",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Manufacturing value added, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/25.txt"
+  },
+  {
+    "id": "viz-yt-26",
+    "video": "scripts/viz-assets/videos/26-health-spending-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/health-spending.png",
+    "title": "Health spending as a share of GDP | 2000-2023",
+    "description": "How much of the economy goes to current healthcare spending.\n\n2000-2023. A high spending share alone says little about access, efficiency or health outcomes.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS\nMusic Spark Of Inspiration by Shane Ivers. https://www.chosic.com/download-audio/27274/\nFull notes and credits https://veda.ng/viz-notes/26.txt",
+    "tags": [
+      "data visualization",
+      "health spending"
+    ],
+    "scheduleDate": "2026-10-03",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Health spending as a share of GDP, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/26.txt"
+  },
+  {
+    "id": "viz-yt-27",
+    "video": "scripts/viz-assets/videos/27-services-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/services.png",
+    "title": "Services value added | 2000-2024",
+    "description": "The services sector's contribution to output.\n\n2000-2024. The totals use current US dollars and reflect prices and exchange rates.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/NV.SRV.TOTL.CD\nMusic Inspire by Wavecont. https://www.chosic.com/download-audio/27970/\nFull notes and credits https://veda.ng/viz-notes/27.txt",
+    "tags": [
+      "data visualization",
+      "services"
+    ],
+    "scheduleDate": "2026-10-03",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Services value added, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/27.txt"
+  },
+  {
+    "id": "viz-yt-28",
+    "video": "scripts/viz-assets/videos/28-remittances-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/remittances.png",
+    "title": "Remittances received | 2000-2024",
+    "description": "Money reaching home through personal remittances.\n\n2000-2024. The World Bank measure combines personal transfers and compensation of employees.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT\nMusic One Love - Emotional Piano + Strings by Keys of Moon. https://www.chosic.com/download-audio/27977/\nFull notes and credits https://veda.ng/viz-notes/28.txt",
+    "tags": [
+      "data visualization",
+      "remittances"
+    ],
+    "scheduleDate": "2026-10-04",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Remittances received, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/28.txt"
+  },
+  {
+    "id": "viz-yt-29",
+    "video": "scripts/viz-assets/videos/29-reserves-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/reserves.png",
+    "title": "Total reserves | 2000-2024",
+    "description": "Official reserves, including gold.\n\n2000-2024. Current-dollar values can change with gold prices and exchange rates as well as reserve holdings.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/FI.RES.TOTL.CD\nMusic Immense by Keys of Moon. https://www.chosic.com/download-audio/45424/\nFull notes and credits https://veda.ng/viz-notes/29.txt",
+    "tags": [
+      "data visualization",
+      "reserves"
+    ],
+    "scheduleDate": "2026-10-04",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Total reserves, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/29.txt"
+  },
+  {
+    "id": "viz-yt-30",
+    "video": "scripts/viz-assets/videos/30-unemployment-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/unemployment.png",
+    "title": "Unemployment rates | 2000-2024",
+    "description": "People without work who are available and looking for it.\n\n2000-2024. ILO modelled estimates measure unemployment as a share of the labour force.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS\nMusic Heartbreaking by Kevin MacLeod. https://www.chosic.com/download-audio/29437/\nFull notes and credits https://veda.ng/viz-notes/30.txt",
+    "tags": [
+      "data visualization",
+      "unemployment"
+    ],
+    "scheduleDate": "2026-10-04",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Unemployment rates, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/30.txt"
+  },
+  {
+    "id": "viz-yt-31",
+    "video": "scripts/viz-assets/videos/31-air-travel-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/air-travel.png",
+    "title": "Air passengers carried | 2000-2023",
+    "description": "Passenger journeys carried by registered airlines.\n\n2000-2023. This airline-based measure differs from the number of passengers passing through a country's airports.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IS.AIR.PSGR\nMusic Journey by Roa. https://www.chosic.com/download-audio/45480/\nFull notes and credits https://veda.ng/viz-notes/31.txt",
+    "tags": [
+      "data visualization",
+      "air travel"
+    ],
+    "scheduleDate": "2026-10-05",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Air passengers carried, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/31.txt"
+  },
+  {
+    "id": "viz-yt-32",
+    "video": "scripts/viz-assets/videos/32-container-ports-2010-2020.mp4",
+    "thumbnail": "scripts/viz-assets/previews/container-ports.png",
+    "title": "Container port traffic | 2010-2020",
+    "description": "Container traffic through ports.\n\n2010-2020. Traffic is measured in twenty-foot-equivalent units. A forty-foot container counts as two.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IS.SHP.GOOD.TU\nMusic Last Hero by Alex-Productions. https://www.chosic.com/download-audio/54081/\nFull notes and credits https://veda.ng/viz-notes/32.txt",
+    "tags": [
+      "data visualization",
+      "container ports"
+    ],
+    "scheduleDate": "2026-10-05",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Container port traffic, 2010-2020. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/32.txt"
+  },
+  {
+    "id": "viz-yt-33",
+    "video": "scripts/viz-assets/videos/33-rail-freight-2000-2011.mp4",
+    "thumbnail": "scripts/viz-assets/previews/rail-freight.png",
+    "title": "Rail freight | 2000-2011",
+    "description": "Goods moved by rail, weighted by distance.\n\n2000-2011. A tonne carried 100 kilometres contributes 100 tonne-kilometres to the total.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IS.RRS.GOOD.MT.K6\nMusic Under The Sun by Keys of Moon. https://www.chosic.com/download-audio/45427/\nFull notes and credits https://veda.ng/viz-notes/33.txt",
+    "tags": [
+      "data visualization",
+      "rail freight"
+    ],
+    "scheduleDate": "2026-10-05",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Rail freight, 2000-2011. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/33.txt"
+  },
+  {
+    "id": "viz-yt-34",
+    "video": "scripts/viz-assets/videos/34-rail-travel-2000-2012.mp4",
+    "thumbnail": "scripts/viz-assets/previews/rail-travel.png",
+    "title": "Rail passenger travel | 2000-2012",
+    "description": "Rail journeys measured by distance travelled.\n\n2000-2012. Passenger-kilometres count both how many people travel and how far they go.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IS.RRS.PASG.KM\nMusic Wanderlust by Scott Buckley. https://www.chosic.com/download-audio/27022/\nFull notes and credits https://veda.ng/viz-notes/34.txt",
+    "tags": [
+      "data visualization",
+      "rail travel"
+    ],
+    "scheduleDate": "2026-10-06",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Rail passenger travel, 2000-2012. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/34.txt"
+  },
+  {
+    "id": "viz-yt-35",
+    "video": "scripts/viz-assets/videos/35-electricity-access-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/electricity-access.png",
+    "title": "Access to electricity | 2000-2024",
+    "description": "The share of people with electricity access.\n\n2000-2024. An access connection does not tell us how reliable or affordable the supply is.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS\nMusic Lights by Sappheiros. https://www.chosic.com/download-audio/28378/\nFull notes and credits https://veda.ng/viz-notes/35.txt",
+    "tags": [
+      "data visualization",
+      "electricity access"
+    ],
+    "scheduleDate": "2026-10-06",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Access to electricity, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/35.txt"
+  },
+  {
+    "id": "viz-yt-36",
+    "video": "scripts/viz-assets/videos/36-clean-cooking-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/clean-cooking.png",
+    "title": "Clean cooking | 2000-2023",
+    "description": "The share of people mainly using clean cooking fuels.\n\n2000-2023. The measure covers cooking fuels and technologies; it excludes kerosene.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS\nMusic Spring Flowers by Keys of Moon. https://www.chosic.com/download-audio/30490/\nFull notes and credits https://veda.ng/viz-notes/36.txt",
+    "tags": [
+      "data visualization",
+      "clean cooking"
+    ],
+    "scheduleDate": "2026-10-06",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Clean cooking, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/36.txt"
+  },
+  {
+    "id": "viz-yt-37",
+    "video": "scripts/viz-assets/videos/37-renewable-power-2000-2021.mp4",
+    "thumbnail": "scripts/viz-assets/previews/renewable-power.png",
+    "title": "Renewable electricity share | 2000-2021",
+    "description": "The share of electricity generated from renewable sources.\n\n2000-2021. Hydropower counts as renewable here. The chart covers electricity output, not all energy use.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/EG.ELC.RNEW.ZS\nMusic Glow by Scott Buckley. https://www.chosic.com/download-audio/37435/\nFull notes and credits https://veda.ng/viz-notes/37.txt",
+    "tags": [
+      "data visualization",
+      "renewable power"
+    ],
+    "scheduleDate": "2026-10-07",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Renewable electricity share, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/37.txt"
+  },
+  {
+    "id": "viz-yt-38",
+    "video": "scripts/viz-assets/videos/38-hydropower-2000-2021.mp4",
+    "thumbnail": "scripts/viz-assets/previews/hydropower.png",
+    "title": "Hydropower share | 2000-2021",
+    "description": "How much electricity comes from water.\n\n2000-2021. A high share can reflect a small electricity system, as well as substantial hydro generation.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/EG.ELC.HYRO.ZS\nMusic Downpour by Keys of Moon. https://www.chosic.com/download-audio/58989/\nFull notes and credits https://veda.ng/viz-notes/38.txt",
+    "tags": [
+      "data visualization",
+      "hydropower"
+    ],
+    "scheduleDate": "2026-10-07",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Hydropower share, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/38.txt"
+  },
+  {
+    "id": "viz-yt-39",
+    "video": "scripts/viz-assets/videos/39-nuclear-power-2000-2021.mp4",
+    "thumbnail": "scripts/viz-assets/previews/nuclear-power.png",
+    "title": "Nuclear electricity share | 2000-2021",
+    "description": "The share of electricity generated by nuclear plants.\n\n2000-2021. This compares nuclear's share of electricity output, rather than the number of reactors.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/EG.ELC.NUCL.ZS\nMusic The Legend Of Narmer by WombatNoisesAudio. https://www.chosic.com/download-audio/27890/\nFull notes and credits https://veda.ng/viz-notes/39.txt",
+    "tags": [
+      "data visualization",
+      "nuclear power"
+    ],
+    "scheduleDate": "2026-10-07",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Nuclear electricity share, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/39.txt"
+  },
+  {
+    "id": "viz-yt-40",
+    "video": "scripts/viz-assets/videos/40-energy-intensity-2000-2021.mp4",
+    "thumbnail": "scripts/viz-assets/previews/energy-intensity.png",
+    "title": "Energy use per unit of GDP | 2000-2021",
+    "description": "How much primary energy each unit of output requires.\n\n2000-2021. Higher values mean greater energy use per unit of GDP, measured at 2021 purchasing-power parity.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/EG.EGY.PRIM.PP.KD\nMusic Ibn Al-Noor by Kevin MacLeod. https://www.chosic.com/download-audio/27892/\nFull notes and credits https://veda.ng/viz-notes/40.txt",
+    "tags": [
+      "data visualization",
+      "energy intensity"
+    ],
+    "scheduleDate": "2026-10-08",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Energy use per unit of GDP, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/40.txt"
+  },
+  {
+    "id": "viz-yt-41",
+    "video": "scripts/viz-assets/videos/41-forest-area-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/forest-area.png",
+    "title": "Forest area | 2000-2023",
+    "description": "Forest area in square kilometres.\n\n2000-2023. This measures total area. Forest condition and biodiversity need separate measures.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/AG.LND.FRST.K2\nMusic Autumn Scene by Keys of Moon. https://www.chosic.com/download-audio/30496/\nFull notes and credits https://veda.ng/viz-notes/41.txt",
+    "tags": [
+      "data visualization",
+      "forest area"
+    ],
+    "scheduleDate": "2026-10-08",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Forest area, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/41.txt"
+  },
+  {
+    "id": "viz-yt-42",
+    "video": "scripts/viz-assets/videos/42-agricultural-land-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/agricultural-land.png",
+    "title": "Agricultural land | 2000-2023",
+    "description": "Land used for agriculture.\n\n2000-2023. The measure includes arable land, permanent crops and permanent meadows and pastures.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/AG.LND.AGRI.K2\nMusic Folk Arabian by PeriTune. https://www.chosic.com/download-audio/25810/\nFull notes and credits https://veda.ng/viz-notes/42.txt",
+    "tags": [
+      "data visualization",
+      "agricultural land"
+    ],
+    "scheduleDate": "2026-10-08",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Agricultural land, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/42.txt"
+  },
+  {
+    "id": "viz-yt-43",
+    "video": "scripts/viz-assets/videos/43-cereal-production-2000-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/cereal-production.png",
+    "title": "Cereal production | 2000-2023",
+    "description": "Cereal harvests measured in tonnes.\n\n2000-2023. Total production depends on both the area harvested and the yield per hectare.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/AG.PRD.CREL.MT\nMusic Desert Caravan by Aaron Kenny. https://www.chosic.com/download-audio/27897/\nFull notes and credits https://veda.ng/viz-notes/43.txt",
+    "tags": [
+      "data visualization",
+      "cereal production"
+    ],
+    "scheduleDate": "2026-10-09",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Cereal production, 2000-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/43.txt"
+  },
+  {
+    "id": "viz-yt-44",
+    "video": "scripts/viz-assets/videos/44-coal-electricity-2000-2021.mp4",
+    "thumbnail": "scripts/viz-assets/previews/coal-electricity.png",
+    "title": "Coal electricity share | 2000-2021",
+    "description": "The share of electricity generated from coal.\n\n2000-2021. The chart compares coal's share of electricity output, rather than total coal consumption.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/EG.ELC.COAL.ZS\nMusic Sovereign by Kevin MacLeod. https://www.chosic.com/download-audio/44168/\nFull notes and credits https://veda.ng/viz-notes/44.txt",
+    "tags": [
+      "data visualization",
+      "coal electricity"
+    ],
+    "scheduleDate": "2026-10-09",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Coal electricity share, 2000-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/44.txt"
+  },
+  {
+    "id": "viz-yt-45",
+    "video": "scripts/viz-assets/videos/45-capture-fisheries-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/capture-fisheries.png",
+    "title": "Capture fisheries | 2000-2024",
+    "description": "Wild fish catches measured in tonnes.\n\n2000-2024. Capture production covers inland and marine catches; farmed production has its own series.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/ER.FSH.CAPT.MT\nMusic Summer Madness by Roa. https://www.chosic.com/download-audio/38441/\nFull notes and credits https://veda.ng/viz-notes/45.txt",
+    "tags": [
+      "data visualization",
+      "capture fisheries"
+    ],
+    "scheduleDate": "2026-10-09",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Capture fisheries, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/45.txt"
+  },
+  {
+    "id": "viz-yt-46",
+    "video": "scripts/viz-assets/videos/46-aquaculture-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/aquaculture.png",
+    "title": "Aquaculture production | 2000-2024",
+    "description": "Farmed aquatic production, year by year.\n\n2000-2024. Aquaculture covers cultivated aquatic organisms, including fish, shellfish and aquatic plants.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/ER.FSH.AQUA.MT\nMusic Haru by Roa. https://www.chosic.com/download-audio/58959/\nFull notes and credits https://veda.ng/viz-notes/46.txt",
+    "tags": [
+      "data visualization",
+      "aquaculture"
+    ],
+    "scheduleDate": "2026-10-10",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Aquaculture production, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/46.txt"
+  },
+  {
+    "id": "viz-yt-47",
+    "video": "scripts/viz-assets/videos/47-research-spending-2001-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/research-spending.png",
+    "title": "R&D spending as a share of GDP | 2001-2023",
+    "description": "Research spending relative to the size of the economy.\n\n2001-2023. A high R&D share can coexist with a smaller research budget in absolute terms.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS\nMusic Motivate by Wavecont. https://www.chosic.com/download-audio/27966/\nFull notes and credits https://veda.ng/viz-notes/47.txt",
+    "tags": [
+      "data visualization",
+      "research spending"
+    ],
+    "scheduleDate": "2026-10-10",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "R&D spending as a share of GDP, 2001-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/47.txt"
+  },
+  {
+    "id": "viz-yt-48",
+    "video": "scripts/viz-assets/videos/48-patents-2010-2021.mp4",
+    "thumbnail": "scripts/viz-assets/previews/patents.png",
+    "title": "Resident patent applications | 2010-2021",
+    "description": "Patent applications filed by residents.\n\n2010-2021. Application counts measure filings, rather than granted patents or the value of inventions.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/IP.PAT.RESD\nMusic In Dreams by Scott Buckley. https://www.chosic.com/download-audio/27021/\nFull notes and credits https://veda.ng/viz-notes/48.txt",
+    "tags": [
+      "data visualization",
+      "patents"
+    ],
+    "scheduleDate": "2026-10-10",
+    "scheduleTime": "20:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Resident patent applications, 2010-2021. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/48.txt"
+  },
+  {
+    "id": "viz-yt-49",
+    "video": "scripts/viz-assets/videos/49-researchers-2007-2023.mp4",
+    "thumbnail": "scripts/viz-assets/previews/researchers.png",
+    "title": "Researchers per million people | 2007-2023",
+    "description": "Research staffing relative to population.\n\n2007-2023. The chart compares the number of R&D researchers with population size.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.POP.SCIE.RD.P6\nMusic Moonlight by Scott Buckley. https://www.chosic.com/download-audio/45496/\nFull notes and credits https://veda.ng/viz-notes/49.txt",
+    "tags": [
+      "data visualization",
+      "researchers"
+    ],
+    "scheduleDate": "2026-10-11",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Researchers per million people, 2007-2023. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/49.txt"
+  },
+  {
+    "id": "viz-yt-50",
+    "video": "scripts/viz-assets/videos/50-labour-force-2000-2024.mp4",
+    "thumbnail": "scripts/viz-assets/previews/labour-force.png",
+    "title": "Labour force | 2000-2024",
+    "description": "People working or available and looking for work.\n\n2000-2024. The labour force includes both employed and unemployed people.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SL.TLF.TOTL.IN\nMusic Sweet Dreams by BatchBug. https://www.chosic.com/download-audio/26757/\nFull notes and credits https://veda.ng/viz-notes/50.txt",
+    "tags": [
+      "data visualization",
+      "labour force"
+    ],
+    "scheduleDate": "2026-10-11",
+    "scheduleTime": "14:00",
+    "posted": false,
+    "postedAt": null,
+    "videoId": null,
+    "error": null,
+    "altText": "Labour force, 2000-2024. Ten highest reported values each year.",
+    "notesUrl": "https://veda.ng/viz-notes/50.txt"
+  }
+]
