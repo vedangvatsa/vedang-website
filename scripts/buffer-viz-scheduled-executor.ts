@@ -60,7 +60,14 @@ export function chooseChannel(service: string, envName: string, available: any[]
 }
 
 export function buildInput(service: string, entry: VizPost, channelId: string, videoUrl: string) {
-  const text = service === 'youtube' ? entry.description : entry.text || entry.title;
+  let text = service === 'youtube' ? entry.description : entry.text || entry.title;
+  if (text && entry.notesUrl && process.env.VIZ_NOTES_BASE_URL) {
+    const original = new URL(String(entry.notesUrl));
+    const base = new URL(process.env.VIZ_NOTES_BASE_URL);
+    if (base.protocol !== 'https:' || !/^\/viz-notes\/\d{2}\.txt$/.test(original.pathname)) throw new Error('Invalid public notes URL configuration');
+    const notes = `${base.href.replace(/\/$/, '')}${original.pathname}`;
+    text = text.replaceAll(String(entry.notesUrl), notes);
+  }
   const limit = service === 'youtube' ? 5000 : 2200;
   if (!text || Array.from(text).length > limit) throw new Error(`${entry.id} caption missing or over ${limit} characters`);
   validateCaption(service, text);
@@ -134,6 +141,7 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
   const url = publicVideoUrl(post);
   await checkPublicVideo(url);
   const input = buildInput(platform.service, post, channel.id, url);
+  post.publishedText = input.text;
   // Persist before the mutation. An ambiguous response must never cause an automatic duplicate.
   post.state = 'publishing';
   post.attemptedSlot = slot;

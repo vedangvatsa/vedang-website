@@ -30,6 +30,7 @@ jobs:
       SMM_BOOST_ENABLED: 'false'
       DRY_RUN: ${{ inputs.mode == 'dry-run' && '1' || '0' }}
       VIZ_MEDIA_BASE_URL: ${{ vars.VIZ_MEDIA_BASE_URL }}
+      VIZ_NOTES_BASE_URL: ${{ vars.VIZ_NOTES_BASE_URL }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
       BUFFER_YOUTUBE_CHANNEL_ID: ${{ secrets.BUFFER_YOUTUBE_CHANNEL_ID }}
       BUFFER_INSTAGRAM_CHANNEL_ID: ${{ secrets.BUFFER_INSTAGRAM_CHANNEL_ID }}
@@ -77,6 +78,10 @@ jobs:
       - name: Read-only account preflight
         if: inputs.mode == 'preflight'
         run: npx tsx scripts/viz-platform-preflight.ts --only=buffer
+
+      - name: Verify public launch media and credit links
+        if: inputs.mode == 'preflight'
+        run: npx tsx scripts/verify-buffer-launch.ts --all
 
       - name: Publish due videos immediately through Buffer
         if: inputs.mode != 'preflight'

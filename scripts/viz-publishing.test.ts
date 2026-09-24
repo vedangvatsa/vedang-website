@@ -31,6 +31,19 @@ test('IST boundary and repeated runs permit one publication per campaign slot', 
   assert.equal(selectDue(posts, new Date('2026-09-25T08:30:00Z')).post?.id, 'two');
 });
 
+test('Buffer captions can link directly to hosted notes when the website deployment is unavailable', () => {
+  const old = process.env.VIZ_NOTES_BASE_URL;
+  process.env.VIZ_NOTES_BASE_URL = 'https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public';
+  const p = { ...entry('one'), notesUrl: 'https://veda.ng/viz-notes/01.txt', description: 'Population. Credits https://veda.ng/viz-notes/01.txt' };
+  try {
+    const input = buildInput('youtube', p, 'channel', 'https://cdn.example/video.mp4');
+    assert.ok(input.text.includes('https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/viz-notes/01.txt'));
+    assert.ok(!input.text.includes('https://veda.ng/viz-notes/'));
+  } finally {
+    if (old) process.env.VIZ_NOTES_BASE_URL = old; else delete process.env.VIZ_NOTES_BASE_URL;
+  }
+});
+
 test('late runs take oldest due entry but do not drain backlog; backlog continues after final date', () => {
   const posts = [entry('one'), entry('two', '14:00'), entry('three', '20:00')];
   const due = selectDue(posts, new Date('2026-09-26T08:30:00Z'));
