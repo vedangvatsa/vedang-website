@@ -5,8 +5,8 @@
     "title": "Population, 2000-2024.\nHow the largest populations changed.\n\nWorld Bank data. Ten highest reported values; coverage varies.\nAnimation fills the gaps between annual figures.\nMusic 'Ascension' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au/\nhttps://creativecommons.org/licenses/by/4.0/\n30-second excerpt with fades and adjusted loudness.\nNotes and credits https://veda.ng/viz-notes/01.txt",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T05:08:41.250Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/01-population-2000-2024.mp4",
@@ -16,7 +16,14 @@
       "population"
     ],
     "altText": "Population, 2000-2024. Ten highest reported values each year.",
-    "notesUrl": "https://veda.ng/viz-notes/01.txt"
+    "notesUrl": "https://veda.ng/viz-notes/01.txt",
+    "publishedText": "Population, 2000-2024.\nHow the largest populations changed.\n\nWorld Bank data. Ten highest reported values; coverage varies.\nAnimation fills the gaps between annual figures.\nMusic 'Ascension' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au/\nhttps://creativecommons.org/licenses/by/4.0/\n30-second excerpt with fades and adjusted loudness.\nNotes and credits https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/viz-notes/01.txt",
+    "state": "sent",
+    "attemptedSlot": "2026-09-25T09:00",
+    "attemptedAt": "2026-09-25T05:06:57.321Z",
+    "bufferPostId": "6ab601714be5473030a58887",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7689335017843068180"
   },
   {
     "id": "viz-tt-02",

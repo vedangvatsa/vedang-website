@@ -6,8 +6,8 @@
     "cover": "scripts/viz-assets/previews/population.png",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T05:07:54.707Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -15,7 +15,14 @@
       "population"
     ],
     "altText": "Population, 2000-2024. Ten highest reported values each year.",
-    "notesUrl": "https://veda.ng/viz-notes/01.txt"
+    "notesUrl": "https://veda.ng/viz-notes/01.txt",
+    "publishedText": "How the largest populations changed.\n2000-2024 in 30 seconds.\n\nThe totals count residents, regardless of citizenship.\n\nWorld Bank data. Ten highest reported values each year. Coverage varies.\nAnimation fills the gaps between annual figures.\nMusic 'Ascension' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au/\nhttps://creativecommons.org/licenses/by/4.0/\n30-second excerpt with fades and adjusted loudness.\nFull notes and credits https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/viz-notes/01.txt",
+    "state": "sent",
+    "attemptedSlot": "2026-09-25T09:00",
+    "attemptedAt": "2026-09-25T05:06:57.304Z",
+    "bufferPostId": "6ab60171a14029bcc723bbe0",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Ddsq8wkiWLl/"
   },
   {
     "id": "viz-ig-02",

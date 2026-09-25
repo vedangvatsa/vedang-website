@@ -11,12 +11,19 @@
     ],
     "scheduleDate": "2026-09-25",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T05:06:59.147Z",
     "videoId": null,
     "error": null,
     "altText": "Population, 2000-2024. Ten highest reported values each year.",
-    "notesUrl": "https://veda.ng/viz-notes/01.txt"
+    "notesUrl": "https://veda.ng/viz-notes/01.txt",
+    "publishedText": "How the largest populations changed.\n\n2000-2024. The totals count residents, regardless of citizenship.\nTen highest reported values each year. Coverage varies. Animation fills the gaps between annual figures.\n\nWorld Bank data https://data.worldbank.org/indicator/SP.POP.TOTL\nMusic 'Ascension' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au/\nhttps://creativecommons.org/licenses/by/4.0/\n30-second excerpt with fades and adjusted loudness.\nFull notes and credits https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/viz-notes/01.txt",
+    "state": "sent",
+    "attemptedSlot": "2026-09-25T09:00",
+    "attemptedAt": "2026-09-25T05:06:57.335Z",
+    "bufferPostId": "6ab60171a14029bcc723bbec",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=mv-wbdAb8C8"
   },
   {
     "id": "viz-yt-02",
