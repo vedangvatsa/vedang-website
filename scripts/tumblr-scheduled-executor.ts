@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import OAuth from 'oauth';
+import MultipartFormData from 'form-data';
 import { isMain } from './viz-publishing.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -96,19 +97,20 @@ async function publishPost(post: TumblrPost): Promise<string> {
 
 export async function publishVideo(videoPath: string, text: string, tags: string[]): Promise<string> {
   const url = `https://api.tumblr.com/v2/blog/${encodeURIComponent(BLOG_NAME)}/posts`;
-  const form = new FormData();
+  const form = new MultipartFormData();
   const content = [
     { type: 'video', media: { type: 'video/mp4', identifier: 'video', width: 1080, height: 1920 } },
     ...text.split('\n\n').map(text => ({ type: 'text', text })),
   ];
-  form.append('json', new Blob([JSON.stringify({ content, tags: tags.join(','), state: 'published' })], { type: 'application/json' }));
-  form.append('video', new Blob([fs.readFileSync(videoPath)], { type: 'video/mp4' }), path.basename(videoPath));
+  // Tumblr expects a JSON form field, not a file named "blob" for that field.
+  form.append('json', JSON.stringify({ content, tags: tags.join(','), state: 'published' }), { contentType: 'application/json' });
+  form.append('video', fs.readFileSync(videoPath), { contentType: 'video/mp4', filename: path.basename(videoPath) });
   const auth = createOAuth().authHeader(url, ACCESS_TOKEN, ACCESS_SECRET, 'POST');
   const res = await fetch(url, {
-    method: 'POST', headers: { Authorization: auth, 'User-Agent': 'VedangViz/1.0 (https://veda.ng)' }, body: form,
+    method: 'POST', headers: { ...form.getHeaders(), Authorization: auth, 'User-Agent': 'VedangViz/1.0 (https://veda.ng)' }, body: new Uint8Array(form.getBuffer()),
   });
-  if (!res.ok) throw new Error(`Tumblr video HTTP ${res.status}`);
   const data = await res.json() as any;
+  if (!res.ok) throw new Error(`Tumblr video HTTP ${res.status}: ${data.meta?.msg || ''} ${JSON.stringify(data.errors || []).slice(0, 400)}`);
   if (typeof data.response?.id !== 'string') throw new Error('Tumblr returned no string post ID');
   return data.response.id;
 }

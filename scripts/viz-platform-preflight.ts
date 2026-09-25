@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import path from 'node:path';
 import { TwitterApi } from 'twitter-api-v2';
 import OAuth from 'oauth';
-import { ROOT, isMain } from './viz-publishing.js';
+import { ROOT, isMain, readQueue } from './viz-publishing.js';
 import { channels, chooseChannel, gql, buildInput, PLATFORMS, POST_FIELDS } from './buffer-viz-scheduled-executor.js';
 
 dotenv.config({ path: path.join(ROOT, '.env.local'), quiet: true });
@@ -30,7 +30,11 @@ async function json(url: string, init: RequestInit = {}) {
   const data = await res.json() as any;
   if (!res.ok) {
     // Do not print request URLs/headers, tokens, or arbitrary server bodies.
-    throw new Error(`HTTP ${res.status}${data.error?.code ? `, API code ${data.error.code}` : ''}`);
+    let message = String(data.error?.message || '').slice(0, 400);
+    for (const [key, value] of Object.entries(process.env)) {
+      if (/TOKEN|SECRET|PASSWORD|KEY/.test(key) && value && value.length > 8) message = message.replaceAll(value, '[redacted]');
+    }
+    throw new Error(`HTTP ${res.status}${data.error?.code ? `, API code ${data.error.code}` : ''}${message ? `: ${message}` : ''}`);
   }
   return data;
 }
@@ -60,6 +64,18 @@ export async function checkNative(platform: string) {
   if (platform === 'facebook') {
     const data = await json(`https://graph.facebook.com/v23.0/${e.FACEBOOK_PAGE_ID}?fields=id,name`, { headers: bearer(e.FACEBOOK_PAGE_TOKEN!) });
     if (data.id !== e.FACEBOOK_PAGE_ID) throw new Error('Facebook page identity mismatch');
+    const pending = readQueue(path.join(ROOT, 'scripts/viz-facebook-posts.json')).find(p => p.state === 'uncertain');
+    const videoId = pending?.error?.match(/Facebook video (\d+)/)?.[1];
+    if (videoId) {
+      try {
+        const video = await json(`https://graph.facebook.com/v23.0/${videoId}?fields=id,status,description,permalink_url`, { headers: bearer(e.FACEBOOK_PAGE_TOKEN!) });
+        console.log(`Facebook existing upload ${JSON.stringify({ id: video.id, status: video.status, permalink: video.permalink_url, captionMatches: video.description === pending?.text })}`);
+      } catch (err) {
+        console.log(`Facebook existing upload status lookup: ${(err as Error).message}`);
+        const video = await json(`https://graph.facebook.com/v23.0/${videoId}?fields=id,description,permalink_url,created_time`, { headers: bearer(e.FACEBOOK_PAGE_TOKEN!) });
+        console.log(`Facebook existing upload metadata ${JSON.stringify({ id: video.id, permalink: video.permalink_url, createdAt: video.created_time, captionMatches: video.description === pending?.text })}`);
+      }
+    }
     return 'page token accepted; video publishing permission not tested';
   }
   if (platform === 'threads') {
@@ -83,6 +99,13 @@ export async function checkNative(platform: string) {
     const blogs = JSON.parse(raw).response?.user?.blogs || [];
     const name = e.TUMBLR_BLOG_NAME!.replace(/\.tumblr\.com$/, '');
     if (!blogs.some((b: any) => b.name === name)) throw new Error('Tumblr target blog is not authorized');
+    const pending = readQueue(path.join(ROOT, 'scripts/viz-tumblr-posts.json')).find(p => p.state === 'uncertain');
+    if (pending) {
+      const recent = await new Promise<string>((resolve, reject) => oauth.get(`https://api.tumblr.com/v2/blog/${encodeURIComponent(e.TUMBLR_BLOG_NAME!)}/posts?limit=20&npf=true`, e.TUMBLR_ACCESS_TOKEN!, e.TUMBLR_ACCESS_SECRET!, (err: any, data: any) => err ? reject(new Error(`Tumblr recent posts HTTP ${err.statusCode}`)) : resolve(String(data))));
+      const posts = JSON.parse(recent).response?.posts || [];
+      const matches = posts.filter((p: any) => (p.content || []).filter((c: any) => c.type === 'text').map((c: any) => c.text).join('\n\n') === pending.text);
+      console.log(`Tumblr duplicate check ${JSON.stringify({ checked: posts.length, matches: matches.map((p: any) => ({ id: p.id_string || String(p.id), url: p.post_url })) })}`);
+    }
     return 'OAuth accepted and target blog authorized; video publishing not tested';
   }
 }

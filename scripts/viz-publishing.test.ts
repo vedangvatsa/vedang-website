@@ -243,12 +243,16 @@ test('Tumblr sends native NPF video multipart and preserves a 64-bit string ID',
   const { publishVideo } = await import('./tumblr-scheduled-executor.js');
   const original = globalThis.fetch;
   globalThis.fetch = async (_url, init: RequestInit = {}) => {
-    assert.ok(init.body instanceof FormData);
-    const data = JSON.parse(await (init.body.get('json') as Blob).text());
+    assert.ok(init.body instanceof Uint8Array);
+    const multipart = Buffer.from(init.body).toString('latin1');
+    assert.ok(multipart.includes('name="json"\r\nContent-Type: application/json'));
+    assert.ok(!multipart.includes('name="json"; filename='));
+    const data = JSON.parse(multipart.match(/name="json"\r\nContent-Type: application\/json\r\n\r\n([^\r]+)\r\n/)![1]);
     assert.equal(data.state, 'published');
     assert.equal(data.content[0].type, 'video');
     assert.equal(data.content[0].media.identifier, 'video');
-    assert.equal((init.body.get('video') as Blob).type, 'video/mp4');
+    assert.ok(multipart.includes('name="video"; filename="01-population-2000-2024.mp4"'));
+    assert.ok(multipart.includes('Content-Type: video/mp4'));
     return Response.json({ response: { id: '90071992547409931' } }, { status: 201 });
   };
   try { assert.equal(await publishVideo(path.join(ROOT, 'scripts/viz-assets/videos/01-population-2000-2024.mp4'), 'Test', ['data']), '90071992547409931'); }
