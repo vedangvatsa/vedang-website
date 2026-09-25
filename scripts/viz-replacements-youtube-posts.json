@@ -1,0 +1,25 @@
+[
+  {
+    "id": "viz-yt-01-caption-r1",
+    "video": "scripts/viz-assets/videos/01-population-2000-2024.mp4",
+    "title": "Population | 2000-2024",
+    "description": "How the largest populations changed.\n2000-2024 in 30 seconds.\n\nThe totals count residents, regardless of citizenship.\n\nWorld Bank data. Ten highest reported values each year.",
+    "captionStyle": "user-edited",
+    "scheduleDate": "2026-09-25",
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-09-25T09:29:22.021Z",
+    "error": null,
+    "reason": "User requested replacement with the caption retrieved from their edited Instagram post.",
+    "replacesBufferPostId": "6ab60171a14029bcc723bbec",
+    "originalPostUrl": "https://www.youtube.com/watch?v=mv-wbdAb8C8",
+    "originalDeletionConfirmedByUser": true,
+    "publishedText": "How the largest populations changed.\n2000-2024 in 30 seconds.\n\nThe totals count residents, regardless of citizenship.\n\nWorld Bank data. Ten highest reported values each year.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-25T00:00",
+    "attemptedAt": "2026-09-25T09:29:19.414Z",
+    "bufferPostId": "6ab63ef0cbe818dd4f00d33c",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=Ohyq-q-px18"
+  }
+]

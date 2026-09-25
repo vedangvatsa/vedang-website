@@ -10,18 +10,24 @@
         "url": "https://www.youtube.com/watch?v=mv-wbdAb8C8",
         "id": "mv-wbdAb8C8",
         "requestedAction": "delete_and_repost",
-        "originalDeletionConfirmed": false,
-        "status": "blocked",
-        "reason": "User authorized replacement if editing is unavailable. Buffer exposes neither edit nor delete for this sent post. Native account access or confirmed manual deletion is required before reposting."
+        "originalDeletionConfirmed": true,
+        "status": "reposted",
+        "replacementUrl": "https://www.youtube.com/watch?v=Ohyq-q-px18",
+        "replacementBufferPostId": "6ab63ef0cbe818dd4f00d33c",
+        "replacementQueue": "viz-replacements-youtube-posts.json",
+        "reason": "User confirmed both originals deleted. Repost with the exact edited Instagram caption."
       },
       {
         "platform": "tiktok",
         "url": "https://tiktok.com/@vedangvatsa/video/7689335017843068180",
         "id": "7689335017843068180",
         "requestedAction": "delete_and_repost",
-        "originalDeletionConfirmed": false,
-        "status": "blocked",
-        "reason": "User authorized replacement if editing is unavailable. Buffer exposes neither edit nor delete for this sent post. Native account access or confirmed manual deletion is required before reposting."
+        "originalDeletionConfirmed": true,
+        "status": "reposted",
+        "replacementUrl": "https://tiktok.com/@vedangvatsa/video/7689402619957087509",
+        "replacementBufferPostId": "6ab63ef08c95968bb033b266",
+        "replacementQueue": "viz-replacements-tiktok-posts.json",
+        "reason": "User confirmed both originals deleted. Repost with the exact edited Instagram caption."
       }
     ]
   }

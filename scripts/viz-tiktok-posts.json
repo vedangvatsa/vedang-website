@@ -1,6 +1,12 @@
 [
   {
     "id": "viz-tt-01",
+    "supersededBy": {
+      "queueFile": "viz-replacements-tiktok-posts.json",
+      "bufferPostId": "6ab63ef08c95968bb033b266",
+      "postUrl": "https://tiktok.com/@vedangvatsa/video/7689402619957087509",
+      "originalDeletionConfirmedByUser": true
+    },
     "videoPath": "scripts/viz-assets/videos/01-population-2000-2024.mp4",
     "title": "Population, 2000-2024.\nHow the largest populations changed.\n\nWorld Bank data. Ten highest reported values; coverage varies.\nAnimation fills the gaps between annual figures.\nMusic 'Ascension' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au/\nhttps://creativecommons.org/licenses/by/4.0/\n30-second excerpt with fades and adjusted loudness.\nNotes and credits https://veda.ng/viz-notes/01.txt",
     "scheduleDate": "2026-09-25",

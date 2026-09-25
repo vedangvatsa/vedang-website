@@ -1,6 +1,12 @@
 [
   {
     "id": "viz-yt-01",
+    "supersededBy": {
+      "queueFile": "viz-replacements-youtube-posts.json",
+      "bufferPostId": "6ab63ef0cbe818dd4f00d33c",
+      "postUrl": "https://www.youtube.com/watch?v=Ohyq-q-px18",
+      "originalDeletionConfirmedByUser": true
+    },
     "video": "scripts/viz-assets/videos/01-population-2000-2024.mp4",
     "thumbnail": "scripts/viz-assets/previews/population.png",
     "title": "Population | 2000-2024",
