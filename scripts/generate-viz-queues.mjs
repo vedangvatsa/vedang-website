@@ -125,7 +125,7 @@ videos.forEach((v, i) => {
     const prefix = { youtube: 'yt', instagram: 'ig', tiktok: 'tt' }[platform] || platform;
     queues[platform].push({
       id: `viz-${prefix}-${idNum}`, video: videoRel,
-      ...(['youtube', 'instagram', 'tiktok'].includes(platform) ? { captionStyle: 'concise-v1', sourceCredit: providerCredit, sourceOrganization: metadata.sourceOrganization } : {}),
+      captionStyle: 'concise-v1', sourceCredit: providerCredit, sourceOrganization: metadata.sourceOrganization,
       ...(platform === 'youtube' ? { title, description: captions[platform], thumbnail: previewRel } : { text: captions[platform] }),
       ...(platform === 'instagram' ? { cover: previewRel } : {}),
       ...(platform === 'tiktok' ? { title: captions[platform], videoPath: videoRel } : {}),

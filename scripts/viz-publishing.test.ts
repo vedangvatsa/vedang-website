@@ -9,6 +9,7 @@ import { runPlatform as runNative } from './native-viz-scheduled-executor.js';
 import { captionLength, validateCaption, validateConciseBufferCaption, conciseBufferCaption, LIMITS } from './viz-captions.mjs';
 import { needsBufferWork } from './viz-queue-time.mjs';
 import { sourceCredit } from './viz-source-credit.mjs';
+import { configuredDirectPlatforms, DIRECT_PLATFORMS } from './viz-platforms.mjs';
 
 const entry = (id: string, time = '09:00'): VizPost => ({ id, posted: false, scheduleDate: '2026-09-25', scheduleTime: time, title: 'Population', text: 'Population, 2000-2024.', description: 'Population, 2000-2024.' });
 
@@ -115,7 +116,7 @@ test('all captions fit their platform; future Buffer captions follow the approve
     for (const p of posts) {
       const text = platform === 'youtube' ? p.description : p.text;
       validateCaption(platform, text);
-      if (PLATFORMS.some(p => p.service === platform) && !p.posted) {
+      if (!p.posted) {
         assert.equal(p.captionStyle, 'concise-v1');
         validateConciseBufferCaption(text);
         assert.equal(p.sourceCredit, sourceCredit({ sourceOrganization: p.sourceOrganization }));
@@ -125,6 +126,13 @@ test('all captions fit their platform; future Buffer captions follow the approve
       assert.ok(fs.existsSync(path.join(ROOT, 'public', notes.pathname)));
     }
   }
+});
+
+test('direct publishing uses an explicit platform list and validates all selected names', () => {
+  assert.deepEqual(configuredDirectPlatforms(''), []);
+  assert.deepEqual(configuredDirectPlatforms('mastodon, bluesky, mastodon'), ['mastodon', 'bluesky']);
+  assert.deepEqual(configuredDirectPlatforms('all'), DIRECT_PLATFORMS);
+  assert.throws(() => configuredDirectPlatforms('youtube'), /Unknown direct platform/);
 });
 
 test('concise captions reproduce the requested sample without attribution or injected URLs', () => {

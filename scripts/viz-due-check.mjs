@@ -3,10 +3,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { needsBufferWork } from './viz-queue-time.mjs';
+import { BUFFER_PLATFORMS, configuredDirectPlatforms } from './viz-platforms.mjs';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 let needed = process.env.VIZ_FORCE_CHECKS === '1';
-for (const platform of ['youtube', 'instagram', 'tiktok']) {
+for (const platform of [...BUFFER_PLATFORMS, ...configuredDirectPlatforms()]) {
   const posts = JSON.parse(fs.readFileSync(path.join(directory, `viz-${platform}-posts.json`), 'utf8'));
   try {
     const due = needsBufferWork(posts);

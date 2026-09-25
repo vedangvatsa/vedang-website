@@ -90,6 +90,7 @@ export async function checkNative(platform: string) {
 export async function main() {
   let failures = 0;
   const only = process.argv.find(a => a.startsWith('--only='))?.slice(7);
+  if (only && only !== 'buffer' && only !== 'direct' && !(only in REQUIRED)) throw new Error(`Unknown preflight target ${only}`);
   if (!only || only === 'buffer') {
     try {
       const available = await channels();
@@ -107,7 +108,7 @@ export async function main() {
       }
     } catch (err) { failures++; console.error(`FAIL buffer: ${(err as Error).message}`); }
   }
-  for (const platform of Object.keys(REQUIRED).filter(p => !only || p === only)) {
+  for (const platform of Object.keys(REQUIRED).filter(p => !only || only === 'direct' || p === only)) {
     try { console.log(`PASS ${platform}: ${await checkNative(platform)}`); }
     catch (err) { failures++; console.error(`FAIL ${platform}: ${(err as Error).message}`); }
   }

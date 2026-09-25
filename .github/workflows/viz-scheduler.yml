@@ -1,4 +1,4 @@
-name: Data-Viz Videos (Instagram, YouTube, TikTok)
+name: Data-Viz Videos (Buffer + direct platforms)
 
 on:
   schedule:
@@ -15,7 +15,7 @@ on:
         options: [preflight, dry-run, publish]
         default: preflight
       include_direct:
-        description: Also run direct integrations (requires working platform credentials)
+        description: Also run enabled direct integrations; preflight checks all direct accounts
         type: boolean
         default: false
 
@@ -34,6 +34,7 @@ jobs:
       DRY_RUN: ${{ inputs.mode == 'dry-run' && '1' || '0' }}
       VIZ_MEDIA_BASE_URL: ${{ vars.VIZ_MEDIA_BASE_URL }}
       VIZ_NOTES_BASE_URL: ${{ vars.VIZ_NOTES_BASE_URL }}
+      VIZ_DIRECT_PLATFORMS: ${{ (github.event_name == 'schedule' || inputs.include_direct == true) && vars.VIZ_DIRECT_PLATFORMS || '' }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
       BUFFER_YOUTUBE_CHANNEL_ID: ${{ secrets.BUFFER_YOUTUBE_CHANNEL_ID }}
       BUFFER_INSTAGRAM_CHANNEL_ID: ${{ secrets.BUFFER_INSTAGRAM_CHANNEL_ID }}
@@ -68,6 +69,7 @@ jobs:
             /scripts/viz-*-posts.json
             /scripts/viz-due-check.mjs
             /scripts/viz-queue-time.mjs
+            /scripts/viz-platforms.mjs
 
       - name: Check whether video work is due
         id: due
@@ -104,6 +106,10 @@ jobs:
         if: steps.due.outputs.run == 'true' && inputs.mode == 'preflight'
         run: npx tsx scripts/verify-buffer-launch.ts --all
 
+      - name: Check all direct-platform credentials without posting
+        if: steps.due.outputs.run == 'true' && inputs.mode == 'preflight' && inputs.include_direct == true
+        run: npx tsx scripts/viz-platform-preflight.ts --only=direct
+
       - name: Publish due videos immediately through Buffer
         if: steps.due.outputs.run == 'true' && inputs.mode != 'preflight'
         id: buffer
@@ -111,7 +117,7 @@ jobs:
         run: npx tsx scripts/buffer-viz-scheduled-executor.ts
 
       - name: Publish due videos through direct integrations
-        if: steps.due.outputs.run == 'true' && inputs.mode != 'preflight' && inputs.include_direct == true
+        if: steps.due.outputs.run == 'true' && inputs.mode != 'preflight' && env.VIZ_DIRECT_PLATFORMS != ''
         id: native
         continue-on-error: true
         run: npx tsx scripts/native-viz-scheduled-executor.ts

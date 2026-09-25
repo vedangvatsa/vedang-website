@@ -35,32 +35,12 @@ export function validateConciseBufferCaption(text) {
 }
 
 export function makeCaptions({ copy, chart, number, music, conciseDescription, sourceCredit }) {
-  const [label, lead, context] = copy;
+  const [label, lead] = copy;
   const years = `${chart.startYear}-${chart.endYear}`;
   const notes = `https://veda.ng/viz-notes/${String(number).padStart(2, '0')}.txt`;
-  const source = `https://data.worldbank.org/indicator/${chart.indicator}`;
-  const shortNotes = `Data + music ${notes}`;
-  const coverage = 'Ten highest reported values each year. Coverage varies.';
-  const motion = 'Animation fills the gaps between annual figures.';
-  const credit = music.attribution
-    ? `Music ${music.attribution}\n${music.licenseUrl}\n30-second excerpt with fades and adjusted loudness.`
-    : `Music ${music.title.replace(/[—–]/g, '-')} by ${music.artist}. ${music.page_url}`;
-  const sourceLine = `World Bank data ${source}`;
   const concise = conciseBufferCaption(lead, conciseDescription, chart.startYear, chart.endYear, sourceCredit);
   validateConciseBufferCaption(concise);
-  const captions = {
-    youtube: concise,
-    instagram: concise,
-    tiktok: concise,
-    linkedin: `${lead}\n\n${context}\n\n${years}. ${coverage} ${motion}\n\n${sourceLine}\n${credit}\nFull notes and credits ${notes}`,
-    facebook: `${label} from ${chart.startYear} to ${chart.endYear}, in 30 seconds.\n\n${context}\n\n${coverage} ${motion}\n${sourceLine}\n${credit}\nNotes and credits ${notes}`,
-    threads: `${lead}\n\n${context}\n\n${years}. World Bank data; coverage varies.\n${shortNotes}`,
-    bluesky: `${label}, ${years}.\n${context}\n\nWorld Bank data.\n${shortNotes}`,
-    x: `${lead}\n${years}. World Bank data.\n\n${shortNotes}`,
-    tumblr: `${label} through ${years}.\n\n${context}\n${coverage} ${motion}\n\n${sourceLine}\n${credit}\nNotes and credits ${notes}`,
-    mastodon: `${label} (${years}).\n\n${context}\n\nTen highest reported values. Coverage varies; motion interpolates annual data.\n${sourceLine}\n${shortNotes}`,
-    farcaster: `${label}, ${years}, in 30 seconds.\n\n${context}\n\nWorld Bank data. ${coverage}\n${shortNotes}`,
-  };
+  const captions = Object.fromEntries(Object.keys(LIMITS).map(platform => [platform, concise]));
   for (const [platform, text] of Object.entries(captions)) validateCaption(platform, text);
   return { captions, title: `${label} | ${years}`, notes };
 }

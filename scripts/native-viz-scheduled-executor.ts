@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 import path from 'node:path';
 import { ROOT, isMain, readQueue, saveQueue, selectDue, localVideo, publicVideoUrl, checkPublicVideo, type VizPost } from './viz-publishing.js';
 import { REQUIRED, requireCredentials } from './viz-platform-preflight.js';
-import { validateCaption } from './viz-captions.mjs';
+import { validateCaption, validateConciseBufferCaption } from './viz-captions.mjs';
+import { configuredDirectPlatforms } from './viz-platforms.mjs';
 
 dotenv.config({ path: path.join(ROOT, '.env.local'), quiet: true });
 
@@ -68,6 +69,7 @@ export async function runPlatform(platform: string, dryRun: boolean) {
   if (!post) { console.log(`${platform}: nothing due`); return; }
   requireCredentials(platform);
   validateCaption(platform, post.text);
+  if (post.captionStyle === 'concise-v1') validateConciseBufferCaption(post.text);
   const video = localVideo(post);
   let url: string | undefined;
   if (['threads', 'farcaster'].includes(platform)) {
@@ -77,6 +79,7 @@ export async function runPlatform(platform: string, dryRun: boolean) {
   post.state = 'publishing';
   post.attemptedAt = new Date().toISOString();
   post.attemptedSlot = slot;
+  post.publishedText = post.text;
   saveQueue(file, posts);
   try {
     const id = await publish(platform, post, video, url);
@@ -99,7 +102,9 @@ export async function main() {
   const only = process.argv.find(a => a.startsWith('--only='))?.slice(7);
   if (only && !(only in REQUIRED)) throw new Error(`Unknown platform ${only}`);
   let failures = 0;
-  for (const platform of Object.keys(REQUIRED).filter(p => !only || p === only)) {
+  const selected = only ? [only] : configuredDirectPlatforms();
+  if (!selected.length) console.log('No direct platforms enabled; set VIZ_DIRECT_PLATFORMS or pass --only=platform');
+  for (const platform of selected) {
     try { await runPlatform(platform, process.env.DRY_RUN === '1'); }
     catch (err) { failures++; console.error(`${platform}: ${(err as Error).message}`); }
   }
