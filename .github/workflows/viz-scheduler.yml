@@ -4,6 +4,9 @@ on:
   schedule:
     # 09:00, 14:00, 20:00 IST (3 runs/day, one video per platform per run)
     - cron: "30 3,8,14 * * *"
+    # Catch-up checks if a slot trigger is delayed/dropped. Queue logic still limits
+    # publication to one video per platform per slot; GitHub cron is best-effort.
+    - cron: "7,17,27,37,47,57 * * * *"
   workflow_dispatch:
     inputs:
       mode:
@@ -60,43 +63,61 @@ jobs:
       - uses: actions/checkout@v5
         with:
           ref: main
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/viz-*-posts.json
+            /scripts/viz-due-check.mjs
+            /scripts/viz-queue-time.mjs
+
+      - name: Check whether video work is due
+        id: due
+        run: node scripts/viz-due-check.mjs
+        env:
+          VIZ_FORCE_CHECKS: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+
+      - name: Load publishing code and media
+        if: steps.due.outputs.run == 'true'
+        run: git sparse-checkout disable
 
       - name: Setup Node.js
+        if: steps.due.outputs.run == 'true'
         uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
+        if: steps.due.outputs.run == 'true'
         run: |
           npm ci
           npm ci --prefix scripts
 
       - name: Validate publishing logic and all captions offline
+        if: steps.due.outputs.run == 'true'
         run: npx tsx --test scripts/viz-publishing.test.ts
 
       - name: Read-only account preflight
-        if: inputs.mode == 'preflight'
+        if: steps.due.outputs.run == 'true' && inputs.mode == 'preflight'
         run: npx tsx scripts/viz-platform-preflight.ts --only=buffer
 
       - name: Verify public launch media and credit links
-        if: inputs.mode == 'preflight'
+        if: steps.due.outputs.run == 'true' && inputs.mode == 'preflight'
         run: npx tsx scripts/verify-buffer-launch.ts --all
 
       - name: Publish due videos immediately through Buffer
-        if: inputs.mode != 'preflight'
+        if: steps.due.outputs.run == 'true' && inputs.mode != 'preflight'
         id: buffer
         continue-on-error: true
         run: npx tsx scripts/buffer-viz-scheduled-executor.ts
 
       - name: Publish due videos through direct integrations
-        if: inputs.mode != 'preflight' && inputs.include_direct == true
+        if: steps.due.outputs.run == 'true' && inputs.mode != 'preflight' && inputs.include_direct == true
         id: native
         continue-on-error: true
         run: npx tsx scripts/native-viz-scheduled-executor.ts
 
       - name: Preserve queue receipts for recovery
-        if: always() && inputs.mode != 'preflight'
+        if: always() && steps.due.outputs.run == 'true' && inputs.mode != 'preflight'
         uses: actions/upload-artifact@v4
         with:
           name: viz-queue-receipts-${{ github.run_id }}-${{ github.run_attempt }}
@@ -104,17 +125,12 @@ jobs:
           retention-days: 90
 
       - name: Commit updated viz queues
-        if: always() && inputs.mode != 'preflight' && inputs.mode != 'dry-run'
+        if: always() && steps.due.outputs.run == 'true' && inputs.mode != 'preflight' && inputs.mode != 'dry-run'
         id: queues
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Automated: viz video queue status updated [skip ci]"
           file_pattern: "scripts/viz-*-posts.json"
-          skip_push: true
-
-      - name: Rebase and persist receipts
-        if: always() && steps.queues.outputs.changes_detected == 'true'
-        run: git pull --rebase origin main && git push origin HEAD:main
 
       - name: Report publishing failures
         if: always() && (steps.buffer.outcome == 'failure' || steps.native.outcome == 'failure')

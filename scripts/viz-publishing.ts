@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { selectDuePost } from './viz-queue-time.mjs';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export type VizPost = {
@@ -43,24 +44,7 @@ export function saveQueue(file: string, posts: VizPost[]) {
 
 // Repeated/manual runs in a campaign slot must not drain the backlog.
 export function selectDue(posts: VizPost[], now = new Date()): { post?: VizPost; slot?: string } {
-  const due = posts.filter(p => Date.parse(`${p.scheduleDate}T${p.scheduleTime}:00+05:30`) <= now.getTime())
-    .sort((a, b) => `${a.scheduleDate} ${a.scheduleTime}`.localeCompare(`${b.scheduleDate} ${b.scheduleTime}`));
-  const latest = due.at(-1);
-  if (!latest) return {};
-  const ist = new Date(now.getTime() + 5.5 * 3600000);
-  let day = ist.toISOString().slice(0, 10);
-  const time = ist.toISOString().slice(11, 16);
-  const times = [...new Set(posts.map(p => p.scheduleTime))].sort();
-  let slotTime = times.filter(t => t <= time).at(-1);
-  if (!slotTime) {
-    day = new Date(ist.getTime() - 86400000).toISOString().slice(0, 10);
-    slotTime = times.at(-1)!;
-  }
-  const slot = `${day}T${slotTime}`;
-  const blocked = posts.find(p => !p.posted && ['publishing', 'uncertain', 'failed', 'submitted'].includes(p.state || ''));
-  if (blocked) throw new Error(`${blocked.id} is ${blocked.state}; reconcile it before sending another video`);
-  if (posts.some(p => p.attemptedSlot === slot)) return { slot };
-  return { slot, post: due.find(p => !p.posted) };
+  return selectDuePost(posts, now);
 }
 
 export function localVideo(post: VizPost): string {

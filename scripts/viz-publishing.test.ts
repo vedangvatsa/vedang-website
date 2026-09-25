@@ -7,8 +7,25 @@ import { ROOT, selectDue, type VizPost, readQueue, publicVideoUrl } from './viz-
 import { buildInput, applyBufferStatus, runPlatform, PLATFORMS, chooseChannel } from './buffer-viz-scheduled-executor.js';
 import { runPlatform as runNative } from './native-viz-scheduled-executor.js';
 import { captionLength, validateCaption, LIMITS } from './viz-captions.mjs';
+import { needsBufferWork } from './viz-queue-time.mjs';
 
 const entry = (id: string, time = '09:00'): VizPost => ({ id, posted: false, scheduleDate: '2026-09-25', scheduleTime: time, title: 'Population', text: 'Population, 2000-2024.', description: 'Population, 2000-2024.' });
+
+test('catch-up gate waits for the slot, recovers a missed trigger and skips completed slots', () => {
+  const posts = [entry('one'), entry('two', '14:00'), entry('three', '20:00')];
+  assert.equal(needsBufferWork(posts, new Date('2026-09-25T03:29:00Z')), false);
+  assert.equal(needsBufferWork(posts, new Date('2026-09-25T05:00:00Z')), true);
+  posts[0].posted = true;
+  posts[0].attemptedSlot = '2026-09-25T09:00';
+  assert.equal(needsBufferWork(posts, new Date('2026-09-25T05:10:00Z')), false);
+  assert.equal(needsBufferWork(posts, new Date('2026-09-25T08:30:00Z')), true);
+});
+
+test('catch-up gate reconciles submitted posts without creating a second post', () => {
+  const posts = [{ ...entry('one'), state: 'submitted' as const, bufferPostId: 'remote' }];
+  assert.equal(needsBufferWork(posts, new Date('2026-09-25T05:00:00Z')), true);
+  assert.throws(() => selectDue(posts, new Date('2026-09-25T05:00:00Z')), /reconcile/);
+});
 
 test('all Buffer payloads publish now without dueAt or a Buffer queue mode', () => {
   for (const p of PLATFORMS) {
