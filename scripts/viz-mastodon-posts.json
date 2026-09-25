@@ -11,12 +11,17 @@
     "notesUrl": "https://veda.ng/viz-notes/01.txt",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T07:57:45.178Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, Eurostat, UN Statistics Division, national statistics",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), uri: https://population.un.org/wpp/, publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs), uri: https://unstats.un.org/home/nso_sites/, publisher: National Statistical Offices;\nEurostat: Demographic Statistics, Eurostat (ESTAT), uri: https://ec.europa.eu/eurostat/data/database?node_code=earn_ses_monthly, publisher: Eurostat;\nPopulation and Vital Statistics Report (various years), United Nations (UN), uri: https://unstats.un.org, publisher: UN Statistics Division"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), uri: https://population.un.org/wpp/, publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs), uri: https://unstats.un.org/home/nso_sites/, publisher: National Statistical Offices;\nEurostat: Demographic Statistics, Eurostat (ESTAT), uri: https://ec.europa.eu/eurostat/data/database?node_code=earn_ses_monthly, publisher: Eurostat;\nPopulation and Vital Statistics Report (various years), United Nations (UN), uri: https://unstats.un.org, publisher: UN Statistics Division",
+    "state": "sent",
+    "attemptedAt": "2026-09-25T07:57:36.341Z",
+    "attemptedSlot": "2026-09-25T09:00",
+    "publishedText": "How the largest populations changed.\n\n2000-2024. The totals count residents, regardless of citizenship. Data source: UN Population Division, Eurostat, UN Statistics Division, national statistics.",
+    "platformPostId": "117330612386681653"
   },
   {
     "id": "viz-mastodon-02",
