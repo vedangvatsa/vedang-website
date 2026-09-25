@@ -59,8 +59,8 @@
     "cover": "scripts/viz-assets/previews/internet.png",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T15:25:49.049Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -71,7 +71,14 @@
     "notesUrl": "https://veda.ng/viz-notes/03.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/",
+    "publishedText": "How much of the population uses the internet?\n\n2000-2024. The share of people who used the internet in the previous three months. Data source: ITU.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-25T20:00",
+    "attemptedAt": "2026-09-25T15:24:52.973Z",
+    "bufferPostId": "6ab69245b891a26b49be14cd",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DdtxqpbjmZM/"
   },
   {
     "id": "viz-ig-04",

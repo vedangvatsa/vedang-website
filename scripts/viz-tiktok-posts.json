@@ -66,8 +66,8 @@
     "title": "How much of the population uses the internet?\n\n2000-2024. The share of people who used the internet in the previous three months. Data source: ITU.",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T15:26:41.848Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/03-internet-2000-2024.mp4",
@@ -80,7 +80,14 @@
     "notesUrl": "https://veda.ng/viz-notes/03.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/",
+    "publishedText": "How much of the population uses the internet?\n\n2000-2024. The share of people who used the internet in the previous three months. Data source: ITU.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-25T20:00",
+    "attemptedAt": "2026-09-25T15:24:52.980Z",
+    "bufferPostId": "6ab69245484ed2befd6df32e",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7689494254992805141"
   },
   {
     "id": "viz-tt-04",

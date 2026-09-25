@@ -61,10 +61,14 @@
     "scheduleTime": "20:00",
     "posted": false,
     "postedAt": null,
-    "error": null,
+    "error": "Threads container ERROR",
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/",
+    "state": "uncertain",
+    "attemptedAt": "2026-09-25T15:27:24.979Z",
+    "attemptedSlot": "2026-09-25T20:00",
+    "publishedText": "How much of the population uses the internet?\n\n2000-2024. The share of people who used the internet in the previous three months. Data source: ITU."
   },
   {
     "id": "viz-threads-04",

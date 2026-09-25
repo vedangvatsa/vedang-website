@@ -59,12 +59,17 @@
     "notesUrl": "https://veda.ng/viz-notes/03.txt",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T15:31:19.711Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/",
+    "state": "sent",
+    "attemptedAt": "2026-09-25T15:31:19.474Z",
+    "attemptedSlot": "2026-09-25T20:00",
+    "publishedText": "How much of the population uses the internet?\n\n2000-2024. The share of people who used the internet in the previous three months. Data source: ITU.",
+    "platformPostId": "0xce0d63b45190db310eee95eef46f57d83f901af6"
   },
   {
     "id": "viz-farcaster-04",
