@@ -31,8 +31,8 @@
     "title": "The largest economies, measured in US dollars.\n\n2000-2024. GDP in current US dollars. Data source: OECD, World Bank, national statistics and central banks.",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T09:08:10.714Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/02-gdp-2000-2024.mp4",
@@ -45,7 +45,14 @@
     "notesUrl": "https://veda.ng/viz-notes/02.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "OECD, World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)",
+    "publishedText": "The largest economies, measured in US dollars.\n\n2000-2024. GDP in current US dollars. Data source: OECD, World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-25T14:00",
+    "attemptedAt": "2026-09-25T09:03:39.060Z",
+    "bufferPostId": "6ab638ebcbe818dd4f003ace",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7689396208502115604"
   },
   {
     "id": "viz-tt-03",

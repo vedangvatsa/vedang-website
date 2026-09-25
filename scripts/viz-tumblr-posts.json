@@ -43,12 +43,17 @@
     "notesUrl": "https://veda.ng/viz-notes/02.txt",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-25T09:09:31.490Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "OECD, World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-09-25T09:09:28.098Z",
+    "attemptedSlot": "2026-09-25T14:00",
+    "publishedText": "The largest economies, measured in US dollars.\n\n2000-2024. GDP in current US dollars. Data source: OECD, World Bank, national statistics and central banks.",
+    "platformPostId": "828718313700982784"
   },
   {
     "id": "viz-tumblr-03",
