@@ -6,8 +6,9 @@ import { createHash } from 'node:crypto';
 import { ROOT, selectDue, type VizPost, readQueue, publicVideoUrl } from './viz-publishing.js';
 import { buildInput, applyBufferStatus, runPlatform, PLATFORMS, chooseChannel } from './buffer-viz-scheduled-executor.js';
 import { runPlatform as runNative } from './native-viz-scheduled-executor.js';
-import { captionLength, validateCaption, LIMITS } from './viz-captions.mjs';
+import { captionLength, validateCaption, validateConciseBufferCaption, conciseBufferCaption, LIMITS } from './viz-captions.mjs';
 import { needsBufferWork } from './viz-queue-time.mjs';
+import { sourceCredit } from './viz-source-credit.mjs';
 
 const entry = (id: string, time = '09:00'): VizPost => ({ id, posted: false, scheduleDate: '2026-09-25', scheduleTime: time, title: 'Population', text: 'Population, 2000-2024.', description: 'Population, 2000-2024.' });
 
@@ -107,21 +108,47 @@ test('channel selection rejects ambiguity and disconnected accounts', () => {
   assert.throws(() => chooseChannel('youtube', 'UNSET_TEST_CHANNEL', [{ ...channel, isDisconnected: true }]), /disconnected/);
 });
 
-test('all 550 captions fit their platform and each topic has eleven distinct versions', () => {
+test('all captions fit their platform; future Buffer captions follow the approved concise format', () => {
   const all = Object.keys(LIMITS).map(platform => ({ platform, posts: readQueue(path.join(ROOT, 'scripts', `viz-${platform}-posts.json`)) }));
   for (const { platform, posts } of all) {
     assert.equal(posts.length, 50);
     for (const p of posts) {
       const text = platform === 'youtube' ? p.description : p.text;
       validateCaption(platform, text);
-      assert.ok(text?.includes('World Bank'));
+      if (PLATFORMS.some(p => p.service === platform) && !p.posted) {
+        assert.equal(p.captionStyle, 'concise-v1');
+        validateConciseBufferCaption(text);
+        assert.equal(p.sourceCredit, sourceCredit({ sourceOrganization: p.sourceOrganization }));
+        assert.ok(text?.endsWith(`Data source: ${p.sourceCredit}.`));
+      }
       const notes = new URL(String(p.notesUrl));
       assert.ok(fs.existsSync(path.join(ROOT, 'public', notes.pathname)));
     }
   }
-  for (let i = 0; i < 50; i++) {
-    assert.equal(new Set(all.map(({ platform, posts }) => platform === 'youtube' ? posts[i].description : posts[i].text)).size, 11);
+});
+
+test('concise captions reproduce the requested sample without attribution or injected URLs', () => {
+  const expected = 'How the largest populations changed.\n\n2000-2024. The totals count residents, regardless of citizenship. Data source: World Bank.';
+  assert.equal(conciseBufferCaption('How the largest populations changed.', 'The totals count residents, regardless of citizenship.', 2000, 2024, 'World Bank'), expected);
+  for (const service of ['youtube', 'instagram', 'tiktok']) {
+    const p = { ...entry('one'), captionStyle: 'concise-v1', description: expected, text: expected, notesUrl: 'https://veda.ng/viz-notes/01.txt' };
+    const input = buildInput(service, p, 'channel', 'https://cdn.example/video.mp4');
+    assert.equal(input.text, expected);
   }
+  assert.throws(() => validateConciseBufferCaption(expected + '\nMusic by Artist'), /extra notes/);
+});
+
+test('source labels use archived provider metadata rather than a World Bank default', () => {
+  assert.equal(sourceCredit({ sourceOrganization: 'World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)' }), 'ITU');
+  assert.equal(sourceCredit({ sourceOrganization: 'ILO Modelled Estimates database, International Labour Organization (ILO)' }), 'ILO');
+  assert.equal(sourceCredit({ sourceOrganization: 'Food and Agriculture Organization of the United Nations (FAO)' }), 'FAO');
+  assert.equal(sourceCredit({ sourceOrganization: 'Country official statistics, National Statistical Organizations and/or Central Banks; National Accounts data files, OECD; Staff estimates, World Bank (WB)' }), 'OECD, World Bank, national statistics and central banks');
+  assert.throws(() => sourceCredit({}), /no source organization/);
+  assert.throws(() => sourceCredit({ sourceOrganization: 'Unknown provider' }), /Unrecognized provider/);
+  const caption = conciseBufferCaption('Internet use.', 'People who used the internet.', 2000, 2024, 'ITU');
+  assert.ok(caption.endsWith('Data source: ITU.'));
+  assert.ok(!caption.includes('World Bank'));
+  validateCaption('instagram', caption);
 });
 
 test('caption limits count URLs, graphemes and Farcaster UTF-8 bytes appropriately', () => {

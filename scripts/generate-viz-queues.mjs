@@ -18,6 +18,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { makeCaptions } from './viz-captions.mjs';
+import { sourceCredit } from './viz-source-credit.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -85,6 +86,7 @@ const idx = Object.fromEntries(header.map((h, i) => [h, i]));
 const musicByIndex = JSON.parse(fs.readFileSync(args['music-catalog'] || path.join(__dirname, 'viz-assets/music-catalog.json'), 'utf8'));
 if (musicByIndex.length !== 50) throw new Error('Expected 50 music tracks');
 const editorial = JSON.parse(fs.readFileSync(path.join(__dirname, 'viz-caption-copy.json'), 'utf8'));
+const conciseCopy = JSON.parse(fs.readFileSync(path.join(__dirname, 'viz-concise-copy.json'), 'utf8'));
 const licenseReview = JSON.parse(fs.readFileSync(path.join(__dirname, 'viz-assets/music-license-review.json'), 'utf8'));
 
 const videos = lines.slice(1).filter(r => r.length > 1).map(r => ({
@@ -104,6 +106,8 @@ const notesFiles = [];
 videos.forEach((v, i) => {
   const slug = slugOf(v.filename);
   const chart = JSON.parse(fs.readFileSync(path.join(CHART_DIR, `${slug}.chart.json`), 'utf-8'));
+  const { metadata } = JSON.parse(fs.readFileSync(path.join(CHART_DIR, `${slug}.json`), 'utf8'));
+  const providerCredit = sourceCredit(metadata);
   if (Number(v.start_year) !== chart.startYear || Number(v.end_year) !== chart.endYear) throw new Error(`Year mismatch ${slug}`);
   const day = Math.floor(i / SLOTS.length);
   const date = addDays(START, day);
@@ -116,11 +120,12 @@ videos.forEach((v, i) => {
 
   const music = { ...musicByIndex[i], ...licenseReview.tracks[String(i + 1)] };
   if (music.topic_index !== i + 1 || !editorial[slug]) throw new Error(`Missing/misaligned caption or music ${slug}`);
-  const { captions, title, notes } = makeCaptions({ copy: editorial[slug], chart, number: i + 1, music });
+  const { captions, title, notes } = makeCaptions({ copy: editorial[slug], chart, number: i + 1, music, conciseDescription: conciseCopy[slug], sourceCredit: providerCredit });
   for (const platform of platforms) {
     const prefix = { youtube: 'yt', instagram: 'ig', tiktok: 'tt' }[platform] || platform;
     queues[platform].push({
       id: `viz-${prefix}-${idNum}`, video: videoRel,
+      ...(['youtube', 'instagram', 'tiktok'].includes(platform) ? { captionStyle: 'concise-v1', sourceCredit: providerCredit, sourceOrganization: metadata.sourceOrganization } : {}),
       ...(platform === 'youtube' ? { title, description: captions[platform], thumbnail: previewRel } : { text: captions[platform] }),
       ...(platform === 'instagram' ? { cover: previewRel } : {}),
       ...(platform === 'tiktok' ? { title: captions[platform], videoPath: videoRel } : {}),

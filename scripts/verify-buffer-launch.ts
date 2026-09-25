@@ -34,13 +34,17 @@ export async function main() {
         checkedMedia.add(url);
       }
       const input = buildInput(platform.service, entry, channel.id, url);
-      const notes = input.text.match(/https:\/\/\S+\/viz-notes\/\d{2}\.txt/)?.[0];
+      // Concise public captions omit links. Audit the archived source notes separately.
+      const archivedNotes = entry.notesUrl && process.env.VIZ_NOTES_BASE_URL
+        ? `${process.env.VIZ_NOTES_BASE_URL.replace(/\/$/, '')}${new URL(String(entry.notesUrl)).pathname}`
+        : String(entry.notesUrl || '');
+      const notes = entry.captionStyle === 'concise-v1' ? archivedNotes : input.text.match(/https:\/\/\S+\/viz-notes\/\d{2}\.txt/)?.[0];
       if (!notes) throw new Error(`${entry.id}: missing source/credit URL`);
       if (!checkedNotes.has(notes)) {
         const response = await fetch(notes, { signal: AbortSignal.timeout(30000) });
         if (!response.ok) throw new Error(`Source/credit notes HTTP ${response.status}`);
         const text = await response.text();
-        if (!text.includes('World Bank') || !text.includes('Music\n')) throw new Error('Notes URL does not serve source/music credits');
+        if (!text.includes('Source:') || !text.includes('Music\n')) throw new Error('Notes URL does not serve source/music credits');
         checkedNotes.add(notes);
       }
     }
