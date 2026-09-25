@@ -61,7 +61,7 @@ async function uploadPhoto(imagePath: string, message: string): Promise<string> 
   return data.post_id || data.id;
 }
 
-export async function uploadVideo(videoPath: string, message: string): Promise<string> {
+export async function uploadVideo(videoPath: string, message: string, request = fetch, wait = sleep): Promise<string> {
   const absPath = path.isAbsolute(videoPath)
     ? videoPath
     : path.resolve(REPO_ROOT, videoPath);
@@ -76,7 +76,7 @@ export async function uploadVideo(videoPath: string, message: string): Promise<s
   form.append('published', 'true');
   form.append('access_token', PAGE_TOKEN);
 
-  const res = await fetch(`https://graph-video.facebook.com/v23.0/${PAGE_ID}/videos`, {
+  const res = await request(`https://graph-video.facebook.com/v23.0/${PAGE_ID}/videos`, {
     method: 'POST',
     body: form,
   });
@@ -88,14 +88,21 @@ export async function uploadVideo(videoPath: string, message: string): Promise<s
   const data = await res.json() as any;
   if (!data.id) throw new Error('Facebook returned no video ID');
   for (let attempt = 0; attempt < 60; attempt++) {
-    const poll = await fetch(`https://graph.facebook.com/v23.0/${data.id}?fields=status`, {
+    const poll = await request(`https://graph.facebook.com/v23.0/${data.id}?fields=status`, {
       headers: { Authorization: `Bearer ${PAGE_TOKEN}` },
     });
+    // A freshly accepted video may not be visible to the read endpoint immediately.
+    // Retry only that read briefly; never re-upload a video with a known ID.
+    if (poll.status === 400 && attempt < 6) {
+      await poll.text();
+      await wait(5000);
+      continue;
+    }
     if (!poll.ok) throw new Error(`Facebook video ${data.id} status HTTP ${poll.status}; reconcile before retrying`);
     const status = (await poll.json() as any).status;
-    if (status?.video_status === 'ready') return data.id;
+    if (status?.video_status === 'ready' && (!status.publishing_phase || status.publishing_phase.publish_status === 'published')) return data.id;
     if (status?.video_status === 'error') throw new Error(`Facebook video ${data.id} processing failed`);
-    await sleep(5000);
+    await wait(5000);
   }
   throw new Error(`Facebook video ${data.id} is still processing; reconcile before retrying`);
 }

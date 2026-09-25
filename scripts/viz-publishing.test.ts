@@ -273,3 +273,23 @@ test('Farcaster includes the video embed and never downgrades to text-only in th
     await assert.rejects(publish('farcaster', entry('two'), '/unused.mp4'), /public video/);
   } finally { globalThis.fetch = original; }
 });
+
+test('Facebook retries early status visibility errors without uploading the video twice', async () => {
+  const { uploadVideo } = await import('./facebook-scheduled-executor.js');
+  const { Response: FetchResponse } = await import('node-fetch');
+  let uploads = 0;
+  let reads = 0;
+  const request = async (_url: any, init: any = {}) => {
+    if (init.method === 'POST') {
+      uploads++;
+      return new FetchResponse(JSON.stringify({ id: 'fb-video' }), { status: 200 });
+    }
+    reads++;
+    if (reads === 1) return new FetchResponse(JSON.stringify({ error: { code: 100 } }), { status: 400 });
+    return new FetchResponse(JSON.stringify({ status: { video_status: 'ready', publishing_phase: { publish_status: 'published' } } }), { status: 200 });
+  };
+  const id = await uploadVideo(path.join(ROOT, 'scripts/viz-assets/videos/01-population-2000-2024.mp4'), 'Population', request, async () => {});
+  assert.equal(id, 'fb-video');
+  assert.equal(uploads, 1);
+  assert.equal(reads, 2);
+});
