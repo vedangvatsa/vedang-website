@@ -116,12 +116,17 @@
     "notesUrl": "https://veda.ng/viz-notes/05.txt",
     "scheduleDate": "2026-09-26",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-26T08:51:12.080Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, Eurostat, national statistics",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), uri: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs), note: Derived from male and female life expectancy at birth from sources such as statistical databases and publications from national statistical offices.;\nDemographic Statistics, Eurostat (ESTAT), note: Derived from male and female life expectancy at birth from sources such as Eurostat: Demographic Statistics."
+    "sourceOrganization": "World Population Prospects, United Nations (UN), uri: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs), note: Derived from male and female life expectancy at birth from sources such as statistical databases and publications from national statistical offices.;\nDemographic Statistics, Eurostat (ESTAT), note: Derived from male and female life expectancy at birth from sources such as Eurostat: Demographic Statistics.",
+    "state": "sent",
+    "attemptedAt": "2026-09-26T08:50:40.253Z",
+    "attemptedSlot": "2026-09-26T14:00",
+    "publishedText": "Life expectancy at birth, year by year.\n\n2000-2024. Expected lifespan at birth, based on each year's mortality rates. Data source: UN Population Division, Eurostat, national statistics.",
+    "platformPostId": "1108586751883310"
   },
   {
     "id": "viz-facebook-06",
