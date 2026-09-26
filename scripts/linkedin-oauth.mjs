@@ -1,89 +1,126 @@
 #!/usr/bin/env node
-/**
- * LinkedIn OAuth helper — run once to get your access token + person URN.
- * Usage: node scripts/linkedin-oauth.mjs
- */
-import http from 'http';
-import { exec } from 'child_process';
+/** Local LinkedIn authorization. Secrets stay in .env.local and GitHub Secrets. */
+import http from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+import { randomBytes, timingSafeEqual } from 'node:crypto';
+import { spawn, spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import dotenv from 'dotenv';
 
+const script = fileURLToPath(import.meta.url);
+const root = path.resolve(path.dirname(script), '..');
+const envFile = path.join(root, '.env.local');
+dotenv.config({ path: envFile, quiet: true });
+const clientId = process.env.LINKEDIN_CLIENT_ID;
+const clientSecret = process.env.LINKEDIN_CLIENT_SECRET;
+const redirect = new URL(process.env.LINKEDIN_REDIRECT_URI || 'http://localhost:3000/callback');
+const statusFile = process.env.LINKEDIN_OAUTH_STATUS_FILE;
+const repository = 'vedangvatsa/vedang-website';
 
-const CLIENT_ID = '86vq79l9h9uipd';
-const CLIENT_SECRET = 'WPL_AP1.rMmzsUVYNy4Y8JcB.7DXBeA==';
-const REDIRECT_URI = 'http://localhost:3000/callback';
-const SCOPES = 'openid profile w_member_social';
+function status(phase, details = {}) {
+  if (statusFile) fs.writeFileSync(statusFile, JSON.stringify({ phase, updatedAt: new Date().toISOString(), ...details }, null, 2), { mode: 0o600 });
+}
 
-const authUrl =
-  `https://www.linkedin.com/oauth/v2/authorization` +
-  `?response_type=code` +
-  `&client_id=${CLIENT_ID}` +
-  `&redirect_uri=${encodeURIComponent(REDIRECT_URI)}` +
-  `&scope=${encodeURIComponent(SCOPES)}`;
-
-console.log('\n🔗 Opening LinkedIn authorization in your browser...\n');
-exec(`open "${authUrl}"`); // macOS
-
-const server = http.createServer(async (req, res) => {
-  const url = new URL(req.url || '/', `http://localhost:3000`);
-  const code = url.searchParams.get('code');
-  const error = url.searchParams.get('error');
-
-  if (error) {
-    res.end(`<h2>Error: ${error}</h2>`);
-    server.close();
-    return;
+function writeLocal(values) {
+  let text = fs.existsSync(envFile) ? fs.readFileSync(envFile, 'utf8') : '';
+  for (const [key, value] of Object.entries(values)) {
+    text = text.replace(new RegExp(`^(?:export\\s+)?${key}=.*(?:\\r?\\n|$)`, 'gm'), '');
+    text = `${text.trimEnd()}\n${key}=${JSON.stringify(value)}\n`;
   }
+  const temp = `${envFile}.linkedin-tmp`;
+  fs.writeFileSync(temp, text, { mode: 0o600 });
+  fs.renameSync(temp, envFile);
+}
 
-  if (!code) {
-    res.end('<h2>No code received.</h2>');
-    return;
-  }
-
-  res.end('<h2>Authorization successful. You can close this tab.</h2>');
-
-  // Exchange code for access token
-  console.log('⏳ Exchanging code for access token...');
-  const tokenRes = await fetch('https://www.linkedin.com/oauth/v2/accessToken', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      grant_type: 'authorization_code',
-      code,
-      redirect_uri: REDIRECT_URI,
-      client_id: CLIENT_ID,
-      client_secret: CLIENT_SECRET,
-    }).toString(),
+function saveGitHub(key, value) {
+  const result = spawnSync('gh', ['secret', 'set', key, '--repo', repository], {
+    input: value, encoding: 'utf8', stdio: ['pipe', 'ignore', 'pipe'], timeout: 30000,
   });
+  if (result.status !== 0) throw new Error(`Could not save ${key} in GitHub Secrets; local credentials are retained`);
+}
 
-  const tokenData = await tokenRes.json();
-
-  if (!tokenData.access_token) {
-    console.error('❌ Token exchange failed:', JSON.stringify(tokenData, null, 2));
-    server.close();
-    return;
-  }
-
-  const accessToken = tokenData.access_token;
-  console.log('\n✅ Access token obtained!\n');
-
-  // Get person URN via userinfo
-  const userRes = await fetch('https://api.linkedin.com/v2/userinfo', {
-    headers: { Authorization: `Bearer ${accessToken}` },
+async function listen() {
+  if (!clientId || !clientSecret) throw new Error('Set LINKEDIN_CLIENT_ID and LINKEDIN_CLIENT_SECRET in .env.local');
+  if (redirect.protocol !== 'http:' || !['localhost', '127.0.0.1'].includes(redirect.hostname)) throw new Error('This local helper requires an HTTP localhost callback URL');
+  // A trusted local operator may resume the exact state of a callback supplied
+  // by the user after the local listener expired. Never take this from HTTP input.
+  const state = process.env.LINKEDIN_OAUTH_EXPECTED_STATE || randomBytes(32).toString('hex');
+  if (!/^[0-9a-f]{64}$/.test(state)) throw new Error('Invalid OAuth state configuration');
+  const authorization = new URL('https://www.linkedin.com/oauth/v2/authorization');
+  authorization.search = new URLSearchParams({
+    response_type: 'code', client_id: clientId, redirect_uri: redirect.href,
+    scope: 'openid profile w_member_social', state,
+  }).toString();
+  let busy = false;
+  const server = http.createServer(async (req, res) => {
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.setHeader('Cache-Control', 'no-store');
+    res.setHeader('Referrer-Policy', 'no-referrer');
+    const url = new URL(req.url || '/', redirect.origin);
+    if (req.method !== 'GET' || url.pathname !== redirect.pathname) { res.writeHead(404); res.end('Not found'); return; }
+    const returnedState = url.searchParams.get('state') || '';
+    const stateBytes = Buffer.from(state);
+    const returnedBytes = Buffer.from(returnedState);
+    if (returnedBytes.length !== stateBytes.length || !timingSafeEqual(returnedBytes, stateBytes)) {
+      res.writeHead(400); res.end('Authorization state mismatch. Use the authorization link generated by this helper.'); return;
+    }
+    if (url.searchParams.has('error')) {
+      status('authorization_denied'); res.writeHead(400); res.end('LinkedIn authorization was denied.'); server.close(); clearTimeout(expiry); return;
+    }
+    const code = url.searchParams.get('code');
+    if (!code || busy) { res.writeHead(400); res.end('Missing or already-processing authorization code.'); return; }
+    busy = true;
+    try {
+      status('exchanging_code');
+      const response = await fetch('https://www.linkedin.com/oauth/v2/accessToken', {
+        method: 'POST', redirect: 'error', signal: AbortSignal.timeout(30000),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ grant_type: 'authorization_code', code, redirect_uri: redirect.href, client_id: clientId, client_secret: clientSecret }),
+      });
+      const token = await response.json();
+      if (!response.ok || !token.access_token) throw new Error(`LinkedIn token exchange failed (HTTP ${response.status})`);
+      if (token.scope && !token.scope.split(/[ ,]+/).includes('w_member_social')) throw new Error('The token does not grant w_member_social');
+      const profileResponse = await fetch('https://api.linkedin.com/v2/userinfo', {
+        headers: { Authorization: `Bearer ${token.access_token}` }, signal: AbortSignal.timeout(30000),
+      });
+      const profile = await profileResponse.json();
+      if (!profileResponse.ok || typeof profile.sub !== 'string' || !profile.sub) throw new Error(`Could not verify LinkedIn identity (HTTP ${profileResponse.status}); check openid/profile permissions`);
+      const values = { LINKEDIN_ACCESS_TOKEN: token.access_token, LINKEDIN_PERSON_URN: `urn:li:person:${profile.sub}` };
+      if (token.refresh_token) values.LINKEDIN_REFRESH_TOKEN = token.refresh_token;
+      writeLocal(values);
+      for (const [key, value] of Object.entries(values)) saveGitHub(key, value);
+      status('complete', { name: profile.name, expiresAt: new Date(Date.now() + Number(token.expires_in) * 1000).toISOString(), secretsUpdated: Object.keys(values) });
+      res.end('LinkedIn connected. The verified posting token and account identity were saved locally and in GitHub Secrets. You can close this tab.');
+    } catch (err) {
+      status('failed', { error: err.message });
+      res.writeHead(502); res.end('LinkedIn setup could not finish. Return to the assistant for the status.');
+    } finally { server.close(); clearTimeout(expiry); }
   });
+  const expiry = setTimeout(() => { status('expired'); server.close(); }, 20 * 60 * 1000);
+  server.on('error', err => {
+    clearTimeout(expiry);
+    status('failed', { error: `Callback listener failed: ${err.code || 'unknown'}` });
+    if (process.send) process.send({ error: `Callback listener failed: ${err.code || 'unknown'}` });
+    else console.error(`Callback listener failed: ${err.code || 'unknown'}`);
+    process.exitCode = 1;
+  });
+  server.listen(Number(redirect.port || 80), '127.0.0.1', () => {
+    status('awaiting_authorization', { redirectUri: redirect.href, authorizationUrl: authorization.href });
+    if (process.send) { process.send({ authorizationUrl: authorization.href, redirectUri: redirect.href }); process.disconnect(); }
+    else console.log(`Authorize LinkedIn: ${authorization.href}`);
+  });
+}
 
-  const userData = await userRes.json();
-  const sub = userData.sub; // This is the person ID
-  const personUrn = `urn:li:person:${sub}`;
-
-  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-  console.log('Add these to your GitHub repository secrets:\n');
-  console.log(`LINKEDIN_ACCESS_TOKEN=${accessToken}`);
-  console.log(`LINKEDIN_PERSON_URN=${personUrn}`);
-  console.log('\nToken expires in:', Math.round(tokenData.expires_in / 86400), 'days');
-  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-
-  server.close();
-});
-
-server.listen(3000, () => {
-  console.log('🟢 Waiting for LinkedIn to redirect to localhost:3000...\n');
-});
+if (process.argv.includes('--start')) {
+  if (!statusFile) throw new Error('Set LINKEDIN_OAUTH_STATUS_FILE to a private temporary status file');
+  const child = spawn(process.execPath, [script, '--listen'], { cwd: root, env: process.env, detached: true, stdio: ['ignore', 'ignore', 'ignore', 'ipc'] });
+  child.once('message', message => {
+    if (message.error) { console.error(message.error); process.exitCode = 1; }
+    else console.log(JSON.stringify({ pid: child.pid, ...message }, null, 2));
+    child.unref();
+  });
+  child.once('error', () => { console.error('Could not start the authorization helper'); process.exitCode = 1; });
+} else {
+  listen().catch(err => { status('failed', { error: err.message }); console.error(err.message); process.exitCode = 1; });
+}
