@@ -83,12 +83,17 @@
     "notesUrl": "https://veda.ng/viz-notes/04.txt",
     "scheduleDate": "2026-09-26",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-26T06:01:01.698Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division",
-    "sourceOrganization": "World Urbanization Prospects, United Nations (UN), uri: https://population.un.org/wup/, note: United Nations Population Division's World Urbanization Prospects, National definitions, publisher: UN Population Division"
+    "sourceOrganization": "World Urbanization Prospects, United Nations (UN), uri: https://population.un.org/wup/, note: United Nations Population Division's World Urbanization Prospects, National definitions, publisher: UN Population Division",
+    "state": "sent",
+    "attemptedAt": "2026-09-26T06:00:49.574Z",
+    "attemptedSlot": "2026-09-26T09:00",
+    "publishedText": "Where city living makes up the largest share.\n\n2000-2024. Urban residents as a share of the population. Data source: UN Population Division.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mwfmbfhzfo2m"
   },
   {
     "id": "viz-bluesky-05",
