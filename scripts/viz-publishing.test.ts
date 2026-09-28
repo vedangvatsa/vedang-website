@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import { createHash } from 'node:crypto';
 import { ROOT, selectDue, type VizPost, readQueue, publicVideoUrl } from './viz-publishing.js';
 import { buildInput, applyBufferStatus, runPlatform, PLATFORMS, chooseChannel } from './buffer-viz-scheduled-executor.js';
@@ -186,6 +187,30 @@ test('public media configuration rejects non-HTTPS and traversal', () => {
   process.env.VIZ_MEDIA_BASE_URL = 'https://cdn.example';
   try { assert.throws(() => publicVideoUrl({ ...entry('one'), video: '../outside.mp4' }), /Invalid video path/); }
   finally { if (old) process.env.VIZ_MEDIA_BASE_URL = old; else delete process.env.VIZ_MEDIA_BASE_URL; }
+});
+
+test('Buffer dry-run validates unresolved entries without reconciling or changing them', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'viz-dry-run-'));
+  const file = path.join(dir, 'tiktok.json');
+  const previousFile = process.env.TT_POSTS_FILE;
+  const originalFetch = globalThis.fetch;
+  process.env.TT_POSTS_FILE = file;
+  globalThis.fetch = async () => { throw new Error('Dry-run must not contact Buffer'); };
+  try {
+    for (const state of ['submitted', 'publishing', 'uncertain', 'failed'] as const) {
+      const posts = [{ ...entry('unresolved'), state, bufferPostId: 'existing-post', video: 'scripts/viz-assets/videos/01-population-2000-2024.mp4' }];
+      const contents = JSON.stringify(posts);
+      fs.writeFileSync(file, contents);
+      await runPlatform(PLATFORMS[2], [], true);
+      assert.equal(fs.readFileSync(file, 'utf8'), contents);
+      assert.throws(() => selectDue(posts, new Date('2026-09-28T03:30:00Z')), /reconcile/);
+    }
+  } finally {
+    globalThis.fetch = originalFetch;
+    if (previousFile === undefined) delete process.env.TT_POSTS_FILE;
+    else process.env.TT_POSTS_FILE = previousFile;
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 test('Mastodon waits for processed media and uses multipart video + idempotent status', async () => {

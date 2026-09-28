@@ -131,8 +131,9 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
       localVideo(entry);
       buildInput(platform.service, entry, 'dry-run', 'https://example.invalid/video.mp4');
     }
-    const { post } = selectDue(posts);
-    console.log(`${platform.service}: ${posts.length} entries validated; ${post?.id || 'nothing'} due; shareNow only`);
+    // Offline validation cannot reconcile live submissions. Leave queue selection
+    // to the publishing path, after Buffer has confirmed any outstanding post IDs.
+    console.log(`${platform.service}: ${posts.length} entries validated (no requests or writes); reconciliation deferred to publishing`);
     return;
   }
   const { post, slot } = selectDue(posts);
