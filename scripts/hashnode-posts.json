@@ -132,7 +132,7 @@
     "scheduleDate": "2026-03-28",
     "posted": false,
     "scheduleTime": "17:00",
-    "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+    "error": "FORBIDDEN: Publication does not have an active Pro plan. Upgrade in your dashboard to access this via the API."
   },
   {
     "id": "hashnode-ai-economy",
