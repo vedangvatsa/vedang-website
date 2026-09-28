@@ -284,6 +284,28 @@ test('Tumblr sends native NPF video multipart and preserves a 64-bit string ID',
   finally { globalThis.fetch = original; }
 });
 
+test('Threads reports terminal container failures before any publish request', async () => {
+  const { postViaGraphAPI, ThreadsContainerError } = await import('./threads-scheduled-executor.js');
+  const original = globalThis.fetch;
+  const requests: string[] = [];
+  globalThis.fetch = async (url) => {
+    requests.push(String(url));
+    if (requests.length === 1) return Response.json({ id: 'rejected-container' });
+    return Response.json({ status: 'ERROR', error_message: 'Unable to download video' });
+  };
+  try {
+    await assert.rejects(postViaGraphAPI('Test', 'https://cdn.example/test.mp4'), (err: unknown) => {
+      assert.ok(err instanceof ThreadsContainerError);
+      assert.equal(err.containerId, 'rejected-container');
+      assert.equal(err.publishAttempted, false);
+      assert.match(err.message, /Unable to download video/);
+      return true;
+    });
+    assert.equal(requests.length, 2);
+    assert.ok(requests.every(url => !url.includes('/threads_publish')));
+  } finally { globalThis.fetch = original; }
+});
+
 test('Farcaster includes the video embed and never downgrades to text-only in the viz adapter', async () => {
   process.env.NEYNAR_API_KEY = 'test-key';
   process.env.NEYNAR_SIGNER_UUID = 'test-signer';

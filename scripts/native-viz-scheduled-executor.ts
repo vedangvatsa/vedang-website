@@ -92,7 +92,14 @@ export async function runPlatform(platform: string, dryRun: boolean) {
     console.log(`${platform}: published ${id}`);
   } catch (err) {
     // A transport timeout can occur after a post is accepted. Never blind-retry.
-    post.state = 'uncertain';
+    const failure = err as Error & { publishAttempted?: boolean; containerId?: string; containerStatus?: string };
+    const rejectedContainer = platform === 'threads' && failure.name === 'ThreadsContainerError' && failure.publishAttempted === false;
+    post.state = rejectedContainer ? 'failed' : 'uncertain';
+    if (rejectedContainer) {
+      post.containerId = failure.containerId;
+      post.containerStatus = failure.containerStatus;
+      post.publishAttempted = false;
+    }
     post.error = (err as Error).message;
     throw err;
   } finally { saveQueue(file, posts); }

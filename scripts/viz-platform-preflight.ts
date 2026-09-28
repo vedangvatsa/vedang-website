@@ -81,6 +81,27 @@ export async function checkNative(platform: string) {
   if (platform === 'threads') {
     const data = await json('https://graph.threads.net/v1.0/me?fields=id,username', { headers: bearer(e.THREADS_ACCESS_TOKEN!) });
     if (data.id !== e.THREADS_USER_ID) throw new Error('Threads account identity mismatch');
+    const pending = readQueue(path.join(ROOT, 'scripts/viz-threads-posts.json')).find(p => !p.posted && ['uncertain', 'failed'].includes(p.state || ''));
+    if (pending) {
+      const normalize = (text: string) => text.replace(/\s+/g, ' ').trim();
+      const expected = normalize(String(pending.publishedText || pending.text));
+      const posts: any[] = [];
+      let after: string | undefined;
+      let exhausted = false;
+      for (let page = 0; page < 5; page++) {
+        const url = new URL(`https://graph.threads.net/v1.0/${e.THREADS_USER_ID}/threads`);
+        url.searchParams.set('fields', 'id,text,timestamp,permalink,media_type');
+        url.searchParams.set('limit', '100');
+        if (after) url.searchParams.set('after', after);
+        const history = await json(url.href, { headers: bearer(e.THREADS_ACCESS_TOKEN!) });
+        posts.push(...(history.data || []));
+        after = history.paging?.cursors?.after;
+        exhausted = !history.paging?.next;
+        if (exhausted || !after || posts.some(p => Date.parse(p.timestamp) <= Date.parse(pending.attemptedAt || ''))) break;
+      }
+      const matches = posts.filter(p => normalize(String(p.text || '')) === expected);
+      console.log(`Threads pending-post check ${JSON.stringify({ pendingId: pending.id, checked: posts.length, coversAttempt: exhausted || posts.some(p => Date.parse(p.timestamp) <= Date.parse(pending.attemptedAt || '')), matches: matches.map(p => ({ id: p.id, permalink: p.permalink, timestamp: p.timestamp })) })}`);
+    }
     return 'account token accepted; publishing not tested';
   }
   if (platform === 'mastodon') {

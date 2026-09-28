@@ -28,6 +28,14 @@ const THREADS_USER_ID = process.env.THREADS_USER_ID || '';
 const TIMEZONE_OFFSET_HOURS = 5.5;
 const POSTS_FILE = path.resolve(__dirname, 'threads-posts.json');
 
+export class ThreadsContainerError extends Error {
+  readonly publishAttempted = false;
+  constructor(readonly containerId: string, readonly containerStatus: string, detail: string) {
+    super(`Threads container ${containerId} ${containerStatus}${detail ? `: ${detail}` : ''}`);
+    this.name = 'ThreadsContainerError';
+  }
+}
+
 interface ThreadsPost {
   id: string;
   text: string;
@@ -104,9 +112,13 @@ async function publishContainer(containerId: string, isVideoPost: boolean = fals
       headers: { Authorization: `Bearer ${THREADS_TOKEN}` },
     });
     if (!poll.ok) throw new Error(`Threads container status HTTP ${poll.status}`);
-    const status = (await poll.json() as any).status;
+    const result = await poll.json() as { status?: string; error_message?: string };
+    const status = result.status;
     if (status === 'FINISHED') { ready = true; break; }
-    if (status === 'ERROR' || status === 'EXPIRED') throw new Error(`Threads container ${status}`);
+    if (status === 'ERROR' || status === 'EXPIRED') {
+      const detail = String(result.error_message || '').slice(0, 600);
+      throw new ThreadsContainerError(containerId, status, THREADS_TOKEN ? detail.replaceAll(THREADS_TOKEN, '[redacted]') : detail);
+    }
     await sleep(5000);
   }
   if (!ready) throw new Error('Threads container processing timed out');
