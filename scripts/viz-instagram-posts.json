@@ -199,8 +199,8 @@
     "cover": "scripts/viz-assets/previews/ageing.png",
     "scheduleDate": "2026-09-27",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-28T19:42:04.051Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -211,7 +211,14 @@
     "notesUrl": "https://veda.ng/viz-notes/08.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division",
+    "publishedText": "Where older people make up the largest share.\n\n2000-2024. Residents aged 65 and over as a share of the population. Data source: UN Population Division.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-28T20:00",
+    "attemptedAt": "2026-09-28T19:39:06.270Z",
+    "bufferPostId": "6abac25a5a33707db8f02d32",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dd19PoiD48e/"
   },
   {
     "id": "viz-ig-09",

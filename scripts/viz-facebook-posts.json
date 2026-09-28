@@ -188,12 +188,17 @@
     "notesUrl": "https://veda.ng/viz-notes/08.txt",
     "scheduleDate": "2026-09-27",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-28T19:42:48.678Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division",
+    "state": "sent",
+    "attemptedAt": "2026-09-28T19:42:22.028Z",
+    "attemptedSlot": "2026-09-28T20:00",
+    "publishedText": "Where older people make up the largest share.\n\n2000-2024. Residents aged 65 and over as a share of the population. Data source: UN Population Division.",
+    "platformPostId": "1816145406079923"
   },
   {
     "id": "viz-facebook-09",

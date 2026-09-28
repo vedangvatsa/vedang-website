@@ -211,8 +211,8 @@
     "title": "Where older people make up the largest share.\n\n2000-2024. Residents aged 65 and over as a share of the population. Data source: UN Population Division.",
     "scheduleDate": "2026-09-27",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-28T19:40:49.992Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/08-ageing-2000-2024.mp4",
@@ -225,7 +225,14 @@
     "notesUrl": "https://veda.ng/viz-notes/08.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division",
+    "publishedText": "Where older people make up the largest share.\n\n2000-2024. Residents aged 65 and over as a share of the population. Data source: UN Population Division.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-28T20:00",
+    "attemptedAt": "2026-09-28T19:39:06.267Z",
+    "bufferPostId": "6abac25a7ea6291e9da089c0",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7690672794333465908"
   },
   {
     "id": "viz-tt-09",
