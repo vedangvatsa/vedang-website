@@ -171,8 +171,8 @@
     "cover": "scripts/viz-assets/previews/birth-rate.png",
     "scheduleDate": "2026-09-27",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-28T10:39:05.580Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -183,7 +183,14 @@
     "notesUrl": "https://veda.ng/viz-notes/07.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, Eurostat, national statistics",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs);\nDemographic Statistics, Eurostat (ESTAT);\nPopulation and Vital Statistics Report (various years), United Nations (UN), publisher: UN Statistical Division"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs);\nDemographic Statistics, Eurostat (ESTAT);\nPopulation and Vital Statistics Report (various years), United Nations (UN), publisher: UN Statistical Division",
+    "publishedText": "Annual births for every 1,000 people.\n\n2000-2024. Live births per 1,000 residents each year. Data source: UN Population Division, Eurostat, national statistics.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-28T14:00",
+    "attemptedAt": "2026-09-28T10:38:06.917Z",
+    "bufferPostId": "6aba438f6bc8e702c357e58c",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dd0_O1okb3b/"
   },
   {
     "id": "viz-ig-08",

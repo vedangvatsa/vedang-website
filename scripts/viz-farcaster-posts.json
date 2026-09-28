@@ -155,12 +155,17 @@
     "notesUrl": "https://veda.ng/viz-notes/07.txt",
     "scheduleDate": "2026-09-27",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-28T10:40:44.099Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, Eurostat, national statistics",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs);\nDemographic Statistics, Eurostat (ESTAT);\nPopulation and Vital Statistics Report (various years), United Nations (UN), publisher: UN Statistical Division"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs);\nDemographic Statistics, Eurostat (ESTAT);\nPopulation and Vital Statistics Report (various years), United Nations (UN), publisher: UN Statistical Division",
+    "state": "sent",
+    "attemptedAt": "2026-09-28T10:40:43.704Z",
+    "attemptedSlot": "2026-09-28T14:00",
+    "publishedText": "Annual births for every 1,000 people.\n\n2000-2024. Live births per 1,000 residents each year. Data source: UN Population Division, Eurostat, national statistics.",
+    "platformPostId": "0x4c89453af4cb8d304ed26cd6943c86df2b4b58a3"
   },
   {
     "id": "viz-farcaster-08",
