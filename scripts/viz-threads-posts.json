@@ -61,11 +61,17 @@
     "scheduleTime": "20:00",
     "posted": false,
     "postedAt": null,
-    "error": "Threads container ERROR",
+    "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
     "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU), uri: https://datahub.itu.int/",
-    "state": "uncertain",
+    "recovery": {
+      "previousState": "uncertain",
+      "previousError": "Threads container ERROR",
+      "verifiedAt": "2026-09-28T10:49:57.448Z",
+      "evidenceRun": "https://github.com/vedangvatsa/vedang-website/actions/runs/36411841531",
+      "reason": "Container processing failed before threads_publish. Read-only history covered the attempt, checked 100 posts, and found no matching caption. Retry authorized."
+    },
     "attemptedAt": "2026-09-25T15:27:24.979Z",
     "attemptedSlot": "2026-09-25T20:00",
     "publishedText": "How much of the population uses the internet?\n\n2000-2024. The share of people who used the internet in the previous three months. Data source: ITU."
