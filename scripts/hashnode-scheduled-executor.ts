@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import fetch from 'node-fetch';
+import { hashnodeGraphql } from './hashnode-api.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -11,7 +11,6 @@ dotenv.config({ path: path.resolve(REPO_ROOT, '.env.local') });
 
 const TOKEN = process.env.HASHNODE_TOKEN!;
 const PUB_ID = process.env.HASHNODE_PUBLICATION_ID!;
-const GQL_URL = 'https://gql.hashnode.com';
 
 const TIMEZONE_OFFSET_HOURS = 5.5;
 const POSTS_FILE = path.resolve(__dirname, 'hashnode-posts.json');
@@ -78,19 +77,7 @@ function extractEssayContent(slug: string): { title: string; body: string } | nu
 }
 
 async function gql(query: string, variables: Record<string, any> = {}): Promise<any> {
-  const res = await fetch(GQL_URL, {
-    method: 'POST',
-    headers: {
-      Authorization: TOKEN,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ query, variables }),
-  });
-  const data = await res.json() as any;
-  if (data.errors) {
-    throw new Error(data.errors.map((e: any) => e.message).join('; '));
-  }
-  return data.data;
+  return hashnodeGraphql(query, variables, TOKEN);
 }
 
 async function publishArticle(post: HashnodePost): Promise<string> {

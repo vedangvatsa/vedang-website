@@ -116,6 +116,13 @@ jobs:
         continue-on-error: true
         run: npx tsx scripts/buffer-viz-scheduled-executor.ts
 
+      - name: Check Hashnode account and publication without posting
+        if: always() && steps.due.outputs.run == 'true' && inputs.mode == 'preflight'
+        run: npx tsx scripts/hashnode-preflight.ts
+        env:
+          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+
       - name: Publish due videos through direct integrations
         if: steps.due.outputs.run == 'true' && inputs.mode != 'preflight' && env.VIZ_DIRECT_PLATFORMS != ''
         id: native
