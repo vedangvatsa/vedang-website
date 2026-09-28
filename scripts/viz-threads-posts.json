@@ -59,8 +59,8 @@
     "notesUrl": "https://veda.ng/viz-notes/03.txt",
     "scheduleDate": "2026-09-25",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-28T10:55:48.863Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
@@ -72,9 +72,11 @@
       "evidenceRun": "https://github.com/vedangvatsa/vedang-website/actions/runs/36411841531",
       "reason": "Container processing failed before threads_publish. Read-only history covered the attempt, checked 100 posts, and found no matching caption. Retry authorized."
     },
-    "attemptedAt": "2026-09-25T15:27:24.979Z",
-    "attemptedSlot": "2026-09-25T20:00",
-    "publishedText": "How much of the population uses the internet?\n\n2000-2024. The share of people who used the internet in the previous three months. Data source: ITU."
+    "attemptedAt": "2026-09-28T10:55:16.113Z",
+    "attemptedSlot": "2026-09-28T14:00",
+    "publishedText": "How much of the population uses the internet?\n\n2000-2024. The share of people who used the internet in the previous three months. Data source: ITU.",
+    "state": "sent",
+    "platformPostId": "18140046574715127"
   },
   {
     "id": "viz-threads-04",
