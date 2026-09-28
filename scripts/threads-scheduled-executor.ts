@@ -320,6 +320,7 @@ async function main() {
     console.log(`  ✅ Published: ${mediaId}`);
   } catch (err: any) {
     post.error = err.message;
+    process.exitCode = 1;
     console.error(`  ❌ Failed: ${err.message}`);
   }
 
@@ -328,4 +329,4 @@ async function main() {
   console.log('\n💾 Updated threads-posts.json');
 }
 
-if (isMain(import.meta.url)) main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(err => { console.error(err); process.exitCode = 1; });

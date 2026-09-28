@@ -168,6 +168,7 @@ async function main() {
     console.log(`  ✅ Published: ${url}`);
   } catch (err: any) {
     post.error = err.message;
+    process.exitCode = 1;
     console.error(`  ❌ Failed: ${err.message}`);
   }
 
@@ -175,4 +176,4 @@ async function main() {
   console.log('\n💾 Updated hashnode-posts.json');
 }
 
-main().catch(console.error);
+main().catch(err => { console.error(err); process.exitCode = 1; });

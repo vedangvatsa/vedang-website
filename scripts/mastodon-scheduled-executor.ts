@@ -158,6 +158,7 @@ async function main() {
       break; // Only 1 successful post per run
     } catch (err: any) {
       post.error = err.message;
+      process.exitCode = 1;
       console.error(`  ❌ Failed: ${err.message}`);
       break;
     }
@@ -167,4 +168,4 @@ async function main() {
   console.log('\n💾 Updated mastodon-posts.json');
 }
 
-if (isMain(import.meta.url)) main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(err => { console.error(err); process.exitCode = 1; });

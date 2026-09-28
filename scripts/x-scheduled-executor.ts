@@ -223,6 +223,7 @@ async function main() {
     } else {
       console.error(`❌ Failed: ${result.error}`);
       post.error = result.error;
+      process.exitCode = 1;
       modified = true;
       break; // Stop on failure too
     }
@@ -250,4 +251,4 @@ async function main() {
   }
 }
 
-if (isMain(import.meta.url)) main().catch(console.error);
+if (isMain(import.meta.url)) main().catch(err => { console.error(err); process.exitCode = 1; });

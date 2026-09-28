@@ -99,14 +99,20 @@ jobs:
         run: npx tsx --test scripts/viz-publishing.test.ts
 
       - name: Read-only account preflight
+        id: buffer_preflight
+        continue-on-error: true
         if: steps.due.outputs.run == 'true' && inputs.mode == 'preflight'
         run: npx tsx scripts/viz-platform-preflight.ts --only=buffer
 
       - name: Verify public launch media and credit links
+        id: media_preflight
+        continue-on-error: true
         if: steps.due.outputs.run == 'true' && inputs.mode == 'preflight'
         run: npx tsx scripts/verify-buffer-launch.ts --all
 
       - name: Check all direct-platform credentials without posting
+        id: direct_preflight
+        continue-on-error: true
         if: steps.due.outputs.run == 'true' && inputs.mode == 'preflight' && inputs.include_direct == true
         run: npx tsx scripts/viz-platform-preflight.ts --only=direct
 
@@ -117,6 +123,8 @@ jobs:
         run: npx tsx scripts/buffer-viz-scheduled-executor.ts
 
       - name: Check Hashnode account and publication without posting
+        id: hashnode_preflight
+        continue-on-error: true
         if: always() && steps.due.outputs.run == 'true' && inputs.mode == 'preflight'
         run: npx tsx scripts/hashnode-preflight.ts
         env:
@@ -146,5 +154,7 @@ jobs:
           file_pattern: "scripts/viz-*-posts.json"
 
       - name: Report publishing failures
-        if: always() && (steps.buffer.outcome == 'failure' || steps.native.outcome == 'failure')
-        run: exit 1
+        if: always() && steps.due.outputs.run == 'true'
+        env:
+          PLATFORM_STEPS: ${{ toJSON(steps) }}
+        run: node scripts/report-platform-outcomes.mjs buffer native buffer_preflight media_preflight direct_preflight hashnode_preflight

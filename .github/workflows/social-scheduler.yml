@@ -40,6 +40,8 @@ jobs:
         run: echo "::add-mask::${{ secrets.LINKEDIN_ACCESS_TOKEN }}"
       
       - name: Post to X (Twitter)
+        id: x
+        continue-on-error: true
         run: npx tsx scripts/x-scheduled-executor.ts
         env:
           X_API_KEY: ${{ secrets.X_API_KEY }}
@@ -69,6 +71,8 @@ jobs:
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
 
       - name: Post to Bluesky
+        id: bluesky
+        continue-on-error: true
         run: npx tsx scripts/bluesky-scheduled-executor.ts
         env:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
@@ -82,12 +86,16 @@ jobs:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
 
       - name: Post to Facebook
+        id: facebook
+        continue-on-error: true
         run: npx tsx scripts/facebook-scheduled-executor.ts
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
 
       - name: Post to Instagram
+        id: instagram
+        continue-on-error: true
         run: npx tsx scripts/instagram-scheduled-executor.ts
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
@@ -95,12 +103,16 @@ jobs:
           INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
 
       - name: Post to Threads
+        id: threads
+        continue-on-error: true
         run: npx tsx scripts/threads-scheduled-executor.ts
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
 
       - name: Post to Tumblr
+        id: tumblr
+        continue-on-error: true
         run: npx tsx scripts/tumblr-scheduled-executor.ts
         env:
           TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
@@ -110,6 +122,8 @@ jobs:
           TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
 
       - name: Post to Farcaster
+        id: farcaster
+        continue-on-error: true
         run: npx tsx scripts/farcaster-scheduled-executor.ts
         env:
           NEYNAR_API_KEY: ${{ secrets.NEYNAR_API_KEY }}
@@ -124,27 +138,41 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Post to Mastodon
+        id: mastodon
+        continue-on-error: true
         run: npx tsx scripts/mastodon-scheduled-executor.ts
         env:
           MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
 
       - name: Publish to Dev.to
+        id: devto
+        continue-on-error: true
         run: npx tsx scripts/devto-scheduled-executor.ts
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
 
       - name: Publish to Hashnode
+        id: hashnode
+        continue-on-error: true
         run: npx tsx scripts/hashnode-scheduled-executor.ts
         env:
           HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
           HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
 
       - name: Pull latest changes before commit
+        if: always()
         run: git pull --rebase origin main || true
 
       - name: Commit updated post files
+        if: always()
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Automated: Social posts status updated [skip ci]"
           file_pattern: "scripts/*-posts.json scripts/*-comment-log.json scripts/linkedin-targets.json"
+
+      - name: Report platform outcomes after saving receipts
+        if: always()
+        env:
+          PLATFORM_STEPS: ${{ toJSON(steps) }}
+        run: node scripts/report-platform-outcomes.mjs x bluesky facebook instagram threads tumblr farcaster mastodon devto hashnode

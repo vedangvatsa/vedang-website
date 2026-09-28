@@ -287,6 +287,7 @@ async function main() {
     console.log(`  ✅ Published: ${mediaId}`);
   } catch (err: any) {
     post.error = err.message;
+    process.exitCode = 1;
     console.error(`  ❌ Failed: ${err.message}`);
   }
 
@@ -295,4 +296,4 @@ async function main() {
   console.log('\n💾 Updated instagram-posts.json');
 }
 
-main().catch(console.error);
+main().catch(err => { console.error(err); process.exitCode = 1; });
