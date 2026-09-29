@@ -212,12 +212,17 @@
     "notesUrl": "https://veda.ng/viz-notes/09.txt",
     "scheduleDate": "2026-09-27",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-29T05:40:54.688Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division",
-    "sourceOrganization": "United Nations Population Division. World Population Prospects., United Nations Population Division, uri: https://population.un.org/wpp/, publisher: United Nations Population Division"
+    "sourceOrganization": "United Nations Population Division. World Population Prospects., United Nations Population Division, uri: https://population.un.org/wpp/, publisher: United Nations Population Division",
+    "state": "sent",
+    "attemptedAt": "2026-09-29T05:40:29.432Z",
+    "attemptedSlot": "2026-09-29T09:00",
+    "publishedText": "Where children make up the largest share.\n\n2000-2024. Children aged 0-14 as a share of the population. Data source: UN Population Division.",
+    "platformPostId": "1439732391398670"
   },
   {
     "id": "viz-facebook-10",

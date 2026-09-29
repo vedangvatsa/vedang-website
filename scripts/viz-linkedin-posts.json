@@ -132,12 +132,17 @@
     "notesUrl": "https://veda.ng/viz-notes/06.txt",
     "scheduleDate": "2026-09-26",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-29T05:41:48.757Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, Eurostat, national statistics",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs);\nDemographic Statistics, Eurostat (ESTAT)"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs);\nDemographic Statistics, Eurostat (ESTAT)",
+    "state": "sent",
+    "attemptedAt": "2026-09-29T05:41:41.266Z",
+    "attemptedSlot": "2026-09-29T09:00",
+    "publishedText": "Births per woman across the years.\n\n2000-2024. Births per woman, based on each year's fertility rates. Data source: UN Population Division, Eurostat, national statistics.",
+    "platformPostId": "urn:li:ugcPost:7510574532366319616"
   },
   {
     "id": "viz-linkedin-07",

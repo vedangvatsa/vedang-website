@@ -227,8 +227,8 @@
     "cover": "scripts/viz-assets/previews/young-population.png",
     "scheduleDate": "2026-09-27",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-29T05:39:24.337Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -239,7 +239,14 @@
     "notesUrl": "https://veda.ng/viz-notes/09.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division",
-    "sourceOrganization": "United Nations Population Division. World Population Prospects., United Nations Population Division, uri: https://population.un.org/wpp/, publisher: United Nations Population Division"
+    "sourceOrganization": "United Nations Population Division. World Population Prospects., United Nations Population Division, uri: https://population.un.org/wpp/, publisher: United Nations Population Division",
+    "publishedText": "Where children make up the largest share.\n\n2000-2024. Children aged 0-14 as a share of the population. Data source: UN Population Division.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-29T09:00",
+    "attemptedAt": "2026-09-29T05:38:26.890Z",
+    "bufferPostId": "6abb4ed393a81b612b5d5246",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dd3BvC3DR07/"
   },
   {
     "id": "viz-ig-10",
