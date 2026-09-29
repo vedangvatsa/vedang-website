@@ -286,7 +286,7 @@
     "posted": false,
     "postedAt": null,
     "igMediaId": null,
-    "error": null,
+    "error": "Buffer HTTP 429",
     "tags": [
       "data visualization",
       "population density"
@@ -295,7 +295,13 @@
     "notesUrl": "https://veda.ng/viz-notes/11.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO, World Bank",
-    "sourceOrganization": "FAO population estimates, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO);\nWorld Bank population estimates, World Bank (WB), publisher: World Bank (WB)"
+    "sourceOrganization": "FAO population estimates, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO);\nWorld Bank population estimates, World Bank (WB), publisher: World Bank (WB)",
+    "publishedText": "People per square kilometre of land.\n\n2000-2023. Residents per square kilometre of land. Data source: FAO, World Bank.",
+    "state": "submitted",
+    "attemptedSlot": "2026-09-29T20:00",
+    "attemptedAt": "2026-09-29T17:02:21.700Z",
+    "bufferPostId": "6abbef1e8db23fcd3a3347b7",
+    "bufferStatus": "sending"
   },
   {
     "id": "viz-ig-12",

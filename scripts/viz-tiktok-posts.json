@@ -298,8 +298,8 @@
     "title": "People per square kilometre of land.\n\n2000-2023. Residents per square kilometre of land. Data source: FAO, World Bank.",
     "scheduleDate": "2026-09-28",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-29T17:06:30.122Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/11-population-density-2000-2023.mp4",
@@ -312,7 +312,14 @@
     "notesUrl": "https://veda.ng/viz-notes/11.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO, World Bank",
-    "sourceOrganization": "FAO population estimates, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO);\nWorld Bank population estimates, World Bank (WB), publisher: World Bank (WB)"
+    "sourceOrganization": "FAO population estimates, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO);\nWorld Bank population estimates, World Bank (WB), publisher: World Bank (WB)",
+    "publishedText": "People per square kilometre of land.\n\n2000-2023. Residents per square kilometre of land. Data source: FAO, World Bank.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-29T20:00",
+    "attemptedAt": "2026-09-29T17:02:21.703Z",
+    "bufferPostId": "6abbef1ee644a3493f082a95",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7691004180898581781"
   },
   {
     "id": "viz-tt-12",

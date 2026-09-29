@@ -251,12 +251,17 @@
     "notesUrl": "https://veda.ng/viz-notes/11.txt",
     "scheduleDate": "2026-09-28",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-29T17:08:14.982Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO, World Bank",
-    "sourceOrganization": "FAO population estimates, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO);\nWorld Bank population estimates, World Bank (WB), publisher: World Bank (WB)"
+    "sourceOrganization": "FAO population estimates, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO);\nWorld Bank population estimates, World Bank (WB), publisher: World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-09-29T17:08:07.819Z",
+    "attemptedSlot": "2026-09-29T20:00",
+    "publishedText": "People per square kilometre of land.\n\n2000-2023. Residents per square kilometre of land. Data source: FAO, World Bank.",
+    "platformPostId": "117355426275720072"
   },
   {
     "id": "viz-mastodon-12",
