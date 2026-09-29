@@ -255,8 +255,8 @@
     "cover": "scripts/viz-assets/previews/working-age.png",
     "scheduleDate": "2026-09-28",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-29T10:09:05.491Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -267,7 +267,14 @@
     "notesUrl": "https://veda.ng/viz-notes/10.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division",
+    "publishedText": "The share of residents aged 15-64.\n\n2000-2024. Residents aged 15-64 as a share of the population. Data source: UN Population Division.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-29T14:00",
+    "attemptedAt": "2026-09-29T10:06:06.575Z",
+    "bufferPostId": "6abb8d8f6a145d6d93c39bbb",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dd3gbljElRG/"
   },
   {
     "id": "viz-ig-11",

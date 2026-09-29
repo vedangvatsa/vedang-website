@@ -236,12 +236,17 @@
     "notesUrl": "https://veda.ng/viz-notes/10.txt",
     "scheduleDate": "2026-09-28",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-29T10:09:37.830Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division",
-    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division"
+    "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division",
+    "state": "sent",
+    "attemptedAt": "2026-09-29T10:09:18.470Z",
+    "attemptedSlot": "2026-09-29T14:00",
+    "publishedText": "The share of residents aged 15-64.\n\n2000-2024. Residents aged 15-64 as a share of the population. Data source: UN Population Division.",
+    "platformPostId": "1807181817083066"
   },
   {
     "id": "viz-facebook-11",
