@@ -385,8 +385,8 @@
     "title": "Mobile connections counted across the years.\n\n2000-2023. Total subscriptions, including multiple connections held by the same person. Data source: ITU.",
     "scheduleDate": "2026-09-29",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-30T18:10:00.124Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/14-mobile-subscriptions-2000-2023.mp4",
@@ -399,7 +399,14 @@
     "notesUrl": "https://veda.ng/viz-notes/14.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)",
+    "publishedText": "Mobile connections counted across the years.\n\n2000-2023. Total subscriptions, including multiple connections held by the same person. Data source: ITU.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-30T20:00",
+    "attemptedAt": "2026-09-30T18:08:15.239Z",
+    "bufferPostId": "6abd500fbfe0bf16c36dbf54",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7691391772664139029"
   },
   {
     "id": "viz-tt-15",
