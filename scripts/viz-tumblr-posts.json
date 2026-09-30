@@ -307,12 +307,17 @@
     "notesUrl": "https://veda.ng/viz-notes/13.txt",
     "scheduleDate": "2026-09-29",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-30T10:01:24.763Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, World Bank",
-    "sourceOrganization": "World Urbanization Prospects, United Nations (UN), uri: https://population.un.org/wup/, note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions, publisher: UN Population Division;\nStaff estimates, World Bank (WB), note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions"
+    "sourceOrganization": "World Urbanization Prospects, United Nations (UN), uri: https://population.un.org/wup/, note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions, publisher: UN Population Division;\nStaff estimates, World Bank (WB), note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions",
+    "state": "sent",
+    "attemptedAt": "2026-09-30T10:01:21.175Z",
+    "attemptedSlot": "2026-09-30T14:00",
+    "publishedText": "The number of people living in rural areas.\n\n2000-2024. Total residents living in rural areas. Data source: UN Population Division, World Bank.",
+    "platformPostId": "829174562589655040"
   },
   {
     "id": "viz-tumblr-14",

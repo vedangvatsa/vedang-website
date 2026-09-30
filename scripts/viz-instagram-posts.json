@@ -339,8 +339,8 @@
     "cover": "scripts/viz-assets/previews/rural-population.png",
     "scheduleDate": "2026-09-29",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-09-30T09:59:21.787Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -351,7 +351,14 @@
     "notesUrl": "https://veda.ng/viz-notes/13.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, World Bank",
-    "sourceOrganization": "World Urbanization Prospects, United Nations (UN), uri: https://population.un.org/wup/, note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions, publisher: UN Population Division;\nStaff estimates, World Bank (WB), note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions"
+    "sourceOrganization": "World Urbanization Prospects, United Nations (UN), uri: https://population.un.org/wup/, note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions, publisher: UN Population Division;\nStaff estimates, World Bank (WB), note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions",
+    "publishedText": "The number of people living in rural areas.\n\n2000-2024. Total residents living in rural areas. Data source: UN Population Division, World Bank.",
+    "state": "sent",
+    "attemptedSlot": "2026-09-30T14:00",
+    "attemptedAt": "2026-09-30T09:58:20.902Z",
+    "bufferPostId": "6abcdd3d591f1cef7af5dcdc",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dd6ERR6FZ4x/"
   },
   {
     "id": "viz-ig-14",
