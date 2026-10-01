@@ -324,12 +324,17 @@
     "notesUrl": "https://veda.ng/viz-notes/14.txt",
     "scheduleDate": "2026-09-29",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-01T14:49:46.533Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)",
+    "state": "sent",
+    "attemptedAt": "2026-10-01T14:49:39.183Z",
+    "attemptedSlot": "2026-10-01T20:00",
+    "publishedText": "Mobile connections counted across the years.\n\n2000-2023. Total subscriptions, including multiple connections held by the same person. Data source: ITU.",
+    "platformPostId": "urn:li:ugcPost:7511437208197689344"
   },
   {
     "id": "viz-linkedin-15",

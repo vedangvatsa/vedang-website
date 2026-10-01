@@ -403,12 +403,17 @@
     "notesUrl": "https://veda.ng/viz-notes/17.txt",
     "scheduleDate": "2026-09-30",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-01T14:49:29.750Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "ILO",
-    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026"
+    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026",
+    "state": "sent",
+    "attemptedAt": "2026-10-01T14:49:25.501Z",
+    "attemptedSlot": "2026-10-01T20:00",
+    "publishedText": "Women aged 15+ working or looking for work.\n\n2000-2024. The share of women aged 15+ in the labour force, using ILO estimates. Data source: ILO.",
+    "platformPostId": "829283284720713728"
   },
   {
     "id": "viz-tumblr-18",

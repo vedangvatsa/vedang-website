@@ -472,8 +472,8 @@
     "title": "Women aged 15+ working or looking for work.\n\n2000-2024. The share of women aged 15+ in the labour force, using ILO estimates. Data source: ILO.",
     "scheduleDate": "2026-09-30",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-01T14:48:07.945Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/17-female-labour-2000-2024.mp4",
@@ -486,7 +486,14 @@
     "notesUrl": "https://veda.ng/viz-notes/17.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "ILO",
-    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026"
+    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026",
+    "publishedText": "Women aged 15+ working or looking for work.\n\n2000-2024. The share of women aged 15+ in the labour force, using ILO estimates. Data source: ILO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-01T20:00",
+    "attemptedAt": "2026-10-01T14:46:23.777Z",
+    "bufferPostId": "6abe72408b671f6cc5dc8ba2",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7691710843020479765"
   },
   {
     "id": "viz-tt-18",
