@@ -423,8 +423,8 @@
     "cover": "scripts/viz-assets/previews/mobile-density.png",
     "scheduleDate": "2026-09-30",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-01T10:26:07.041Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -435,7 +435,14 @@
     "notesUrl": "https://veda.ng/viz-notes/16.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)",
+    "publishedText": "Why mobile subscriptions can exceed 100 per 100 people.\n\n2000-2023. Mobile subscriptions per 100 residents. Data source: ITU.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-01T14:00",
+    "attemptedAt": "2026-10-01T10:25:09.998Z",
+    "bufferPostId": "6abe35065a836d477a9c9ff6",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dd8sKp5iE0G/"
   },
   {
     "id": "viz-ig-17",
