@@ -414,8 +414,8 @@
     "title": "Fixed broadband subscriptions, year by year.\n\n2005-2023. Total fixed broadband subscriptions. Data source: ITU.",
     "scheduleDate": "2026-09-29",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-01T07:30:51.995Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/15-fixed-broadband-2005-2023.mp4",
@@ -428,7 +428,14 @@
     "notesUrl": "https://veda.ng/viz-notes/15.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)",
+    "publishedText": "Fixed broadband subscriptions, year by year.\n\n2005-2023. Total fixed broadband subscriptions. Data source: ITU.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-01T09:00",
+    "attemptedAt": "2026-10-01T07:29:08.215Z",
+    "bufferPostId": "6abe0bc4cbc2e2c98ff7ff3f",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7691597986870185217"
   },
   {
     "id": "viz-tt-16",

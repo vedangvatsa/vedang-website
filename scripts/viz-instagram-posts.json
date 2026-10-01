@@ -395,8 +395,8 @@
     "cover": "scripts/viz-assets/previews/fixed-broadband.png",
     "scheduleDate": "2026-09-29",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-01T07:30:04.794Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -407,7 +407,14 @@
     "notesUrl": "https://veda.ng/viz-notes/15.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)",
+    "publishedText": "Fixed broadband subscriptions, year by year.\n\n2005-2023. Total fixed broadband subscriptions. Data source: ITU.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-01T09:00",
+    "attemptedAt": "2026-10-01T07:29:07.918Z",
+    "bufferPostId": "6abe0bc4cbc2e2c98ff7fe58",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dd8X_VrD17v/"
   },
   {
     "id": "viz-ig-16",

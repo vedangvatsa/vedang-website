@@ -276,12 +276,17 @@
     "notesUrl": "https://veda.ng/viz-notes/12.txt",
     "scheduleDate": "2026-09-28",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-01T07:32:25.791Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, World Bank",
-    "sourceOrganization": "World Urbanization Prospects, United Nations (UN), uri: https://population.un.org/wup/, note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions, publisher: UN Population Division;\nStaff estimates, World Bank (WB), note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions"
+    "sourceOrganization": "World Urbanization Prospects, United Nations (UN), uri: https://population.un.org/wup/, note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions, publisher: UN Population Division;\nStaff estimates, World Bank (WB), note: World Bank staff estimates based on the United Nations Population Division's World Urbanization Prospects, National definitions",
+    "state": "sent",
+    "attemptedAt": "2026-10-01T07:32:17.736Z",
+    "attemptedSlot": "2026-10-01T09:00",
+    "publishedText": "The number of people living in urban areas.\n\n2000-2024. Total residents living in urban areas. Data source: UN Population Division, World Bank.",
+    "platformPostId": "urn:li:ugcPost:7511327145730764802"
   },
   {
     "id": "viz-linkedin-13",
