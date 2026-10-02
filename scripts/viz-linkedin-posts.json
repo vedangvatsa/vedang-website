@@ -372,12 +372,17 @@
     "notesUrl": "https://veda.ng/viz-notes/16.txt",
     "scheduleDate": "2026-09-30",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-02T15:49:04.364Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "ITU",
-    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)"
+    "sourceOrganization": "World Telecommunication/ICT Indicators Database, International Telecommunication Union (ITU)",
+    "state": "sent",
+    "attemptedAt": "2026-10-02T15:48:55.748Z",
+    "attemptedSlot": "2026-10-02T20:00",
+    "publishedText": "Why mobile subscriptions can exceed 100 per 100 people.\n\n2000-2023. Mobile subscriptions per 100 residents. Data source: ITU.",
+    "platformPostId": "urn:li:ugcPost:7511814517971038208"
   },
   {
     "id": "viz-linkedin-17",

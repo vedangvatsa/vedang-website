@@ -452,12 +452,17 @@
     "notesUrl": "https://veda.ng/viz-notes/19.txt",
     "scheduleDate": "2026-10-01",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-02T15:48:07.328Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-02T15:47:40.614Z",
+    "attemptedSlot": "2026-10-02T20:00",
+    "publishedText": "Goods and services sold abroad, in US dollars.\n\n2000-2024. Exports of goods and services in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "platformPostId": "1117514060806431"
   },
   {
     "id": "viz-facebook-20",
