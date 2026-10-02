@@ -419,12 +419,17 @@
     "notesUrl": "https://veda.ng/viz-notes/18.txt",
     "scheduleDate": "2026-09-30",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-02T09:04:57.488Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "OECD, World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-02T09:04:57.105Z",
+    "attemptedSlot": "2026-10-02T14:00",
+    "publishedText": "Imports and exports relative to the size of the economy.\n\n2000-2024. Imports and exports of goods and services as a share of GDP. Data source: OECD, World Bank, national statistics and central banks.",
+    "platformPostId": "0x2c45b9430cb5874570fa0dc45c4de233fe385f96"
   },
   {
     "id": "viz-farcaster-19",

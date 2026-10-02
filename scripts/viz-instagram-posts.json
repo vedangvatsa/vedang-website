@@ -479,8 +479,8 @@
     "cover": "scripts/viz-assets/previews/trade-openness.png",
     "scheduleDate": "2026-09-30",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-02T09:03:09.628Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -491,7 +491,14 @@
     "notesUrl": "https://veda.ng/viz-notes/18.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "OECD, World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)",
+    "publishedText": "Imports and exports relative to the size of the economy.\n\n2000-2024. Imports and exports of goods and services as a share of GDP. Data source: OECD, World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-02T14:00",
+    "attemptedAt": "2026-10-02T09:01:38.398Z",
+    "bufferPostId": "6abf72f2f781c1ecf15d53c2",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dd_HeYSgaiA/"
   },
   {
     "id": "viz-ig-19",
