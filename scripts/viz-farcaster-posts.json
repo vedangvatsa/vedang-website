@@ -515,12 +515,17 @@
     "notesUrl": "https://veda.ng/viz-notes/22.txt",
     "scheduleDate": "2026-10-02",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-03T18:10:57.824Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-03T18:10:57.621Z",
+    "attemptedSlot": "2026-10-03T20:00",
+    "publishedText": "Exports relative to domestic output.\n\n2000-2024. Exports of goods and services as a share of GDP. Data source: World Bank, national statistics and central banks.",
+    "platformPostId": "0x82e40beee2a5bee2bd225b68ce30d91fe4573aa9"
   },
   {
     "id": "viz-farcaster-23",

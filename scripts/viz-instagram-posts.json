@@ -591,8 +591,8 @@
     "cover": "scripts/viz-assets/previews/export-share.png",
     "scheduleDate": "2026-10-02",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-03T18:08:45.161Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -603,7 +603,14 @@
     "notesUrl": "https://veda.ng/viz-notes/22.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "Exports relative to domestic output.\n\n2000-2024. Exports of goods and services as a share of GDP. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-03T20:00",
+    "attemptedAt": "2026-10-03T18:07:48.356Z",
+    "bufferPostId": "6ac14474ad7fd83bc5fdadb7",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeCqqx1DXz9/"
   },
   {
     "id": "viz-ig-23",
