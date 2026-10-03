@@ -588,8 +588,8 @@
     "title": "Economic output divided by population.\n\n2000-2024. GDP per resident in current US dollars. Data source: OECD, World Bank, national statistics and central banks.",
     "scheduleDate": "2026-10-01",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-03T09:25:42.254Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/21-gdp-per-person-2000-2024.mp4",
@@ -602,7 +602,14 @@
     "notesUrl": "https://veda.ng/viz-notes/21.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "OECD, World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)",
+    "publishedText": "Economic output divided by population.\n\n2000-2024. GDP per resident in current US dollars. Data source: OECD, World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-03T14:00",
+    "attemptedAt": "2026-10-03T09:23:59.074Z",
+    "bufferPostId": "6ac0c9af9fdc9f926e72c789",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7692369916879506696"
   },
   {
     "id": "viz-tt-22",

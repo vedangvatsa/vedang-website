@@ -491,12 +491,17 @@
     "notesUrl": "https://veda.ng/viz-notes/21.txt",
     "scheduleDate": "2026-10-01",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-03T09:27:01.611Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "OECD, World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-03T09:27:01.261Z",
+    "attemptedSlot": "2026-10-03T14:00",
+    "publishedText": "Economic output divided by population.\n\n2000-2024. GDP per resident in current US dollars. Data source: OECD, World Bank, national statistics and central banks.",
+    "platformPostId": "0xce03327ee0a3ddfa73f374de5dbee460f5aef654"
   },
   {
     "id": "viz-farcaster-22",
