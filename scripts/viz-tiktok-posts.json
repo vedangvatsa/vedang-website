@@ -559,8 +559,8 @@
     "title": "Goods and services bought from abroad, in US dollars.\n\n2000-2024. Imports of goods and services in current US dollars. Data source: World Bank, national statistics and central banks.",
     "scheduleDate": "2026-10-01",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-03T03:33:45.976Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/20-imports-2000-2024.mp4",
@@ -573,7 +573,14 @@
     "notesUrl": "https://veda.ng/viz-notes/20.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "Goods and services bought from abroad, in US dollars.\n\n2000-2024. Imports of goods and services in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-03T09:00",
+    "attemptedAt": "2026-10-03T03:32:02.382Z",
+    "bufferPostId": "6ac077329fdc9f926e687820",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7692279229475491090"
   },
   {
     "id": "viz-tt-21",
