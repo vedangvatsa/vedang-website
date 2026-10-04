@@ -468,12 +468,17 @@
     "notesUrl": "https://veda.ng/viz-notes/20.txt",
     "scheduleDate": "2026-10-01",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-04T04:04:02.971Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-04T04:03:55.245Z",
+    "attemptedSlot": "2026-10-04T09:00",
+    "publishedText": "Goods and services bought from abroad, in US dollars.\n\n2000-2024. Imports of goods and services in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "platformPostId": "urn:li:ugcPost:7512361868594700288"
   },
   {
     "id": "viz-linkedin-21",

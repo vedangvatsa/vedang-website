@@ -619,8 +619,8 @@
     "cover": "scripts/viz-assets/previews/import-share.png",
     "scheduleDate": "2026-10-02",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-04T04:01:36.092Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -631,7 +631,14 @@
     "notesUrl": "https://veda.ng/viz-notes/23.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "Imports relative to domestic output.\n\n2000-2024. Imports of goods and services as a share of GDP. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-04T09:00",
+    "attemptedAt": "2026-10-04T04:00:26.765Z",
+    "bufferPostId": "6ac1cf5baa79e514b90acf7b",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeDuijDinxV/"
   },
   {
     "id": "viz-ig-24",

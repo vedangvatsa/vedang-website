@@ -646,8 +646,8 @@
     "title": "Imports relative to domestic output.\n\n2000-2024. Imports of goods and services as a share of GDP. Data source: World Bank, national statistics and central banks.",
     "scheduleDate": "2026-10-02",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-04T04:02:13.884Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/23-import-share-2000-2024.mp4",
@@ -660,7 +660,14 @@
     "notesUrl": "https://veda.ng/viz-notes/23.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "Imports relative to domestic output.\n\n2000-2024. Imports of goods and services as a share of GDP. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-04T09:00",
+    "attemptedAt": "2026-10-04T04:00:26.752Z",
+    "bufferPostId": "6ac1cf5baa79e514b90acf79",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7692657640979172660"
   },
   {
     "id": "viz-tt-24",
