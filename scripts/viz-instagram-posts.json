@@ -647,8 +647,8 @@
     "cover": "scripts/viz-assets/previews/industry.png",
     "scheduleDate": "2026-10-02",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-04T10:03:36.354Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -659,7 +659,14 @@
     "notesUrl": "https://veda.ng/viz-notes/24.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "Industry's contribution to economic output.\n\n2000-2024. Industrial value added, including construction, in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-04T14:00",
+    "attemptedAt": "2026-10-04T10:03:10.086Z",
+    "bufferPostId": "6ac2245eaa79e514b9162546",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeEYAJTiVGV/"
   },
   {
     "id": "viz-ig-25",

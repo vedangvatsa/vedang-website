@@ -563,12 +563,17 @@
     "notesUrl": "https://veda.ng/viz-notes/24.txt",
     "scheduleDate": "2026-10-02",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-04T10:06:21.357Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-04T10:06:20.988Z",
+    "attemptedSlot": "2026-10-04T14:00",
+    "publishedText": "Industry's contribution to economic output.\n\n2000-2024. Industrial value added, including construction, in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "platformPostId": "0x1fc6c230c3c7d83ac98e4c2ff7116a0c90cde5c6"
   },
   {
     "id": "viz-farcaster-25",

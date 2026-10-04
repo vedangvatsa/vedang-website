@@ -675,8 +675,8 @@
     "title": "Industry's contribution to economic output.\n\n2000-2024. Industrial value added, including construction, in current US dollars. Data source: World Bank, national statistics and central banks.",
     "scheduleDate": "2026-10-02",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-04T10:04:53.618Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/24-industry-2000-2024.mp4",
@@ -689,7 +689,14 @@
     "notesUrl": "https://veda.ng/viz-notes/24.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "Industry's contribution to economic output.\n\n2000-2024. Industrial value added, including construction, in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-04T14:00",
+    "attemptedAt": "2026-10-04T10:03:09.998Z",
+    "bufferPostId": "6ac2245e814d657011ed300e",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7692751109181508871"
   },
   {
     "id": "viz-tt-25",
