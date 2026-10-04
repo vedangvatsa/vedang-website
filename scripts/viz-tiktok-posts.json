@@ -704,8 +704,8 @@
     "title": "Manufacturing output after subtracting intermediate inputs.\n\n2000-2024. Manufacturing value added in current US dollars. Data source: World Bank, national statistics and central banks.",
     "scheduleDate": "2026-10-03",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-04T15:32:50.596Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/25-manufacturing-2000-2024.mp4",
@@ -718,7 +718,14 @@
     "notesUrl": "https://veda.ng/viz-notes/25.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "Manufacturing output after subtracting intermediate inputs.\n\n2000-2024. Manufacturing value added in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-04T20:00",
+    "attemptedAt": "2026-10-04T15:30:42.869Z",
+    "bufferPostId": "6ac27123d8dbde86e14d9d4a",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7692835619935931669"
   },
   {
     "id": "viz-tt-26",

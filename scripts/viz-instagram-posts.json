@@ -675,8 +675,8 @@
     "cover": "scripts/viz-assets/previews/manufacturing.png",
     "scheduleDate": "2026-10-03",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-04T15:31:50.146Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -687,7 +687,14 @@
     "notesUrl": "https://veda.ng/viz-notes/25.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "Manufacturing output after subtracting intermediate inputs.\n\n2000-2024. Manufacturing value added in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-04T20:00",
+    "attemptedAt": "2026-10-04T15:30:42.876Z",
+    "bufferPostId": "6ac27123fb26f2c2fb657112",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeE9f2yD_SR/"
   },
   {
     "id": "viz-ig-26",
