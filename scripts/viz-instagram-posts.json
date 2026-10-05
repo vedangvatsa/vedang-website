@@ -703,8 +703,8 @@
     "cover": "scripts/viz-assets/previews/health-spending.png",
     "scheduleDate": "2026-10-03",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-05T06:32:33.831Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -715,7 +715,14 @@
     "notesUrl": "https://veda.ng/viz-notes/26.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "WHO",
-    "sourceOrganization": "Global Health Expenditure Database, updated December 12th, 2025, World Health Organization (WHO), uri: https://apps.who.int/nha/database"
+    "sourceOrganization": "Global Health Expenditure Database, updated December 12th, 2025, World Health Organization (WHO), uri: https://apps.who.int/nha/database",
+    "publishedText": "How much of the economy goes to current healthcare spending.\n\n2000-2023. Current healthcare spending as a share of GDP. Data source: WHO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-05T09:00",
+    "attemptedAt": "2026-10-05T06:31:35.196Z",
+    "bufferPostId": "6ac34447fe1389e413543b94",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeGkmKKAPtc/"
   },
   {
     "id": "viz-ig-27",

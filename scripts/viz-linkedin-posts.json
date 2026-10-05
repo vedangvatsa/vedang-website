@@ -540,12 +540,17 @@
     "notesUrl": "https://veda.ng/viz-notes/23.txt",
     "scheduleDate": "2026-10-02",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-05T06:34:56.905Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-05T06:34:43.628Z",
+    "attemptedSlot": "2026-10-05T09:00",
+    "publishedText": "Imports relative to domestic output.\n\n2000-2024. Imports of goods and services as a share of GDP. Data source: World Bank, national statistics and central banks.",
+    "platformPostId": "urn:li:ugcPost:7512762231533768705"
   },
   {
     "id": "viz-linkedin-24",
