@@ -759,8 +759,8 @@
     "cover": "scripts/viz-assets/previews/remittances.png",
     "scheduleDate": "2026-10-04",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-05T15:15:58.503Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -771,7 +771,14 @@
     "notesUrl": "https://veda.ng/viz-notes/28.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "IMF, World Bank",
-    "sourceOrganization": "IMF balance of payments data, International Monetary Fund (IMF);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "IMF balance of payments data, International Monetary Fund (IMF);\nStaff estimates, World Bank (WB)",
+    "publishedText": "Money reaching home through personal remittances.\n\n2000-2024. Personal remittances received in current US dollars. Data source: IMF, World Bank.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-05T20:00",
+    "attemptedAt": "2026-10-05T15:15:15.604Z",
+    "bufferPostId": "6ac3bf0417bda7a6efbbb282",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeHghbmFD2D/"
   },
   {
     "id": "viz-ig-29",

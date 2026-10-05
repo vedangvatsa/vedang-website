@@ -588,12 +588,17 @@
     "notesUrl": "https://veda.ng/viz-notes/25.txt",
     "scheduleDate": "2026-10-03",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-05T15:18:53.442Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-05T15:18:46.500Z",
+    "attemptedSlot": "2026-10-05T20:00",
+    "publishedText": "Manufacturing output after subtracting intermediate inputs.\n\n2000-2024. Manufacturing value added in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "platformPostId": "urn:li:ugcPost:7512894085695746048"
   },
   {
     "id": "viz-linkedin-26",

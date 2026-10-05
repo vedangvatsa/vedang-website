@@ -791,8 +791,8 @@
     "title": "Money reaching home through personal remittances.\n\n2000-2024. Personal remittances received in current US dollars. Data source: IMF, World Bank.",
     "scheduleDate": "2026-10-04",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-05T15:17:17.297Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/28-remittances-2000-2024.mp4",
@@ -805,7 +805,14 @@
     "notesUrl": "https://veda.ng/viz-notes/28.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "IMF, World Bank",
-    "sourceOrganization": "IMF balance of payments data, International Monetary Fund (IMF);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "IMF balance of payments data, International Monetary Fund (IMF);\nStaff estimates, World Bank (WB)",
+    "publishedText": "Money reaching home through personal remittances.\n\n2000-2024. Personal remittances received in current US dollars. Data source: IMF, World Bank.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-05T20:00",
+    "attemptedAt": "2026-10-05T15:15:15.600Z",
+    "bufferPostId": "6ac3bf0417bda7a6efbbb280",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7693202667765550354"
   },
   {
     "id": "viz-tt-29",
