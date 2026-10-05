@@ -762,8 +762,8 @@
     "title": "The services sector's contribution to output.\n\n2000-2024. Services value added in current US dollars. Data source: World Bank, national statistics and central banks.",
     "scheduleDate": "2026-10-03",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-05T10:50:19.223Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/27-services-2000-2024.mp4",
@@ -776,7 +776,14 @@
     "notesUrl": "https://veda.ng/viz-notes/27.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "The services sector's contribution to output.\n\n2000-2024. Services value added in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-05T14:00",
+    "attemptedAt": "2026-10-05T10:48:35.326Z",
+    "bufferPostId": "6ac380831f2bcf18e1175ad0",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7693133907897765140"
   },
   {
     "id": "viz-tt-28",

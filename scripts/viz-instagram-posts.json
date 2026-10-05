@@ -731,8 +731,8 @@
     "cover": "scripts/viz-assets/previews/services.png",
     "scheduleDate": "2026-10-03",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-05T10:49:35.252Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -743,7 +743,14 @@
     "notesUrl": "https://veda.ng/viz-notes/27.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank, national statistics and central banks",
-    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "Country official statistics, National Statistical Offices (NSOs);\nNational Accounts data files, Central Banks;\nStaff estimates, World Bank (WB)",
+    "publishedText": "The services sector's contribution to output.\n\n2000-2024. Services value added in current US dollars. Data source: World Bank, national statistics and central banks.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-05T14:00",
+    "attemptedAt": "2026-10-05T10:48:35.328Z",
+    "bufferPostId": "6ac380831f2bcf18e1175acb",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeHB_tyjlyb/"
   },
   {
     "id": "viz-ig-28",
