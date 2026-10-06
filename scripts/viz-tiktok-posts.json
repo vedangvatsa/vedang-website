@@ -849,8 +849,8 @@
     "title": "People without work who are available and looking for it.\n\n2000-2024. The unemployed share of the labour force, using ILO estimates. Data source: ILO.",
     "scheduleDate": "2026-10-04",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-06T15:58:49.081Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/30-unemployment-2000-2024.mp4",
@@ -863,7 +863,14 @@
     "notesUrl": "https://veda.ng/viz-notes/30.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "ILO",
-    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026"
+    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026",
+    "publishedText": "People without work who are available and looking for it.\n\n2000-2024. The unemployed share of the labour force, using ILO estimates. Data source: ILO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-06T20:00",
+    "attemptedAt": "2026-10-06T15:57:05.254Z",
+    "bufferPostId": "6ac51a51f2aae537b2478ac7",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7693584340252511494"
   },
   {
     "id": "viz-tt-31",
