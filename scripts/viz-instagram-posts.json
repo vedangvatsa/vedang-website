@@ -787,8 +787,8 @@
     "cover": "scripts/viz-assets/previews/reserves.png",
     "scheduleDate": "2026-10-04",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-06T09:08:53.607Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -799,7 +799,14 @@
     "notesUrl": "https://veda.ng/viz-notes/29.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "IMF",
-    "sourceOrganization": "International Financial Statistics database, International Monetary Fund (IMF)"
+    "sourceOrganization": "International Financial Statistics database, International Monetary Fund (IMF)",
+    "publishedText": "Official reserves, including gold.\n\n2000-2024. Official reserves, including gold, in current US dollars. Data source: IMF.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-06T14:00",
+    "attemptedAt": "2026-10-06T09:07:55.321Z",
+    "bufferPostId": "6ac4ba6bac9d8dd9cc477543",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeJbRXsnUli/"
   },
   {
     "id": "viz-ig-30",
