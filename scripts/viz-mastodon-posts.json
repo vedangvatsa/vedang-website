@@ -755,12 +755,17 @@
     "notesUrl": "https://veda.ng/viz-notes/32.txt",
     "scheduleDate": "2026-10-05",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-07T10:35:28.681Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UNCTAD",
-    "sourceOrganization": "UN Conference on Trade and Development (UNCTAD), uri: http://unctad.org/en/Pages/statistics.aspx"
+    "sourceOrganization": "UN Conference on Trade and Development (UNCTAD), uri: http://unctad.org/en/Pages/statistics.aspx",
+    "state": "sent",
+    "attemptedAt": "2026-10-07T10:35:21.270Z",
+    "attemptedSlot": "2026-10-07T14:00",
+    "publishedText": "Container traffic through ports.\n\n2010-2020. Container traffic in twenty-foot-equivalent units. Data source: UNCTAD.",
+    "platformPostId": "117399180317963441"
   },
   {
     "id": "viz-mastodon-33",

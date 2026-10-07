@@ -907,8 +907,8 @@
     "title": "Container traffic through ports.\n\n2010-2020. Container traffic in twenty-foot-equivalent units. Data source: UNCTAD.",
     "scheduleDate": "2026-10-05",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-07T10:33:59.914Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/32-container-ports-2010-2020.mp4",
@@ -921,7 +921,14 @@
     "notesUrl": "https://veda.ng/viz-notes/32.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UNCTAD",
-    "sourceOrganization": "UN Conference on Trade and Development (UNCTAD), uri: http://unctad.org/en/Pages/statistics.aspx"
+    "sourceOrganization": "UN Conference on Trade and Development (UNCTAD), uri: http://unctad.org/en/Pages/statistics.aspx",
+    "publishedText": "Container traffic through ports.\n\n2010-2020. Container traffic in twenty-foot-equivalent units. Data source: UNCTAD.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-07T14:00",
+    "attemptedAt": "2026-10-07T10:32:16.768Z",
+    "bufferPostId": "6ac61fb133884235d9d74aba",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7693871891752226068"
   },
   {
     "id": "viz-tt-33",
