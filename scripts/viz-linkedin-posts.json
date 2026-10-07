@@ -660,12 +660,17 @@
     "notesUrl": "https://veda.ng/viz-notes/28.txt",
     "scheduleDate": "2026-10-04",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-07T06:21:09.755Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "IMF, World Bank",
-    "sourceOrganization": "IMF balance of payments data, International Monetary Fund (IMF);\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "IMF balance of payments data, International Monetary Fund (IMF);\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-07T06:21:02.239Z",
+    "attemptedSlot": "2026-10-07T09:00",
+    "publishedText": "Money reaching home through personal remittances.\n\n2000-2024. Personal remittances received in current US dollars. Data source: IMF, World Bank.",
+    "platformPostId": "urn:li:ugcPost:7513483537942048769"
   },
   {
     "id": "viz-linkedin-29",

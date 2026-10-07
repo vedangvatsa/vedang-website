@@ -739,12 +739,17 @@
     "notesUrl": "https://veda.ng/viz-notes/31.txt",
     "scheduleDate": "2026-10-05",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-07T06:20:53.175Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "ICAO",
-    "sourceOrganization": "Civil Aviation Statistics of the World, International Civil Aviation Organization (ICAO), uri: https://data.icao.int/newdataplus/#:~:text=ICAO%20data%20is%20comprised%20of,information%20about%20commercial%20air%20carriers;\nICAO Staff estimates, International Civil Aviation Organization (ICAO), uri: https://data.icao.int/newdataplus/#:~:text=ICAO%20data%20is%20comprised%20of,information%20about%20commercial%20air%20carriers"
+    "sourceOrganization": "Civil Aviation Statistics of the World, International Civil Aviation Organization (ICAO), uri: https://data.icao.int/newdataplus/#:~:text=ICAO%20data%20is%20comprised%20of,information%20about%20commercial%20air%20carriers;\nICAO Staff estimates, International Civil Aviation Organization (ICAO), uri: https://data.icao.int/newdataplus/#:~:text=ICAO%20data%20is%20comprised%20of,information%20about%20commercial%20air%20carriers",
+    "state": "sent",
+    "attemptedAt": "2026-10-07T06:20:49.401Z",
+    "attemptedSlot": "2026-10-07T09:00",
+    "publishedText": "Passenger journeys carried by registered airlines.\n\n2000-2023. Passengers carried by airlines registered in each economy. Data source: ICAO.",
+    "platformPostId": "829794867589824512"
   },
   {
     "id": "viz-tumblr-32",
