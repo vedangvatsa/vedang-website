@@ -708,12 +708,17 @@
     "notesUrl": "https://veda.ng/viz-notes/30.txt",
     "scheduleDate": "2026-10-04",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-07T19:36:17.412Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "ILO",
-    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026"
+    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026",
+    "state": "sent",
+    "attemptedAt": "2026-10-07T19:36:08.366Z",
+    "attemptedSlot": "2026-10-07T20:00",
+    "publishedText": "People without work who are available and looking for it.\n\n2000-2024. The unemployed share of the labour force, using ILO estimates. Data source: ILO.",
+    "platformPostId": "urn:li:ugcPost:7513683638392262656"
   },
   {
     "id": "viz-linkedin-31",

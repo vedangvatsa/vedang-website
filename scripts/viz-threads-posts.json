@@ -690,12 +690,17 @@
     "notesUrl": "https://veda.ng/viz-notes/29.txt",
     "scheduleDate": "2026-10-04",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-07T19:35:54.505Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "IMF",
-    "sourceOrganization": "International Financial Statistics database, International Monetary Fund (IMF)"
+    "sourceOrganization": "International Financial Statistics database, International Monetary Fund (IMF)",
+    "state": "sent",
+    "attemptedAt": "2026-10-07T19:35:21.667Z",
+    "attemptedSlot": "2026-10-07T20:00",
+    "publishedText": "Official reserves, including gold.\n\n2000-2024. Official reserves, including gold, in current US dollars. Data source: IMF.",
+    "platformPostId": "18426117715144166"
   },
   {
     "id": "viz-threads-30",

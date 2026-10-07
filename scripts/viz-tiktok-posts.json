@@ -936,8 +936,8 @@
     "title": "Goods moved by rail, weighted by distance.\n\n2000-2011. Rail freight in tonne-kilometres. Data source: UIC, OECD.",
     "scheduleDate": "2026-10-05",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-07T19:34:43.844Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/33-rail-freight-2000-2011.mp4",
@@ -950,7 +950,14 @@
     "notesUrl": "https://veda.ng/viz-notes/33.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UIC, OECD",
-    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)"
+    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)",
+    "publishedText": "Goods moved by rail, weighted by distance.\n\n2000-2011. Rail freight in tonne-kilometres. Data source: UIC, OECD.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-07T20:00",
+    "attemptedAt": "2026-10-07T19:32:59.794Z",
+    "bufferPostId": "6ac69e6c66aa35478820a7b8",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7694011206847221012"
   },
   {
     "id": "viz-tt-34",

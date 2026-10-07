@@ -899,8 +899,8 @@
     "cover": "scripts/viz-assets/previews/rail-freight.png",
     "scheduleDate": "2026-10-05",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-07T19:33:59.786Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -911,7 +911,14 @@
     "notesUrl": "https://veda.ng/viz-notes/33.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UIC, OECD",
-    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)"
+    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)",
+    "publishedText": "Goods moved by rail, weighted by distance.\n\n2000-2011. Rail freight in tonne-kilometres. Data source: UIC, OECD.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-07T20:00",
+    "attemptedAt": "2026-10-07T19:32:59.783Z",
+    "bufferPostId": "6ac69e6c05769b096e402bfa",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeNHmQ7gdJD/"
   },
   {
     "id": "viz-ig-34",
