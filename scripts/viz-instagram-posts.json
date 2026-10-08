@@ -927,8 +927,8 @@
     "cover": "scripts/viz-assets/previews/rail-travel.png",
     "scheduleDate": "2026-10-06",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-08T10:29:06.875Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -939,7 +939,14 @@
     "notesUrl": "https://veda.ng/viz-notes/34.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UIC, OECD",
-    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)"
+    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)",
+    "publishedText": "Rail journeys measured by distance travelled.\n\n2000-2012. Rail travel in passenger-kilometres. Data source: UIC, OECD.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-08T14:00",
+    "attemptedAt": "2026-10-08T10:28:10.550Z",
+    "bufferPostId": "6ac7703a2e5678988bf599cd",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeOuCuVlasv/"
   },
   {
     "id": "viz-ig-35",

@@ -965,8 +965,8 @@
     "title": "Rail journeys measured by distance travelled.\n\n2000-2012. Rail travel in passenger-kilometres. Data source: UIC, OECD.",
     "scheduleDate": "2026-10-06",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-08T10:29:53.628Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/34-rail-travel-2000-2012.mp4",
@@ -979,7 +979,14 @@
     "notesUrl": "https://veda.ng/viz-notes/34.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UIC, OECD",
-    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)"
+    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)",
+    "publishedText": "Rail journeys measured by distance travelled.\n\n2000-2012. Rail travel in passenger-kilometres. Data source: UIC, OECD.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-08T14:00",
+    "attemptedAt": "2026-10-08T10:28:10.436Z",
+    "bufferPostId": "6ac7703a2e8ec2ab2a3844f0",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7694241908700368149"
   },
   {
     "id": "viz-tt-35",

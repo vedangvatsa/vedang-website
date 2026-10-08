@@ -812,12 +812,17 @@
     "notesUrl": "https://veda.ng/viz-notes/34.txt",
     "scheduleDate": "2026-10-06",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-08T10:30:32.606Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UIC, OECD",
-    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)"
+    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)",
+    "state": "sent",
+    "attemptedAt": "2026-10-08T10:30:06.460Z",
+    "attemptedSlot": "2026-10-08T14:00",
+    "publishedText": "Rail journeys measured by distance travelled.\n\n2000-2012. Rail travel in passenger-kilometres. Data source: UIC, OECD.",
+    "platformPostId": "1149809647705097"
   },
   {
     "id": "viz-facebook-35",
