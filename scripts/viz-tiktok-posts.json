@@ -994,8 +994,8 @@
     "title": "The share of people with electricity access.\n\n2000-2024. The share of residents with electricity access. Data source: World Bank.",
     "scheduleDate": "2026-10-06",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-08T17:36:14.518Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/35-electricity-access-2000-2024.mp4",
@@ -1008,7 +1008,14 @@
     "notesUrl": "https://veda.ng/viz-notes/35.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank",
-    "sourceOrganization": "SDG 7.1.1 Electrification Dataset, World Bank (WB), uri: https://trackingsdg7.esmap.org/downloads, note: Data is downloaded from ESMAP website. Data is released when a new Tracking SDG7 report is released., publisher: World Bank (WB), date accessed: 2024-05-16, date published: 2023"
+    "sourceOrganization": "SDG 7.1.1 Electrification Dataset, World Bank (WB), uri: https://trackingsdg7.esmap.org/downloads, note: Data is downloaded from ESMAP website. Data is released when a new Tracking SDG7 report is released., publisher: World Bank (WB), date accessed: 2024-05-16, date published: 2023",
+    "publishedText": "The share of people with electricity access.\n\n2000-2024. The share of residents with electricity access. Data source: World Bank.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-08T20:00",
+    "attemptedAt": "2026-10-08T17:34:31.464Z",
+    "bufferPostId": "6ac7d427f4c7c231297e6a2b",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7694351745484459285"
   },
   {
     "id": "viz-tt-36",
