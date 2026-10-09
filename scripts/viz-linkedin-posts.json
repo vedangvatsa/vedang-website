@@ -780,12 +780,17 @@
     "notesUrl": "https://veda.ng/viz-notes/33.txt",
     "scheduleDate": "2026-10-05",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-09T09:35:02.742Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UIC, OECD",
-    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)"
+    "sourceOrganization": "Railisa Database (UIC), International Union of Railways (UIC), uri: https://uic-stats.uic.org/select/;\nOECD Statistics, Organisation for Economic Co-operation and Development (OECD)",
+    "state": "sent",
+    "attemptedAt": "2026-10-09T09:34:55.308Z",
+    "attemptedSlot": "2026-10-09T14:00",
+    "publishedText": "Goods moved by rail, weighted by distance.\n\n2000-2011. Rail freight in tonne-kilometres. Data source: UIC, OECD.",
+    "platformPostId": "urn:li:ugcPost:7514257105755987968"
   },
   {
     "id": "viz-linkedin-34",
