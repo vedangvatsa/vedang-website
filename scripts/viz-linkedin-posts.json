@@ -828,12 +828,17 @@
     "notesUrl": "https://veda.ng/viz-notes/35.txt",
     "scheduleDate": "2026-10-06",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-10T07:04:03.443Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "World Bank",
-    "sourceOrganization": "SDG 7.1.1 Electrification Dataset, World Bank (WB), uri: https://trackingsdg7.esmap.org/downloads, note: Data is downloaded from ESMAP website. Data is released when a new Tracking SDG7 report is released., publisher: World Bank (WB), date accessed: 2024-05-16, date published: 2023"
+    "sourceOrganization": "SDG 7.1.1 Electrification Dataset, World Bank (WB), uri: https://trackingsdg7.esmap.org/downloads, note: Data is downloaded from ESMAP website. Data is released when a new Tracking SDG7 report is released., publisher: World Bank (WB), date accessed: 2024-05-16, date published: 2023",
+    "state": "sent",
+    "attemptedAt": "2026-10-10T07:03:55.664Z",
+    "attemptedSlot": "2026-10-10T09:00",
+    "publishedText": "The share of people with electricity access.\n\n2000-2024. The share of residents with electricity access. Data source: World Bank.",
+    "platformPostId": "urn:li:ugcPost:7514581496092057600"
   },
   {
     "id": "viz-linkedin-36",

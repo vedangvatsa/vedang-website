@@ -907,12 +907,17 @@
     "notesUrl": "https://veda.ng/viz-notes/38.txt",
     "scheduleDate": "2026-10-07",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-10T07:03:46.554Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "IEA",
-    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25"
+    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25",
+    "state": "sent",
+    "attemptedAt": "2026-10-10T07:03:41.708Z",
+    "attemptedSlot": "2026-10-10T09:00",
+    "publishedText": "How much electricity comes from water.\n\n2000-2021. Hydropower as a share of electricity output. Data source: IEA.",
+    "platformPostId": "830069356846333952"
   },
   {
     "id": "viz-tumblr-39",

@@ -1039,8 +1039,8 @@
     "cover": "scripts/viz-assets/previews/hydropower.png",
     "scheduleDate": "2026-10-07",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-10T07:01:47.795Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -1051,7 +1051,14 @@
     "notesUrl": "https://veda.ng/viz-notes/38.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "IEA",
-    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25"
+    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25",
+    "publishedText": "How much electricity comes from water.\n\n2000-2021. Hydropower as a share of electricity output. Data source: IEA.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-10T09:00",
+    "attemptedAt": "2026-10-10T07:00:40.012Z",
+    "bufferPostId": "6ac9e298c4de2d2b121ae146",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeTf7WbjNxZ/"
   },
   {
     "id": "viz-ig-39",
