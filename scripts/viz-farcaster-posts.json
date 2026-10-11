@@ -995,12 +995,17 @@
     "notesUrl": "https://veda.ng/viz-notes/42.txt",
     "scheduleDate": "2026-10-08",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-11T10:20:05.743Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "state": "sent",
+    "attemptedAt": "2026-10-11T10:20:05.388Z",
+    "attemptedSlot": "2026-10-11T14:00",
+    "publishedText": "Land used for agriculture.\n\n2000-2023. Agricultural land in square kilometres, including permanent pastures. Data source: FAO.",
+    "platformPostId": "0x86043aee27c660ac15b689ba6b98dc6ed0220961"
   },
   {
     "id": "viz-farcaster-43",

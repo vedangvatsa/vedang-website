@@ -1197,8 +1197,8 @@
     "title": "Land used for agriculture.\n\n2000-2023. Agricultural land in square kilometres, including permanent pastures. Data source: FAO.",
     "scheduleDate": "2026-10-08",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-11T10:18:40.513Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/42-agricultural-land-2000-2023.mp4",
@@ -1211,7 +1211,14 @@
     "notesUrl": "https://veda.ng/viz-notes/42.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "publishedText": "Land used for agriculture.\n\n2000-2023. Agricultural land in square kilometres, including permanent pastures. Data source: FAO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-11T14:00",
+    "attemptedAt": "2026-10-11T10:16:57.469Z",
+    "bufferPostId": "6acb6219b07d37ac97a18404",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7695352273685187861"
   },
   {
     "id": "viz-tt-43",
