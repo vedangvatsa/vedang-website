@@ -1226,8 +1226,8 @@
     "title": "Cereal harvests measured in tonnes.\n\n2000-2023. Cereal harvests in metric tonnes. Data source: FAO.",
     "scheduleDate": "2026-10-09",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-11T18:13:59.528Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/43-cereal-production-2000-2023.mp4",
@@ -1240,7 +1240,14 @@
     "notesUrl": "https://veda.ng/viz-notes/43.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/QCL, publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/QCL, publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "publishedText": "Cereal harvests measured in tonnes.\n\n2000-2023. Cereal harvests in metric tonnes. Data source: FAO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-11T20:00",
+    "attemptedAt": "2026-10-11T18:12:16.424Z",
+    "bufferPostId": "6acbd180fa026cfb810eba25",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7695474725102865684"
   },
   {
     "id": "viz-tt-44",

@@ -1179,8 +1179,8 @@
     "cover": "scripts/viz-assets/previews/cereal-production.png",
     "scheduleDate": "2026-10-09",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-11T18:13:13.749Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -1191,7 +1191,14 @@
     "notesUrl": "https://veda.ng/viz-notes/43.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/QCL, publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/QCL, publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "publishedText": "Cereal harvests measured in tonnes.\n\n2000-2023. Cereal harvests in metric tonnes. Data source: FAO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-11T20:00",
+    "attemptedAt": "2026-10-11T18:12:16.384Z",
+    "bufferPostId": "6acbd18063ff33d8c9900262",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeXRiqtmDEL/"
   },
   {
     "id": "viz-ig-44",
