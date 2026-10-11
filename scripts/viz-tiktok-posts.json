@@ -1168,8 +1168,8 @@
     "title": "Forest area in square kilometres.\n\n2000-2023. Total forest area in square kilometres. Data source: FAO.",
     "scheduleDate": "2026-10-08",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-11T06:26:17.596Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/41-forest-area-2000-2023.mp4",
@@ -1182,7 +1182,14 @@
     "notesUrl": "https://veda.ng/viz-notes/41.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "FAOSTAT, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/RL, publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "FAOSTAT, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/RL, publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "publishedText": "Forest area in square kilometres.\n\n2000-2023. Total forest area in square kilometres. Data source: FAO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-11T09:00",
+    "attemptedAt": "2026-10-11T06:24:34.607Z",
+    "bufferPostId": "6acb2ba2bba9419ccb2826c4",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7695292364956667157"
   },
   {
     "id": "viz-tt-42",

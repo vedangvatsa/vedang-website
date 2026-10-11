@@ -1123,8 +1123,8 @@
     "cover": "scripts/viz-assets/previews/forest-area.png",
     "scheduleDate": "2026-10-08",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-11T06:25:31.871Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -1135,7 +1135,14 @@
     "notesUrl": "https://veda.ng/viz-notes/41.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "FAOSTAT, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/RL, publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "FAOSTAT, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/RL, publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "publishedText": "Forest area in square kilometres.\n\n2000-2023. Total forest area in square kilometres. Data source: FAO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-11T09:00",
+    "attemptedAt": "2026-10-11T06:24:34.604Z",
+    "bufferPostId": "6acb2ba2d9cab260a7eb3a01",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeWAjiKAlmQ/"
   },
   {
     "id": "viz-ig-42",

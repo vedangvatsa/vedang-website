@@ -971,12 +971,17 @@
     "notesUrl": "https://veda.ng/viz-notes/41.txt",
     "scheduleDate": "2026-10-08",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-11T06:28:09.934Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "FAOSTAT, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/RL, publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "FAOSTAT, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/RL, publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "state": "sent",
+    "attemptedAt": "2026-10-11T06:27:57.647Z",
+    "attemptedSlot": "2026-10-11T09:00",
+    "publishedText": "Forest area in square kilometres.\n\n2000-2023. Total forest area in square kilometres. Data source: FAO.",
+    "platformPostId": "117420857084004996"
   },
   {
     "id": "viz-mastodon-42",

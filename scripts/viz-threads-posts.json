@@ -882,12 +882,17 @@
     "notesUrl": "https://veda.ng/viz-notes/37.txt",
     "scheduleDate": "2026-10-07",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-11T06:27:54.132Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "IEA",
-    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25"
+    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25",
+    "state": "sent",
+    "attemptedAt": "2026-10-11T06:27:00.438Z",
+    "attemptedSlot": "2026-10-11T09:00",
+    "publishedText": "The share of electricity generated from renewable sources.\n\n2000-2021. Renewables as a share of electricity output, including hydropower. Data source: IEA.",
+    "platformPostId": "18139146391539353"
   },
   {
     "id": "viz-threads-38",
