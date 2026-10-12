@@ -1313,8 +1313,8 @@
     "title": "Farmed aquatic production, year by year.\n\n2000-2024. Farmed aquatic production in metric tonnes. Data source: FAO.",
     "scheduleDate": "2026-10-10",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-12T17:01:25.571Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/46-aquaculture-2000-2024.mp4",
@@ -1327,7 +1327,14 @@
     "notesUrl": "https://veda.ng/viz-notes/46.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "publishedText": "Farmed aquatic production, year by year.\n\n2000-2024. Farmed aquatic production in metric tonnes. Data source: FAO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-12T20:00",
+    "attemptedAt": "2026-10-12T16:59:41.447Z",
+    "bufferPostId": "6acd11fd7eb16fd28e93e40f",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7695827112602782997"
   },
   {
     "id": "viz-tt-47",

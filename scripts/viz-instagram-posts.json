@@ -1263,8 +1263,8 @@
     "cover": "scripts/viz-assets/previews/aquaculture.png",
     "scheduleDate": "2026-10-10",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-12T17:00:09.561Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -1275,7 +1275,14 @@
     "notesUrl": "https://veda.ng/viz-notes/46.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "publishedText": "Farmed aquatic production, year by year.\n\n2000-2024. Farmed aquatic production in metric tonnes. Data source: FAO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-12T20:00",
+    "attemptedAt": "2026-10-12T16:59:41.450Z",
+    "bufferPostId": "6acd11fd7eb16fd28e93e417",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeZuB1BjJZn/"
   },
   {
     "id": "viz-ig-47",
