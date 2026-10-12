@@ -1207,8 +1207,8 @@
     "cover": "scripts/viz-assets/previews/coal-electricity.png",
     "scheduleDate": "2026-10-09",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-12T07:30:59.318Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -1219,7 +1219,14 @@
     "notesUrl": "https://veda.ng/viz-notes/44.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "IEA",
-    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25"
+    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25",
+    "publishedText": "The share of electricity generated from coal.\n\n2000-2021. Coal as a share of electricity output. Data source: IEA.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-12T09:00",
+    "attemptedAt": "2026-10-12T07:29:39.062Z",
+    "bufferPostId": "6acc8c63dd062ea3c8167b58",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DeYsy1FCfVL/"
   },
   {
     "id": "viz-ig-45",

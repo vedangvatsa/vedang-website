@@ -1255,8 +1255,8 @@
     "title": "The share of electricity generated from coal.\n\n2000-2021. Coal as a share of electricity output. Data source: IEA.",
     "scheduleDate": "2026-10-09",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-12T07:31:22.086Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/44-coal-electricity-2000-2021.mp4",
@@ -1269,7 +1269,14 @@
     "notesUrl": "https://veda.ng/viz-notes/44.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "IEA",
-    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25"
+    "sourceOrganization": "IEA Energy Statistics Data Browser, International Energy Agency (IEA), uri: https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser, publisher: International Energy Agency (IEA), date accessed: 2025-03-25",
+    "publishedText": "The share of electricity generated from coal.\n\n2000-2021. Coal as a share of electricity output. Data source: IEA.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-12T09:00",
+    "attemptedAt": "2026-10-12T07:29:39.066Z",
+    "bufferPostId": "6acc8c63dd062ea3c8167b5e",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7695680086552481030"
   },
   {
     "id": "viz-tt-45",
