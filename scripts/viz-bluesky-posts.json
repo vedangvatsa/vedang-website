@@ -1067,12 +1067,17 @@
     "notesUrl": "https://veda.ng/viz-notes/45.txt",
     "scheduleDate": "2026-10-09",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-12T11:18:28.282Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "state": "sent",
+    "attemptedAt": "2026-10-12T11:18:16.585Z",
+    "attemptedSlot": "2026-10-12T14:00",
+    "publishedText": "Wild fish catches measured in tonnes.\n\n2000-2024. Wild fish catches in metric tonnes. Data source: FAO.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mxofhqqz7u2d"
   },
   {
     "id": "viz-bluesky-46",

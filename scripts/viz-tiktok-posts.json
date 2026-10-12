@@ -1284,8 +1284,8 @@
     "title": "Wild fish catches measured in tonnes.\n\n2000-2024. Wild fish catches in metric tonnes. Data source: FAO.",
     "scheduleDate": "2026-10-09",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-12T11:18:11.865Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/45-capture-fisheries-2000-2024.mp4",
@@ -1298,7 +1298,14 @@
     "notesUrl": "https://veda.ng/viz-notes/45.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "publishedText": "Wild fish catches measured in tonnes.\n\n2000-2024. Wild fish catches in metric tonnes. Data source: FAO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-12T14:00",
+    "attemptedAt": "2026-10-12T11:16:28.668Z",
+    "bufferPostId": "6accc18c624c35d1cf1df022",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7695738687874731284"
   },
   {
     "id": "viz-tt-46",
