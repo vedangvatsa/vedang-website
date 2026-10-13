@@ -1342,8 +1342,8 @@
     "title": "Research spending relative to the size of the economy.\n\n2001-2023. Research and development spending as a share of GDP. Data source: UNESCO.",
     "scheduleDate": "2026-10-10",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-13T03:55:12.313Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/47-research-spending-2001-2023.mp4",
@@ -1356,7 +1356,14 @@
     "notesUrl": "https://veda.ng/viz-notes/47.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UNESCO",
-    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02"
+    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02",
+    "publishedText": "Research spending relative to the size of the economy.\n\n2001-2023. Research and development spending as a share of GDP. Data source: UNESCO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-13T09:00",
+    "attemptedAt": "2026-10-13T03:53:29.233Z",
+    "bufferPostId": "6acdab393d6121df403e4ab4",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7695995573668777234"
   },
   {
     "id": "viz-tt-48",

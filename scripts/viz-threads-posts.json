@@ -1026,12 +1026,17 @@
     "notesUrl": "https://veda.ng/viz-notes/43.txt",
     "scheduleDate": "2026-10-09",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-13T03:56:32.411Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/QCL, publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), uri: https://www.fao.org/faostat/en/#data/QCL, publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "state": "sent",
+    "attemptedAt": "2026-10-13T03:55:55.146Z",
+    "attemptedSlot": "2026-10-13T09:00",
+    "publishedText": "Cereal harvests measured in tonnes.\n\n2000-2023. Cereal harvests in metric tonnes. Data source: FAO.",
+    "platformPostId": "17939273715388308"
   },
   {
     "id": "viz-threads-44",

@@ -1124,12 +1124,17 @@
     "notesUrl": "https://veda.ng/viz-notes/47.txt",
     "scheduleDate": "2026-10-10",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-13T03:55:54.817Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UNESCO",
-    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02"
+    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02",
+    "state": "sent",
+    "attemptedAt": "2026-10-13T03:55:31.372Z",
+    "attemptedSlot": "2026-10-13T09:00",
+    "publishedText": "Research spending relative to the size of the economy.\n\n2001-2023. Research and development spending as a share of GDP. Data source: UNESCO.",
+    "platformPostId": "1090079890594406"
   },
   {
     "id": "viz-facebook-48",
