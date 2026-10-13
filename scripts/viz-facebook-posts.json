@@ -1148,12 +1148,17 @@
     "notesUrl": "https://veda.ng/viz-notes/48.txt",
     "scheduleDate": "2026-10-10",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-13T11:03:10.573Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "WIPO",
-    "sourceOrganization": "WIPO Patent Report: Statistics on Worldwide Patent Activity, World Intellectual Property Organization (WIPO), note: The International Bureau of WIPO assumes no responsibility with respect to the transformation of these data."
+    "sourceOrganization": "WIPO Patent Report: Statistics on Worldwide Patent Activity, World Intellectual Property Organization (WIPO), note: The International Bureau of WIPO assumes no responsibility with respect to the transformation of these data.",
+    "state": "sent",
+    "attemptedAt": "2026-10-13T11:02:42.902Z",
+    "attemptedSlot": "2026-10-13T14:00",
+    "publishedText": "Patent applications filed by residents.\n\n2010-2021. Patent applications filed by residents. Data source: WIPO.",
+    "platformPostId": "1033841543006293"
   },
   {
     "id": "viz-facebook-49",

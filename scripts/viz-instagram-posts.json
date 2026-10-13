@@ -1319,8 +1319,8 @@
     "cover": "scripts/viz-assets/previews/patents.png",
     "scheduleDate": "2026-10-10",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-13T11:02:28.438Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -1331,7 +1331,14 @@
     "notesUrl": "https://veda.ng/viz-notes/48.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "WIPO",
-    "sourceOrganization": "WIPO Patent Report: Statistics on Worldwide Patent Activity, World Intellectual Property Organization (WIPO), note: The International Bureau of WIPO assumes no responsibility with respect to the transformation of these data."
+    "sourceOrganization": "WIPO Patent Report: Statistics on Worldwide Patent Activity, World Intellectual Property Organization (WIPO), note: The International Bureau of WIPO assumes no responsibility with respect to the transformation of these data.",
+    "publishedText": "Patent applications filed by residents.\n\n2010-2021. Patent applications filed by residents. Data source: WIPO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-13T14:00",
+    "attemptedAt": "2026-10-13T10:58:34.558Z",
+    "bufferPostId": "6ace0edaa449b60ba8c9ad15",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DebplEvjZaw/"
   },
   {
     "id": "viz-ig-49",
