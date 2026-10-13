@@ -1400,8 +1400,8 @@
     "title": "Research staffing relative to population.\n\n2007-2023. R&D researchers per million residents. Data source: UNESCO.",
     "scheduleDate": "2026-10-11",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-13T18:28:24.266Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/49-researchers-2007-2023.mp4",
@@ -1414,7 +1414,14 @@
     "notesUrl": "https://veda.ng/viz-notes/49.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UNESCO",
-    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02"
+    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02",
+    "publishedText": "Research staffing relative to population.\n\n2007-2023. R&D researchers per million residents. Data source: UNESCO.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-13T20:00",
+    "attemptedAt": "2026-10-13T18:26:40.390Z",
+    "bufferPostId": "6ace77e0bc13a192515d1650",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7696220640608603413"
   },
   {
     "id": "viz-tt-50",

@@ -1092,12 +1092,17 @@
     "notesUrl": "https://veda.ng/viz-notes/46.txt",
     "scheduleDate": "2026-10-10",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-13T18:30:01.184Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "FAO",
-    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)"
+    "sourceOrganization": "Food and Agriculture Organization., Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)",
+    "state": "sent",
+    "attemptedAt": "2026-10-13T18:29:53.580Z",
+    "attemptedSlot": "2026-10-13T20:00",
+    "publishedText": "Farmed aquatic production, year by year.\n\n2000-2024. Farmed aquatic production in metric tonnes. Data source: FAO.",
+    "platformPostId": "urn:li:ugcPost:7515841287883788288"
   },
   {
     "id": "viz-linkedin-47",
