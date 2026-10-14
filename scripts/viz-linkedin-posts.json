@@ -1164,12 +1164,17 @@
     "notesUrl": "https://veda.ng/viz-notes/49.txt",
     "scheduleDate": "2026-10-11",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-14T17:47:31.222Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UNESCO",
-    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02"
+    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02",
+    "state": "sent",
+    "attemptedAt": "2026-10-14T17:47:23.492Z",
+    "attemptedSlot": "2026-10-14T20:00",
+    "publishedText": "Research staffing relative to population.\n\n2007-2023. R&D researchers per million residents. Data source: UNESCO.",
+    "platformPostId": "urn:li:ugcPost:7516192980102373376"
   },
   {
     "id": "viz-linkedin-50",
