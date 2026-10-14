@@ -1435,14 +1435,21 @@
     ],
     "scheduleDate": "2026-10-11",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-14T07:03:42.489Z",
     "videoId": null,
     "error": null,
     "altText": "Labour force, 2000-2024. Ten highest reported values each year.",
     "notesUrl": "https://veda.ng/viz-notes/50.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, ILO, World Bank",
-    "sourceOrganization": "International Labour Organization (ILO), type: estimates based on external database;\nUnited Nations (UN), publisher: UN Population Division;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "International Labour Organization (ILO), type: estimates based on external database;\nUnited Nations (UN), publisher: UN Population Division;\nStaff estimates, World Bank (WB)",
+    "publishedText": "People working or available and looking for work.\n\n2000-2024. People aged 15+ who are employed or seeking work. Data source: UN Population Division, ILO, World Bank.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-14T09:00",
+    "attemptedAt": "2026-10-14T07:03:40.707Z",
+    "bufferPostId": "6acf294d1f3f10bcb7b71bdc",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=zDJzBC1fNNA"
   }
 ]

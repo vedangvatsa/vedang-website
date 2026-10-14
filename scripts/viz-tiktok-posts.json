@@ -1429,8 +1429,8 @@
     "title": "People working or available and looking for work.\n\n2000-2024. People aged 15+ who are employed or seeking work. Data source: UN Population Division, ILO, World Bank.",
     "scheduleDate": "2026-10-11",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-14T07:05:23.949Z",
     "publishId": null,
     "error": null,
     "video": "scripts/viz-assets/videos/50-labour-force-2000-2024.mp4",
@@ -1443,6 +1443,13 @@
     "notesUrl": "https://veda.ng/viz-notes/50.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, ILO, World Bank",
-    "sourceOrganization": "International Labour Organization (ILO), type: estimates based on external database;\nUnited Nations (UN), publisher: UN Population Division;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "International Labour Organization (ILO), type: estimates based on external database;\nUnited Nations (UN), publisher: UN Population Division;\nStaff estimates, World Bank (WB)",
+    "publishedText": "People working or available and looking for work.\n\n2000-2024. People aged 15+ who are employed or seeking work. Data source: UN Population Division, ILO, World Bank.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-14T09:00",
+    "attemptedAt": "2026-10-14T07:03:40.711Z",
+    "bufferPostId": "6acf294df847f2ad9ec808c1",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7696415554873068801"
   }
 ]

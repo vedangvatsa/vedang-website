@@ -1375,8 +1375,8 @@
     "cover": "scripts/viz-assets/previews/labour-force.png",
     "scheduleDate": "2026-10-11",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-14T07:04:41.976Z",
     "igMediaId": null,
     "error": null,
     "tags": [
@@ -1387,6 +1387,13 @@
     "notesUrl": "https://veda.ng/viz-notes/50.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, ILO, World Bank",
-    "sourceOrganization": "International Labour Organization (ILO), type: estimates based on external database;\nUnited Nations (UN), publisher: UN Population Division;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "International Labour Organization (ILO), type: estimates based on external database;\nUnited Nations (UN), publisher: UN Population Division;\nStaff estimates, World Bank (WB)",
+    "publishedText": "People working or available and looking for work.\n\n2000-2024. People aged 15+ who are employed or seeking work. Data source: UN Population Division, ILO, World Bank.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-14T09:00",
+    "attemptedAt": "2026-10-14T07:03:40.779Z",
+    "bufferPostId": "6acf294db610c3011fa52a69",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DedzadIkYyA/"
   }
 ]

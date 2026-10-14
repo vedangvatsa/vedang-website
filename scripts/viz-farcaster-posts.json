@@ -1187,11 +1187,16 @@
     "notesUrl": "https://veda.ng/viz-notes/50.txt",
     "scheduleDate": "2026-10-11",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-14T07:06:41.671Z",
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "UN Population Division, ILO, World Bank",
-    "sourceOrganization": "International Labour Organization (ILO), type: estimates based on external database;\nUnited Nations (UN), publisher: UN Population Division;\nStaff estimates, World Bank (WB)"
+    "sourceOrganization": "International Labour Organization (ILO), type: estimates based on external database;\nUnited Nations (UN), publisher: UN Population Division;\nStaff estimates, World Bank (WB)",
+    "state": "sent",
+    "attemptedAt": "2026-10-14T07:06:41.308Z",
+    "attemptedSlot": "2026-10-14T09:00",
+    "publishedText": "People working or available and looking for work.\n\n2000-2024. People aged 15+ who are employed or seeking work. Data source: UN Population Division, ILO, World Bank.",
+    "platformPostId": "0x1dd1259c2669b8c509d0922970f5f7ac519bf067"
   }
 ]
