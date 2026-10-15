@@ -1172,10 +1172,14 @@
     "scheduleTime": "09:00",
     "posted": false,
     "postedAt": null,
-    "error": null,
+    "error": "Video container failed: 400 {\"error\":{\"message\":\"Error validating access token: Session has expired on Wednesday, 14-Oct-26 23:29:28 PDT. The current time is Thursday, 15-Oct-26 01:27:45 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AFacvtaaCos8ogOYZj5cD5p\"}}",
     "captionStyle": "concise-v1",
     "sourceCredit": "UNESCO",
-    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02"
+    "sourceOrganization": "Stat Bulk Data Download Service, UN Educational, Scientific and Cultural Organization (UNESCO), uri: https://databrowser.uis.unesco.org/resources/bulk, publisher: UNESCO Institute for Statistics (UIS), date accessed: 2025-03-26, date published: 2025-02",
+    "state": "uncertain",
+    "attemptedAt": "2026-10-15T08:27:45.560Z",
+    "attemptedSlot": "2026-10-15T09:00",
+    "publishedText": "Research staffing relative to population.\n\n2007-2023. R&D researchers per million residents. Data source: UNESCO."
   },
   {
     "id": "viz-threads-50",
