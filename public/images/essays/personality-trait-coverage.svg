@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="570" viewBox="0 0 800 570" role="img" aria-labelledby="chart-title chart-description" font-family="Arial, Helvetica, sans-serif">
+  <title id="chart-title">Trait coverage across the 55 configurations</title>
+  <desc id="chart-description">Eligible model counts differ by trait; the source data also accompany the essay.</desc>
+  <rect width="800" height="570" fill="#ffffff" />
+  <text x="34" y="48" font-size="29" fill="#37352f" font-weight="700" text-anchor="start">Trait coverage across the 55 configurations</text>
+  <text x="34" y="100" font-size="24" fill="#37352f" font-weight="400" text-anchor="start">Extraversion</text>
+  <text x="766" y="100" font-size="24" fill="#4f46e5" font-weight="700" text-anchor="end">29 / 55</text>
+  <rect x="34" y="116" width="732" height="23" rx="4" fill="#f1f5f9" />
+  <rect x="34" y="116" width="385.96363636363634" height="23" rx="4" fill="#4f46e5" fill-opacity=".75" />
+  <text x="34" y="188" font-size="24" fill="#37352f" font-weight="400" text-anchor="start">Agreeableness</text>
+  <text x="766" y="188" font-size="24" fill="#4f46e5" font-weight="700" text-anchor="end">40 / 55</text>
+  <rect x="34" y="204" width="732" height="23" rx="4" fill="#f1f5f9" />
+  <rect x="34" y="204" width="532.3636363636364" height="23" rx="4" fill="#4f46e5" fill-opacity=".75" />
+  <text x="34" y="276" font-size="24" fill="#37352f" font-weight="400" text-anchor="start">Conscientiousness</text>
+  <text x="766" y="276" font-size="24" fill="#4f46e5" font-weight="700" text-anchor="end">25 / 55</text>
+  <rect x="34" y="292" width="732" height="23" rx="4" fill="#f1f5f9" />
+  <rect x="34" y="292" width="332.72727272727275" height="23" rx="4" fill="#4f46e5" fill-opacity=".75" />
+  <text x="34" y="364" font-size="24" fill="#37352f" font-weight="400" text-anchor="start">Emotional Stability</text>
+  <text x="766" y="364" font-size="24" fill="#4f46e5" font-weight="700" text-anchor="end">38 / 55</text>
+  <rect x="34" y="380" width="732" height="23" rx="4" fill="#f1f5f9" />
+  <rect x="34" y="380" width="505.74545454545455" height="23" rx="4" fill="#4f46e5" fill-opacity=".75" />
+  <text x="34" y="452" font-size="24" fill="#37352f" font-weight="400" text-anchor="start">Intellect/Imagination</text>
+  <text x="766" y="452" font-size="24" fill="#4f46e5" font-weight="700" text-anchor="end">46 / 55</text>
+  <rect x="34" y="468" width="732" height="23" rx="4" fill="#f1f5f9" />
+  <rect x="34" y="468" width="612.2181818181818" height="23" rx="4" fill="#4f46e5" fill-opacity=".75" />
+  <text x="34" y="548" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">Counts of reportable traits, not personality scores</text>
+</svg>

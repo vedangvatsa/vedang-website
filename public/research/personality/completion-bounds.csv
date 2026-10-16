@@ -1,0 +1,276 @@
+model_id,model,trait,positions,known_numeric,explicit_null,unobserved_failed,lower,upper,width,known_sum
+m01,GPT-4.1 mini,Extraversion,100,100,0,0,2.66,2.66,0.0,266
+m01,GPT-4.1 mini,Agreeableness,100,100,0,0,4.26,4.26,0.0,426
+m01,GPT-4.1 mini,Conscientiousness,100,100,0,0,4.94,4.94,0.0,494
+m01,GPT-4.1 mini,Emotional Stability,100,100,0,0,3.85,3.85,0.0,385
+m01,GPT-4.1 mini,Intellect/Imagination,100,100,0,0,4.93,4.93,0.0,493
+m02,GPT-4o mini,Extraversion,100,100,0,0,2.83,2.83,0.0,283
+m02,GPT-4o mini,Agreeableness,100,100,0,0,4.74,4.74,0.0,474
+m02,GPT-4o mini,Conscientiousness,100,97,3,0,4.65,4.77,0.12,462
+m02,GPT-4o mini,Emotional Stability,100,100,0,0,3.63,3.63,0.0,363
+m02,GPT-4o mini,Intellect/Imagination,100,100,0,0,4.46,4.46,0.0,446
+m03,GPT-OSS 20B,Extraversion,100,26,74,0,1.43,4.39,2.96,69
+m03,GPT-OSS 20B,Agreeableness,100,40,60,0,2.21,4.61,2.4,161
+m03,GPT-OSS 20B,Conscientiousness,100,51,49,0,2.94,4.9,1.96,245
+m03,GPT-OSS 20B,Emotional Stability,100,30,70,0,1.85,4.65,2.8,115
+m03,GPT-OSS 20B,Intellect/Imagination,100,67,33,0,3.33,4.65,1.32,300
+m04,GPT-OSS 120B,Extraversion,100,12,88,0,1.29,4.81,3.52,41
+m04,GPT-OSS 120B,Agreeableness,100,21,79,0,1.77,4.93,3.16,98
+m04,GPT-OSS 120B,Conscientiousness,100,52,48,0,3.04,4.96,1.92,256
+m04,GPT-OSS 120B,Emotional Stability,100,13,87,0,1.33,4.81,3.48,46
+m04,GPT-OSS 120B,Intellect/Imagination,100,63,37,0,3.42,4.9,1.48,305
+m05,Claude Haiku 4.5,Extraversion,100,96,4,0,2.75,2.91,0.16,271
+m05,Claude Haiku 4.5,Agreeableness,100,100,0,0,4.28,4.28,0.0,428
+m05,Claude Haiku 4.5,Conscientiousness,100,56,44,0,2.72,4.48,1.76,228
+m05,Claude Haiku 4.5,Emotional Stability,100,100,0,0,3.65,3.65,0.0,365
+m05,Claude Haiku 4.5,Intellect/Imagination,100,100,0,0,4.79,4.79,0.0,479
+m06,Gemini 2.5 Flash-Lite,Extraversion,100,100,0,0,2.76,2.76,0.0,276
+m06,Gemini 2.5 Flash-Lite,Agreeableness,100,100,0,0,4.39,4.39,0.0,439
+m06,Gemini 2.5 Flash-Lite,Conscientiousness,100,74,26,0,3.81,4.85,1.04,355
+m06,Gemini 2.5 Flash-Lite,Emotional Stability,100,100,0,0,4.03,4.03,0.0,403
+m06,Gemini 2.5 Flash-Lite,Intellect/Imagination,100,100,0,0,4.74,4.74,0.0,474
+m07,Llama 3.1 8B,Extraversion,100,9,1,90,1.12,4.76,3.64,21
+m07,Llama 3.1 8B,Agreeableness,100,10,0,90,1.36,4.96,3.6,46
+m07,Llama 3.1 8B,Conscientiousness,100,4,6,90,1.16,5.0,3.84,20
+m07,Llama 3.1 8B,Emotional Stability,100,10,0,90,1.36,4.96,3.6,46
+m07,Llama 3.1 8B,Intellect/Imagination,100,6,4,90,1.16,4.92,3.76,22
+m08,Llama 3.3 70B,Extraversion,100,87,13,0,1.9,2.42,0.52,177
+m08,Llama 3.3 70B,Agreeableness,100,97,3,0,3.48,3.6,0.12,345
+m08,Llama 3.3 70B,Conscientiousness,100,100,0,0,4.88,4.88,0.0,488
+m08,Llama 3.3 70B,Emotional Stability,100,97,3,0,4.7,4.82,0.12,467
+m08,Llama 3.3 70B,Intellect/Imagination,100,100,0,0,4.73,4.73,0.0,473
+m09,Qwen3 30B A3B,Extraversion,100,25,55,20,1.64,4.64,3.0,89
+m09,Qwen3 30B A3B,Agreeableness,100,20,60,20,1.55,4.75,3.2,75
+m09,Qwen3 30B A3B,Conscientiousness,100,36,44,20,2.38,4.94,2.56,174
+m09,Qwen3 30B A3B,Emotional Stability,100,40,40,20,2.18,4.58,2.4,158
+m09,Qwen3 30B A3B,Intellect/Imagination,100,40,40,20,2.54,4.94,2.4,194
+m10,Qwen3 235B A22B,Extraversion,100,80,10,10,3.09,3.89,0.8,289
+m10,Qwen3 235B A22B,Agreeableness,100,72,18,10,3.5,4.62,1.12,322
+m10,Qwen3 235B A22B,Conscientiousness,100,88,2,10,4.47,4.95,0.48,435
+m10,Qwen3 235B A22B,Emotional Stability,100,90,0,10,4.6,5.0,0.4,450
+m10,Qwen3 235B A22B,Intellect/Imagination,100,90,0,10,4.38,4.78,0.4,428
+m11,Qwen3.8 27B,Extraversion,100,88,12,0,3.19,3.67,0.48,307
+m11,Qwen3.8 27B,Agreeableness,100,100,0,0,4.64,4.64,0.0,464
+m11,Qwen3.8 27B,Conscientiousness,100,59,41,0,3.01,4.65,1.64,260
+m11,Qwen3.8 27B,Emotional Stability,100,100,0,0,4.55,4.55,0.0,455
+m11,Qwen3.8 27B,Intellect/Imagination,100,100,0,0,4.57,4.57,0.0,457
+m12,Mistral Small 3.2,Extraversion,100,79,1,20,1.94,2.78,0.84,173
+m12,Mistral Small 3.2,Agreeableness,100,80,0,20,3.7,4.5,0.8,350
+m12,Mistral Small 3.2,Conscientiousness,100,70,10,20,3.39,4.59,1.2,309
+m12,Mistral Small 3.2,Emotional Stability,100,80,0,20,3.88,4.68,0.8,368
+m12,Mistral Small 3.2,Intellect/Imagination,100,80,0,20,3.9,4.7,0.8,370
+m13,DeepSeek V3.2,Extraversion,100,68,22,10,3.42,4.7,1.28,310
+m13,DeepSeek V3.2,Agreeableness,100,90,0,10,4.57,4.97,0.4,447
+m13,DeepSeek V3.2,Conscientiousness,100,90,0,10,4.59,4.99,0.4,449
+m13,DeepSeek V3.2,Emotional Stability,100,90,0,10,4.6,5.0,0.4,450
+m13,DeepSeek V3.2,Intellect/Imagination,100,90,0,10,4.57,4.97,0.4,447
+m14,Command R7B,Extraversion,100,100,0,0,2.97,2.97,0.0,297
+m14,Command R7B,Agreeableness,100,97,3,0,3.84,3.96,0.12,381
+m14,Command R7B,Conscientiousness,100,96,4,0,3.56,3.72,0.16,352
+m14,Command R7B,Emotional Stability,100,99,1,0,3.85,3.89,0.04,384
+m14,Command R7B,Intellect/Imagination,100,98,2,0,3.46,3.54,0.08,344
+m15,Command R,Extraversion,100,89,11,0,2.14,2.58,0.44,203
+m15,Command R,Agreeableness,100,80,20,0,3.77,4.57,0.8,357
+m15,Command R,Conscientiousness,100,56,44,0,2.87,4.63,1.76,243
+m15,Command R,Emotional Stability,100,68,32,0,3.1,4.38,1.28,278
+m15,Command R,Intellect/Imagination,100,78,22,0,3.84,4.72,0.88,362
+m16,Nova Micro,Extraversion,100,69,31,0,1.63,2.87,1.24,132
+m16,Nova Micro,Agreeableness,100,39,61,0,1.93,4.37,2.44,132
+m16,Nova Micro,Conscientiousness,100,62,38,0,2.99,4.51,1.52,261
+m16,Nova Micro,Emotional Stability,100,85,15,0,2.78,3.38,0.6,263
+m16,Nova Micro,Intellect/Imagination,100,97,3,0,3.58,3.7,0.12,355
+m17,Nemotron 3 Nano,Extraversion,100,100,0,0,3.17,3.17,0.0,317
+m17,Nemotron 3 Nano,Agreeableness,100,100,0,0,4.08,4.08,0.0,408
+m17,Nemotron 3 Nano,Conscientiousness,100,100,0,0,3.83,3.83,0.0,383
+m17,Nemotron 3 Nano,Emotional Stability,100,100,0,0,3.0,3.0,0.0,300
+m17,Nemotron 3 Nano,Intellect/Imagination,100,100,0,0,4.05,4.05,0.0,405
+m18,GLM 4.7 Flash,Extraversion,100,54,26,20,2.04,3.88,1.84,158
+m18,GLM 4.7 Flash,Agreeableness,100,79,1,20,3.33,4.17,0.84,312
+m18,GLM 4.7 Flash,Conscientiousness,100,65,15,20,2.89,4.29,1.4,254
+m18,GLM 4.7 Flash,Emotional Stability,100,32,48,20,1.84,4.56,2.72,116
+m18,GLM 4.7 Flash,Intellect/Imagination,100,80,0,20,3.7,4.5,0.8,350
+m19,Kimi K2 0905,Extraversion,100,80,0,20,2.5,3.3,0.8,230
+m19,Kimi K2 0905,Agreeableness,100,80,0,20,3.85,4.65,0.8,365
+m19,Kimi K2 0905,Conscientiousness,100,72,8,20,3.46,4.58,1.12,318
+m19,Kimi K2 0905,Emotional Stability,100,80,0,20,4.09,4.89,0.8,389
+m19,Kimi K2 0905,Intellect/Imagination,100,80,0,20,3.98,4.78,0.8,378
+m20,MiniMax-01,Extraversion,100,100,0,0,3.83,3.83,0.0,383
+m20,MiniMax-01,Agreeableness,100,100,0,0,5.0,5.0,0.0,500
+m20,MiniMax-01,Conscientiousness,100,100,0,0,4.78,4.78,0.0,478
+m20,MiniMax-01,Emotional Stability,100,100,0,0,4.07,4.07,0.0,407
+m20,MiniMax-01,Intellect/Imagination,100,100,0,0,4.98,4.98,0.0,498
+m21,GPT-4.1 nano,Extraversion,100,100,0,0,3.43,3.43,0.0,343
+m21,GPT-4.1 nano,Agreeableness,100,100,0,0,4.18,4.18,0.0,418
+m21,GPT-4.1 nano,Conscientiousness,100,100,0,0,4.22,4.22,0.0,422
+m21,GPT-4.1 nano,Emotional Stability,100,100,0,0,3.94,3.94,0.0,394
+m21,GPT-4.1 nano,Intellect/Imagination,100,100,0,0,4.14,4.14,0.0,414
+m22,GPT-3.5 Turbo,Extraversion,100,100,0,0,3.1,3.1,0.0,310
+m22,GPT-3.5 Turbo,Agreeableness,100,100,0,0,4.01,4.01,0.0,401
+m22,GPT-3.5 Turbo,Conscientiousness,100,100,0,0,3.73,3.73,0.0,373
+m22,GPT-3.5 Turbo,Emotional Stability,100,100,0,0,2.43,2.43,0.0,243
+m22,GPT-3.5 Turbo,Intellect/Imagination,100,100,0,0,3.43,3.43,0.0,343
+m23,Gemma 3 4B,Extraversion,100,100,0,0,3.49,3.49,0.0,349
+m23,Gemma 3 4B,Agreeableness,100,100,0,0,4.03,4.03,0.0,403
+m23,Gemma 3 4B,Conscientiousness,100,100,0,0,2.82,2.82,0.0,282
+m23,Gemma 3 4B,Emotional Stability,100,100,0,0,3.44,3.44,0.0,344
+m23,Gemma 3 4B,Intellect/Imagination,100,100,0,0,3.5,3.5,0.0,350
+m24,Gemma 3 12B,Extraversion,100,100,0,0,1.56,1.56,0.0,156
+m24,Gemma 3 12B,Agreeableness,100,100,0,0,4.34,4.34,0.0,434
+m24,Gemma 3 12B,Conscientiousness,100,100,0,0,4.68,4.68,0.0,468
+m24,Gemma 3 12B,Emotional Stability,100,100,0,0,4.58,4.58,0.0,458
+m24,Gemma 3 12B,Intellect/Imagination,100,100,0,0,3.72,3.72,0.0,372
+m25,Gemma 3 27B,Extraversion,100,50,0,50,1.5,3.5,2.0,100
+m25,Gemma 3 27B,Agreeableness,100,50,0,50,2.09,4.09,2.0,159
+m25,Gemma 3 27B,Conscientiousness,100,27,23,50,1.85,4.77,2.92,112
+m25,Gemma 3 27B,Emotional Stability,100,50,0,50,2.9,4.9,2.0,240
+m25,Gemma 3 27B,Intellect/Imagination,100,50,0,50,2.59,4.59,2.0,209
+m26,Llama 3.2 1B,Extraversion,100,59,1,40,2.31,3.95,1.64,190
+m26,Llama 3.2 1B,Agreeableness,100,60,0,40,2.37,3.97,1.6,197
+m26,Llama 3.2 1B,Conscientiousness,100,60,0,40,2.29,3.89,1.6,189
+m26,Llama 3.2 1B,Emotional Stability,100,60,0,40,1.7,3.3,1.6,130
+m26,Llama 3.2 1B,Intellect/Imagination,100,59,1,40,2.48,4.12,1.64,207
+m27,Llama 3.2 3B,Extraversion,100,100,0,0,2.92,2.92,0.0,292
+m27,Llama 3.2 3B,Agreeableness,100,93,7,0,3.33,3.61,0.28,326
+m27,Llama 3.2 3B,Conscientiousness,100,100,0,0,3.43,3.43,0.0,343
+m27,Llama 3.2 3B,Emotional Stability,100,100,0,0,3.17,3.17,0.0,317
+m27,Llama 3.2 3B,Intellect/Imagination,100,100,0,0,3.17,3.17,0.0,317
+m28,Llama 4 Scout,Extraversion,100,100,0,0,2.2,2.2,0.0,220
+m28,Llama 4 Scout,Agreeableness,100,100,0,0,4.08,4.08,0.0,408
+m28,Llama 4 Scout,Conscientiousness,100,100,0,0,3.33,3.33,0.0,333
+m28,Llama 4 Scout,Emotional Stability,100,100,0,0,3.32,3.32,0.0,332
+m28,Llama 4 Scout,Intellect/Imagination,100,100,0,0,4.22,4.22,0.0,422
+m29,Qwen2.5 7B,Extraversion,100,27,73,0,1.64,4.56,2.92,91
+m29,Qwen2.5 7B,Agreeableness,100,57,43,0,3.22,4.94,1.72,279
+m29,Qwen2.5 7B,Conscientiousness,100,40,60,0,2.54,4.94,2.4,194
+m29,Qwen2.5 7B,Emotional Stability,100,12,88,0,1.42,4.94,3.52,54
+m29,Qwen2.5 7B,Intellect/Imagination,100,37,63,0,2.44,4.96,2.52,181
+m30,Qwen2.5 72B,Extraversion,100,100,0,0,2.46,2.46,0.0,246
+m30,Qwen2.5 72B,Agreeableness,100,100,0,0,5.0,5.0,0.0,500
+m30,Qwen2.5 72B,Conscientiousness,100,100,0,0,4.98,4.98,0.0,498
+m30,Qwen2.5 72B,Emotional Stability,100,100,0,0,4.91,4.91,0.0,491
+m30,Qwen2.5 72B,Intellect/Imagination,100,100,0,0,5.0,5.0,0.0,500
+m31,Qwen3 32B,Extraversion,100,48,12,40,2.0,4.08,2.08,148
+m31,Qwen3 32B,Agreeableness,100,60,0,40,2.64,4.24,1.6,224
+m31,Qwen3 32B,Conscientiousness,100,44,16,40,2.61,4.85,2.24,205
+m31,Qwen3 32B,Emotional Stability,100,40,20,40,2.36,4.76,2.4,176
+m31,Qwen3 32B,Intellect/Imagination,100,60,0,40,3.04,4.64,1.6,264
+m32,Mistral Nemo,Extraversion,100,87,13,0,2.64,3.16,0.52,251
+m32,Mistral Nemo,Agreeableness,100,92,8,0,3.5,3.82,0.32,342
+m32,Mistral Nemo,Conscientiousness,100,78,22,0,3.52,4.4,0.88,330
+m32,Mistral Nemo,Emotional Stability,100,79,21,0,3.54,4.38,0.84,333
+m32,Mistral Nemo,Intellect/Imagination,100,98,2,0,3.89,3.97,0.08,387
+m33,Mistral Small 2501,Extraversion,100,93,7,0,2.2,2.48,0.28,213
+m33,Mistral Small 2501,Agreeableness,100,96,4,0,3.11,3.27,0.16,307
+m33,Mistral Small 2501,Conscientiousness,100,88,12,0,3.43,3.91,0.48,331
+m33,Mistral Small 2501,Emotional Stability,100,100,0,0,3.92,3.92,0.0,392
+m33,Mistral Small 2501,Intellect/Imagination,100,100,0,0,3.83,3.83,0.0,383
+m34,Nova Lite,Extraversion,100,62,38,0,2.46,3.98,1.52,208
+m34,Nova Lite,Agreeableness,100,80,20,0,4.14,4.94,0.8,394
+m34,Nova Lite,Conscientiousness,100,72,28,0,3.77,4.89,1.12,349
+m34,Nova Lite,Emotional Stability,100,97,3,0,2.91,3.03,0.12,288
+m34,Nova Lite,Intellect/Imagination,100,94,6,0,4.2,4.44,0.24,414
+m35,Command A Plus,Extraversion,100,100,0,0,2.64,2.64,0.0,264
+m35,Command A Plus,Agreeableness,100,100,0,0,3.57,3.57,0.0,357
+m35,Command A Plus,Conscientiousness,100,100,0,0,3.38,3.38,0.0,338
+m35,Command A Plus,Emotional Stability,100,100,0,0,2.96,2.96,0.0,296
+m35,Command A Plus,Intellect/Imagination,100,100,0,0,3.97,3.97,0.0,397
+m36,Nemotron 3 Super,Extraversion,100,70,0,30,2.43,3.63,1.2,213
+m36,Nemotron 3 Super,Agreeableness,100,70,0,30,3.35,4.55,1.2,305
+m36,Nemotron 3 Super,Conscientiousness,100,70,0,30,3.18,4.38,1.2,288
+m36,Nemotron 3 Super,Emotional Stability,100,70,0,30,2.69,3.89,1.2,239
+m36,Nemotron 3 Super,Intellect/Imagination,100,70,0,30,3.36,4.56,1.2,306
+m38,MiniMax M2.5,Extraversion,100,59,21,20,2.36,4.0,1.64,195
+m38,MiniMax M2.5,Agreeableness,100,80,0,20,3.77,4.57,0.8,357
+m38,MiniMax M2.5,Conscientiousness,100,63,17,20,3.12,4.6,1.48,275
+m38,MiniMax M2.5,Emotional Stability,100,43,37,20,2.64,4.92,2.28,207
+m38,MiniMax M2.5,Intellect/Imagination,100,80,0,20,3.84,4.64,0.8,364
+m39,Phi-4,Extraversion,100,38,62,0,1.94,4.42,2.48,132
+m39,Phi-4,Agreeableness,100,40,60,0,2.16,4.56,2.4,156
+m39,Phi-4,Conscientiousness,100,61,39,0,3.38,4.94,1.56,299
+m39,Phi-4,Emotional Stability,100,56,44,0,2.6,4.36,1.76,216
+m39,Phi-4,Intellect/Imagination,100,65,35,0,3.28,4.68,1.4,293
+m40,Granite 4 Micro,Extraversion,100,100,0,0,3.45,3.45,0.0,345
+m40,Granite 4 Micro,Agreeableness,100,100,0,0,3.74,3.74,0.0,374
+m40,Granite 4 Micro,Conscientiousness,100,100,0,0,4.06,4.06,0.0,406
+m40,Granite 4 Micro,Emotional Stability,100,100,0,0,3.75,3.75,0.0,375
+m40,Granite 4 Micro,Intellect/Imagination,100,100,0,0,3.7,3.7,0.0,370
+m41,GPT-6 Astra,Extraversion,50,15,35,0,1.74,4.54,2.8,52
+m41,GPT-6 Astra,Agreeableness,50,35,15,0,3.32,4.52,1.2,151
+m41,GPT-6 Astra,Conscientiousness,50,30,20,0,2.72,4.32,1.6,116
+m41,GPT-6 Astra,Emotional Stability,50,0,50,0,1.0,5.0,4.0,0
+m41,GPT-6 Astra,Intellect/Imagination,50,50,0,0,4.18,4.18,0.0,209
+m42,GPT-6 Luna,Extraversion,50,7,43,0,1.34,4.78,3.44,24
+m42,GPT-6 Luna,Agreeableness,50,9,41,0,1.6,4.88,3.28,39
+m42,GPT-6 Luna,Conscientiousness,50,3,47,0,1.18,4.94,3.76,12
+m42,GPT-6 Luna,Emotional Stability,50,7,43,0,1.24,4.68,3.44,19
+m42,GPT-6 Luna,Intellect/Imagination,50,10,40,0,1.6,4.8,3.2,40
+m43,GPT-6.1 Sol,Extraversion,50,17,33,0,1.84,4.48,2.64,59
+m43,GPT-6.1 Sol,Agreeableness,50,29,21,0,2.92,4.6,1.68,125
+m43,GPT-6.1 Sol,Conscientiousness,50,28,22,0,2.76,4.52,1.76,116
+m43,GPT-6.1 Sol,Emotional Stability,50,0,50,0,1.0,5.0,4.0,0
+m43,GPT-6.1 Sol,Intellect/Imagination,50,48,2,0,4.18,4.34,0.16,207
+m44,Claude Sonnet 5.5,Extraversion,50,45,5,0,3.02,3.42,0.4,146
+m44,Claude Sonnet 5.5,Agreeableness,50,50,0,0,4.5,4.5,0.0,225
+m44,Claude Sonnet 5.5,Conscientiousness,50,40,10,0,3.4,4.2,0.8,160
+m44,Claude Sonnet 5.5,Emotional Stability,50,50,0,0,4.7,4.7,0.0,235
+m44,Claude Sonnet 5.5,Intellect/Imagination,50,50,0,0,4.5,4.5,0.0,225
+m45,Gemini 3.8 Flash,Extraversion,50,30,10,10,2.6,4.2,1.6,110
+m45,Gemini 3.8 Flash,Agreeableness,50,40,0,10,3.68,4.48,0.8,174
+m45,Gemini 3.8 Flash,Conscientiousness,50,28,12,10,3.16,4.92,1.76,136
+m45,Gemini 3.8 Flash,Emotional Stability,50,40,0,10,4.2,5.0,0.8,200
+m45,Gemini 3.8 Flash,Intellect/Imagination,50,40,0,10,3.74,4.54,0.8,177
+m46,Gemini 3.5 Flash-Lite,Extraversion,50,50,0,0,2.44,2.44,0.0,122
+m46,Gemini 3.5 Flash-Lite,Agreeableness,50,50,0,0,4.3,4.3,0.0,215
+m46,Gemini 3.5 Flash-Lite,Conscientiousness,50,50,0,0,4.68,4.68,0.0,234
+m46,Gemini 3.5 Flash-Lite,Emotional Stability,50,50,0,0,5.0,5.0,0.0,250
+m46,Gemini 3.5 Flash-Lite,Intellect/Imagination,50,50,0,0,4.72,4.72,0.0,236
+m48,GLM 5.3 Prime,Extraversion,50,36,14,0,2.34,3.46,1.12,103
+m48,GLM 5.3 Prime,Agreeableness,50,50,0,0,4.5,4.5,0.0,225
+m48,GLM 5.3 Prime,Conscientiousness,50,48,2,0,4.02,4.18,0.16,199
+m48,GLM 5.3 Prime,Emotional Stability,50,40,10,0,3.42,4.22,0.8,161
+m48,GLM 5.3 Prime,Intellect/Imagination,50,50,0,0,4.9,4.9,0.0,245
+m49,DeepSeek V4.1 Flash,Extraversion,50,39,11,0,2.06,2.94,0.88,92
+m49,DeepSeek V4.1 Flash,Agreeableness,50,36,14,0,2.6,3.72,1.12,116
+m49,DeepSeek V4.1 Flash,Conscientiousness,50,35,15,0,3.4,4.6,1.2,155
+m49,DeepSeek V4.1 Flash,Emotional Stability,50,40,10,0,3.84,4.64,0.8,182
+m49,DeepSeek V4.1 Flash,Intellect/Imagination,50,50,0,0,4.38,4.38,0.0,219
+m50,Qwen3.8 Max Prime,Extraversion,50,50,0,0,3.2,3.2,0.0,160
+m50,Qwen3.8 Max Prime,Agreeableness,50,50,0,0,4.4,4.4,0.0,220
+m50,Qwen3.8 Max Prime,Conscientiousness,50,50,0,0,4.44,4.44,0.0,222
+m50,Qwen3.8 Max Prime,Emotional Stability,50,50,0,0,4.46,4.46,0.0,223
+m50,Qwen3.8 Max Prime,Intellect/Imagination,50,50,0,0,4.52,4.52,0.0,226
+m51,Grok 4.7,Extraversion,50,32,18,0,2.18,3.62,1.44,91
+m51,Grok 4.7,Agreeableness,50,44,6,0,4.06,4.54,0.48,197
+m51,Grok 4.7,Conscientiousness,50,34,16,0,3.38,4.66,1.28,153
+m51,Grok 4.7,Emotional Stability,50,0,50,0,1.0,5.0,4.0,0
+m51,Grok 4.7,Intellect/Imagination,50,50,0,0,4.34,4.34,0.0,217
+m52,MiniMax M3,Extraversion,50,50,0,0,2.38,2.38,0.0,119
+m52,MiniMax M3,Agreeableness,50,50,0,0,4.66,4.66,0.0,233
+m52,MiniMax M3,Conscientiousness,50,50,0,0,4.72,4.72,0.0,236
+m52,MiniMax M3,Emotional Stability,50,50,0,0,3.9,3.9,0.0,195
+m52,MiniMax M3,Intellect/Imagination,50,50,0,0,4.52,4.52,0.0,226
+m53,Claude Opus 5.5,Extraversion,30,24,6,0,2.8,3.6,0.8,78
+m53,Claude Opus 5.5,Agreeableness,30,30,0,0,4.5,4.5,0.0,135
+m53,Claude Opus 5.5,Conscientiousness,30,21,9,0,3.3,4.5,1.2,90
+m53,Claude Opus 5.5,Emotional Stability,30,30,0,0,4.4,4.4,0.0,132
+m53,Claude Opus 5.5,Intellect/Imagination,30,30,0,0,4.2,4.2,0.0,126
+m54,MiMo-V2.6-Pro,Extraversion,30,16,14,0,2.0,3.8666666666666667,1.8666666666666667,46
+m54,MiMo-V2.6-Pro,Agreeableness,30,20,10,0,2.8666666666666667,4.2,1.3333333333333333,76
+m54,MiMo-V2.6-Pro,Conscientiousness,30,17,13,0,3.2,4.933333333333334,1.7333333333333334,83
+m54,MiMo-V2.6-Pro,Emotional Stability,30,19,11,0,3.2,4.666666666666667,1.4666666666666666,85
+m54,MiMo-V2.6-Pro,Intellect/Imagination,30,20,10,0,3.6666666666666665,5.0,1.3333333333333333,100
+m56,Kimi K3,Extraversion,30,27,3,0,2.7666666666666666,3.1666666666666665,0.4,80
+m56,Kimi K3,Agreeableness,30,28,2,0,4.333333333333333,4.6,0.26666666666666666,128
+m56,Kimi K3,Conscientiousness,30,25,5,0,4.033333333333333,4.7,0.6666666666666666,116
+m56,Kimi K3,Emotional Stability,30,20,10,0,3.566666666666667,4.9,1.3333333333333333,97
+m56,Kimi K3,Intellect/Imagination,30,30,0,0,4.533333333333333,4.533333333333333,0.0,136
+m57,Mistral Large 4,Extraversion,30,24,6,0,2.8333333333333335,3.6333333333333333,0.8,79
+m57,Mistral Large 4,Agreeableness,30,30,0,0,4.133333333333334,4.133333333333334,0.0,124
+m57,Mistral Large 4,Conscientiousness,30,21,9,0,3.3333333333333335,4.533333333333333,1.2,91
+m57,Mistral Large 4,Emotional Stability,30,30,0,0,3.566666666666667,3.566666666666667,0.0,107
+m57,Mistral Large 4,Intellect/Imagination,30,30,0,0,4.533333333333333,4.533333333333333,0.0,136
+m58,Llama 4 Maverick,Extraversion,30,30,0,0,2.5,2.5,0.0,75
+m58,Llama 4 Maverick,Agreeableness,30,30,0,0,4.4,4.4,0.0,132
+m58,Llama 4 Maverick,Conscientiousness,30,21,9,0,3.7,4.9,1.2,102
+m58,Llama 4 Maverick,Emotional Stability,30,30,0,0,5.0,5.0,0.0,150
+m58,Llama 4 Maverick,Intellect/Imagination,30,30,0,0,5.0,5.0,0.0,150

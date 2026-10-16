@@ -1,0 +1,179 @@
+model_id,model,developer,setting,trait,planned,minimum_n,n,mean,sd,minimum,maximum,eligible,strict_n,strict_mean,ceiling_scores
+m01,GPT-4.1 mini,OpenAI,10-repeat,Extraversion,10,5,10,2.66,0.1955050439815357,2.5,3.0,True,10,2.66,0
+m01,GPT-4.1 mini,OpenAI,10-repeat,Agreeableness,10,5,10,4.26,0.24585451886114387,4.1,4.9,True,10,4.26,0
+m01,GPT-4.1 mini,OpenAI,10-repeat,Conscientiousness,10,5,10,4.94,0.18973665961010264,4.4,5.0,True,10,4.94,9
+m01,GPT-4.1 mini,OpenAI,10-repeat,Emotional Stability,10,5,10,3.85,0.34075080500434785,3.1,4.5,True,10,3.85,0
+m01,GPT-4.1 mini,OpenAI,10-repeat,Intellect/Imagination,10,5,10,4.93,0.10593499054713798,4.7,5.0,True,10,4.93,6
+m02,GPT-4o mini,OpenAI,10-repeat,Extraversion,10,5,10,2.83,0.11595018087284052,2.6,3.0,True,10,2.83,0
+m02,GPT-4o mini,OpenAI,10-repeat,Agreeableness,10,5,10,4.74,0.18378731669453646,4.4,4.9,True,10,4.74,0
+m02,GPT-4o mini,OpenAI,10-repeat,Conscientiousness,10,5,9,4.7444444444444445,0.15092308563562365,4.6,5.0,True,9,4.7444444444444445,2
+m02,GPT-4o mini,OpenAI,10-repeat,Emotional Stability,10,5,10,3.63,0.2983286778035259,3.2,4.0,True,10,3.63,0
+m02,GPT-4o mini,OpenAI,10-repeat,Intellect/Imagination,10,5,10,4.46,0.21186998109427604,4.1,4.7,True,10,4.46,0
+m05,Claude Haiku 4.5,Anthropic,10-repeat,Extraversion,10,5,6,2.683333333333333,0.29268868558020245,2.1,2.9,True,6,2.683333333333333,0
+m05,Claude Haiku 4.5,Anthropic,10-repeat,Agreeableness,10,5,10,4.28,0.7114929530376407,2.3,4.8,True,10,4.28,0
+m05,Claude Haiku 4.5,Anthropic,10-repeat,Emotional Stability,10,5,10,3.65,0.2173067468400882,3.1,3.8,True,10,3.65,0
+m05,Claude Haiku 4.5,Anthropic,10-repeat,Intellect/Imagination,10,5,10,4.79,0.3247221034122014,4.2,5.0,True,10,4.79,6
+m06,Gemini 2.5 Flash-Lite,Google,10-repeat,Extraversion,10,5,10,2.76,0.5929212051829109,1.4,3.3,True,10,2.76,0
+m06,Gemini 2.5 Flash-Lite,Google,10-repeat,Agreeableness,10,5,10,4.390000000000001,0.031622776601683965,4.3,4.4,True,10,4.390000000000001,0
+m06,Gemini 2.5 Flash-Lite,Google,10-repeat,Emotional Stability,10,5,10,4.03,0.4945255863507525,3.4,4.9,True,10,4.03,0
+m06,Gemini 2.5 Flash-Lite,Google,10-repeat,Intellect/Imagination,10,5,10,4.74,0.09660917830792967,4.6,4.8,True,10,4.74,0
+m08,Llama 3.3 70B,Meta,10-repeat,Agreeableness,10,5,8,3.475,0.5444525428617,2.6,3.8,True,0,,0
+m08,Llama 3.3 70B,Meta,10-repeat,Conscientiousness,10,5,10,4.88,0.19321835661585934,4.6,5.0,True,0,,7
+m08,Llama 3.3 70B,Meta,10-repeat,Emotional Stability,10,5,8,4.925,0.10350983390135304,4.7,5.0,True,0,,4
+m08,Llama 3.3 70B,Meta,10-repeat,Intellect/Imagination,10,5,10,4.7299999999999995,0.18287822299126952,4.5,5.0,True,0,,2
+m10,Qwen3 235B A22B,Alibaba,10-repeat,Extraversion,10,5,8,3.6125,0.6010407640085653,3.1,4.6,True,8,3.6125,0
+m10,Qwen3 235B A22B,Alibaba,10-repeat,Agreeableness,10,5,7,4.457142857142857,0.24397501823713327,4.3,5.0,True,7,4.457142857142857,1
+m10,Qwen3 235B A22B,Alibaba,10-repeat,Conscientiousness,10,5,8,4.9375,0.11877349391654206,4.7,5.0,True,8,4.9375,6
+m10,Qwen3 235B A22B,Alibaba,10-repeat,Emotional Stability,10,5,9,5.0,0.0,5.0,5.0,True,9,5.0,9
+m10,Qwen3 235B A22B,Alibaba,10-repeat,Intellect/Imagination,10,5,9,4.7555555555555555,0.08819171036881975,4.6,4.9,True,9,4.7555555555555555,0
+m11,Qwen3.8 27B,Alibaba,10-repeat,Agreeableness,10,5,10,4.640000000000001,0.2547329756605708,4.3,5.0,True,10,4.640000000000001,1
+m11,Qwen3.8 27B,Alibaba,10-repeat,Emotional Stability,10,5,10,4.55,0.5233439489369195,3.8,5.0,True,10,4.55,4
+m11,Qwen3.8 27B,Alibaba,10-repeat,Intellect/Imagination,10,5,10,4.57,0.2496664441476535,4.1,5.0,True,10,4.57,1
+m12,Mistral Small 3.2,Mistral,10-repeat,Extraversion,10,5,7,2.157142857142857,0.4540820148282424,1.4,2.8,True,7,2.157142857142857,0
+m12,Mistral Small 3.2,Mistral,10-repeat,Agreeableness,10,5,8,4.375,0.5230405611149375,3.7,5.0,True,8,4.375,2
+m12,Mistral Small 3.2,Mistral,10-repeat,Emotional Stability,10,5,8,4.6,0.333809184158512,4.2,5.0,True,8,4.6,2
+m12,Mistral Small 3.2,Mistral,10-repeat,Intellect/Imagination,10,5,8,4.625,0.406201920231798,3.9,5.0,True,8,4.625,3
+m13,DeepSeek V3.2,DeepSeek,10-repeat,Agreeableness,10,5,9,4.966666666666667,0.04999999999999982,4.9,5.0,True,9,4.966666666666667,6
+m13,DeepSeek V3.2,DeepSeek,10-repeat,Conscientiousness,10,5,9,4.988888888888889,0.033333333333333215,4.9,5.0,True,9,4.988888888888889,8
+m13,DeepSeek V3.2,DeepSeek,10-repeat,Emotional Stability,10,5,9,5.0,0.0,5.0,5.0,True,9,5.0,9
+m13,DeepSeek V3.2,DeepSeek,10-repeat,Intellect/Imagination,10,5,9,4.966666666666667,0.04999999999999982,4.9,5.0,True,9,4.966666666666667,6
+m14,Command R7B,Cohere,10-repeat,Extraversion,10,5,10,2.9699999999999998,0.27100635498903797,2.6,3.6,True,10,2.9699999999999998,0
+m14,Command R7B,Cohere,10-repeat,Agreeableness,10,5,9,3.922222222222222,0.8197221751571957,2.6,4.8,True,9,3.922222222222222,0
+m14,Command R7B,Cohere,10-repeat,Conscientiousness,10,5,9,3.6555555555555554,0.7230337321161286,2.6,4.3,True,9,3.6555555555555554,0
+m14,Command R7B,Cohere,10-repeat,Emotional Stability,10,5,9,3.9555555555555557,0.19436506316151012,3.7,4.2,True,9,3.9555555555555557,0
+m14,Command R7B,Cohere,10-repeat,Intellect/Imagination,10,5,9,3.488888888888889,0.8313309275559949,2.2,4.3,True,9,3.488888888888889,0
+m15,Command R,Cohere,10-repeat,Extraversion,10,5,5,2.3,0.406201920231798,1.6,2.6,True,5,2.3,0
+m16,Nova Micro,Amazon,10-repeat,Intellect/Imagination,10,5,9,3.688888888888889,0.11666666666666661,3.5,3.8,True,9,3.688888888888889,0
+m17,Nemotron 3 Nano,NVIDIA,10-repeat,Extraversion,10,5,10,3.17,0.3743141876967944,2.6,3.8,True,10,3.17,0
+m17,Nemotron 3 Nano,NVIDIA,10-repeat,Agreeableness,10,5,10,4.08,0.6321040701937899,3.0,4.9,True,10,4.08,0
+m17,Nemotron 3 Nano,NVIDIA,10-repeat,Conscientiousness,10,5,10,3.83,0.49227363664260276,3.0,4.3,True,10,3.83,0
+m17,Nemotron 3 Nano,NVIDIA,10-repeat,Emotional Stability,10,5,10,3.0,0.6182412330330469,2.0,4.0,True,10,3.0,0
+m17,Nemotron 3 Nano,NVIDIA,10-repeat,Intellect/Imagination,10,5,10,4.05,0.6204836822995429,3.0,5.0,True,10,4.05,1
+m18,GLM 4.7 Flash,Z.ai,10-repeat,Agreeableness,10,5,7,3.8857142857142857,0.5429197958832455,2.8,4.4,True,0,,0
+m18,GLM 4.7 Flash,Z.ai,10-repeat,Intellect/Imagination,10,5,8,4.375,0.21213203435596428,4.0,4.7,True,0,,0
+m19,Kimi K2 0905,Moonshot,10-repeat,Extraversion,10,5,8,2.875,0.7363035088486657,1.9,4.1,True,8,2.875,0
+m19,Kimi K2 0905,Moonshot,10-repeat,Agreeableness,10,5,8,4.5625,0.29246489410818904,4.2,5.0,True,8,4.5625,1
+m19,Kimi K2 0905,Moonshot,10-repeat,Conscientiousness,10,5,6,4.5,0.24494897427831766,4.4,5.0,True,6,4.5,1
+m19,Kimi K2 0905,Moonshot,10-repeat,Emotional Stability,10,5,8,4.8625,0.11877349391654209,4.7,5.0,True,8,4.8625,3
+m19,Kimi K2 0905,Moonshot,10-repeat,Intellect/Imagination,10,5,8,4.725,0.23145502494313797,4.3,5.0,True,8,4.725,1
+m20,MiniMax-01,MiniMax,10-repeat,Extraversion,10,5,10,3.83,0.49676732760697717,3.2,4.6,True,10,3.83,0
+m20,MiniMax-01,MiniMax,10-repeat,Agreeableness,10,5,10,5.0,0.0,5.0,5.0,True,10,5.0,10
+m20,MiniMax-01,MiniMax,10-repeat,Conscientiousness,10,5,10,4.78,0.20439612955674524,4.4,5.0,True,10,4.78,3
+m20,MiniMax-01,MiniMax,10-repeat,Emotional Stability,10,5,10,4.07,0.6129165250396391,3.2,5.0,True,10,4.07,1
+m20,MiniMax-01,MiniMax,10-repeat,Intellect/Imagination,10,5,10,4.98,0.04216370213557824,4.9,5.0,True,10,4.98,8
+m21,GPT-4.1 nano,OpenAI,10-repeat,Extraversion,10,5,10,3.4299999999999997,0.12516655570345736,3.3,3.6,True,10,3.4299999999999997,0
+m21,GPT-4.1 nano,OpenAI,10-repeat,Agreeableness,10,5,10,4.18,0.12292725943057213,4.1,4.4,True,10,4.18,0
+m21,GPT-4.1 nano,OpenAI,10-repeat,Conscientiousness,10,5,10,4.22,0.12292725943057191,4.0,4.4,True,10,4.22,0
+m21,GPT-4.1 nano,OpenAI,10-repeat,Emotional Stability,10,5,10,3.94,0.1173787790777267,3.8,4.1,True,10,3.94,0
+m21,GPT-4.1 nano,OpenAI,10-repeat,Intellect/Imagination,10,5,10,4.14,0.13498971154211067,4.0,4.5,True,10,4.14,0
+m22,GPT-3.5 Turbo,OpenAI,10-repeat,Extraversion,10,5,10,3.1,0.3333333333333333,2.7,3.8,True,10,3.1,0
+m22,GPT-3.5 Turbo,OpenAI,10-repeat,Agreeableness,10,5,10,4.01,0.03162277660168368,4.0,4.1,True,10,4.01,0
+m22,GPT-3.5 Turbo,OpenAI,10-repeat,Conscientiousness,10,5,10,3.73,0.27100635498903786,3.2,4.0,True,10,3.73,0
+m22,GPT-3.5 Turbo,OpenAI,10-repeat,Emotional Stability,10,5,10,2.4299999999999997,0.06749485577105535,2.4,2.6,True,10,2.4299999999999997,0
+m22,GPT-3.5 Turbo,OpenAI,10-repeat,Intellect/Imagination,10,5,10,3.4299999999999997,0.09486832980505146,3.4,3.7,True,10,3.4299999999999997,0
+m23,Gemma 3 4B,Google,10-repeat,Extraversion,10,5,10,3.49,0.05676462121975472,3.4,3.6,True,0,,0
+m23,Gemma 3 4B,Google,10-repeat,Agreeableness,10,5,10,4.03,0.04830458915396462,4.0,4.1,True,0,,0
+m23,Gemma 3 4B,Google,10-repeat,Conscientiousness,10,5,10,2.82,0.06324555320336764,2.8,3.0,True,0,,0
+m23,Gemma 3 4B,Google,10-repeat,Emotional Stability,10,5,10,3.44,0.09660917830792967,3.3,3.5,True,0,,0
+m23,Gemma 3 4B,Google,10-repeat,Intellect/Imagination,10,5,10,3.5,0.0,3.5,3.5,True,0,,0
+m24,Gemma 3 12B,Google,10-repeat,Extraversion,10,5,10,1.56,0.051639777949432274,1.5,1.6,True,10,1.56,0
+m24,Gemma 3 12B,Google,10-repeat,Agreeableness,10,5,10,4.34,0.26331223544175325,4.0,4.6,True,10,4.34,0
+m24,Gemma 3 12B,Google,10-repeat,Conscientiousness,10,5,10,4.68,0.3011090610836322,4.2,5.0,True,10,4.68,3
+m24,Gemma 3 12B,Google,10-repeat,Emotional Stability,10,5,10,4.58,0.06324555320336736,4.4,4.6,True,10,4.58,0
+m24,Gemma 3 12B,Google,10-repeat,Intellect/Imagination,10,5,10,3.72,0.19321835661585915,3.6,4.0,True,10,3.72,0
+m25,Gemma 3 27B,Google,10-repeat,Extraversion,10,5,5,2.0,0.15811388300841903,1.8,2.2,True,5,2.0,0
+m25,Gemma 3 27B,Google,10-repeat,Agreeableness,10,5,5,3.18,0.38987177379235866,2.9,3.7,True,5,3.18,0
+m25,Gemma 3 27B,Google,10-repeat,Emotional Stability,10,5,5,4.8,0.0,4.8,4.8,True,5,4.8,0
+m25,Gemma 3 27B,Google,10-repeat,Intellect/Imagination,10,5,5,4.18,0.27748873851023204,3.9,4.6,True,5,4.18,0
+m26,Llama 3.2 1B,Meta,10-repeat,Extraversion,10,5,5,3.26,0.626897120746299,2.6,4.1,True,0,,0
+m26,Llama 3.2 1B,Meta,10-repeat,Agreeableness,10,5,6,3.283333333333333,0.2786873995477131,2.9,3.7,True,0,,0
+m26,Llama 3.2 1B,Meta,10-repeat,Conscientiousness,10,5,6,3.15,0.29495762407505244,2.7,3.5,True,0,,0
+m26,Llama 3.2 1B,Meta,10-repeat,Emotional Stability,10,5,6,2.166666666666667,0.2732520204255894,2.0,2.7,True,0,,0
+m26,Llama 3.2 1B,Meta,10-repeat,Intellect/Imagination,10,5,5,3.72,0.17888543819998312,3.5,3.9,True,0,,0
+m27,Llama 3.2 3B,Meta,10-repeat,Extraversion,10,5,10,2.92,0.30477678535099895,2.4,3.3,True,0,,0
+m27,Llama 3.2 3B,Meta,10-repeat,Agreeableness,10,5,6,3.3833333333333333,0.4750438576243951,3.1,4.3,True,0,,0
+m27,Llama 3.2 3B,Meta,10-repeat,Conscientiousness,10,5,10,3.43,0.4715223571935198,2.6,4.3,True,0,,0
+m27,Llama 3.2 3B,Meta,10-repeat,Emotional Stability,10,5,10,3.17,0.579367471184452,2.5,4.4,True,0,,0
+m27,Llama 3.2 3B,Meta,10-repeat,Intellect/Imagination,10,5,10,3.17,0.5100108931298537,2.4,3.9,True,0,,0
+m28,Llama 4 Scout,Meta,10-repeat,Extraversion,10,5,10,2.2,0.31622776601683794,1.9,2.8,True,10,2.2,0
+m28,Llama 4 Scout,Meta,10-repeat,Agreeableness,10,5,10,4.08,0.56134758493389,3.2,4.6,True,10,4.08,0
+m28,Llama 4 Scout,Meta,10-repeat,Conscientiousness,10,5,10,3.33,0.483160888777687,2.2,4.0,True,10,3.33,0
+m28,Llama 4 Scout,Meta,10-repeat,Emotional Stability,10,5,10,3.32,0.6663332499583072,2.5,4.1,True,10,3.32,0
+m28,Llama 4 Scout,Meta,10-repeat,Intellect/Imagination,10,5,10,4.22,0.45898438608156006,3.1,4.8,True,10,4.22,0
+m30,Qwen2.5 72B,Alibaba,10-repeat,Extraversion,10,5,10,2.46,0.2796823595120404,1.8,2.8,True,9,2.433333333333333,0
+m30,Qwen2.5 72B,Alibaba,10-repeat,Agreeableness,10,5,10,5.0,0.0,5.0,5.0,True,9,5.0,10
+m30,Qwen2.5 72B,Alibaba,10-repeat,Conscientiousness,10,5,10,4.98,0.04216370213557824,4.9,5.0,True,9,4.977777777777778,8
+m30,Qwen2.5 72B,Alibaba,10-repeat,Emotional Stability,10,5,10,4.91,0.2846049894151543,4.1,5.0,True,9,4.9,9
+m30,Qwen2.5 72B,Alibaba,10-repeat,Intellect/Imagination,10,5,10,5.0,0.0,5.0,5.0,True,9,5.0,10
+m31,Qwen3 32B,Alibaba,10-repeat,Agreeableness,10,5,6,3.7333333333333334,0.4844240566555987,3.2,4.4,True,6,3.7333333333333334,0
+m31,Qwen3 32B,Alibaba,10-repeat,Intellect/Imagination,10,5,6,4.4,0.3346640106136301,4.0,4.8,True,6,4.4,0
+m32,Mistral Nemo,Mistral,10-repeat,Agreeableness,10,5,6,3.8,0.5796550698475775,2.8,4.3,True,6,3.8,0
+m32,Mistral Nemo,Mistral,10-repeat,Emotional Stability,10,5,7,4.3,0.469041575982343,3.6,4.9,True,7,4.3,0
+m32,Mistral Nemo,Mistral,10-repeat,Intellect/Imagination,10,5,9,3.9555555555555553,0.39721250959376614,3.3,4.6,True,9,3.9555555555555553,0
+m33,Mistral Small 2501,Mistral,10-repeat,Agreeableness,10,5,7,3.357142857142857,0.5442338432975995,2.6,4.1,True,7,3.357142857142857,0
+m33,Mistral Small 2501,Mistral,10-repeat,Emotional Stability,10,5,10,3.92,0.6663332499583071,3.1,5.0,True,10,3.92,1
+m33,Mistral Small 2501,Mistral,10-repeat,Intellect/Imagination,10,5,10,3.83,0.7818070236460033,2.7,4.9,True,10,3.83,0
+m34,Nova Lite,Amazon,10-repeat,Extraversion,10,5,5,3.12,0.17888543819998315,3.0,3.4,True,5,3.12,0
+m34,Nova Lite,Amazon,10-repeat,Agreeableness,10,5,6,4.916666666666667,0.13291601358251254,4.7,5.0,True,6,4.916666666666667,4
+m34,Nova Lite,Amazon,10-repeat,Conscientiousness,10,5,5,4.84,0.21908902300206665,4.6,5.0,True,5,4.84,3
+m34,Nova Lite,Amazon,10-repeat,Emotional Stability,10,5,8,3.025,0.3918819064098629,2.5,3.6,True,8,3.025,0
+m34,Nova Lite,Amazon,10-repeat,Intellect/Imagination,10,5,7,4.414285714285715,0.24102953780654784,4.2,4.8,True,7,4.414285714285715,0
+m35,Command A Plus,Cohere,10-repeat,Extraversion,10,5,10,2.64,0.16465452046971293,2.3,2.9,True,10,2.64,0
+m35,Command A Plus,Cohere,10-repeat,Agreeableness,10,5,10,3.5700000000000003,0.7818070236460033,2.6,4.4,True,10,3.5700000000000003,0
+m35,Command A Plus,Cohere,10-repeat,Conscientiousness,10,5,10,3.38,0.4661902329879223,2.6,3.9,True,10,3.38,0
+m35,Command A Plus,Cohere,10-repeat,Emotional Stability,10,5,10,2.96,0.3373096170846271,2.5,3.4,True,10,2.96,0
+m35,Command A Plus,Cohere,10-repeat,Intellect/Imagination,10,5,10,3.9699999999999998,0.24966644414765327,3.7,4.6,True,10,3.9699999999999998,0
+m36,Nemotron 3 Super,NVIDIA,10-repeat,Extraversion,10,5,7,3.0428571428571427,0.499523582550223,2.0,3.4,True,7,3.0428571428571427,0
+m36,Nemotron 3 Super,NVIDIA,10-repeat,Agreeableness,10,5,7,4.357142857142858,0.05345224838248516,4.3,4.4,True,7,4.357142857142858,0
+m36,Nemotron 3 Super,NVIDIA,10-repeat,Conscientiousness,10,5,7,4.114285714285714,0.06900655593423555,4.0,4.2,True,7,4.114285714285714,0
+m36,Nemotron 3 Super,NVIDIA,10-repeat,Emotional Stability,10,5,7,3.414285714285714,0.42983939414844785,3.0,4.0,True,7,3.414285714285714,0
+m36,Nemotron 3 Super,NVIDIA,10-repeat,Intellect/Imagination,10,5,7,4.371428571428571,0.22146697055682835,4.0,4.7,True,7,4.371428571428571,0
+m38,MiniMax M2.5,MiniMax,10-repeat,Agreeableness,10,5,8,4.4625,0.2263846284534354,4.3,5.0,True,6,4.5,1
+m38,MiniMax M2.5,MiniMax,10-repeat,Intellect/Imagination,10,5,8,4.55,0.297609523657138,4.1,5.0,True,6,4.6,1
+m40,Granite 4 Micro,IBM,10-repeat,Extraversion,10,5,10,3.45,0.2549509756796393,3.1,4.0,True,10,3.45,0
+m40,Granite 4 Micro,IBM,10-repeat,Agreeableness,10,5,10,3.74,0.38930136855083824,3.3,4.7,True,10,3.74,0
+m40,Granite 4 Micro,IBM,10-repeat,Conscientiousness,10,5,10,4.06,0.24585451886114357,3.7,4.6,True,10,4.06,0
+m40,Granite 4 Micro,IBM,10-repeat,Emotional Stability,10,5,10,3.75,0.37490739597339967,3.2,4.1,True,10,3.75,0
+m40,Granite 4 Micro,IBM,10-repeat,Intellect/Imagination,10,5,10,3.7,0.2581988897471612,3.3,4.2,True,10,3.7,0
+m41,GPT-6 Astra,OpenAI,5-repeat,Intellect/Imagination,5,3,5,4.18,0.08366600265340768,4.1,4.3,True,5,4.18,0
+m43,GPT-6.1 Sol,OpenAI,5-repeat,Intellect/Imagination,5,3,3,4.366666666666667,0.05773502691896289,4.3,4.4,True,3,4.366666666666667,0
+m44,Claude Sonnet 5.5,Anthropic,5-repeat,Agreeableness,5,3,5,4.5,0.0,4.5,4.5,True,5,4.5,0
+m44,Claude Sonnet 5.5,Anthropic,5-repeat,Emotional Stability,5,3,5,4.7,0.0,4.7,4.7,True,5,4.7,0
+m44,Claude Sonnet 5.5,Anthropic,5-repeat,Intellect/Imagination,5,3,5,4.5,0.0,4.5,4.5,True,5,4.5,0
+m45,Gemini 3.8 Flash,Google,5-repeat,Agreeableness,5,3,4,4.35,0.05773502691896289,4.3,4.4,True,4,4.35,0
+m45,Gemini 3.8 Flash,Google,5-repeat,Emotional Stability,5,3,4,5.0,0.0,5.0,5.0,True,4,5.0,4
+m45,Gemini 3.8 Flash,Google,5-repeat,Intellect/Imagination,5,3,4,4.425,0.125830573921179,4.3,4.6,True,4,4.425,0
+m46,Gemini 3.5 Flash-Lite,Google,5-repeat,Extraversion,5,3,5,2.44,0.6024948132556828,2.0,3.1,True,5,2.44,0
+m46,Gemini 3.5 Flash-Lite,Google,5-repeat,Agreeableness,5,3,5,4.3,0.0,4.3,4.3,True,5,4.3,0
+m46,Gemini 3.5 Flash-Lite,Google,5-repeat,Conscientiousness,5,3,5,4.68,0.10954451150103332,4.6,4.8,True,5,4.68,0
+m46,Gemini 3.5 Flash-Lite,Google,5-repeat,Emotional Stability,5,3,5,5.0,0.0,5.0,5.0,True,5,5.0,5
+m46,Gemini 3.5 Flash-Lite,Google,5-repeat,Intellect/Imagination,5,3,5,4.72,0.08366600265340758,4.6,4.8,True,5,4.72,0
+m48,GLM 5.3 Prime,Z.ai,5-repeat,Agreeableness,5,3,5,4.5,0.1414213562373093,4.4,4.7,True,5,4.5,0
+m48,GLM 5.3 Prime,Z.ai,5-repeat,Conscientiousness,5,3,4,4.15,0.2380476142847618,3.9,4.4,True,4,4.15,0
+m48,GLM 5.3 Prime,Z.ai,5-repeat,Emotional Stability,5,3,4,4.025,0.04999999999999982,4.0,4.1,True,4,4.025,0
+m48,GLM 5.3 Prime,Z.ai,5-repeat,Intellect/Imagination,5,3,5,4.9,0.07071067811865482,4.8,5.0,True,5,4.9,1
+m49,DeepSeek V4.1 Flash,DeepSeek,5-repeat,Extraversion,5,3,3,2.2333333333333334,0.15275252316519455,2.1,2.4,True,3,2.2333333333333334,0
+m49,DeepSeek V4.1 Flash,DeepSeek,5-repeat,Emotional Stability,5,3,4,4.55,0.4041451884327381,4.0,4.9,True,4,4.55,0
+m49,DeepSeek V4.1 Flash,DeepSeek,5-repeat,Intellect/Imagination,5,3,5,4.38,0.4024922359499621,4.0,4.8,True,5,4.38,0
+m50,Qwen3.8 Max Prime,Alibaba,5-repeat,Extraversion,5,3,5,3.2,0.07071067811865465,3.1,3.3,True,5,3.2,0
+m50,Qwen3.8 Max Prime,Alibaba,5-repeat,Agreeableness,5,3,5,4.4,0.0,4.4,4.4,True,5,4.4,0
+m50,Qwen3.8 Max Prime,Alibaba,5-repeat,Conscientiousness,5,3,5,4.44,0.08944271909999127,4.4,4.6,True,5,4.44,0
+m50,Qwen3.8 Max Prime,Alibaba,5-repeat,Emotional Stability,5,3,5,4.46,0.3435112807463533,4.0,4.8,True,5,4.46,0
+m50,Qwen3.8 Max Prime,Alibaba,5-repeat,Intellect/Imagination,5,3,5,4.52,0.3033150177620618,4.2,4.8,True,5,4.52,0
+m51,Grok 4.7,SpaceXAI,5-repeat,Intellect/Imagination,5,3,5,4.34,0.08944271909999171,4.2,4.4,True,5,4.34,0
+m52,MiniMax M3,MiniMax,5-repeat,Extraversion,5,3,5,2.38,0.4969909455915671,1.8,3.1,True,5,2.38,0
+m52,MiniMax M3,MiniMax,5-repeat,Agreeableness,5,3,5,4.66,0.24083189157584575,4.4,4.9,True,5,4.66,0
+m52,MiniMax M3,MiniMax,5-repeat,Conscientiousness,5,3,5,4.72,0.3492849839314599,4.1,4.9,True,5,4.72,0
+m52,MiniMax M3,MiniMax,5-repeat,Emotional Stability,5,3,5,3.9,0.1732050807568877,3.6,4.0,True,5,3.9,0
+m52,MiniMax M3,MiniMax,5-repeat,Intellect/Imagination,5,3,5,4.52,0.42661458015403103,3.9,4.9,True,5,4.52,0
+m53,Claude Opus 5.5,Anthropic,3-repeat,Agreeableness,3,3,3,4.5,0.0,4.5,4.5,True,3,4.5,0
+m53,Claude Opus 5.5,Anthropic,3-repeat,Emotional Stability,3,3,3,4.4,0.0,4.4,4.4,True,3,4.4,0
+m53,Claude Opus 5.5,Anthropic,3-repeat,Intellect/Imagination,3,3,3,4.2,0.0,4.2,4.2,True,3,4.2,0
+m56,Kimi K3,Moonshot,3-repeat,Intellect/Imagination,3,3,3,4.533333333333333,0.321455025366432,4.3,4.9,True,3,4.533333333333333,0
+m57,Mistral Large 4,Mistral,3-repeat,Agreeableness,3,3,3,4.133333333333333,0.05773502691896289,4.1,4.2,True,3,4.133333333333333,0
+m57,Mistral Large 4,Mistral,3-repeat,Emotional Stability,3,3,3,3.566666666666667,0.40414518843273795,3.2,4.0,True,3,3.566666666666667,0
+m57,Mistral Large 4,Mistral,3-repeat,Intellect/Imagination,3,3,3,4.533333333333333,0.321455025366432,4.3,4.9,True,3,4.533333333333333,0
+m58,Llama 4 Maverick,Meta,3-repeat,Extraversion,3,3,3,2.5,0.0,2.5,2.5,True,3,2.5,0
+m58,Llama 4 Maverick,Meta,3-repeat,Agreeableness,3,3,3,4.4,0.0,4.4,4.4,True,3,4.4,0
+m58,Llama 4 Maverick,Meta,3-repeat,Emotional Stability,3,3,3,5.0,0.0,5.0,5.0,True,3,5.0,3
+m58,Llama 4 Maverick,Meta,3-repeat,Intellect/Imagination,3,3,3,5.0,0.0,5.0,5.0,True,3,5.0,3

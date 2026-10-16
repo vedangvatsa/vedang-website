@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function PromptEngineeringModulePage({ params }: { params: { slug: string } }) {
+export default async function PromptEngineeringModulePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const currentModuleIndex = config.modules.findIndex((m) => m.slug === slug);
   if (currentModuleIndex === -1) notFound();

@@ -1,0 +1,56 @@
+model_id,model,developer,batch,setting,planned,minimum_n,valid_sets,numeric_items,null_items,all_null_sets,E,A,C,ES,I,eligible_traits
+m01,GPT-4.1 mini,OpenAI,original,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m02,GPT-4o mini,OpenAI,original,10-repeat,10,5,10,497,3,0,10,10,9,10,10,5
+m03,GPT-OSS 20B,OpenAI,original,10-repeat,10,5,10,214,286,1,2,2,1,2,3,0
+m04,GPT-OSS 120B,OpenAI,original,10-repeat,10,5,10,161,339,1,0,2,0,1,2,0
+m05,Claude Haiku 4.5,Anthropic,original,10-repeat,10,5,10,452,48,0,6,10,1,10,10,4
+m06,Gemini 2.5 Flash-Lite,Google,original,10-repeat,10,5,10,474,26,0,10,10,2,10,10,4
+m07,Llama 3.1 8B,Meta,original,10-repeat,10,5,1,39,11,0,0,1,0,1,0,0
+m08,Llama 3.3 70B,Meta,original,10-repeat,10,5,10,481,19,0,3,8,10,8,10,4
+m09,Qwen3 30B A3B,Alibaba,original,10-repeat,10,5,8,161,239,4,2,2,3,4,4,0
+m10,Qwen3 235B A22B,Alibaba,original,10-repeat,10,5,9,420,30,0,8,7,8,9,9,5
+m11,Qwen3.8 27B,Alibaba,original,10-repeat,10,5,10,447,53,0,4,10,0,10,10,3
+m12,Mistral Small 3.2,Mistral,original,10-repeat,10,5,8,389,11,0,7,8,4,8,8,4
+m13,DeepSeek V3.2,DeepSeek,original,10-repeat,10,5,9,428,22,0,2,9,9,9,9,4
+m14,Command R7B,Cohere,original,10-repeat,10,5,10,490,10,0,10,9,9,9,9,5
+m15,Command R,Cohere,original,10-repeat,10,5,10,371,129,0,5,4,0,1,1,1
+m16,Nova Micro,Amazon,original,10-repeat,10,5,10,352,148,0,0,0,1,2,9,1
+m17,Nemotron 3 Nano,NVIDIA,original,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m18,GLM 4.7 Flash,Z.ai,original,10-repeat,10,5,8,310,90,0,1,7,2,3,8,2
+m19,Kimi K2 0905,Moonshot,original,10-repeat,10,5,8,392,8,0,8,8,6,8,8,5
+m20,MiniMax-01,MiniMax,original,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m21,GPT-4.1 nano,OpenAI,extension,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m22,GPT-3.5 Turbo,OpenAI,extension,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m23,Gemma 3 4B,Google,extension,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m24,Gemma 3 12B,Google,extension,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m25,Gemma 3 27B,Google,extension,10-repeat,10,5,5,227,23,0,5,5,0,5,5,4
+m26,Llama 3.2 1B,Meta,extension,10-repeat,10,5,6,298,2,0,5,6,6,6,5,5
+m27,Llama 3.2 3B,Meta,extension,10-repeat,10,5,10,493,7,0,10,6,10,10,10,5
+m28,Llama 4 Scout,Meta,extension,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m29,Qwen2.5 7B,Alibaba,extension,10-repeat,10,5,10,173,327,0,0,0,0,0,0,0
+m30,Qwen2.5 72B,Alibaba,extension,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m31,Qwen3 32B,Alibaba,extension,10-repeat,10,5,6,252,48,0,1,6,0,4,6,2
+m32,Mistral Nemo,Mistral,extension,10-repeat,10,5,10,434,66,0,2,6,3,7,9,3
+m33,Mistral Small 2501,Mistral,extension,10-repeat,10,5,10,477,23,0,4,7,4,10,10,3
+m34,Nova Lite,Amazon,extension,10-repeat,10,5,10,405,95,0,5,6,5,8,7,5
+m35,Command A Plus,Cohere,extension,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m36,Nemotron 3 Super,NVIDIA,extension,10-repeat,10,5,7,350,0,0,7,7,7,7,7,5
+m38,MiniMax M2.5,MiniMax,extension,10-repeat,10,5,8,325,75,0,1,8,0,1,8,2
+m39,Phi-4,Microsoft,extension,10-repeat,10,5,10,260,240,0,0,0,0,1,1,0
+m40,Granite 4 Micro,IBM,extension,10-repeat,10,5,10,500,0,0,10,10,10,10,10,5
+m41,GPT-6 Astra,OpenAI,modern,5-repeat,5,3,5,130,120,0,0,0,0,0,5,1
+m42,GPT-6 Luna,OpenAI,modern,5-repeat,5,3,5,36,214,4,0,0,0,0,1,0
+m43,GPT-6.1 Sol,OpenAI,modern,5-repeat,5,3,5,122,128,0,0,0,0,0,3,1
+m44,Claude Sonnet 5.5,Anthropic,modern,5-repeat,5,3,5,235,15,0,0,5,0,5,5,3
+m45,Gemini 3.8 Flash,Google,modern,5-repeat,5,3,4,178,22,0,0,4,0,4,4,3
+m46,Gemini 3.5 Flash-Lite,Google,modern,5-repeat,5,3,5,250,0,0,5,5,5,5,5,5
+m48,GLM 5.3 Prime,Z.ai,modern,5-repeat,5,3,5,224,26,0,2,5,4,4,5,4
+m49,DeepSeek V4.1 Flash,DeepSeek,modern,5-repeat,5,3,5,200,50,0,3,2,1,4,5,3
+m50,Qwen3.8 Max Prime,Alibaba,modern,5-repeat,5,3,5,250,0,0,5,5,5,5,5,5
+m51,Grok 4.7,SpaceXAI,modern,5-repeat,5,3,5,160,90,0,0,0,0,0,5,1
+m52,MiniMax M3,MiniMax,modern,5-repeat,5,3,5,250,0,0,5,5,5,5,5,5
+m53,Claude Opus 5.5,Anthropic,frontier,3-repeat,3,3,3,135,15,0,0,3,0,3,3,3
+m54,MiMo-V2.6-Pro,Xiaomi,frontier,3-repeat,3,3,3,92,58,1,0,2,1,1,2,0
+m56,Kimi K3,Moonshot,frontier,3-repeat,3,3,3,130,20,0,2,2,1,2,3,1
+m57,Mistral Large 4,Mistral,affordable,3-repeat,3,3,3,135,15,0,0,3,0,3,3,3
+m58,Llama 4 Maverick,Meta,affordable,3-repeat,3,3,3,141,9,0,3,3,0,3,3,4

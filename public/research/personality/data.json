@@ -1,0 +1,2883 @@
+{
+  "studyVersion": "ALL-9",
+  "paperTitle": "A Comparison of LLM Personality Profiles",
+  "paperUrl": "/research/personality/paper.pdf",
+  "supplementUrl": "/research/personality/supplement.html",
+  "scope": {
+    "models": 55,
+    "attempts": 460,
+    "usable": 422,
+    "withAnyScore": 47,
+    "completeProfiles": 22,
+    "commonPattern": 20
+  },
+  "traits": [
+    {
+      "name": "Extraversion",
+      "abbr": "E"
+    },
+    {
+      "name": "Agreeableness",
+      "abbr": "A"
+    },
+    {
+      "name": "Conscientiousness",
+      "abbr": "C"
+    },
+    {
+      "name": "Emotional Stability",
+      "abbr": "ES"
+    },
+    {
+      "name": "Intellect/Imagination",
+      "abbr": "I"
+    }
+  ],
+  "domainSummary": [
+    {
+      "name": "Extraversion",
+      "models": 29,
+      "median": "2.83"
+    },
+    {
+      "name": "Agreeableness",
+      "models": 40,
+      "median": "4.32"
+    },
+    {
+      "name": "Conscientiousness",
+      "models": 25,
+      "median": "4.44"
+    },
+    {
+      "name": "Emotional Stability",
+      "models": 38,
+      "median": "4.03"
+    },
+    {
+      "name": "Intellect/Imagination",
+      "models": 46,
+      "median": "4.41"
+    }
+  ],
+  "comparisons": [
+    {
+      "left": "Gemma 3 4B",
+      "right": "Gemma 3 12B",
+      "trait": "Extraversion",
+      "difference": "1.93",
+      "pairs": 14400,
+      "retained": 14400,
+      "reversed": 0,
+      "ties": 0
+    },
+    {
+      "left": "Gemma 3 4B",
+      "right": "Gemma 3 12B",
+      "trait": "Conscientiousness",
+      "difference": "-1.86",
+      "pairs": 14400,
+      "retained": 14400,
+      "reversed": 0,
+      "ties": 0
+    },
+    {
+      "left": "Qwen3.8 Max Prime",
+      "right": "MiniMax M3",
+      "trait": "Extraversion",
+      "difference": "0.82",
+      "pairs": 100,
+      "retained": 100,
+      "reversed": 0,
+      "ties": 0
+    },
+    {
+      "left": "Gemini 3.5 Flash-Lite",
+      "right": "MiniMax M3",
+      "trait": "Extraversion",
+      "difference": "0.06",
+      "pairs": 100,
+      "retained": 60,
+      "reversed": 40,
+      "ties": 0
+    }
+  ],
+  "missingItems": [
+    {
+      "item": 8,
+      "statement": "Leave my belongings around.",
+      "nulls": 181,
+      "percentage": "42.9"
+    },
+    {
+      "item": 28,
+      "statement": "Often forget to put things back in their proper place.",
+      "nulls": 175,
+      "percentage": "41.5"
+    },
+    {
+      "item": 1,
+      "statement": "Am the life of the party.",
+      "nulls": 141,
+      "percentage": "33.4"
+    },
+    {
+      "item": 31,
+      "statement": "Talk to a lot of different people at parties.",
+      "nulls": 138,
+      "percentage": "32.7"
+    }
+  ],
+  "models": [
+    {
+      "id": "m05",
+      "name": "Claude Haiku 4.5",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 4,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.68",
+          "sd": "0.29",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.28",
+          "sd": "0.71",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.65",
+          "sd": "0.22",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.79",
+          "sd": "0.32",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m53",
+      "name": "Claude Opus 5.5",
+      "planned": 3,
+      "usable": 3,
+      "required": 3,
+      "eligibleTraits": 3,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.50",
+          "sd": "0.00",
+          "n": 3,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.40",
+          "sd": "0.00",
+          "n": 3,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.20",
+          "sd": "0.00",
+          "n": 3,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m44",
+      "name": "Claude Sonnet 5.5",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 3,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.50",
+          "sd": "0.00",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.70",
+          "sd": "0.00",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.50",
+          "sd": "0.00",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m35",
+      "name": "Command A Plus",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.64",
+          "sd": "0.16",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.57",
+          "sd": "0.78",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "3.38",
+          "sd": "0.47",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "2.96",
+          "sd": "0.34",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.97",
+          "sd": "0.25",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m15",
+      "name": "Command R",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 1,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.30",
+          "sd": "0.41",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 4,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m14",
+      "name": "Command R7B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.97",
+          "sd": "0.27",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.92",
+          "sd": "0.82",
+          "n": 9,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "3.66",
+          "sd": "0.72",
+          "n": 9,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.96",
+          "sd": "0.19",
+          "n": 9,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.49",
+          "sd": "0.83",
+          "n": 9,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m13",
+      "name": "DeepSeek V3.2",
+      "planned": 10,
+      "usable": 9,
+      "required": 5,
+      "eligibleTraits": 4,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.97",
+          "sd": "0.05",
+          "n": 9,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.99",
+          "sd": "0.03",
+          "n": 9,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 9,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.97",
+          "sd": "0.05",
+          "n": 9,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m49",
+      "name": "DeepSeek V4.1 Flash",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 3,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.23",
+          "sd": "0.15",
+          "n": 3,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.55",
+          "sd": "0.40",
+          "n": 4,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.38",
+          "sd": "0.40",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m06",
+      "name": "Gemini 2.5 Flash-Lite",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 4,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.76",
+          "sd": "0.59",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.39",
+          "sd": "0.03",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.03",
+          "sd": "0.49",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.74",
+          "sd": "0.10",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m46",
+      "name": "Gemini 3.5 Flash-Lite",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.44",
+          "sd": "0.60",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.30",
+          "sd": "0.00",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.68",
+          "sd": "0.11",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.72",
+          "sd": "0.08",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m45",
+      "name": "Gemini 3.8 Flash",
+      "planned": 5,
+      "usable": 4,
+      "required": 3,
+      "eligibleTraits": 3,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.35",
+          "sd": "0.06",
+          "n": 4,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 4,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.43",
+          "sd": "0.13",
+          "n": 4,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m24",
+      "name": "Gemma 3 12B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "1.56",
+          "sd": "0.05",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.34",
+          "sd": "0.26",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.68",
+          "sd": "0.30",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.58",
+          "sd": "0.06",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.72",
+          "sd": "0.19",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m25",
+      "name": "Gemma 3 27B",
+      "planned": 10,
+      "usable": 5,
+      "required": 5,
+      "eligibleTraits": 4,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.00",
+          "sd": "0.16",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.18",
+          "sd": "0.39",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.80",
+          "sd": "0.00",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.18",
+          "sd": "0.28",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m23",
+      "name": "Gemma 3 4B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.49",
+          "sd": "0.06",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.03",
+          "sd": "0.05",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "2.82",
+          "sd": "0.06",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.44",
+          "sd": "0.10",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.50",
+          "sd": "0.00",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m18",
+      "name": "GLM 4.7 Flash",
+      "planned": 10,
+      "usable": 8,
+      "required": 5,
+      "eligibleTraits": 2,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.89",
+          "sd": "0.54",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 3,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.38",
+          "sd": "0.21",
+          "n": 8,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m48",
+      "name": "GLM 5.3 Prime",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 4,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.50",
+          "sd": "0.14",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.15",
+          "sd": "0.24",
+          "n": 4,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.03",
+          "sd": "0.05",
+          "n": 4,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.90",
+          "sd": "0.07",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m22",
+      "name": "GPT-3.5 Turbo",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.10",
+          "sd": "0.33",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.01",
+          "sd": "0.03",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "3.73",
+          "sd": "0.27",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "2.43",
+          "sd": "0.07",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.43",
+          "sd": "0.09",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m01",
+      "name": "GPT-4.1 mini",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.66",
+          "sd": "0.20",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.26",
+          "sd": "0.25",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.94",
+          "sd": "0.19",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.85",
+          "sd": "0.34",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.93",
+          "sd": "0.11",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m21",
+      "name": "GPT-4.1 nano",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.43",
+          "sd": "0.13",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.18",
+          "sd": "0.12",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.22",
+          "sd": "0.12",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.94",
+          "sd": "0.12",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.14",
+          "sd": "0.13",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m02",
+      "name": "GPT-4o mini",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.83",
+          "sd": "0.12",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.74",
+          "sd": "0.18",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.74",
+          "sd": "0.15",
+          "n": 9,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.63",
+          "sd": "0.30",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.46",
+          "sd": "0.21",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m41",
+      "name": "GPT-6 Astra",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 1,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.18",
+          "sd": "0.08",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m42",
+      "name": "GPT-6 Luna",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 0,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m43",
+      "name": "GPT-6.1 Sol",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 1,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.37",
+          "sd": "0.06",
+          "n": 3,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m04",
+      "name": "GPT-OSS 120B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 0,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m03",
+      "name": "GPT-OSS 20B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 0,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 3,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m40",
+      "name": "Granite 4 Micro",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.45",
+          "sd": "0.25",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.74",
+          "sd": "0.39",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.06",
+          "sd": "0.25",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.75",
+          "sd": "0.37",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.70",
+          "sd": "0.26",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m51",
+      "name": "Grok 4.7",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 1,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.34",
+          "sd": "0.09",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m19",
+      "name": "Kimi K2 0905",
+      "planned": 10,
+      "usable": 8,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.88",
+          "sd": "0.74",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.56",
+          "sd": "0.29",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.50",
+          "sd": "0.24",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.86",
+          "sd": "0.12",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.73",
+          "sd": "0.23",
+          "n": 8,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m56",
+      "name": "Kimi K3",
+      "planned": 3,
+      "usable": 3,
+      "required": 3,
+      "eligibleTraits": 1,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.53",
+          "sd": "0.32",
+          "n": 3,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m07",
+      "name": "Llama 3.1 8B",
+      "planned": 10,
+      "usable": 1,
+      "required": 5,
+      "eligibleTraits": 0,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m26",
+      "name": "Llama 3.2 1B",
+      "planned": 10,
+      "usable": 6,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.26",
+          "sd": "0.63",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.28",
+          "sd": "0.28",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "3.15",
+          "sd": "0.29",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "2.17",
+          "sd": "0.27",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.72",
+          "sd": "0.18",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m27",
+      "name": "Llama 3.2 3B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.92",
+          "sd": "0.30",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.38",
+          "sd": "0.48",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "3.43",
+          "sd": "0.47",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.17",
+          "sd": "0.58",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.17",
+          "sd": "0.51",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m08",
+      "name": "Llama 3.3 70B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 4,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 3,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.48",
+          "sd": "0.54",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.88",
+          "sd": "0.19",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.93",
+          "sd": "0.10",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.73",
+          "sd": "0.18",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m58",
+      "name": "Llama 4 Maverick",
+      "planned": 3,
+      "usable": 3,
+      "required": 3,
+      "eligibleTraits": 4,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.50",
+          "sd": "0.00",
+          "n": 3,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.40",
+          "sd": "0.00",
+          "n": 3,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 3,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 3,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m28",
+      "name": "Llama 4 Scout",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.20",
+          "sd": "0.32",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.08",
+          "sd": "0.56",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "3.33",
+          "sd": "0.48",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.32",
+          "sd": "0.67",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.22",
+          "sd": "0.46",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m54",
+      "name": "MiMo-V2.6-Pro",
+      "planned": 3,
+      "usable": 3,
+      "required": 3,
+      "eligibleTraits": 0,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m38",
+      "name": "MiniMax M2.5",
+      "planned": 10,
+      "usable": 8,
+      "required": 5,
+      "eligibleTraits": 2,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.46",
+          "sd": "0.23",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.55",
+          "sd": "0.30",
+          "n": 8,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m52",
+      "name": "MiniMax M3",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.38",
+          "sd": "0.50",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.66",
+          "sd": "0.24",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.72",
+          "sd": "0.35",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.90",
+          "sd": "0.17",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.52",
+          "sd": "0.43",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m20",
+      "name": "MiniMax-01",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.83",
+          "sd": "0.50",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.78",
+          "sd": "0.20",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.07",
+          "sd": "0.61",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.98",
+          "sd": "0.04",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m57",
+      "name": "Mistral Large 4",
+      "planned": 3,
+      "usable": 3,
+      "required": 3,
+      "eligibleTraits": 3,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.13",
+          "sd": "0.06",
+          "n": 3,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.57",
+          "sd": "0.40",
+          "n": 3,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.53",
+          "sd": "0.32",
+          "n": 3,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m32",
+      "name": "Mistral Nemo",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 3,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.80",
+          "sd": "0.58",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 3,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.30",
+          "sd": "0.47",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.96",
+          "sd": "0.40",
+          "n": 9,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m33",
+      "name": "Mistral Small 2501",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 3,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 4,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.36",
+          "sd": "0.54",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 4,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.92",
+          "sd": "0.67",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.83",
+          "sd": "0.78",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m12",
+      "name": "Mistral Small 3.2",
+      "planned": 10,
+      "usable": 8,
+      "required": 5,
+      "eligibleTraits": 4,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.16",
+          "sd": "0.45",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.38",
+          "sd": "0.52",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 4,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.60",
+          "sd": "0.33",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.63",
+          "sd": "0.41",
+          "n": 8,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m17",
+      "name": "Nemotron 3 Nano",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.17",
+          "sd": "0.37",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.08",
+          "sd": "0.63",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "3.83",
+          "sd": "0.49",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.00",
+          "sd": "0.62",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.05",
+          "sd": "0.62",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m36",
+      "name": "Nemotron 3 Super",
+      "planned": 10,
+      "usable": 7,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.04",
+          "sd": "0.50",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.36",
+          "sd": "0.05",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.11",
+          "sd": "0.07",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.41",
+          "sd": "0.43",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.37",
+          "sd": "0.22",
+          "n": 7,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m34",
+      "name": "Nova Lite",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.12",
+          "sd": "0.18",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.92",
+          "sd": "0.13",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.84",
+          "sd": "0.22",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "3.03",
+          "sd": "0.39",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.41",
+          "sd": "0.24",
+          "n": 7,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m16",
+      "name": "Nova Micro",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 1,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "3.69",
+          "sd": "0.12",
+          "n": 9,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m39",
+      "name": "Phi-4",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 0,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m30",
+      "name": "Qwen2.5 72B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "2.46",
+          "sd": "0.28",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.98",
+          "sd": "0.04",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.91",
+          "sd": "0.28",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m29",
+      "name": "Qwen2.5 7B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 0,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m10",
+      "name": "Qwen3 235B A22B",
+      "planned": 10,
+      "usable": 9,
+      "required": 5,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.61",
+          "sd": "0.60",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.46",
+          "sd": "0.24",
+          "n": 7,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.94",
+          "sd": "0.12",
+          "n": 8,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "5.00",
+          "sd": "0.00",
+          "n": 9,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.76",
+          "sd": "0.09",
+          "n": 9,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m09",
+      "name": "Qwen3 30B A3B",
+      "planned": 10,
+      "usable": 8,
+      "required": 5,
+      "eligibleTraits": 0,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": null,
+          "sd": null,
+          "n": 2,
+          "eligible": false
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 3,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 4,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": null,
+          "sd": null,
+          "n": 4,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "id": "m31",
+      "name": "Qwen3 32B",
+      "planned": 10,
+      "usable": 6,
+      "required": 5,
+      "eligibleTraits": 2,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 1,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "3.73",
+          "sd": "0.48",
+          "n": 6,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": null,
+          "sd": null,
+          "n": 4,
+          "eligible": false
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.40",
+          "sd": "0.33",
+          "n": 6,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m11",
+      "name": "Qwen3.8 27B",
+      "planned": 10,
+      "usable": 10,
+      "required": 5,
+      "eligibleTraits": 3,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": null,
+          "sd": null,
+          "n": 4,
+          "eligible": false
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.64",
+          "sd": "0.25",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": null,
+          "sd": null,
+          "n": 0,
+          "eligible": false
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.55",
+          "sd": "0.52",
+          "n": 10,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.57",
+          "sd": "0.25",
+          "n": 10,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "id": "m50",
+      "name": "Qwen3.8 Max Prime",
+      "planned": 5,
+      "usable": 5,
+      "required": 3,
+      "eligibleTraits": 5,
+      "traits": [
+        {
+          "name": "Extraversion",
+          "abbr": "E",
+          "mean": "3.20",
+          "sd": "0.07",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Agreeableness",
+          "abbr": "A",
+          "mean": "4.40",
+          "sd": "0.00",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Conscientiousness",
+          "abbr": "C",
+          "mean": "4.44",
+          "sd": "0.09",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Emotional Stability",
+          "abbr": "ES",
+          "mean": "4.46",
+          "sd": "0.34",
+          "n": 5,
+          "eligible": true
+        },
+        {
+          "name": "Intellect/Imagination",
+          "abbr": "I",
+          "mean": "4.52",
+          "sd": "0.30",
+          "n": 5,
+          "eligible": true
+        }
+      ]
+    }
+  ]
+}

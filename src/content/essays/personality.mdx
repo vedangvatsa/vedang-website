@@ -1,0 +1,163 @@
+---
+title: "Personality Profiles Across 55 Language Models"
+date: '2026-10-17'
+author: 'Vedang Vatsa'
+summary: 'What repeated IPIP-50 assessments of 55 language model configurations show about personality scores and the comparisons they support.'
+description: 'A detailed account of recurring LLM personality profiles, incomplete answers, repeatability, and the score differences that survive repeated assessment.'
+category: 'Artificial Intelligence'
+keywords: ['LLM personality', 'IPIP-50', 'Big Five', 'language model evaluation', 'psychometrics', 'response consistency']
+---
+
+Twenty of the 22 language model configurations with complete personality profiles scored higher on Agreeableness, Conscientiousness, and Intellect/Imagination than on Extraversion. The comparison covered 55 configurations. The other 33 lacked a reportable score in at least one domain. Any account of the apparent similarity among these models has to explain why most of the panel could not supply a complete profile.
+
+<Figure src="/images/essays/personality-coverage.svg" alt="Of 55 tested language model configurations, 47 had at least one reportable trait and 22 had all five." caption="Coverage under the study's reporting rule. A response could answer every item while leaving some traits without a numeric score." source="IPIP-50 comparison, ALL-9" sourceUrl="/research/personality/paper.pdf" width={800} height={400} wide />
+
+The [research paper](/research/personality/paper.pdf) behind this essay uses repeated administrations of the same fifty-item questionnaire. Its results include substantial differences between particular models, near-identical scores that change order when different responses are used, and models that repeatedly decline to rate statements about ordinary human experiences. A missing mean can reflect failures or non-applicable answers, which the study records separately.
+
+A useful personality comparison needs to establish which answers support each score and how much the comparison changes when those answers change. The analysis keeps each score beside its complete-assessment count and tests comparisons against alternative selections of recorded responses.
+
+## The question answered by a questionnaire
+
+The [International Personality Item Pool sample questionnaire](https://ipip.ori.org/new_ipip-50-item-scale.htm) asks respondents to assess statements such as “Am always prepared,” “Worry about things,” and “Have a vivid imagination.” The five response categories run from Very Inaccurate to Very Accurate. The published key groups the statements into Extraversion, Agreeableness, Conscientiousness, Emotional Stability, and Intellect/Imagination, with ten items in each domain.
+
+The assistant-self instruction matters as much as the inventory's name. Every main request asked the model to describe itself as an AI assistant as it generally is, rather than ideally. All fifty statements appeared together in the published sample order. Each request started a fresh study conversation, without previous answers or an assigned fictional personality. A model could mark a statement non-applicable instead of inventing an experience. The [supplement reproduces the exact prompt](/research/personality/supplement.html).
+
+That instruction leaves room for different readings. An assistant might interpret “Start conversations” as initiating a conversational exchange. It might read “Leave my belongings around” literally and decline to assign a number. Another model might treat possessions as an analogy for its handling of information. The recorded answer identifies the option the model returned; it does not settle which interpretation produced it. The study held the instruction fixed, so it cannot estimate the effect of changing that interpretation.
+
+The domain names also need their published meanings. Higher Emotional Stability broadly corresponds to lower Neuroticism. Intellect/Imagination concerns vocabulary, ideas, and imagination. A high score on those statements does not measure performance on an intelligence test. Nor does a score of four in one domain have an established psychological distance from a score of three in another. The study compares coded questionnaire responses on their common response scale.
+
+The [IPIP scoring instructions](https://ipip.ori.org/newScoringInstructions.htm) reverse negatively keyed items. A rating of one on “Feel little concern for others” contributes five toward Agreeableness. Positive-keyed items retain their rating. The study averages the ten keyed contributions in a complete domain, producing a score between one and five. This equal-step calculation is a declared convention. It makes the arithmetic comparable without proving that the psychological distance between successive options is equal.
+
+## What entered the comparison
+
+The main collection covers 55 requested configurations from seventeen developer labels. It includes older and recent model families, selected through access, coverage, and resource constraints. A check of the [Artificial Analysis model list](https://artificialanalysis.ai/models) helped guide selection. Its capability rankings supplied no evidence about personality. The tested configuration includes the model identifier and submitted controls; a familiar product name alone does not describe everything that produced the response.
+
+Thirty-nine configurations received ten planned administrations, eleven received five, and five received three. The resulting 460 administrations produced 422 usable item maps. Each usable map contained an unambiguous number or non-applicable mark for every item. The remaining outcomes included service errors, truncated output, incomplete or invalid maps, and an interrupted request. Those outcomes remain in the administration count. A service retry does not become another questionnaire repetition in the analysis.
+
+The accepted maps contained 17,940 numeric ratings and 3,160 non-applicable marks. That is 15.0% non-applicability across returned item positions. This percentage weights responses: a model with ten usable maps contributes more positions than one with three. The trait summaries later in the essay give configurations equal weight instead. Confusing those denominators would turn a description of collected answers into a claim about a typical model.
+
+A domain needs ten numeric answers before it can receive a score for an occasion. A reported model-domain estimate then requires at least three complete assessments and at least half the planned administrations. That means five of ten, three of five, or three of three. The unified trait-wise reporting rule was chosen retrospectively. It retains partial profiles while withholding means supported by one or two complete occasions; it does not certify reliability.
+
+The generation settings were not identical across the panel. The ten-repeat configurations requested temperature 0.7 and an output cap of 1,536 tokens. The five-repeat configurations used a 4,096-token cap, and the three-repeat configurations used 1,536 tokens. The latter groups omitted temperature and requested low or disabled reasoning where supported. No generation seed was requested. Since model identity and repeat setting do not overlap, their effects cannot be separated by comparing those groups.
+
+Collection records place the main requests between October 5 and 7, 2026. The supplement records API service, provider restrictions, service-tier requests, and per-configuration windows. All 45 routed configurations requested a single provider tag and disabled fallback. These are submitted restrictions and returned labels, not independent access to model weights or provider hardware. The reported contrasts therefore belong to the recorded configurations and collection conditions.
+
+## The recurring profile and its exceptions
+
+The 422 usable maps yielded 1,481 complete domain assessments. Of the 275 possible model-domain combinations, 178 met the reporting rule. Forty-seven configurations had at least one eligible trait estimate; twenty-two had all five. The distinction between usable responses and reportable profiles is visible in the coverage chart below.
+
+<Figure src="/images/essays/personality-trait-coverage.svg" alt="Reportable trait counts out of 55 configurations: Extraversion 29, Agreeableness 40, Conscientiousness 25, Emotional Stability 38, and Intellect/Imagination 46." caption="Different traits select different groups of models. Intellect/Imagination has the widest reporting coverage; Conscientiousness has the narrowest." source="Coverage table" sourceUrl="/research/personality/coverage.csv" width={800} height={570} wide />
+
+Among the twenty-two complete profiles, twenty had Agreeableness, Conscientiousness, and Intellect/Imagination means above Extraversion. Gemma 3 4B and Llama 3.2 1B were the exceptions. Their Conscientiousness means were 2.82 and 3.15, below their Extraversion means of 3.49 and 3.26. The same twenty-model result held when the analysis used only questionnaire occasions with numbers for all fifty items. It did not require combining traits answered on different occasions.
+
+Across all eligible model means, the medians were 2.83 for Extraversion, 4.32 for Agreeableness, 4.44 for Conscientiousness, 4.03 for Emotional Stability, and 4.41 for Intellect/Imagination. These are equal-model summaries, but each domain includes a different group. The Extraversion median draws on 29 configurations; the Intellect/Imagination median draws on 46. A comparison between those two medians is not a paired comparison of the same models.
+
+The complete-profile result has a narrower denominator than the panel result. Twenty-two configurations represent 40% of the tested panel. Their common ordering cannot supply the missing profiles of the other 33. A model that repeatedly marks a physical or social statement inapplicable may disappear from a complete-profile analysis even while producing consistent numeric answers elsewhere. Eligibility therefore changes which response styles contribute to the apparent common profile.
+
+The table below gives every configuration, including those with no reportable trait. Each displayed mean includes its complete-assessment count. A missing mean means the reporting rule was not met; the count shows how much support was available. The table orders names alphabetically and offers no overall personality ranking.
+
+<PersonalityProfileExplorer />
+
+## A model family can contain very different profiles
+
+Gemma 3 4B and Gemma 3 12B each supplied ten complete assessments for every domain under the same requested temperature and output cap. Their Extraversion means were 3.49 and 1.56, a difference of 1.93 points. Their Conscientiousness means ran in the opposite direction, at 2.82 and 4.68. Gemma 3 27B supplied enough complete assessments for four domains but none for Conscientiousness. A family name or parameter count is insufficient to reconstruct these profiles.
+
+<Figure src="/images/essays/personality-gemma.svg" alt="Gemma 3 4B scored 3.49 in Extraversion and 2.82 in Conscientiousness. Gemma 3 12B scored 1.56 and 4.68 respectively." caption="The higher-scoring configuration changes by trait. Both displayed profiles use ten complete assessments per domain." source="Reported profile table" sourceUrl="/research/personality/reported-profiles.csv" width={800} height={440} wide />
+
+The three complete profiles in the five-repeat setting also differed. Qwen3.8 Max Prime had Extraversion 3.20 and Emotional Stability 4.46. Gemini 3.5 Flash-Lite had 2.44 and 5.00, while MiniMax M3 had 2.38 and 3.90. Each mean uses five complete assessments. Their shared ordering of several traits above Extraversion coexists with differences in the numerical profiles.
+
+Partial profiles permit more restricted comparisons. Claude Sonnet 5.5 and Claude Opus 5.5 both averaged 4.50 in Agreeableness. Their Emotional Stability means were 4.70 and 4.40; their Intellect/Imagination means were 4.50 and 4.20. The reported domains had zero observed standard deviation over five Sonnet and three Opus assessments. Yet neither configuration had a reportable Extraversion or Conscientiousness score.
+
+The interpretation needs both the numerical difference and its scope. These means describe complete-domain responses to one instruction. They do not isolate parameter count, training method, developer policy, or a particular provider implementation. Equal output caps do not make all sampling conditions identical. A causal explanation of the Gemma difference would need a design that changes the suspected cause while controlling the other relevant conditions.
+
+## Missing scores follow the questions
+
+The most frequently non-applicable statement concerned leaving belongings around: 181 of 422 usable questionnaires marked it non-applicable. Forgetting to put things back received 175 such marks. Being the life of the party received 141, and talking to different people at parties received 138. The corresponding shares were 42.9%, 41.5%, 33.4%, and 32.7% of usable questionnaires.
+
+Claude Sonnet 5.5 marked the two belongings statements and the statement about talking to different people at parties as non-applicable in all five responses. Those entries prevented Conscientiousness and Extraversion scores. Its other eligible domains repeated exactly. The missing values therefore coexist with repeatability elsewhere in the same response maps. They cannot be read as low Conscientiousness or low Extraversion.
+
+GPT-6 Luna showed a different form of incomplete coverage. It marked all fifty items non-applicable in four of five responses, then supplied 36 numeric ratings in the remaining response. No item received a numeric rating twice, so numeric repeat agreement could not be calculated. MiMo-V2.6-Pro marked every item non-applicable once in three responses. Their applicability agreement, which compares numeric-versus-null status, was 71.2% and 34.7%, respectively.
+
+Replacing every non-applicable answer with the midpoint would change the measurement. A midpoint says that a statement is neither accurate nor inaccurate. A non-applicable answer declines that numeric assessment. Assigning the same number to both would make a model's refusal to describe possessions look like a moderate possession-related rating. The study leaves those answers unscored and reports the resulting coverage.
+
+The association with parties and possessions makes an instruction effect plausible, but this collection does not identify one. The same item could receive a different response under an explicitly metaphorical instruction, a human-role prompt, or a forced-choice demand. Changing those instructions would change the procedure being assessed. Their effects need a controlled comparison within each model, rather than an explanation inferred solely from the original null pattern.
+
+## Repeated answers put small differences under pressure
+
+A mean difference can depend on which recorded responses enter the calculation. The study tests this by taking every possible group of three complete domain assessments for each eligible model. It compares every three-assessment mean from one model with every such mean from another, keeping comparisons within the same planned-repeat setting. Ties remain in the denominator when checking whether a strict ordering survives.
+
+Gemini 3.5 Flash-Lite's Extraversion mean exceeded MiniMax M3's by 0.06 points. Each had five complete scores, yielding ten possible groups of three. Comparing the ten groups on one side with the ten on the other produced 100 pairings. Gemini stayed higher in sixty; MiniMax was higher in forty. These are overlapping combinations of ten recorded questionnaire responses, not 100 fresh experiments.
+
+Qwen3.8 Max Prime's 0.82-point Extraversion difference from MiniMax M3 retained its direction in all 100 pairings. The Gemma 3 4B and 12B differences in Extraversion and Conscientiousness also retained their directions in every comparison. Ten complete scores produce 120 groups of three per model, or 14,400 pairings for each trait. The higher-scoring Gemma configuration still differed by trait.
+
+<Figure src="/images/essays/personality-orderings.svg" alt="Three illustrative Extraversion comparisons. Gemma 3 4B versus 12B retained its ordering in 14,400 of 14,400 subset comparisons; Qwen3.8 Max Prime versus MiniMax M3 in 100 of 100; Gemini 3.5 Flash-Lite versus MiniMax M3 in 60 of 100." caption="Illustrative contrasts from the full pair export. The bars summarize recorded subsets and do not estimate the probability of the next response." source="All within-setting pair comparisons" sourceUrl="/research/personality/pair-stability.csv" width={800} height={560} wide />
+
+Across the ten-repeat group, the share of evaluable pairs retaining their ordering in at least 95% of subset comparisons ranged from 61.3% for Agreeableness to 74.0% for Emotional Stability. Those shares represent 284 of 463 pairs and 279 of 377 pairs. The 95% cutoff is a reporting choice, with alternative cutoffs supplied in the supplement. It is not a confidence level.
+
+The full export retains 1,930 within-setting model-domain pairs, including tied means and non-evaluable cases. A model with only three complete scores has one group of three. It cannot supply another group against which to assess this form of sensitivity. The three-repeat setting therefore contributes no evaluable pairs to this check. Zero observed standard deviation over those few responses does not establish deterministic output.
+
+These comparisons answer a finite-data question: how dependent is an ordering on the recorded responses selected? They do not estimate a model's long-term personality or adjust for changes in instructions and provider conditions. The stable examples and the small reversing example also do not establish a general law relating gap size to stability. The pair-level records allow that distinction to remain visible.
+
+## A shared profile shape can survive a different scale
+
+The ordinary mean treats the move from rating one to two as equal to the move from four to five. The response categories themselves establish order, but they do not establish those equal distances. A score ordering that disappears under another increasing coding would depend partly on the numerical convention used to summarize the answers.
+
+The study checks whether the keyed-category distributions for Agreeableness, Conscientiousness, and Intellect/Imagination each dominate Extraversion in the first-order sense. At each category cutoff, the higher-scoring domain must have no greater share of observations at or below that cutoff, with at least one strict difference. If that condition holds, every common strictly increasing recoding of the keyed categories preserves the larger mean. The supplement gives the derivation.
+
+This check uses only questionnaires with numbers for all fifty items, keeping the compared occasions matched. Eighteen of the twenty-two complete-profile configurations retain all three orderings under the criterion. Gemma 3 4B, Llama 3.2 1B, Command A Plus, and Granite 4 Micro do not. Failure of the criterion does not mean every alternative coding reverses a comparison; it means the universal ordering is not established.
+
+The result supports a narrower claim than psychological equivalence between domains. The recoding applies to keyed responses after reverse scoring. It does not establish that Agreeableness and Extraversion share a calibrated latent scale, or that an assistant has more of one human disposition than another. It shows which observed item-distribution comparisons depend less on the spacing assigned to response categories.
+
+## Incomplete profiles sometimes constrain the answer
+
+Some missing means leave room for a directional conclusion. For every planned item position, the study retains a known keyed value when available and allows an unknown position to take any value from one to five. Unknown positions include explicit non-applicable marks and every position in an unusable response. The smallest and largest possible averages define numerical-completion bounds.
+
+Those bounds describe a hypothetical average over all planned positions. The main reported mean averages complete-domain occasions instead. The two quantities can therefore have different denominators and different interpretations. The calculation neither adds missing ratings to the observed data nor assumes that an inapplicable human experience has a hidden true number.
+
+Allowing every unknown position the full response range still leaves Agreeableness, Conscientiousness, and Intellect/Imagination above Extraversion for 26 of the 55 configurations. Nine of those configurations lack a complete eligible profile. For the others, the recorded answers either contradict the broad ordering or leave it unresolved under the completion assumption.
+
+<Figure src="/images/essays/personality-bounds.svg" alt="Hypothetical completion bounds. Kimi K3 Extraversion spans 2.77 to 3.17, with Conscientiousness starting at 4.03. Claude Opus 5.5 Extraversion spans 2.80 to 3.60 and Conscientiousness 3.30 to 4.50, so their intervals overlap." caption="Kimi's Conscientiousness lower bound exceeds its Extraversion upper bound. Opus's two intervals overlap. These are hypothetical completion limits, not confidence intervals." source="All completion bounds" sourceUrl="/research/personality/completion-bounds.csv" width={800} height={610} wide />
+
+Kimi K3 qualifies only for Intellect/Imagination under the main reporting rule. Its hypothetical Extraversion average lies between 2.77 and 3.17. The lower bounds for Agreeableness, Conscientiousness, and Intellect/Imagination are 4.33, 4.03, and 4.53. Every lower bound exceeds Extraversion's upper bound, so those directions hold for every numerical completion allowed by the calculation.
+
+Claude Opus 5.5 has overlapping bounds for Extraversion, 2.80 to 3.60, and Conscientiousness, 3.30 to 4.50. The data cannot settle that ordering under the same assumption. Its eligible domains still have zero observed standard deviation. Repeatable answers in one part of a questionnaire do not supply the missing answers elsewhere.
+
+The completion check and the ordinal check change different assumptions. One varies missing values while keeping the original coding. The other recodes observed values on complete occasions. Passing them separately does not establish a guarantee when both changes occur together. Combining their conclusions would require a further derivation or calculation, not a verbal claim of general robustness.
+
+## What earlier studies contribute
+
+[Miotto, Rossberg and Kleinberg's GPT-3 study](https://aclanthology.org/2022.nlpcss-1.24/) used HEXACO-60 and a human-values instrument. It presented personality items separately and also examined response history in the values procedure. Some scores resembled human references, while temperature affected several results and correlations among scores did not consistently resemble human data. The administered procedure was part of the observed profile.
+
+[Jiang and colleagues](https://arxiv.org/abs/2206.07550) developed the Machine Personality Inventory, including 120-item and 1,000-item versions, and used personality prompts and vignettes to examine assigned traits. That work connects measurement with deliberate control over personality-like expression. The present comparison assigns no target personality. A model's ability to enact a requested character and its answers under a default assistant-self instruction address different questions.
+
+[Shu and colleagues](https://aclanthology.org/2024.naacl-long.295/) standardized material from 39 instruments into 693 yes/no questions and evaluated seventeen models overall. Answer labels, option order, formatting, and negation could change responses. Most models showed higher order or option consistency than consistency when a statement's meaning was reversed. A tendency to answer positively could inflate some consistency measures. Repetition under one unchanged prompt tests a smaller part of that problem.
+
+[Bodroža, Dinić and Bojić](https://pmc.ncbi.nlm.nih.gov/articles/PMC11461045/) tested seven models on two occasions five days apart, with different collection periods for GPT-3 and the other models. Their instruments included BFI-2 and HEXACO-100, and their prompts asked models to pretend to be human. Agreement varied across models, domains, and instruments. Their results cannot serve as a numeric baseline for this assistant-self IPIP-50 procedure, but they give a reason to distinguish short-run repetition from temporal reliability.
+
+[Serapio-García and colleagues](https://www.nature.com/articles/s42256-025-01115-6) evaluated eighteen models with IPIP-NEO-300, BFI-44, and broader reliability and validity tests. Their itemwise procedure varied biographic descriptions and response framing. Some larger and instruction-tuned models showed better measurement properties and relationships with downstream responses. That evidence is model- and procedure-dependent; it does not automatically transfer to the configurations and prompt used here.
+
+Alternative assessments change the evidence collected. [InCharacter](https://aclanthology.org/2024.acl-long.102/) uses psychological interviews and LLM-based assessment to examine fidelity to assigned characters, with human-perceived labels as references. [TRAIT](https://aclanthology.org/2025.findings-naacl.469/) uses 8,000 hypothetical scenario questions derived from Big Five and Short Dark Triad material. [Ma and colleagues' CSI preprint](https://arxiv.org/abs/2503.20182v2) summarizes sentiment associations as optimism, pessimism, and neutrality. None supplies a direct conversion from an IPIP-50 score to a model's behavior in an unrelated task.
+
+## Which comparisons deserve to travel beyond the table
+
+The reporting threshold changes who appears in a summary. Requiring complete domains on every planned administration reduces eligible estimates from 178 to 112. Extraversion's median stays at 2.83, while Intellect/Imagination rises from 4.41 to 4.48. Agreeableness's median rises from 4.32 to 4.34 as its range narrows. These are changes in the selected configurations, not newly recovered answers from the missing ones.
+
+Formatting also changes membership unless the parser preserves interpretable values. Strict parsing alone retains 157 estimates. Every accepted Gemma 3 4B and Llama 3.2 1B map required format recovery, so a strict-only analysis removes both exceptions to the common profile ordering. The recovery accepts explicitly supplied ratings without guessing omitted items. Two normally finished maps needed only their final closing brace restored. An independent token reader checked their original values.
+
+Numeric agreement has a related selection problem at the item level. It ranges from 25.5% to 100% over the 53 configurations with repeatedly numeric items, but those configurations need not contribute the same items. Restricting the calculation to fourteen shared items reverses 186 of 1,378 possible model-pair orderings relative to each model's own item set. The shared set contains no Emotional Stability items. Better comparability of item identity comes with narrower content coverage.
+
+For a researcher, these dependencies belong beside the score. For someone choosing an assistant, they determine whether a comparison answers the intended question. A profile can describe how a configuration handles questionnaire statements, reveal repeated answer conventions, or identify a difference worth testing. Using it to predict cooperation in a negotiation or sociability in a conversation requires observations of those tasks.
+
+A follow-up can make that demand concrete. Fix the instructions and settings within each model, collect the questionnaire profile, and record the behavioral prediction before running a separate task. Then test whether the predicted ordering survives across fresh prompts and occasions. A score becomes useful for that decision when it predicts the relevant choices, rather than merely reproducing the language of the questionnaire.
+
+## Research materials
+
+The essay draws on **A Comparison of LLM Personality Profiles** by Vedang Ratan Vatsa, using the ALL-9 manuscript and its verified analysis exports. The paper records AI assistance in its research and writing workflow. The files below provide the paper, full supplementary tables, and the derived data used in this essay; the full retained-response archive is separate.
+
+- [Research paper PDF](/research/personality/paper.pdf)
+- [Supplementary methods, all fourteen tables, and the exact prompt](/research/personality/supplement.html)
+- [Every reportable model-domain estimate](/research/personality/reported-profiles.csv)
+- [Coverage for all 55 configurations](/research/personality/coverage.csv)
+- [All 1,930 within-setting pair comparisons](/research/personality/pair-stability.csv)
+- [Completion bounds for all configurations and domains](/research/personality/completion-bounds.csv)
+- [Chart and profile data](/research/personality/data.json) and [source-file checksums](/research/personality/manifest.json)

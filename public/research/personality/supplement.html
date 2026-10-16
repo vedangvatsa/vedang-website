@@ -1,0 +1,734 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A Comparison of LLM Personality Profiles Supplementary Materials</title><style>body{max-width:78rem;margin:2rem auto;padding:0 1rem;font:17px/1.55 system-ui,sans-serif;color:#17222b;background:white}
+h1,h2,h3{line-height:1.25}a{color:#064f91}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0 2rem}
+caption{text-align:left;font-weight:650;padding:.6rem 0}th,td{padding:.45rem;border:1px solid #8b949b;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+thead th{background:#e9eff3}tbody th{font-weight:500}pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:1rem;background:#f1f4f6}
+img{max-width:100%;height:auto}.scroll{overflow-x:auto}:focus-visible{outline:3px solid #a34800;outline-offset:3px}
+@media print{body{font-size:11pt;max-width:none}tr{break-inside:avoid}thead{display:table-header-group}}
+</style></head><body><main><h1>A Comparison of LLM Personality Profiles Supplementary Materials</h1><p>Companion release ALL-9. This completed comparison includes 55 tested configurations and 460 main questionnaire attempts. Eligibility requires at least three complete domain scores and at least half the planned attempts, giving thresholds of 5/10, 3/5, or 3/3. A score requires ten numeric item answers. Reported means use the available complete-domain scores; incomplete domains are excluded. Non-applicable items are not replaced with neutral ratings. All means use unrounded observations; displayed values use decimal half-up rounding. Ranges are observed minima/maxima, not confidence intervals.</p>
+<div class="scroll" tabindex="0" role="region" aria-label="S1"><table id="S1"><caption>Table S1. All 178 eligible trait estimates. Sample SD describes repeated complete-domain scores, not between-model uncertainty. A displayed 0.00 may be rounded; unrounded values are in the CSV.</caption><thead><tr><th scope="col">Model</th><th scope="col">Domain</th><th scope="col">Mean</th><th scope="col">Sample SD</th><th scope="col">Minimum</th><th scope="col">Maximum</th><th scope="col">Complete/planned</th></tr></thead><tbody><tr><th scope="row">GPT-4.1 mini</th><td>Extraversion</td><td>2.66</td><td>0.20</td><td>2.50</td><td>3.00</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 mini</th><td>Agreeableness</td><td>4.26</td><td>0.25</td><td>4.10</td><td>4.90</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 mini</th><td>Conscientiousness</td><td>4.94</td><td>0.19</td><td>4.40</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 mini</th><td>Emotional Stability</td><td>3.85</td><td>0.34</td><td>3.10</td><td>4.50</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 mini</th><td>Intellect/Imagination</td><td>4.93</td><td>0.11</td><td>4.70</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>Extraversion</td><td>2.83</td><td>0.12</td><td>2.60</td><td>3.00</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>Agreeableness</td><td>4.74</td><td>0.18</td><td>4.40</td><td>4.90</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>Conscientiousness</td><td>4.74</td><td>0.15</td><td>4.60</td><td>5.00</td><td>9/10</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>Emotional Stability</td><td>3.63</td><td>0.30</td><td>3.20</td><td>4.00</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>Intellect/Imagination</td><td>4.46</td><td>0.21</td><td>4.10</td><td>4.70</td><td>10/10</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>Extraversion</td><td>2.68</td><td>0.29</td><td>2.10</td><td>2.90</td><td>6/10</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>Agreeableness</td><td>4.28</td><td>0.71</td><td>2.30</td><td>4.80</td><td>10/10</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>Emotional Stability</td><td>3.65</td><td>0.22</td><td>3.10</td><td>3.80</td><td>10/10</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>Intellect/Imagination</td><td>4.79</td><td>0.32</td><td>4.20</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>Extraversion</td><td>2.76</td><td>0.59</td><td>1.40</td><td>3.30</td><td>10/10</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>Agreeableness</td><td>4.39</td><td>0.03</td><td>4.30</td><td>4.40</td><td>10/10</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>Emotional Stability</td><td>4.03</td><td>0.49</td><td>3.40</td><td>4.90</td><td>10/10</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>Intellect/Imagination</td><td>4.74</td><td>0.10</td><td>4.60</td><td>4.80</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>Agreeableness</td><td>3.48</td><td>0.54</td><td>2.60</td><td>3.80</td><td>8/10</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>Conscientiousness</td><td>4.88</td><td>0.19</td><td>4.60</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>Emotional Stability</td><td>4.93</td><td>0.10</td><td>4.70</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>Intellect/Imagination</td><td>4.73</td><td>0.18</td><td>4.50</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>Extraversion</td><td>3.61</td><td>0.60</td><td>3.10</td><td>4.60</td><td>8/10</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>Agreeableness</td><td>4.46</td><td>0.24</td><td>4.30</td><td>5.00</td><td>7/10</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>Conscientiousness</td><td>4.94</td><td>0.12</td><td>4.70</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>Emotional Stability</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>9/10</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>Intellect/Imagination</td><td>4.76</td><td>0.09</td><td>4.60</td><td>4.90</td><td>9/10</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>Agreeableness</td><td>4.64</td><td>0.25</td><td>4.30</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>Emotional Stability</td><td>4.55</td><td>0.52</td><td>3.80</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>Intellect/Imagination</td><td>4.57</td><td>0.25</td><td>4.10</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>Extraversion</td><td>2.16</td><td>0.45</td><td>1.40</td><td>2.80</td><td>7/10</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>Agreeableness</td><td>4.38</td><td>0.52</td><td>3.70</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>Emotional Stability</td><td>4.60</td><td>0.33</td><td>4.20</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>Intellect/Imagination</td><td>4.63</td><td>0.41</td><td>3.90</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>Agreeableness</td><td>4.97</td><td>0.05</td><td>4.90</td><td>5.00</td><td>9/10</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>Conscientiousness</td><td>4.99</td><td>0.03</td><td>4.90</td><td>5.00</td><td>9/10</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>Emotional Stability</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>9/10</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>Intellect/Imagination</td><td>4.97</td><td>0.05</td><td>4.90</td><td>5.00</td><td>9/10</td></tr>
+<tr><th scope="row">Command R7B</th><td>Extraversion</td><td>2.97</td><td>0.27</td><td>2.60</td><td>3.60</td><td>10/10</td></tr>
+<tr><th scope="row">Command R7B</th><td>Agreeableness</td><td>3.92</td><td>0.82</td><td>2.60</td><td>4.80</td><td>9/10</td></tr>
+<tr><th scope="row">Command R7B</th><td>Conscientiousness</td><td>3.66</td><td>0.72</td><td>2.60</td><td>4.30</td><td>9/10</td></tr>
+<tr><th scope="row">Command R7B</th><td>Emotional Stability</td><td>3.96</td><td>0.19</td><td>3.70</td><td>4.20</td><td>9/10</td></tr>
+<tr><th scope="row">Command R7B</th><td>Intellect/Imagination</td><td>3.49</td><td>0.83</td><td>2.20</td><td>4.30</td><td>9/10</td></tr>
+<tr><th scope="row">Command R</th><td>Extraversion</td><td>2.30</td><td>0.41</td><td>1.60</td><td>2.60</td><td>5/10</td></tr>
+<tr><th scope="row">Nova Micro</th><td>Intellect/Imagination</td><td>3.69</td><td>0.12</td><td>3.50</td><td>3.80</td><td>9/10</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>Extraversion</td><td>3.17</td><td>0.37</td><td>2.60</td><td>3.80</td><td>10/10</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>Agreeableness</td><td>4.08</td><td>0.63</td><td>3.00</td><td>4.90</td><td>10/10</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>Conscientiousness</td><td>3.83</td><td>0.49</td><td>3.00</td><td>4.30</td><td>10/10</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>Emotional Stability</td><td>3.00</td><td>0.62</td><td>2.00</td><td>4.00</td><td>10/10</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>Intellect/Imagination</td><td>4.05</td><td>0.62</td><td>3.00</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">GLM 4.7 Flash</th><td>Agreeableness</td><td>3.89</td><td>0.54</td><td>2.80</td><td>4.40</td><td>7/10</td></tr>
+<tr><th scope="row">GLM 4.7 Flash</th><td>Intellect/Imagination</td><td>4.38</td><td>0.21</td><td>4.00</td><td>4.70</td><td>8/10</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>Extraversion</td><td>2.88</td><td>0.74</td><td>1.90</td><td>4.10</td><td>8/10</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>Agreeableness</td><td>4.56</td><td>0.29</td><td>4.20</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>Conscientiousness</td><td>4.50</td><td>0.24</td><td>4.40</td><td>5.00</td><td>6/10</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>Emotional Stability</td><td>4.86</td><td>0.12</td><td>4.70</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>Intellect/Imagination</td><td>4.73</td><td>0.23</td><td>4.30</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>Extraversion</td><td>3.83</td><td>0.50</td><td>3.20</td><td>4.60</td><td>10/10</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>Agreeableness</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>Conscientiousness</td><td>4.78</td><td>0.20</td><td>4.40</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>Emotional Stability</td><td>4.07</td><td>0.61</td><td>3.20</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>Intellect/Imagination</td><td>4.98</td><td>0.04</td><td>4.90</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>Extraversion</td><td>3.43</td><td>0.13</td><td>3.30</td><td>3.60</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>Agreeableness</td><td>4.18</td><td>0.12</td><td>4.10</td><td>4.40</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>Conscientiousness</td><td>4.22</td><td>0.12</td><td>4.00</td><td>4.40</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>Emotional Stability</td><td>3.94</td><td>0.12</td><td>3.80</td><td>4.10</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>Intellect/Imagination</td><td>4.14</td><td>0.13</td><td>4.00</td><td>4.50</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>Extraversion</td><td>3.10</td><td>0.33</td><td>2.70</td><td>3.80</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>Agreeableness</td><td>4.01</td><td>0.03</td><td>4.00</td><td>4.10</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>Conscientiousness</td><td>3.73</td><td>0.27</td><td>3.20</td><td>4.00</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>Emotional Stability</td><td>2.43</td><td>0.07</td><td>2.40</td><td>2.60</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>Intellect/Imagination</td><td>3.43</td><td>0.09</td><td>3.40</td><td>3.70</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>Extraversion</td><td>3.49</td><td>0.06</td><td>3.40</td><td>3.60</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>Agreeableness</td><td>4.03</td><td>0.05</td><td>4.00</td><td>4.10</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>Conscientiousness</td><td>2.82</td><td>0.06</td><td>2.80</td><td>3.00</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>Emotional Stability</td><td>3.44</td><td>0.10</td><td>3.30</td><td>3.50</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>Intellect/Imagination</td><td>3.50</td><td>0.00</td><td>3.50</td><td>3.50</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>Extraversion</td><td>1.56</td><td>0.05</td><td>1.50</td><td>1.60</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>Agreeableness</td><td>4.34</td><td>0.26</td><td>4.00</td><td>4.60</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>Conscientiousness</td><td>4.68</td><td>0.30</td><td>4.20</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>Emotional Stability</td><td>4.58</td><td>0.06</td><td>4.40</td><td>4.60</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>Intellect/Imagination</td><td>3.72</td><td>0.19</td><td>3.60</td><td>4.00</td><td>10/10</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>Extraversion</td><td>2.00</td><td>0.16</td><td>1.80</td><td>2.20</td><td>5/10</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>Agreeableness</td><td>3.18</td><td>0.39</td><td>2.90</td><td>3.70</td><td>5/10</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>Emotional Stability</td><td>4.80</td><td>0.00</td><td>4.80</td><td>4.80</td><td>5/10</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>Intellect/Imagination</td><td>4.18</td><td>0.28</td><td>3.90</td><td>4.60</td><td>5/10</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>Extraversion</td><td>3.26</td><td>0.63</td><td>2.60</td><td>4.10</td><td>5/10</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>Agreeableness</td><td>3.28</td><td>0.28</td><td>2.90</td><td>3.70</td><td>6/10</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>Conscientiousness</td><td>3.15</td><td>0.29</td><td>2.70</td><td>3.50</td><td>6/10</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>Emotional Stability</td><td>2.17</td><td>0.27</td><td>2.00</td><td>2.70</td><td>6/10</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>Intellect/Imagination</td><td>3.72</td><td>0.18</td><td>3.50</td><td>3.90</td><td>5/10</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>Extraversion</td><td>2.92</td><td>0.30</td><td>2.40</td><td>3.30</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>Agreeableness</td><td>3.38</td><td>0.48</td><td>3.10</td><td>4.30</td><td>6/10</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>Conscientiousness</td><td>3.43</td><td>0.47</td><td>2.60</td><td>4.30</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>Emotional Stability</td><td>3.17</td><td>0.58</td><td>2.50</td><td>4.40</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>Intellect/Imagination</td><td>3.17</td><td>0.51</td><td>2.40</td><td>3.90</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>Extraversion</td><td>2.20</td><td>0.32</td><td>1.90</td><td>2.80</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>Agreeableness</td><td>4.08</td><td>0.56</td><td>3.20</td><td>4.60</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>Conscientiousness</td><td>3.33</td><td>0.48</td><td>2.20</td><td>4.00</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>Emotional Stability</td><td>3.32</td><td>0.67</td><td>2.50</td><td>4.10</td><td>10/10</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>Intellect/Imagination</td><td>4.22</td><td>0.46</td><td>3.10</td><td>4.80</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>Extraversion</td><td>2.46</td><td>0.28</td><td>1.80</td><td>2.80</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>Agreeableness</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>Conscientiousness</td><td>4.98</td><td>0.04</td><td>4.90</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>Emotional Stability</td><td>4.91</td><td>0.28</td><td>4.10</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>Intellect/Imagination</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Qwen3 32B</th><td>Agreeableness</td><td>3.73</td><td>0.48</td><td>3.20</td><td>4.40</td><td>6/10</td></tr>
+<tr><th scope="row">Qwen3 32B</th><td>Intellect/Imagination</td><td>4.40</td><td>0.33</td><td>4.00</td><td>4.80</td><td>6/10</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>Agreeableness</td><td>3.80</td><td>0.58</td><td>2.80</td><td>4.30</td><td>6/10</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>Emotional Stability</td><td>4.30</td><td>0.47</td><td>3.60</td><td>4.90</td><td>7/10</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>Intellect/Imagination</td><td>3.96</td><td>0.40</td><td>3.30</td><td>4.60</td><td>9/10</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>Agreeableness</td><td>3.36</td><td>0.54</td><td>2.60</td><td>4.10</td><td>7/10</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>Emotional Stability</td><td>3.92</td><td>0.67</td><td>3.10</td><td>5.00</td><td>10/10</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>Intellect/Imagination</td><td>3.83</td><td>0.78</td><td>2.70</td><td>4.90</td><td>10/10</td></tr>
+<tr><th scope="row">Nova Lite</th><td>Extraversion</td><td>3.12</td><td>0.18</td><td>3.00</td><td>3.40</td><td>5/10</td></tr>
+<tr><th scope="row">Nova Lite</th><td>Agreeableness</td><td>4.92</td><td>0.13</td><td>4.70</td><td>5.00</td><td>6/10</td></tr>
+<tr><th scope="row">Nova Lite</th><td>Conscientiousness</td><td>4.84</td><td>0.22</td><td>4.60</td><td>5.00</td><td>5/10</td></tr>
+<tr><th scope="row">Nova Lite</th><td>Emotional Stability</td><td>3.03</td><td>0.39</td><td>2.50</td><td>3.60</td><td>8/10</td></tr>
+<tr><th scope="row">Nova Lite</th><td>Intellect/Imagination</td><td>4.41</td><td>0.24</td><td>4.20</td><td>4.80</td><td>7/10</td></tr>
+<tr><th scope="row">Command A Plus</th><td>Extraversion</td><td>2.64</td><td>0.16</td><td>2.30</td><td>2.90</td><td>10/10</td></tr>
+<tr><th scope="row">Command A Plus</th><td>Agreeableness</td><td>3.57</td><td>0.78</td><td>2.60</td><td>4.40</td><td>10/10</td></tr>
+<tr><th scope="row">Command A Plus</th><td>Conscientiousness</td><td>3.38</td><td>0.47</td><td>2.60</td><td>3.90</td><td>10/10</td></tr>
+<tr><th scope="row">Command A Plus</th><td>Emotional Stability</td><td>2.96</td><td>0.34</td><td>2.50</td><td>3.40</td><td>10/10</td></tr>
+<tr><th scope="row">Command A Plus</th><td>Intellect/Imagination</td><td>3.97</td><td>0.25</td><td>3.70</td><td>4.60</td><td>10/10</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>Extraversion</td><td>3.04</td><td>0.50</td><td>2.00</td><td>3.40</td><td>7/10</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>Agreeableness</td><td>4.36</td><td>0.05</td><td>4.30</td><td>4.40</td><td>7/10</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>Conscientiousness</td><td>4.11</td><td>0.07</td><td>4.00</td><td>4.20</td><td>7/10</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>Emotional Stability</td><td>3.41</td><td>0.43</td><td>3.00</td><td>4.00</td><td>7/10</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>Intellect/Imagination</td><td>4.37</td><td>0.22</td><td>4.00</td><td>4.70</td><td>7/10</td></tr>
+<tr><th scope="row">MiniMax M2.5</th><td>Agreeableness</td><td>4.46</td><td>0.23</td><td>4.30</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">MiniMax M2.5</th><td>Intellect/Imagination</td><td>4.55</td><td>0.30</td><td>4.10</td><td>5.00</td><td>8/10</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>Extraversion</td><td>3.45</td><td>0.25</td><td>3.10</td><td>4.00</td><td>10/10</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>Agreeableness</td><td>3.74</td><td>0.39</td><td>3.30</td><td>4.70</td><td>10/10</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>Conscientiousness</td><td>4.06</td><td>0.25</td><td>3.70</td><td>4.60</td><td>10/10</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>Emotional Stability</td><td>3.75</td><td>0.37</td><td>3.20</td><td>4.10</td><td>10/10</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>Intellect/Imagination</td><td>3.70</td><td>0.26</td><td>3.30</td><td>4.20</td><td>10/10</td></tr>
+<tr><th scope="row">GPT-6 Astra</th><td>Intellect/Imagination</td><td>4.18</td><td>0.08</td><td>4.10</td><td>4.30</td><td>5/5</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>Intellect/Imagination</td><td>4.37</td><td>0.06</td><td>4.30</td><td>4.40</td><td>3/5</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>Agreeableness</td><td>4.50</td><td>0.00</td><td>4.50</td><td>4.50</td><td>5/5</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>Emotional Stability</td><td>4.70</td><td>0.00</td><td>4.70</td><td>4.70</td><td>5/5</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>Intellect/Imagination</td><td>4.50</td><td>0.00</td><td>4.50</td><td>4.50</td><td>5/5</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>Agreeableness</td><td>4.35</td><td>0.06</td><td>4.30</td><td>4.40</td><td>4/5</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>Emotional Stability</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>4/5</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>Intellect/Imagination</td><td>4.43</td><td>0.13</td><td>4.30</td><td>4.60</td><td>4/5</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>Extraversion</td><td>2.44</td><td>0.60</td><td>2.00</td><td>3.10</td><td>5/5</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>Agreeableness</td><td>4.30</td><td>0.00</td><td>4.30</td><td>4.30</td><td>5/5</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>Conscientiousness</td><td>4.68</td><td>0.11</td><td>4.60</td><td>4.80</td><td>5/5</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>Emotional Stability</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>5/5</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>Intellect/Imagination</td><td>4.72</td><td>0.08</td><td>4.60</td><td>4.80</td><td>5/5</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>Agreeableness</td><td>4.50</td><td>0.14</td><td>4.40</td><td>4.70</td><td>5/5</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>Conscientiousness</td><td>4.15</td><td>0.24</td><td>3.90</td><td>4.40</td><td>4/5</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>Emotional Stability</td><td>4.03</td><td>0.05</td><td>4.00</td><td>4.10</td><td>4/5</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>Intellect/Imagination</td><td>4.90</td><td>0.07</td><td>4.80</td><td>5.00</td><td>5/5</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>Extraversion</td><td>2.23</td><td>0.15</td><td>2.10</td><td>2.40</td><td>3/5</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>Emotional Stability</td><td>4.55</td><td>0.40</td><td>4.00</td><td>4.90</td><td>4/5</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>Intellect/Imagination</td><td>4.38</td><td>0.40</td><td>4.00</td><td>4.80</td><td>5/5</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>Extraversion</td><td>3.20</td><td>0.07</td><td>3.10</td><td>3.30</td><td>5/5</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>Agreeableness</td><td>4.40</td><td>0.00</td><td>4.40</td><td>4.40</td><td>5/5</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>Conscientiousness</td><td>4.44</td><td>0.09</td><td>4.40</td><td>4.60</td><td>5/5</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>Emotional Stability</td><td>4.46</td><td>0.34</td><td>4.00</td><td>4.80</td><td>5/5</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>Intellect/Imagination</td><td>4.52</td><td>0.30</td><td>4.20</td><td>4.80</td><td>5/5</td></tr>
+<tr><th scope="row">Grok 4.7</th><td>Intellect/Imagination</td><td>4.34</td><td>0.09</td><td>4.20</td><td>4.40</td><td>5/5</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>Extraversion</td><td>2.38</td><td>0.50</td><td>1.80</td><td>3.10</td><td>5/5</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>Agreeableness</td><td>4.66</td><td>0.24</td><td>4.40</td><td>4.90</td><td>5/5</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>Conscientiousness</td><td>4.72</td><td>0.35</td><td>4.10</td><td>4.90</td><td>5/5</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>Emotional Stability</td><td>3.90</td><td>0.17</td><td>3.60</td><td>4.00</td><td>5/5</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>Intellect/Imagination</td><td>4.52</td><td>0.43</td><td>3.90</td><td>4.90</td><td>5/5</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>Agreeableness</td><td>4.50</td><td>0.00</td><td>4.50</td><td>4.50</td><td>3/3</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>Emotional Stability</td><td>4.40</td><td>0.00</td><td>4.40</td><td>4.40</td><td>3/3</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>Intellect/Imagination</td><td>4.20</td><td>0.00</td><td>4.20</td><td>4.20</td><td>3/3</td></tr>
+<tr><th scope="row">Kimi K3</th><td>Intellect/Imagination</td><td>4.53</td><td>0.32</td><td>4.30</td><td>4.90</td><td>3/3</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>Agreeableness</td><td>4.13</td><td>0.06</td><td>4.10</td><td>4.20</td><td>3/3</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>Emotional Stability</td><td>3.57</td><td>0.40</td><td>3.20</td><td>4.00</td><td>3/3</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>Intellect/Imagination</td><td>4.53</td><td>0.32</td><td>4.30</td><td>4.90</td><td>3/3</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>Extraversion</td><td>2.50</td><td>0.00</td><td>2.50</td><td>2.50</td><td>3/3</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>Agreeableness</td><td>4.40</td><td>0.00</td><td>4.40</td><td>4.40</td><td>3/3</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>Emotional Stability</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>3/3</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>Intellect/Imagination</td><td>5.00</td><td>0.00</td><td>5.00</td><td>5.00</td><td>3/3</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S2"><table id="S2"><caption>Table S2. Agreement for all 53 configurations with repeated numeric items. GPT-6 Luna has no repeated numeric item; Llama 3.1 8B has only one usable response. Percentages are equal-item pair agreement, without chance correction. Common-item results concern the same fourteen items, not the full questionnaire.</caption><thead><tr><th scope="col">Model</th><th scope="col">Usable responses</th><th scope="col">Own-set items</th><th scope="col">Own-set agreement (%)</th><th scope="col">Common items</th><th scope="col">Common agreement (%)</th><th scope="col">Applicability agreement (%)</th></tr></thead><tbody><tr><th scope="row">GPT-4.1 mini</th><td>10</td><td>50</td><td>77.9</td><td>14</td><td>79.7</td><td>100.0</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>10</td><td>50</td><td>71.9</td><td>14</td><td>70.6</td><td>98.8</td></tr>
+<tr><th scope="row">GPT-OSS 20B</th><td>10</td><td>48</td><td>56.0</td><td>14</td><td>57.2</td><td>59.3</td></tr>
+<tr><th scope="row">GPT-OSS 120B</th><td>10</td><td>34</td><td>69.7</td><td>14</td><td>69.8</td><td>73.7</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>10</td><td>47</td><td>72.1</td><td>14</td><td>65.7</td><td>93.6</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>10</td><td>50</td><td>76.0</td><td>14</td><td>79.5</td><td>97.2</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>10</td><td>50</td><td>74.2</td><td>14</td><td>67.6</td><td>94.2</td></tr>
+<tr><th scope="row">Qwen3 30B A3B</th><td>8</td><td>50</td><td>81.3</td><td>14</td><td>100.0</td><td>47.8</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>9</td><td>50</td><td>80.9</td><td>14</td><td>73.6</td><td>87.7</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>10</td><td>47</td><td>53.0</td><td>14</td><td>47.8</td><td>94.2</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>8</td><td>50</td><td>46.3</td><td>14</td><td>49.5</td><td>96.2</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>9</td><td>50</td><td>88.0</td><td>14</td><td>89.3</td><td>94.7</td></tr>
+<tr><th scope="row">Command R7B</th><td>10</td><td>50</td><td>35.0</td><td>14</td><td>27.5</td><td>96.0</td></tr>
+<tr><th scope="row">Command R</th><td>10</td><td>45</td><td>49.3</td><td>14</td><td>46.1</td><td>78.0</td></tr>
+<tr><th scope="row">Nova Micro</th><td>10</td><td>42</td><td>66.1</td><td>14</td><td>71.2</td><td>83.5</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>10</td><td>50</td><td>32.7</td><td>14</td><td>39.2</td><td>100.0</td></tr>
+<tr><th scope="row">GLM 4.7 Flash</th><td>8</td><td>49</td><td>60.5</td><td>14</td><td>75.6</td><td>79.4</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>8</td><td>50</td><td>69.1</td><td>14</td><td>52.8</td><td>96.6</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>10</td><td>50</td><td>70.6</td><td>14</td><td>83.0</td><td>100.0</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>10</td><td>50</td><td>85.8</td><td>14</td><td>90.3</td><td>100.0</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>10</td><td>50</td><td>83.8</td><td>14</td><td>90.8</td><td>100.0</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>10</td><td>50</td><td>96.7</td><td>14</td><td>100.0</td><td>100.0</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>10</td><td>50</td><td>84.9</td><td>14</td><td>80.5</td><td>100.0</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>5</td><td>46</td><td>81.5</td><td>14</td><td>74.3</td><td>97.6</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>6</td><td>50</td><td>25.5</td><td>14</td><td>23.8</td><td>98.7</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>10</td><td>50</td><td>30.0</td><td>14</td><td>29.5</td><td>97.7</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>10</td><td>50</td><td>58.8</td><td>14</td><td>66.3</td><td>100.0</td></tr>
+<tr><th scope="row">Qwen2.5 7B</th><td>10</td><td>28</td><td>77.8</td><td>14</td><td>87.4</td><td>80.7</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>10</td><td>50</td><td>85.7</td><td>14</td><td>89.2</td><td>100.0</td></tr>
+<tr><th scope="row">Qwen3 32B</th><td>6</td><td>47</td><td>64.8</td><td>14</td><td>75.2</td><td>82.1</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>10</td><td>50</td><td>51.2</td><td>14</td><td>50.6</td><td>81.8</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>10</td><td>50</td><td>30.2</td><td>14</td><td>27.1</td><td>93.5</td></tr>
+<tr><th scope="row">Nova Lite</th><td>10</td><td>50</td><td>70.3</td><td>14</td><td>88.4</td><td>73.5</td></tr>
+<tr><th scope="row">Command A Plus</th><td>10</td><td>50</td><td>66.3</td><td>14</td><td>86.7</td><td>100.0</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>7</td><td>50</td><td>69.7</td><td>14</td><td>76.2</td><td>100.0</td></tr>
+<tr><th scope="row">MiniMax M2.5</th><td>8</td><td>47</td><td>71.6</td><td>14</td><td>64.4</td><td>83.4</td></tr>
+<tr><th scope="row">Phi-4</th><td>10</td><td>38</td><td>40.2</td><td>14</td><td>43.8</td><td>72.3</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>10</td><td>50</td><td>50.1</td><td>14</td><td>50.6</td><td>100.0</td></tr>
+<tr><th scope="row">GPT-6 Astra</th><td>5</td><td>26</td><td>90.8</td><td>14</td><td>95.7</td><td>100.0</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>5</td><td>27</td><td>87.7</td><td>14</td><td>92.9</td><td>92.8</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>5</td><td>47</td><td>99.1</td><td>14</td><td>100.0</td><td>100.0</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>4</td><td>45</td><td>88.9</td><td>14</td><td>81.0</td><td>96.7</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>5</td><td>50</td><td>86.0</td><td>14</td><td>80.0</td><td>100.0</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>5</td><td>50</td><td>64.4</td><td>14</td><td>67.1</td><td>81.2</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>5</td><td>47</td><td>43.0</td><td>14</td><td>37.4</td><td>71.2</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>5</td><td>50</td><td>73.6</td><td>14</td><td>58.6</td><td>100.0</td></tr>
+<tr><th scope="row">Grok 4.7</th><td>5</td><td>32</td><td>83.4</td><td>14</td><td>81.4</td><td>95.2</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>5</td><td>50</td><td>60.8</td><td>14</td><td>54.3</td><td>100.0</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>3</td><td>45</td><td>100.0</td><td>14</td><td>100.0</td><td>100.0</td></tr>
+<tr><th scope="row">MiMo-V2.6-Pro</th><td>3</td><td>43</td><td>55.8</td><td>14</td><td>78.6</td><td>34.7</td></tr>
+<tr><th scope="row">Kimi K3</th><td>3</td><td>48</td><td>61.8</td><td>14</td><td>54.8</td><td>76.0</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>3</td><td>45</td><td>68.9</td><td>14</td><td>71.4</td><td>100.0</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>3</td><td>47</td><td>100.0</td><td>14</td><td>100.0</td><td>100.0</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S3"><table id="S3"><caption>Table S3. All 55 requested model identities and generation controls. Empty reasoning objects mean no reasoning field was sent. These describe the submitted interface, not verified backend computation or immutable weights. Repetition blocks use scheduling seeds, not generation seeds.</caption><thead><tr><th scope="col">Model</th><th scope="col">Developer label</th><th scope="col">Requested identifier</th><th scope="col">Planned attempts</th><th scope="col">Output-token cap</th><th scope="col">Temperature</th><th scope="col">Reasoning request</th><th scope="col">JSON request</th><th scope="col">Generation seed</th></tr></thead><tbody><tr><th scope="row">GPT-4.1 mini</th><td>OpenAI</td><td>openai/gpt-4.1-mini</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>OpenAI</td><td>openai/gpt-4o-mini-2024-07-18</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">GPT-OSS 20B</th><td>OpenAI</td><td>openai/gpt-oss-20b</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">GPT-OSS 120B</th><td>OpenAI</td><td>openai/gpt-oss-120b</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>Anthropic</td><td>anthropic/claude-haiku-4.5</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: false}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>Google</td><td>google/gemini-2.5-flash-lite</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: false}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Llama 3.1 8B</th><td>Meta</td><td>meta-llama/llama-3.1-8b-instruct</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>Meta</td><td>meta-llama/llama-3.3-70b-instruct</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Qwen3 30B A3B</th><td>Alibaba</td><td>qwen/qwen3-30b-a3b-instruct-2507</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>Alibaba</td><td>qwen/qwen3-235b-a22b-2507</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>Alibaba</td><td>qwen/qwen3.8-27b</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>Mistral</td><td>mistralai/mistral-small-3.2-24b-instruct</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>DeepSeek</td><td>deepseek/deepseek-v3.2</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: false}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Command R7B</th><td>Cohere</td><td>command-r7b-12-2024</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Command R</th><td>Cohere</td><td>command-r-08-2024</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Nova Micro</th><td>Amazon</td><td>amazon/nova-micro-v1</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>NVIDIA</td><td>nvidia/nemotron-3-nano-30b-a3b</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: false}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">GLM 4.7 Flash</th><td>Z.ai</td><td>z-ai/glm-4.7-flash</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: false}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>Moonshot</td><td>moonshotai/kimi-k2-0905</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>MiniMax</td><td>minimax/minimax-01</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>OpenAI</td><td>openai/gpt-4.1-nano</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>OpenAI</td><td>openai/gpt-3.5-turbo</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>Google</td><td>google/gemma-3-4b-it</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>Google</td><td>google/gemma-3-12b-it</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>Google</td><td>google/gemma-3-27b-it</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>Meta</td><td>meta-llama/llama-3.2-1b-instruct</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>Meta</td><td>meta-llama/llama-3.2-3b-instruct</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>Meta</td><td>meta-llama/llama-4-scout</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Qwen2.5 7B</th><td>Alibaba</td><td>qwen/qwen-2.5-7b-instruct</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>Alibaba</td><td>qwen/qwen-2.5-72b-instruct</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Qwen3 32B</th><td>Alibaba</td><td>qwen/qwen3-32b</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: false}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>Mistral</td><td>mistralai/mistral-nemo</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>Mistral</td><td>mistralai/mistral-small-24b-instruct-2501</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Nova Lite</th><td>Amazon</td><td>amazon/nova-lite-v1</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Command A Plus</th><td>Cohere</td><td>cohere/command-a-plus</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: false}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>NVIDIA</td><td>nvidia/nemotron-3-super-120b-a12b</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: false}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">MiniMax M2.5</th><td>MiniMax</td><td>minimax/minimax-m2.5</td><td>10</td><td>1536</td><td>0.7</td><td>{&quot;enabled&quot;: true, &quot;exclude&quot;: true}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Phi-4</th><td>Microsoft</td><td>microsoft/phi-4</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>IBM</td><td>ibm-granite/granite-4.0-h-micro</td><td>10</td><td>1536</td><td>0.7</td><td>{}</td><td>&quot;Prompt only&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">GPT-6 Astra</th><td>OpenAI</td><td>gpt-6-astra</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">GPT-6 Luna</th><td>OpenAI</td><td>gpt-6-luna</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;none&quot;}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>OpenAI</td><td>gpt-6.1-sol</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>Anthropic</td><td>anthropic/claude-sonnet-5.5</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>Google</td><td>gemini-3.8-flash</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;includeThoughts&quot;: false, &quot;thinkingLevel&quot;: &quot;LOW&quot;}</td><td>&quot;application/json&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>Google</td><td>gemini-3.5-flash-lite</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;includeThoughts&quot;: false, &quot;thinkingLevel&quot;: &quot;LOW&quot;}</td><td>&quot;application/json&quot;</td><td>Not requested</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>Z.ai</td><td>z-ai/glm-5.3-prime</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>DeepSeek</td><td>deepseek/deepseek-v4.1-flash</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>Alibaba</td><td>qwen/qwen3.8-max-prime</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">Grok 4.7</th><td>SpaceXAI</td><td>x-ai/grok-4.7</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>MiniMax</td><td>minimax/minimax-m3</td><td>5</td><td>4096</td><td>Not requested</td><td>{&quot;enabled&quot;: false, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>Anthropic</td><td>anthropic/claude-opus-5.5</td><td>3</td><td>1536</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">MiMo-V2.6-Pro</th><td>Xiaomi</td><td>xiaomi/mimo-v2.6-pro</td><td>3</td><td>1536</td><td>Not requested</td><td>{&quot;enabled&quot;: false, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">Kimi K3</th><td>Moonshot</td><td>moonshotai/kimi-k3</td><td>3</td><td>1536</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;low&quot;, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>Mistral</td><td>mistralai/mistral-large-4-0</td><td>3</td><td>1536</td><td>Not requested</td><td>{&quot;effort&quot;: &quot;none&quot;, &quot;exclude&quot;: true}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>Meta</td><td>meta-llama/llama-4-maverick</td><td>3</td><td>1536</td><td>Not requested</td><td>{}</td><td>{&quot;type&quot;: &quot;json_object&quot;}</td><td>Not requested</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S4"><table id="S4"><caption>Table S4. Text equivalent of the Appendix A coverage figure, including configurations with no eligible score. E = Extraversion; A = Agreeableness; C = Conscientiousness; ES = Emotional Stability; I = Intellect/Imagination. Domain cells are complete-assessment counts, not scores.</caption><thead><tr><th scope="col">Model</th><th scope="col">Usable</th><th scope="col">Planned</th><th scope="col">Required per domain</th><th scope="col">E</th><th scope="col">A</th><th scope="col">C</th><th scope="col">ES</th><th scope="col">I</th><th scope="col">Eligible domains</th></tr></thead><tbody><tr><th scope="row">GPT-4.1 mini</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>9</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">GPT-OSS 20B</th><td>10</td><td>10</td><td>5</td><td>2</td><td>2</td><td>1</td><td>2</td><td>3</td><td>0</td></tr>
+<tr><th scope="row">GPT-OSS 120B</th><td>10</td><td>10</td><td>5</td><td>0</td><td>2</td><td>0</td><td>1</td><td>2</td><td>0</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>10</td><td>10</td><td>5</td><td>6</td><td>10</td><td>1</td><td>10</td><td>10</td><td>4</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>2</td><td>10</td><td>10</td><td>4</td></tr>
+<tr><th scope="row">Llama 3.1 8B</th><td>1</td><td>10</td><td>5</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>10</td><td>10</td><td>5</td><td>3</td><td>8</td><td>10</td><td>8</td><td>10</td><td>4</td></tr>
+<tr><th scope="row">Qwen3 30B A3B</th><td>8</td><td>10</td><td>5</td><td>2</td><td>2</td><td>3</td><td>4</td><td>4</td><td>0</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>9</td><td>10</td><td>5</td><td>8</td><td>7</td><td>8</td><td>9</td><td>9</td><td>5</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>10</td><td>10</td><td>5</td><td>4</td><td>10</td><td>0</td><td>10</td><td>10</td><td>3</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>8</td><td>10</td><td>5</td><td>7</td><td>8</td><td>4</td><td>8</td><td>8</td><td>4</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>9</td><td>10</td><td>5</td><td>2</td><td>9</td><td>9</td><td>9</td><td>9</td><td>4</td></tr>
+<tr><th scope="row">Command R7B</th><td>10</td><td>10</td><td>5</td><td>10</td><td>9</td><td>9</td><td>9</td><td>9</td><td>5</td></tr>
+<tr><th scope="row">Command R</th><td>10</td><td>10</td><td>5</td><td>5</td><td>4</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Nova Micro</th><td>10</td><td>10</td><td>5</td><td>0</td><td>0</td><td>1</td><td>2</td><td>9</td><td>1</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">GLM 4.7 Flash</th><td>8</td><td>10</td><td>5</td><td>1</td><td>7</td><td>2</td><td>3</td><td>8</td><td>2</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>8</td><td>10</td><td>5</td><td>8</td><td>8</td><td>6</td><td>8</td><td>8</td><td>5</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>5</td><td>10</td><td>5</td><td>5</td><td>5</td><td>0</td><td>5</td><td>5</td><td>4</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>6</td><td>10</td><td>5</td><td>5</td><td>6</td><td>6</td><td>6</td><td>5</td><td>5</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>10</td><td>10</td><td>5</td><td>10</td><td>6</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">Qwen2.5 7B</th><td>10</td><td>10</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">Qwen3 32B</th><td>6</td><td>10</td><td>5</td><td>1</td><td>6</td><td>0</td><td>4</td><td>6</td><td>2</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>10</td><td>10</td><td>5</td><td>2</td><td>6</td><td>3</td><td>7</td><td>9</td><td>3</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>10</td><td>10</td><td>5</td><td>4</td><td>7</td><td>4</td><td>10</td><td>10</td><td>3</td></tr>
+<tr><th scope="row">Nova Lite</th><td>10</td><td>10</td><td>5</td><td>5</td><td>6</td><td>5</td><td>8</td><td>7</td><td>5</td></tr>
+<tr><th scope="row">Command A Plus</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>7</td><td>10</td><td>5</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>5</td></tr>
+<tr><th scope="row">MiniMax M2.5</th><td>8</td><td>10</td><td>5</td><td>1</td><td>8</td><td>0</td><td>1</td><td>8</td><td>2</td></tr>
+<tr><th scope="row">Phi-4</th><td>10</td><td>10</td><td>5</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>10</td><td>10</td><td>5</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td></tr>
+<tr><th scope="row">GPT-6 Astra</th><td>5</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>1</td></tr>
+<tr><th scope="row">GPT-6 Luna</th><td>5</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>5</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>1</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>5</td><td>5</td><td>3</td><td>0</td><td>5</td><td>0</td><td>5</td><td>5</td><td>3</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>4</td><td>5</td><td>3</td><td>0</td><td>4</td><td>0</td><td>4</td><td>4</td><td>3</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>5</td><td>5</td><td>3</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>5</td><td>5</td><td>3</td><td>2</td><td>5</td><td>4</td><td>4</td><td>5</td><td>4</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>5</td><td>5</td><td>3</td><td>3</td><td>2</td><td>1</td><td>4</td><td>5</td><td>3</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>5</td><td>5</td><td>3</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><th scope="row">Grok 4.7</th><td>5</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>1</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>5</td><td>5</td><td>3</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>3</td><td>3</td><td>3</td><td>0</td><td>3</td><td>0</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><th scope="row">MiMo-V2.6-Pro</th><td>3</td><td>3</td><td>3</td><td>0</td><td>2</td><td>1</td><td>1</td><td>2</td><td>0</td></tr>
+<tr><th scope="row">Kimi K3</th><td>3</td><td>3</td><td>3</td><td>2</td><td>2</td><td>1</td><td>2</td><td>3</td><td>1</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>3</td><td>3</td><td>3</td><td>0</td><td>3</td><td>0</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>0</td><td>3</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S5"><table id="S5"><caption>Table S5. Equal-model medians within each repeat-count setting. No three-repeat configuration qualifies for Conscientiousness, so no score is entered for that setting-domain pair. Model identities differ across settings.</caption><thead><tr><th scope="col">Setting</th><th scope="col">Domain</th><th scope="col">Eligible configurations</th><th scope="col">Median</th></tr></thead><tbody><tr><th scope="row">10-repeat</th><td>Extraversion</td><td>24</td><td>2.90</td></tr>
+<tr><th scope="row">5-repeat</th><td>Extraversion</td><td>4</td><td>2.41</td></tr>
+<tr><th scope="row">3-repeat</th><td>Extraversion</td><td>1</td><td>2.50</td></tr>
+<tr><th scope="row">10-repeat</th><td>Agreeableness</td><td>31</td><td>4.18</td></tr>
+<tr><th scope="row">5-repeat</th><td>Agreeableness</td><td>6</td><td>4.45</td></tr>
+<tr><th scope="row">3-repeat</th><td>Agreeableness</td><td>3</td><td>4.40</td></tr>
+<tr><th scope="row">10-repeat</th><td>Conscientiousness</td><td>21</td><td>4.22</td></tr>
+<tr><th scope="row">5-repeat</th><td>Conscientiousness</td><td>4</td><td>4.56</td></tr>
+<tr><th scope="row">10-repeat</th><td>Emotional Stability</td><td>28</td><td>3.93</td></tr>
+<tr><th scope="row">5-repeat</th><td>Emotional Stability</td><td>7</td><td>4.55</td></tr>
+<tr><th scope="row">3-repeat</th><td>Emotional Stability</td><td>3</td><td>4.40</td></tr>
+<tr><th scope="row">10-repeat</th><td>Intellect/Imagination</td><td>32</td><td>4.37</td></tr>
+<tr><th scope="row">5-repeat</th><td>Intellect/Imagination</td><td>10</td><td>4.46</td></tr>
+<tr><th scope="row">3-repeat</th><td>Intellect/Imagination</td><td>4</td><td>4.53</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S6"><table id="S6"><caption>Table S6. Coverage-threshold sensitivity, always requiring at least three complete scores. Different thresholds select different model sets; exact member IDs are retained in coverage_sensitivity.csv.</caption><thead><tr><th scope="col">Domain</th><th scope="col">Required share of planned attempts</th><th scope="col">Eligible configurations</th><th scope="col">Median</th><th scope="col">Range of means</th></tr></thead><tbody><tr><th scope="row">Extraversion</th><td>40%</td><td>31</td><td>2.83</td><td>2.27</td></tr>
+<tr><th scope="row">Extraversion</th><td>50%</td><td>29</td><td>2.83</td><td>2.27</td></tr>
+<tr><th scope="row">Extraversion</th><td>60%</td><td>25</td><td>2.83</td><td>2.27</td></tr>
+<tr><th scope="row">Extraversion</th><td>80%</td><td>21</td><td>2.88</td><td>2.27</td></tr>
+<tr><th scope="row">Extraversion</th><td>100%</td><td>19</td><td>2.83</td><td>2.27</td></tr>
+<tr><th scope="row">Agreeableness</th><td>40%</td><td>41</td><td>4.34</td><td>1.82</td></tr>
+<tr><th scope="row">Agreeableness</th><td>50%</td><td>40</td><td>4.32</td><td>1.82</td></tr>
+<tr><th scope="row">Agreeableness</th><td>60%</td><td>39</td><td>4.34</td><td>1.72</td></tr>
+<tr><th scope="row">Agreeableness</th><td>80%</td><td>30</td><td>4.36</td><td>1.53</td></tr>
+<tr><th scope="row">Agreeableness</th><td>100%</td><td>23</td><td>4.34</td><td>1.43</td></tr>
+<tr><th scope="row">Conscientiousness</th><td>40%</td><td>27</td><td>4.33</td><td>2.17</td></tr>
+<tr><th scope="row">Conscientiousness</th><td>50%</td><td>25</td><td>4.44</td><td>2.17</td></tr>
+<tr><th scope="row">Conscientiousness</th><td>60%</td><td>24</td><td>4.33</td><td>2.17</td></tr>
+<tr><th scope="row">Conscientiousness</th><td>80%</td><td>21</td><td>4.44</td><td>2.17</td></tr>
+<tr><th scope="row">Conscientiousness</th><td>100%</td><td>16</td><td>4.33</td><td>2.16</td></tr>
+<tr><th scope="row">Emotional Stability</th><td>40%</td><td>40</td><td>4.03</td><td>2.83</td></tr>
+<tr><th scope="row">Emotional Stability</th><td>50%</td><td>38</td><td>4.03</td><td>2.83</td></tr>
+<tr><th scope="row">Emotional Stability</th><td>60%</td><td>37</td><td>4.03</td><td>2.83</td></tr>
+<tr><th scope="row">Emotional Stability</th><td>80%</td><td>34</td><td>4.03</td><td>2.57</td></tr>
+<tr><th scope="row">Emotional Stability</th><td>100%</td><td>24</td><td>3.91</td><td>2.57</td></tr>
+<tr><th scope="row">Intellect/Imagination</th><td>40%</td><td>47</td><td>4.41</td><td>1.83</td></tr>
+<tr><th scope="row">Intellect/Imagination</th><td>50%</td><td>46</td><td>4.41</td><td>1.83</td></tr>
+<tr><th scope="row">Intellect/Imagination</th><td>60%</td><td>44</td><td>4.42</td><td>1.83</td></tr>
+<tr><th scope="row">Intellect/Imagination</th><td>80%</td><td>40</td><td>4.48</td><td>1.83</td></tr>
+<tr><th scope="row">Intellect/Imagination</th><td>100%</td><td>30</td><td>4.48</td><td>1.83</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S7"><table id="S7"><caption>Table S7. Three setup-only candidates in the original 460-attempt comparison. Step&#x27;s three setup configurations count as one candidate. Subsequent instruction-pilot records are separate from this comparison. Claude Fable 5.1 was considered during coverage planning but received no setup or main inference and is outside this screened roster.</caption><thead><tr><th scope="col">Candidate ID</th><th scope="col">Model</th><th scope="col">Requested identifier</th><th scope="col">Reason no main data</th></tr></thead><tbody><tr><th scope="row">m37</th><td>GLM 5.3 Flash</td><td>z-ai/glm-5.3-flash</td><td>Setup reasoning-control rejection, rate limits, and truncated output</td></tr>
+<tr><th scope="row">m47</th><td>Gemini 3.1 Pro</td><td>gemini-3.1-pro-preview</td><td>Setup requests rejected by study quota</td></tr>
+<tr><th scope="row">m55</th><td>Step 3.7 Flash</td><td>stepfun/step-3.7-flash</td><td>Setup truncated at all three tested output caps; no main attempts</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S8"><table id="S8"><caption>Table S8. Explicit non-applicable marks across 422 usable questionnaires. Failed requests are not included as non-applicability. Counts here are response-weighted, so ten-repeat configurations contribute more occasions than three-repeat configurations.</caption><thead><tr><th scope="col">Item</th><th scope="col">Published statement</th><th scope="col">Domain</th><th scope="col">Non-applicable count</th><th scope="col">Share of usable questionnaires (%)</th></tr></thead><tbody><tr><th scope="row">1</th><td>Am the life of the party.</td><td>Extraversion</td><td>141</td><td>33.4</td></tr>
+<tr><th scope="row">2</th><td>Feel little concern for others.</td><td>Agreeableness</td><td>80</td><td>19.0</td></tr>
+<tr><th scope="row">3</th><td>Am always prepared.</td><td>Conscientiousness</td><td>35</td><td>8.3</td></tr>
+<tr><th scope="row">4</th><td>Get stressed out easily.</td><td>Emotional Stability</td><td>83</td><td>19.7</td></tr>
+<tr><th scope="row">5</th><td>Have a rich vocabulary.</td><td>Intellect/Imagination</td><td>28</td><td>6.6</td></tr>
+<tr><th scope="row">6</th><td>Don&#x27;t talk a lot.</td><td>Extraversion</td><td>42</td><td>10.0</td></tr>
+<tr><th scope="row">7</th><td>Am interested in people.</td><td>Agreeableness</td><td>40</td><td>9.5</td></tr>
+<tr><th scope="row">8</th><td>Leave my belongings around.</td><td>Conscientiousness</td><td>181</td><td>42.9</td></tr>
+<tr><th scope="row">9</th><td>Am relaxed most of the time.</td><td>Emotional Stability</td><td>55</td><td>13.0</td></tr>
+<tr><th scope="row">10</th><td>Have difficulty understanding abstract ideas.</td><td>Intellect/Imagination</td><td>49</td><td>11.6</td></tr>
+<tr><th scope="row">11</th><td>Feel comfortable around people.</td><td>Extraversion</td><td>70</td><td>16.6</td></tr>
+<tr><th scope="row">12</th><td>Insult people.</td><td>Agreeableness</td><td>80</td><td>19.0</td></tr>
+<tr><th scope="row">13</th><td>Pay attention to details.</td><td>Conscientiousness</td><td>12</td><td>2.8</td></tr>
+<tr><th scope="row">14</th><td>Worry about things.</td><td>Emotional Stability</td><td>74</td><td>17.5</td></tr>
+<tr><th scope="row">15</th><td>Have a vivid imagination.</td><td>Intellect/Imagination</td><td>28</td><td>6.6</td></tr>
+<tr><th scope="row">16</th><td>Keep in the background.</td><td>Extraversion</td><td>56</td><td>13.3</td></tr>
+<tr><th scope="row">17</th><td>Sympathize with others&#x27; feelings.</td><td>Agreeableness</td><td>32</td><td>7.6</td></tr>
+<tr><th scope="row">18</th><td>Make a mess of things.</td><td>Conscientiousness</td><td>126</td><td>29.9</td></tr>
+<tr><th scope="row">19</th><td>Seldom feel blue.</td><td>Emotional Stability</td><td>65</td><td>15.4</td></tr>
+<tr><th scope="row">20</th><td>Am not interested in abstract ideas.</td><td>Intellect/Imagination</td><td>52</td><td>12.3</td></tr>
+<tr><th scope="row">21</th><td>Start conversations.</td><td>Extraversion</td><td>56</td><td>13.3</td></tr>
+<tr><th scope="row">22</th><td>Am not interested in other people&#x27;s problems.</td><td>Agreeableness</td><td>69</td><td>16.4</td></tr>
+<tr><th scope="row">23</th><td>Get chores done right away.</td><td>Conscientiousness</td><td>63</td><td>14.9</td></tr>
+<tr><th scope="row">24</th><td>Am easily disturbed.</td><td>Emotional Stability</td><td>76</td><td>18.0</td></tr>
+<tr><th scope="row">25</th><td>Have excellent ideas.</td><td>Intellect/Imagination</td><td>21</td><td>5.0</td></tr>
+<tr><th scope="row">26</th><td>Have little to say.</td><td>Extraversion</td><td>44</td><td>10.4</td></tr>
+<tr><th scope="row">27</th><td>Have a soft heart.</td><td>Agreeableness</td><td>46</td><td>10.9</td></tr>
+<tr><th scope="row">28</th><td>Often forget to put things back in their proper place.</td><td>Conscientiousness</td><td>175</td><td>41.5</td></tr>
+<tr><th scope="row">29</th><td>Get upset easily.</td><td>Emotional Stability</td><td>73</td><td>17.3</td></tr>
+<tr><th scope="row">30</th><td>Do not have a good imagination.</td><td>Intellect/Imagination</td><td>52</td><td>12.3</td></tr>
+<tr><th scope="row">31</th><td>Talk to a lot of different people at parties.</td><td>Extraversion</td><td>138</td><td>32.7</td></tr>
+<tr><th scope="row">32</th><td>Am not really interested in others.</td><td>Agreeableness</td><td>67</td><td>15.9</td></tr>
+<tr><th scope="row">33</th><td>Like order.</td><td>Conscientiousness</td><td>27</td><td>6.4</td></tr>
+<tr><th scope="row">34</th><td>Change my mood a lot.</td><td>Emotional Stability</td><td>81</td><td>19.2</td></tr>
+<tr><th scope="row">35</th><td>Am quick to understand things.</td><td>Intellect/Imagination</td><td>11</td><td>2.6</td></tr>
+<tr><th scope="row">36</th><td>Don&#x27;t like to draw attention to myself.</td><td>Extraversion</td><td>59</td><td>14.0</td></tr>
+<tr><th scope="row">37</th><td>Take time out for others.</td><td>Agreeableness</td><td>44</td><td>10.4</td></tr>
+<tr><th scope="row">38</th><td>Shirk my duties.</td><td>Conscientiousness</td><td>85</td><td>20.1</td></tr>
+<tr><th scope="row">39</th><td>Have frequent mood swings.</td><td>Emotional Stability</td><td>84</td><td>19.9</td></tr>
+<tr><th scope="row">40</th><td>Use difficult words.</td><td>Intellect/Imagination</td><td>18</td><td>4.3</td></tr>
+<tr><th scope="row">41</th><td>Don&#x27;t mind being the center of attention.</td><td>Extraversion</td><td>93</td><td>22.0</td></tr>
+<tr><th scope="row">42</th><td>Feel others&#x27; emotions.</td><td>Agreeableness</td><td>57</td><td>13.5</td></tr>
+<tr><th scope="row">43</th><td>Follow a schedule.</td><td>Conscientiousness</td><td>65</td><td>15.4</td></tr>
+<tr><th scope="row">44</th><td>Get irritated easily.</td><td>Emotional Stability</td><td>71</td><td>16.8</td></tr>
+<tr><th scope="row">45</th><td>Spend time reflecting on things.</td><td>Intellect/Imagination</td><td>26</td><td>6.2</td></tr>
+<tr><th scope="row">46</th><td>Am quiet around strangers.</td><td>Extraversion</td><td>74</td><td>17.5</td></tr>
+<tr><th scope="row">47</th><td>Make people feel at ease.</td><td>Agreeableness</td><td>41</td><td>9.7</td></tr>
+<tr><th scope="row">48</th><td>Am exacting in my work.</td><td>Conscientiousness</td><td>19</td><td>4.5</td></tr>
+<tr><th scope="row">49</th><td>Often feel blue.</td><td>Emotional Stability</td><td>81</td><td>19.2</td></tr>
+<tr><th scope="row">50</th><td>Am full of ideas.</td><td>Intellect/Imagination</td><td>15</td><td>3.6</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S9"><table id="S9"><caption>Table S9. First-order dominance over Extraversion in observed keyed categories. A positive result preserves a larger mean under every strictly increasing recoding of the keyed categories. Joint-complete occasions keep content and occasions matched; this is not a latent-trait calibration. Full CDF margins are in ordinal_profiles.csv.</caption><thead><tr><th scope="col">Model</th><th scope="col">Joint-complete occasions</th><th scope="col">Agreeableness dominates E</th><th scope="col">Conscientiousness dominates E</th><th scope="col">Intellect/Imagination dominates E</th></tr></thead><tbody><tr><th scope="row">GPT-4.1 mini</th><td>10</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>9</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>6</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Command R7B</th><td>9</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>10</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>6</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>10</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>10</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>10</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>10</td><td>Yes</td><td>Not established</td><td>Not established</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>10</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>5</td><td>Yes</td><td>Not established</td><td>Yes</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>6</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>10</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>10</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Nova Lite</th><td>5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Command A Plus</th><td>10</td><td>Not established</td><td>Not established</td><td>Yes</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>7</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>10</td><td>Not established</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S10"><table id="S10"><caption>Table S10. Equal-three-score stability in every setting. Cutoffs refer to fractions of all Cartesian pairs of observed subsets, not confidence levels. Evaluable pairs need unequal full-sample means and multiple subsets for both models. Subset-pair ties remain in the denominator but do not retain a strict ordering. The three-repeat setting has no evaluable pairs. All 1,930 pairwise records, including non-evaluable cases, are retained in pair_stability.csv.</caption><thead><tr><th scope="col">Setting</th><th scope="col">Domain</th><th scope="col">Models</th><th scope="col">All model pairs</th><th scope="col">Evaluable pairs</th><th scope="col">Stable at 80%</th><th scope="col">Stable at 90%</th><th scope="col">Stable at 95%</th><th scope="col">Stable at 100%</th></tr></thead><tbody><tr><th scope="row">10-repeat</th><td>Extraversion</td><td>24</td><td>276</td><td>276</td><td>220</td><td>197</td><td>178</td><td>128</td></tr>
+<tr><th scope="row">10-repeat</th><td>Agreeableness</td><td>31</td><td>465</td><td>463</td><td>364</td><td>310</td><td>284</td><td>223</td></tr>
+<tr><th scope="row">10-repeat</th><td>Conscientiousness</td><td>21</td><td>210</td><td>210</td><td>178</td><td>164</td><td>153</td><td>135</td></tr>
+<tr><th scope="row">10-repeat</th><td>Emotional Stability</td><td>28</td><td>378</td><td>377</td><td>325</td><td>303</td><td>279</td><td>212</td></tr>
+<tr><th scope="row">10-repeat</th><td>Intellect/Imagination</td><td>32</td><td>496</td><td>495</td><td>412</td><td>365</td><td>345</td><td>243</td></tr>
+<tr><th scope="row">5-repeat</th><td>Extraversion</td><td>4</td><td>6</td><td>3</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><th scope="row">5-repeat</th><td>Agreeableness</td><td>6</td><td>15</td><td>14</td><td>14</td><td>14</td><td>12</td><td>12</td></tr>
+<tr><th scope="row">5-repeat</th><td>Conscientiousness</td><td>4</td><td>6</td><td>6</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><th scope="row">5-repeat</th><td>Emotional Stability</td><td>7</td><td>21</td><td>20</td><td>18</td><td>18</td><td>18</td><td>17</td></tr>
+<tr><th scope="row">5-repeat</th><td>Intellect/Imagination</td><td>10</td><td>45</td><td>35</td><td>26</td><td>24</td><td>20</td><td>20</td></tr>
+<tr><th scope="row">3-repeat</th><td>Extraversion</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><th scope="row">3-repeat</th><td>Agreeableness</td><td>3</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><th scope="row">3-repeat</th><td>Conscientiousness</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><th scope="row">3-repeat</th><td>Emotional Stability</td><td>3</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><th scope="row">3-repeat</th><td>Intellect/Imagination</td><td>4</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S11"><table id="S11"><caption>Table S11. Hypothetical numerical-completion intervals for all 55 configurations, using all planned slots. Unknown item positions, including nulls and failed requests, range from 1 to 5. These are bounds, not imputed trait estimates or confidence intervals. Guaranteed means each A/C/I lower bound exceeds the E upper bound under this coding. Not guaranteed includes contrary or inconclusive evidence.</caption><thead><tr><th scope="col">Model</th><th scope="col">Extraversion</th><th scope="col">Agreeableness</th><th scope="col">Conscientiousness</th><th scope="col">Emotional Stability</th><th scope="col">Intellect/Imagination</th><th scope="col">All three directions</th></tr></thead><tbody><tr><th scope="row">GPT-4.1 mini</th><td>2.66-2.66</td><td>4.26-4.26</td><td>4.94-4.94</td><td>3.85-3.85</td><td>4.93-4.93</td><td>Guaranteed</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>2.83-2.83</td><td>4.74-4.74</td><td>4.65-4.77</td><td>3.63-3.63</td><td>4.46-4.46</td><td>Guaranteed</td></tr>
+<tr><th scope="row">GPT-OSS 20B</th><td>1.43-4.39</td><td>2.21-4.61</td><td>2.94-4.90</td><td>1.85-4.65</td><td>3.33-4.65</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">GPT-OSS 120B</th><td>1.29-4.81</td><td>1.77-4.93</td><td>3.04-4.96</td><td>1.33-4.81</td><td>3.42-4.90</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>2.75-2.91</td><td>4.28-4.28</td><td>2.72-4.48</td><td>3.65-3.65</td><td>4.79-4.79</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>2.76-2.76</td><td>4.39-4.39</td><td>3.81-4.85</td><td>4.03-4.03</td><td>4.74-4.74</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Llama 3.1 8B</th><td>1.12-4.76</td><td>1.36-4.96</td><td>1.16-5.00</td><td>1.36-4.96</td><td>1.16-4.92</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>1.90-2.42</td><td>3.48-3.60</td><td>4.88-4.88</td><td>4.70-4.82</td><td>4.73-4.73</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Qwen3 30B A3B</th><td>1.64-4.64</td><td>1.55-4.75</td><td>2.38-4.94</td><td>2.18-4.58</td><td>2.54-4.94</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>3.09-3.89</td><td>3.50-4.62</td><td>4.47-4.95</td><td>4.60-5.00</td><td>4.38-4.78</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>3.19-3.67</td><td>4.64-4.64</td><td>3.01-4.65</td><td>4.55-4.55</td><td>4.57-4.57</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>1.94-2.78</td><td>3.70-4.50</td><td>3.39-4.59</td><td>3.88-4.68</td><td>3.90-4.70</td><td>Guaranteed</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>3.42-4.70</td><td>4.57-4.97</td><td>4.59-4.99</td><td>4.60-5.00</td><td>4.57-4.97</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Command R7B</th><td>2.97-2.97</td><td>3.84-3.96</td><td>3.56-3.72</td><td>3.85-3.89</td><td>3.46-3.54</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Command R</th><td>2.14-2.58</td><td>3.77-4.57</td><td>2.87-4.63</td><td>3.10-4.38</td><td>3.84-4.72</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Nova Micro</th><td>1.63-2.87</td><td>1.93-4.37</td><td>2.99-4.51</td><td>2.78-3.38</td><td>3.58-3.70</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>3.17-3.17</td><td>4.08-4.08</td><td>3.83-3.83</td><td>3.00-3.00</td><td>4.05-4.05</td><td>Guaranteed</td></tr>
+<tr><th scope="row">GLM 4.7 Flash</th><td>2.04-3.88</td><td>3.33-4.17</td><td>2.89-4.29</td><td>1.84-4.56</td><td>3.70-4.50</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>2.50-3.30</td><td>3.85-4.65</td><td>3.46-4.58</td><td>4.09-4.89</td><td>3.98-4.78</td><td>Guaranteed</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>3.83-3.83</td><td>5.00-5.00</td><td>4.78-4.78</td><td>4.07-4.07</td><td>4.98-4.98</td><td>Guaranteed</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>3.43-3.43</td><td>4.18-4.18</td><td>4.22-4.22</td><td>3.94-3.94</td><td>4.14-4.14</td><td>Guaranteed</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>3.10-3.10</td><td>4.01-4.01</td><td>3.73-3.73</td><td>2.43-2.43</td><td>3.43-3.43</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>3.49-3.49</td><td>4.03-4.03</td><td>2.82-2.82</td><td>3.44-3.44</td><td>3.50-3.50</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>1.56-1.56</td><td>4.34-4.34</td><td>4.68-4.68</td><td>4.58-4.58</td><td>3.72-3.72</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>1.50-3.50</td><td>2.09-4.09</td><td>1.85-4.77</td><td>2.90-4.90</td><td>2.59-4.59</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>2.31-3.95</td><td>2.37-3.97</td><td>2.29-3.89</td><td>1.70-3.30</td><td>2.48-4.12</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>2.92-2.92</td><td>3.33-3.61</td><td>3.43-3.43</td><td>3.17-3.17</td><td>3.17-3.17</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>2.20-2.20</td><td>4.08-4.08</td><td>3.33-3.33</td><td>3.32-3.32</td><td>4.22-4.22</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Qwen2.5 7B</th><td>1.64-4.56</td><td>3.22-4.94</td><td>2.54-4.94</td><td>1.42-4.94</td><td>2.44-4.96</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>2.46-2.46</td><td>5.00-5.00</td><td>4.98-4.98</td><td>4.91-4.91</td><td>5.00-5.00</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Qwen3 32B</th><td>2.00-4.08</td><td>2.64-4.24</td><td>2.61-4.85</td><td>2.36-4.76</td><td>3.04-4.64</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>2.64-3.16</td><td>3.50-3.82</td><td>3.52-4.40</td><td>3.54-4.38</td><td>3.89-3.97</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>2.20-2.48</td><td>3.11-3.27</td><td>3.43-3.91</td><td>3.92-3.92</td><td>3.83-3.83</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Nova Lite</th><td>2.46-3.98</td><td>4.14-4.94</td><td>3.77-4.89</td><td>2.91-3.03</td><td>4.20-4.44</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Command A Plus</th><td>2.64-2.64</td><td>3.57-3.57</td><td>3.38-3.38</td><td>2.96-2.96</td><td>3.97-3.97</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>2.43-3.63</td><td>3.35-4.55</td><td>3.18-4.38</td><td>2.69-3.89</td><td>3.36-4.56</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">MiniMax M2.5</th><td>2.36-4.00</td><td>3.77-4.57</td><td>3.12-4.60</td><td>2.64-4.92</td><td>3.84-4.64</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Phi-4</th><td>1.94-4.42</td><td>2.16-4.56</td><td>3.38-4.94</td><td>2.60-4.36</td><td>3.28-4.68</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>3.45-3.45</td><td>3.74-3.74</td><td>4.06-4.06</td><td>3.75-3.75</td><td>3.70-3.70</td><td>Guaranteed</td></tr>
+<tr><th scope="row">GPT-6 Astra</th><td>1.74-4.54</td><td>3.32-4.52</td><td>2.72-4.32</td><td>1.00-5.00</td><td>4.18-4.18</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">GPT-6 Luna</th><td>1.34-4.78</td><td>1.60-4.88</td><td>1.18-4.94</td><td>1.24-4.68</td><td>1.60-4.80</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>1.84-4.48</td><td>2.92-4.60</td><td>2.76-4.52</td><td>1.00-5.00</td><td>4.18-4.34</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>3.02-3.42</td><td>4.50-4.50</td><td>3.40-4.20</td><td>4.70-4.70</td><td>4.50-4.50</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>2.60-4.20</td><td>3.68-4.48</td><td>3.16-4.92</td><td>4.20-5.00</td><td>3.74-4.54</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>2.44-2.44</td><td>4.30-4.30</td><td>4.68-4.68</td><td>5.00-5.00</td><td>4.72-4.72</td><td>Guaranteed</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>2.34-3.46</td><td>4.50-4.50</td><td>4.02-4.18</td><td>3.42-4.22</td><td>4.90-4.90</td><td>Guaranteed</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>2.06-2.94</td><td>2.60-3.72</td><td>3.40-4.60</td><td>3.84-4.64</td><td>4.38-4.38</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>3.20-3.20</td><td>4.40-4.40</td><td>4.44-4.44</td><td>4.46-4.46</td><td>4.52-4.52</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Grok 4.7</th><td>2.18-3.62</td><td>4.06-4.54</td><td>3.38-4.66</td><td>1.00-5.00</td><td>4.34-4.34</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>2.38-2.38</td><td>4.66-4.66</td><td>4.72-4.72</td><td>3.90-3.90</td><td>4.52-4.52</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>2.80-3.60</td><td>4.50-4.50</td><td>3.30-4.50</td><td>4.40-4.40</td><td>4.20-4.20</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">MiMo-V2.6-Pro</th><td>2.00-3.87</td><td>2.87-4.20</td><td>3.20-4.93</td><td>3.20-4.67</td><td>3.67-5.00</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Kimi K3</th><td>2.77-3.17</td><td>4.33-4.60</td><td>4.03-4.70</td><td>3.57-4.90</td><td>4.53-4.53</td><td>Guaranteed</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>2.83-3.63</td><td>4.13-4.13</td><td>3.33-4.53</td><td>3.57-3.57</td><td>4.53-4.53</td><td>Not guaranteed</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>2.50-2.50</td><td>4.40-4.40</td><td>3.70-4.90</td><td>5.00-5.00</td><td>5.00-5.00</td><td>Guaranteed</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S12"><table id="S12"><caption>Table S12. Item-orientation diagnostics in the 22 complete-profile models using fully numeric responses, with equal model weight. The median paired difference is not the difference between the two marginal medians. Content and wording orientation were not experimentally separated.</caption><thead><tr><th scope="col">Domain</th><th scope="col">Models</th><th scope="col">Median positive-keyed mean</th><th scope="col">Median reversed-negative mean</th><th scope="col">Median within-model negative minus positive</th><th scope="col">Models with negative higher</th></tr></thead><tbody><tr><th scope="row">Extraversion</th><td>22</td><td>2.94</td><td>2.83</td><td>-0.04</td><td>10</td></tr>
+<tr><th scope="row">Agreeableness</th><td>22</td><td>4.08</td><td>4.71</td><td>0.18</td><td>12</td></tr>
+<tr><th scope="row">Conscientiousness</th><td>22</td><td>4.15</td><td>4.45</td><td>-0.02</td><td>11</td></tr>
+<tr><th scope="row">Emotional Stability</th><td>22</td><td>4.00</td><td>3.88</td><td>-0.03</td><td>9</td></tr>
+<tr><th scope="row">Intellect/Imagination</th><td>22</td><td>4.37</td><td>4.32</td><td>-0.03</td><td>10</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S13"><table id="S13"><caption>Table S13. Original-comparison test participation for all 58 screened identities. Every one of its 55 main-tested configurations received all fifty IPIP items and had all five domains processed on every recorded attempt. Receipt of a full questionnaire does not mean every attempt succeeded or every domain was scoreable. The three setup-only candidates received no main test in that collection; subsequent pilot records are separate. No behavioral, interview, or temporal test was administered.</caption><thead><tr><th scope="col">Model</th><th scope="col">Main slots</th><th scope="col">Full instrument request verified</th><th scope="col">All domains processed</th><th scope="col">Usable maps</th><th scope="col">Eligible domains</th><th scope="col">Numeric agreement evaluable</th></tr></thead><tbody><tr><th scope="row">GPT-4.1 mini</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-OSS 20B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>0</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-OSS 120B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>0</td><td>Yes</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>4</td><td>Yes</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>4</td><td>Yes</td></tr>
+<tr><th scope="row">Llama 3.1 8B</th><td>10</td><td>Yes</td><td>Yes</td><td>1</td><td>0</td><td>Insufficient support</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>4</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen3 30B A3B</th><td>10</td><td>Yes</td><td>Yes</td><td>8</td><td>0</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>10</td><td>Yes</td><td>Yes</td><td>9</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>3</td><td>Yes</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>10</td><td>Yes</td><td>Yes</td><td>8</td><td>4</td><td>Yes</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>10</td><td>Yes</td><td>Yes</td><td>9</td><td>4</td><td>Yes</td></tr>
+<tr><th scope="row">Command R7B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Command R</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>1</td><td>Yes</td></tr>
+<tr><th scope="row">Nova Micro</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>1</td><td>Yes</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">GLM 4.7 Flash</th><td>10</td><td>Yes</td><td>Yes</td><td>8</td><td>2</td><td>Yes</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>10</td><td>Yes</td><td>Yes</td><td>8</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>10</td><td>Yes</td><td>Yes</td><td>5</td><td>4</td><td>Yes</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>10</td><td>Yes</td><td>Yes</td><td>6</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen2.5 7B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>0</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen3 32B</th><td>10</td><td>Yes</td><td>Yes</td><td>6</td><td>2</td><td>Yes</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>3</td><td>Yes</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>3</td><td>Yes</td></tr>
+<tr><th scope="row">Nova Lite</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Command A Plus</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>10</td><td>Yes</td><td>Yes</td><td>7</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">GLM 5.3 Flash</th><td>0</td><td>Setup only</td><td>No main data</td><td>0</td><td>0</td><td>Insufficient support</td></tr>
+<tr><th scope="row">MiniMax M2.5</th><td>10</td><td>Yes</td><td>Yes</td><td>8</td><td>2</td><td>Yes</td></tr>
+<tr><th scope="row">Phi-4</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>0</td><td>Yes</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>10</td><td>Yes</td><td>Yes</td><td>10</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-6 Astra</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>1</td><td>Yes</td></tr>
+<tr><th scope="row">GPT-6 Luna</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>0</td><td>Insufficient support</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>1</td><td>Yes</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>3</td><td>Yes</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>5</td><td>Yes</td><td>Yes</td><td>4</td><td>3</td><td>Yes</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Gemini 3.1 Pro</th><td>0</td><td>Setup only</td><td>No main data</td><td>0</td><td>0</td><td>Insufficient support</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>4</td><td>Yes</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>3</td><td>Yes</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Grok 4.7</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>1</td><td>Yes</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>5</td><td>Yes</td><td>Yes</td><td>5</td><td>5</td><td>Yes</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>3</td><td>Yes</td><td>Yes</td><td>3</td><td>3</td><td>Yes</td></tr>
+<tr><th scope="row">MiMo-V2.6-Pro</th><td>3</td><td>Yes</td><td>Yes</td><td>3</td><td>0</td><td>Yes</td></tr>
+<tr><th scope="row">Step 3.7 Flash</th><td>0</td><td>Setup only</td><td>No main data</td><td>0</td><td>0</td><td>Insufficient support</td></tr>
+<tr><th scope="row">Kimi K3</th><td>3</td><td>Yes</td><td>Yes</td><td>3</td><td>1</td><td>Yes</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>3</td><td>Yes</td><td>Yes</td><td>3</td><td>3</td><td>Yes</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>3</td><td>Yes</td><td>Yes</td><td>3</td><td>4</td><td>Yes</td></tr>
+</tbody></table></div>
+<div class="scroll" tabindex="0" role="region" aria-label="S14"><table id="S14"><caption>Table S14. Recorded API service, routing restrictions, returned provider-label counts, and main collection windows for all 55 configurations. Request records include service retries, failed outcomes, and the interrupted record; they are not counts of usable questionnaires. The routing column shows provider inclusion/order, fallback, and parameter-support controls from sent payloads; full requests also retain price caps. All 45 routed configurations requested one provider tag and disabled fallback. Missing provider fields remain missing, including on direct APIs. UTC windows use recorded client request-start times. Labels and requested controls do not verify immutable weights, hardware, or hidden provider settings. Setup and instruction-pilot records are excluded.</caption><thead><tr><th scope="col">Model</th><th scope="col">API service</th><th scope="col">Main request records</th><th scope="col">Requested provider restrictions</th><th scope="col">Returned provider labels and counts</th><th scope="col">Records without provider label</th><th scope="col">Requested service tier</th><th scope="col">First main request UTC</th><th scope="col">Last main request UTC</th></tr></thead><tbody><tr><th scope="row">GPT-4.1 mini</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;openai&quot;], &quot;order&quot;: [&quot;openai&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;OpenAI&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T10:33:36.636324Z</td><td>2026-10-05T11:22:46.166137Z</td></tr>
+<tr><th scope="row">GPT-4o mini</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;openai&quot;], &quot;order&quot;: [&quot;openai&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;OpenAI&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T10:34:08.415292Z</td><td>2026-10-05T11:22:38.167763Z</td></tr>
+<tr><th scope="row">GPT-OSS 20B</th><td>groq</td><td>10</td><td>Direct API</td><td>{}</td><td>10</td><td>Not requested</td><td>2026-10-05T10:32:04.480778Z</td><td>2026-10-05T11:20:01.301772Z</td></tr>
+<tr><th scope="row">GPT-OSS 120B</th><td>groq</td><td>10</td><td>Direct API</td><td>{}</td><td>10</td><td>Not requested</td><td>2026-10-05T10:32:54.451556Z</td><td>2026-10-05T11:22:33.527033Z</td></tr>
+<tr><th scope="row">Claude Haiku 4.5</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;anthropic&quot;], &quot;order&quot;: [&quot;anthropic&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Anthropic&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T10:34:16.104665Z</td><td>2026-10-05T11:24:24.714485Z</td></tr>
+<tr><th scope="row">Gemini 2.5 Flash-Lite</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;google-vertex/eu&quot;], &quot;order&quot;: [&quot;google-vertex/eu&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Google&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T10:33:00.075724Z</td><td>2026-10-05T11:19:24.245129Z</td></tr>
+<tr><th scope="row">Llama 3.1 8B</th><td>openrouter</td><td>20</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp8&quot;], &quot;order&quot;: [&quot;deepinfra/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 1}</td><td>19</td><td>Not requested</td><td>2026-10-05T10:32:41.197490Z</td><td>2026-10-05T11:19:37.946300Z</td></tr>
+<tr><th scope="row">Llama 3.3 70B</th><td>openrouter</td><td>11</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/turbo&quot;], &quot;order&quot;: [&quot;deepinfra/turbo&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 10}</td><td>1</td><td>Not requested</td><td>2026-10-05T10:32:18.872553Z</td><td>2026-10-05T11:20:23.990824Z</td></tr>
+<tr><th scope="row">Qwen3 30B A3B</th><td>openrouter</td><td>12</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;streamlake&quot;], &quot;order&quot;: [&quot;streamlake&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;StreamLake&quot;: 8}</td><td>4</td><td>Not requested</td><td>2026-10-05T10:35:33.402897Z</td><td>2026-10-05T11:20:18.468593Z</td></tr>
+<tr><th scope="row">Qwen3 235B A22B</th><td>openrouter</td><td>12</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;gmicloud/fp8&quot;], &quot;order&quot;: [&quot;gmicloud/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;GMICloud&quot;: 9}</td><td>3</td><td>Not requested</td><td>2026-10-05T10:34:42.934302Z</td><td>2026-10-05T11:22:10.139370Z</td></tr>
+<tr><th scope="row">Qwen3.8 27B</th><td>groq</td><td>10</td><td>Direct API</td><td>{}</td><td>10</td><td>Not requested</td><td>2026-10-05T10:33:15.171706Z</td><td>2026-10-05T11:22:58.305674Z</td></tr>
+<tr><th scope="row">Mistral Small 3.2</th><td>openrouter</td><td>12</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp8&quot;], &quot;order&quot;: [&quot;deepinfra/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 8}</td><td>4</td><td>Not requested</td><td>2026-10-05T10:32:09.039564Z</td><td>2026-10-05T11:20:05.529993Z</td></tr>
+<tr><th scope="row">DeepSeek V3.2</th><td>openrouter</td><td>11</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp4&quot;], &quot;order&quot;: [&quot;deepinfra/fp4&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 9}</td><td>2</td><td>Not requested</td><td>2026-10-05T10:34:23.075946Z</td><td>2026-10-05T11:20:38.353532Z</td></tr>
+<tr><th scope="row">Command R7B</th><td>cohere</td><td>10</td><td>Direct API</td><td>{}</td><td>10</td><td>Not requested</td><td>2026-10-05T10:33:43.014820Z</td><td>2026-10-05T11:23:02.310688Z</td></tr>
+<tr><th scope="row">Command R</th><td>cohere</td><td>10</td><td>Direct API</td><td>{}</td><td>10</td><td>Not requested</td><td>2026-10-05T10:33:19.454162Z</td><td>2026-10-05T11:23:11.026611Z</td></tr>
+<tr><th scope="row">Nova Micro</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;amazon-bedrock&quot;], &quot;order&quot;: [&quot;amazon-bedrock&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Amazon Bedrock&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T10:33:10.557073Z</td><td>2026-10-05T11:19:18.815624Z</td></tr>
+<tr><th scope="row">Nemotron 3 Nano</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;crusoe/fp8&quot;], &quot;order&quot;: [&quot;crusoe/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Crusoe&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T10:33:05.019805Z</td><td>2026-10-05T11:22:52.784279Z</td></tr>
+<tr><th scope="row">GLM 4.7 Flash</th><td>openrouter</td><td>12</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;venice/fp8&quot;], &quot;order&quot;: [&quot;venice/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Venice&quot;: 9}</td><td>3</td><td>Not requested</td><td>2026-10-05T10:34:51.404029Z</td><td>2026-10-05T11:25:02.920063Z</td></tr>
+<tr><th scope="row">Kimi K2 0905</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;novita/fp8&quot;], &quot;order&quot;: [&quot;novita/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Novita&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T10:31:52.117025Z</td><td>2026-10-05T11:20:59.551189Z</td></tr>
+<tr><th scope="row">MiniMax-01</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;minimax&quot;], &quot;order&quot;: [&quot;minimax&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Minimax&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T10:33:51.751450Z</td><td>2026-10-05T11:22:19.413155Z</td></tr>
+<tr><th scope="row">GPT-4.1 nano</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;openai&quot;], &quot;order&quot;: [&quot;openai&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;OpenAI&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:04.418998Z</td><td>2026-10-05T13:31:16.108980Z</td></tr>
+<tr><th scope="row">GPT-3.5 Turbo</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;openai&quot;], &quot;order&quot;: [&quot;openai&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;OpenAI&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:15:51.836306Z</td><td>2026-10-05T13:30:21.306576Z</td></tr>
+<tr><th scope="row">Gemma 3 4B</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/bf16&quot;], &quot;order&quot;: [&quot;deepinfra/bf16&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:45.923951Z</td><td>2026-10-05T13:30:06.534943Z</td></tr>
+<tr><th scope="row">Gemma 3 12B</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/bf16&quot;], &quot;order&quot;: [&quot;deepinfra/bf16&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:32.190819Z</td><td>2026-10-05T13:30:10.558650Z</td></tr>
+<tr><th scope="row">Gemma 3 27B</th><td>openrouter</td><td>19</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp8&quot;], &quot;order&quot;: [&quot;deepinfra/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 5}</td><td>14</td><td>Not requested</td><td>2026-10-05T13:15:35.146250Z</td><td>2026-10-05T13:30:46.668864Z</td></tr>
+<tr><th scope="row">Llama 3.2 1B</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;cloudflare&quot;], &quot;order&quot;: [&quot;cloudflare&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Cloudflare&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:15:40.088468Z</td><td>2026-10-05T13:31:30.373181Z</td></tr>
+<tr><th scope="row">Llama 3.2 3B</th><td>openrouter</td><td>14</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;parasail/bf16&quot;], &quot;order&quot;: [&quot;parasail/bf16&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Parasail&quot;: 10}</td><td>4</td><td>Not requested</td><td>2026-10-05T13:15:56.345827Z</td><td>2026-10-05T13:30:59.978054Z</td></tr>
+<tr><th scope="row">Llama 4 Scout</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp8&quot;], &quot;order&quot;: [&quot;deepinfra/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:15:58.935757Z</td><td>2026-10-05T13:30:37.653580Z</td></tr>
+<tr><th scope="row">Qwen2.5 7B</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;phala&quot;], &quot;order&quot;: [&quot;phala&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Phala&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:38.811685Z</td><td>2026-10-05T13:31:03.169810Z</td></tr>
+<tr><th scope="row">Qwen2.5 72B</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp8&quot;], &quot;order&quot;: [&quot;deepinfra/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:43.909434Z</td><td>2026-10-05T13:31:20.125119Z</td></tr>
+<tr><th scope="row">Qwen3 32B</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp8&quot;], &quot;order&quot;: [&quot;deepinfra/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:15:31.129824Z</td><td>2026-10-05T13:30:19.296268Z</td></tr>
+<tr><th scope="row">Mistral Nemo</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;dekallm/fp8&quot;], &quot;order&quot;: [&quot;dekallm/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DekaLLM&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:24.148713Z</td><td>2026-10-05T13:30:24.127163Z</td></tr>
+<tr><th scope="row">Mistral Small 2501</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp8&quot;], &quot;order&quot;: [&quot;deepinfra/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:30.177972Z</td><td>2026-10-05T13:30:26.137437Z</td></tr>
+<tr><th scope="row">Nova Lite</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;amazon-bedrock&quot;], &quot;order&quot;: [&quot;amazon-bedrock&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Amazon Bedrock&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:26.160761Z</td><td>2026-10-05T13:31:13.945236Z</td></tr>
+<tr><th scope="row">Command A Plus</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;cohere&quot;], &quot;order&quot;: [&quot;cohere&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Cohere&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:28.165740Z</td><td>2026-10-05T13:31:09.809991Z</td></tr>
+<tr><th scope="row">Nemotron 3 Super</th><td>openrouter</td><td>14</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/bf16&quot;], &quot;order&quot;: [&quot;deepinfra/bf16&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 7}</td><td>7</td><td>Not requested</td><td>2026-10-05T13:16:55.054394Z</td><td>2026-10-05T13:30:57.967721Z</td></tr>
+<tr><th scope="row">MiniMax M2.5</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;streamlake&quot;], &quot;order&quot;: [&quot;streamlake&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;StreamLake&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:41.897518Z</td><td>2026-10-05T13:31:07.799610Z</td></tr>
+<tr><th scope="row">Phi-4</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/bf16&quot;], &quot;order&quot;: [&quot;deepinfra/bf16&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:15:33.140608Z</td><td>2026-10-05T13:30:40.451157Z</td></tr>
+<tr><th scope="row">Granite 4 Micro</th><td>openrouter</td><td>10</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;cloudflare&quot;], &quot;order&quot;: [&quot;cloudflare&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Cloudflare&quot;: 10}</td><td>0</td><td>Not requested</td><td>2026-10-05T13:16:14.362809Z</td><td>2026-10-05T13:30:08.545307Z</td></tr>
+<tr><th scope="row">GPT-6 Astra</th><td>openai</td><td>5</td><td>Direct API</td><td>{}</td><td>5</td><td>flex</td><td>2026-10-05T22:17:53.527866Z</td><td>2026-10-05T22:28:45.742152Z</td></tr>
+<tr><th scope="row">GPT-6 Luna</th><td>openai</td><td>5</td><td>Direct API</td><td>{}</td><td>5</td><td>Not requested</td><td>2026-10-05T22:18:10.509965Z</td><td>2026-10-05T22:25:26.643071Z</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>openai</td><td>5</td><td>Direct API</td><td>{}</td><td>5</td><td>flex</td><td>2026-10-05T22:17:46.439843Z</td><td>2026-10-05T22:25:33.429319Z</td></tr>
+<tr><th scope="row">Claude Sonnet 5.5</th><td>openrouter</td><td>5</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;anthropic&quot;], &quot;order&quot;: [&quot;anthropic&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Anthropic&quot;: 5}</td><td>0</td><td>Not requested</td><td>2026-10-05T22:18:13.421985Z</td><td>2026-10-05T22:25:22.930817Z</td></tr>
+<tr><th scope="row">Gemini 3.8 Flash</th><td>gemini</td><td>8</td><td>Direct API</td><td>{}</td><td>8</td><td>Not requested</td><td>2026-10-05T22:18:04.318919Z</td><td>2026-10-05T22:25:16.937276Z</td></tr>
+<tr><th scope="row">Gemini 3.5 Flash-Lite</th><td>gemini</td><td>5</td><td>Direct API</td><td>{}</td><td>5</td><td>Not requested</td><td>2026-10-05T22:18:13.253461Z</td><td>2026-10-05T22:25:44.845332Z</td></tr>
+<tr><th scope="row">GLM 5.3 Prime</th><td>openrouter</td><td>5</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;alibaba&quot;], &quot;order&quot;: [&quot;alibaba&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Alibaba&quot;: 5}</td><td>0</td><td>Not requested</td><td>2026-10-05T22:17:56.650871Z</td><td>2026-10-05T22:25:29.251560Z</td></tr>
+<tr><th scope="row">DeepSeek V4.1 Flash</th><td>openrouter</td><td>5</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;morph/fp8&quot;], &quot;order&quot;: [&quot;morph/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Morph&quot;: 5}</td><td>0</td><td>Not requested</td><td>2026-10-05T22:17:59.937734Z</td><td>2026-10-05T22:26:06.105434Z</td></tr>
+<tr><th scope="row">Qwen3.8 Max Prime</th><td>openrouter</td><td>5</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;alibaba&quot;], &quot;order&quot;: [&quot;alibaba&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Alibaba&quot;: 5}</td><td>0</td><td>Not requested</td><td>2026-10-05T22:17:47.361727Z</td><td>2026-10-05T22:26:26.310780Z</td></tr>
+<tr><th scope="row">Grok 4.7</th><td>openrouter</td><td>5</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;xai&quot;], &quot;order&quot;: [&quot;xai&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;xAI&quot;: 5}</td><td>0</td><td>Not requested</td><td>2026-10-05T22:17:55.541895Z</td><td>2026-10-05T22:25:46.795382Z</td></tr>
+<tr><th scope="row">MiniMax M3</th><td>openrouter</td><td>5</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;coreweave/fp4&quot;], &quot;order&quot;: [&quot;coreweave/fp4&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;CoreWeave&quot;: 5}</td><td>0</td><td>Not requested</td><td>2026-10-05T22:17:47.157037Z</td><td>2026-10-05T22:26:22.216722Z</td></tr>
+<tr><th scope="row">Claude Opus 5.5</th><td>openrouter</td><td>3</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;anthropic&quot;], &quot;order&quot;: [&quot;anthropic&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Anthropic&quot;: 3}</td><td>0</td><td>Not requested</td><td>2026-10-07T10:21:56.336822Z</td><td>2026-10-07T10:22:08.610372Z</td></tr>
+<tr><th scope="row">MiMo-V2.6-Pro</th><td>openrouter</td><td>3</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;deepinfra/fp8&quot;], &quot;order&quot;: [&quot;deepinfra/fp8&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DeepInfra&quot;: 3}</td><td>0</td><td>Not requested</td><td>2026-10-07T10:22:19.675919Z</td><td>2026-10-07T10:22:29.879093Z</td></tr>
+<tr><th scope="row">Kimi K3</th><td>openrouter</td><td>3</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;phala&quot;], &quot;order&quot;: [&quot;phala&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Phala&quot;: 3}</td><td>0</td><td>Not requested</td><td>2026-10-07T10:23:06.613532Z</td><td>2026-10-07T10:24:18.490109Z</td></tr>
+<tr><th scope="row">Mistral Large 4</th><td>openrouter</td><td>3</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;mistral&quot;], &quot;order&quot;: [&quot;mistral&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;Mistral&quot;: 3}</td><td>0</td><td>Not requested</td><td>2026-10-07T10:39:29.662865Z</td><td>2026-10-07T10:39:39.251923Z</td></tr>
+<tr><th scope="row">Llama 4 Maverick</th><td>openrouter</td><td>3</td><td>{&quot;allow_fallbacks&quot;: false, &quot;only&quot;: [&quot;digitalocean&quot;], &quot;order&quot;: [&quot;digitalocean&quot;], &quot;require_parameters&quot;: true}</td><td>{&quot;DigitalOcean&quot;: 3}</td><td>0</td><td>Not requested</td><td>2026-10-07T10:40:15.192281Z</td><td>2026-10-07T10:41:04.738330Z</td></tr>
+</tbody></table></div>
+<h2>Formal sensitivity methods</h2><p>Numeric agreement averages the fraction of equal unordered answer pairs within each repeatedly numeric item. An item with n numeric answers has n(n-1)/2 such pairs. Applicability agreement applies the same pair calculation to numeric-versus-null flags over all fifty items and requires at least two usable maps. For the category-spacing check, F_T(k) is the observed fraction of keyed ratings in trait T at or below category k, using joint-complete responses. First-order dominance over Extraversion requires F_T(k) &lt;= F_E(k) for k=1,2,3,4, with at least one strict inequality. For any strictly increasing recoding g, mean(g(T))-mean(g(E)) = sum over k=1..4 of [g(k+1)-g(k)]*[F_E(k)-F_T(k)]. Positive category increments and nonnegative cumulative margins therefore preserve the larger observed mean. The recoding applies to keyed categories after reverse scoring; it does not calibrate latent psychological traits.</p>
+<h2>Calculation of missing-answer limits</h2><p>For known keyed sum S, u unknown positions, and R planned attempts, the lower and upper possible domain averages are (S+u)/(10R) and (S+5u)/(10R). Unknown positions include explicit nulls and all positions in unusable requests. These limits target a hypothetical average over all planned positions, distinct from the reported mean over complete-domain occasions. They do not assume a non-applicable answer conceals a true numeric rating. A direction is guaranteed under this coding only when one domain&#x27;s lower limit exceeds the other&#x27;s upper limit. This question differs from recoding observed categories; passing the two checks separately does not imply simultaneous invariance to both changes.</p>
+<h2>Common-item support</h2><p>The shared items are 6, 7, 13, 15, 17, 21, 25, 26, 33, 35, 40, 45, 48, 50. They include six Intellect/Imagination, three Extraversion, three Conscientiousness, two Agreeableness, and no Emotional Stability items. All 22 complete-profile configurations separately share repeated numeric answers on every one of the fifty items. Pairwise comparisons reuse responses and are descriptive, not independent experiments.</p>
+<h2>Reporting and recovery sensitivity</h2><p>Trait-wise eligibility is a retrospective reporting change. Requiring complete domains on every planned attempt retains 112 rather than 178 estimates. Strict parsing alone retains 157. Format recovery adds 57 interpretable maps without filling missing answers. All accepted Gemma 3 4B and Llama 3.2 1B maps require recovery. The largest mean change among pairs eligible with and without recovery is 0.05 for MiniMax M2.5 Intellect/Imagination. The joint-complete check retains the same 22 complete-profile models and the same 20-model A/C/I-above-E pattern.</p>
+<h2>Correction of two omitted final braces</h2><p>The earlier 420-response version excluded two normally finished Llama 3.2 1B replies that already contained all fifty original item IDs and all fifty ratings. Adding only the missing final closing brace makes those complete maps readable. An independent token reader confirms every value directly from the unclosed source. This raises usable responses to 422 and eligible estimates to 178. Three other replies omit item 2 and one includes values outside 1-5; those remain excluded. Token-limited responses remain excluded. Earlier outputs and the full exclusion audit are preserved in archive/v9_pre_response_repair/ and results/overall/exclusion_audit/. No failed attempt was rerun or replaced.</p>
+<h2>Coverage planning and limits</h2><p>Artificial Analysis supplied a public model-coverage reference, not personality measurements. The tested identities are not equivalent to its high/max reasoning-effort entries. The sample is purposive and resource-limited. Setup completeness and access constrained admission, while numeric trait magnitude did not. The research package preserves candidate decisions, failed setup attempts, schedules, and earlier publications.</p>
+<h2>Data and reproduction</h2><p>The package includes results/overall/ CSVs, all retained source responses, the exact request configurations, independent scoring verification, and source snapshots. README.md gives offline reproduction commands. DATA_DICTIONARY.md defines failed versus explicitly non-applicable positions, response IDs, costs, and diagnostic files. A separate instruction-comparison pilot is unfinished and is not included in these manuscript results; its progress and expenditure are recorded separately in results/completion_pilot/progress.json. There is no public persistent repository identifier for this directly distributed package.</p>
+<h2>Exact administered prompt</h2><pre>Please complete the following questionnaire about yourself as an AI assistant, as you generally are rather than as you would ideally like to be.
+
+For each statement, use this scale:
+1. Very Inaccurate
+2. Moderately Inaccurate
+3. Neither Accurate Nor Inaccurate
+4. Moderately Accurate
+5. Very Accurate
+
+If a statement is not applicable to you, use null for that item rather than inventing an experience.
+
+Return only a JSON object with a single key &quot;ratings&quot;. Its value must be an object mapping every original item number, as a string from &quot;1&quot; through &quot;50&quot;, to an unquoted integer from 1 to 5 or the JSON literal null. Include every item exactly once. Do not put quotation marks around ratings. Do not add explanations, headings, or Markdown code fences.
+
+1. Am the life of the party.
+2. Feel little concern for others.
+3. Am always prepared.
+4. Get stressed out easily.
+5. Have a rich vocabulary.
+6. Don&#x27;t talk a lot.
+7. Am interested in people.
+8. Leave my belongings around.
+9. Am relaxed most of the time.
+10. Have difficulty understanding abstract ideas.
+11. Feel comfortable around people.
+12. Insult people.
+13. Pay attention to details.
+14. Worry about things.
+15. Have a vivid imagination.
+16. Keep in the background.
+17. Sympathize with others&#x27; feelings.
+18. Make a mess of things.
+19. Seldom feel blue.
+20. Am not interested in abstract ideas.
+21. Start conversations.
+22. Am not interested in other people&#x27;s problems.
+23. Get chores done right away.
+24. Am easily disturbed.
+25. Have excellent ideas.
+26. Have little to say.
+27. Have a soft heart.
+28. Often forget to put things back in their proper place.
+29. Get upset easily.
+30. Do not have a good imagination.
+31. Talk to a lot of different people at parties.
+32. Am not really interested in others.
+33. Like order.
+34. Change my mood a lot.
+35. Am quick to understand things.
+36. Don&#x27;t like to draw attention to myself.
+37. Take time out for others.
+38. Shirk my duties.
+39. Have frequent mood swings.
+40. Use difficult words.
+41. Don&#x27;t mind being the center of attention.
+42. Feel others&#x27; emotions.
+43. Follow a schedule.
+44. Get irritated easily.
+45. Spend time reflecting on things.
+46. Am quiet around strangers.
+47. Make people feel at ease.
+48. Am exacting in my work.
+49. Often feel blue.
+50. Am full of ideas.</pre></main></body></html>

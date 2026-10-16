@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="440" viewBox="0 0 800 440" role="img" aria-labelledby="chart-title chart-description" font-family="Arial, Helvetica, sans-serif">
+  <title id="chart-title">Two Gemma profiles</title>
+  <desc id="chart-description">Gemma 3 4B has higher Extraversion; Gemma 3 12B has higher Conscientiousness. Both use ten complete assessments per trait.</desc>
+  <rect width="800" height="440" fill="#ffffff" />
+  <text x="34" y="48" font-size="29" fill="#37352f" font-weight="700" text-anchor="start">Two Gemma profiles</text>
+  <line x1="250.0" x2="250.0" y1="100" y2="320" stroke="#e3e3e0" />
+  <text x="250.0" y="348" font-size="22" fill="#52525b" font-weight="400" text-anchor="middle">1</text>
+  <line x1="367.5" x2="367.5" y1="100" y2="320" stroke="#e3e3e0" />
+  <text x="367.5" y="348" font-size="22" fill="#52525b" font-weight="400" text-anchor="middle">2</text>
+  <line x1="485.0" x2="485.0" y1="100" y2="320" stroke="#e3e3e0" />
+  <text x="485.0" y="348" font-size="22" fill="#52525b" font-weight="400" text-anchor="middle">3</text>
+  <line x1="602.5" x2="602.5" y1="100" y2="320" stroke="#e3e3e0" />
+  <text x="602.5" y="348" font-size="22" fill="#52525b" font-weight="400" text-anchor="middle">4</text>
+  <line x1="720.0" x2="720.0" y1="100" y2="320" stroke="#e3e3e0" />
+  <text x="720.0" y="348" font-size="22" fill="#52525b" font-weight="400" text-anchor="middle">5</text>
+  <text x="485.0" y="380" font-size="22" fill="#52525b" font-weight="400" text-anchor="middle">Keyed score on the 1 to 5 scale</text>
+  <text x="32" y="183" font-size="23" fill="#37352f" font-weight="400" text-anchor="start">Extraversion</text>
+  <line x1="542.575" x2="315.8" y1="175" y2="175" stroke="#a1a1aa" stroke-width="4" />
+  <circle cx="542.575" cy="175" r="8" fill="#4f46e5" />
+  <text x="542.575" y="157" font-size="24" fill="#4f46e5" font-weight="700" text-anchor="middle">3.49</text>
+  <circle cx="315.8" cy="175" r="8" fill="#b45309" />
+  <text x="315.8" y="157" font-size="24" fill="#b45309" font-weight="700" text-anchor="middle">1.56</text>
+  <text x="32" y="288" font-size="23" fill="#37352f" font-weight="400" text-anchor="start">Conscientiousness</text>
+  <line x1="463.85" x2="682.4" y1="280" y2="280" stroke="#a1a1aa" stroke-width="4" />
+  <circle cx="463.85" cy="280" r="8" fill="#4f46e5" />
+  <text x="463.85" y="262" font-size="24" fill="#4f46e5" font-weight="700" text-anchor="middle">2.82</text>
+  <circle cx="682.4" cy="280" r="8" fill="#b45309" />
+  <text x="682.4" y="262" font-size="24" fill="#b45309" font-weight="700" text-anchor="middle">4.68</text>
+  <text x="270" y="412" font-size="23" fill="#4f46e5" font-weight="400" text-anchor="start">Gemma 3 4B</text>
+  <text x="525" y="412" font-size="23" fill="#b45309" font-weight="400" text-anchor="start">Gemma 3 12B</text>
+</svg>

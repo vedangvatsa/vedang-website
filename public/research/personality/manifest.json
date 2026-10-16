@@ -1,0 +1,33 @@
+{
+  "sourceVersion": "ALL-9",
+  "sourceManuscriptSha256": "4fd07f16aa8c69e02c22ebc001cb576cf7ec8ab5daa0cd99025ab296f312c287",
+  "sourceFiles": {
+    "results/overall/summary.json": "a9f845be631dda90b74bc95bac3240fab52a3fe0eac2cebe721055e91100681f",
+    "results/overall/verification.json": "11d7aab3f1cc6b65e4378a029418f612e01f893e2c06751f631edb6625088d1e",
+    "results/overall/deep/verification.json": "6fb5127ca4b67a250bcd2736b01dd7e353f5ef927f31c22dcf58d25bee56c27f",
+    "results/overall/coverage.csv": "3ec326a2959b84a2a9f17749d9b8542f1540c6e913b1f044d977cf68a0610972",
+    "results/overall/all_profiles.csv": "b9af96f122343f96805c59a4342aa1b34ac0451ecb055f7d31c0c53132132c1d",
+    "results/overall/domain_summary.csv": "b1d35a333e3f5acf0785140b396de9180d748e26be98427e2143fa2a40254d75",
+    "results/overall/deep/pair_stability.csv": "a98aa575f8ff32ea4f3cd31e264f970197aaa9541b2f2a8519233f7a66f6ed11",
+    "results/overall/deep/completion_bounds.csv": "df823448610b62b4e8d0787dea850d66a98e6dc5c4b65c99bcc4964200369be1",
+    "results/overall/item_missingness.csv": "a5b1cb16ca9f7debb90b5239f7c5686e86dc049ffc257e887b4e4e2f66e63d84",
+    "template.pdf": "61e3554add5391cf33343b708ae8c312c27b6a17440099be950456162e8eb2ff",
+    "supplement.html": "29694bfc6c8306841afda8fe3255a96a3f2a35df28491ced4801343375106bf4",
+    "results/overall/reported_profiles.csv": "3cd2fbe50781698cefb3c589ee6a383d8dea12e1595ed170270844d7e6c93464"
+  },
+  "publicArtifacts": {
+    "research/personality/completion-bounds.csv": "df823448610b62b4e8d0787dea850d66a98e6dc5c4b65c99bcc4964200369be1",
+    "research/personality/coverage.csv": "3ec326a2959b84a2a9f17749d9b8542f1540c6e913b1f044d977cf68a0610972",
+    "research/personality/data.json": "742216aaa3cd7576f550a1526910f65d219975c7d12096a39bb20c8ed3a19819",
+    "research/personality/pair-stability.csv": "a98aa575f8ff32ea4f3cd31e264f970197aaa9541b2f2a8519233f7a66f6ed11",
+    "research/personality/paper.pdf": "61e3554add5391cf33343b708ae8c312c27b6a17440099be950456162e8eb2ff",
+    "research/personality/reported-profiles.csv": "3cd2fbe50781698cefb3c589ee6a383d8dea12e1595ed170270844d7e6c93464",
+    "research/personality/supplement.html": "29694bfc6c8306841afda8fe3255a96a3f2a35df28491ced4801343375106bf4",
+    "images/essays/personality-bounds.svg": "62c3139e877f950667a08ec91133aede41742023c04c5cc2d9bb7501e8a6a002",
+    "images/essays/personality-coverage.svg": "a5ff1a3fb47bb5512c29708883337fcc2c715cf8413add126308ce85d799aa3a",
+    "images/essays/personality-gemma.svg": "a8301b14980f39f2971b8ef9ea53685dd38852004f77383b473e32a08fff25fa",
+    "images/essays/personality-orderings.svg": "8f48a12a3c10c24e85bc5db363a0a5b4f71c5f5c58738459187356b86d3cd267",
+    "images/essays/personality-trait-coverage.svg": "6528f5f2fdf6ccef7ca5ff59bf56bc49ad4028dc0fef4b934e9f3db997d7b2f5"
+  },
+  "scope": "Verified study results and selected illustrative contrasts. No credentials, request headers, or unfinished-pilot outcomes are published in this asset set."
+}

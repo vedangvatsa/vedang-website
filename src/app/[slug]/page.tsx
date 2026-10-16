@@ -47,6 +47,7 @@ import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts
 import { AbstractTransferComparison, AbstractTransferErrors } from '@/components/mdx/generalization-charts';
 import { ReceiptsExposureChart, ReceiptsLaborFacts, ReceiptsDemandChart } from '@/components/mdx/receipts-charts';
 import { AgentreadyLeaderboard } from '@/components/mdx/agentready-charts';
+import { PersonalityProfileExplorer } from '@/components/mdx/personality-charts';
 import { TokenTaxFormatChart } from '@/components/mdx/token-tax-charts';
 type Props = {
   params: Promise<{ slug: string }>;
@@ -104,6 +105,7 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'receipts': ['agent', 'llm', 'api'],
   'private': ['zero-knowledge-proof', 'inference', 'llm', 'edge-computing'],
   'neocloud': ['inference', 'llm', 'api', 'edge-computing'],
+  'personality': ['llm', 'inference', 'rlhf'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -534,6 +536,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               ReceiptsLaborFacts,
               ReceiptsDemandChart,
               AgentreadyLeaderboard,
+              PersonalityProfileExplorer,
               TokenTaxFormatChart,
               ResearchPaper,
               img: (props: any) => (
