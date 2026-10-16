@@ -47,6 +47,7 @@ import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts
 import { AbstractTransferComparison, AbstractTransferErrors } from '@/components/mdx/generalization-charts';
 import { ReceiptsExposureChart, ReceiptsLaborFacts, ReceiptsDemandChart } from '@/components/mdx/receipts-charts';
 import { AgentreadyLeaderboard } from '@/components/mdx/agentready-charts';
+import { TokenTaxFormatChart } from '@/components/mdx/token-tax-charts';
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -533,6 +534,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               ReceiptsLaborFacts,
               ReceiptsDemandChart,
               AgentreadyLeaderboard,
+              TokenTaxFormatChart,
               ResearchPaper,
               img: (props: any) => (
                 <ZoomableImage

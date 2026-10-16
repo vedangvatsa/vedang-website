@@ -8814,3 +8814,226 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
 - [Privacy Policy](https://veda.ng/privacy): Data handling, analytics, and third-party services
 - [Contact / Book a Meeting](https://veda.ng/contact): Direct consultation and email options
 
+
+
+---
+
+## The Token Tax of the Web
+
+Source: https://veda.ng/tokens
+Published: 2026-10-17
+
+A book page showed 20.00 crossed out and 16.99 as the current price. Given a cleaned HTML version of the page, a language model answered the price question with `16.99`. Given a Markdown version, the same model returned `20.00 16.99`. Both amounts survived the conversion. The reply left the reader to decide which one applied.
+
+Across the full test, Markdown used 49.6% fewer recorded input tokens than cleaned HTML. Both formats matched 798 of the 888 expected answers. The price example explains why the answer total needs closer inspection. A shorter input can retain the numbers while making their relationship harder to read.
+
+The [research paper](/docs/the-token-tax-of-the-web.pdf) compares five formats of the same saved webpage sections. It counts the input, scores the answers, and checks the differing replies against their sources. The results give a reason to test Markdown as a replacement for HTML in question-answering systems. They also give specific failures to check before accepting a shorter conversion.
+
+![Cleaned HTML used 385,326 complete input tokens and Markdown used 194,035, a reduction of 49.6%. Each matched 798 of 888 expected answers.](/images/essays/token-tax-input.svg)
+
+## The extra input
+
+A price inside an HTML table can appear as `<td>16.99</td>`. The characters `<td>` and `</td>` mark a table cell. A browser uses those tags when it displays the table. A language model receiving the HTML as text receives the tags along with the price.
+
+The model processes text in tokens. A token can represent a word, part of a word, punctuation, or another sequence of characters. Tags and attributes count toward the input too. Their cost depends on the token-counting rule, so counting characters or file bytes cannot establish how many tokens a request uses.
+
+Some markup carries information that a question depends on. A table cell belongs to a row and a column. A heading may apply to several values below it. A crossed-out price differs from the current price even when both numbers remain readable. Deleting the markup can remove those distinctions.
+
+Other parts of the HTML may serve purposes outside the question. Styling rules, scripts, comments, and identifiers can add text without helping answer a question about a salary or a camera's weight. The useful amount of markup therefore depends on the page and the task. Keeping every tag and deleting every tag are both choices that need testing.
+
+The title's “token tax” refers to the input used to carry this markup. The study measures that input directly. It asks how much can be removed while retaining answers supported by the page. This requires checking the converted text and the model's reply together. A file-size reduction alone says nothing about whether the model can still distinguish the old price from the current one.
+
+## The test
+
+The source material came from [WebSRC](https://aclanthology.org/2021.emnlp-main.343/), a dataset published in 2021. It pairs saved webpage material with questions and expected answers. Its creators had already selected page sections and removed some code. The experiment therefore started with prepared sections, rather than complete pages downloaded from today's web.
+
+The main sample contained 300 sections from 50 dataset groups covering 43 website hostnames. Cars, books, cameras, games, jobs, films, phones, restaurants, sports, and universities appeared in the sample. Each group contributed six sections. Sports and universities supplied more sections than cameras or games because the dataset contained more selected groups for those topics.
+
+Each section had up to three questions. The exact distribution was 291 sections with three questions, six with two, and three with one. That produced 888 questions. The selection grouped rewordings about the same stored answer and location before choosing questions, reducing repeated tests of the same fact.
+
+Every selected section appeared in five formats.
+
+| Format | Text supplied to the model |
+| --- | --- |
+| Saved HTML | The section as retained by WebSRC, after removing research-only answer-location labels |
+| Cleaned HTML | The same section with further code and identifiers removed, while retaining basic HTML structure |
+| Markdown | A fixed conversion using shorter notation for headings, lists, links, and tables |
+| Plain text | Words and numbers in source order, with most markup removed |
+| Nested JSON | A labelled hierarchy of the retained page elements |
+
+The converters followed fixed rules. They did not ask another model to rewrite the page, and they could not see the questions or answer key when deciding what to retain. [Markdownify](https://github.com/matthewwithanm/python-markdownify) produced the Markdown version. Every selected representation fit within the study's 64,000-token limit, so the test kept the selected text in full.
+
+The main run used the model alias `gpt-6.1-sol` through OpenCode on 12 October 2026 UTC. Each request started a fresh chat containing one section and its questions. The instructions asked for the shortest supporting passage, required units, and allowed an empty answer when the supplied text could not answer the question. Browsing and file access were disabled.
+
+Five versions of 300 sections produced 1,500 main requests and 4,440 answer attempts. A preliminary run added 150 requests; a repeat run added 250. The total was 1,900 experimental requests. The result tables below use the main run. The primary comparison and measures were recorded after the preliminary run and before the main replies, in a local, unregistered plan.
+
+## The token counts
+
+Saved HTML required the most input. Plain text required the least. Markdown sat between plain text and cleaned HTML, with the same answer-key total as cleaned HTML.
+
+| Format | Page-text tokens | Complete input tokens | Answer-key matches out of 888 |
+| --- | ---: | ---: | ---: |
+| Saved HTML | 625,455 | 724,469 | 805 |
+| Cleaned HTML | 286,312 | 385,326 | 798 |
+| Markdown | 94,874 | 194,035 | 798 |
+| Plain text | 67,658 | 166,936 | 784 |
+| Nested JSON | 348,183 | 447,197 | 795 |
+
+Page-text counts use the public `o200k_base` rule in [tiktoken](https://github.com/openai/tiktoken). Complete-input counts come from the recorded model requests and include questions, instructions, and other request text. Both columns exclude the reply.
+
+The difference between Markdown and plain text is small enough to deserve attention. Plain text saved another 27,099 complete-input tokens, but matched 14 fewer answers. Removing more notation produced a shorter request without preserving the same answer score.
+
+Saved HTML went in the other direction. It matched seven more answers than Markdown and used 530,434 more complete-input tokens. An application that places a high cost on a missed answer might accept more input. Another application might prefer the smaller request and check uncertain answers separately. The table provides the measured quantities for those decisions; the experiment did not assign a monetary value to an extra match.
+
+Nested JSON used more input than cleaned HTML and matched three fewer answers. Its repeated labels and hierarchy took space. This result concerns a conversion of the page's element tree. A small JSON object containing only a product name, current price, and currency would be a different representation with a different extraction step.
+
+## Page savings and request savings
+
+For cleaned HTML and Markdown, page text fell from 286,312 to 94,874 tokens. Subtracting gives 191,438 fewer tokens. Dividing that difference by 286,312 gives a 66.9% reduction.
+
+The complete request fell from 385,326 to 194,035 tokens. That difference is 191,291 tokens, or 49.6% of the cleaned-HTML total. The questions and instructions remained in both versions. Reducing the page therefore removed a smaller share of the complete request than of the page alone.
+
+The two counters also measure different things. One applies a fixed public rule to page text. The other records usage for the full model request. The provider's internal counting rule was unknown. The figures support a comparison within each measure, rather than an exact accounting of every token outside the page by subtracting one column from the other.
+
+The 49.6% figure is useful when discussing this request design because each section appeared once in a request containing all its questions. A system that sends the same section separately for each question would repeat some page text. A system that includes a long conversation history would add more non-page input. Both would need their own complete-request measurement.
+
+The paper also reports a 68.6% median saving in page tokens. To calculate it, the analysis found the percentage saving for each section, sorted all 300 percentages, and averaged the two middle values. The combined 66.9% saving gives long sections more influence. The median describes the middle of the section-by-section results. Neither number replaces the 49.6% reduction recorded for complete requests.
+
+## The tied score
+
+Both Markdown and cleaned HTML matched 798 expected answers. They did not match exactly the same questions.
+
+| Result on a question | Questions |
+| --- | ---: |
+| Both formats matched the key | 789 |
+| Only Markdown matched | 9 |
+| Only cleaned HTML matched | 9 |
+| Neither matched | 81 |
+| Total | 888 |
+
+Each format reached 798 by adding its nine exclusive matches to the 789 shared matches. Looking only at the total would hide the 18 questions on which the scoring outcome changed. A tied average can include gains on some questions and losses on others.
+
+The original replies differed on 45 questions. For 23 of them, normal text cleanup made the replies identical. The remaining 22 still differed after cleanup. Raw wording differences and changes in the final score are separate counts because two differently worded replies can both fail, or both pass, the marking rule.
+
+The study reports two ways to average the answers. Counting every question equally gives 798 divided by 888, or 89.86%, for both formats. Giving each section equal weight produces 90.00%. Under the second measure, a section with one question contributes as much as a section with three. The small difference between the percentages follows from those weights.
+
+An answer-key match means agreement with the stored expected text after the declared cleanup. It provides a repeatable way to compare thousands of replies. It does not, by itself, establish that a reply is complete or that the dataset's question is unambiguous. The warranty and salary examples show the difference between matching text and answering the question.
+
+## Warranties, salaries, and prices
+
+One warranty answer in the key read `36 mo. / 36,000 mi. Warranty`. The cleaned-HTML reply read `36 mo. / 36,000 mi.`. Both gave the same duration and distance. The missing word “Warranty” caused the shorter reply to fail the strict key check. A source-based review accepted both answers.
+
+The omitted word did not change either limit. A reader could still identify the warranty as 36 months or 36,000 miles. Treating that omission as an incorrect answer made the automated score stricter than the meaning of the reply required.
+
+A salary question produced a more consequential omission. The source stated `41,526 to 51,034 per annum depending on relevant experience`. The cleaned-HTML reply retained the annual range but left out the condition about experience. Markdown retained the condition. The review rated the first reply incomplete and the second correct and complete.
+
+The numbers alone did not describe the offer fully. “Depending on relevant experience” explains how the employer selects a salary within the range. Removing those words changes what a reader can infer about the offer, even though every digit survives.
+
+The book-price example ran the other way. Cleaned HTML produced `16.99`; Markdown produced `20.00 16.99`. The saved screenshot showed the first amount crossed out and the second as the current price. The review accepted the cleaned-HTML answer and marked the Markdown answer incomplete because it left both amounts unresolved.
+
+This was an observed answer difference, not an isolated experiment on strikethrough. The test changed the whole representation. It cannot establish which individual tag or formatting decision caused the model to return two prices. The example does establish what the resulting reply failed to do.
+
+A camera question supplied another accepted difference. The reply gave `660 g`, while the key also listed pounds and ounces. The gram value answered the weight question without repeating every unit conversion. Longer car names that included accurate trim information also received credit in the source review.
+
+Other questions were uncertain before choosing a page format. Two roster questions asked for birthplace, but the original columns said hometown. Those fields can differ. Another question asked for “optical resolution” on a page containing both screen and camera resolution. The review marked the intended answer unclear rather than assuming one field settled the question.
+
+These cases require different judgments. Missing the word “Warranty” leaves the stated limits intact. Missing an experience condition leaves out part of the offer. Returning two prices fails to select the current one. Answering a birthplace question from a hometown column depends on an assumption the source does not support.
+
+## The source review
+
+The paper's AI assistant checked all 45 differing reply pairs against the saved source text and table labels, and inspected five screenshots where layout affected the judgment. It could see the format names and published keys. The review assigned one of five labels to each reply.
+
+| Review judgment | Cleaned HTML | Markdown |
+| --- | ---: | ---: |
+| Correct and complete | 39 | 40 |
+| Incomplete | 1 | 1 |
+| Wrong | 0 | 0 |
+| No answer | 3 | 2 |
+| Unclear | 2 | 2 |
+| Reviewed replies | 45 | 45 |
+
+Markdown had one more correct-and-complete reply among the reviewed differences. Each format had one incomplete reply. The incomplete answers were the salary condition for cleaned HTML and the unresolved book prices for Markdown.
+
+The 843 questions with identical stored replies did not enter this review. Their agreement cannot rule out shared errors. The 39 and 40 judgments therefore describe a selected comparison of disagreements, not factual-accuracy rates for all 888 questions.
+
+The review adds an account of the differences that the original matching program cannot provide. It identifies what an omitted phrase means, checks whether an extra unit is necessary, and consults the page when the answer key is uncertain. Its visible labels and AI rater are part of the method. An independent human review could disagree with individual judgments.
+
+## The scoring rule
+
+The main scorer decoded HTML character spellings, standardized equivalent character forms, ignored letter case, and removed extra whitespace. For example, it treated `&amp;` as `&`. It kept numbers, signs, decimal points, units, and punctuation otherwise intact. The replies `1.5` and `15` remained different.
+
+That rule affects the result. Cleaning only letter case and whitespace would have produced 791 matches for cleaned HTML and 798 for Markdown. With the full original rule, both reached 798. Across all five formats and 4,440 answer attempts, HTML entity decoding changed 15 marks. Removing the Unicode compatibility-normalization step alone changed none.
+
+A format can expose encoded characters differently. A scorer that compares their spellings without decoding them can penalize a reply that carries the same character in another form. The matching rule therefore needs to remain visible alongside the score.
+
+Broadly removing punctuation would introduce another problem. It could erase distinctions in decimals, negative values, or measurements. The original rule retained those distinctions instead of treating all formatting differences as harmless. The source review then dealt with cases that required reading the question and page together.
+
+The primary counts still use the rule fixed before the main replies. The simpler cleanup is a later diagnostic. Keeping those two results separate makes it possible to see both the original comparison and its dependence on text normalization.
+
+## Repeats and website mix
+
+The repeat run selected one section from each dataset group, giving 50 sections and 149 questions. Cleaned HTML matched 132 answers in each run; Markdown matched 130. Three cleaned-HTML replies and two Markdown replies changed while those totals stayed the same.
+
+A stable total can therefore conceal variation in individual replies, even when the input format stays fixed. The repeated sample also differed from the main sample. Its two-answer gap belongs to those 149 questions and should appear alongside, rather than replace, the main result.
+
+The analysis also recalculated the comparison 10,000 times using different mixes of the 43 observed hostnames. Each draw kept a website's sections together and allowed a hostname to appear more than once. This checks how the result changes when the sampled websites receive different weights.
+
+The middle 95% of the answer-score differences ran from 0.87 percentage points lower to 0.87 points higher for Markdown. The complete-input savings ranged from about 45.1% to 53.1% across the middle 95%. These calculations reused saved replies; they did not make fresh model requests.
+
+Two hostnames appeared in both the preliminary and main samples under different dataset-group labels. Removing their main sections left 288 sections from 41 hostnames, with the average section scores still tied. This check addresses that overlap within the available data.
+
+The study also applied more HTML cleaning and tried a second public token counter. Further cleaning reduced the HTML page-text total to 269,960 tokens, with Markdown still 64.9% shorter. The second counter gave a 66.7% combined page saving, compared with 66.9% under the first. The extra-cleaning check measured text length only.
+
+## Other conversion methods
+
+[HtmlRAG](https://arxiv.org/abs/2411.02959) treats HTML structure as useful information for answering questions. Its method cleans, compresses, and prunes HTML to reduce input while keeping selected structural content. That addresses a different choice from removing markup indiscriminately.
+
+[ReaderLM-v2](https://arxiv.org/abs/2503.01151) uses a trained language model to convert HTML into Markdown or JSON. A learned converter can make choices that a fixed parser does not make. It also introduces a separate model whose output needs evaluation.
+
+The present experiment used fixed conversions of supplied sections. It did not reproduce those systems or rank their performance. Its contribution is the paired comparison of input and answers under one recorded setup, followed by inspection of the replies that differed.
+
+Keeping the converters separate is necessary when interpreting a format name. Markdown specifies notation; it does not specify which HTML content a converter keeps. Two converters can produce different Markdown from the same page. JSON can describe the entire element tree or a few extracted fields. Their token counts and failure cases need not agree.
+
+The measured result belongs to the supplied pages, conversion rules, reader, and scoring method together. Testing another converter means checking another set of outputs, even when the filename extension stays the same.
+
+## Language and token counts
+
+A separate check in the paper's appendix counted published human translations from [FLORES-200](https://github.com/facebookresearch/flores/tree/main/flores200). It used 1,012 aligned sentences drawn from 281 English-language source articles. Twelve languages produced 13 language/script versions because Chinese appeared in simplified and traditional scripts.
+
+The check applied two public counting rules, `o200k_base` and `cl100k_base`. These rules divide text into tokens differently.
+
+| Version | Tokens with o200k_base | Tokens with cl100k_base |
+| --- | ---: | ---: |
+| English | 26,873 | 27,182 |
+| Simplified Chinese | 33,555 | 50,811 |
+| Traditional Chinese | 38,098 | 58,198 |
+
+Simplified Chinese used 24.9% more tokens than English under the first rule and 86.9% more under the second. It used fewer written characters, but that did not make either token total smaller. All tested non-English versions had higher aggregate totals under both rules.
+
+Individual sentences sometimes reversed the comparison. Under `o200k_base`, 116 simplified-Chinese sentences used fewer tokens than their English versions. The total describes the full collection, rather than a rule that every Chinese sentence must be longer in tokens.
+
+This check used existing translations and measured their size. It did not test model answers in those languages or the cost of translating a request. The results show why character count cannot substitute for token count when comparing text. They provide no measured basis for translating a webpage before asking questions about it.
+
+## Study limits
+
+WebSRC is an older collection of selected and simplified webpage sections. The model answered questions about supplied text. It did not find the page, load a script-driven application, manage a login, navigate between screens, or complete a purchase. Those tasks add failures and costs that this experiment did not measure.
+
+The reader used one hosted GPT alias and requested settings. The provider can change the model behind that alias. Training exposure to WebSRC is also unknown. Repeating the experiment with other readers and fresh pages is necessary before treating the result as typical of web question answering.
+
+The answer key, scorer, and selected source review each cover different aspects of answer quality. A matching string can agree with an imperfect key. Two identical replies can share an error. The source review covers disagreements and uses an AI rater with visible format labels. Together they support the reported comparison without establishing a complete factual-error rate.
+
+The website resampling describes variation in the mix of observed websites. It does not cover every possible source of model variation. The repeat run adds evidence about 50 selected sections, not a second full experiment across all sources.
+
+The study measured input counts rather than billed charges, energy use, or a causal reduction in response time. Median reply times were about 2.7 to 2.8 seconds and included network and service delays. A 49.6% input reduction cannot be converted into a 49.6% saving in any of those other quantities without measuring them.
+
+## The next conversion test
+
+The book-price case gives a converter a specific target. Preserve the current price, distinguish it from the crossed-out amount, and keep enough context for the reader to answer the question. The salary case adds a condition that belongs with the number. The warranty case requires retaining two limits without demanding an unnecessary repeated label.
+
+A useful follow-up would compare converters on these requirements before adding more aggressive compression. Each candidate would receive the same pages without seeing the questions. The evaluation would then inspect whether table headings, units, conditions, and price status survived, as well as counting the resulting tokens. It would test the answers with more than one reader and repeat the requests.
+
+That design could distinguish a conversion error from a reader error more directly. If the converted text no longer identifies the current price, the converter has already lost needed information. If it identifies the price clearly and the model still returns both amounts, the reader has failed to use information it received. A total answer score alone cannot locate that difference.
+
+For the book page, the next test is whether a shorter conversion can preserve the price status and lead the reader to answer `16.99` alone.
+
+The [full paper](/docs/the-token-tax-of-the-web.pdf) contains the method, tables, and source examples. The [published count data](/data/token-tax-results.json) supplies the figures used in this essay's charts, along with the source-review and language-count summaries.

@@ -1,0 +1,522 @@
+{
+  "title": "The Token Tax of the Web",
+  "slug": "tokens",
+  "sections": 300,
+  "questions": 888,
+  "mainRequests": 1500,
+  "totalExperimentalRequests": 1900,
+  "modelAlias": "gpt-6.1-sol",
+  "mainRunDate": "2026-10-12",
+  "pageTokenCounter": "o200k_base",
+  "paperUrl": "/docs/the-token-tax-of-the-web.pdf",
+  "dataUrl": "/data/token-tax-results.json",
+  "paperSha256": "d6c736c307d781c71d54b83d435ae1666bf92b9f11f2046120a97e9557200406",
+  "formats": [
+    {
+      "id": "source_html",
+      "label": "Saved HTML",
+      "pageTokens": 625455,
+      "inputTokens": 724469,
+      "matches": 805
+    },
+    {
+      "id": "clean_html",
+      "label": "Cleaned HTML",
+      "pageTokens": 286312,
+      "inputTokens": 385326,
+      "matches": 798
+    },
+    {
+      "id": "markdown",
+      "label": "Markdown",
+      "pageTokens": 94874,
+      "inputTokens": 194035,
+      "matches": 798
+    },
+    {
+      "id": "plain_text",
+      "label": "Plain text",
+      "pageTokens": 67658,
+      "inputTokens": 166936,
+      "matches": 784
+    },
+    {
+      "id": "json_tree",
+      "label": "Nested JSON",
+      "pageTokens": 348183,
+      "inputTokens": 447197,
+      "matches": 795
+    }
+  ],
+  "markdownVsCleanedHtml": {
+    "completeInputReductionPercent": 49.6439378604091,
+    "pageTextReductionPercent": 66.86342172175807,
+    "medianPageTextReductionPercent": 68.5627951133376
+  },
+  "answerReview": {
+    "reviewed_pairs": 45,
+    "reviewed_replies_per_format": 45,
+    "distinct_source_parts": 36,
+    "raw_identical_pairs_not_reviewed": 843,
+    "main_normalized_different_pairs_included": 22,
+    "totals": {
+      "clean_html": {
+        "correct": 39,
+        "incomplete": 1,
+        "wrong": 0,
+        "no_answer": 3,
+        "unclear": 2
+      },
+      "markdown": {
+        "correct": 40,
+        "incomplete": 1,
+        "wrong": 0,
+        "no_answer": 2,
+        "unclear": 2
+      }
+    },
+    "reviewer": "OpenCode assistant performing direct source inspection; no human rater",
+    "blinding": "format names and published keys visible",
+    "key_or_question_issues": [
+      2,
+      35,
+      42,
+      43
+    ],
+    "new_reader_trials": 0,
+    "scope": "Source-supported judgments on all raw-differing cleaned-HTML/Markdown pairs, not a semantic accuracy estimate for all 888 questions.",
+    "judgments_sha256": "26d649851fe848b8f89f6b8c667376ab06acd0bda2fe8b5a00f29d73ee269cc0"
+  },
+  "languageCounts": {
+    "study": "separate language-length check, no GPT answer evaluation",
+    "dataset": "FLORES-200 original release, devtest split",
+    "aligned_sentences": 1012,
+    "language_versions": 13,
+    "distinct_languages": 12,
+    "tokenizers": [
+      "o200k_base",
+      "cl100k_base"
+    ],
+    "source_articles": 281,
+    "source_domain_counts": {
+      "wikinews": 341,
+      "wikibooks": 351,
+      "wikivoyage": 320
+    },
+    "planned_languages": [
+      "eng_Latn",
+      "zho_Hans",
+      "zho_Hant",
+      "spa_Latn",
+      "fra_Latn",
+      "deu_Latn",
+      "por_Latn",
+      "ind_Latn",
+      "arb_Arab",
+      "hin_Deva",
+      "jpn_Jpan",
+      "kor_Hang",
+      "rus_Cyrl"
+    ],
+    "exclusions": [],
+    "input_hash_checks": 13,
+    "metadata_alignment_checks": 1012,
+    "plan_sha256": "973b2729c03d0040887482a9f105e8af838ccf824b0c97b7d73898433d4b4bfb",
+    "counter_code_sha256": "42f2573a37681239536d8772eb0c30a48ee62911e9b38fe3ce8237e83a5698e0",
+    "results": {
+      "eng_Latn": {
+        "language": "English",
+        "sentences": 1012,
+        "unicode_code_points": 131966,
+        "character_ratio_vs_english": 1,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 26873,
+            "mean_sentence_tokens": 26.554347826086957,
+            "ratio_vs_english": 1,
+            "percentage_change_vs_english": 0,
+            "shorter_sentences": 0,
+            "equal_sentences": 1012,
+            "longer_sentences": 0,
+            "whole_file_tokens": 26878,
+            "whole_file_ratio_vs_english": 1
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 27182,
+            "mean_sentence_tokens": 26.859683794466402,
+            "ratio_vs_english": 1,
+            "percentage_change_vs_english": 0,
+            "shorter_sentences": 0,
+            "equal_sentences": 1012,
+            "longer_sentences": 0,
+            "whole_file_tokens": 27187,
+            "whole_file_ratio_vs_english": 1
+          }
+        }
+      },
+      "zho_Hans": {
+        "language": "Chinese (simplified)",
+        "sentences": 1012,
+        "unicode_code_points": 43251,
+        "character_ratio_vs_english": 0.3277435096918903,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 33555,
+            "mean_sentence_tokens": 33.15711462450593,
+            "ratio_vs_english": 1.248651062404644,
+            "percentage_change_vs_english": 24.865106240464407,
+            "shorter_sentences": 116,
+            "equal_sentences": 48,
+            "longer_sentences": 848,
+            "whole_file_tokens": 33584,
+            "whole_file_ratio_vs_english": 1.2494977304858992
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 50811,
+            "mean_sentence_tokens": 50.208498023715414,
+            "ratio_vs_english": 1.8692884997424766,
+            "percentage_change_vs_english": 86.92884997424765,
+            "shorter_sentences": 1,
+            "equal_sentences": 0,
+            "longer_sentences": 1011,
+            "whole_file_tokens": 50872,
+            "whole_file_ratio_vs_english": 1.8711884356493913
+          }
+        }
+      },
+      "zho_Hant": {
+        "language": "Chinese (traditional)",
+        "sentences": 1012,
+        "unicode_code_points": 40722,
+        "character_ratio_vs_english": 0.3085794825940015,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 38098,
+            "mean_sentence_tokens": 37.64624505928854,
+            "ratio_vs_english": 1.417705503665389,
+            "percentage_change_vs_english": 41.77055036653889,
+            "shorter_sentences": 14,
+            "equal_sentences": 17,
+            "longer_sentences": 981,
+            "whole_file_tokens": 38120,
+            "whole_file_ratio_vs_english": 1.4182602872237517
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 58198,
+            "mean_sentence_tokens": 57.50790513833992,
+            "ratio_vs_english": 2.1410492237510117,
+            "percentage_change_vs_english": 114.10492237510117,
+            "shorter_sentences": 0,
+            "equal_sentences": 0,
+            "longer_sentences": 1012,
+            "whole_file_tokens": 58245,
+            "whole_file_ratio_vs_english": 2.1423842277559126
+          }
+        }
+      },
+      "spa_Latn": {
+        "language": "Spanish",
+        "sentences": 1012,
+        "unicode_code_points": 157041,
+        "character_ratio_vs_english": 1.1900110634557386,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 35415,
+            "mean_sentence_tokens": 34.99505928853755,
+            "ratio_vs_english": 1.317865515573252,
+            "percentage_change_vs_english": 31.786551557325193,
+            "shorter_sentences": 28,
+            "equal_sentences": 35,
+            "longer_sentences": 949,
+            "whole_file_tokens": 35416,
+            "whole_file_ratio_vs_english": 1.3176575638068309
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 41974,
+            "mean_sentence_tokens": 41.476284584980235,
+            "ratio_vs_english": 1.5441836509454787,
+            "percentage_change_vs_english": 54.41836509454787,
+            "shorter_sentences": 4,
+            "equal_sentences": 2,
+            "longer_sentences": 1006,
+            "whole_file_tokens": 42002,
+            "whole_file_ratio_vs_english": 1.544929561922978
+          }
+        }
+      },
+      "fra_Latn": {
+        "language": "French",
+        "sentences": 1012,
+        "unicode_code_points": 157688,
+        "character_ratio_vs_english": 1.1949138414440084,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 36808,
+            "mean_sentence_tokens": 36.37154150197628,
+            "ratio_vs_english": 1.3697019313065157,
+            "percentage_change_vs_english": 36.97019313065157,
+            "shorter_sentences": 12,
+            "equal_sentences": 11,
+            "longer_sentences": 989,
+            "whole_file_tokens": 36864,
+            "whole_file_ratio_vs_english": 1.3715306198377855
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 43710,
+            "mean_sentence_tokens": 43.191699604743086,
+            "ratio_vs_english": 1.6080494444853213,
+            "percentage_change_vs_english": 60.804944448532126,
+            "shorter_sentences": 1,
+            "equal_sentences": 0,
+            "longer_sentences": 1011,
+            "whole_file_tokens": 43745,
+            "whole_file_ratio_vs_english": 1.6090410858130724
+          }
+        }
+      },
+      "deu_Latn": {
+        "language": "German",
+        "sentences": 1012,
+        "unicode_code_points": 153809,
+        "character_ratio_vs_english": 1.16551990664262,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 35224,
+            "mean_sentence_tokens": 34.80632411067194,
+            "ratio_vs_english": 1.310758009898411,
+            "percentage_change_vs_english": 31.075800989841106,
+            "shorter_sentences": 25,
+            "equal_sentences": 26,
+            "longer_sentences": 961,
+            "whole_file_tokens": 35247,
+            "whole_file_ratio_vs_english": 1.3113698935932734
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 43103,
+            "mean_sentence_tokens": 42.59189723320158,
+            "ratio_vs_english": 1.5857184901773231,
+            "percentage_change_vs_english": 58.57184901773231,
+            "shorter_sentences": 3,
+            "equal_sentences": 2,
+            "longer_sentences": 1007,
+            "whole_file_tokens": 43134,
+            "whole_file_ratio_vs_english": 1.5865671092801708
+          }
+        }
+      },
+      "por_Latn": {
+        "language": "Portuguese",
+        "sentences": 1012,
+        "unicode_code_points": 143489,
+        "character_ratio_vs_english": 1.0873179455314248,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 32922,
+            "mean_sentence_tokens": 32.53162055335969,
+            "ratio_vs_english": 1.2250958210843597,
+            "percentage_change_vs_english": 22.509582108435964,
+            "shorter_sentences": 50,
+            "equal_sentences": 41,
+            "longer_sentences": 921,
+            "whole_file_tokens": 32933,
+            "whole_file_ratio_vs_english": 1.2252771783614853
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 40179,
+            "mean_sentence_tokens": 39.702569169960476,
+            "ratio_vs_english": 1.4781473033625192,
+            "percentage_change_vs_english": 47.81473033625192,
+            "shorter_sentences": 3,
+            "equal_sentences": 5,
+            "longer_sentences": 1004,
+            "whole_file_tokens": 40191,
+            "whole_file_ratio_vs_english": 1.4783168426085997
+          }
+        }
+      },
+      "ind_Latn": {
+        "language": "Indonesian",
+        "sentences": 1012,
+        "unicode_code_points": 142406,
+        "character_ratio_vs_english": 1.0791112862403953,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 33570,
+            "mean_sentence_tokens": 33.17193675889328,
+            "ratio_vs_english": 1.2492092434785844,
+            "percentage_change_vs_english": 24.920924347858442,
+            "shorter_sentences": 57,
+            "equal_sentences": 40,
+            "longer_sentences": 915,
+            "whole_file_tokens": 33586,
+            "whole_file_ratio_vs_english": 1.2495721407842846
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 42162,
+            "mean_sentence_tokens": 41.66205533596838,
+            "ratio_vs_english": 1.5510999926421898,
+            "percentage_change_vs_english": 55.10999926421898,
+            "shorter_sentences": 1,
+            "equal_sentences": 1,
+            "longer_sentences": 1010,
+            "whole_file_tokens": 42178,
+            "whole_file_ratio_vs_english": 1.5514032441975945
+          }
+        }
+      },
+      "arb_Arab": {
+        "language": "Arabic",
+        "sentences": 1012,
+        "unicode_code_points": 116320,
+        "character_ratio_vs_english": 0.8814391585711471,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 37117,
+            "mean_sentence_tokens": 36.676877470355734,
+            "ratio_vs_english": 1.3812004614296878,
+            "percentage_change_vs_english": 38.120046142968775,
+            "shorter_sentences": 23,
+            "equal_sentences": 20,
+            "longer_sentences": 969,
+            "whole_file_tokens": 37123,
+            "whole_file_ratio_vs_english": 1.3811667534786813
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 82288,
+            "mean_sentence_tokens": 81.31225296442688,
+            "ratio_vs_english": 3.0272974762710616,
+            "percentage_change_vs_english": 202.72974762710615,
+            "shorter_sentences": 0,
+            "equal_sentences": 0,
+            "longer_sentences": 1012,
+            "whole_file_tokens": 82296,
+            "whole_file_ratio_vs_english": 3.0270349799536542
+          }
+        }
+      },
+      "hin_Deva": {
+        "language": "Hindi",
+        "sentences": 1012,
+        "unicode_code_points": 131079,
+        "character_ratio_vs_english": 0.9932785717533305,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 42292,
+            "mean_sentence_tokens": 41.790513833992094,
+            "ratio_vs_english": 1.5737729319391212,
+            "percentage_change_vs_english": 57.37729319391212,
+            "shorter_sentences": 5,
+            "equal_sentences": 0,
+            "longer_sentences": 1007,
+            "whole_file_tokens": 42301,
+            "whole_file_ratio_vs_english": 1.573815015998214
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 129364,
+            "mean_sentence_tokens": 127.8300395256917,
+            "ratio_vs_english": 4.759178868368774,
+            "percentage_change_vs_english": 375.91788683687736,
+            "shorter_sentences": 0,
+            "equal_sentences": 0,
+            "longer_sentences": 1012,
+            "whole_file_tokens": 129679,
+            "whole_file_ratio_vs_english": 4.769890020965903
+          }
+        }
+      },
+      "jpn_Jpan": {
+        "language": "Japanese",
+        "sentences": 1012,
+        "unicode_code_points": 56943,
+        "character_ratio_vs_english": 0.4314975069336041,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 44559,
+            "mean_sentence_tokens": 44.030632411067195,
+            "ratio_vs_english": 1.6581326982473115,
+            "percentage_change_vs_english": 65.81326982473115,
+            "shorter_sentences": 6,
+            "equal_sentences": 3,
+            "longer_sentences": 1003,
+            "whole_file_tokens": 44562,
+            "whole_file_ratio_vs_english": 1.6579358583227919
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 61583,
+            "mean_sentence_tokens": 60.85276679841897,
+            "ratio_vs_english": 2.265580163343389,
+            "percentage_change_vs_english": 126.5580163343389,
+            "shorter_sentences": 0,
+            "equal_sentences": 0,
+            "longer_sentences": 1012,
+            "whole_file_tokens": 61593,
+            "whole_file_ratio_vs_english": 2.265531320116232
+          }
+        }
+      },
+      "kor_Hang": {
+        "language": "Korean",
+        "sentences": 1012,
+        "unicode_code_points": 65965,
+        "character_ratio_vs_english": 0.49986360123062,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 39566,
+            "mean_sentence_tokens": 39.09683794466403,
+            "ratio_vs_english": 1.472332824768355,
+            "percentage_change_vs_english": 47.23328247683549,
+            "shorter_sentences": 8,
+            "equal_sentences": 3,
+            "longer_sentences": 1001,
+            "whole_file_tokens": 39574,
+            "whole_file_ratio_vs_english": 1.4723565741498623
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 64338,
+            "mean_sentence_tokens": 63.57509881422925,
+            "ratio_vs_english": 2.3669340004414687,
+            "percentage_change_vs_english": 136.69340004414687,
+            "shorter_sentences": 0,
+            "equal_sentences": 0,
+            "longer_sentences": 1012,
+            "whole_file_tokens": 64345,
+            "whole_file_ratio_vs_english": 2.366756170228418
+          }
+        }
+      },
+      "rus_Cyrl": {
+        "language": "Russian",
+        "sentences": 1012,
+        "unicode_code_points": 142096,
+        "character_ratio_vs_english": 1.0767621963232954,
+        "tokenizers": {
+          "o200k_base": {
+            "total_sentence_tokens": 38188,
+            "mean_sentence_tokens": 37.73517786561265,
+            "ratio_vs_english": 1.4210545901090315,
+            "percentage_change_vs_english": 42.10545901090315,
+            "shorter_sentences": 21,
+            "equal_sentences": 13,
+            "longer_sentences": 978,
+            "whole_file_tokens": 38191,
+            "whole_file_ratio_vs_english": 1.4209018528164299
+          },
+          "cl100k_base": {
+            "total_sentence_tokens": 66928,
+            "mean_sentence_tokens": 66.13438735177866,
+            "ratio_vs_english": 2.462217644029137,
+            "percentage_change_vs_english": 146.2217644029137,
+            "shorter_sentences": 0,
+            "equal_sentences": 0,
+            "longer_sentences": 1012,
+            "whole_file_tokens": 66933,
+            "whole_file_ratio_vs_english": 2.4619487254938024
+          }
+        }
+      }
+    },
+    "scope": "Published translations of the same source sentences. Not byte-identical information, a semantic audit, webpage translations, or measurement of this GPT alias's private tokenizer.",
+    "translation_charges": "unmeasured; no translation generated in this check",
+    "new_model_calls": 0
+  }
+}

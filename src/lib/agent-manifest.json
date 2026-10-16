@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T20:18:03.090Z",
+  "generatedAt": "2026-10-16T20:29:27.218876Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -558,6 +558,7 @@
     "/synthetic-empathy",
     "/team",
     "/textui",
+    "/tokens",
     "/towards-the-agentic-web",
     "/traffic",
     "/trust",
@@ -1072,6 +1073,7 @@
     "/substrate",
     "/swarm-prediction",
     "/textui",
+    "/tokens",
     "/traffic",
     "/trust",
     "/twilight",

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+  <title id="title">49.6% fewer complete input tokens with Markdown</title>
+  <desc id="desc">Cleaned HTML used 385,326 tokens. Markdown used 194,035. Each matched 798 of 888 expected answers across 300 saved sections.</desc>
+  <rect x="1" y="1" width="798" height="398" rx="8" fill="#ffffff" stroke="#e3e3e0"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#37352f">
+    <text x="40" y="58" font-size="32" font-weight="700">49.6% fewer input tokens</text>
+    <text x="40" y="91" font-size="20" fill="#52525b">Markdown compared with cleaned HTML</text>
+    <text x="40" y="151" font-size="24">Cleaned HTML</text>
+    <text x="760" y="151" font-size="24" font-weight="700" text-anchor="end">385,326</text>
+    <rect x="40" y="170" width="720" height="36" rx="3" fill="#64748b" opacity="0.65"/>
+    <text x="40" y="253" font-size="24">Markdown</text>
+    <text x="760" y="253" font-size="24" font-weight="700" text-anchor="end">194,035</text>
+    <rect x="40" y="272" width="362.56" height="36" rx="3" fill="#6366f1" opacity="0.65"/>
+    <text x="40" y="358" font-size="20">798 / 888 answer-key matches in each format</text>
+    <text x="760" y="380" font-size="16" fill="#52525b" text-anchor="end">veda.ng/tokens</text>
+  </g>
+</svg>
