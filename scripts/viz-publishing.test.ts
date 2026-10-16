@@ -43,6 +43,20 @@ test('catch-up gate reconciles submitted posts without creating a second post', 
   assert.throws(() => selectDue(posts, new Date('2026-09-25T05:00:00Z')), /reconcile/);
 });
 
+test('paused account queues preserve unresolved evidence without replaying the previous campaign', () => {
+  const old = { ...entry('old-campaign'), paused: true, state: 'uncertain' as const, error: 'Expired token', bufferPostId: 'old-remote' };
+  const fresh = { ...entry('new-campaign'), scheduleDate: '2026-10-16' };
+  assert.equal(needsBufferWork([old], new Date('2026-10-16T08:30:00Z')), false);
+  assert.equal(selectDue([old, fresh], new Date('2026-10-16T08:30:00Z')).post?.id, 'new-campaign');
+  assert.equal(old.state, 'uncertain');
+  assert.equal(old.error, 'Expired token');
+  const blockedAccount = [{ ...fresh, paused: true }];
+  assert.equal(selectDue(blockedAccount, new Date('2026-10-16T08:30:00Z')).post, undefined);
+  // A pause must not permit a second publish attempt in an already-used slot.
+  const attempted = { ...old, attemptedSlot: '2026-10-16T09:00' };
+  assert.equal(selectDue([attempted, fresh], new Date('2026-10-16T08:30:00Z')).post, undefined);
+});
+
 test('all Buffer payloads publish now without dueAt or a Buffer queue mode', () => {
   for (const p of PLATFORMS) {
     const input = buildInput(p.service, entry('one'), 'channel', 'https://cdn.example/video.mp4');
@@ -132,9 +146,14 @@ test('all captions fit their platform and retain their declared caption format',
       const text = platform === 'youtube' ? p.description : p.text;
       validateCaption(platform, text);
       if (p.batchId === '2026-10-16') {
-        assert.equal(p.captionStyle, 'licensed-v2');
+        assert.ok(['licensed-v2', 'licensed-short-v2'].includes(String(p.captionStyle)));
         assert.ok(text?.includes(String(p.musicCredit)), 'Required music attribution missing');
-        assert.ok(text?.includes(String(p.sourceUrl)), 'Data source link missing');
+        if (p.captionStyle === 'licensed-short-v2') {
+          assert.ok(text?.includes(String(p.publicNotesUrl)), 'Source definitions and track notes missing');
+          assert.ok(text?.includes('https://creativecommons.org/licenses/by/4.0/'));
+          assert.equal(p.sourceCredit, sourceCredit({ sourceOrganization: p.sourceOrganization }));
+          assert.ok(text?.includes(`Source ${p.sourceCredit}.`));
+        } else assert.ok(text?.includes(String(p.sourceUrl)), 'Data source link missing');
       } else if (!p.posted) {
         assert.equal(p.captionStyle, 'concise-v1');
         validateConciseBufferCaption(text);
@@ -147,10 +166,13 @@ test('all captions fit their platform and retain their declared caption format',
   }
 });
 
-test('second batch has 88 matched queue entries per requested platform and two editorial holds', () => {
+test('second batch covers all eleven platforms with 88 entries and two editorial holds', () => {
   const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/viz-batch2-assets/manifest.json'), 'utf8'));
   assert.equal(manifest.totalProduced, 90);
   assert.equal(manifest.queuedPerPlatform, 88);
+  assert.deepEqual([...manifest.platforms].sort(), Object.keys(LIMITS).sort());
+  const blockedPlatforms = new Set(Object.keys(manifest.blockedPlatforms || {}));
+  assert.ok([...blockedPlatforms].every(platform => manifest.platforms.includes(platform)));
   assert.deepEqual(Object.keys(manifest.holds).sort(), ['bank-atms', 'secure-servers']);
   assert.equal(new Set(manifest.videos.map((v: any) => v.indicator)).size, 90);
   const queued = manifest.videos.filter((v: any) => v.status === 'queued');
@@ -160,7 +182,8 @@ test('second batch has 88 matched queue entries per requested platform and two e
     assert.equal(digest, asset.videoSha256, `Media changed for ${asset.slug}`);
   }
   let schedule: unknown;
-  for (const platform of ['youtube', 'instagram', 'tiktok', 'linkedin']) {
+  const captionsBySlug = new Map<string, Set<string>>();
+  for (const platform of manifest.platforms) {
     const posts = readQueue(path.join(ROOT, 'scripts', `viz-${platform}-posts.json`)).filter(p => p.batchId === manifest.batchId);
     assert.equal(posts.length, 88);
     assert.equal(posts[0].slug, 'coffee');
@@ -169,6 +192,17 @@ test('second batch has 88 matched queue entries per requested platform and two e
     const current = posts.map(p => [p.slug, p.scheduleDate, p.scheduleTime]);
     if (schedule) assert.deepEqual(current, schedule);
     else schedule = current;
+    for (const p of posts) {
+      const texts = captionsBySlug.get(String(p.slug)) || new Set<string>();
+      texts.add(String(platform === 'youtube' ? p.description : p.text));
+      captionsBySlug.set(String(p.slug), texts);
+      if (!p.posted) assert.equal(p.paused === true, blockedPlatforms.has(platform));
+    }
+  }
+  assert.ok([...captionsBySlug.values()].every(texts => texts.size === 11), 'Each platform needs adapted copy');
+  for (const platform of ['x', 'threads']) {
+    const legacyPending = readQueue(path.join(ROOT, 'scripts', `viz-${platform}-posts.json`)).filter(p => !p.batchId && !p.posted);
+    assert.ok(legacyPending.every(p => p.paused === true), 'Older topics must not replay on reconnection');
   }
 });
 
@@ -285,11 +319,13 @@ test('Mastodon waits for processed media and uses multipart video + idempotent s
     if (requests.length === 2) return Response.json({ id: 'media', url: 'https://cdn.example/video.mp4' });
     assert.deepEqual(JSON.parse(String(init.body)).media_ids, ['media']);
     assert.equal((init.headers as Record<string, string>)['Idempotency-Key'], 'viz-test');
-    return Response.json({ id: 'status' });
+    return Response.json({ id: 'status', url: 'https://mastodon.example/@vedangvatsa/status' });
   };
   try {
     const media = await uploadMedia(path.join(ROOT, 'scripts/viz-assets/videos/01-population-2000-2024.mp4'), 'Population');
-    assert.equal(await postStatus('Population', media, 'viz-test'), 'status');
+    let receipt: { id: string; url?: string } | undefined;
+    assert.equal(await postStatus('Population', media, 'viz-test', post => { receipt = post; }), 'status');
+    assert.equal(receipt?.url, 'https://mastodon.example/@vedangvatsa/status');
     assert.equal(requests.length, 3);
     assert.ok(requests[1].url.endsWith('/api/v1/media/media'));
   } finally { globalThis.fetch = original; }

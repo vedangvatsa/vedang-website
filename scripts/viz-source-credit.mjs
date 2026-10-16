@@ -12,6 +12,11 @@ export function sourceCredit(metadata) {
   add(/Food and Agriculture Organization|\bFAO\b|FAOSTAT/, 'FAO');
   add(/World Health Organization|\bWHO\b/, 'WHO');
   add(/UNESCO|UN Educational, Scientific and Cultural Organization/, 'UNESCO');
+  add(/Inter-Parliamentary Union|\bIPU\b/, 'IPU');
+  add(/National Science Foundation|\bNSF\b/, 'NSF');
+  add(/Institute for Health Metrics and Evaluation|\bIHME\b/, 'IHME');
+  add(/UNAIDS|Joint United Nations Programme on HIV/, 'UNAIDS');
+  add(/Netcraft/, 'Netcraft');
   add(/World Intellectual Property Organization|\bWIPO\b/, 'WIPO');
   add(/International Monetary Fund|\bIMF\b/, 'IMF');
   add(/International Energy Agency|\bIEA\b/, 'IEA');

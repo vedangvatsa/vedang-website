@@ -7,7 +7,14 @@
     "youtube",
     "instagram",
     "tiktok",
-    "linkedin"
+    "linkedin",
+    "facebook",
+    "threads",
+    "bluesky",
+    "x",
+    "tumblr",
+    "mastodon",
+    "farcaster"
   ],
   "timezone": "Asia/Kolkata",
   "slots": [
@@ -42,7 +49,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/51-women-parliament-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/women-parliament.png",
-      "notesUrl": "https://veda.ng/viz-notes/51.txt"
+      "notesUrl": "https://veda.ng/viz-notes/51.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Parliament seats held by women (%)",
+      "indicatorName": "Proportion of seats held by women in national parliaments (%)",
+      "sourceDataSha256": "eb3611ebed74a132e37f6800d11318b63d865b047fd0ed5fda65eeda84cfde57"
     },
     {
       "slug": "bank-atms",
@@ -72,7 +84,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/53-tertiary-enrolment-2001-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/tertiary-enrolment.png",
-      "notesUrl": "https://veda.ng/viz-notes/53.txt"
+      "notesUrl": "https://veda.ng/viz-notes/53.txt",
+      "startYear": 2001,
+      "endYear": 2023,
+      "measure": "Tertiary enrolment (gross %)",
+      "indicatorName": "School enrollment, tertiary (% gross)",
+      "sourceDataSha256": "2657dba7bd38ab3bd2e6ccaddba5a56159788c480239f681063c34bc8fbb9166"
     },
     {
       "slug": "primary-teachers",
@@ -88,7 +105,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/54-primary-teachers-2000-2017.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/primary-teachers.png",
-      "notesUrl": "https://veda.ng/viz-notes/54.txt"
+      "notesUrl": "https://veda.ng/viz-notes/54.txt",
+      "startYear": 2000,
+      "endYear": 2017,
+      "measure": "Primary pupils per teacher",
+      "indicatorName": "Pupil-teacher ratio, primary",
+      "sourceDataSha256": "2e2050f2e77037455c7936ea4e05a120d6bbb8099f2001da5e35551605c05b1f"
     },
     {
       "slug": "private-credit",
@@ -104,7 +126,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/55-private-credit-2001-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/private-credit.png",
-      "notesUrl": "https://veda.ng/viz-notes/55.txt"
+      "notesUrl": "https://veda.ng/viz-notes/55.txt",
+      "startYear": 2001,
+      "endYear": 2024,
+      "measure": "Private-sector credit (% GDP)",
+      "indicatorName": "Domestic credit to private sector (% of GDP)",
+      "sourceDataSha256": "cd837f74e23ac3ffbd87bdaae93bc33d3f5cd1766d8e21883931e06144089b7a"
     },
     {
       "slug": "electricity-use",
@@ -120,7 +147,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/56-electricity-use-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/electricity-use.png",
-      "notesUrl": "https://veda.ng/viz-notes/56.txt"
+      "notesUrl": "https://veda.ng/viz-notes/56.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Electricity use (MWh per person)",
+      "indicatorName": "Electric power consumption (kWh per capita)",
+      "sourceDataSha256": "27db1e84171e726cded34293c8b930d31017b4f312832d597d55b2dae4412873"
     },
     {
       "slug": "undernourishment",
@@ -136,7 +168,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/57-undernourishment-2001-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/undernourishment.png",
-      "notesUrl": "https://veda.ng/viz-notes/57.txt"
+      "notesUrl": "https://veda.ng/viz-notes/57.txt",
+      "startYear": 2001,
+      "endYear": 2024,
+      "measure": "Prevalence of undernourishment (%)",
+      "indicatorName": "Prevalence of undernourishment (% of population)",
+      "sourceDataSha256": "61a3c48425e4d0f65d97c802ed513e16988c439b0bacad0191de5d9c7014ef57"
     },
     {
       "slug": "air-pollution",
@@ -152,7 +189,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/58-air-pollution-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/air-pollution.png",
-      "notesUrl": "https://veda.ng/viz-notes/58.txt"
+      "notesUrl": "https://veda.ng/viz-notes/58.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Population-weighted PM2.5 (µg/m³)",
+      "indicatorName": "PM2.5 air pollution, mean annual exposure (micrograms per cubic meter)",
+      "sourceDataSha256": "6709d8782dd2501283a04769cadc4198526479623a0bed870a5d1546ef70eefc"
     },
     {
       "slug": "food-output",
@@ -168,7 +210,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/59-food-output-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/food-output.png",
-      "notesUrl": "https://veda.ng/viz-notes/59.txt"
+      "notesUrl": "https://veda.ng/viz-notes/59.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Food production index (2014-16 = 100)",
+      "indicatorName": "Food production index (2014-2016 = 100)",
+      "sourceDataSha256": "e5f3afd3da4a49ba9808bba74e701cac7bedeb38937f52af2744b3b359f7591f"
     },
     {
       "slug": "science-papers",
@@ -184,7 +231,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/60-science-papers-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/science-papers.png",
-      "notesUrl": "https://veda.ng/viz-notes/60.txt"
+      "notesUrl": "https://veda.ng/viz-notes/60.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Scientific articles (thousands)",
+      "indicatorName": "Scientific and technical journal articles",
+      "sourceDataSha256": "d7212aae7955989764dcf5ee8ad03f35e829aec99aca75c240902bbeaa10c3a8"
     },
     {
       "slug": "primary-completion",
@@ -200,7 +252,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/61-primary-completion-2001-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/primary-completion.png",
-      "notesUrl": "https://veda.ng/viz-notes/61.txt"
+      "notesUrl": "https://veda.ng/viz-notes/61.txt",
+      "startYear": 2001,
+      "endYear": 2024,
+      "measure": "Primary completion (gross %)",
+      "indicatorName": "Primary completion rate, total (% of relevant age group)",
+      "sourceDataSha256": "40bdb76014568fb35052ceb557f5896f41e0c428a973dcd956ef6e25d8399573"
     },
     {
       "slug": "landline-phones",
@@ -216,7 +273,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/62-landline-phones-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/landline-phones.png",
-      "notesUrl": "https://veda.ng/viz-notes/62.txt"
+      "notesUrl": "https://veda.ng/viz-notes/62.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Fixed phone subscriptions (millions)",
+      "indicatorName": "Fixed telephone subscriptions",
+      "sourceDataSha256": "e6e816ab9fc024373ab73e525d793fb1dbab981bdfb7e5a2c40c935e5e3312f8"
     },
     {
       "slug": "public-consumption",
@@ -232,7 +294,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/63-public-consumption-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/public-consumption.png",
-      "notesUrl": "https://veda.ng/viz-notes/63.txt"
+      "notesUrl": "https://veda.ng/viz-notes/63.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Government consumption (% GDP)",
+      "indicatorName": "General government final consumption expenditure (% of GDP)",
+      "sourceDataSha256": "75dc6146589e7197b9cf4725c2171f518599799a37b9b028301c4b191cc05958"
     },
     {
       "slug": "household-consumption",
@@ -248,7 +315,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/64-household-consumption-2002-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/household-consumption.png",
-      "notesUrl": "https://veda.ng/viz-notes/64.txt"
+      "notesUrl": "https://veda.ng/viz-notes/64.txt",
+      "startYear": 2002,
+      "endYear": 2024,
+      "measure": "Consumption per person (2015 US$ k)",
+      "indicatorName": "Households and NPISHs Final consumption expenditure per capita (constant 2015 US$)",
+      "sourceDataSha256": "5f55fbf2f55024504411b19137db2d4032796009aab0d1eb26696bd457e64be7"
     },
     {
       "slug": "out-of-pocket-health",
@@ -264,7 +336,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/65-out-of-pocket-health-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/out-of-pocket-health.png",
-      "notesUrl": "https://veda.ng/viz-notes/65.txt"
+      "notesUrl": "https://veda.ng/viz-notes/65.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Out-of-pocket share of health costs (%)",
+      "indicatorName": "Out-of-pocket expenditure (% of current health expenditure)",
+      "sourceDataSha256": "5949665f0f207e6eadeb30138eb35c8d86cb9fb5836c1c1c19c983be1526c28a"
     },
     {
       "slug": "tuberculosis",
@@ -280,7 +357,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/66-tuberculosis-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/tuberculosis.png",
-      "notesUrl": "https://veda.ng/viz-notes/66.txt"
+      "notesUrl": "https://veda.ng/viz-notes/66.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Estimated new TB cases per 100,000",
+      "indicatorName": "Incidence of tuberculosis (per 100,000 people)",
+      "sourceDataSha256": "5cd1171949d4ebae35954c9547a5400c54c950d61811a81d20837bf3f5ea4a4f"
     },
     {
       "slug": "hiv-prevalence",
@@ -296,7 +378,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/67-hiv-prevalence-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/hiv-prevalence.png",
-      "notesUrl": "https://veda.ng/viz-notes/67.txt"
+      "notesUrl": "https://veda.ng/viz-notes/67.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "People ages 15-49 living with HIV (%)",
+      "indicatorName": "Prevalence of HIV, total (% of population ages 15-49)",
+      "sourceDataSha256": "6e8c76a41d0e44e8b7d522b3e95f0494a916740152b58268076df9ebf0d7abe7"
     },
     {
       "slug": "nonperforming-loans",
@@ -312,7 +399,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/68-nonperforming-loans-2011-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/nonperforming-loans.png",
-      "notesUrl": "https://veda.ng/viz-notes/68.txt"
+      "notesUrl": "https://veda.ng/viz-notes/68.txt",
+      "startYear": 2011,
+      "endYear": 2024,
+      "measure": "Nonperforming loans (% gross loans)",
+      "indicatorName": "Bank nonperforming loans to total gross loans (%)",
+      "sourceDataSha256": "09cacd39dd836dd2c6b12c312912469a7a536de082c4f49515793364919fea42"
     },
     {
       "slug": "secure-servers",
@@ -342,7 +434,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/70-coffee-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/coffee.png",
-      "notesUrl": "https://veda.ng/viz-notes/70.txt"
+      "notesUrl": "https://veda.ng/viz-notes/70.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Coffee, green production (tonnes)",
+      "sourceDataSha256": "f8f05bbd08452e6d35d594c81bbb8c7667ecef0d77bbac654a8ffab2395c85c7"
     },
     {
       "slug": "cocoa",
@@ -358,7 +455,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/71-cocoa-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cocoa.png",
-      "notesUrl": "https://veda.ng/viz-notes/71.txt"
+      "notesUrl": "https://veda.ng/viz-notes/71.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Cocoa beans production (tonnes)",
+      "sourceDataSha256": "8fcb1e40fbe1c5e959c14f34eee1b54ae83151f2ea07b22bfb81c75c715510ab"
     },
     {
       "slug": "honey",
@@ -374,7 +476,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/72-honey-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/honey.png",
-      "notesUrl": "https://veda.ng/viz-notes/72.txt"
+      "notesUrl": "https://veda.ng/viz-notes/72.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Natural honey production (tonnes)",
+      "sourceDataSha256": "1be6f957b5e0c5f4e6d3175975f3d0fca749f89df9ffd73eea0e4f23cd2e9b3f"
     },
     {
       "slug": "natural-rubber",
@@ -390,7 +497,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/73-natural-rubber-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/natural-rubber.png",
-      "notesUrl": "https://veda.ng/viz-notes/73.txt"
+      "notesUrl": "https://veda.ng/viz-notes/73.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Natural rubber in primary forms production (tonnes)",
+      "sourceDataSha256": "5fbbbc66175b63b087f799addcf4a68b1d698c91f60a1f5eac44b51427d6d8a1"
     },
     {
       "slug": "cotton-lint",
@@ -406,7 +518,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/74-cotton-lint-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cotton-lint.png",
-      "notesUrl": "https://veda.ng/viz-notes/74.txt"
+      "notesUrl": "https://veda.ng/viz-notes/74.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Cotton lint, ginned production (tonnes)",
+      "sourceDataSha256": "70307825e624ba4a4582910c614cab5f23dc58dd9f58002560d01629eb853378"
     },
     {
       "slug": "wine",
@@ -422,7 +539,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/75-wine-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/wine.png",
-      "notesUrl": "https://veda.ng/viz-notes/75.txt"
+      "notesUrl": "https://veda.ng/viz-notes/75.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Wine production (tonnes)",
+      "sourceDataSha256": "16ed4f0d2d2efa18b120eb1e393e08523b899870ef12b7e4b52b015bfebd7841"
     },
     {
       "slug": "beer",
@@ -438,7 +560,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/76-beer-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/beer.png",
-      "notesUrl": "https://veda.ng/viz-notes/76.txt"
+      "notesUrl": "https://veda.ng/viz-notes/76.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Beer of barley, malted production (tonnes)",
+      "sourceDataSha256": "f899d699142228f7ca07a2e9de186a7d5f0818b7c3702c85b410c6a97d885d27"
     },
     {
       "slug": "bananas",
@@ -454,7 +581,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/77-bananas-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/bananas.png",
-      "notesUrl": "https://veda.ng/viz-notes/77.txt"
+      "notesUrl": "https://veda.ng/viz-notes/77.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Bananas production (tonnes)",
+      "sourceDataSha256": "170fdc23ba2810a87c77595bfda3827efaa05cac9f5c9033fb77f689c8463f84"
     },
     {
       "slug": "pineapples",
@@ -470,7 +602,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/78-pineapples-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/pineapples.png",
-      "notesUrl": "https://veda.ng/viz-notes/78.txt"
+      "notesUrl": "https://veda.ng/viz-notes/78.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Pineapples production (tonnes)",
+      "sourceDataSha256": "39cd67c8e615d2fe8286cc7bba4f46b90ba0296573752b63bb319bc209ecfe96"
     },
     {
       "slug": "strawberries",
@@ -486,7 +623,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/79-strawberries-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/strawberries.png",
-      "notesUrl": "https://veda.ng/viz-notes/79.txt"
+      "notesUrl": "https://veda.ng/viz-notes/79.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Strawberries production (tonnes)",
+      "sourceDataSha256": "0adc387d537f230249804539166664fb15aa004a360437d397f5330537d311ac"
     },
     {
       "slug": "grapes",
@@ -502,7 +644,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/80-grapes-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/grapes.png",
-      "notesUrl": "https://veda.ng/viz-notes/80.txt"
+      "notesUrl": "https://veda.ng/viz-notes/80.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Grapes production (tonnes)",
+      "sourceDataSha256": "7814a889387ae138d6bbc89c9a641df63ac7abf9dfe43f6a97f41394453d3292"
     },
     {
       "slug": "oranges",
@@ -518,7 +665,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/81-oranges-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/oranges.png",
-      "notesUrl": "https://veda.ng/viz-notes/81.txt"
+      "notesUrl": "https://veda.ng/viz-notes/81.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Oranges production (tonnes)",
+      "sourceDataSha256": "f617b138e2a519e7d3ef78f3ebb40122bf7b6c4f7d06d2ecf52dd51d7ff55f42"
     },
     {
       "slug": "lemons-limes",
@@ -534,7 +686,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/82-lemons-limes-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/lemons-limes.png",
-      "notesUrl": "https://veda.ng/viz-notes/82.txt"
+      "notesUrl": "https://veda.ng/viz-notes/82.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Lemons & limes (million t)",
+      "indicatorName": "Lemons and limes production (tonnes)",
+      "sourceDataSha256": "9ae591adb75bb5953724463a4fd27384da89014d80ac0073043252b646fb4b74"
     },
     {
       "slug": "mango-family",
@@ -550,7 +707,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/83-mango-family-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/mango-family.png",
-      "notesUrl": "https://veda.ng/viz-notes/83.txt"
+      "notesUrl": "https://veda.ng/viz-notes/83.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Mangoes, guavas & mangosteens (million t)",
+      "indicatorName": "Mangoes, guavas and mangosteens production (tonnes)",
+      "sourceDataSha256": "b59fc2099f4c7a52b3af28385b031f85e5348255079af60784b3a9d7770664b5"
     },
     {
       "slug": "apricots",
@@ -566,7 +728,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/84-apricots-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/apricots.png",
-      "notesUrl": "https://veda.ng/viz-notes/84.txt"
+      "notesUrl": "https://veda.ng/viz-notes/84.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Apricots production (tonnes)",
+      "sourceDataSha256": "d2ab936b81b9b19d151f2312661cf0cbe07c4d635eebc574db3af8dcdb441d8c"
     },
     {
       "slug": "dates",
@@ -582,7 +749,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/85-dates-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/dates.png",
-      "notesUrl": "https://veda.ng/viz-notes/85.txt"
+      "notesUrl": "https://veda.ng/viz-notes/85.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Dates production (tonnes)",
+      "sourceDataSha256": "2667931ce682201d607027ea2595ebd77f4c06b0de4a1cc27ac6d685935ea7ea"
     },
     {
       "slug": "cherries",
@@ -598,7 +770,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/86-cherries-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cherries.png",
-      "notesUrl": "https://veda.ng/viz-notes/86.txt"
+      "notesUrl": "https://veda.ng/viz-notes/86.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Cherries production (tonnes)",
+      "sourceDataSha256": "e636bd62ee93828cd6d0fef3b48415243dd3df39d2094b05ec42499bc764bd57"
     },
     {
       "slug": "papayas",
@@ -614,7 +791,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/87-papayas-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/papayas.png",
-      "notesUrl": "https://veda.ng/viz-notes/87.txt"
+      "notesUrl": "https://veda.ng/viz-notes/87.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Papayas production (tonnes)",
+      "sourceDataSha256": "10c6cb9239536cbc5f4373d5056c51866c8b08f89423dd0397f9410c4983c3e4"
     },
     {
       "slug": "coconuts",
@@ -630,7 +812,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/88-coconuts-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/coconuts.png",
-      "notesUrl": "https://veda.ng/viz-notes/88.txt"
+      "notesUrl": "https://veda.ng/viz-notes/88.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Coconuts, in shell production (tonnes)",
+      "sourceDataSha256": "fd3777b154624286cf39bb39e7de0c7b8f9192a132f6623eaf772d9affd44e67"
     },
     {
       "slug": "walnuts",
@@ -646,7 +833,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/89-walnuts-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/walnuts.png",
-      "notesUrl": "https://veda.ng/viz-notes/89.txt"
+      "notesUrl": "https://veda.ng/viz-notes/89.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Walnuts, in shell production (tonnes)",
+      "sourceDataSha256": "5ca874699a4437e22eed3aa56b20c88bd955b4a334c08390a0a281d3a246df2a"
     },
     {
       "slug": "pistachios",
@@ -662,7 +854,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/90-pistachios-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/pistachios.png",
-      "notesUrl": "https://veda.ng/viz-notes/90.txt"
+      "notesUrl": "https://veda.ng/viz-notes/90.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Pistachios, in shell production (tonnes)",
+      "sourceDataSha256": "1b449a204406f2ed3e9b7a9b08ea7356b138c970c2af3e6ac2b3c05ae93284e3"
     },
     {
       "slug": "cashews",
@@ -678,7 +875,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/91-cashews-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cashews.png",
-      "notesUrl": "https://veda.ng/viz-notes/91.txt"
+      "notesUrl": "https://veda.ng/viz-notes/91.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Cashew nuts, in shell production (tonnes)",
+      "sourceDataSha256": "896ee4fab10406c6713a911136b3ba37b6e9207c81999d365dc1305e4c6d4f09"
     },
     {
       "slug": "soybeans",
@@ -694,7 +896,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/92-soybeans-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/soybeans.png",
-      "notesUrl": "https://veda.ng/viz-notes/92.txt"
+      "notesUrl": "https://veda.ng/viz-notes/92.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Soya beans production (tonnes)",
+      "sourceDataSha256": "0c86678d99e7a64e6f151c43e147ab91a7a76b76144c2d56bdeaf438c57af7e8"
     },
     {
       "slug": "peanuts",
@@ -710,7 +917,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/93-peanuts-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/peanuts.png",
-      "notesUrl": "https://veda.ng/viz-notes/93.txt"
+      "notesUrl": "https://veda.ng/viz-notes/93.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Groundnuts, excluding shelled production (tonnes)",
+      "sourceDataSha256": "53ec0306f0c87befd437cc9c8f05d7bfc33f2d0070c7e211760b4465bcafd064"
     },
     {
       "slug": "dry-beans",
@@ -726,7 +938,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/94-dry-beans-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/dry-beans.png",
-      "notesUrl": "https://veda.ng/viz-notes/94.txt"
+      "notesUrl": "https://veda.ng/viz-notes/94.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Beans, dry production (tonnes)",
+      "sourceDataSha256": "ecbcc84f3fc44ae7d200afde109885b4b2cb058a16eacfc8720f0264176e4e8c"
     },
     {
       "slug": "dry-peas",
@@ -742,7 +959,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/95-dry-peas-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/dry-peas.png",
-      "notesUrl": "https://veda.ng/viz-notes/95.txt"
+      "notesUrl": "https://veda.ng/viz-notes/95.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Peas, dry production (tonnes)",
+      "sourceDataSha256": "11313fb41886b6786c17875afa92d9ae6050884af9deb6eb11a6a5e73c93a89d"
     },
     {
       "slug": "sesame",
@@ -758,7 +980,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/96-sesame-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/sesame.png",
-      "notesUrl": "https://veda.ng/viz-notes/96.txt"
+      "notesUrl": "https://veda.ng/viz-notes/96.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Sesame seed production (tonnes)",
+      "sourceDataSha256": "e536fb10e002267ac0fb3251b661e2be723378a1835d8a26622efedd29f54037"
     },
     {
       "slug": "rapeseed",
@@ -774,7 +1001,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/97-rapeseed-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/rapeseed.png",
-      "notesUrl": "https://veda.ng/viz-notes/97.txt"
+      "notesUrl": "https://veda.ng/viz-notes/97.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Rape or colza seed production (tonnes)",
+      "sourceDataSha256": "b87e1ac35aa19787251bba43b2c6c0f00097d12e181d753a72dbc9bb1e1210df"
     },
     {
       "slug": "sunflower-seeds",
@@ -790,7 +1022,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/98-sunflower-seeds-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/sunflower-seeds.png",
-      "notesUrl": "https://veda.ng/viz-notes/98.txt"
+      "notesUrl": "https://veda.ng/viz-notes/98.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Sunflower seed production (tonnes)",
+      "sourceDataSha256": "496b97acea02df80b7f8a0b52d32049a633f6e41feb30a99b535f72810a2647f"
     },
     {
       "slug": "potatoes",
@@ -806,7 +1043,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/99-potatoes-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/potatoes.png",
-      "notesUrl": "https://veda.ng/viz-notes/99.txt"
+      "notesUrl": "https://veda.ng/viz-notes/99.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Potatoes production (tonnes)",
+      "sourceDataSha256": "e5924771e4cb57ee3c3ccd364f233fc337599755cd9a178d4a7a5da674ad2166"
     },
     {
       "slug": "cassava",
@@ -822,7 +1064,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/100-cassava-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cassava.png",
-      "notesUrl": "https://veda.ng/viz-notes/100.txt"
+      "notesUrl": "https://veda.ng/viz-notes/100.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Cassava, fresh production (tonnes)",
+      "sourceDataSha256": "1af86699c24af4030e97a7daf99732afb13de67479a9b202d7185719bf91c42b"
     },
     {
       "slug": "tomatoes",
@@ -838,7 +1085,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/101-tomatoes-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/tomatoes.png",
-      "notesUrl": "https://veda.ng/viz-notes/101.txt"
+      "notesUrl": "https://veda.ng/viz-notes/101.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Tomatoes production (tonnes)",
+      "sourceDataSha256": "fe66293e270ba30ab678a3095920a4acbad18c66625fcf9e685bd3b8bf8777a8"
     },
     {
       "slug": "dry-onions",
@@ -854,7 +1106,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/102-dry-onions-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/dry-onions.png",
-      "notesUrl": "https://veda.ng/viz-notes/102.txt"
+      "notesUrl": "https://veda.ng/viz-notes/102.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Dry onions & shallots (million t)",
+      "indicatorName": "Onions and shallots, dry (excluding dehydrated) production (tonnes)",
+      "sourceDataSha256": "62d587662498bab1824e33243d9e90f253f02d197f1acd90a6bcf59323730d5c"
     },
     {
       "slug": "broccoli-family",
@@ -870,7 +1127,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/103-broccoli-family-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/broccoli-family.png",
-      "notesUrl": "https://veda.ng/viz-notes/103.txt"
+      "notesUrl": "https://veda.ng/viz-notes/103.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Cauliflower & broccoli (million t)",
+      "indicatorName": "Cauliflowers and broccoli production (tonnes)",
+      "sourceDataSha256": "6b414688e3fbda225607945ee29fb94831050d8f94d4dd804d7ed54e2f619839"
     },
     {
       "slug": "pumpkins",
@@ -886,7 +1148,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/104-pumpkins-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/pumpkins.png",
-      "notesUrl": "https://veda.ng/viz-notes/104.txt"
+      "notesUrl": "https://veda.ng/viz-notes/104.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Pumpkins, squash & gourds (million t)",
+      "indicatorName": "Pumpkins, squash and gourds production (tonnes)",
+      "sourceDataSha256": "14a7ae32adce400eb152d72d0347bd849eb36c43f5dc948aad1d2b9887581410"
     },
     {
       "slug": "sugarcane",
@@ -902,7 +1169,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/105-sugarcane-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/sugarcane.png",
-      "notesUrl": "https://veda.ng/viz-notes/105.txt"
+      "notesUrl": "https://veda.ng/viz-notes/105.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Sugar cane production (tonnes)",
+      "sourceDataSha256": "62c2d9f892009e8f7990d5684e9f04443f227cfca34cc9561c52f3e62a59f8ae"
     },
     {
       "slug": "sugar-beet",
@@ -918,7 +1190,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/106-sugar-beet-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/sugar-beet.png",
-      "notesUrl": "https://veda.ng/viz-notes/106.txt"
+      "notesUrl": "https://veda.ng/viz-notes/106.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Sugar beet production (tonnes)",
+      "sourceDataSha256": "882ccc182018de1698961b61d7784e93e610f20d4c31b20ea30816057175b458"
     },
     {
       "slug": "ginger",
@@ -934,7 +1211,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/107-ginger-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/ginger.png",
-      "notesUrl": "https://veda.ng/viz-notes/107.txt"
+      "notesUrl": "https://veda.ng/viz-notes/107.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Ginger, raw production (tonnes)",
+      "sourceDataSha256": "e17903fdfb2bbfc2b2545dc7617cd45d567f008e5ab9091a3a0894e37ee1677d"
     },
     {
       "slug": "peppercorns",
@@ -950,7 +1232,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/108-peppercorns-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/peppercorns.png",
-      "notesUrl": "https://veda.ng/viz-notes/108.txt"
+      "notesUrl": "https://veda.ng/viz-notes/108.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Pepper (Piper spp.), raw production (tonnes)",
+      "sourceDataSha256": "a42a4df79ad1bfa31a4851669b12209b169a798679bf3010be83b38d5b713a1f"
     },
     {
       "slug": "hops",
@@ -966,7 +1253,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/109-hops-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/hops.png",
-      "notesUrl": "https://veda.ng/viz-notes/109.txt"
+      "notesUrl": "https://veda.ng/viz-notes/109.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Hop cones production (tonnes)",
+      "sourceDataSha256": "9aa77116cc56c5e23ab950e2b9571fe002f818be17a17caa9375821310ee1254"
     },
     {
       "slug": "wool",
@@ -982,7 +1274,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/110-wool-2000-2017.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/wool.png",
-      "notesUrl": "https://veda.ng/viz-notes/110.txt"
+      "notesUrl": "https://veda.ng/viz-notes/110.txt",
+      "startYear": 2000,
+      "endYear": 2017,
+      "measure": "Greasy shorn wool (thousand t)",
+      "indicatorName": "Shorn wool, greasy, including fleece-washed shorn wool production (tonnes)",
+      "sourceDataSha256": "83ebcfb4a453ac11b28ed79dbb5b3aa9762b9f32dce131bafa2fd42a175fad2b"
     },
     {
       "slug": "sisal",
@@ -998,7 +1295,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/111-sisal-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/sisal.png",
-      "notesUrl": "https://veda.ng/viz-notes/111.txt"
+      "notesUrl": "https://veda.ng/viz-notes/111.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Sisal, raw production (tonnes)",
+      "sourceDataSha256": "b8906efdef6f217aae562e9beb44c0aa65dfcfa1c786257f991e89685fa38b15"
     },
     {
       "slug": "goat-meat",
@@ -1014,7 +1316,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/112-goat-meat-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/goat-meat.png",
-      "notesUrl": "https://veda.ng/viz-notes/112.txt"
+      "notesUrl": "https://veda.ng/viz-notes/112.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Meat of goat, fresh or chilled production (tonnes)",
+      "sourceDataSha256": "c0b7d4475bbf6223ee0732946bfa88b783b95f867d653b09649fbb19d78eeace"
     },
     {
       "slug": "sheep-meat",
@@ -1030,7 +1337,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/113-sheep-meat-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/sheep-meat.png",
-      "notesUrl": "https://veda.ng/viz-notes/113.txt"
+      "notesUrl": "https://veda.ng/viz-notes/113.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Meat of sheep, fresh or chilled production (tonnes)",
+      "sourceDataSha256": "e2f0c8b539f33c90d431684a256eca46d38d73bf0bcdc4138d3b1c00fc3ef7a1"
     },
     {
       "slug": "cheese",
@@ -1046,7 +1358,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/114-cheese-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cheese.png",
-      "notesUrl": "https://veda.ng/viz-notes/114.txt"
+      "notesUrl": "https://veda.ng/viz-notes/114.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Cheese (All Kinds) production (tonnes)",
+      "sourceDataSha256": "36077fcf09973391d992b0438618a7ce992dda60f71918e7f44805b368c40268"
     },
     {
       "slug": "yoghurt",
@@ -1062,7 +1379,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/115-yoghurt-2010-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/yoghurt.png",
-      "notesUrl": "https://veda.ng/viz-notes/115.txt"
+      "notesUrl": "https://veda.ng/viz-notes/115.txt",
+      "startYear": 2010,
+      "endYear": 2023,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Yoghurt production (tonnes)",
+      "sourceDataSha256": "244ecd2e11c33d4c2232957d3c4277d118c1bea221c7ab843b3d2619b84220c2"
     },
     {
       "slug": "raspberries",
@@ -1078,7 +1400,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/116-raspberries-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/raspberries.png",
-      "notesUrl": "https://veda.ng/viz-notes/116.txt"
+      "notesUrl": "https://veda.ng/viz-notes/116.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Raspberries production (tonnes)",
+      "sourceDataSha256": "8a6cb7a93ace2ec5600b6feee90461032af8af840a4e857ea2f502a08d7d92e2"
     },
     {
       "slug": "quinces",
@@ -1094,7 +1421,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/117-quinces-2000-2017.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/quinces.png",
-      "notesUrl": "https://veda.ng/viz-notes/117.txt"
+      "notesUrl": "https://veda.ng/viz-notes/117.txt",
+      "startYear": 2000,
+      "endYear": 2017,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Quinces production (tonnes)",
+      "sourceDataSha256": "ae3baaabb9bf815f5b7b11c4235754fa3e27c4449dcad2ccba19aba403b7220c"
     },
     {
       "slug": "grapefruit-family",
@@ -1110,7 +1442,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/118-grapefruit-family-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/grapefruit-family.png",
-      "notesUrl": "https://veda.ng/viz-notes/118.txt"
+      "notesUrl": "https://veda.ng/viz-notes/118.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Pomelos & grapefruits (million t)",
+      "indicatorName": "Pomelos and grapefruits production (tonnes)",
+      "sourceDataSha256": "17507243c8aad72382eec51b43635a2084086119ce8166638441bf4130cb6bae"
     },
     {
       "slug": "linseed",
@@ -1126,7 +1463,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/119-linseed-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/linseed.png",
-      "notesUrl": "https://veda.ng/viz-notes/119.txt"
+      "notesUrl": "https://veda.ng/viz-notes/119.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Linseed production (tonnes)",
+      "sourceDataSha256": "e1df94e4f830ae91d2b1b2d28f1d104bb8659b5fdadaf8b424ae0a9adfa8c98f"
     },
     {
       "slug": "cowpeas",
@@ -1142,7 +1484,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/120-cowpeas-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cowpeas.png",
-      "notesUrl": "https://veda.ng/viz-notes/120.txt"
+      "notesUrl": "https://veda.ng/viz-notes/120.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Cow peas, dry production (tonnes)",
+      "sourceDataSha256": "3a39afc2e2282c915fe7af0230bc53222b00fc227d2a3f0ed88c6c36375692c2"
     },
     {
       "slug": "broad-beans",
@@ -1158,7 +1505,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/121-broad-beans-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/broad-beans.png",
-      "notesUrl": "https://veda.ng/viz-notes/121.txt"
+      "notesUrl": "https://veda.ng/viz-notes/121.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Broad beans and horse beans, dry production (tonnes)",
+      "sourceDataSha256": "64bf05cddc4b0d790aae55ccb3c5a905f3fdfda1aa78e7da3bebacd88e0362cb"
     },
     {
       "slug": "taro",
@@ -1174,7 +1526,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/122-taro-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/taro.png",
-      "notesUrl": "https://veda.ng/viz-notes/122.txt"
+      "notesUrl": "https://veda.ng/viz-notes/122.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Taro production (tonnes)",
+      "sourceDataSha256": "50b7b130668c115bfabe50687811533ac3941b6c2d2549091c671dc67e7f9f71"
     },
     {
       "slug": "leeks",
@@ -1190,7 +1547,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/123-leeks-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/leeks.png",
-      "notesUrl": "https://veda.ng/viz-notes/123.txt"
+      "notesUrl": "https://veda.ng/viz-notes/123.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Leeks and other alliaceous vegetables production (tonnes)",
+      "sourceDataSha256": "35ac7fb8d877acbfa0e9d86a758b165d83e5882d1859f6cb9b4cf3827cd6fd3c"
     },
     {
       "slug": "dried-chillies",
@@ -1206,7 +1568,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/124-dried-chillies-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/dried-chillies.png",
-      "notesUrl": "https://veda.ng/viz-notes/124.txt"
+      "notesUrl": "https://veda.ng/viz-notes/124.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw production (tonnes)",
+      "sourceDataSha256": "01051fdc79e3b5e263d36b4d530128987d15e258889c34f50c09d95e62cbb451"
     },
     {
       "slug": "vanilla",
@@ -1222,7 +1589,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/125-vanilla-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/vanilla.png",
-      "notesUrl": "https://veda.ng/viz-notes/125.txt"
+      "notesUrl": "https://veda.ng/viz-notes/125.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (tonnes)",
+      "indicatorName": "Vanilla, raw production (tonnes)",
+      "sourceDataSha256": "b0b63ad56887031eca662134a3a66be03dda688f7930a38d25287623309370b8"
     },
     {
       "slug": "nutmeg-family",
@@ -1238,7 +1610,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/126-nutmeg-family-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/nutmeg-family.png",
-      "notesUrl": "https://veda.ng/viz-notes/126.txt"
+      "notesUrl": "https://veda.ng/viz-notes/126.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Nutmeg, mace & cardamom (thousand t)",
+      "indicatorName": "Nutmeg, mace, cardamoms, raw production (tonnes)",
+      "sourceDataSha256": "6bedb64b7d931ad886d1ab915f8b43e9f92d73183bf1066b465dca84a8ac06a6"
     },
     {
       "slug": "olive-oil",
@@ -1254,7 +1631,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/127-olive-oil-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/olive-oil.png",
-      "notesUrl": "https://veda.ng/viz-notes/127.txt"
+      "notesUrl": "https://veda.ng/viz-notes/127.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Olive oil production (tonnes)",
+      "sourceDataSha256": "00f094adaacd1c3273204f5eb1e09bb9d392c861810035a18e73a4cdb39ca58b"
     },
     {
       "slug": "palm-oil",
@@ -1270,7 +1652,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/128-palm-oil-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/palm-oil.png",
-      "notesUrl": "https://veda.ng/viz-notes/128.txt"
+      "notesUrl": "https://veda.ng/viz-notes/128.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Palm oil production (tonnes)",
+      "sourceDataSha256": "d55891f01eb1a733b77dfc8ae4cd5b653096d09654dcdc4732f17510885d3898"
     },
     {
       "slug": "camel-meat",
@@ -1286,7 +1673,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/129-camel-meat-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/camel-meat.png",
-      "notesUrl": "https://veda.ng/viz-notes/129.txt"
+      "notesUrl": "https://veda.ng/viz-notes/129.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Meat of camels, fresh or chilled production (tonnes)",
+      "sourceDataSha256": "c5f4e6ceac88f98bc4cad237c95e8a020c28c3d43c05a41f5c9f8f35a884dfa4"
     },
     {
       "slug": "cream",
@@ -1302,7 +1694,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/130-cream-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cream.png",
-      "notesUrl": "https://veda.ng/viz-notes/130.txt"
+      "notesUrl": "https://veda.ng/viz-notes/130.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (thousand tonnes)",
+      "indicatorName": "Cream, fresh production (tonnes)",
+      "sourceDataSha256": "df5556dab5248cfa5eaf9e720128ae09028e9da542b169557a3672543ebac4ce"
     },
     {
       "slug": "milk-powder",
@@ -1318,7 +1715,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/131-milk-powder-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/milk-powder.png",
-      "notesUrl": "https://veda.ng/viz-notes/131.txt"
+      "notesUrl": "https://veda.ng/viz-notes/131.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Whole milk powder production (tonnes)",
+      "sourceDataSha256": "bd874bc2020e135d617b04e809f2002829a08d58c9204f8ce1b10497d26fbe94"
     },
     {
       "slug": "plantains",
@@ -1334,7 +1736,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/132-plantains-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/plantains.png",
-      "notesUrl": "https://veda.ng/viz-notes/132.txt"
+      "notesUrl": "https://veda.ng/viz-notes/132.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Plantains and cooking bananas production (tonnes)",
+      "sourceDataSha256": "68a1aace480eb101e5f083ea467c6b0734814d8d8c480ecb1f741e981323aae1"
     },
     {
       "slug": "tea-leaves",
@@ -1350,7 +1757,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/133-tea-leaves-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/tea-leaves.png",
-      "notesUrl": "https://veda.ng/viz-notes/133.txt"
+      "notesUrl": "https://veda.ng/viz-notes/133.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Tea leaves production (tonnes)",
+      "sourceDataSha256": "ef1d2adb1b14c709a8a18cd24a3cfbfdf11f9c17220f20dffc0eeb1ab87cacd1"
     },
     {
       "slug": "molasses",
@@ -1366,7 +1778,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/134-molasses-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/molasses.png",
-      "notesUrl": "https://veda.ng/viz-notes/134.txt"
+      "notesUrl": "https://veda.ng/viz-notes/134.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Molasses production (tonnes)",
+      "sourceDataSha256": "f18505b04617d373b07beda326b781df1abf7732eb63c31717c4dae5019bdb62"
     },
     {
       "slug": "sheep-milk",
@@ -1382,7 +1799,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/135-sheep-milk-2000-2024.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/sheep-milk.png",
-      "notesUrl": "https://veda.ng/viz-notes/135.txt"
+      "notesUrl": "https://veda.ng/viz-notes/135.txt",
+      "startYear": 2000,
+      "endYear": 2024,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Raw milk of sheep production (tonnes)",
+      "sourceDataSha256": "b04f00106e7ef4820bb256729032239afe496f579758c34491f7566ee08cadbe"
     },
     {
       "slug": "sunflower-oil",
@@ -1398,7 +1820,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/136-sunflower-oil-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/sunflower-oil.png",
-      "notesUrl": "https://veda.ng/viz-notes/136.txt"
+      "notesUrl": "https://veda.ng/viz-notes/136.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Sunflower-seed oil, crude production (tonnes)",
+      "sourceDataSha256": "b3ebd6ef794c3e513f6c62b1e906bd6f2059e56ea90662e6af44269e2f8a5278"
     },
     {
       "slug": "peanut-oil",
@@ -1414,7 +1841,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/137-peanut-oil-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/peanut-oil.png",
-      "notesUrl": "https://veda.ng/viz-notes/137.txt"
+      "notesUrl": "https://veda.ng/viz-notes/137.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Groundnut oil production (tonnes)",
+      "sourceDataSha256": "0cdd3918a0c795b4031d1b5977db6485d0247255da41435f0cff2622a1155255"
     },
     {
       "slug": "rapeseed-oil",
@@ -1430,7 +1862,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/138-rapeseed-oil-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/rapeseed-oil.png",
-      "notesUrl": "https://veda.ng/viz-notes/138.txt"
+      "notesUrl": "https://veda.ng/viz-notes/138.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Rapeseed or canola oil, crude production (tonnes)",
+      "sourceDataSha256": "f842aaac6160478222bdf5b634381bbbc5f747d666bab9574896aff4511ae345"
     },
     {
       "slug": "soybean-oil",
@@ -1446,7 +1883,12 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/139-soybean-oil-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/soybean-oil.png",
-      "notesUrl": "https://veda.ng/viz-notes/139.txt"
+      "notesUrl": "https://veda.ng/viz-notes/139.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Soya bean oil production (tonnes)",
+      "sourceDataSha256": "5961c8dac14d804f7aa857d5f14bb8b88ef0ffe7d1b9d33d5b521b2d72be4ba2"
     },
     {
       "slug": "cottonseed-oil",
@@ -1462,12 +1904,22 @@
       "status": "queued",
       "video": "scripts/viz-batch2-assets/videos/140-cottonseed-oil-2000-2023.mp4",
       "thumbnail": "scripts/viz-batch2-assets/previews/cottonseed-oil.png",
-      "notesUrl": "https://veda.ng/viz-notes/140.txt"
+      "notesUrl": "https://veda.ng/viz-notes/140.txt",
+      "startYear": 2000,
+      "endYear": 2023,
+      "measure": "Production (million tonnes)",
+      "indicatorName": "Cottonseed oil production (tonnes)",
+      "sourceDataSha256": "e8c15a31d84d1820dc773734ee2d2adf7c5ce20ec8ea85f65a6345310aaa168d"
     }
   ],
   "sourceChecks": {
     "observationsCompared": 212289,
     "frameStatesChecked": 81000,
     "mismatches": 0
-  }
+  },
+  "blockedPlatforms": {
+    "x": "Saved X credentials return HTTP 401; reauthorize before sending.",
+    "threads": "Threads access token expired on 14 October 2026; reauthorize before sending."
+  },
+  "expandedAt": "2026-10-16T13:54:27.533Z"
 }

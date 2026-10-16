@@ -12,6 +12,7 @@ export type VizPost = {
   state?: 'publishing' | 'submitted' | 'sent' | 'failed' | 'uncertain';
   attemptedSlot?: string; attemptedAt?: string; bufferPostId?: string;
   bufferStatus?: string; platformPostId?: string;
+  paused?: boolean; pauseReason?: string;
   [key: string]: unknown;
 };
 
@@ -26,6 +27,7 @@ export function readQueue(file: string): VizPost[] {
   for (const p of posts) {
     if (!p.id || ids.has(p.id)) throw new Error(`Missing/duplicate queue ID ${p.id}`);
     ids.add(p.id);
+    if (p.paused !== undefined && typeof p.paused !== 'boolean') throw new Error(`Invalid pause flag for ${p.id}`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(p.scheduleDate) || !/^\d{2}:\d{2}$/.test(p.scheduleTime)) {
       throw new Error(`Missing schedule for ${p.id}`);
     }

@@ -121,7 +121,7 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
   const posts = readQueue(file);
   const save = () => saveQueue(file, posts);
   if (!dryRun) {
-    for (const entry of posts.filter(p => p.bufferPostId && !p.posted && p.state !== 'failed')) {
+    for (const entry of posts.filter(p => !p.paused && p.bufferPostId && !p.posted && p.state !== 'failed')) {
       await reconcile(entry, save);
     }
   }

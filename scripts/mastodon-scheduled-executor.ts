@@ -72,7 +72,7 @@ export async function uploadMedia(imagePath: string, altText: string): Promise<s
   throw new Error('Mastodon media processing timed out');
 }
 
-export async function postStatus(text: string, mediaId?: string | null, idempotencyKey?: string): Promise<string> {
+export async function postStatus(text: string, mediaId?: string | null, idempotencyKey?: string, onPublished?: (post: { id: string; url?: string }) => void): Promise<string> {
   const body: any = { status: text };
   if (mediaId) body.media_ids = [mediaId];
 
@@ -91,6 +91,7 @@ export async function postStatus(text: string, mediaId?: string | null, idempote
   }
 
   const data = await res.json() as any;
+  onPublished?.({ id: String(data.id), url: typeof data.url === 'string' ? data.url : undefined });
   return data.id;
 }
 

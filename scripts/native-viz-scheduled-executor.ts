@@ -46,13 +46,16 @@ export async function publish(platform: string, post: VizPost, video: string, ur
       const { uploadMedia, postStatus } = await import('./mastodon-scheduled-executor.js');
       const mediaId = await uploadMedia(video, String(post.altText || text));
       if (!mediaId) throw new Error('Mastodon video upload failed');
-      return postStatus(text, mediaId, post.id);
+      return postStatus(text, mediaId, post.id, published => {
+        if (published.url?.startsWith('https://')) post.postUrl = published.url;
+      });
     }
     case 'farcaster': {
       if (!url) throw new Error('Farcaster requires a public video embed URL');
       const { postCast } = await import('./farcaster-scheduled-executor.js');
       const result = await postCast(text, url);
       if (!result.success || !result.hash) throw new Error(result.error || 'Farcaster returned no cast hash');
+      if (result.url) post.postUrl = result.url;
       return result.hash;
     }
     default: throw new Error(`Unknown platform ${platform}`);
@@ -94,6 +97,16 @@ export async function runPlatform(platform: string, dryRun: boolean) {
     if (platform === 'linkedin') {
       post.postUrl = `https://www.linkedin.com/feed/update/${id}/`;
       if (post.captionStyle === 'licensed-v2') post.commentaryEncoding = 'little-text-v1';
+    } else if (platform === 'bluesky') {
+      const record = /^at:\/\/([^/]+)\/app\.bsky\.feed\.post\/([^/]+)$/.exec(id);
+      if (record) post.postUrl = `https://bsky.app/profile/${record[1]}/post/${record[2]}`;
+    } else if (platform === 'facebook') {
+      post.postUrl = `https://www.facebook.com/watch/?v=${encodeURIComponent(id)}`;
+    } else if (platform === 'x') {
+      post.postUrl = `https://x.com/i/status/${encodeURIComponent(id)}`;
+    } else if (platform === 'tumblr') {
+      const blog = process.env.TUMBLR_BLOG_NAME?.replace(/\.tumblr\.com$/, '');
+      if (blog && /^[a-z\d-]+$/i.test(blog)) post.postUrl = `https://${blog}.tumblr.com/post/${encodeURIComponent(id)}`;
     }
     console.log(`${platform}: published ${id}`);
   } catch (err) {

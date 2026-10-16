@@ -93,7 +93,7 @@ function truncateForFarcaster(text: string): string {
   return text.substring(0, MAX_CAST_LENGTH - 3) + '...';
 }
 
-export async function postCast(text: string, imageUrl?: string | null): Promise<{ success: boolean; hash?: string; error?: string }> {
+export async function postCast(text: string, imageUrl?: string | null): Promise<{ success: boolean; hash?: string; url?: string; error?: string }> {
   const castText = truncateForFarcaster(text);
 
   const body: Record<string, unknown> = {
@@ -120,7 +120,11 @@ export async function postCast(text: string, imageUrl?: string | null): Promise<
   }
 
   const data = await res.json() as any;
-  return { success: true, hash: data.cast?.hash };
+  const hash = data.cast?.hash;
+  const username = data.cast?.author?.username;
+  const url = typeof hash === 'string' && /^0x[0-9a-f]{40}$/i.test(hash) && typeof username === 'string'
+    ? `https://farcaster.xyz/${encodeURIComponent(username)}/${hash.slice(0, 10)}` : undefined;
+  return { success: true, hash, ...(url ? { url } : {}) };
 }
 
 async function main() {
