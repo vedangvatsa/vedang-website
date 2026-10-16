@@ -1,19 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210">
-  <title>Declared policy and observed HTTP response</title>
-  <rect width="1200" height="210" fill="#ffffff"/>
-  <g font-family="Inter, Arial, sans-serif">
-    <text x="48" y="38" font-size="14" font-weight="600" fill="#71717a">DECLARED POLICY · EDGE RESPONSE</text>
-    <line x1="48" y1="58" x2="1152" y2="58" stroke="#e3e3e0"/>
-    <text x="48" y="96" font-size="14" font-weight="600" fill="#71717a">POLICY ALLOWS</text>
-    <text x="48" y="148" font-size="46" font-weight="700" fill="#18181b">21.1%</text>
-    <text x="48" y="180" font-size="15" fill="#52525b">still refuse</text>
-    <line x1="400" y1="78" x2="400" y2="188" stroke="#e3e3e0"/>
-    <text x="440" y="96" font-size="14" font-weight="600" fill="#71717a">POLICY RESTRICTS</text>
-    <text x="440" y="148" font-size="46" font-weight="700" fill="#18181b">28.4%</text>
-    <text x="440" y="180" font-size="15" fill="#52525b">still serve</text>
-    <line x1="800" y1="78" x2="800" y2="188" stroke="#e3e3e0"/>
-    <text x="840" y="96" font-size="14" font-weight="600" fill="#71717a">NO POLICY</text>
-    <text x="840" y="148" font-size="46" font-weight="700" fill="#18181b">82.4%</text>
-    <text x="840" y="180" font-size="15" fill="#52525b">refuse both bots</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title description">
+<title id="title">Exact overlap of the three selected checks</title>
+<desc id="description">The positive groups contain 2,635, 280, and 833 domains respectively. Another 46,252 match none.</desc>
+<rect width="800" height="400" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif">
+<text x="32" y="40" font-size="28" fill="#37352f" font-weight="700" text-anchor="start">How the three selected checks overlap</text>
+<text x="32" y="76" font-size="22" fill="#64748b" font-weight="400" text-anchor="start">3,748 pass at least one; 46,252 pass none.</text>
+<text x="32" y="151" font-size="24" fill="#37352f" font-weight="400" text-anchor="start">One check</text>
+<rect x="220" y="124" width="421.600" height="36" fill="#4f46e5" opacity="0.7"/>
+<text x="651.600" y="151" font-size="24" fill="#37352f" font-weight="600" text-anchor="start">2,635</text>
+<text x="32" y="221" font-size="24" fill="#37352f" font-weight="400" text-anchor="start">Two checks</text>
+<rect x="220" y="194" width="44.800" height="36" fill="#4f46e5" opacity="0.7"/>
+<text x="274.800" y="221" font-size="24" fill="#37352f" font-weight="600" text-anchor="start">280</text>
+<text x="32" y="291" font-size="24" fill="#37352f" font-weight="400" text-anchor="start">All three</text>
+<rect x="220" y="264" width="133.280" height="36" fill="#4f46e5" opacity="0.7"/>
+<text x="363.280" y="291" font-size="24" fill="#37352f" font-weight="600" text-anchor="start">833</text>
+<text x="32" y="341" font-size="21" fill="#37352f" font-weight="400" text-anchor="start">Selected checks: llms.txt, Markdown, basic MCP marker</text>
+<text x="32" y="377" font-size="19" fill="#64748b" font-weight="400" text-anchor="start">Counts from 50,000 domains | veda.ng/agentready</text>
+</g>
 </svg>

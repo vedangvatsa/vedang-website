@@ -1,19 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210">
-  <title>Headline machine-readability adoption</title>
-  <rect width="1200" height="210" fill="#ffffff"/>
-  <g font-family="Inter, Arial, sans-serif">
-    <text x="48" y="38" font-size="14" font-weight="600" fill="#71717a">SHARE OF 50,000 DOMAINS</text>
-    <line x1="48" y1="58" x2="1152" y2="58" stroke="#e3e3e0"/>
-    <text x="48" y="96" font-size="14" font-weight="600" fill="#71717a">LLMS.TXT</text>
-    <text x="48" y="148" font-size="46" font-weight="700" fill="#18181b">6.62%</text>
-    <text x="48" y="180" font-size="15" fill="#52525b">valid index</text>
-    <line x1="400" y1="78" x2="400" y2="188" stroke="#e3e3e0"/>
-    <text x="440" y="96" font-size="14" font-weight="600" fill="#71717a">MARKDOWN</text>
-    <text x="440" y="148" font-size="46" font-weight="700" fill="#18181b">2.95%</text>
-    <text x="440" y="180" font-size="15" fill="#52525b">negotiation</text>
-    <line x1="800" y1="78" x2="800" y2="188" stroke="#e3e3e0"/>
-    <text x="840" y="96" font-size="14" font-weight="600" fill="#71717a">LIVE MCP</text>
-    <text x="840" y="148" font-size="46" font-weight="700" fill="#18181b">1.82%</text>
-    <text x="840" y="180" font-size="15" fill="#52525b">endpoint</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title description">
+<title id="title">Recorded public-web check matches</title>
+<desc id="description">Four separate rules and combinations, all using 50,000 domains as the denominator.</desc>
+<rect width="800" height="400" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif">
+<text x="32" y="42" font-size="30" fill="#37352f" font-weight="700" text-anchor="start">Recorded signals from 50,000 domains</text>
+<text x="32" y="77" font-size="21" fill="#64748b" font-weight="400" text-anchor="start">Sample shares under the stated matching rules</text>
+<rect x="24" y="108" width="364" height="112" rx="8" fill="#f8fafc" stroke="#e3e3e0"/>
+<text x="44" y="163" font-size="46" fill="#4f46e5" font-weight="700" text-anchor="start">45.71%</text>
+<text x="44" y="198" font-size="21" fill="#37352f" font-weight="400" text-anchor="start">Text-length check</text>
+<rect x="412" y="108" width="364" height="112" rx="8" fill="#f8fafc" stroke="#e3e3e0"/>
+<text x="432" y="163" font-size="46" fill="#4f46e5" font-weight="700" text-anchor="start">30.16%</text>
+<text x="432" y="198" font-size="21" fill="#37352f" font-weight="400" text-anchor="start">Text + both HTTP-200 checks</text>
+<rect x="24" y="232" width="364" height="112" rx="8" fill="#f8fafc" stroke="#e3e3e0"/>
+<text x="44" y="287" font-size="46" fill="#4f46e5" font-weight="700" text-anchor="start">7.50%</text>
+<text x="44" y="322" font-size="21" fill="#37352f" font-weight="400" text-anchor="start">At least one selected check</text>
+<rect x="412" y="232" width="364" height="112" rx="8" fill="#f8fafc" stroke="#e3e3e0"/>
+<text x="432" y="287" font-size="46" fill="#4f46e5" font-weight="700" text-anchor="start">0.16%</text>
+<text x="432" y="322" font-size="21" fill="#37352f" font-weight="400" text-anchor="start">OpenAPI version marker</text>
+<text x="32" y="380" font-size="19" fill="#64748b" font-weight="400" text-anchor="start">September 3-4, 2026 | veda.ng/agentready</text>
+</g>
 </svg>

@@ -230,129 +230,233 @@ The next useful update should answer two concrete questions: what authorized the
 
 ---
 
-## The Web Is Not Ready for Agents
+## Web Readiness for AI Agents
 URL: https://veda.ng/agentready
-Summary: I probed 50,000 websites with 61 machine-readability checks. Mean score: 25.7 out of 100. Here is what agents actually face.
+Summary: A study of 61 checks across 50,000 domains examines content access, resource discovery, and service interfaces, and the evidence needed to assess agent readiness.
 
-Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it reads reviews, compares prices, and hands you a shortlist. What you never see is the friction underneath. In this scan, neither of two crawler-user-agent probes was classified as an HTTP-200 success for 54.37% of sampled roots. That can mean a non-200 response, timeout, connection problem, or another failed fetch; it does not prove intentional blocking. I measured the public signals across 50,000 domains, applying the same 61 checks to every sampled root. The final recorded mean score was 25.7 out of 100.
+Among 50,000 sampled domains, 15,080 passed a text-length rule and recorded HTTP 200 for both requests carrying the names of AI crawlers. Only 78 matched an OpenAPI version marker at the tested addresses. Those observations concern different conditions. A page can supply information without advertising an API, and an API can expose operations without a text-heavy homepage. Assessing whether an agent can use either requires a specified task, a known client, and evidence that the requested work succeeds. A count of public signals provides part of that evidence, with limits that matter as much as the count itself.
 
-## What I measured, and why those things
+![Four recorded sample results: text-length check 45.71%, text plus both HTTP-200 request conditions 30.16%, at least one selected guidance or interface check 7.50%, and OpenAPI version marker 0.16%.](/images/essays/agentready-adoption.svg)
 
-An autonomous agent performs six consecutive jobs on a website: it finds the origin, reads its content, invokes tools, relies on secure transport, cites facts, and executes payments. The audit framework maps directly to these steps across six layers:
+## 1. Readiness depends on the work an agent must perform
 
-1. **Discovery (13 checks):** `robots.txt` AI crawler rules, [`llms.txt`](https://llmstxt.org/) index specifications, `llms-full.txt`, ARD catalog (`/.well-known/ard.json`), [RFC 9727 API Catalog](https://datatracker.ietf.org/doc/rfc9727/), `agents.txt`, and XML/JSON sitemaps.
-2. **Access (9 checks):** Markdown content negotiation (`Accept: text/markdown`), `.md` static URL twins, AI-specific robots meta tags (`max-snippet`, `max-image-preview`), SSR no-JS fallbacks, and `RateLimit-*` HTTP response headers.
-3. **Usability & MCP (10 checks):** Live [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) HTTP endpoints (`/.well-known/mcp`), [OpenAPI 3.1](https://spec.openapis.org/oas/v3.1.0) specifications with concrete parameters, machine authentication guides (`/auth.md`), and [RFC 8414 OAuth Metadata](https://datatracker.ietf.org/doc/html/rfc8414).
-4. **Security (11 checks):** HTTPS enforcement, [HSTS Preload](https://hstspreload.org/) (`max-age=63072000; includeSubDomains; preload`), Content Security Policy (CSP), `X-Content-Type-Options: nosniff`, [RFC 9116 security.txt](https://datatracker.ietf.org/doc/html/rfc9116), and HTTP Message Signatures ([RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421)).
-5. **SEO & Citations (15 checks):** Standard title/meta tags, [JSON-LD `@graph`](https://json-ld.org/) entity schemas (`Organization`, `WebSite`, `Article`), E-E-A-T `sameAs` authority links, inverted pyramid content structure, and active RSS/Atom feeds.
-6. **Payments (3 checks):** [L402 / HTTP 402](https://l402.org/) payment headers, [WebLN](https://webln.guide/) wallet discovery, and machine terms of service (`/terms-of-use.md`).
+A request to find a warranty period requires a different interaction from a request to register a product. The first may end with a passage of text and its source. The second may require an account, structured input, permission to submit it, and confirmation that the registration exists. A website can support one activity and fail to support the other. Calling the entire site ready or unready conceals the operation being judged.
 
-Each check uses a fixed automated rule over ordinary HTTP responses. No logins, browser rendering, or manual rating. Some checks use several probes, and a `pass` status can still represent partial credit.
+AI agents use models to choose actions and software tools to perform them. [Anthropic's account of agent design](https://www.anthropic.com/engineering/building-effective-agents) describes systems that direct their tool use in response to observations. Those tools can include a browser or an application programming interface, usually called an API. [OpenAI's July 2025 ChatGPT agent announcement](https://openai.com/index/introducing-chatgpt-agent/) provides a dated commercial example of a product combining browser interaction with direct API access.
 
-  - **50,000**: Domains audited from Tranco top-1M sample (Census dataset)
-  - **25.7**: Mean agentic readiness score / 100 (50,000-domain census)
-  - **61**: Deterministic probes per domain (Scanner probe specification)
+These alternatives change what a site must expose. A browser can run page scripts and interact with controls. A direct HTTP client receives replies without executing the page. An authenticated client may reach resources unavailable to an anonymous request. A measure of readiness must therefore identify the client and access conditions alongside the task.
 
-The sample avoids hand-picked bias. I drew from the [Tranco top-1M research ranking](https://tranco-list.eu/) across three stratified bands under a published random seed:
+The study behind this essay examines the narrower question of what selected public-web checks recorded. It counts matches associated with obtaining content, finding resources, and locating service interfaces. It also examines how those matches depend on sampling, request rules, and repeat attempts. Completed agent tasks require a different evaluation. [WebArena](https://arxiv.org/abs/2307.13854), for example, checks whether agents' answers and changes to controlled websites satisfy task requirements. The distinction concerns the outcome measured, not the size of the dataset.
 
-- Ranks 1 to 10,000 (all 10,000 domains)
-- Ranks 10,001 to 100,000 (20,000 randomly selected domains)
-- Ranks 100,001 to 1,000,000 (20,000 randomly selected domains)
+## 2. The sample and the observation period
 
-A [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux) cross-reference flag identifies hostnames in Chrome's popular-site list. The scan page hosts the tool, leaderboard, and full paper; the raw scan rows and source snapshots are not currently tracked in the public repository.
+The sample comes from the first million entries of [Tranco list ZJQ6G, generated on September 2, 2026](https://tranco-list.eu/list/ZJQ6G). Tranco combines ranking sources to construct a research-oriented list. Its rank supplies the sampling structure here; it does not identify a site's industry, ownership, or suitability for a particular task.
 
-## The headline adoption numbers
+| Rank range | Domains in the full list | Sampled domains |
+|---|---:|---:|
+| 1-10,000 | 10,000 | 10,000 |
+| 10,001-100,000 | 90,000 | 20,000 |
+| 100,001-1,000,000 | 900,000 | 20,000 |
 
-The public web shows minimal adoption for machine-specific standards:
+Every domain in the highest-ranked group enters the sample. The other groups use random draws without replacement, with seed `20260903`. All 50,000 sampled hostnames have a final record containing all 61 check labels. The analysis includes failed, warning, and not-applicable results. It does not discard a domain because its homepage fails the text check.
 
-- **llms.txt catalog:** 6.62% receive a scanner `pass` status at the tested paths.
-- **Markdown probe:** 2.95% return a Markdown-like response to one `Accept` probe.
-- **Basic MCP screen:** 1.82% return an HTTP-2xx body containing `jsonrpc` at one of two guessed paths.
-- **OpenAPI marker:** 0.16% match an OpenAPI or Swagger marker in the selected candidate response.
+The final timestamps span 18.77 hours on September 3-4, 2026 UTC. They describe retained observations from that period, including selected repeat scans. A hostname is the counting unit. Several hostnames may lead to the same website, and some entries serve technical systems rather than public pages. The results therefore describe the sampled names under the recorded collection procedure.
 
-An `llms.txt` file is a plain Markdown file outlining core site URLs. Content negotiation uses standard HTTP headers supported by web servers for decades. Yet 75.4% of audited origins score below 30 out of 100, and only 4 domains in 50,000 reach a score above 85.
+The unequal sampling fractions also matter. Highly ranked domains occupy 20% of the sample but only 1% of the million-domain list. Unadjusted percentages answer a question about the sample. Estimates for the full Tranco list require the rank weights discussed below. Neither denominator covers every website on the internet.
 
-![Horizontal bar chart showing adoption rates across ten machine-readability checks in the 50,000-domain census.](/images/essays/agentready-adoption.svg)
+## 3. Why the inventory contains 61 checks
 
-These findings align with independent research. A [Thunderbit crawl of the Tranco top 10,000](https://thunderbit.com/blog/llms-txt-website-trend) recorded 5.86% valid `llms.txt` files, matching the 6.62% overall figure. Server-side log analysis from [137,000 Ahrefs-monitored domains](https://ahrefs.com/blog/llmstxt-study/) recorded that 97% of published `llms.txt` files received zero requests over a 30-day window.
+The inventory combines checks for public content and interfaces with ordinary website metadata, security headers, and payment-related markers. Their relevance varies. Resource lists can help locate content; an API description can describe a service; a social-preview tag mainly supplies page context. A payment marker matters to a commercial operation but may be irrelevant to reading a public report.
 
-## Measurement methodology and rate limits
+| Category | Observational purpose | Checks |
+|---|---|---:|
+| Discovery | Resource lists, crawler rules, guidance files | 13 |
+| Access | Response codes, text, formats, response headers | 9 |
+| Interfaces | API descriptions, protocol markers, access information | 10 |
+| Security | Headers and contact details | 11 |
+| Metadata | Titles, language labels, structured page descriptions | 15 |
+| Payments | Payment-related headers, text, and terms | 3 |
 
-Scanning 50,000 origins without triggering network artifacts requires careful rate control:
+The [development record](https://github.com/vedangvatsa/vedang-website/commit/4ea4f34100157ae75e38baa935fd855930180179) describes combining an AI-standards checklist with a general website checklist, then expanding its coverage of AI search, agents, search engine optimization, and citations. Source versions contain 32, then 52, then 61 distinct identifiers. The 61-item version has a recorded commit date before the September measurements.
 
-- 34 parallel probes per domain with a 4,500ms timeout per request.
-- Maximum concurrency capped at 3 target domains simultaneously.
-- Standardized custom User-Agent identifying the crawler and purpose.
+That history explains the engineering scope. It supplies no test of whether another selection would predict agent success better. The exact count also depends on grouping. Basic MCP-response detection and a capabilities-field check count separately, while two crawler-named requests produce one combined result. The 61 labels consequently represent neither independent requests nor consecutive steps that every agent must complete.
 
-The final corpus is a two-wave, latest-result record. Every initial row scoring 10 or below received another scan; higher-scoring rows did not. This outcome-dependent refresh raised the mean from 22.7 to 25.7, so the final value is not a clean one-time snapshot.
+Keeping the complete recorded inventory avoids selecting only the checks that produced convenient results. The [check-by-check supplement](/papers/agentready-check-selection.txt) distinguishes published formats, general context, and developer-chosen filenames or thresholds. A format can justify looking for a resource while leaving the accuracy of its particular detection rule unsettled.
 
-## Layer-by-layer breakdown
+## 4. What a recorded pass establishes
 
-Measuring readiness across functional layers highlights where infrastructure succeeds and where machine support lags:
+Request details come from an [archived implementation](https://github.com/vedangvatsa/vedang-website/commit/ea0e797ecc13e494968500db03f128679f05b92b) whose identifiers and record format match the saved results. The original records do not contain the exact executable identifier. The source documents the request mechanics and supports later tests of their behavior; it cannot reconstruct the contents of historical replies.
 
-1. **Security (Mean: 41.0 / 100):** Transport security headers (HTTPS, HSTS, basic CSP) carry over directly from browser-focused web standards.
-2. **SEO & Citations (Mean: 28.9 / 100):** Basic meta tags and JSON-LD structured data are common on commercial sites, though missing on utility endpoints.
-3. **Access (Mean: 23.9 / 100):** While static pages allow standard crawling, Markdown mirrors (`.md` twins) and explicit `RateLimit-*` headers remain rare.
-4. **Discovery (Mean: 20.7 / 100):** `robots.txt` is common, but machine discovery formats (`llms.txt`, ARD catalogs) are infrequently deployed.
-5. **Payments (Mean: 9.8 / 100):** Programmatic payment headers (L402 / HTTP 402) and machine Terms of Service are almost nonexistent outside specialized crypto/developer services.
-6. **Usability & MCP (Mean: 7.4 / 100):** Interactive tool interfaces and machine API contracts represent the lowest-scoring category.
+For each domain, that implementation starts 34 fetch operations and can try up to six additional resources. Redirects can add network requests. Each fetch has a 4.5-second timeout. The procedure requests the HTTPS homepage and addresses such as `/robots.txt`, `/llms.txt`, and `/openapi.json`. It also requests a Markdown representation and sends homepage requests carrying GPTBot and PerplexityBot user-agent strings. It performs no login, page-script execution, purchase, or completed agent task.
 
-## Domain rank versus readiness
+Several checks reuse the same reply. Others examine a different path, a response header, or an input-derived value. A pass records satisfaction of the relevant rule. Warnings can describe partial matches or missing signals. A not-applicable label can denote an absent optional signal or a check dependent on another result. Treating every non-pass as the same kind of website failure would discard these distinctions.
 
-Dividing results across Tranco rank tiers shows almost no correlation between domain popularity and machine readiness:
+The raw records retain labels, scores, times, and durations. They do not retain complete bodies, individual request codes, detailed errors, or redirect histories. Subsequent analysis can recount those labels exactly. It cannot retrospectively inspect every reply or assign a specific network cause to every failure.
 
-![Bar chart comparing mean recorded score and the share with no HTTP-200 success from either bot-user-agent probe across Tranco rank tiers.](/images/essays/agentready-tiers.svg)
+## 5. Text access and request success
 
-- **Ranks 1 to 10,000:** Mean score 26.1 / 100 (Both-bot refusal rate: 56.2%)
-- **Ranks 10,001 to 100,000:** Mean score 25.2 / 100 (Both-bot refusal rate: 55.6%)
-- **Ranks 100,001 to 1,000,000:** Mean score 25.9 / 100 (Both-bot refusal rate: 52.2%)
+The text check passed on 22,855 domains, or 45.71%. Its rule requires more than 300 characters after removing scripts, styles, and HTML tags and reducing repeated whitespace. It uses the ordinary homepage body, falling back to the Markdown-request body when the ordinary body is empty. JavaScript counts UTF-16 units, so the count also differs from the number of visible characters in some text.
 
-The final tier means are close, but the initial one-pass means differed more and the refresh affected tiers unevenly. The data do not identify the cause.
+This rule measures an extracted length. Hidden text and error messages can contribute. A short page can contain everything needed to answer a question and still fail. Those properties prevent interpreting 45.71% as the fraction of sites an agent can understand.
 
-CrUX-listed hostnames show higher simple status-pass shares than unlisted hostnames, but the comparison does not adjust for rank, host type, or other factors.
+| Recorded condition | Domains | Share of all 50,000 |
+|---|---:|---:|
+| Text-length check passes | 22,855 | 45.71% |
+| Both crawler-named requests return HTTP 200 | 18,912 | 37.82% |
+| Exactly one returns HTTP 200 | 3,901 | 7.80% |
+| Neither returns HTTP 200 | 27,187 | 54.37% |
+| Text check passes and both requests return HTTP 200 | 15,080 | 30.16% |
 
-## WAF rules and policy contradictions
+The last row is an intersection of conditions from separate requests. It provides no evidence that one agent retrieved the intended information. The crawler names are strings supplied by the test client, not verified visits from the companies' own crawlers. The neither-success category includes non-200 replies and unsuccessful fetches. The records cannot divide it into firewall decisions, timeouts, connection errors, or other causes.
 
-Comparing `robots.txt` declarations against HTTP response status codes reveals a major configuration gap:
+An access restriction also needs careful definition. The [Robots Exclusion Protocol](https://datatracker.ietf.org/doc/html/rfc9309) communicates crawler instructions; it does not grant authenticated authority to perform an operation. The study's robots regex is narrower than a complete parser. A robots-check pass and an HTTP result therefore cannot establish that two teams configured contradictory policies, or identify which security system handled a request.
 
-![Grouped bar chart comparing robots.txt AI crawler policies against HTTP serving, throttling, and refusal behavior.](/images/essays/agentready-policy.svg)
+## 6. Resource discovery extends beyond the homepage
 
-- **Explicit Allow Policy:** Among 21,881 domains whose `robots.txt` explicitly allows AI crawlers, 21.1% (4,619 domains) still block those same crawlers with HTTP 403, 429, or 503 status codes at the WAF/CDN layer.
-- **Explicit Restrict Policy:** Out of domains restricting AI crawlers in `robots.txt`, 28.4% still serve full page content over HTTP without enforcement.
-- **No Declared Policy:** Among origins with no AI-specific rules, 82.4% block AI crawler identities at the edge.
+The sitemap-and-robots check passed on 13,686 domains, or 27.37%. The JSON-LD check passed on 10,687, or 21.37%. These rules look for resource-list markers and parseable structured text respectively. Their pass shares exceed those of the selected guidance and interface checks, although the rules have different requirements and possible errors.
 
-This mismatch occurs when security teams manage WAF settings independently from marketing or engineering teams updating `robots.txt`.
+The [`llms.txt` proposal](https://llmstxt.org/) describes a Markdown resource that supplies information about a site. The study's rule additionally requires a minimum body length, a heading, and link syntax at the tested locations. It passed on 3,310 domains, or 6.62%. The Markdown-response rule passed on 1,474, or 2.95%. A separate `/index.md` body-length rule passed on 5,337, or 10.67%. Each percentage belongs to its particular request and predicate.
 
-## Platform-driven adoption patterns
+These observations also explain why a homepage text threshold is a poor exclusion rule for the rest of the study. Among domains failing that threshold, 452 still passed the `llms.txt` check and 2,231 passed the sitemap check. Restricting analysis to text-passing domains would remove 13.66% of the recorded `llms.txt` passes and 16.30% of sitemap passes. It would also remove 20.26% of the domains passing both crawler-named requests.
 
-The 910 basic MCP-screen passes are not proof of conforming MCP services, available tools, or authentication. Only 3 rows passed the stricter saved status for `result.capabilities`, and response bodies were not retained for later review.
+Useful resources can sit at addresses separate from the homepage. At the same time, some statistical associations arise because checks read a shared response. The text and JSON-LD rules inspect the same selected page body, and the text rule can fall back to the Markdown reply. Their agreement cannot be attributed entirely to independent website design decisions.
 
-## Takeaways by role and domain
+Publication and use are separate observations too. [Ahrefs reported](https://ahrefs.com/blog/llmstxt-study/) that 97% of detected `llms.txt` files in its 137,210-domain Web Analytics cohort received no requests during May 2026. That is an attributed finding from another population and collection method. It supports asking whether clients actually request a published file, without validating the matches counted here.
 
-Different teams face distinct priorities when upgrading origins for machine consumers:
+## 7. The selected signals often overlap
 
-- **Full-Stack & Frontend Engineers:** Add Markdown negotiation (`Accept: text/markdown`) middleware and ensure static SSR HTML fallbacks exist without client-JS rendering dependencies.
-- **SEO & Growth Specialists:** Maintain structured JSON-LD `@graph` entity graphs and publish an `llms.txt` index to preserve citations in AI search products.
-- **Security & Infrastructure Engineers:** Test the exact crawler clients and network conditions they intend to support; this scan cannot distinguish blocking from transport failure.
-- **Product Managers & Founders:** Prioritize platform-level defaults over one-off custom integrations. Frameworks and hosting platforms move adoption faster than custom code.
-- **AI & Agent Developers:** Design agents to handle high HTTP refusal rates gracefully and rely on explicit `RateLimit-*` headers to pace requests.
+Marginal percentages cannot show how many distinct domains carry several signals. The joint analysis examines `llms.txt`, Markdown responses, and the basic MCP marker, representing guidance, an alternate content format, and a possible interface. These optional aids are not a required sequence.
 
-## Recommended implementation steps
+| Number of selected checks passing | Domains | Share |
+|---|---:|---:|
+| None | 46,252 | 92.50% |
+| One | 2,635 | 5.27% |
+| Two | 280 | 0.56% |
+| All three | 833 | 1.67% |
 
-Site operators can improve machine readiness through four straightforward additions:
+At least one passed on 3,748 domains, or 7.50%. Adding the three individual pass counts would count some domains repeatedly. The 833 all-three cases account for 91.54% of the 910 basic MCP matches. Markdown passes occurred on 32.60% of domains passing `llms.txt`, compared with 0.85% of the remaining domains.
 
-1. **Publish an `llms.txt` index:** Add a clear Markdown file at `/llms.txt` following the [llmstxt.org proposal](https://llmstxt.org/).
-2. **Test Markdown responses:** If useful for your clients, support an `Accept: text/markdown` request and verify the returned representation.
-3. **Align crawler policies:** Update `robots.txt` with clear directives for specific AI agents (`GPTBot`, `ClaudeBot`, `PerplexityBot`), and match WAF/CDN rules to those policies.
-4. **Expose structured schemas:** Provide an OpenAPI 3.1 specification at `/openapi.json` or `/.well-known/openapi.json` with concrete parameter examples.
+![Among 3,748 domains with a match on the selected trio, 2,635 pass one check, 280 pass two, and 833 pass all three. Another 46,252 pass none.](/images/essays/agentready-policy.svg)
 
-## Reproducing the audit
+The overlap has more than one possible explanation. Sites may publish these resources together. A server may also return similar or identical content from several requested addresses. Prepared tests show that generic replies can satisfy multiple checks. Without the saved bodies, the analysis cannot assign the observed overlap between genuine resources and shared-response artifacts. It identifies a group for closer inspection rather than establishing a common deployment package.
 
-The probe definitions, analysis scripts, and derived summaries are available from the project. The raw corpus and dated source snapshots remain local and should be archived before claiming full independent reproduction:
+## 8. Interface markers and working operations
 
-- **Full Research Paper & Data:** linked from the [scan page](https://veda.ng/scan)
-- **Live Single-Domain Audit Tool:** [veda.ng/scan](https://veda.ng/scan)
-- **Ranked 50,000-Domain Leaderboard:** [veda.ng/scan?tab=leaderboard](https://veda.ng/scan)
+The basic Model Context Protocol check sends an initialization request to two candidate addresses and looks for `jsonrpc` in an HTTP-2xx body. It passed on 910 domains, or 1.82%. The [MCP lifecycle specification](https://modelcontextprotocol.io/specification/2024-11-05/basic/lifecycle) describes further negotiation and initialization behavior. Matching a token in the first reply supplies much less evidence than completing that interaction and successfully using a tool.
+
+Only three of the 910 records also passed the JSON-and-capabilities rule; 907 received a warning. The difference cannot be read as a count of invalid services. The capabilities rule tries to parse an entire reply as one JSON document, while [MCP's later HTTP transport](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports) permits an event-stream response. A prepared event-stream example passed the basic marker rule but failed the capabilities parser. The two checks can also select different replies.
+
+The OpenAPI rule matched 78 domains, or 0.16%. It searches candidate descriptions for a version field or marker. The [OpenAPI specification](https://spec.openapis.org/oas/v3.1.2.html) describes information about operations, inputs, and responses. Detecting a version string neither validates that description nor tests an operation. A service may also publish its documentation at an address outside the procedure's small candidate list.
+
+Payment-related markers appeared on 163 domains, or 0.33%. No payment was attempted. Missing such a marker cannot make a public information site incapable of serving an agent. Across these interface checks, the observed scarcity concerns specified addresses and matching rules. The study supplies no success rate for booking, purchasing, submitting, or changing account state.
+
+## 9. Similar scores conceal different rank profiles
+
+The final average scores are 26.1, 25.2, and 25.9 across the three rank groups. Their proximity can suggest more uniformity than the individual checks support. The llms.txt rate is lowest in the middle group, while Markdown and MCP-marker rates increase toward the lower-ranked group.
+
+| Rank group | llms.txt check | Markdown response | MCP marker |
+|---|---:|---:|---:|
+| 1-10,000 | 6.38% | 1.66% | 0.06% |
+| 10,001-100,000 | 5.86% | 2.48% | 1.10% |
+| 100,001-1,000,000 | 7.51% | 4.07% | 3.43% |
+
+![Three rank-group profiles show different pass rates for llms.txt, Markdown, and MCP markers. MCP counts are 6, 219, and 685 from highest to lowest rank group.](/images/essays/agentready-tiers.svg)
+
+The stored score also combines points with different meanings. Optional checks can add points without increasing the denominator, while applicability changes which other checks enter it. The input-HTTPS rule contributes three points per domain by reading the URL scheme, without testing the connection. Two domains can receive the same total from different observations. The full-sample mean of 25.7 and median of 22 are summaries of this scoring system, with no calibration to task success.
+
+The rank comparison consequently cannot establish that popularity has no relation to agent performance. It shows that the association between rank and recorded outcomes depends on the check. It also depends on which domains received another attempt.
+
+## 10. Selective rechecks alter the comparison
+
+All 21,547 domains whose earlier score was ten or below received newer records. Higher-scoring domains retained their earlier observations. The merge used the newer result even when its score fell. This policy changes the meaning of the final dataset because it gives another observation to a group selected by its previous outcome.
+
+Scores increased on 5,965 rechecked domains, decreased on 553, and stayed unchanged on 15,029. Across the entire sample, the average rose from 22.68 to 25.69. The 3.00-point change uses the unrounded means. Most rechecked scores did not improve, despite the increase in the average.
+
+| Check | Pass gains | Pass losses | Net change over all 50,000 |
+|---|---:|---:|---:|
+| Text-length rule | 3,629 | 0 | +7.26 percentage points |
+| Both requests classified HTTP 200 | 3,018 | 16 | +6.00 percentage points |
+| llms.txt | 467 | 5 | +0.92 percentage points |
+| Markdown | 171 | 0 | +0.34 percentage points |
+| MCP marker | 84 | 0 | +0.17 percentage points |
+
+Only one rechecked domain had originally passed the text rule. The rechecked group therefore offered almost no opportunity to observe that pass becoming a failure. Zero losses cannot establish temporal stability. Estimating reliability over time would require repeat observations across the score range under a specified collection plan.
+
+The recheck shares were 52.44%, 43.12%, and 38.40% in the highest, middle, and lowest rank groups. Their earlier mean scores were 20.7, 22.4, and 23.9. Rechecks reversed the highest-versus-lowest ordering. The final proximity of the means partly reflects the collection policy, rather than evidence that those groups offer equal capabilities.
+
+## 11. Weighting changes the size of some results
+
+To estimate the collection procedure's results for the full Tranco frame, the calculation gives the three rank groups weights of 1%, 9%, and 90%. This assumes comparable measurement conditions for the target list. The unadjusted sample gives the lowest-ranked group 40% of its weight; the frame calculation gives it 90%. Checks concentrated there receive larger adjusted estimates.
+
+| Recorded outcome | Sample share | Rank-adjusted estimate | Sampling-only 95% range |
+|---|---:|---:|---:|
+| Text-length check | 45.71% | 46.58% | 45.96%-47.20% |
+| Text and both HTTP-200 conditions | 30.16% | 29.91% | 29.35%-30.48% |
+| Sitemap and robots markers | 27.37% | 27.54% | 26.98%-28.09% |
+| JSON-LD check | 21.37% | 20.67% | 20.16%-21.17% |
+| llms.txt check | 6.62% | 7.35% | 7.02%-7.67% |
+| Markdown response | 2.95% | 3.90% | 3.65%-4.14% |
+| MCP marker | 1.82% | 3.18% | 2.96%-3.41% |
+| OpenAPI marker | 0.16% | 0.10% | 0.06%-0.13% |
+| At least one selected check | 7.50% | 8.09% | 7.75%-8.43% |
+
+Weighting raises the MCP estimate and lowers the OpenAPI estimate. The text, sitemap, and JSON-LD rules continue to have higher match rates than the selected guidance and interface rules. That ordering survives the different rank mix, while its interpretation still depends on what each rule detects.
+
+The intervals describe uncertainty from sampling some, rather than all, domains in the lower two groups. They use a normal approximation with a finite-population correction and treat saved values as fixed. They exclude mistaken matches, request variability, and uncertainty about rechecking. A narrow interval around a recorded-label rate supplies no comparable precision about true feature adoption. Each range concerns one measure, not a simultaneous test of the entire checklist.
+
+## 12. CrUX membership explains a different comparison
+
+After ignoring protocol and port and normalizing a leading `www`, 23,592 sampled names match the July 2026 Chrome User Experience Report list. [CrUX eligibility](https://developer.chrome.com/docs/crux/methodology) includes popularity and public-discoverability conditions. [Tranco also uses CrUX as an input](https://tranco-list.eu/methodology), so membership is related to the sampling frame itself.
+
+CrUX-listed domains pass the five compared checks more often within each broad rank group. Giving the listed and unlisted groups the same rank mix permits a comparison that does not simply reflect different proportions of high-ranked sites.
+
+| Check | Gap after giving both groups the sample's rank mix |
+|---|---:|
+| llms.txt | +4.66 percentage points |
+| MCP marker | +2.54 percentage points |
+| Both HTTP-200 conditions | +15.64 percentage points |
+| Markdown | +2.50 percentage points |
+| robots.txt rule | +21.22 percentage points |
+
+The direction remains positive when the calculation instead uses the full-list rank mix. Broad rank composition therefore does not account for the entire association. The result still leaves differences within rank groups, site purpose, and discoverability requirements unresolved. It does not identify traffic as the cause or show that CrUX membership predicts an agent's ability to complete a particular task.
+
+## 13. Testing the meaning of the labels
+
+Thirteen prepared-response cases tested the archived rules after data collection. The inputs included empty replies, errors, short pages, and generic HTML. These cases establish possible failures of interpretation, rather than measuring how often they occurred in the domain sample.
+
+| Prepared input | Observed result |
+|---|---|
+| Every fetch raises an error | All 61 labels produced; score 6 |
+| Empty HTTP 404 replies | Same labels as the all-error case |
+| Long HTTP 403 page | Text rule passes |
+| Short ordinary HTTP 200 page | Text rule fails |
+| Same generic HTML at every address | 23 passes; score 47 |
+| Successful error reply containing jsonrpc | Basic MCP marker passes |
+| MCP capabilities inside an event stream | Basic marker passes; capabilities check warns |
+
+The same 61-label pattern produced by the all-error and empty-404 cases appears in 14,776 real records, or 29.55%. Its presence cannot distinguish those causes from another condition producing the same labels. Deleting those records would silently remove part of the sample without establishing which requests failed or why.
+
+Independent measurement work illustrates the value of inspecting content. [Thunderbit reported](https://thunderbit.com/blog/llms-txt-website-trend) 1,606 HTTP-200 results at tested `llms.txt` addresses among 10,000 Tranco domains, but only 586 files passed its validation. Its rules and denominator differ from this study's. The figures therefore cannot independently confirm the 6.62% match share here. They show why a successful status response and a validated resource need separate accounting.
+
+## 14. What developers can reasonably infer
+
+The findings support testing access, discovery, and operation use separately. A site owner interested in document retrieval can check whether the intended client receives the relevant text at a stable address. An owner interested in API use can supply descriptions of operations, inputs, errors, and required permissions, then test those operations. The choice follows the service offered and the client expected to use it.
+
+Publishing `llms.txt`, a Markdown representation, or an API catalogue is a candidate intervention. Its value depends on whether the client discovers it, understands its contents, and completes the intended work. The present dataset contains no measured performance gain from adding any of these resources. General requirements for every site would go beyond the evidence.
+
+For agent developers, the different request outcomes motivate retaining enough information to diagnose failures. A failed connection, an unrelated HTML reply, and a valid response in an unsupported format call for different handling. Recording the requested address, status, redirects, content type, and returned content permits those distinctions. Collapsing them immediately into one score makes later diagnosis harder.
+
+Authorization also belongs in the task definition. A public description of an operation does not establish permission to execute it. Security headers and machine-readable terms can supply context, but an evaluation of account changes or purchases needs an authorized environment and a verifiable result. These are design requirements for the proposed evaluation, not findings of completed actions in this study.
+
+## 15. From public checks to a task-based assessment
+
+A further study could compare direct-request and browser agents on the same information-finding and authorized service-use tasks. Each task needs a specified answer or application state that can be checked independently. Both matching and nonmatching domains must enter the evaluation, otherwise the test cannot reveal useful sites missed by the checklist.
+
+The comparison also needs controlled access conditions, repeated attempts across the outcome range, and retained request evidence. Check development should use different cases from final evaluation. That separation permits testing whether a signal predicts success instead of choosing signals after seeing which tasks succeeded. A readiness score would then need calibration against those outcomes and examination across task types, languages, and site categories.
+
+The [full paper](/papers/web-readiness-for-ai-agents.pdf) gives the request definitions, complete 61-row results, both record versions' adjusted estimates, and bibliography. The [aggregate data](/data/agentready-study.json) accompany this essay's figures and tables, while the [selection supplement](/papers/agentready-check-selection.txt) explains every check's purpose and limitations. Record-level reproduction requires the separately retained corpus. Original response bodies were not saved, so neither the paper nor these downloads can recreate the historical replies. The current [single-domain tool](/scan) is a separate service and can use different rules from the archived September implementation.
+
+The defensible next step is to measure whether specified agents complete specified work under stated conditions. Until that connection is measured, public-check counts can locate matches, describe differences, and expose weaknesses in collection procedures. A claim that a website is ready to receive delegated work needs the additional evidence of the work itself.
 
 ---
 

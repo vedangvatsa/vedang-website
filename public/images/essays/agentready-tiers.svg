@@ -1,19 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210">
-  <title>Machine readiness by Tranco rank tier</title>
-  <rect width="1200" height="210" fill="#ffffff"/>
-  <g font-family="Inter, Arial, sans-serif">
-    <text x="48" y="38" font-size="14" font-weight="600" fill="#71717a">MEAN SCORE · BOTH-BOT REFUSAL</text>
-    <line x1="48" y1="58" x2="1152" y2="58" stroke="#e3e3e0"/>
-    <text x="48" y="96" font-size="14" font-weight="600" fill="#71717a">RANKS 1 TO 10K</text>
-    <text x="48" y="148" font-size="46" font-weight="700" fill="#18181b">26.1</text>
-    <text x="48" y="180" font-size="15" fill="#52525b">56.2% refused</text>
-    <line x1="400" y1="78" x2="400" y2="188" stroke="#e3e3e0"/>
-    <text x="440" y="96" font-size="14" font-weight="600" fill="#71717a">RANKS 10K TO 100K</text>
-    <text x="440" y="148" font-size="46" font-weight="700" fill="#18181b">25.2</text>
-    <text x="440" y="180" font-size="15" fill="#52525b">55.6% refused</text>
-    <line x1="800" y1="78" x2="800" y2="188" stroke="#e3e3e0"/>
-    <text x="840" y="96" font-size="14" font-weight="600" fill="#71717a">RANKS 100K TO 1M</text>
-    <text x="840" y="148" font-size="46" font-weight="700" fill="#18181b">25.9</text>
-    <text x="840" y="180" font-size="15" fill="#52525b">52.2% refused</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" role="img" aria-labelledby="title description">
+<title id="title">Selected check profiles by Tranco rank</title>
+<desc id="description">Within-group pass percentages for llms.txt, Markdown, and basic MCP markers. Exact values also appear in the essay table.</desc>
+<rect width="800" height="480" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif">
+<text x="32" y="40" font-size="29" fill="#37352f" font-weight="700" text-anchor="start">Pass rates within each rank group</text>
+<rect x="32" y="65" width="16" height="16" fill="#4f46e5"/>
+<text x="58" y="81" font-size="21" fill="#37352f" font-weight="400" text-anchor="start">llms.txt</text>
+<rect x="270" y="65" width="16" height="16" fill="#0f766e"/>
+<text x="296" y="81" font-size="21" fill="#37352f" font-weight="400" text-anchor="start">Markdown</text>
+<rect x="508" y="65" width="16" height="16" fill="#b45309"/>
+<text x="534" y="81" font-size="21" fill="#37352f" font-weight="400" text-anchor="start">MCP marker</text>
+<text x="32" y="150" font-size="20" fill="#37352f" font-weight="600" text-anchor="start">Ranks 1-10,000</text>
+<text x="32" y="179" font-size="19" fill="#64748b" font-weight="400" text-anchor="start">n = 10,000</text>
+<rect x="266" y="122" width="382.800" height="18" fill="#4f46e5" opacity="0.75"/>
+<text x="656.800" y="138" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">6.38%</text>
+<rect x="266" y="148" width="99.600" height="18" fill="#0f766e" opacity="0.75"/>
+<text x="373.600" y="164" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">1.66%</text>
+<rect x="266" y="174" width="3.600" height="18" fill="#b45309" opacity="0.75"/>
+<text x="277.600" y="190" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">0.06%</text>
+<text x="32" y="255" font-size="20" fill="#37352f" font-weight="600" text-anchor="start">Ranks 10,001-100,000</text>
+<text x="32" y="284" font-size="19" fill="#64748b" font-weight="400" text-anchor="start">n = 20,000</text>
+<rect x="266" y="227" width="351.300" height="18" fill="#4f46e5" opacity="0.75"/>
+<text x="625.300" y="243" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">5.86%</text>
+<rect x="266" y="253" width="148.500" height="18" fill="#0f766e" opacity="0.75"/>
+<text x="422.500" y="269" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">2.48%</text>
+<rect x="266" y="279" width="65.700" height="18" fill="#b45309" opacity="0.75"/>
+<text x="339.700" y="295" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">1.10%</text>
+<text x="32" y="360" font-size="20" fill="#37352f" font-weight="600" text-anchor="start">Ranks 100,001-1,000,000</text>
+<text x="32" y="389" font-size="19" fill="#64748b" font-weight="400" text-anchor="start">n = 20,000</text>
+<rect x="266" y="332" width="450.300" height="18" fill="#4f46e5" opacity="0.75"/>
+<text x="724.300" y="348" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">7.51%</text>
+<rect x="266" y="358" width="243.900" height="18" fill="#0f766e" opacity="0.75"/>
+<text x="517.900" y="374" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">4.07%</text>
+<rect x="266" y="384" width="205.500" height="18" fill="#b45309" opacity="0.75"/>
+<text x="479.500" y="400" font-size="19" fill="#37352f" font-weight="400" text-anchor="start">3.43%</text>
+<line x1="266" y1="422" x2="746" y2="422" stroke="#e3e3e0"/>
+<text x="266" y="447" font-size="19" fill="#64748b" font-weight="400" text-anchor="middle">0%</text>
+<text x="386" y="447" font-size="19" fill="#64748b" font-weight="400" text-anchor="middle">2%</text>
+<text x="506" y="447" font-size="19" fill="#64748b" font-weight="400" text-anchor="middle">4%</text>
+<text x="626" y="447" font-size="19" fill="#64748b" font-weight="400" text-anchor="middle">6%</text>
+<text x="746" y="447" font-size="19" fill="#64748b" font-weight="400" text-anchor="middle">8%</text>
+<text x="32" y="474" font-size="18" fill="#64748b" font-weight="400" text-anchor="start">Recorded labels | September 2026 | veda.ng/agentready</text>
+</g>
 </svg>

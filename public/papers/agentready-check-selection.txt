@@ -1,0 +1,87 @@
+# Why the study examines these 61 checks
+
+This supplement explains the scope and purpose of the retained checklist. It is a retrospective interpretation of the recorded study, not a claim that a systematic search proved these to be the best 61 tests. Reference numbers refer to the paper's bibliography. The exact requests and pass rules are in Appendix B.
+
+## Documented origin and scope
+
+The development record describes bringing an AI-standards checklist and a general website checklist together. Source revisions dated 28 August 2026 contain 32, then 52, then 61 distinct check identifiers. The final expansion explicitly names AI search, agents, SEO, and citations as its scope [34]. The 1 September revision used to document the study retains the same 61 identifiers.
+
+`data/checklist_history.json` records the revisions, messages, dates, source hashes, check identifiers, and category counts. `verify_checklist_history.cjs` can retrieve the immutable revisions and recount the identifiers without executing their code. The change from 52 to 61 adds 13 identifiers and removes four. An identifier change alone does not show that a wholly new capability was added; it can also reflect renaming or regrouping.
+
+The practical scope is public files, response text, headers, and a few input-derived values that can be checked without accounts, browser rendering, form submission, or payment execution. The six categories cover finding resources, obtaining content, locating service interfaces, general security context, descriptive metadata, and payment-related signals. The original scope therefore extends beyond the requirements of an autonomous agent that performs actions.
+
+The number also depends on how observations are grouped. Basic MCP-response detection and the capabilities-field test are separate checks, while the GPTBot- and PerplexityBot-labelled requests produce one combined check. The 61 items are neither independent requests nor 61 necessary conditions for every agent task. Other checks, including some that could also be performed on public responses, remain possible.
+
+## Check-by-check purpose and limits
+
+“Format-based” means that a published format or protocol gives the observation a recognizable purpose. It does not mean this implementation validates that format. “Context” means a general website property whose importance depends on the task. “Exploratory” or “heuristic” means that the particular filename, pattern, or cutoff is an engineering choice rather than an established readiness requirement. None of these labels establishes predictive accuracy for agent-task success.
+
+| Check identifier | Reason to observe it | Basis | Limit on interpretation |
+|---|---|---|---|
+| robots-ai-policy | Observe published crawler directives at the usual robots.txt address | Format-based, Robots Exclusion Protocol [4] | The regex rule is not a complete robots parser and does not prove access permission |
+| robots-selective-ai-policy | Record whether different crawler names appear in published rules | Protocol context [4], with developer-defined name groups | Name co-occurrence does not establish different treatment or enforcement |
+| llms-txt | Look for a proposed index or guidance file for language-model clients | Proposal [6] | The path, length, and link requirements are narrower than the proposal and do not measure actual use |
+| llms-full | Look for candidate larger or smaller documentation digests | Documentation convention and chosen filenames | Body size alone does not validate a digest or its usefulness |
+| ard-catalog | Look for a possible directory of agent-facing resources or interfaces | Exploratory candidate path | JSON parsing does not establish a standard directory or agent use |
+| ai-catalog | Look for a possible catalogue of machine-facing services | Exploratory candidate path | Any successful response can pass, including unrelated content |
+| api-catalog-rfc9727 | Look for an advertised catalogue of APIs | Format-based, RFC 9727 [7] | A nonempty response is not validation of the catalogue or its links |
+| sitemap-xml | Look for URL-listing content and a sitemap declaration in robots.txt | Format-based, Sitemap protocol [5] | The check matches text markers and does not validate XML or compare the declared URL with the returned resource |
+| sitemap-json | Look for a candidate JSON resource index | Exploratory candidate path | A brace in the response is not proof of a valid index |
+| agents-txt | Look for a possible statement aimed at automated clients | Exploratory filename convention | Text length does not establish permissions or a recognized protocol |
+| agents-json | Look for a possible machine-facing manifest | Exploratory candidate path | Response status alone does not establish a manifest's contents |
+| agent-card | Look for an A2A self-description that could advertise another agent | Format-based, A2A Agent Card [9] | The rule does not parse or validate the card, and A2A is not required for ordinary websites |
+| openai-plugin | Record candidate plugin manifests at the two tested addresses | Integration-specific convention | A successful response does not establish a valid or usable integration |
+| markdown-negotiation | See whether a request for Markdown returns matching content or a format header | HTTP content negotiation [13] and Markdown proposal context [6] | The marker rule can accept non-Markdown content and does not test content quality |
+| markdown-twins | Look for a text representation at the chosen index.md address | Alternate-content proposal [6] | One path and a body-length test do not measure all available Markdown representations |
+| bot-ua-access | Observe response codes for two crawler-named request profiles | HTTP request/response behavior [13] | Names do not establish crawler identity, permission, or useful returned content |
+| robots-meta-ai | Observe page-level indexing and snippet-related strings | Search-oriented metadata context | Absence of a matched restriction is not permission for every agent activity |
+| link-headers | Look for links to descriptions or alternate representations | Format-based, HTTP Link relationships [14] | The implementation matches selected literal strings, not every valid Link representation |
+| rate-limit-headers | Record hints that a client might use to pace requests | HTTP Retry-After [13] and rate-header conventions | Presence does not validate the limit, its units, or the client's ability to comply |
+| access-js-hydration | Record how much text remains in the selected unrendered response | Text-length heuristic | The 300-character cutoff is not calibrated readability or JavaScript-dependence evidence |
+| access-compression | Record advertised response compression | HTTP content-coding context [13] | Compression is a transport property, not an agent-task capability |
+| access-boilerplate-ratio | Describe extracted text size relative to response size | Engineering heuristic | The ratio is not semantic content quality or measured token efficiency |
+| mcp-server-live | Look for a response marker after an MCP initialization request | Protocol context, MCP [8, 30] | The legacy identifier overstates the rule, which only checks for jsonrpc text in a successful response |
+| mcp-schema-handshake | Look for a capabilities field in a parsed initialization reply | Protocol context, MCP [8, 30] | This is not a complete handshake test and misses the tested event-stream wrapper |
+| openapi-spec | Look for an API-description version marker | Format-based, OpenAPI [10] | A marker does not validate the document or any operation it describes |
+| openapi-examples | Observe example fields that could help explain API requests and replies | Documentation context, OpenAPI [10] | Literal field matching does not establish adequate examples or improve task success by itself |
+| auth-guide | Look for a possible human- or machine-readable access guide | Developer-chosen auth.md path | Length alone does not validate instructions or an authentication flow |
+| oauth-agent-discovery | Look for responses at authorization and protected-resource metadata addresses | Format-based, OAuth metadata [11, 12] | Response status does not establish valid metadata, credentials, or granted access |
+| tdmrep | Look for a resource intended to express text-and-data-mining preferences | Community protocol [20] | The content is not parsed, and detection is not a legal permission determination |
+| rfc-7807-errors | Record whether the API-root response advertises problem+json | Integration/error-format context | Content type alone does not validate the error body or show that an agent can recover |
+| api-dry-run | Look for dry-run or idempotency-related parameter names in candidate descriptions | API-documentation conventions and heuristic names | Keyword presence does not establish implemented behavior or safe execution |
+| api-cors-ai | Observe a cross-origin response-header value | Browser-access context | Header presence is not proof that a particular origin is allowed, and CORS is not a requirement for every client |
+| https-tls | Preserve the checklist's record of the input URL scheme | Input-derived engineering rule | It tests neither TLS nor server reachability and is not used as independent connection-security evidence |
+| hsts | Observe a header associated with browser HTTPS policy | Format-based, HSTS [15] | Matching max-age text does not validate the policy or establish agent permissions |
+| csp | Observe a browser content-policy header | Format-based, CSP [16] | Header length does not establish an effective policy or protection against agent-specific failures |
+| xcto | Observe a nosniff response-header marker | General browser-security context | A marker is not a security audit or an agent-use requirement |
+| frame-protection | Observe headers used to restrict embedding | Browser-policy context, including CSP [16] | It does not test whether the policy is valid or useful for the intended agent |
+| referrer-policy | Record an advertised policy for sending referring-URL information | General browser/privacy context | Any nonempty value can pass; policy effectiveness is not measured |
+| permissions-policy | Record a browser-feature policy header | General browser context | This is not delegated permission for an agent to use a server API |
+| security-txt | Look for a published security contact | Format-based, security.txt [17] | The Contact marker does not establish full format compliance or agent capability |
+| security-signatures | Look for a possible HTTP-signature-related directory | Exploratory candidate path | The path check does not establish a standardized directory or verify a signature |
+| security-c2pa | Observe references to content-provenance material | Exploratory text marker | A page reference does not validate media credentials or authenticate content |
+| security-ai-disclosure | Look for words that might relate to AI/security policy | Keyword heuristic | Broad substrings can occur in unrelated text and do not establish an AI policy |
+| title-tag | Record a possible page-identification cue | General page-metadata context | The length limits are chosen heuristics, not requirements for agent success |
+| meta-description | Record a possible short page description | General page-metadata context | Length alone does not establish accuracy, quality, or usefulness |
+| canonical | Observe a declared preferred page URL | General publishing/discovery context | The URL-prefix rule does not validate the destination or prove correct deduplication |
+| html-lang | Observe a language label that may help interpret a page | General document-metadata context | Length alone does not validate the language tag or its agreement with the content |
+| favicon-branding | Record possible icon or branding information | General presentation context from the broader original checklist | An HTTP-200 reply need not contain an icon; this is not a general agent-execution requirement |
+| og-tags | Record metadata used to describe shared links | General presentation/metadata context | Social-preview fields are not prerequisites for every agent task |
+| twitter-cards | Record another set of link-preview metadata | Integration-specific presentation context | Field presence does not establish a complete preview or agent capability |
+| json-ld | Look for structured content labelled as JSON-LD | Format/vocabulary context [18, 19] | JSON parsing is not JSON-LD or Schema.org validation |
+| seo-schema-graph | Observe selected relationship-related strings | Vocabulary context [19] and a string heuristic | Matching strings do not establish a valid connected entity graph |
+| seo-rich-schemas | Observe selected content-type names | Vocabulary context [19] and a string heuristic | The rule does not validate the described entities or their relevance |
+| seo-author-eeat | Observe possible authorship or identity references | Exploratory identity/SEO heuristic | Links or names do not verify authority, trustworthiness, or agent usefulness |
+| seo-answer-first | Record the presence of two heading levels | Document-structure heuristic | The rule does not test heading order, hierarchy quality, or whether the page answers a question |
+| seo-multimodal | Observe whether an image description is present under the rule | Document/accessibility context | No lowercase image marker also produces a pass; the rule does not establish that every image is described |
+| seo-freshness | Observe date-related strings that could describe updates | Metadata/vocabulary context [19] | The rule does not validate dates or establish that the content is current |
+| rss-feed | Look for syndication content that could reveal resource updates | Publishing/discovery convention, also discussed in [5] | Selected text markers do not validate the feed or measure timely discovery |
+| agent-payments | Look for signals associated with selected payment mechanisms | Task-specific protocol/header conventions | No payment or purchase is performed; absence is not a general readiness failure |
+| payments-webln | Look for selected wallet or Lightning-related strings | Task-specific integration convention | Text presence does not establish a connected wallet or working transaction |
+| payments-terms | Look for a possible machine-readable terms resource | Developer-chosen path and text markers | The check does not interpret terms, establish permission, or execute a payment |
+
+## What this justifies
+
+The mapping gives a concrete reason to inspect each observation within the original broad checklist. It also shows why their relevance differs. Public access and interface-format checks address possible routes to information or services. General website metadata and security headers provide context. Payment and integration-specific checks apply only to some uses. Exploratory paths and loose text rules remain tentative observations.
+
+This explains the inventory's engineering scope and the choice to report it in full. It is not evidence that the selection is exhaustive, that the thresholds are optimal, or that the total score predicts successful agent behavior. Those stronger claims need separate validation.

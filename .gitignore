@@ -89,6 +89,13 @@ video-analysis-frames/
 *.pdf
 *.xlsx
 *.vtt
+
+# Published downloads accompanying the agent-readiness essay
+!/public/papers/
+/public/papers/*
+!/public/papers/web-readiness-for-ai-agents.pdf
+!/public/papers/agentready-check-selection.txt
+
 scripts/video-retalking/
 /media/
 
