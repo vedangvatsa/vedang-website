@@ -1,5 +1,26 @@
 # Visualization batch 2 publishing
 
+## Current caption revision
+
+Publishing is manually paused for caption review. The user requested the earlier
+two-paragraph pattern: a short hook, then the actual years and metric definition.
+`concise-v2` captions contain no links, source blocks, music blocks, methodology,
+verification wording or video-production details.
+
+All 964 unpublished entries across the eleven queues use this format. They point
+to the `no-attribution/` editions, which use four deliberately selected tracks
+under the Mixkit Stock Music Free License. The official music FAQ confirms that
+attribution is not required. License evidence and per-video receipts are in
+`scripts/viz-batch2-assets/audio-revision/`. The underlying checked video streams
+are byte-identical to the original editions; only their audio and container
+metadata changed. Standalone stock-music files are not distributed in this repo.
+
+The four already-published Coffee entries retain their actual publication
+records. No deletion or repost has been authorized. Their handling requires the
+user's choice; the original media remains available for audit.
+
+The initial rollout and earlier caption formats are documented below as history.
+
 Prepared 16 October 2026 following approval to commit the publishing assets and
 queue updates and resume the existing posting schedule.
 

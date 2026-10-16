@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createHash } from 'node:crypto';
 import { selectDuePost } from './viz-queue-time.mjs';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -54,9 +55,24 @@ export function localVideo(post: VizPost): string {
   if (!value) throw new Error(`${post.id} has no video`);
   const absolute = path.resolve(ROOT, value);
   if (!absolute.startsWith(`${ROOT}${path.sep}`) || !/\.mp4$/i.test(absolute)) throw new Error(`Invalid video path for ${post.id}`);
-  if (!fs.statSync(absolute).isFile() || !fs.statSync(absolute).size) throw new Error(`Missing/empty video for ${post.id}`);
+  const stat = fs.statSync(absolute);
+  if (!stat.isFile() || !stat.size) throw new Error(`Missing/empty video for ${post.id}`);
+  if (post.captionStyle === 'concise-v2') {
+    if (post.audioAttributionRequired !== false || !absolute.includes(`${path.sep}no-attribution${path.sep}`)) {
+      throw new Error(`${post.id} has not been paired with no-attribution audio`);
+    }
+    const cacheKey = `${absolute}:${stat.mtimeMs}:${stat.size}`;
+    let digest = verifiedMedia.get(cacheKey);
+    if (!digest) {
+      digest = createHash('sha256').update(fs.readFileSync(absolute)).digest('hex');
+      verifiedMedia.set(cacheKey, digest);
+    }
+    if (digest !== post.videoSha256) throw new Error(`Video checksum differs for ${post.id}`);
+  }
   return absolute;
 }
+
+const verifiedMedia = new Map<string, string>();
 
 export function publicVideoUrl(post: VizPost): string {
   if (post.publicVideoUrl) {

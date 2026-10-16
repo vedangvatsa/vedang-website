@@ -1,0 +1,36 @@
+{
+  "slug": "broccoli-family",
+  "filename": "103-broccoli-family-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/103-broccoli-family-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "c36977b15ae36538ca944c4fe8f92b7a579cd8127f0e7c0ae4c574b774f0e8fc",
+  "previousVideoSha256": "46d1e150f0a3590c60e2380ddc040bd496109cd390f5c8547a57afe79e09808b",
+  "videoStreamSha256": "55c398a2dbed5838a0c441972b381e113d78322d00be25c93be686365044d5dc",
+  "videoStreamUnchanged": true,
+  "dataSha256": "6b414688e3fbda225607945ee29fb94831050d8f94d4dd804d7ed54e2f619839",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 32.4,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -17.16,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.2,
+    "decodedPeakDb": -1.8,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:12.759494+00:00"
+}

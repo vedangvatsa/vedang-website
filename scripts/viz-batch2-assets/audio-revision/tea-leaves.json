@@ -1,0 +1,36 @@
+{
+  "slug": "tea-leaves",
+  "filename": "133-tea-leaves-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/133-tea-leaves-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "5e68943bdfb1d7e60b573892ae4c4818f98f4861ad4d9171f3824cff3994133d",
+  "previousVideoSha256": "5581fdb8674081dfd31f8afa055239588cfb192da35259079894de3315ea3f43",
+  "videoStreamSha256": "7081a92c5b9718eeb41605bb9a3f08911d4669a8bfefe938e4a9d4b3b813dceb",
+  "videoStreamUnchanged": true,
+  "dataSha256": "ef1d2adb1b14c709a8a18cd24a3cfbfdf11f9c17220f20dffc0eeb1ab87cacd1",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 54.0,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -17.37,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.1,
+    "decodedPeakDb": -2.5,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:35:06.194017+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "soybean-oil",
+  "filename": "139-soybean-oil-2000-2023.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/139-soybean-oil-2000-2023.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "32c54e9e130b9f12bd625bb229ac81fb9d47fae57953de651e3d1a10c82b3252",
+  "previousVideoSha256": "5960e1e8ee577088e05a83db93877029d42b408d4eaad8f300919747c52912c5",
+  "videoStreamSha256": "99041d58f5fe29ee50217fc21b469ce826375274b6232ffa6e285ecf9aa9076d",
+  "videoStreamUnchanged": true,
+  "dataSha256": "5961c8dac14d804f7aa857d5f14bb8b88ef0ffe7d1b9d33d5b521b2d72be4ba2",
+  "frameStatesChecked": 973,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 56.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -13.68,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.4,
+    "decodedPeakDb": -2.4,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:35:15.655654+00:00"
+}

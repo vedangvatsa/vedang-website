@@ -1,0 +1,104 @@
+{
+  "license": "Mixkit Stock Music Free License",
+  "attributionRequired": false,
+  "verifiedAt": "2026-10-16T15:32:42.068811+00:00",
+  "scope": [
+    "social-media video posts",
+    "educational videos",
+    "YouTube videos"
+  ],
+  "permissionQuote": "Attribution is appreciated but not required.",
+  "constraints": "Use is limited to soundtracks within these videos. No standalone music distribution, ownership claim or rights-management registration.",
+  "sources": [
+    {
+      "url": "https://mixkit.co/license/modal/musicFree/",
+      "resolvedUrl": "https://mixkit.co/license/modal/musicFree/",
+      "retrievedAt": "2026-10-16T15:32:41.649280+00:00",
+      "sha256": "723e4bd4673eeb125480d8d44c11eb591a0391332838485783c9e9928d487177",
+      "bytes": 2268,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://mixkit.co/free-stock-music/",
+      "resolvedUrl": "https://mixkit.co/free-stock-music/",
+      "retrievedAt": "2026-10-16T15:32:41.715364+00:00",
+      "sha256": "35319667c2cf10767b0ba1420e2b541bf3c085d4ff6a2fca9c55f4d0ee4188f9",
+      "bytes": 255965,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://mixkit.co/terms/",
+      "resolvedUrl": "https://mixkit.co/terms/",
+      "retrievedAt": "2026-10-16T15:32:41.775402+00:00",
+      "sha256": "b275adc1a901308e3232be31a3f72b56ded9edf8a2e8ded613b832a3b43e62ad",
+      "bytes": 80229,
+      "contentType": "text/html; charset=utf-8"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "127",
+      "title": "Valley Sunset",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit-valley-sunset-127.mp3",
+      "downloadUrl": "https://assets.mixkit.co/music/127/127.mp3",
+      "sha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+      "bytes": 4280902,
+      "downloadedAt": "2026-10-16T15:24:11.922Z",
+      "catalog": "https://mixkit.co/free-stock-music/ambient/",
+      "license": "Mixkit Stock Music Free License",
+      "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+      "attributionRequired": false,
+      "duration": 133.776,
+      "copyright": null
+    },
+    {
+      "id": "184",
+      "title": "Vastness",
+      "artist": "Andrew Ev",
+      "file": "mixkit-vastness-184.mp3",
+      "downloadUrl": "https://assets.mixkit.co/music/184/184.mp3",
+      "sha256": "3ffae7ccd5ea6f612f75efdf9a8318ccce79a5e4f355b26e233631330a57660f",
+      "bytes": 7356125,
+      "downloadedAt": "2026-10-16T15:25:30.650Z",
+      "catalog": "https://mixkit.co/free-stock-music/ambient/",
+      "license": "Mixkit Stock Music Free License",
+      "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+      "attributionRequired": false,
+      "duration": 229.819909,
+      "copyright": null
+    },
+    {
+      "id": "148",
+      "title": "Forest Mist Whispers",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit-forest-mist-whispers-148.mp3",
+      "downloadUrl": "https://assets.mixkit.co/music/148/148.mp3",
+      "sha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+      "bytes": 4830022,
+      "downloadedAt": "2026-10-16T15:25:33.910Z",
+      "catalog": "https://mixkit.co/free-stock-music/ambient/",
+      "license": "Mixkit Stock Music Free License",
+      "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+      "attributionRequired": false,
+      "duration": 150.936,
+      "copyright": null
+    },
+    {
+      "id": "726",
+      "title": "Uplifting Bass",
+      "artist": "Lily J",
+      "file": "mixkit-uplifting-bass-726.mp3",
+      "downloadUrl": "https://assets.mixkit.co/music/726/726.mp3",
+      "sha256": "6cdd3514fb6ce919f7b9e8984d9c11c3e2a7de9b39ec0e2658be0c64e69fd5e0",
+      "bytes": 3839999,
+      "downloadedAt": "2026-10-16T15:25:37.346Z",
+      "catalog": "https://mixkit.co/free-stock-music/ambient/",
+      "license": "Mixkit Stock Music Free License",
+      "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+      "attributionRequired": false,
+      "duration": 95.999975,
+      "copyright": null
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "strawberries",
+  "filename": "79-strawberries-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/79-strawberries-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "f142e1dbb3a0e31ddd77964e20bca6525d5f28b50ddb759a26bf5c052d299311",
+  "previousVideoSha256": "2b189209ec1a9e957b85fc65e71181b78791be7922fd0796d4d52a92bba2f2fc",
+  "videoStreamSha256": "a592aeea2b7ac6e0ad1412bfbbe7289180d0547796ea7f3c893b946ad5ab2912",
+  "videoStreamUnchanged": true,
+  "dataSha256": "0adc387d537f230249804539166664fb15aa004a360437d397f5330537d311ac",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 16.2,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -19.05,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.0,
+    "decodedPeakDb": -1.5,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:31.283226+00:00"
+}

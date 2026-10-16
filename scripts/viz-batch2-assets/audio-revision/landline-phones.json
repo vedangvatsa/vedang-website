@@ -1,0 +1,36 @@
+{
+  "slug": "landline-phones",
+  "filename": "62-landline-phones-2000-2023.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/62-landline-phones-2000-2023.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "a05acc9f840e6ccfe2491c80125ccda3a339f8b6c863c6582709c6b7f8c1a96d",
+  "previousVideoSha256": "a030a71210eae84150e764a87a93432cb35c137b8fee4c808a0b06196f3e7fde",
+  "videoStreamSha256": "839d0bcdce2a11c43985c3c78b11a34855625ba2d60ef2b707aebc35368fe1d9",
+  "videoStreamUnchanged": true,
+  "dataSha256": "e6e816ab9fc024373ab73e525d793fb1dbab981bdfb7e5a2c40c935e5e3312f8",
+  "frameStatesChecked": 973,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 5.4,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -19.06,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -17.9,
+    "decodedPeakDb": -1.4,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:02.310821+00:00"
+}

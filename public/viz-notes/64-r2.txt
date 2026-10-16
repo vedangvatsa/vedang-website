@@ -1,0 +1,54 @@
+# Households · 2002-2024
+
+Metric: Households and NPISHs Final consumption expenditure per capita (constant 2015 US$) (NE.CON.PRVT.PC.KD).
+Definition: This field includes expenditure on goods and services by the Household and NPISH sector for the direct satisfaction of human needs or wants, whether individual or collective. The core indicator has been divided by the general population to achieve a per capita estimate.This indicator is expressed in constant prices, meaning the series has been adjusted to account for price changes over time. The reference year for this adjustment is 2015. This indicator is expressed in United States dollars.
+Original provider: Country official statistics, National Statistical Offices (NSOs);
+National Accounts data files, Central Banks;
+Staff estimates, World Bank (WB)
+Source: https://data.worldbank.org/indicator/NE.CON.PRVT.PC.KD
+
+Top 10 reporting economies in each displayed year, considering all non-aggregate
+World Bank country/economy records. Territories are included where the provider
+reports them separately. Coverage ranges from 138 to 180 economies per year.
+Missing observations are excluded for that year; they are never replaced with zero,
+carried forward, or invented. This is a ranking of available records, not a claim
+that every country has reported every year.
+
+Period selection: the longest contiguous interval within the requested source period
+with at least 135 reporting economies per year.
+For automatically selected periods this is at least 75% of peak annual coverage,
+with a topic minimum of 30. This avoids incomplete recent
+updates being presented as a comparable complete ranking. Country inclusion is never
+hand-picked. Excluded years and full annual coverage are recorded in the data audit.
+
+Exact source values determine the order. Exact ties share a competition rank;
+ISO3 code order selects/stabilizes the ten displayed rows at a tied cutoff.
+Displayed values are rounded to 1 decimal places after dividing by
+1,000. The metric definition and units above govern interpretation.
+Positive values below display precision use a less-than label instead of a false zero.
+The publisher’s indicator definition above governs interpretation.
+
+Between published annual observations, bars and numbers glide by straight-line
+interpolation so motion is continuous; each published year anchors exact values
+at the segment ends. No observations outside the configured historical period and
+no forecasts are added. The source may itself contain estimates or revisions;
+provider definitions/observation flags are preserved in the source files and audit.
+Current flags and current provider entity names serve as identifiers, not a reconstruction
+of historical flags, borders, or political status.
+The Channel Islands reporting unit has a neutral geographic icon, not an invented flag.
+
+Verification: 3,952 nonmissing country/year observations
+cross-checked between World Bank JSON and its separately downloaded bulk CSV;
+zero mismatches. This checks faithful reproduction of the published dataset, not
+independent remeasurement of the underlying economic/demographic estimates.
+
+Retrieved: 2026-10-15T23:20:33.549819+00:00
+Provider release: 2026-10-08
+WDI data license: CC BY 4.0 (retain source attribution).
+
+Editorial note: Households and nonprofit institutions serving households, constant 2015 US dollars per person. This is not PPP-adjusted purchasing power or household income.
+
+Soundtrack edition no-attribution-v1.
+Valley Sunset by Alejandro Magaña (A. M.).
+Licensed under the Mixkit Stock Music Free License. Attribution is not required.
+https://mixkit.co/license/modal/musicFree/

@@ -1,0 +1,36 @@
+{
+  "slug": "science-papers",
+  "filename": "60-science-papers-2000-2023.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/60-science-papers-2000-2023.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "bc0ad09cde0a2321f321eaf218874d68b82c16143b7b2dfb7d5a463f7b0c2ed1",
+  "previousVideoSha256": "414f1dbc59d009758f25531e0ae3b0e9c826e81454fa202f403043f4a5109eb4",
+  "videoStreamSha256": "c706de6f521d1a9d9b95a6b2f167af6ffc3fc9aeeced20ccf58b16f669102a2b",
+  "videoStreamUnchanged": true,
+  "dataSha256": "d7212aae7955989764dcf5ee8ad03f35e829aec99aca75c240902bbeaa10c3a8",
+  "frameStatesChecked": 973,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 5.4,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -17.81,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.3,
+    "decodedPeakDb": -2.7,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:32:58.346648+00:00"
+}

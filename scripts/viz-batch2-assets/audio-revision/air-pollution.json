@@ -1,0 +1,36 @@
+{
+  "slug": "air-pollution",
+  "filename": "58-air-pollution-2000-2023.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/58-air-pollution-2000-2023.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "d5a70b9a734018d6b46feb01de3724459a98199f2db20a66ec57e8cf6fad65cf",
+  "previousVideoSha256": "f7f22c3047aefb5dc481ff47eb6af6b307d328291fceb7e5c704dc54f7148bd2",
+  "videoStreamSha256": "50b85aa6e17c4e79473658c3a222b5dcc604e0825f2d015f31b6535c04217556",
+  "videoStreamUnchanged": true,
+  "dataSha256": "6709d8782dd2501283a04769cadc4198526479623a0bed870a5d1546ef70eefc",
+  "frameStatesChecked": 973,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 2.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -18.85,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.0,
+    "decodedPeakDb": -1.5,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:32:55.171493+00:00"
+}

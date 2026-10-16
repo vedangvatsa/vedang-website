@@ -1,0 +1,446 @@
+{
+  "style": "concise-v2",
+  "status": "review",
+  "captions": [
+    {
+      "slug": "women-parliament",
+      "caption": "How women's representation in parliament changed.\n\n2000-2024. Parliamentary seats held by women as a share of the total.",
+      "maximumPlatformLength": 120
+    },
+    {
+      "slug": "tertiary-enrolment",
+      "caption": "How higher-education enrolment changed.\n\n2001-2023. Gross tertiary enrolment relative to the official age-group population, including students of all ages.",
+      "maximumPlatformLength": 155
+    },
+    {
+      "slug": "primary-teachers",
+      "caption": "How pupil-to-teacher ratios changed across countries.\n\n2000-2017. The average number of primary-school pupils per teacher.",
+      "maximumPlatformLength": 122
+    },
+    {
+      "slug": "private-credit",
+      "caption": "How private-sector credit changed across economies.\n\n2001-2024. Credit to the private sector as a share of GDP.",
+      "maximumPlatformLength": 111
+    },
+    {
+      "slug": "electricity-use",
+      "caption": "How electricity use per person changed.\n\n2000-2024. Electricity consumption per person, measured in megawatt-hours.",
+      "maximumPlatformLength": 115
+    },
+    {
+      "slug": "undernourishment",
+      "caption": "How undernourishment changed across countries.\n\n2001-2024. The estimated share of people whose habitual food intake provides insufficient dietary energy.",
+      "maximumPlatformLength": 153
+    },
+    {
+      "slug": "air-pollution",
+      "caption": "How exposure to fine-particle air pollution changed.\n\n2000-2023. Population-weighted annual PM2.5 exposure, measured in micrograms per cubic metre.",
+      "maximumPlatformLength": 147
+    },
+    {
+      "slug": "food-output",
+      "caption": "How food production changed against each country's baseline.\n\n2000-2024. Food production indexed to each country's 2014-2016 average of 100.",
+      "maximumPlatformLength": 140
+    },
+    {
+      "slug": "science-papers",
+      "caption": "How scientific publishing changed across countries.\n\n2000-2023. Scientific and technical articles, shown in thousands.",
+      "maximumPlatformLength": 118
+    },
+    {
+      "slug": "primary-completion",
+      "caption": "How primary-school completion ratios changed.\n\n2001-2024. New entrants to the last primary-school grade relative to the relevant-age population.",
+      "maximumPlatformLength": 144
+    },
+    {
+      "slug": "landline-phones",
+      "caption": "How fixed-line telephone subscriptions changed.\n\n2000-2023. Fixed telephone subscriptions, shown in millions.",
+      "maximumPlatformLength": 109
+    },
+    {
+      "slug": "public-consumption",
+      "caption": "How government consumption changed across economies.\n\n2000-2024. Government final consumption expenditure as a share of GDP.",
+      "maximumPlatformLength": 124
+    },
+    {
+      "slug": "household-consumption",
+      "caption": "How household spending per person changed.\n\n2002-2024. Household and nonprofit consumption per person, in thousands of constant 2015 US dollars.",
+      "maximumPlatformLength": 144
+    },
+    {
+      "slug": "out-of-pocket-health",
+      "caption": "Where households pay more of the healthcare bill.\n\n2000-2023. Direct household payments as a share of current health expenditure.",
+      "maximumPlatformLength": 129
+    },
+    {
+      "slug": "tuberculosis",
+      "caption": "How tuberculosis incidence changed across countries.\n\n2000-2024. Estimated annual new and relapse tuberculosis cases per 100,000 people.",
+      "maximumPlatformLength": 136
+    },
+    {
+      "slug": "hiv-prevalence",
+      "caption": "How HIV prevalence changed across countries.\n\n2000-2024. The estimated share of people aged 15-49 living with HIV.",
+      "maximumPlatformLength": 114
+    },
+    {
+      "slug": "nonperforming-loans",
+      "caption": "How problem loans changed across banking systems.\n\n2011-2024. Nonperforming loans as a share of total gross loans.",
+      "maximumPlatformLength": 114
+    },
+    {
+      "slug": "coffee",
+      "caption": "How the biggest coffee producers changed.\n\n2000-2024. Green coffee bean production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 126
+    },
+    {
+      "slug": "cocoa",
+      "caption": "How the largest cocoa bean producers changed.\n\n2000-2024. Cocoa bean production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 123
+    },
+    {
+      "slug": "honey",
+      "caption": "How the largest natural honey producers changed.\n\n2000-2024. Natural honey production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 130
+    },
+    {
+      "slug": "natural-rubber",
+      "caption": "How the largest natural rubber producers changed.\n\n2000-2024. Natural rubber production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 131
+    },
+    {
+      "slug": "cotton-lint",
+      "caption": "How the largest ginned cotton producers changed.\n\n2000-2023. Ginned cotton production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 129
+    },
+    {
+      "slug": "wine",
+      "caption": "How the largest wine producers changed.\n\n2000-2023. Wine production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 111
+    },
+    {
+      "slug": "beer",
+      "caption": "How the largest malted-barley beer producers changed.\n\n2000-2023. Malted-barley beer production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 139
+    },
+    {
+      "slug": "bananas",
+      "caption": "How the largest banana producers changed.\n\n2000-2024. Banana production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 115
+    },
+    {
+      "slug": "pineapples",
+      "caption": "How the largest pineapple producers changed.\n\n2000-2024. Pineapple production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 121
+    },
+    {
+      "slug": "strawberries",
+      "caption": "How the largest strawberry producers changed.\n\n2000-2024. Strawberry production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 123
+    },
+    {
+      "slug": "grapes",
+      "caption": "How the largest grape producers changed.\n\n2000-2024. Grape production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 113
+    },
+    {
+      "slug": "oranges",
+      "caption": "How the largest orange producers changed.\n\n2000-2024. Orange production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 115
+    },
+    {
+      "slug": "lemons-limes",
+      "caption": "How the largest lemon and lime producers changed.\n\n2000-2024. Lemon and lime production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 131
+    },
+    {
+      "slug": "mango-family",
+      "caption": "How the largest mango, guava and mangosteen producers changed.\n\n2000-2024. Mango, guava and mangosteen production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 157
+    },
+    {
+      "slug": "apricots",
+      "caption": "How the largest apricot producers changed.\n\n2000-2024. Apricot production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 117
+    },
+    {
+      "slug": "dates",
+      "caption": "How the largest date producers changed.\n\n2000-2024. Date production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 111
+    },
+    {
+      "slug": "cherries",
+      "caption": "How the largest cherry producers changed.\n\n2000-2024. Cherry production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 116
+    },
+    {
+      "slug": "papayas",
+      "caption": "How the largest papaya producers changed.\n\n2000-2024. Papaya production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 115
+    },
+    {
+      "slug": "coconuts",
+      "caption": "How the largest in-shell coconut producers changed.\n\n2000-2024. In-shell coconut production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 135
+    },
+    {
+      "slug": "walnuts",
+      "caption": "How the largest in-shell walnut producers changed.\n\n2000-2024. In-shell walnut production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 133
+    },
+    {
+      "slug": "pistachios",
+      "caption": "How the largest in-shell pistachio producers changed.\n\n2000-2024. In-shell pistachio production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 140
+    },
+    {
+      "slug": "cashews",
+      "caption": "How the largest in-shell cashew nut producers changed.\n\n2000-2024. In-shell cashew nut production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 141
+    },
+    {
+      "slug": "soybeans",
+      "caption": "How the largest soybean producers changed.\n\n2000-2024. Soybean production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 117
+    },
+    {
+      "slug": "peanuts",
+      "caption": "How the largest unshelled groundnut producers changed.\n\n2000-2024. Unshelled groundnut production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 141
+    },
+    {
+      "slug": "dry-beans",
+      "caption": "How the largest dry bean producers changed.\n\n2000-2024. Dry bean production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 119
+    },
+    {
+      "slug": "dry-peas",
+      "caption": "How the largest dry pea producers changed.\n\n2000-2024. Dry pea production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 117
+    },
+    {
+      "slug": "sesame",
+      "caption": "How the largest sesame seed producers changed.\n\n2000-2024. Sesame seed production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 125
+    },
+    {
+      "slug": "rapeseed",
+      "caption": "How the largest rapeseed producers changed.\n\n2000-2024. Rapeseed production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 119
+    },
+    {
+      "slug": "sunflower-seeds",
+      "caption": "How the largest sunflower seed producers changed.\n\n2000-2024. Sunflower seed production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 131
+    },
+    {
+      "slug": "potatoes",
+      "caption": "How the largest potato producers changed.\n\n2000-2024. Potato production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 115
+    },
+    {
+      "slug": "cassava",
+      "caption": "How the largest fresh cassava producers changed.\n\n2000-2024. Fresh cassava production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 129
+    },
+    {
+      "slug": "tomatoes",
+      "caption": "How the largest tomato producers changed.\n\n2000-2024. Tomato production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 115
+    },
+    {
+      "slug": "dry-onions",
+      "caption": "How the largest dry onion and shallot producers changed.\n\n2000-2024. Dry onion and shallot production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 145
+    },
+    {
+      "slug": "broccoli-family",
+      "caption": "How the largest cauliflower and broccoli producers changed.\n\n2000-2024. Cauliflower and broccoli production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 151
+    },
+    {
+      "slug": "pumpkins",
+      "caption": "How the largest pumpkin, squash and gourd producers changed.\n\n2000-2024. Pumpkin, squash and gourd production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 153
+    },
+    {
+      "slug": "sugarcane",
+      "caption": "How the largest sugar cane producers changed.\n\n2000-2024. Sugar cane production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 123
+    },
+    {
+      "slug": "sugar-beet",
+      "caption": "How the largest sugar beet producers changed.\n\n2000-2024. Sugar beet production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 123
+    },
+    {
+      "slug": "ginger",
+      "caption": "How the largest raw ginger producers changed.\n\n2000-2024. Raw ginger production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 123
+    },
+    {
+      "slug": "peppercorns",
+      "caption": "How the largest raw peppercorn producers changed.\n\n2000-2024. Raw peppercorn production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 132
+    },
+    {
+      "slug": "hops",
+      "caption": "How the largest hop cone producers changed.\n\n2000-2024. Hop cone production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 120
+    },
+    {
+      "slug": "wool",
+      "caption": "How the largest greasy shorn wool producers changed.\n\n2000-2017. Greasy shorn wool production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 138
+    },
+    {
+      "slug": "sisal",
+      "caption": "How the largest raw sisal producers changed.\n\n2000-2024. Raw sisal production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 122
+    },
+    {
+      "slug": "goat-meat",
+      "caption": "How the largest goat meat producers changed.\n\n2000-2024. Goat meat production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 121
+    },
+    {
+      "slug": "sheep-meat",
+      "caption": "How the largest sheep meat producers changed.\n\n2000-2024. Sheep meat production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 123
+    },
+    {
+      "slug": "cheese",
+      "caption": "How the largest cheese producers changed.\n\n2000-2023. Cheese production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 115
+    },
+    {
+      "slug": "yoghurt",
+      "caption": "How the largest yoghurt producers changed.\n\n2010-2023. Yoghurt production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 118
+    },
+    {
+      "slug": "raspberries",
+      "caption": "How the largest raspberry producers changed.\n\n2000-2024. Raspberry production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 122
+    },
+    {
+      "slug": "quinces",
+      "caption": "How the largest quince producers changed.\n\n2000-2017. Quince production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 116
+    },
+    {
+      "slug": "grapefruit-family",
+      "caption": "How the largest pomelo and grapefruit producers changed.\n\n2000-2024. Pomelo and grapefruit production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 145
+    },
+    {
+      "slug": "linseed",
+      "caption": "How the largest linseed producers changed.\n\n2000-2024. Linseed production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 117
+    },
+    {
+      "slug": "cowpeas",
+      "caption": "How the largest dry cowpea producers changed.\n\n2000-2024. Dry cowpea production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 123
+    },
+    {
+      "slug": "broad-beans",
+      "caption": "How the largest dry broad bean and horse bean producers changed.\n\n2000-2024. Dry broad bean and horse bean production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 161
+    },
+    {
+      "slug": "taro",
+      "caption": "How the largest taro producers changed.\n\n2000-2024. Taro production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 111
+    },
+    {
+      "slug": "leeks",
+      "caption": "How the largest leek and related vegetable producers changed.\n\n2000-2024. Leek and related vegetable production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 156
+    },
+    {
+      "slug": "dried-chillies",
+      "caption": "How the largest dried chilli and pepper producers changed.\n\n2000-2024. Dried chilli and pepper production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 149
+    },
+    {
+      "slug": "vanilla",
+      "caption": "How the largest raw vanilla producers changed.\n\n2000-2024. Raw vanilla production by country, measured in tonnes.",
+      "maximumPlatformLength": 113
+    },
+    {
+      "slug": "nutmeg-family",
+      "caption": "How the largest nutmeg, mace and cardamom producers changed.\n\n2000-2024. Nutmeg, mace and cardamom production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 154
+    },
+    {
+      "slug": "olive-oil",
+      "caption": "How the largest olive oil producers changed.\n\n2000-2023. Olive oil production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 121
+    },
+    {
+      "slug": "palm-oil",
+      "caption": "How the largest palm oil producers changed.\n\n2000-2023. Palm oil production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 119
+    },
+    {
+      "slug": "camel-meat",
+      "caption": "How the largest camel meat producers changed.\n\n2000-2024. Camel meat production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 124
+    },
+    {
+      "slug": "cream",
+      "caption": "How the largest fresh cream producers changed.\n\n2000-2023. Fresh cream production by country, measured in thousands of tonnes.",
+      "maximumPlatformLength": 126
+    },
+    {
+      "slug": "milk-powder",
+      "caption": "How the largest whole milk powder producers changed.\n\n2000-2023. Whole milk powder production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 137
+    },
+    {
+      "slug": "plantains",
+      "caption": "How the largest plantain and cooking banana producers changed.\n\n2000-2024. Plantain and cooking banana production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 157
+    },
+    {
+      "slug": "tea-leaves",
+      "caption": "How the largest tea leaf producers changed.\n\n2000-2024. Tea leaf production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 119
+    },
+    {
+      "slug": "molasses",
+      "caption": "How the largest molasses producers changed.\n\n2000-2023. Molasses production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 119
+    },
+    {
+      "slug": "sheep-milk",
+      "caption": "How the largest raw sheep milk producers changed.\n\n2000-2024. Raw sheep milk production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 131
+    },
+    {
+      "slug": "sunflower-oil",
+      "caption": "How the largest crude sunflower-seed oil producers changed.\n\n2000-2023. Crude sunflower-seed oil production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 151
+    },
+    {
+      "slug": "peanut-oil",
+      "caption": "How the largest groundnut oil producers changed.\n\n2000-2023. Groundnut oil production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 129
+    },
+    {
+      "slug": "rapeseed-oil",
+      "caption": "How the largest crude rapeseed or canola oil producers changed.\n\n2000-2023. Crude rapeseed or canola oil production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 159
+    },
+    {
+      "slug": "soybean-oil",
+      "caption": "How the largest soybean oil producers changed.\n\n2000-2023. Soybean oil production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 125
+    },
+    {
+      "slug": "cottonseed-oil",
+      "caption": "How the largest cottonseed oil producers changed.\n\n2000-2023. Cottonseed oil production by country, measured in millions of tonnes.",
+      "maximumPlatformLength": 131
+    }
+  ]
+}

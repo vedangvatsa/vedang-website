@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "changes": {
+    "youtube": 87,
+    "instagram": 87,
+    "tiktok": 87,
+    "linkedin": 87,
+    "facebook": 88,
+    "threads": 88,
+    "bluesky": 88,
+    "x": 88,
+    "tumblr": 88,
+    "mastodon": 88,
+    "farcaster": 88
+  },
+  "alreadyPublished": [
+    {
+      "platform": "youtube",
+      "id": "viz-b2-yt-70",
+      "slug": "coffee",
+      "url": "https://www.youtube.com/watch?v=CHbltia6Crc",
+      "remoteId": "6ad21d9225d13dd62ee81890"
+    },
+    {
+      "platform": "instagram",
+      "id": "viz-b2-ig-70",
+      "slug": "coffee",
+      "url": "https://www.instagram.com/reel/DejkrrLiQ33/",
+      "remoteId": "6ad21d9263c879f9585a387b"
+    },
+    {
+      "platform": "tiktok",
+      "id": "viz-b2-tt-70",
+      "slug": "coffee",
+      "url": "https://tiktok.com/@vedangvatsa/video/7697247250631675143",
+      "remoteId": "6ad21d9263c879f9585a3879"
+    },
+    {
+      "platform": "linkedin",
+      "id": "viz-b2-linkedin-70",
+      "slug": "coffee",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7516843461216657408/",
+      "remoteId": "urn:li:ugcPost:7516843461216657408"
+    }
+  ],
+  "postingPaused": true
+}

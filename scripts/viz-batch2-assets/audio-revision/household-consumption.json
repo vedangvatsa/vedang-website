@@ -1,0 +1,36 @@
+{
+  "slug": "household-consumption",
+  "filename": "64-household-consumption-2002-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/64-household-consumption-2002-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "d2459ba9190205096abcb6dc0a879e1d14339f908c972c0b029ed0f3be2934a1",
+  "previousVideoSha256": "78ba93bbe1a39878d5c5807c5c7162972938051e0d09f864b63333d2575035a0",
+  "videoStreamSha256": "6f62f55f222f0d6bb933a34276eeed4b256c5f89791d3b6d41d58afe57336149",
+  "videoStreamUnchanged": true,
+  "dataSha256": "5f55fbf2f55024504411b19137db2d4032796009aab0d1eb26696bd457e64be7",
+  "frameStatesChecked": 970,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 8.1,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -18.4,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.2,
+    "decodedPeakDb": -2.3,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:05.497797+00:00"
+}

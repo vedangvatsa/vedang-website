@@ -1,0 +1,36 @@
+{
+  "slug": "dry-onions",
+  "filename": "102-dry-onions-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/102-dry-onions-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "6b17cbd5532de806df5258974255af96c53931b1108e6d0862fdc269f4357213",
+  "previousVideoSha256": "b5d56f9156686945c23f439c64197b2ee0cdb24b5d3fd5eb1cec4aabc7fdceb1",
+  "videoStreamSha256": "969c7338704cd490a559fd8aef473cf95a645153a227a8466fbdcaf709b98b8b",
+  "videoStreamUnchanged": true,
+  "dataSha256": "62d587662498bab1824e33243d9e90f253f02d197f1acd90a6bcf59323730d5c",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "184",
+    "title": "Vastness",
+    "artist": "Andrew Ev",
+    "sourceSha256": "3ffae7ccd5ea6f612f75efdf9a8318ccce79a5e4f355b26e233631330a57660f",
+    "offsetSeconds": 32.4,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -14.01,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -15.9,
+    "decodedPeakDb": -2.3,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:11.179470+00:00"
+}

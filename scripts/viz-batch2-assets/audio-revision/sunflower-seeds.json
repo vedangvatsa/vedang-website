@@ -1,0 +1,36 @@
+{
+  "slug": "sunflower-seeds",
+  "filename": "98-sunflower-seeds-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/98-sunflower-seeds-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "bdab5e58adc5d10aaba7acc3745a6d0cbbd5c6a0c17b14692c4642ab7dadde1c",
+  "previousVideoSha256": "6d40708d6d347318145862bd6baaa9dc9d6bddec4b4ef51a8ece3c84ae0d6b50",
+  "videoStreamSha256": "1aa10bdc516b78dad0c5397230656e860f1022a7b4fe1a673e760f6aa5fc6bdc",
+  "videoStreamUnchanged": true,
+  "dataSha256": "496b97acea02df80b7f8a0b52d32049a633f6e41feb30a99b535f72810a2647f",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "184",
+    "title": "Vastness",
+    "artist": "Andrew Ev",
+    "sourceSha256": "3ffae7ccd5ea6f612f75efdf9a8318ccce79a5e4f355b26e233631330a57660f",
+    "offsetSeconds": 29.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -13.97,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -15.8,
+    "decodedPeakDb": -2.4,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:04.000135+00:00"
+}

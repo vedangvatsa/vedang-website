@@ -1,0 +1,21 @@
+# Cheese production | 2000-2023
+
+Metric: Cheese (All Kinds) production (tonnes) (FAOSTAT QCL item 1745, production element, tonnes).
+FAOSTAT QCL product 1745: Cheese (All Kinds). Annual production quantity in metric tonnes. Product definitions and any grouping in the official name apply; this is not exports, consumption, value, or yield.
+Provider: Food and Agriculture Organization of the United Nations, FAOSTAT, Crops and livestock products (2025 release).
+Source: https://www.fao.org/faostat/en/#data/QCL
+
+All reporting current ISO country/economy units are considered, including separately reported territories. Regional aggregates and historical units without a current ISO mapping are excluded and listed in the audit. China mainland is separate from separately reporting territories. The displayed top ten must all have positive production records. Missing observations are excluded, never invented, zero-filled, or carried forward. Published zeroes remain zeroes. FAO estimates and imputations are retained with their original flags.
+
+Period: longest consecutive interval in 2000-2024 satisfying at least 75% of peak reporting coverage and at least 12 economies, with a minimum of ten years. Published annual values anchor the animation; motion between them uses linear interpolation. Ranks use the published annual order; during a transition they indicate the destination-year ranking. Fixed zero-based scales preserve proportional bar lengths.
+
+Verification: 2,541 country/year values matched between two official FAOSTAT exports (normalized and wide CSV), including missingness checks. This confirms reproduction of published data, not independent measurement of production. Original archives, checksums and flags accompany this video.
+
+FAO. 2025. FAOSTAT: Crops and livestock products. Accessed 16 October 2026. https://www.fao.org/faostat/en/#data/QCL. Licence: CC-BY-4.0.
+Terms: https://www.fao.org/contact-us/terms/db-terms-of-use/en
+Visualization by Vedang Vatsa, @vedangvatsa. FAO has not endorsed this visualization.
+
+Soundtrack edition no-attribution-v1.
+Vastness by Andrew Ev.
+Licensed under the Mixkit Stock Music Free License. Attribution is not required.
+https://mixkit.co/license/modal/musicFree/

@@ -1,0 +1,36 @@
+{
+  "slug": "beer",
+  "filename": "76-beer-2000-2023.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/76-beer-2000-2023.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "a9df19c951f003726441bee23b1dc1dd4cb87cb5198a2e6210817f48d2f9cec8",
+  "previousVideoSha256": "9bc05c99175e0543b14d9e0dc44799f8fc54252c08e2ab82ab0c3a2201627fb7",
+  "videoStreamSha256": "427c428b0326b1d1f7d474d09b1d70c16f6f2d45eb350394f6a06946a7ff536c",
+  "videoStreamUnchanged": true,
+  "dataSha256": "f899d699142228f7ca07a2e9de186a7d5f0818b7c3702c85b410c6a97d885d27",
+  "frameStatesChecked": 973,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "726",
+    "title": "Uplifting Bass",
+    "artist": "Lily J",
+    "sourceSha256": "6cdd3514fb6ce919f7b9e8984d9c11c3e2a7de9b39ec0e2658be0c64e69fd5e0",
+    "offsetSeconds": 13.5,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -11.48,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -16.8,
+    "decodedPeakDb": -4.3,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:25.880040+00:00"
+}

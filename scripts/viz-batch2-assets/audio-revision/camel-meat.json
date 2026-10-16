@@ -1,0 +1,36 @@
+{
+  "slug": "camel-meat",
+  "filename": "129-camel-meat-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/129-camel-meat-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "4c97288067b6a5f63fcb4d06855ee048b3f48b6d656c91876299fc8e5189e344",
+  "previousVideoSha256": "5d1bd0b698a10027b225653751fd7e42289f7d22134c98f102fece5ce71127ed",
+  "videoStreamSha256": "e36681d797c60e69d51fd2eb3e556d88ff5e11978bd5ae8dda63363efde84df2",
+  "videoStreamUnchanged": true,
+  "dataSha256": "c5f4e6ceac88f98bc4cad237c95e8a020c28c3d43c05a41f5c9f8f35a884dfa4",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 51.3,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -16.61,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.3,
+    "decodedPeakDb": -2.9,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:59.756946+00:00"
+}

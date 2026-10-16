@@ -1,0 +1,36 @@
+{
+  "slug": "rapeseed-oil",
+  "filename": "138-rapeseed-oil-2000-2023.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/138-rapeseed-oil-2000-2023.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "a76269e8d5f802a11476f60ea2dcb61ab0076e85fb348d80bb48751b3dab5b7a",
+  "previousVideoSha256": "9d611af45649d1b55f604582bb36648d6a572cb046a48d9814dfec3000481455",
+  "videoStreamSha256": "60f8475e4180d60c884861993c857b9dfcaeb527120139e510a967cc8a617d26",
+  "videoStreamUnchanged": true,
+  "dataSha256": "f842aaac6160478222bdf5b634381bbbc5f747d666bab9574896aff4511ae345",
+  "frameStatesChecked": 973,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "184",
+    "title": "Vastness",
+    "artist": "Andrew Ev",
+    "sourceSha256": "3ffae7ccd5ea6f612f75efdf9a8318ccce79a5e4f355b26e233631330a57660f",
+    "offsetSeconds": 56.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -13.98,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -15.8,
+    "decodedPeakDb": -2.3,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:35:14.045072+00:00"
+}

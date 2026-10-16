@@ -1,0 +1,36 @@
+{
+  "slug": "dried-chillies",
+  "filename": "124-dried-chillies-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/124-dried-chillies-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "17cd1275695d5135c4d3e9a5d538c586ad692e66310223288b5570e9ee22a76c",
+  "previousVideoSha256": "4c471e5c3a871daa5ee23683dfaeca903877dbc92cf1f21d0ada9d170ff05fad",
+  "videoStreamSha256": "9043f7aac801826ecef84ccbc36feb68c5c8468991509a8afa184fdb3a3280d9",
+  "videoStreamUnchanged": true,
+  "dataSha256": "01051fdc79e3b5e263d36b4d530128987d15e258889c34f50c09d95e62cbb451",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "726",
+    "title": "Uplifting Bass",
+    "artist": "Lily J",
+    "sourceSha256": "6cdd3514fb6ce919f7b9e8984d9c11c3e2a7de9b39ec0e2658be0c64e69fd5e0",
+    "offsetSeconds": 45.9,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -11.1,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -17.1,
+    "decodedPeakDb": -4.4,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:50.980539+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "soybeans",
+  "filename": "92-soybeans-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/92-soybeans-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "b108c9bfcb3d88ab8fa6216b0ac4a7b745abdbee81a8edecab39f6fe55b2a528",
+  "previousVideoSha256": "81ee06262cf26ce3d9905ac412f1a861e72cd4be3ac15a77b9b28c2540999d1f",
+  "videoStreamSha256": "892a834090b91f47c0943c087e4e88f95bc9d87ae05a007f1750b904c9e388db",
+  "videoStreamUnchanged": true,
+  "dataSha256": "0c86678d99e7a64e6f151c43e147ab91a7a76b76144c2d56bdeaf438c57af7e8",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "726",
+    "title": "Uplifting Bass",
+    "artist": "Lily J",
+    "sourceSha256": "6cdd3514fb6ce919f7b9e8984d9c11c3e2a7de9b39ec0e2658be0c64e69fd5e0",
+    "offsetSeconds": 24.3,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -11.36,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -16.9,
+    "decodedPeakDb": -4.4,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:54.764025+00:00"
+}

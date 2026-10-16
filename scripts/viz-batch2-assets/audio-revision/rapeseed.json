@@ -1,0 +1,36 @@
+{
+  "slug": "rapeseed",
+  "filename": "97-rapeseed-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/97-rapeseed-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "0bd085a98bc4fa3047db668a920eacf353a2c425947a606f6fe4a1b2a7a793b2",
+  "previousVideoSha256": "26a7f24215c708f32eeac6bb726a1e24a0b28858fb72d7c163661432cd3ad927",
+  "videoStreamSha256": "3be011e56c47e6e3875751a90d955d9a4c18a8455367d4a9f47424034a335a32",
+  "videoStreamUnchanged": true,
+  "dataSha256": "b87e1ac35aa19787251bba43b2c6c0f00097d12e181d753a72dbc9bb1e1210df",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 29.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -16.54,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.6,
+    "decodedPeakDb": -2.9,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:02.469158+00:00"
+}

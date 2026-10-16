@@ -1,0 +1,52 @@
+# Food output · 2000-2024
+
+Metric: Food production index (2014-2016 = 100) (AG.PRD.FOOD.XD).
+Definition: Food production index covers food crops that are considered edible and that contain nutrients. Coffee and tea are excluded because, although edible, they have no nutritive value.
+Original provider: FAO electronic files and web site, Food and Agriculture Organization of the United Nations (FAO), publisher: Food and Agriculture Organization of the United Nations (FAO)
+Source: https://data.worldbank.org/indicator/AG.PRD.FOOD.XD
+
+Top 10 reporting economies in each displayed year, considering all non-aggregate
+World Bank country/economy records. Territories are included where the provider
+reports them separately. Coverage ranges from 191 to 195 economies per year.
+Missing observations are excluded for that year; they are never replaced with zero,
+carried forward, or invented. This is a ranking of available records, not a claim
+that every country has reported every year.
+
+Period selection: the longest contiguous interval within the requested source period
+with at least 147 reporting economies per year.
+For automatically selected periods this is at least 75% of peak annual coverage,
+with a topic minimum of 30. This avoids incomplete recent
+updates being presented as a comparable complete ranking. Country inclusion is never
+hand-picked. Excluded years and full annual coverage are recorded in the data audit.
+
+Exact source values determine the order. Exact ties share a competition rank;
+ISO3 code order selects/stabilizes the ten displayed rows at a tied cutoff.
+Displayed values are rounded to 1 decimal places after dividing by
+1. The metric definition and units above govern interpretation.
+Positive values below display precision use a less-than label instead of a false zero.
+The publisher’s indicator definition above governs interpretation.
+
+Between published annual observations, bars and numbers glide by straight-line
+interpolation so motion is continuous; each published year anchors exact values
+at the segment ends. No observations outside the configured historical period and
+no forecasts are added. The source may itself contain estimates or revisions;
+provider definitions/observation flags are preserved in the source files and audit.
+Current flags and current provider entity names serve as identifiers, not a reconstruction
+of historical flags, borders, or political status.
+The Channel Islands reporting unit has a neutral geographic icon, not an invented flag.
+
+Verification: 4,834 nonmissing country/year observations
+cross-checked between World Bank JSON and its separately downloaded bulk CSV;
+zero mismatches. This checks faithful reproduction of the published dataset, not
+independent remeasurement of the underlying economic/demographic estimates.
+
+Retrieved: 2026-10-15T23:17:27.232191+00:00
+Provider release: 2026-10-08
+WDI data license: CC BY 4.0 (retain source attribution).
+
+Editorial note: Each economy's own 2014-2016 average equals 100. This compares change relative to a national baseline, not absolute food tonnage. St. Kitts and Nevis has a sharp fall in 2005-2006; the early index values should not be read as superior current output.
+
+Soundtrack edition no-attribution-v1.
+Uplifting Bass by Lily J.
+Licensed under the Mixkit Stock Music Free License. Attribution is not required.
+https://mixkit.co/license/modal/musicFree/

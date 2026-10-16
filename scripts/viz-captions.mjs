@@ -34,6 +34,16 @@ export function validateConciseBufferCaption(text) {
   if (text.split(/\s+/).length > 60) throw new Error('Concise caption exceeds 60 words');
 }
 
+export function validateVideoOnlyCaption(text) {
+  if (typeof text !== 'string' || !text.trim()) throw new Error('Video caption is empty');
+  if (/https?:|www\.|github|music|credits?\s*:|licen[cs]e|\bsource\b|attribution|loudness|fades?|render|verification|animation|#/i.test(text)) {
+    throw new Error('Video-only caption contains links or production details');
+  }
+  const paragraphs = text.split('\n\n');
+  if (paragraphs.length !== 2 || !/^\d{4}-\d{4}\. /.test(paragraphs[1])) throw new Error('Video caption must use a hook, then years and metric');
+  if (text.split(/\s+/).length > 60) throw new Error('Video caption exceeds 60 words');
+}
+
 export function makeCaptions({ copy, chart, number, music, conciseDescription, sourceCredit }) {
   const [label, lead] = copy;
   const years = `${chart.startYear}-${chart.endYear}`;

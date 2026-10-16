@@ -1,0 +1,36 @@
+{
+  "slug": "potatoes",
+  "filename": "99-potatoes-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/99-potatoes-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "4f71582d0f9cebfdbba667ff20d2e74eaa0ef8978860681f56fc264a010c3177",
+  "previousVideoSha256": "68b414becc99a1aea841bf19a68c9d5a4c9c24f7e4bebe39b97e0eb6bf3f520c",
+  "videoStreamSha256": "e80a413ffd7374f030f5774c87363fdd095fd5de0db41571d5b394d95772c602",
+  "videoStreamUnchanged": true,
+  "dataSha256": "e5924771e4cb57ee3c3ccd364f233fc337599755cd9a178d4a7a5da674ad2166",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 29.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -17.39,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.2,
+    "decodedPeakDb": -1.7,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:06.461990+00:00"
+}

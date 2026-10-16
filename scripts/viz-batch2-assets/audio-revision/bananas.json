@@ -1,0 +1,36 @@
+{
+  "slug": "bananas",
+  "filename": "77-bananas-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/77-bananas-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "124830af56eca80225dc4efc8421d61c1b7070e24e7ab10a143e73c661008397",
+  "previousVideoSha256": "6b2d8bb5aa94c7ab3c77d550d5025feff10622a73af959cce404b2b4cd2427ee",
+  "videoStreamSha256": "5d94e37fe04c4358535f7dbc14af88bd2e2468c0a540592695f4d86b710b6f58",
+  "videoStreamUnchanged": true,
+  "dataSha256": "170fdc23ba2810a87c77595bfda3827efaa05cac9f5c9033fb77f689c8463f84",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 16.2,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -19.21,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.3,
+    "decodedPeakDb": -3.6,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:27.354752+00:00"
+}

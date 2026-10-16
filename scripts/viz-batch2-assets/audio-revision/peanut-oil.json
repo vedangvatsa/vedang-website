@@ -1,0 +1,36 @@
+{
+  "slug": "peanut-oil",
+  "filename": "137-peanut-oil-2000-2023.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/137-peanut-oil-2000-2023.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "26c7e08fc025e456ad0ce2b4b4eaa7340f809fd3974e2628c9d79b24ed4b176d",
+  "previousVideoSha256": "e93e5ee31b7c90cdfa9b36a5f8c209a5adbcdeb933cd5cc9022804e4bfa9dded",
+  "videoStreamSha256": "de3fd9a1ba7739ccefe1b664b9203a7c233ee7aafa0770db6247949813fc7c1e",
+  "videoStreamUnchanged": true,
+  "dataSha256": "0cdd3918a0c795b4031d1b5977db6485d0247255da41435f0cff2622a1155255",
+  "frameStatesChecked": 973,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 56.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -17.07,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.7,
+    "decodedPeakDb": -3.0,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:35:12.507219+00:00"
+}

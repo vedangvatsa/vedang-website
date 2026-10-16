@@ -1,0 +1,36 @@
+{
+  "slug": "sheep-meat",
+  "filename": "113-sheep-meat-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/113-sheep-meat-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "968e5fb3a07e0feec9c6423f40f3af831fbff0df87362e155b65dccb25feac22",
+  "previousVideoSha256": "9776e092303d6e308e85aa4f609577f0b814642898d5003a649ad06f4778c441",
+  "videoStreamSha256": "aac93e29e85005d1b0f6546fb56fa52750f58099d44c96c475199c12ab56e8ed",
+  "videoStreamUnchanged": true,
+  "dataSha256": "e2f0c8b539f33c90d431684a256eca46d38d73bf0bcdc4138d3b1c00fc3ef7a1",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 40.5,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -15.44,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.5,
+    "decodedPeakDb": -3.3,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:30.429652+00:00"
+}

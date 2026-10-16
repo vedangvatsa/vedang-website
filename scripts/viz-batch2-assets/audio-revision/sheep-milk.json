@@ -1,0 +1,36 @@
+{
+  "slug": "sheep-milk",
+  "filename": "135-sheep-milk-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/135-sheep-milk-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "56e2dcb4f552d4b85aaae3b537e4dee56520ff17a17826126a74b140a034359e",
+  "previousVideoSha256": "9bc416ea0730cda98203d3f47c1789a9ceef1aef00b949e970305f56f2e052e7",
+  "videoStreamSha256": "76c00d7870ebad346f450de689a8934c9f10cf009d336cb020f45f946e83fb2b",
+  "videoStreamUnchanged": true,
+  "dataSha256": "b04f00106e7ef4820bb256729032239afe496f579758c34491f7566ee08cadbe",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 54.0,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -14.06,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.3,
+    "decodedPeakDb": -2.0,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:35:09.171057+00:00"
+}

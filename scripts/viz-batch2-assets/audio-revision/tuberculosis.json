@@ -1,0 +1,36 @@
+{
+  "slug": "tuberculosis",
+  "filename": "66-tuberculosis-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/66-tuberculosis-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "489572e5612ba67590efdf697f503c22658b11fd8befde04b0686f0cf073d1d2",
+  "previousVideoSha256": "bdb7d675ea1e618ffffbd8145ffdb5dc66b440a31b9fc7f4b5b5298ae7c7dc5c",
+  "videoStreamSha256": "7d8b7231bf788e9b29757b0811695018f6a3af5deba6ec4e5ff87b72651f25bd",
+  "videoStreamUnchanged": true,
+  "dataSha256": "5cd1171949d4ebae35954c9547a5400c54c950d61811a81d20837bf3f5ea4a4f",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 8.1,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -18.62,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -17.9,
+    "decodedPeakDb": -1.5,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:09.569271+00:00"
+}

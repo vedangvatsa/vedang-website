@@ -1,0 +1,36 @@
+{
+  "slug": "mango-family",
+  "filename": "83-mango-family-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/83-mango-family-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "734741e9d210f3dff06cb7546f7357b9d5fe522e5c03f44683a143ef0dc07a24",
+  "previousVideoSha256": "eb263280f13fe5d8b7d52b6e47792559df102681b81000a9bbee906b3c7226db",
+  "videoStreamSha256": "7715110f789be2d6f2e4d5f06cf9e190761142b5ce53535d69b0538a91e0cd83",
+  "videoStreamUnchanged": true,
+  "dataSha256": "b59fc2099f4c7a52b3af28385b031f85e5348255079af60784b3a9d7770664b5",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 18.9,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -19.37,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.0,
+    "decodedPeakDb": -1.5,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:38.523314+00:00"
+}

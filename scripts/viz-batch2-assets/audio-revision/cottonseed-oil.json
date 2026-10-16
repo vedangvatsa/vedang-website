@@ -1,0 +1,36 @@
+{
+  "slug": "cottonseed-oil",
+  "filename": "140-cottonseed-oil-2000-2023.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/140-cottonseed-oil-2000-2023.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "5e1c0e29dabef84bc531eb5a33d9c9dd911709c20ca4025b8894ed1afec3ef5b",
+  "previousVideoSha256": "9837e09367707d8afffe64c95825dc2fd4c399dd73ec568dc8b7dfa0be60f7c2",
+  "videoStreamSha256": "312afb68e98e950c6452b6a65dacdafa138eadd878e2eb88fdd6ac552c933add",
+  "videoStreamUnchanged": true,
+  "dataSha256": "e8c15a31d84d1820dc773734ee2d2adf7c5ce20ec8ea85f65a6345310aaa168d",
+  "frameStatesChecked": 900,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "726",
+    "title": "Uplifting Bass",
+    "artist": "Lily J",
+    "sourceSha256": "6cdd3514fb6ce919f7b9e8984d9c11c3e2a7de9b39ec0e2658be0c64e69fd5e0",
+    "offsetSeconds": 56.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -11.43,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -16.9,
+    "decodedPeakDb": -3.9,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:35:17.346313+00:00"
+}

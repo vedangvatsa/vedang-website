@@ -1,0 +1,36 @@
+{
+  "slug": "hiv-prevalence",
+  "filename": "67-hiv-prevalence-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/67-hiv-prevalence-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "93d889f3cb9d3342b777d2df79ea0b0fb00ecbc4b61e2b52226d67a9cfa41feb",
+  "previousVideoSha256": "6ca805ac14d006034977089d6431aee24b427893e76f0c3a7f622fe5d761a501",
+  "videoStreamSha256": "90ecce227cc0c9df0fb8167d3694d1d2d044e3021ae65e77fefcf3837704618a",
+  "videoStreamUnchanged": true,
+  "dataSha256": "6e8c76a41d0e44e8b7d522b3e95f0494a916740152b58268076df9ebf0d7abe7",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "726",
+    "title": "Uplifting Bass",
+    "artist": "Lily J",
+    "sourceSha256": "6cdd3514fb6ce919f7b9e8984d9c11c3e2a7de9b39ec0e2658be0c64e69fd5e0",
+    "offsetSeconds": 8.1,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -12.17,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -16.9,
+    "decodedPeakDb": -2.2,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:11.249000+00:00"
+}

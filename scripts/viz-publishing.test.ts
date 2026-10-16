@@ -4,10 +4,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { createHash } from 'node:crypto';
-import { ROOT, selectDue, type VizPost, readQueue, publicVideoUrl } from './viz-publishing.js';
+import { ROOT, selectDue, type VizPost, readQueue, publicVideoUrl, localVideo } from './viz-publishing.js';
 import { buildInput, applyBufferStatus, runPlatform, PLATFORMS, chooseChannel } from './buffer-viz-scheduled-executor.js';
 import { runPlatform as runNative } from './native-viz-scheduled-executor.js';
-import { captionLength, validateCaption, validateConciseBufferCaption, conciseBufferCaption, LIMITS } from './viz-captions.mjs';
+import { captionLength, validateCaption, validateConciseBufferCaption, conciseBufferCaption, validateVideoOnlyCaption, LIMITS } from './viz-captions.mjs';
 import { needsBufferWork } from './viz-queue-time.mjs';
 import { sourceCredit } from './viz-source-credit.mjs';
 import { configuredDirectPlatforms, DIRECT_PLATFORMS } from './viz-platforms.mjs';
@@ -146,14 +146,22 @@ test('all captions fit their platform and retain their declared caption format',
       const text = platform === 'youtube' ? p.description : p.text;
       validateCaption(platform, text);
       if (p.batchId === '2026-10-16') {
-        assert.ok(['licensed-v2', 'licensed-short-v2'].includes(String(p.captionStyle)));
-        assert.ok(text?.includes(String(p.musicCredit)), 'Required music attribution missing');
-        if (p.captionStyle === 'licensed-short-v2') {
-          assert.ok(text?.includes(String(p.publicNotesUrl)), 'Source definitions and track notes missing');
-          assert.ok(text?.includes('https://creativecommons.org/licenses/by/4.0/'));
-          assert.equal(p.sourceCredit, sourceCredit({ sourceOrganization: p.sourceOrganization }));
-          assert.ok(text?.includes(`Source ${p.sourceCredit}.`));
-        } else assert.ok(text?.includes(String(p.sourceUrl)), 'Data source link missing');
+        if (p.captionStyle === 'concise-v2') {
+          validateVideoOnlyCaption(text);
+          assert.equal(p.audioAttributionRequired, false);
+          assert.ok(String(p.video).includes('/no-attribution/'));
+          assert.equal(p.audioLicense, 'Mixkit Stock Music Free License');
+        } else {
+          assert.equal(p.posted, true, 'Unpublished batch captions must use the requested video-only format');
+          assert.ok(['licensed-v2', 'licensed-short-v2'].includes(String(p.captionStyle)));
+          assert.ok(text?.includes(String(p.musicCredit)), 'Required music attribution missing');
+          if (p.captionStyle === 'licensed-short-v2') {
+            assert.ok(text?.includes(String(p.publicNotesUrl)), 'Source definitions and track notes missing');
+            assert.ok(text?.includes('https://creativecommons.org/licenses/by/4.0/'));
+            assert.equal(p.sourceCredit, sourceCredit({ sourceOrganization: p.sourceOrganization }));
+            assert.ok(text?.includes(`Source ${p.sourceCredit}.`));
+          } else assert.ok(text?.includes(String(p.sourceUrl)), 'Data source link missing');
+        }
       } else if (!p.posted) {
         assert.equal(p.captionStyle, 'concise-v1');
         validateConciseBufferCaption(text);
@@ -177,9 +185,16 @@ test('second batch covers all eleven platforms with 88 entries and two editorial
   assert.equal(new Set(manifest.videos.map((v: any) => v.indicator)).size, 90);
   const queued = manifest.videos.filter((v: any) => v.status === 'queued');
   assert.equal(queued.length, 88);
+  const audio = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/viz-batch2-assets/audio-revision/manifest.json'), 'utf8'));
+  assert.equal(audio.videoCount, 88);
+  assert.equal(audio.attributionRequired, false);
   for (const asset of queued) {
     const digest = createHash('sha256').update(fs.readFileSync(path.join(ROOT, asset.video))).digest('hex');
     assert.equal(digest, asset.videoSha256, `Media changed for ${asset.slug}`);
+    const receipt = audio.videos.find((v: any) => v.slug === asset.slug);
+    assert.equal(receipt.videoSha256, asset.videoSha256);
+    assert.equal(receipt.videoStreamUnchanged, true);
+    assert.equal(asset.audioAttributionRequired, false);
   }
   let schedule: unknown;
   const captionsBySlug = new Map<string, Set<string>>();
@@ -193,17 +208,33 @@ test('second batch covers all eleven platforms with 88 entries and two editorial
     if (schedule) assert.deepEqual(current, schedule);
     else schedule = current;
     for (const p of posts) {
-      const texts = captionsBySlug.get(String(p.slug)) || new Set<string>();
-      texts.add(String(platform === 'youtube' ? p.description : p.text));
-      captionsBySlug.set(String(p.slug), texts);
-      if (!p.posted) assert.equal(p.paused === true, blockedPlatforms.has(platform));
+      if (!p.posted) {
+        const texts = captionsBySlug.get(String(p.slug)) || new Set<string>();
+        texts.add(String(platform === 'youtube' ? p.description : p.text));
+        captionsBySlug.set(String(p.slug), texts);
+        assert.equal(p.paused === true, blockedPlatforms.has(platform));
+      }
     }
   }
-  assert.ok([...captionsBySlug.values()].every(texts => texts.size === 11), 'Each platform needs adapted copy');
+  assert.ok([...captionsBySlug.values()].every(texts => texts.size === 1), 'Use the same approved concise pattern everywhere');
   for (const platform of ['x', 'threads']) {
     const legacyPending = readQueue(path.join(ROOT, 'scripts', `viz-${platform}-posts.json`)).filter(p => !p.batchId && !p.posted);
     assert.ok(legacyPending.every(p => p.paused === true), 'Older topics must not replay on reconnection');
   }
+});
+
+test('video-only captions reject links and production notes without confusing financial credit with attribution', () => {
+  const good = 'How private-sector credit changed.\n\n2000-2024. Private-sector credit as a share of GDP.';
+  validateVideoOnlyCaption(good);
+  for (const extra of ['\nMusic by an artist', '\nNotes https://example.com', '\nSource FAO.', '\nVerified animation frames']) {
+    assert.throws(() => validateVideoOnlyCaption(good + extra), /links or production/);
+  }
+  const p = readQueue(path.join(ROOT, 'scripts/viz-facebook-posts.json')).find(p => p.id === 'viz-b2-facebook-70')!;
+  assert.doesNotThrow(() => localVideo(p));
+  assert.throws(() => localVideo({ ...p, audioAttributionRequired: true }), /no-attribution audio/);
+  assert.throws(() => localVideo({ ...p, videoSha256: '0'.repeat(64) }), /checksum/);
+  const input = buildInput('instagram', { ...p, text: good }, 'channel', 'https://cdn.example/video.mp4');
+  assert.equal(input.text, good);
 });
 
 test('hosted notes support three-digit second-batch video numbers', () => {

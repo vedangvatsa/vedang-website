@@ -1,0 +1,36 @@
+{
+  "slug": "cassava",
+  "filename": "100-cassava-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/100-cassava-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "c95a75a5fb38dd239beae64e7c1fee66695b6529d35a0211f9049ddd771cfe0e",
+  "previousVideoSha256": "a8d350236c9125f0118b1d0e360c71b5290e7711fed02a69efc8da86c44aa5e0",
+  "videoStreamSha256": "acb1e8b8b88af4ada8aa9ca5c3042b3b64e25986087ad7aad900a802151f3b81",
+  "videoStreamUnchanged": true,
+  "dataSha256": "1af86699c24af4030e97a7daf99732afb13de67479a9b202d7185719bf91c42b",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "726",
+    "title": "Uplifting Bass",
+    "artist": "Lily J",
+    "sourceSha256": "6cdd3514fb6ce919f7b9e8984d9c11c3e2a7de9b39ec0e2658be0c64e69fd5e0",
+    "offsetSeconds": 29.7,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -11.36,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -16.9,
+    "decodedPeakDb": -4.2,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:08.192318+00:00"
+}

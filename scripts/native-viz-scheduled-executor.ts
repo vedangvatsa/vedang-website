@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import path from 'node:path';
 import { ROOT, isMain, readQueue, saveQueue, selectDue, localVideo, publicVideoUrl, checkPublicVideo, type VizPost } from './viz-publishing.js';
 import { REQUIRED, requireCredentials } from './viz-platform-preflight.js';
-import { validateCaption, validateConciseBufferCaption } from './viz-captions.mjs';
+import { validateCaption, validateConciseBufferCaption, validateVideoOnlyCaption } from './viz-captions.mjs';
 import { configuredDirectPlatforms } from './viz-platforms.mjs';
 import { encodeLinkedInPlainText } from './linkedin-plain-text.mjs';
 
@@ -14,7 +14,7 @@ export async function publish(platform: string, post: VizPost, video: string, ur
   switch (platform) {
     case 'linkedin': {
       const { postToLinkedIn } = await import('./linkedin-scheduled-executor.js');
-      const commentary = post.captionStyle === 'licensed-v2' ? encodeLinkedInPlainText(text) : text;
+      const commentary = ['licensed-v2', 'concise-v2'].includes(String(post.captionStyle)) ? encodeLinkedInPlainText(text) : text;
       const result = await postToLinkedIn(commentary, video);
       if (!result.success || !result.id) throw new Error(result.error || 'LinkedIn returned no post ID');
       return result.id;
@@ -75,6 +75,7 @@ export async function runPlatform(platform: string, dryRun: boolean) {
   requireCredentials(platform);
   validateCaption(platform, post.text);
   if (post.captionStyle === 'concise-v1') validateConciseBufferCaption(post.text);
+  if (post.captionStyle === 'concise-v2') validateVideoOnlyCaption(post.text);
   const video = localVideo(post);
   let url: string | undefined;
   if (['threads', 'farcaster'].includes(platform)) {
@@ -96,7 +97,7 @@ export async function runPlatform(platform: string, dryRun: boolean) {
     post.error = null;
     if (platform === 'linkedin') {
       post.postUrl = `https://www.linkedin.com/feed/update/${id}/`;
-      if (post.captionStyle === 'licensed-v2') post.commentaryEncoding = 'little-text-v1';
+      if (['licensed-v2', 'concise-v2'].includes(String(post.captionStyle))) post.commentaryEncoding = 'little-text-v1';
     } else if (platform === 'bluesky') {
       const record = /^at:\/\/([^/]+)\/app\.bsky\.feed\.post\/([^/]+)$/.exec(id);
       if (record) post.postUrl = `https://bsky.app/profile/${record[1]}/post/${record[2]}`;

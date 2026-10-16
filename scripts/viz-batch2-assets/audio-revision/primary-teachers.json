@@ -1,0 +1,36 @@
+{
+  "slug": "primary-teachers",
+  "filename": "54-primary-teachers-2000-2017.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/54-primary-teachers-2000-2017.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "8827bb0df5e06226611ecf4866eb88edee412bab04a9bf6739efdcae02f92dd5",
+  "previousVideoSha256": "bd07e57483d336302ec6751bf83e8ae71c8f1360ca413aaef26cf3eef8cfb325",
+  "videoStreamSha256": "8bd5ad28f0ec598f3ca4ba984d6caaa049336e6ed5e5935cc64d21f19d0613d1",
+  "videoStreamUnchanged": true,
+  "dataSha256": "2e2050f2e77037455c7936ea4e05a120d6bbb8099f2001da5e35551605c05b1f",
+  "frameStatesChecked": 955,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "148",
+    "title": "Forest Mist Whispers",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "30232da0b9521ed35e009162bfe7c63d06c9c8e4ca81ea5137ab63a9dc66cd98",
+    "offsetSeconds": 0.0,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -18.91,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.8,
+    "decodedPeakDb": -1.5,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:32:47.825081+00:00"
+}

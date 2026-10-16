@@ -1,0 +1,36 @@
+{
+  "slug": "natural-rubber",
+  "filename": "73-natural-rubber-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/73-natural-rubber-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "e1007f19deef6d8c8eac1a555a5ff2d88368a4ddd7ae6e45c695f52464ac9ff6",
+  "previousVideoSha256": "ad1d09ba3a2df679c56fb0c6ee4da2780338f88dcaf39b8fe75711d1bc661af1",
+  "videoStreamSha256": "4a7dc13da71ad07ffaba7890d6b6d094ba23a178df015886310995d8e6853748",
+  "videoStreamUnchanged": true,
+  "dataSha256": "5fbbbc66175b63b087f799addcf4a68b1d698c91f60a1f5eac44b51427d6d8a1",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 13.5,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -18.85,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.2,
+    "decodedPeakDb": -1.8,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:33:20.089181+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "tomatoes",
+  "filename": "101-tomatoes-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/101-tomatoes-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "5024c8ac5f096b1b9dce2d40e46af57f2bcf445d10ed1b2bc4da667455f750d5",
+  "previousVideoSha256": "3e9a37406cf5956b8ba31a6c9183d5f980c22bde0f528d7b4a7ac107abdb3e0a",
+  "videoStreamSha256": "b9b2504d6832a3b8f9f638045e3419ccaae7f50acaf0d3dd35150ee9e9f08c95",
+  "videoStreamUnchanged": true,
+  "dataSha256": "fe66293e270ba30ab678a3095920a4acbad18c66625fcf9e685bd3b8bf8777a8",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 32.4,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -16.38,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.5,
+    "decodedPeakDb": -3.2,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:34:09.666302+00:00"
+}

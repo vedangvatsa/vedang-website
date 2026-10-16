@@ -1,0 +1,36 @@
+{
+  "slug": "women-parliament",
+  "filename": "51-women-parliament-2000-2024.mp4",
+  "video": "scripts/viz-batch2-assets/no-attribution/51-women-parliament-2000-2024.mp4",
+  "complete": true,
+  "edition": "no-attribution-v1",
+  "videoSha256": "6619d9c2356c496df9d9195b4ec268dea458307060139a570fe017dc29709879",
+  "previousVideoSha256": "b72d5f4b261fd62b25978a251dfcd00bbb1350938d167f78484255d7cc6d2869",
+  "videoStreamSha256": "84d4c6fa1093be28f0fcc3f627d42750b6cd61d9dff238dd76e0e2165c09f7a6",
+  "videoStreamUnchanged": true,
+  "dataSha256": "eb3611ebed74a132e37f6800d11318b63d865b047fd0ed5fda65eeda84cfde57",
+  "frameStatesChecked": 976,
+  "audioAttributionRequired": false,
+  "audioLicense": "Mixkit Stock Music Free License",
+  "soundtrack": {
+    "id": "127",
+    "title": "Valley Sunset",
+    "artist": "Alejandro Magaña (A. M.)",
+    "sourceSha256": "f50d822cb8d6cb3da8bc9d6cfccc020786fb0c25e2c222a75d11ca06091050e7",
+    "offsetSeconds": 0.0,
+    "durationSeconds": 30,
+    "attributionRequired": false,
+    "licenseUrl": "https://mixkit.co/license/modal/musicFree/",
+    "source": "https://mixkit.co/free-stock-music/ambient/"
+  },
+  "audioVerification": {
+    "inputLUFS": -17.73,
+    "targetLUFS": -16,
+    "channels": 2,
+    "sampleRate": 48000,
+    "decodedMeanDb": -18.9,
+    "decodedPeakDb": -2.8,
+    "nonSilent": true
+  },
+  "createdAt": "2026-10-16T15:32:43.569015+00:00"
+}

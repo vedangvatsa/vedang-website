@@ -2,7 +2,7 @@
 /** Our workflow owns the schedule. Buffer receives shareNow only when an entry is due. */
 import dotenv from 'dotenv';
 import path from 'node:path';
-import { validateCaption, validateConciseBufferCaption } from './viz-captions.mjs';
+import { validateCaption, validateConciseBufferCaption, validateVideoOnlyCaption } from './viz-captions.mjs';
 import {
   ROOT, isMain, readQueue, saveQueue, selectDue, localVideo, publicVideoUrl,
   checkPublicVideo, sleep, type VizPost,
@@ -61,7 +61,7 @@ export function chooseChannel(service: string, envName: string, available: any[]
 
 export function buildInput(service: string, entry: VizPost, channelId: string, videoUrl: string) {
   let text = service === 'youtube' ? entry.description : entry.text || entry.title;
-  if (text && entry.captionStyle !== 'concise-v1' && entry.notesUrl && process.env.VIZ_NOTES_BASE_URL) {
+  if (text && !['concise-v1', 'concise-v2'].includes(String(entry.captionStyle)) && entry.notesUrl && process.env.VIZ_NOTES_BASE_URL) {
     const original = new URL(String(entry.notesUrl));
     const base = new URL(process.env.VIZ_NOTES_BASE_URL);
     if (base.protocol !== 'https:' || !/^\/viz-notes\/\d{2,3}\.txt$/.test(original.pathname)) throw new Error('Invalid public notes URL configuration');
@@ -72,6 +72,7 @@ export function buildInput(service: string, entry: VizPost, channelId: string, v
   if (!text || Array.from(text).length > limit) throw new Error(`${entry.id} caption missing or over ${limit} characters`);
   validateCaption(service, text);
   if (entry.captionStyle === 'concise-v1') validateConciseBufferCaption(text);
+  if (entry.captionStyle === 'concise-v2') validateVideoOnlyCaption(text);
   const metadata = service === 'youtube'
     ? { youtube: { title: entry.title, categoryId: '27', privacy: 'public', notifySubscribers: false } }
     : service === 'instagram' ? { instagram: { type: 'reel', shouldShareToFeed: true } } : undefined;
