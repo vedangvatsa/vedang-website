@@ -1209,8 +1209,8 @@
     "text": "How the biggest coffee producers changed.\n\n2000-2024. Green coffee bean production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-16",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-16T20:13:27.301Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/70-r2.txt",
     "captionStyle": "concise-v2",
@@ -1222,7 +1222,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-16T20:13:27.165Z",
+    "attemptedSlot": "2026-10-16T20:00",
+    "publishedText": "How the biggest coffee producers changed.\n\n2000-2024. Green coffee bean production by country, measured in millions of tonnes.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0x9d6a374d",
+    "platformPostId": "0x9d6a374da6eb46e52b8275d3869fe2801f50f41a"
   },
   {
     "id": "viz-b2-farcaster-51",

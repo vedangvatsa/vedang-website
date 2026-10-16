@@ -1491,8 +1491,8 @@
     "description": "How women's representation in parliament changed.\n\n2000-2024. Parliamentary seats held by women as a share of the total.",
     "scheduleDate": "2026-10-16",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-16T20:10:38.741Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/51-r2.txt",
     "captionStyle": "concise-v2",
@@ -1503,7 +1503,14 @@
     "altText": "Women MPs, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How women's representation in parliament changed.\n\n2000-2024. Parliamentary seats held by women as a share of the total.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-16T20:00",
+    "attemptedAt": "2026-10-16T20:10:36.973Z",
+    "bufferPostId": "6ad284bdf90ad606a6f4e9e0",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=HERqfhYauCE"
   },
   {
     "id": "viz-b2-yt-71",
