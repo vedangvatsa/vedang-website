@@ -9,10 +9,10 @@
     
     <item>
       <title>The Token Tax of the Web</title>
-      <link>https://veda.ng/tokens</link>
-      <guid>https://veda.ng/tokens</guid>
+      <link>https://veda.ng/tokentax</link>
+      <guid>https://veda.ng/tokentax</guid>
       <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
-      <description>A test of 300 webpage sections found that Markdown cut recorded input tokens by 49.6% with the same answer-key total as cleaned HTML.</description>
+      <description>In a test of 300 webpage sections, Markdown used 49.6% fewer input tokens than cleaned HTML. Both matched 798 of 888 expected answers.</description>
     </item>
     <item>
       <title>High Accuracy, Poor Transfer</title>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.org/sitemap",
-  "generatedAt": "2026-10-16T20:29:27.217331Z",
+  "generatedAt": "2026-10-16T20:54:50.808732Z",
   "publisher": {
     "name": "Vedang Vatsa",
     "url": "https://veda.ng"
@@ -2266,7 +2266,7 @@
       "priority": 0.6
     },
     {
-      "url": "https://veda.ng/tokens",
+      "url": "https://veda.ng/tokentax",
       "title": "The Token Tax of the Web",
       "lastmod": "2026-10-17",
       "changefreq": "monthly",

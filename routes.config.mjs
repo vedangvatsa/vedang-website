@@ -53,6 +53,7 @@ export const ESSAY_SLUG_MIGRATIONS = [
   ['stepwise-ai', 'stepwise'],
   ['substrate-shift', 'substrate'],
   ['synthetic-empathy', 'empathy'],
+  ['tokens', 'tokentax'],
   ['towards-the-agentic-web', 'agenticweb'],
   ['twilight-economy', 'twilight'],
   ['universal-text-ui', 'textui'],
@@ -61,6 +62,7 @@ export const ESSAY_SLUG_MIGRATIONS = [
 
 /** Non-essay redirects: [source path prefix, destination]. ':path*' suffixes preserved. */
 export const EXTRA_REDIRECTS = [
+  ['/tokens.md', '/tokentax.md'],
   ['/who-buys', '/receipts'],
   ['/writings', '/essays'],
   ['/194', '/agenticweb'],

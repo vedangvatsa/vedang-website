@@ -1,6 +1,6 @@
 // Checked against the saved main-run summary by generate-token-tax-assets.ts.
 export const tokenTaxStudy = {
-  slug: 'tokens',
+  slug: 'tokentax',
   sections: 300,
   questions: 888,
   mainRequests: 1500,
