@@ -1462,8 +1462,8 @@
     "description": "Brazil's coffee output rose from 1.90 million tonnes in 2000 to 3.39 million tonnes in 2024.\n\nThe chart tracks coffee, green production (tonnes). Display units are production (million tonnes).\n\nHighest reported values each year. Reporting coverage varies; missing years stay missing. Annual observations anchor the animation.\n\nFAO. 2025. FAOSTAT, Crops and livestock products. Accessed 16 October 2026. https://www.fao.org/faostat/en/#data/QCL CC BY 4.0.\n\nMusic 'At The End Of All Things' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au https://creativecommons.org/licenses/by/4.0/ Excerpt edited with fades and loudness adjustment.\n\nVisualization by Vedang Vatsa, @vedangvatsa\n#DataVisualization",
     "scheduleDate": "2026-10-16",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-16T12:50:27.788Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/70.txt",
     "captionStyle": "licensed-v2",
@@ -1472,7 +1472,14 @@
     "sourceOrganization": "Food and Agriculture Organization of the United Nations, FAOSTAT, Crops and livestock products (2025 release).",
     "musicCredit": "'At The End Of All Things' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au",
     "videoSha256": "66aee198840b455576bdea167b6b660e889165fb2a1020d445a13f7fa7a00d9a",
-    "altText": "Coffee, 2000-2024. Highest reported values each year."
+    "altText": "Coffee, 2000-2024. Highest reported values each year.",
+    "publishedText": "Brazil's coffee output rose from 1.90 million tonnes in 2000 to 3.39 million tonnes in 2024.\n\nThe chart tracks coffee, green production (tonnes). Display units are production (million tonnes).\n\nHighest reported values each year. Reporting coverage varies; missing years stay missing. Annual observations anchor the animation.\n\nFAO. 2025. FAOSTAT, Crops and livestock products. Accessed 16 October 2026. https://www.fao.org/faostat/en/#data/QCL CC BY 4.0.\n\nMusic 'At The End Of All Things' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au https://creativecommons.org/licenses/by/4.0/ Excerpt edited with fades and loudness adjustment.\n\nVisualization by Vedang Vatsa, @vedangvatsa\n#DataVisualization",
+    "state": "sent",
+    "attemptedSlot": "2026-10-16T14:00",
+    "attemptedAt": "2026-10-16T12:50:26.061Z",
+    "bufferPostId": "6ad21d9225d13dd62ee81890",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=CHbltia6Crc"
   },
   {
     "id": "viz-b2-yt-51",
