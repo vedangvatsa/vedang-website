@@ -1,9 +1,9 @@
 ---
-title: "High Accuracy, Poor Transfer"
+title: "AI Text Detection and the Limits of 96% Accuracy"
 date: '2026-10-17'
 author: 'Vedang Vatsa'
 category: 'Research'
-summary: 'A detector scored 95.99% within one abstract corpus and 53.89% on another. A study of transfer, false alarms, and the limits of authorship claims.'
+summary: 'An AI detector scored 95.99% locally and 53.89% externally. The abstract-corpus study examines transfer, false alarms and authorship claims.'
 description: 'A detailed account of an eight-feature abstract detector, its source audit, external evaluation, threshold tests, and the evidence needed for authorship judgments.'
 keywords: ['AI text detection', 'external validation', 'scientific abstracts', 'random forest', 'authorship', 'false positives', 'lexical diversity', 'machine learning evaluation']
 ---
@@ -11,7 +11,7 @@ keywords: ['AI text detection', 'external validation', 'scientific abstracts', '
 An eight-feature random-forest procedure reached 95.99% accuracy within a collection of scientific abstracts. After fitting the procedure to that collection and testing it on a separately assembled corpus, accuracy fell to 53.89%. It identified 976 of 8,319 texts labelled as generated. The error counts matter more than the appearance of the first percentage: the external test contained 7,343 generated texts that the detector accepted as published text.
 
 <Figure
-  src="/images/essays/generalization.svg"
+  src="/images/essays/detection.svg"
   alt="Eight-feature random-forest accuracy is 95.99% in local grouped validation and 53.89% on an external abstract corpus, using the fixed 0.5 threshold."
   caption="One fixed training procedure, evaluated within its source corpus and on an external corpus. Both evaluations contain equal class counts."
   source="High Accuracy, Poor Transfer, Tables 3 and 5"

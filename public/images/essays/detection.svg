@@ -3,7 +3,7 @@
   <desc id="desc">An eight-feature random forest scores 95.99% in local grouped validation and 53.89% on a separately assembled corpus. Both evaluations use equal class counts and a score threshold of 0.5. The bars use a zero to one hundred percent scale.</desc>
   <rect width="800" height="400" fill="#ffffff" />
   <g font-family="Arial, Helvetica, sans-serif" fill="#37352f">
-    <text x="44" y="49" font-size="27" font-weight="700">High accuracy, poor transfer</text>
+    <text x="44" y="49" font-size="27" font-weight="700">AI text detection across two corpora</text>
     <text x="44" y="80" font-size="17" fill="#64748b">Eight-feature random forest · fixed 0.5 threshold</text>
     <text x="44" y="136" font-size="21" font-weight="700">Internal validation</text>
     <text x="756" y="138" font-size="32" text-anchor="end" fill="#1d4ed8" font-weight="700">95.99%</text>

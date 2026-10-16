@@ -2,13 +2,13 @@
 
 > Official personal website and research publication platform of Vedang Vatsa (FRSA). Complete unpaginated full-text of all published essays, profile references, and machine interfaces on veda.ng.
 
-## High Accuracy, Poor Transfer
-URL: https://veda.ng/generalization
-Summary: A detector scored 95.99% within one abstract corpus and 53.89% on another. A study of transfer, false alarms, and the limits of authorship claims.
+## AI Text Detection and the Limits of 96% Accuracy
+URL: https://veda.ng/detection
+Summary: An AI detector scored 95.99% locally and 53.89% externally. The abstract-corpus study examines transfer, false alarms and authorship claims.
 
 An eight-feature random-forest procedure reached 95.99% accuracy within a collection of scientific abstracts. After fitting the procedure to that collection and testing it on a separately assembled corpus, accuracy fell to 53.89%. It identified 976 of 8,319 texts labelled as generated. The error counts matter more than the appearance of the first percentage: the external test contained 7,343 generated texts that the detector accepted as published text.
 
-![Eight-feature random-forest accuracy is 95.99% in local grouped validation and 53.89% on an external abstract corpus, using the fixed 0.5 threshold.](/images/essays/generalization.svg)
+![Eight-feature random-forest accuracy is 95.99% in local grouped validation and 53.89% on an external abstract corpus, using the fixed 0.5 threshold.](/images/essays/detection.svg)
 
 The [accompanying paper](https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.pdf) examines this difference through source checks, grouped validation, simpler classifiers and several sensitivity analyses. Its findings support a narrow empirical conclusion. A procedure can distinguish the recorded classes within a dataset and still perform poorly when the source of the texts changes. The study does not establish that detection always fails, or that one generator caused this particular failure.
 
@@ -146,6 +146,357 @@ A further study could retain provider responses and prompt assignments, verify s
 The public [code and numerical reproduction package](https://github.com/vedangvatsa/research-paper-framework/tree/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper) make a narrower form of checking possible now. Readers can recalculate the saved metrics and refit the main forest from measured features. The package contains 22 prediction sets; a fresh forest fit reproduces its external scores exactly in the recorded environment. Original local raw texts remain unreleased, and missing generation records remain missing. Numerical reproduction establishes a computation, while provenance establishes what its inputs mean.
 
 For an editor receiving a detector report, the relevant evidence starts with the validation population, the threshold, the two types of error and the basis for the labels. A vendor's accuracy percentage supplies none of those details by itself. A decision about an individual manuscript needs a documented account of why the evaluated procedure applies to that manuscript, and a way to examine competing explanations for its score. The 95.99% result cannot provide that account on its own.
+
+---
+
+## Personality Profiles Across 55 Language Models
+URL: https://veda.ng/personality
+Summary: What repeated IPIP-50 assessments of 55 language model configurations show about personality scores and the comparisons they support.
+
+Twenty of the 22 language model configurations with complete personality profiles scored higher on Agreeableness, Conscientiousness, and Intellect/Imagination than on Extraversion. The comparison covered 55 configurations. The other 33 lacked a reportable score in at least one domain. Any account of the apparent similarity among these models has to explain why most of the panel could not supply a complete profile.
+
+![Of 55 tested language model configurations, 47 had at least one reportable trait and 22 had all five.](/images/essays/personality-coverage.svg)
+
+The [research paper](/research/personality/paper.pdf) behind this essay uses repeated administrations of the same fifty-item questionnaire. Its results include substantial differences between particular models, near-identical scores that change order when different responses are used, and models that repeatedly decline to rate statements about ordinary human experiences. A missing mean can reflect failures or non-applicable answers, which the study records separately.
+
+A useful personality comparison needs to establish which answers support each score and how much the comparison changes when those answers change. The analysis keeps each score beside its complete-assessment count and tests comparisons against alternative selections of recorded responses.
+
+## The question answered by a questionnaire
+
+The [International Personality Item Pool sample questionnaire](https://ipip.ori.org/new_ipip-50-item-scale.htm) asks respondents to assess statements such as “Am always prepared,” “Worry about things,” and “Have a vivid imagination.” The five response categories run from Very Inaccurate to Very Accurate. The published key groups the statements into Extraversion, Agreeableness, Conscientiousness, Emotional Stability, and Intellect/Imagination, with ten items in each domain.
+
+The assistant-self instruction matters as much as the inventory's name. Every main request asked the model to describe itself as an AI assistant as it generally is, rather than ideally. All fifty statements appeared together in the published sample order. Each request started a fresh study conversation, without previous answers or an assigned fictional personality. A model could mark a statement non-applicable instead of inventing an experience. The [supplement reproduces the exact prompt](/research/personality/supplement.html).
+
+That instruction leaves room for different readings. An assistant might interpret “Start conversations” as initiating a conversational exchange. It might read “Leave my belongings around” literally and decline to assign a number. Another model might treat possessions as an analogy for its handling of information. The recorded answer identifies the option the model returned; it does not settle which interpretation produced it. The study held the instruction fixed, so it cannot estimate the effect of changing that interpretation.
+
+The domain names also need their published meanings. Higher Emotional Stability broadly corresponds to lower Neuroticism. Intellect/Imagination concerns vocabulary, ideas, and imagination. A high score on those statements does not measure performance on an intelligence test. Nor does a score of four in one domain have an established psychological distance from a score of three in another. The study compares coded questionnaire responses on their common response scale.
+
+The [IPIP scoring instructions](https://ipip.ori.org/newScoringInstructions.htm) reverse negatively keyed items. A rating of one on “Feel little concern for others” contributes five toward Agreeableness. Positive-keyed items retain their rating. The study averages the ten keyed contributions in a complete domain, producing a score between one and five. This equal-step calculation is a declared convention. It makes the arithmetic comparable without proving that the psychological distance between successive options is equal.
+
+## What entered the comparison
+
+The main collection covers 55 requested configurations from seventeen developer labels. It includes older and recent model families, selected through access, coverage, and resource constraints. A check of the [Artificial Analysis model list](https://artificialanalysis.ai/models) helped guide selection. Its capability rankings supplied no evidence about personality. The tested configuration includes the model identifier and submitted controls; a familiar product name alone does not describe everything that produced the response.
+
+Thirty-nine configurations received ten planned administrations, eleven received five, and five received three. The resulting 460 administrations produced 422 usable item maps. Each usable map contained an unambiguous number or non-applicable mark for every item. The remaining outcomes included service errors, truncated output, incomplete or invalid maps, and an interrupted request. Those outcomes remain in the administration count. A service retry does not become another questionnaire repetition in the analysis.
+
+The accepted maps contained 17,940 numeric ratings and 3,160 non-applicable marks. That is 15.0% non-applicability across returned item positions. This percentage weights responses: a model with ten usable maps contributes more positions than one with three. The trait summaries later in the essay give configurations equal weight instead. Confusing those denominators would turn a description of collected answers into a claim about a typical model.
+
+A domain needs ten numeric answers before it can receive a score for an occasion. A reported model-domain estimate then requires at least three complete assessments and at least half the planned administrations. That means five of ten, three of five, or three of three. The unified trait-wise reporting rule was chosen retrospectively. It retains partial profiles while withholding means supported by one or two complete occasions; it does not certify reliability.
+
+The generation settings were not identical across the panel. The ten-repeat configurations requested temperature 0.7 and an output cap of 1,536 tokens. The five-repeat configurations used a 4,096-token cap, and the three-repeat configurations used 1,536 tokens. The latter groups omitted temperature and requested low or disabled reasoning where supported. No generation seed was requested. Since model identity and repeat setting do not overlap, their effects cannot be separated by comparing those groups.
+
+Collection records place the main requests between October 5 and 7, 2026. The supplement records API service, provider restrictions, service-tier requests, and per-configuration windows. All 45 routed configurations requested a single provider tag and disabled fallback. These are submitted restrictions and returned labels, not independent access to model weights or provider hardware. The reported contrasts therefore belong to the recorded configurations and collection conditions.
+
+## The recurring profile and its exceptions
+
+The 422 usable maps yielded 1,481 complete domain assessments. Of the 275 possible model-domain combinations, 178 met the reporting rule. Forty-seven configurations had at least one eligible trait estimate; twenty-two had all five. The distinction between usable responses and reportable profiles is visible in the coverage chart below.
+
+![Reportable trait counts out of 55 configurations: Extraversion 29, Agreeableness 40, Conscientiousness 25, Emotional Stability 38, and Intellect/Imagination 46.](/images/essays/personality-trait-coverage.svg)
+
+Among the twenty-two complete profiles, twenty had Agreeableness, Conscientiousness, and Intellect/Imagination means above Extraversion. Gemma 3 4B and Llama 3.2 1B were the exceptions. Their Conscientiousness means were 2.82 and 3.15, below their Extraversion means of 3.49 and 3.26. The same twenty-model result held when the analysis used only questionnaire occasions with numbers for all fifty items. It did not require combining traits answered on different occasions.
+
+Across all eligible model means, the medians were 2.83 for Extraversion, 4.32 for Agreeableness, 4.44 for Conscientiousness, 4.03 for Emotional Stability, and 4.41 for Intellect/Imagination. These are equal-model summaries, but each domain includes a different group. The Extraversion median draws on 29 configurations; the Intellect/Imagination median draws on 46. A comparison between those two medians is not a paired comparison of the same models.
+
+The complete-profile result has a narrower denominator than the panel result. Twenty-two configurations represent 40% of the tested panel. Their common ordering cannot supply the missing profiles of the other 33. A model that repeatedly marks a physical or social statement inapplicable may disappear from a complete-profile analysis even while producing consistent numeric answers elsewhere. Eligibility therefore changes which response styles contribute to the apparent common profile.
+
+The table below gives every configuration, including those with no reportable trait. Each displayed mean includes its complete-assessment count. A missing mean means the reporting rule was not met; the count shows how much support was available. The table orders names alphabetically and offers no overall personality ranking.
+
+## A model family can contain very different profiles
+
+Gemma 3 4B and Gemma 3 12B each supplied ten complete assessments for every domain under the same requested temperature and output cap. Their Extraversion means were 3.49 and 1.56, a difference of 1.93 points. Their Conscientiousness means ran in the opposite direction, at 2.82 and 4.68. Gemma 3 27B supplied enough complete assessments for four domains but none for Conscientiousness. A family name or parameter count is insufficient to reconstruct these profiles.
+
+![Gemma 3 4B scored 3.49 in Extraversion and 2.82 in Conscientiousness. Gemma 3 12B scored 1.56 and 4.68 respectively.](/images/essays/personality-gemma.svg)
+
+The three complete profiles in the five-repeat setting also differed. Qwen3.8 Max Prime had Extraversion 3.20 and Emotional Stability 4.46. Gemini 3.5 Flash-Lite had 2.44 and 5.00, while MiniMax M3 had 2.38 and 3.90. Each mean uses five complete assessments. Their shared ordering of several traits above Extraversion coexists with differences in the numerical profiles.
+
+Partial profiles permit more restricted comparisons. Claude Sonnet 5.5 and Claude Opus 5.5 both averaged 4.50 in Agreeableness. Their Emotional Stability means were 4.70 and 4.40; their Intellect/Imagination means were 4.50 and 4.20. The reported domains had zero observed standard deviation over five Sonnet and three Opus assessments. Yet neither configuration had a reportable Extraversion or Conscientiousness score.
+
+The interpretation needs both the numerical difference and its scope. These means describe complete-domain responses to one instruction. They do not isolate parameter count, training method, developer policy, or a particular provider implementation. Equal output caps do not make all sampling conditions identical. A causal explanation of the Gemma difference would need a design that changes the suspected cause while controlling the other relevant conditions.
+
+## Missing scores follow the questions
+
+The most frequently non-applicable statement concerned leaving belongings around: 181 of 422 usable questionnaires marked it non-applicable. Forgetting to put things back received 175 such marks. Being the life of the party received 141, and talking to different people at parties received 138. The corresponding shares were 42.9%, 41.5%, 33.4%, and 32.7% of usable questionnaires.
+
+Claude Sonnet 5.5 marked the two belongings statements and the statement about talking to different people at parties as non-applicable in all five responses. Those entries prevented Conscientiousness and Extraversion scores. Its other eligible domains repeated exactly. The missing values therefore coexist with repeatability elsewhere in the same response maps. They cannot be read as low Conscientiousness or low Extraversion.
+
+GPT-6 Luna showed a different form of incomplete coverage. It marked all fifty items non-applicable in four of five responses, then supplied 36 numeric ratings in the remaining response. No item received a numeric rating twice, so numeric repeat agreement could not be calculated. MiMo-V2.6-Pro marked every item non-applicable once in three responses. Their applicability agreement, which compares numeric-versus-null status, was 71.2% and 34.7%, respectively.
+
+Replacing every non-applicable answer with the midpoint would change the measurement. A midpoint says that a statement is neither accurate nor inaccurate. A non-applicable answer declines that numeric assessment. Assigning the same number to both would make a model's refusal to describe possessions look like a moderate possession-related rating. The study leaves those answers unscored and reports the resulting coverage.
+
+The association with parties and possessions makes an instruction effect plausible, but this collection does not identify one. The same item could receive a different response under an explicitly metaphorical instruction, a human-role prompt, or a forced-choice demand. Changing those instructions would change the procedure being assessed. Their effects need a controlled comparison within each model, rather than an explanation inferred solely from the original null pattern.
+
+## Repeated answers put small differences under pressure
+
+A mean difference can depend on which recorded responses enter the calculation. The study tests this by taking every possible group of three complete domain assessments for each eligible model. It compares every three-assessment mean from one model with every such mean from another, keeping comparisons within the same planned-repeat setting. Ties remain in the denominator when checking whether a strict ordering survives.
+
+Gemini 3.5 Flash-Lite's Extraversion mean exceeded MiniMax M3's by 0.06 points. Each had five complete scores, yielding ten possible groups of three. Comparing the ten groups on one side with the ten on the other produced 100 pairings. Gemini stayed higher in sixty; MiniMax was higher in forty. These are overlapping combinations of ten recorded questionnaire responses, not 100 fresh experiments.
+
+Qwen3.8 Max Prime's 0.82-point Extraversion difference from MiniMax M3 retained its direction in all 100 pairings. The Gemma 3 4B and 12B differences in Extraversion and Conscientiousness also retained their directions in every comparison. Ten complete scores produce 120 groups of three per model, or 14,400 pairings for each trait. The higher-scoring Gemma configuration still differed by trait.
+
+![Three illustrative Extraversion comparisons. Gemma 3 4B versus 12B retained its ordering in 14,400 of 14,400 subset comparisons; Qwen3.8 Max Prime versus MiniMax M3 in 100 of 100; Gemini 3.5 Flash-Lite versus MiniMax M3 in 60 of 100.](/images/essays/personality-orderings.svg)
+
+Across the ten-repeat group, the share of evaluable pairs retaining their ordering in at least 95% of subset comparisons ranged from 61.3% for Agreeableness to 74.0% for Emotional Stability. Those shares represent 284 of 463 pairs and 279 of 377 pairs. The 95% cutoff is a reporting choice, with alternative cutoffs supplied in the supplement. It is not a confidence level.
+
+The full export retains 1,930 within-setting model-domain pairs, including tied means and non-evaluable cases. A model with only three complete scores has one group of three. It cannot supply another group against which to assess this form of sensitivity. The three-repeat setting therefore contributes no evaluable pairs to this check. Zero observed standard deviation over those few responses does not establish deterministic output.
+
+These comparisons answer a finite-data question: how dependent is an ordering on the recorded responses selected? They do not estimate a model's long-term personality or adjust for changes in instructions and provider conditions. The stable examples and the small reversing example also do not establish a general law relating gap size to stability. The pair-level records allow that distinction to remain visible.
+
+## A shared profile shape can survive a different scale
+
+The ordinary mean treats the move from rating one to two as equal to the move from four to five. The response categories themselves establish order, but they do not establish those equal distances. A score ordering that disappears under another increasing coding would depend partly on the numerical convention used to summarize the answers.
+
+The study checks whether the keyed-category distributions for Agreeableness, Conscientiousness, and Intellect/Imagination each dominate Extraversion in the first-order sense. At each category cutoff, the higher-scoring domain must have no greater share of observations at or below that cutoff, with at least one strict difference. If that condition holds, every common strictly increasing recoding of the keyed categories preserves the larger mean. The supplement gives the derivation.
+
+This check uses only questionnaires with numbers for all fifty items, keeping the compared occasions matched. Eighteen of the twenty-two complete-profile configurations retain all three orderings under the criterion. Gemma 3 4B, Llama 3.2 1B, Command A Plus, and Granite 4 Micro do not. Failure of the criterion does not mean every alternative coding reverses a comparison; it means the universal ordering is not established.
+
+The result supports a narrower claim than psychological equivalence between domains. The recoding applies to keyed responses after reverse scoring. It does not establish that Agreeableness and Extraversion share a calibrated latent scale, or that an assistant has more of one human disposition than another. It shows which observed item-distribution comparisons depend less on the spacing assigned to response categories.
+
+## Incomplete profiles sometimes constrain the answer
+
+Some missing means leave room for a directional conclusion. For every planned item position, the study retains a known keyed value when available and allows an unknown position to take any value from one to five. Unknown positions include explicit non-applicable marks and every position in an unusable response. The smallest and largest possible averages define numerical-completion bounds.
+
+Those bounds describe a hypothetical average over all planned positions. The main reported mean averages complete-domain occasions instead. The two quantities can therefore have different denominators and different interpretations. The calculation neither adds missing ratings to the observed data nor assumes that an inapplicable human experience has a hidden true number.
+
+Allowing every unknown position the full response range still leaves Agreeableness, Conscientiousness, and Intellect/Imagination above Extraversion for 26 of the 55 configurations. Nine of those configurations lack a complete eligible profile. For the others, the recorded answers either contradict the broad ordering or leave it unresolved under the completion assumption.
+
+![Hypothetical completion bounds. Kimi K3 Extraversion spans 2.77 to 3.17, with Conscientiousness starting at 4.03. Claude Opus 5.5 Extraversion spans 2.80 to 3.60 and Conscientiousness 3.30 to 4.50, so their intervals overlap.](/images/essays/personality-bounds.svg)
+
+Kimi K3 qualifies only for Intellect/Imagination under the main reporting rule. Its hypothetical Extraversion average lies between 2.77 and 3.17. The lower bounds for Agreeableness, Conscientiousness, and Intellect/Imagination are 4.33, 4.03, and 4.53. Every lower bound exceeds Extraversion's upper bound, so those directions hold for every numerical completion allowed by the calculation.
+
+Claude Opus 5.5 has overlapping bounds for Extraversion, 2.80 to 3.60, and Conscientiousness, 3.30 to 4.50. The data cannot settle that ordering under the same assumption. Its eligible domains still have zero observed standard deviation. Repeatable answers in one part of a questionnaire do not supply the missing answers elsewhere.
+
+The completion check and the ordinal check change different assumptions. One varies missing values while keeping the original coding. The other recodes observed values on complete occasions. Passing them separately does not establish a guarantee when both changes occur together. Combining their conclusions would require a further derivation or calculation, not a verbal claim of general robustness.
+
+## What earlier studies contribute
+
+[Miotto, Rossberg and Kleinberg's GPT-3 study](https://aclanthology.org/2022.nlpcss-1.24/) used HEXACO-60 and a human-values instrument. It presented personality items separately and also examined response history in the values procedure. Some scores resembled human references, while temperature affected several results and correlations among scores did not consistently resemble human data. The administered procedure was part of the observed profile.
+
+[Jiang and colleagues](https://arxiv.org/abs/2206.07550) developed the Machine Personality Inventory, including 120-item and 1,000-item versions, and used personality prompts and vignettes to examine assigned traits. That work connects measurement with deliberate control over personality-like expression. The present comparison assigns no target personality. A model's ability to enact a requested character and its answers under a default assistant-self instruction address different questions.
+
+[Shu and colleagues](https://aclanthology.org/2024.naacl-long.295/) standardized material from 39 instruments into 693 yes/no questions and evaluated seventeen models overall. Answer labels, option order, formatting, and negation could change responses. Most models showed higher order or option consistency than consistency when a statement's meaning was reversed. A tendency to answer positively could inflate some consistency measures. Repetition under one unchanged prompt tests a smaller part of that problem.
+
+[Bodroža, Dinić and Bojić](https://pmc.ncbi.nlm.nih.gov/articles/PMC11461045/) tested seven models on two occasions five days apart, with different collection periods for GPT-3 and the other models. Their instruments included BFI-2 and HEXACO-100, and their prompts asked models to pretend to be human. Agreement varied across models, domains, and instruments. Their results cannot serve as a numeric baseline for this assistant-self IPIP-50 procedure, but they give a reason to distinguish short-run repetition from temporal reliability.
+
+[Serapio-García and colleagues](https://www.nature.com/articles/s42256-025-01115-6) evaluated eighteen models with IPIP-NEO-300, BFI-44, and broader reliability and validity tests. Their itemwise procedure varied biographic descriptions and response framing. Some larger and instruction-tuned models showed better measurement properties and relationships with downstream responses. That evidence is model- and procedure-dependent; it does not automatically transfer to the configurations and prompt used here.
+
+Alternative assessments change the evidence collected. [InCharacter](https://aclanthology.org/2024.acl-long.102/) uses psychological interviews and LLM-based assessment to examine fidelity to assigned characters, with human-perceived labels as references. [TRAIT](https://aclanthology.org/2025.findings-naacl.469/) uses 8,000 hypothetical scenario questions derived from Big Five and Short Dark Triad material. [Ma and colleagues' CSI preprint](https://arxiv.org/abs/2503.20182v2) summarizes sentiment associations as optimism, pessimism, and neutrality. None supplies a direct conversion from an IPIP-50 score to a model's behavior in an unrelated task.
+
+## Which comparisons deserve to travel beyond the table
+
+The reporting threshold changes who appears in a summary. Requiring complete domains on every planned administration reduces eligible estimates from 178 to 112. Extraversion's median stays at 2.83, while Intellect/Imagination rises from 4.41 to 4.48. Agreeableness's median rises from 4.32 to 4.34 as its range narrows. These are changes in the selected configurations, not newly recovered answers from the missing ones.
+
+Formatting also changes membership unless the parser preserves interpretable values. Strict parsing alone retains 157 estimates. Every accepted Gemma 3 4B and Llama 3.2 1B map required format recovery, so a strict-only analysis removes both exceptions to the common profile ordering. The recovery accepts explicitly supplied ratings without guessing omitted items. Two normally finished maps needed only their final closing brace restored. An independent token reader checked their original values.
+
+Numeric agreement has a related selection problem at the item level. It ranges from 25.5% to 100% over the 53 configurations with repeatedly numeric items, but those configurations need not contribute the same items. Restricting the calculation to fourteen shared items reverses 186 of 1,378 possible model-pair orderings relative to each model's own item set. The shared set contains no Emotional Stability items. Better comparability of item identity comes with narrower content coverage.
+
+For a researcher, these dependencies belong beside the score. For someone choosing an assistant, they determine whether a comparison answers the intended question. A profile can describe how a configuration handles questionnaire statements, reveal repeated answer conventions, or identify a difference worth testing. Using it to predict cooperation in a negotiation or sociability in a conversation requires observations of those tasks.
+
+A follow-up can make that demand concrete. Fix the instructions and settings within each model, collect the questionnaire profile, and record the behavioral prediction before running a separate task. Then test whether the predicted ordering survives across fresh prompts and occasions. A score becomes useful for that decision when it predicts the relevant choices, rather than merely reproducing the language of the questionnaire.
+
+## Research materials
+
+The essay draws on **A Comparison of LLM Personality Profiles** by Vedang Ratan Vatsa, using the ALL-9 manuscript and its verified analysis exports. The paper records AI assistance in its research and writing workflow. The files below provide the paper, full supplementary tables, and the derived data used in this essay; the full retained-response archive is separate.
+
+- [Research paper PDF](/research/personality/paper.pdf)
+- [Supplementary methods, all fourteen tables, and the exact prompt](/research/personality/supplement.html)
+- [Every reportable model-domain estimate](/research/personality/reported-profiles.csv)
+- [Coverage for all 55 configurations](/research/personality/coverage.csv)
+- [All 1,930 within-setting pair comparisons](/research/personality/pair-stability.csv)
+- [Completion bounds for all configurations and domains](/research/personality/completion-bounds.csv)
+- [Chart and profile data](/research/personality/data.json) and [source-file checksums](/research/personality/manifest.json)
+
+---
+
+## The Token Tax of the Web
+URL: https://veda.ng/tokentax
+Summary: In a test of 300 webpage sections, Markdown used 49.6% fewer input tokens than cleaned HTML. Both matched 798 of 888 expected answers.
+
+A book page showed 20.00 crossed out and 16.99 as the current price. A language model answered the price question with `16.99` from cleaned HTML and `20.00 16.99` from Markdown. The Markdown reply left the reader to decide which price applied.
+
+Across the full test, Markdown used 49.6% fewer recorded input tokens than cleaned HTML. Both formats matched 798 of the 888 expected answers.
+
+The [research paper](/docs/the-token-tax-of-the-web.pdf) compares five formats of the same saved webpage sections. It counts the input tokens, scores the answers, and checks differing replies against the original pages.
+
+![Cleaned HTML used 385,326 complete input tokens and Markdown used 194,035, a reduction of 49.6%. Each matched 798 of 888 expected answers.](/images/essays/token-tax-input.svg)
+
+## The extra input
+
+A price inside an HTML table can appear as `<td>16.99</td>`. The characters `<td>` and `</td>` mark a table cell. A browser uses those tags when it displays the table. A language model receiving the HTML as text receives the tags along with the price.
+
+The model processes text in tokens. A token can represent a word, part of a word, punctuation, or another sequence of characters. Tags and attributes count toward the input too. Their cost depends on the token-counting rule, so counting characters or file bytes cannot establish how many tokens a request uses.
+
+Some markup helps answer a question. Table tags identify rows and columns. A heading may apply to several values below it. Deleting these tags can make it harder to tell which label belongs to a value.
+
+Styling rules, scripts, comments, and page identifiers can add text without helping answer a question about a salary or a camera's weight. The title's “token tax” refers to the input used for this code and markup.
+
+## The test
+
+The source material came from [WebSRC](https://aclanthology.org/2021.emnlp-main.343/), a dataset published in 2021. It pairs saved webpage sections with questions and expected answers. Its creators had already selected the sections and removed some code.
+
+The main sample contained 300 sections from 50 dataset groups covering 43 website hostnames. Cars, books, cameras, games, jobs, films, phones, restaurants, sports, and universities appeared in the sample. Each group contributed six sections. Sports and universities supplied more sections than cameras or games because the dataset contained more selected groups for those topics.
+
+Each section had up to three questions. The exact distribution was 291 sections with three questions, six with two, and three with one. That produced 888 questions. The selection grouped rewordings about the same stored answer and location before choosing questions, reducing repeated tests of the same fact.
+
+Every selected section appeared in five formats.
+
+| Format | Text supplied to the model |
+| --- | --- |
+| Saved HTML | The section kept by WebSRC, after removing research-only answer-location labels |
+| Cleaned HTML | The same section with further code and identifiers removed, while keeping basic HTML structure |
+| Markdown | A fixed conversion using shorter notation for headings, lists, links, and tables |
+| Plain text | Words and numbers in source order, with most markup removed |
+| Nested JSON | A labelled list of page elements and the smaller elements inside them |
+
+The converters followed fixed rules. They did not use another model to rewrite the page and could not see the questions or answer key when deciding what to keep. [Markdownify](https://github.com/matthewwithanm/python-markdownify) produced the Markdown version. Every version fit within the study's 64,000-token limit, so the test kept the selected text in full.
+
+The main run used the model alias `gpt-6.1-sol` through OpenCode on 12 October 2026 UTC. Each request started a fresh chat containing one section and its questions. The instructions asked for the shortest supporting passage, required units, and allowed an empty answer when the supplied text could not answer the question. Browsing and file access were disabled.
+
+Five versions of 300 sections produced 1,500 main requests and 4,440 answer attempts. A preliminary run added 150 requests; a repeat run added 250. The total was 1,900 experimental requests. The result tables below use the main run. The primary comparison and measures were recorded after the preliminary run and before the main replies, in a local, unregistered plan.
+
+## The token counts
+
+| Format | Page-text tokens | Complete input tokens | Answer-key matches out of 888 |
+| --- | ---: | ---: | ---: |
+| Saved HTML | 625,455 | 724,469 | 805 |
+| Cleaned HTML | 286,312 | 385,326 | 798 |
+| Markdown | 94,874 | 194,035 | 798 |
+| Plain text | 67,658 | 166,936 | 784 |
+| Nested JSON | 348,183 | 447,197 | 795 |
+
+Page-text counts use the public `o200k_base` rule in [tiktoken](https://github.com/openai/tiktoken). Complete-input counts come from the recorded model requests and include questions, instructions, and other request text. Both columns exclude the reply.
+
+An answer-key match means that the reply agrees with the stored expected answer after text cleanup. The scoring rule below explains which differences the program ignores.
+
+Plain text used 27,099 fewer complete-input tokens than Markdown, but matched 14 fewer answers.
+
+Saved HTML matched seven more answers than Markdown and used 530,434 more complete-input tokens. Choosing between them would require deciding how much input to spend on those extra matches. The experiment did not assign a monetary value to an answer.
+
+Nested JSON used more input than cleaned HTML and matched three fewer answers. Its repeated labels and hierarchy took space. This result concerns a conversion of the page's element tree. A small JSON object containing only a product name, current price, and currency would require a separate step to select those facts from the page.
+
+## Page savings and request savings
+
+For cleaned HTML and Markdown, page text fell from 286,312 to 94,874 tokens. Subtracting gives 191,438 fewer tokens. Dividing that difference by 286,312 gives a 66.9% reduction.
+
+The complete request fell from 385,326 to 194,035 tokens. That difference is 191,291 tokens, or 49.6% of the cleaned-HTML total. The questions and instructions remained in both versions. Reducing the page therefore removed a smaller share of the complete request than of the page alone.
+
+The public page counter and the provider's request counter may split text differently. The provider's internal rule was unknown. Subtracting one column from the other would not give an exact count of the questions and instructions.
+
+Each request contained one copy of a section and all its questions. Sending a separate request for every question would repeat page text. Adding a long conversation history would increase the other input. Either design would need its own complete-request measurement.
+
+The paper also reports a 68.6% median saving in page tokens. To calculate it, the analysis found the percentage saving for each section, sorted all 300 percentages, and averaged the two middle values. The combined 66.9% saving gives long sections more influence. The median describes the middle of the section-by-section results.
+
+## The tied score
+
+Markdown and cleaned HTML matched different questions despite reaching the same total.
+
+| Result on a question | Questions |
+| --- | ---: |
+| Both formats matched the key | 789 |
+| Only Markdown matched | 9 |
+| Only cleaned HTML matched | 9 |
+| Neither matched | 81 |
+| Total | 888 |
+
+Each format reached 798 by adding its nine separate matches to the 789 shared matches. The tied total hid 18 questions with different marks.
+
+The original replies differed on 45 questions. For 23 of them, normal text cleanup made the replies identical. The remaining 22 still differed after cleanup. Raw wording differences and changes in the final score are separate counts because two differently worded replies can both fail, or both pass, the marking rule.
+
+The study reports two ways to average the answers. Counting every question equally gives 798 divided by 888, or 89.86%, for both formats. Giving each section equal weight produces 90.00%. Under the second measure, a section with one question contributes as much as a section with three. The small difference between the percentages follows from those weights.
+
+## Warranties, salaries, and prices
+
+One warranty answer in the key read `36 mo. / 36,000 mi. Warranty`. The cleaned-HTML reply read `36 mo. / 36,000 mi.`. Both gave the same limits of 36 months and 36,000 miles. The key check rejected the shorter reply because it omitted “Warranty.” The source review accepted both answers.
+
+A salary question showed a missing condition. The source stated `41,526 to 51,034 per annum depending on relevant experience`. The cleaned-HTML reply kept the annual range but left out the condition about experience. Markdown kept it. The review rated the first reply incomplete and the second correct and complete. Experience affects the salary offered within that range.
+
+For the book-price question, the review accepted the cleaned-HTML reply and marked Markdown's two-price reply incomplete. The test changed the whole page format, so it cannot identify which tag or formatting change led to that reply.
+
+The review also accepted `660 g` for a camera's weight, although the key listed pounds and ounces too. The gram value answered the question without repeating every unit conversion. Longer car names that included accurate trim details also received credit.
+
+Other questions were uncertain before choosing a page format. Two roster questions asked for birthplace, but the original columns said hometown. Those fields can differ. Another question asked for “optical resolution” on a page containing both screen and camera resolution. The review marked the intended answer unclear rather than assuming one field settled the question.
+
+## The source review
+
+The paper's AI assistant checked all 45 differing reply pairs against the saved source text and table labels, and inspected five screenshots where layout affected the judgment. It could see the format names and published keys. The review assigned one of five labels to each reply.
+
+| Review judgment | Cleaned HTML | Markdown |
+| --- | ---: | ---: |
+| Correct and complete | 39 | 40 |
+| Incomplete | 1 | 1 |
+| Wrong | 0 | 0 |
+| No answer | 3 | 2 |
+| Unclear | 2 | 2 |
+| Reviewed replies | 45 | 45 |
+
+The 843 questions with identical stored replies did not enter this review. Their agreement cannot rule out shared errors. The 39 and 40 judgments therefore describe a selected comparison of disagreements, not factual-accuracy rates for all 888 questions.
+
+## The scoring rule
+
+The main scorer decoded HTML character spellings, standardized equivalent character forms, ignored letter case, and removed extra whitespace. For example, it treated `&amp;` as `&`. It kept numbers, signs, decimal points, units, and punctuation otherwise intact. The replies `1.5` and `15` remained different.
+
+Cleaning only letter case and whitespace would have produced 791 matches for cleaned HTML and 798 for Markdown. With the full original rule, both reached 798. Across all five formats and 4,440 answer attempts, decoding HTML character spellings changed 15 marks. Removing the step that standardizes equivalent Unicode character forms changed none.
+
+The main tables use the rule fixed before the main replies. The simpler cleanup was a later check.
+
+## Repeats and website mix
+
+The repeat run selected one section from each dataset group, giving 50 sections and 149 questions. Cleaned HTML matched 132 answers in each run; Markdown matched 130. Three cleaned-HTML replies and two Markdown replies changed while those totals stayed the same.
+
+The analysis also recalculated the comparison 10,000 times using different mixes of the 43 observed hostnames. Each draw kept a website's sections together and allowed a hostname to appear more than once. This checks how the result changes when the sampled websites receive different weights.
+
+The middle 95% of the answer-score differences ran from 0.87 percentage points lower to 0.87 points higher for Markdown. The complete-input savings ranged from about 45.1% to 53.1% across the middle 95%. These calculations reused saved replies; they did not make fresh model requests.
+
+Two hostnames appeared in both the preliminary and main samples under different dataset-group labels. Removing their main sections left 288 sections from 41 hostnames, with the average section scores still tied.
+
+The study also applied more HTML cleaning and tried a second public token counter. Further cleaning reduced the HTML page-text total to 269,960 tokens, with Markdown still 64.9% shorter. The second counter gave a 66.7% combined page saving, compared with 66.9% under the first. The extra-cleaning check measured text length only.
+
+## Other conversion methods
+
+[HtmlRAG](https://arxiv.org/abs/2411.02959) cleans, compresses, and selects parts of HTML to reduce input while keeping useful page structure.
+
+[ReaderLM-v2](https://arxiv.org/abs/2503.01151) uses a trained language model to convert HTML into Markdown or JSON. This adds a separate model whose output needs checking.
+
+This experiment used fixed conversion rules on supplied sections. It did not run HtmlRAG or ReaderLM-v2. It compared input counts and answers for the same questions, then checked the differing replies against their sources.
+
+Two converters can produce different Markdown from the same HTML. The conversion rules decide which content to keep and how to write it. A result for one converter cannot establish how another will perform simply because both produce Markdown.
+
+## Language and token counts
+
+A separate check in the paper's appendix counted published human translations from [FLORES-200](https://github.com/facebookresearch/flores/tree/main/flores200). It used 1,012 aligned sentences drawn from 281 English-language source articles. Twelve languages produced 13 language/script versions because Chinese appeared in simplified and traditional scripts.
+
+The check applied two public counting rules, `o200k_base` and `cl100k_base`. These rules divide text into tokens differently.
+
+| Version | Tokens with o200k_base | Tokens with cl100k_base |
+| --- | ---: | ---: |
+| English | 26,873 | 27,182 |
+| Simplified Chinese | 33,555 | 50,811 |
+| Traditional Chinese | 38,098 | 58,198 |
+
+Simplified Chinese used 24.9% more tokens than English under the first rule and 86.9% more under the second. It used fewer written characters, but that did not make either token total smaller. All tested non-English versions used more tokens in total under both rules.
+
+Under `o200k_base`, 116 individual simplified-Chinese sentences used fewer tokens than their English versions, despite the higher total.
+
+The check measured text length. It did not test model answers in those languages or the cost of translating a request.
+
+## Study limits
+
+The model answered questions about supplied text. Finding pages, loading script-driven applications, managing logins, and completing purchases would need different tests.
+
+The reader used one hosted GPT alias and requested settings. The provider can change the model behind that alias. Training exposure to WebSRC is also unknown. Repeating the experiment with other readers and fresh pages is necessary before treating the result as typical of web question answering.
+
+The website-resampling interval covers changes in the source mix. It does not cover all the variation that could arise from running the model again.
+
+The study measured input counts rather than billed charges, energy use, or a causal reduction in response time. Median reply times were about 2.7 to 2.8 seconds and included network and service delays. A 49.6% input reduction cannot be converted into a 49.6% saving in any of those other quantities without measuring them.
+
+## The next conversion test
+
+A follow-up could compare converters before removing more text. Each converter would receive the same pages without seeing the questions. The test would check whether table headings, units, conditions, and price status remained, count the tokens, and repeat the questions with more than one reader.
+
+If the converted text no longer identifies the current price, the converter has lost needed information. If it identifies the price clearly and the model still returns both amounts, the reader has failed to use information it received.
+
+For the book page, the next test is whether a shorter conversion can preserve the price status and lead the reader to answer `16.99` alone.
+
+The [full paper](/docs/the-token-tax-of-the-web.pdf) contains the method, tables, and source examples. The [published count data](/data/token-tax-results.json) supplies the figures used in this essay's charts, along with the source-review and language-count summaries.
 
 ---
 
@@ -8915,199 +9266,3 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
 - [Media Mentions & Press Coverage](https://veda.ng/media): 65+ news quotes and media features in Yahoo Finance, Decrypt, Business Standard, The Tribune, Outlook Money, and ThePrint
 - [Privacy Policy](https://veda.ng/privacy): Data handling, analytics, and third-party services
 - [Contact / Book a Meeting](https://veda.ng/contact): Direct consultation and email options
-
-
-
----
-
-## The Token Tax of the Web
-
-Source: https://veda.ng/tokentax
-Published: 2026-10-17
-
-A book page showed 20.00 crossed out and 16.99 as the current price. A language model answered the price question with `16.99` from cleaned HTML and `20.00 16.99` from Markdown. The Markdown reply left the reader to decide which price applied.
-
-Across the full test, Markdown used 49.6% fewer recorded input tokens than cleaned HTML. Both formats matched 798 of the 888 expected answers.
-
-The [research paper](/docs/the-token-tax-of-the-web.pdf) compares five formats of the same saved webpage sections. It counts the input tokens, scores the answers, and checks differing replies against the original pages.
-
-![Cleaned HTML used 385,326 complete input tokens and Markdown used 194,035, a reduction of 49.6%. Each matched 798 of 888 expected answers.](/images/essays/token-tax-input.svg)
-
-## The extra input
-
-A price inside an HTML table can appear as `<td>16.99</td>`. The characters `<td>` and `</td>` mark a table cell. A browser uses those tags when it displays the table. A language model receiving the HTML as text receives the tags along with the price.
-
-The model processes text in tokens. A token can represent a word, part of a word, punctuation, or another sequence of characters. Tags and attributes count toward the input too. Their cost depends on the token-counting rule, so counting characters or file bytes cannot establish how many tokens a request uses.
-
-Some markup helps answer a question. Table tags identify rows and columns. A heading may apply to several values below it. Deleting these tags can make it harder to tell which label belongs to a value.
-
-Styling rules, scripts, comments, and page identifiers can add text without helping answer a question about a salary or a camera's weight. The title's “token tax” refers to the input used for this code and markup.
-
-## The test
-
-The source material came from [WebSRC](https://aclanthology.org/2021.emnlp-main.343/), a dataset published in 2021. It pairs saved webpage sections with questions and expected answers. Its creators had already selected the sections and removed some code.
-
-The main sample contained 300 sections from 50 dataset groups covering 43 website hostnames. Cars, books, cameras, games, jobs, films, phones, restaurants, sports, and universities appeared in the sample. Each group contributed six sections. Sports and universities supplied more sections than cameras or games because the dataset contained more selected groups for those topics.
-
-Each section had up to three questions. The exact distribution was 291 sections with three questions, six with two, and three with one. That produced 888 questions. The selection grouped rewordings about the same stored answer and location before choosing questions, reducing repeated tests of the same fact.
-
-Every selected section appeared in five formats.
-
-| Format | Text supplied to the model |
-| --- | --- |
-| Saved HTML | The section kept by WebSRC, after removing research-only answer-location labels |
-| Cleaned HTML | The same section with further code and identifiers removed, while keeping basic HTML structure |
-| Markdown | A fixed conversion using shorter notation for headings, lists, links, and tables |
-| Plain text | Words and numbers in source order, with most markup removed |
-| Nested JSON | A labelled list of page elements and the smaller elements inside them |
-
-The converters followed fixed rules. They did not use another model to rewrite the page and could not see the questions or answer key when deciding what to keep. [Markdownify](https://github.com/matthewwithanm/python-markdownify) produced the Markdown version. Every version fit within the study's 64,000-token limit, so the test kept the selected text in full.
-
-The main run used the model alias `gpt-6.1-sol` through OpenCode on 12 October 2026 UTC. Each request started a fresh chat containing one section and its questions. The instructions asked for the shortest supporting passage, required units, and allowed an empty answer when the supplied text could not answer the question. Browsing and file access were disabled.
-
-Five versions of 300 sections produced 1,500 main requests and 4,440 answer attempts. A preliminary run added 150 requests; a repeat run added 250. The total was 1,900 experimental requests. The result tables below use the main run. The primary comparison and measures were recorded after the preliminary run and before the main replies, in a local, unregistered plan.
-
-## The token counts
-
-| Format | Page-text tokens | Complete input tokens | Answer-key matches out of 888 |
-| --- | ---: | ---: | ---: |
-| Saved HTML | 625,455 | 724,469 | 805 |
-| Cleaned HTML | 286,312 | 385,326 | 798 |
-| Markdown | 94,874 | 194,035 | 798 |
-| Plain text | 67,658 | 166,936 | 784 |
-| Nested JSON | 348,183 | 447,197 | 795 |
-
-Page-text counts use the public `o200k_base` rule in [tiktoken](https://github.com/openai/tiktoken). Complete-input counts come from the recorded model requests and include questions, instructions, and other request text. Both columns exclude the reply.
-
-An answer-key match means that the reply agrees with the stored expected answer after text cleanup. The scoring rule below explains which differences the program ignores.
-
-Plain text used 27,099 fewer complete-input tokens than Markdown, but matched 14 fewer answers.
-
-Saved HTML matched seven more answers than Markdown and used 530,434 more complete-input tokens. Choosing between them would require deciding how much input to spend on those extra matches. The experiment did not assign a monetary value to an answer.
-
-Nested JSON used more input than cleaned HTML and matched three fewer answers. Its repeated labels and hierarchy took space. This result concerns a conversion of the page's element tree. A small JSON object containing only a product name, current price, and currency would require a separate step to select those facts from the page.
-
-## Page savings and request savings
-
-For cleaned HTML and Markdown, page text fell from 286,312 to 94,874 tokens. Subtracting gives 191,438 fewer tokens. Dividing that difference by 286,312 gives a 66.9% reduction.
-
-The complete request fell from 385,326 to 194,035 tokens. That difference is 191,291 tokens, or 49.6% of the cleaned-HTML total. The questions and instructions remained in both versions. Reducing the page therefore removed a smaller share of the complete request than of the page alone.
-
-The public page counter and the provider's request counter may split text differently. The provider's internal rule was unknown. Subtracting one column from the other would not give an exact count of the questions and instructions.
-
-Each request contained one copy of a section and all its questions. Sending a separate request for every question would repeat page text. Adding a long conversation history would increase the other input. Either design would need its own complete-request measurement.
-
-The paper also reports a 68.6% median saving in page tokens. To calculate it, the analysis found the percentage saving for each section, sorted all 300 percentages, and averaged the two middle values. The combined 66.9% saving gives long sections more influence. The median describes the middle of the section-by-section results.
-
-## The tied score
-
-Markdown and cleaned HTML matched different questions despite reaching the same total.
-
-| Result on a question | Questions |
-| --- | ---: |
-| Both formats matched the key | 789 |
-| Only Markdown matched | 9 |
-| Only cleaned HTML matched | 9 |
-| Neither matched | 81 |
-| Total | 888 |
-
-Each format reached 798 by adding its nine separate matches to the 789 shared matches. The tied total hid 18 questions with different marks.
-
-The original replies differed on 45 questions. For 23 of them, normal text cleanup made the replies identical. The remaining 22 still differed after cleanup. Raw wording differences and changes in the final score are separate counts because two differently worded replies can both fail, or both pass, the marking rule.
-
-The study reports two ways to average the answers. Counting every question equally gives 798 divided by 888, or 89.86%, for both formats. Giving each section equal weight produces 90.00%. Under the second measure, a section with one question contributes as much as a section with three. The small difference between the percentages follows from those weights.
-
-## Warranties, salaries, and prices
-
-One warranty answer in the key read `36 mo. / 36,000 mi. Warranty`. The cleaned-HTML reply read `36 mo. / 36,000 mi.`. Both gave the same limits of 36 months and 36,000 miles. The key check rejected the shorter reply because it omitted “Warranty.” The source review accepted both answers.
-
-A salary question showed a missing condition. The source stated `41,526 to 51,034 per annum depending on relevant experience`. The cleaned-HTML reply kept the annual range but left out the condition about experience. Markdown kept it. The review rated the first reply incomplete and the second correct and complete. Experience affects the salary offered within that range.
-
-For the book-price question, the review accepted the cleaned-HTML reply and marked Markdown's two-price reply incomplete. The test changed the whole page format, so it cannot identify which tag or formatting change led to that reply.
-
-The review also accepted `660 g` for a camera's weight, although the key listed pounds and ounces too. The gram value answered the question without repeating every unit conversion. Longer car names that included accurate trim details also received credit.
-
-Other questions were uncertain before choosing a page format. Two roster questions asked for birthplace, but the original columns said hometown. Those fields can differ. Another question asked for “optical resolution” on a page containing both screen and camera resolution. The review marked the intended answer unclear rather than assuming one field settled the question.
-
-## The source review
-
-The paper's AI assistant checked all 45 differing reply pairs against the saved source text and table labels, and inspected five screenshots where layout affected the judgment. It could see the format names and published keys. The review assigned one of five labels to each reply.
-
-| Review judgment | Cleaned HTML | Markdown |
-| --- | ---: | ---: |
-| Correct and complete | 39 | 40 |
-| Incomplete | 1 | 1 |
-| Wrong | 0 | 0 |
-| No answer | 3 | 2 |
-| Unclear | 2 | 2 |
-| Reviewed replies | 45 | 45 |
-
-The 843 questions with identical stored replies did not enter this review. Their agreement cannot rule out shared errors. The 39 and 40 judgments therefore describe a selected comparison of disagreements, not factual-accuracy rates for all 888 questions.
-
-## The scoring rule
-
-The main scorer decoded HTML character spellings, standardized equivalent character forms, ignored letter case, and removed extra whitespace. For example, it treated `&amp;` as `&`. It kept numbers, signs, decimal points, units, and punctuation otherwise intact. The replies `1.5` and `15` remained different.
-
-Cleaning only letter case and whitespace would have produced 791 matches for cleaned HTML and 798 for Markdown. With the full original rule, both reached 798. Across all five formats and 4,440 answer attempts, decoding HTML character spellings changed 15 marks. Removing the step that standardizes equivalent Unicode character forms changed none.
-
-The main tables use the rule fixed before the main replies. The simpler cleanup was a later check.
-
-## Repeats and website mix
-
-The repeat run selected one section from each dataset group, giving 50 sections and 149 questions. Cleaned HTML matched 132 answers in each run; Markdown matched 130. Three cleaned-HTML replies and two Markdown replies changed while those totals stayed the same.
-
-The analysis also recalculated the comparison 10,000 times using different mixes of the 43 observed hostnames. Each draw kept a website's sections together and allowed a hostname to appear more than once. This checks how the result changes when the sampled websites receive different weights.
-
-The middle 95% of the answer-score differences ran from 0.87 percentage points lower to 0.87 points higher for Markdown. The complete-input savings ranged from about 45.1% to 53.1% across the middle 95%. These calculations reused saved replies; they did not make fresh model requests.
-
-Two hostnames appeared in both the preliminary and main samples under different dataset-group labels. Removing their main sections left 288 sections from 41 hostnames, with the average section scores still tied.
-
-The study also applied more HTML cleaning and tried a second public token counter. Further cleaning reduced the HTML page-text total to 269,960 tokens, with Markdown still 64.9% shorter. The second counter gave a 66.7% combined page saving, compared with 66.9% under the first. The extra-cleaning check measured text length only.
-
-## Other conversion methods
-
-[HtmlRAG](https://arxiv.org/abs/2411.02959) cleans, compresses, and selects parts of HTML to reduce input while keeping useful page structure.
-
-[ReaderLM-v2](https://arxiv.org/abs/2503.01151) uses a trained language model to convert HTML into Markdown or JSON. This adds a separate model whose output needs checking.
-
-This experiment used fixed conversion rules on supplied sections. It did not run HtmlRAG or ReaderLM-v2. It compared input counts and answers for the same questions, then checked the differing replies against their sources.
-
-Two converters can produce different Markdown from the same HTML. The conversion rules decide which content to keep and how to write it. A result for one converter cannot establish how another will perform simply because both produce Markdown.
-
-## Language and token counts
-
-A separate check in the paper's appendix counted published human translations from [FLORES-200](https://github.com/facebookresearch/flores/tree/main/flores200). It used 1,012 aligned sentences drawn from 281 English-language source articles. Twelve languages produced 13 language/script versions because Chinese appeared in simplified and traditional scripts.
-
-The check applied two public counting rules, `o200k_base` and `cl100k_base`. These rules divide text into tokens differently.
-
-| Version | Tokens with o200k_base | Tokens with cl100k_base |
-| --- | ---: | ---: |
-| English | 26,873 | 27,182 |
-| Simplified Chinese | 33,555 | 50,811 |
-| Traditional Chinese | 38,098 | 58,198 |
-
-Simplified Chinese used 24.9% more tokens than English under the first rule and 86.9% more under the second. It used fewer written characters, but that did not make either token total smaller. All tested non-English versions used more tokens in total under both rules.
-
-Under `o200k_base`, 116 individual simplified-Chinese sentences used fewer tokens than their English versions, despite the higher total.
-
-The check measured text length. It did not test model answers in those languages or the cost of translating a request.
-
-## Study limits
-
-The model answered questions about supplied text. Finding pages, loading script-driven applications, managing logins, and completing purchases would need different tests.
-
-The reader used one hosted GPT alias and requested settings. The provider can change the model behind that alias. Training exposure to WebSRC is also unknown. Repeating the experiment with other readers and fresh pages is necessary before treating the result as typical of web question answering.
-
-The website-resampling interval covers changes in the source mix. It does not cover all the variation that could arise from running the model again.
-
-The study measured input counts rather than billed charges, energy use, or a causal reduction in response time. Median reply times were about 2.7 to 2.8 seconds and included network and service delays. A 49.6% input reduction cannot be converted into a 49.6% saving in any of those other quantities without measuring them.
-
-## The next conversion test
-
-A follow-up could compare converters before removing more text. Each converter would receive the same pages without seeing the questions. The test would check whether table headings, units, conditions, and price status remained, count the tokens, and repeat the questions with more than one reader.
-
-If the converted text no longer identifies the current price, the converter has lost needed information. If it identifies the price clearly and the model still returns both amounts, the reader has failed to use information it received.
-
-For the book page, the next test is whether a shorter conversion can preserve the price status and lead the reader to answer `16.99` alone.
-
-The [full paper](/docs/the-token-tax-of-the-web.pdf) contains the method, tables, and source examples. The [published count data](/data/token-tax-results.json) supplies the figures used in this essay's charts, along with the source-review and language-count summaries.

@@ -8,18 +8,25 @@
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>AI Text Detection and the Limits of 96% Accuracy</title>
+      <link>https://veda.ng/detection</link>
+      <guid>https://veda.ng/detection</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+      <description>An AI detector scored 95.99% locally and 53.89% externally. The abstract-corpus study examines transfer, false alarms and authorship claims.</description>
+    </item>
+    <item>
+      <title>Personality Profiles Across 55 Language Models</title>
+      <link>https://veda.ng/personality</link>
+      <guid>https://veda.ng/personality</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+      <description>What repeated IPIP-50 assessments of 55 language model configurations show about personality scores and the comparisons they support.</description>
+    </item>
+    <item>
       <title>The Token Tax of the Web</title>
       <link>https://veda.ng/tokentax</link>
       <guid>https://veda.ng/tokentax</guid>
       <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
       <description>In a test of 300 webpage sections, Markdown used 49.6% fewer input tokens than cleaned HTML. Both matched 798 of 888 expected answers.</description>
-    </item>
-    <item>
-      <title>High Accuracy, Poor Transfer</title>
-      <link>https://veda.ng/generalization</link>
-      <guid>https://veda.ng/generalization</guid>
-      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
-      <description>A detector scored 95.99% within one abstract corpus and 53.89% on another. A study of transfer, false alarms, and the limits of authorship claims.</description>
     </item>
     <item>
       <title>Bitget reports $351.6 million wallet breach and pauses withdrawals</title>

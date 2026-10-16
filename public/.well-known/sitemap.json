@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.org/sitemap",
-  "generatedAt": "2026-10-16T20:54:50.808732Z",
+  "generatedAt": "2026-10-16T21:01:00.078Z",
   "publisher": {
     "name": "Vedang Vatsa",
     "url": "https://veda.ng"
@@ -47,8 +47,22 @@
       "changefreq": "weekly"
     },
     {
-      "url": "https://veda.ng/generalization",
-      "title": "High Accuracy, Poor Transfer",
+      "url": "https://veda.ng/detection",
+      "title": "AI Text Detection and the Limits of 96% Accuracy",
+      "lastmod": "2026-10-17",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/personality",
+      "title": "Personality Profiles Across 55 Language Models",
+      "lastmod": "2026-10-17",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
+      "url": "https://veda.ng/tokentax",
+      "title": "The Token Tax of the Web",
       "lastmod": "2026-10-17",
       "changefreq": "monthly",
       "priority": 0.8
@@ -2264,13 +2278,6 @@
       "title": "Webhook",
       "changefreq": "monthly",
       "priority": 0.6
-    },
-    {
-      "url": "https://veda.ng/tokentax",
-      "title": "The Token Tax of the Web",
-      "lastmod": "2026-10-17",
-      "changefreq": "monthly",
-      "priority": 0.8
     }
   ]
 }
