@@ -5,6 +5,7 @@ import { ROOT, isMain, readQueue, saveQueue, selectDue, localVideo, publicVideoU
 import { REQUIRED, requireCredentials } from './viz-platform-preflight.js';
 import { validateCaption, validateConciseBufferCaption } from './viz-captions.mjs';
 import { configuredDirectPlatforms } from './viz-platforms.mjs';
+import { encodeLinkedInPlainText } from './linkedin-plain-text.mjs';
 
 dotenv.config({ path: path.join(ROOT, '.env.local'), quiet: true });
 
@@ -13,7 +14,8 @@ export async function publish(platform: string, post: VizPost, video: string, ur
   switch (platform) {
     case 'linkedin': {
       const { postToLinkedIn } = await import('./linkedin-scheduled-executor.js');
-      const result = await postToLinkedIn(text, video);
+      const commentary = post.captionStyle === 'licensed-v2' ? encodeLinkedInPlainText(text) : text;
+      const result = await postToLinkedIn(commentary, video);
       if (!result.success || !result.id) throw new Error(result.error || 'LinkedIn returned no post ID');
       return result.id;
     }
@@ -89,6 +91,10 @@ export async function runPlatform(platform: string, dryRun: boolean) {
     post.postedAt = new Date().toISOString();
     post.state = 'sent';
     post.error = null;
+    if (platform === 'linkedin') {
+      post.postUrl = `https://www.linkedin.com/feed/update/${id}/`;
+      if (post.captionStyle === 'licensed-v2') post.commentaryEncoding = 'little-text-v1';
+    }
     console.log(`${platform}: published ${id}`);
   } catch (err) {
     // A transport timeout can occur after a post is accepted. Never blind-retry.

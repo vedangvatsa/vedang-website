@@ -1,0 +1,65 @@
+name: Repair data-viz LinkedIn caption
+
+on:
+  workflow_dispatch:
+    inputs:
+      queue_post_id:
+        description: Existing published batch-2 LinkedIn queue ID
+        type: string
+        required: true
+        default: viz-b2-linkedin-70
+
+concurrency:
+  group: social-queue
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /package.json
+            /package-lock.json
+            /scripts/repair-viz-linkedin-caption.ts
+            /scripts/linkedin-plain-text.mjs
+            /scripts/viz-captions.mjs
+            /scripts/viz-publishing.ts
+            /scripts/viz-queue-time.mjs
+            /scripts/viz-linkedin-posts.json
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Update the existing post caption
+        run: npx tsx scripts/repair-viz-linkedin-caption.ts --id="$QUEUE_POST_ID"
+        env:
+          QUEUE_POST_ID: ${{ inputs.queue_post_id }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+
+      - name: Preserve the repair receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linkedin-caption-repair-${{ github.run_id }}
+          path: scripts/viz-linkedin-posts.json
+          retention-days: 90
+
+      - name: Save caption repair status
+        if: success()
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Automated: LinkedIn viz caption repaired [skip ci]'
+          file_pattern: scripts/viz-linkedin-posts.json

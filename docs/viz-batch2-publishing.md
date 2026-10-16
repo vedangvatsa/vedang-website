@@ -29,6 +29,12 @@ CC BY 4.0 credits. The existing concise caption format remains supported for the
 earlier campaign. The second batch uses the same publication transports and
 one-post-per-slot duplicate protection.
 
+LinkedIn interprets commentary as little-text markup. The `licensed-v2` transport
+escapes its reserved characters, including parentheses and URL fragments, so
+captions retain their definitions and credits. The manual caption-repair workflow
+updates an already published batch-2 post in place without creating another post
+or changing its video.
+
 ## Publication evidence
 
 The `viz-youtube-posts.json`, `viz-instagram-posts.json`, `viz-tiktok-posts.json`

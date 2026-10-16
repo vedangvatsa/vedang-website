@@ -11,8 +11,21 @@ import { captionLength, validateCaption, validateConciseBufferCaption, conciseBu
 import { needsBufferWork } from './viz-queue-time.mjs';
 import { sourceCredit } from './viz-source-credit.mjs';
 import { configuredDirectPlatforms, DIRECT_PLATFORMS } from './viz-platforms.mjs';
+import { encodeLinkedInPlainText } from './linkedin-plain-text.mjs';
 
 const entry = (id: string, time = '09:00'): VizPost => ({ id, posted: false, scheduleDate: '2026-09-25', scheduleTime: time, title: 'Population', text: 'Population, 2000-2024.', description: 'Population, 2000-2024.' });
+
+test('LinkedIn plain captions escape markup delimiters without dropping source or music credits', () => {
+  const original = 'Coffee production (tonnes).\nFAO https://www.fao.org/faostat/en/#data/QCL\nMusic by Scott Buckley\n#DataVisualization';
+  const encoded = encodeLinkedInPlainText(original);
+  assert.equal(encoded, 'Coffee production \\(tonnes\\).\nFAO https://www.fao.org/faostat/en/\\#data/QCL\nMusic by Scott Buckley\n\\#DataVisualization');
+  assert.equal(encodeLinkedInPlainText(String.raw`|{}@[]()<>#\*_~`), String.raw`\|\{\}\@\[\]\(\)\<\>\#\\\*\_\~`);
+  const coffee = readQueue(path.join(ROOT, 'scripts/viz-linkedin-posts.json')).find(p => p.id === 'viz-b2-linkedin-70')!;
+  const payload = encodeLinkedInPlainText(coffee.text);
+  assert.ok(payload.includes('\\(tonnes\\)'));
+  assert.ok(payload.includes(String(coffee.musicCredit)));
+  assert.throws(() => encodeLinkedInPlainText(' '), /empty/);
+});
 
 test('catch-up gate waits for the slot, recovers a missed trigger and skips completed slots', () => {
   const posts = [entry('one'), entry('two', '14:00'), entry('three', '20:00')];
