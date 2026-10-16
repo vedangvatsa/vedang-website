@@ -110,14 +110,19 @@ test('channel selection rejects ambiguity and disconnected accounts', () => {
   assert.throws(() => chooseChannel('youtube', 'UNSET_TEST_CHANNEL', [{ ...channel, isDisconnected: true }]), /disconnected/);
 });
 
-test('all captions fit their platform; future Buffer captions follow the approved concise format', () => {
+test('all captions fit their platform and retain their declared caption format', () => {
   const all = Object.keys(LIMITS).map(platform => ({ platform, posts: readQueue(path.join(ROOT, 'scripts', `viz-${platform}-posts.json`)) }));
   for (const { platform, posts } of all) {
-    assert.equal(posts.length, 50);
+    assert.equal(posts.filter(p => !p.batchId).length, 50, 'Original campaign must remain intact');
+    assert.equal(new Set(posts.map(p => p.id)).size, posts.length);
     for (const p of posts) {
       const text = platform === 'youtube' ? p.description : p.text;
       validateCaption(platform, text);
-      if (!p.posted) {
+      if (p.batchId === '2026-10-16') {
+        assert.equal(p.captionStyle, 'licensed-v2');
+        assert.ok(text?.includes(String(p.musicCredit)), 'Required music attribution missing');
+        assert.ok(text?.includes(String(p.sourceUrl)), 'Data source link missing');
+      } else if (!p.posted) {
         assert.equal(p.captionStyle, 'concise-v1');
         validateConciseBufferCaption(text);
         assert.equal(p.sourceCredit, sourceCredit({ sourceOrganization: p.sourceOrganization }));
@@ -126,6 +131,44 @@ test('all captions fit their platform; future Buffer captions follow the approve
       const notes = new URL(String(p.notesUrl));
       assert.ok(fs.existsSync(path.join(ROOT, 'public', notes.pathname)));
     }
+  }
+});
+
+test('second batch has 88 matched queue entries per requested platform and two editorial holds', () => {
+  const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/viz-batch2-assets/manifest.json'), 'utf8'));
+  assert.equal(manifest.totalProduced, 90);
+  assert.equal(manifest.queuedPerPlatform, 88);
+  assert.deepEqual(Object.keys(manifest.holds).sort(), ['bank-atms', 'secure-servers']);
+  assert.equal(new Set(manifest.videos.map((v: any) => v.indicator)).size, 90);
+  const queued = manifest.videos.filter((v: any) => v.status === 'queued');
+  assert.equal(queued.length, 88);
+  for (const asset of queued) {
+    const digest = createHash('sha256').update(fs.readFileSync(path.join(ROOT, asset.video))).digest('hex');
+    assert.equal(digest, asset.videoSha256, `Media changed for ${asset.slug}`);
+  }
+  let schedule: unknown;
+  for (const platform of ['youtube', 'instagram', 'tiktok', 'linkedin']) {
+    const posts = readQueue(path.join(ROOT, 'scripts', `viz-${platform}-posts.json`)).filter(p => p.batchId === manifest.batchId);
+    assert.equal(posts.length, 88);
+    assert.equal(posts[0].slug, 'coffee');
+    assert.ok(posts.every(p => !Object.hasOwn(manifest.holds, String(p.slug))));
+    assert.ok(posts.every(p => ['09:00', '14:00', '20:00'].includes(p.scheduleTime)));
+    const current = posts.map(p => [p.slug, p.scheduleDate, p.scheduleTime]);
+    if (schedule) assert.deepEqual(current, schedule);
+    else schedule = current;
+  }
+});
+
+test('hosted notes support three-digit second-batch video numbers', () => {
+  const old = process.env.VIZ_NOTES_BASE_URL;
+  process.env.VIZ_NOTES_BASE_URL = 'https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public';
+  try {
+    const p = { ...entry('batch-two'), captionStyle: 'licensed-v2', notesUrl: 'https://veda.ng/viz-notes/140.txt', description: 'Cottonseed oil. Notes https://veda.ng/viz-notes/140.txt' };
+    const input = buildInput('youtube', p, 'channel', 'https://cdn.example/video.mp4');
+    assert.ok(input.text.includes('/public/viz-notes/140.txt'));
+    assert.throws(() => buildInput('youtube', { ...p, notesUrl: 'https://veda.ng/viz-notes/../private.txt' }, 'channel', 'https://cdn.example/video.mp4'), /Invalid public notes/);
+  } finally {
+    if (old) process.env.VIZ_NOTES_BASE_URL = old; else delete process.env.VIZ_NOTES_BASE_URL;
   }
 });
 

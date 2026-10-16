@@ -64,7 +64,7 @@ export function buildInput(service: string, entry: VizPost, channelId: string, v
   if (text && entry.captionStyle !== 'concise-v1' && entry.notesUrl && process.env.VIZ_NOTES_BASE_URL) {
     const original = new URL(String(entry.notesUrl));
     const base = new URL(process.env.VIZ_NOTES_BASE_URL);
-    if (base.protocol !== 'https:' || !/^\/viz-notes\/\d{2}\.txt$/.test(original.pathname)) throw new Error('Invalid public notes URL configuration');
+    if (base.protocol !== 'https:' || !/^\/viz-notes\/\d{2,3}\.txt$/.test(original.pathname)) throw new Error('Invalid public notes URL configuration');
     const notes = `${base.href.replace(/\/$/, '')}${original.pathname}`;
     text = text.replaceAll(String(entry.notesUrl), notes);
   }
