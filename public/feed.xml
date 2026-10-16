@@ -8,6 +8,20 @@
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>High Accuracy, Poor Transfer</title>
+      <link>https://veda.ng/generalization</link>
+      <guid>https://veda.ng/generalization</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A detector scored 95.99% within one abstract corpus and 53.89% on another. A study of transfer, false alarms, and the limits of authorship claims.</description>
+    </item>
+    <item>
+      <title>Bitget reports $351.6 million wallet breach and pauses withdrawals</title>
+      <link>https://veda.ng/bitget-hack</link>
+      <guid>https://veda.ng/bitget-hack</guid>
+      <pubDate>Thu, 24 Sep 2026 22:10:00 GMT</pubDate>
+      <description>CEO Gracy Chen says unauthorized transfers affected about $351.6 million. Bitget says cold wallets are secure and its protection fund covers the loss; the attack method remains under investigation.</description>
+    </item>
+    <item>
       <title>The Web Is Not Ready for Agents</title>
       <link>https://veda.ng/agentready</link>
       <guid>https://veda.ng/agentready</guid>

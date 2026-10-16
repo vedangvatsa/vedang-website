@@ -2,11 +2,239 @@
 
 > Official personal website and research publication platform of Vedang Vatsa (FRSA). Complete unpaginated full-text of all published essays, profile references, and machine interfaces on veda.ng.
 
+## High Accuracy, Poor Transfer
+URL: https://veda.ng/generalization
+Summary: A detector scored 95.99% within one abstract corpus and 53.89% on another. A study of transfer, false alarms, and the limits of authorship claims.
+
+An eight-feature random-forest procedure reached 95.99% accuracy within a collection of scientific abstracts. After fitting the procedure to that collection and testing it on a separately assembled corpus, accuracy fell to 53.89%. It identified 976 of 8,319 texts labelled as generated. The error counts matter more than the appearance of the first percentage: the external test contained 7,343 generated texts that the detector accepted as published text.
+
+![Eight-feature random-forest accuracy is 95.99% in local grouped validation and 53.89% on an external abstract corpus, using the fixed 0.5 threshold.](/images/essays/generalization.svg)
+
+The [accompanying paper](https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.pdf) examines this difference through source checks, grouped validation, simpler classifiers and several sensitivity analyses. Its findings support a narrow empirical conclusion. A procedure can distinguish the recorded classes within a dataset and still perform poorly when the source of the texts changes. The study does not establish that detection always fails, or that one generator caused this particular failure.
+
+The broader argument concerns the evidence required to turn a classification result into a judgment about a writer. Accuracy describes agreement with labels under a specified evaluation. Using that result elsewhere adds assumptions about the source of the text, the meaning of the labels, the decision threshold and the frequency of generated writing. Those assumptions need evidence of their own. A large sample can make a calculation precise while leaving its relevance to the next document uncertain.
+
+## 1. What the internal score measures
+
+The local analysis begins with 100,000 pairs. Each pair contains a text supplied as a published abstract and another supplied as generated text. After exclusions, 74,513 pairs remain, giving 149,026 texts with equal class counts. The classifier receives numerical features of those texts and predicts their recorded class. Its internal accuracy is the fraction of held-out predictions that agree with the labels.
+
+Held-out evaluation reduces an obvious source of optimism. A model can remember peculiarities of texts it has already seen. Testing it on those same texts gives a poor account of how it handles unfamiliar examples. The study instead assigns groups of related source records to five folds, trains on four folds, and predicts the remaining fold. Repeating that process gives every local text one prediction from a model that did not train on its source group.
+
+This design answers a useful question about the available corpus. It does not reproduce every difference between that corpus and a future submission. Training and validation records still come from the same collection process. They can share requested lengths, formatting conventions, publication sources and generation habits. A feature that separates the two classes throughout that process can remain useful in every fold, even if it loses that usefulness outside the collection.
+
+The internal score therefore needs a description of its setting. The distinction is familiar in measurement: a result depends on the instrument, the objects measured and the conditions of measurement. For a text classifier, the instrument includes preprocessing, features, fitted parameters and a decision rule. The objects include labelled records whose origins may be more or less well documented. Changing either side can change the error rate.
+
+  - **74,513**: Eligible local pairs (Study corpus accounting)
+  - **73,886**: Local source groups (Grouped evaluation)
+  - **8,319**: Eligible external pairs (External evaluation)
+
+## 2. The corpus behind the labels
+
+The source files contain [OpenAlex](https://arxiv.org/abs/2205.01833) identifiers, titles, publication years, DOI information where available, and abstract fields. The source and paired files agree on their source IDs, years and published-text strings. That agreement checks the local join. Establishing that a stored text matches its publisher, or that a person wrote every word of it, requires other evidence.
+
+The stored publication years range from 1670 to 2021. A pre-2022 date supports using a text as a presumed-human comparison, given the later public adoption of ChatGPT. It cannot certify human-only authorship. Nor does a metadata field named abstract guarantee that its contents form a conventional research abstract. Some records contain additional material. One inspected record pairs a title with conflicting content and is excluded.
+
+The audit queried all 100,000 original IDs against OpenAlex on 5 October 2026. DOI lookups recovered ten further records after the initial identifier checks. In total, the audit retrieved 98,907 current records and left 1,093 unresolved. Among the retained pairs, 66,605 published texts matched the current abstract after cleaning. Current metadata also classified 5,134 retained works as conference papers and 654 as book reviews, and marked 31 as retracted.
+
+The longest retained published record contains 5,162 counted words. A minimum-length rule keeps short texts out, but places no upper limit on material classified as an abstract. Validating the classifier therefore also asks whether the evaluated documents resemble the writing on which its decisions will be used.
+
+These outcomes describe agreement with a dated index. An unresolved identifier does not establish that a publication is invented; a changed record can reflect an index correction or merge. A retraction flag likewise supplies no evidence that a machine wrote the text. The value of the audit lies in making the source population more explicit than the phrase scientific abstracts alone permits.
+
+Generation history presents a separate problem. Archived OpenAI scripts specify GPT-4o-mini, temperature 0.7 and a 400-token output limit. Two prompt variants request academic abstracts of 150-250 or about 200-300 words from paper titles. The saved pairs lack per-output response identifiers, model snapshots, dates, prompt assignments and finish reasons. The scripts establish configured inputs, but cannot verify those settings for each output. The measured results remain conditional on the recorded labels.
+
+Title matching also provides less control than it first appears to. A title gives the model a topic. The original authors had methods, observations, numerical findings and references that the title did not supply. Generated descriptions can therefore differ in information content as well as wording. A classifier could use traces of that difference without learning a general property of machine authorship.
+
+## 3. Eight measurements, with limited meanings
+
+The feature set contains two sentence-length measurements, one vocabulary-diversity measurement, four word-list densities and one sentence-opening measure. The sentence-length coefficient of variation divides the standard deviation of sentence lengths by their mean. MTLD, the Measure of Textual Lexical Diversity, measures the lengths of word sequences that maintain a chosen level of lexical variation. The analysis uses a threshold of 0.72 and averages forward and reverse passes.
+
+[McCarthy and Jarvis](https://doi.org/10.3758/BRM.42.2.381) developed evidence for MTLD as a lexical-diversity measure. Its purpose is to describe a text's vocabulary variation. An MTLD value cannot establish the size of the writer's vocabulary, intelligence or understanding. The same distinction applies to the dictionaries: a match for a hedge or booster records a word occurrence, not a verified judgment about caution or conviction.
+
+The four densities count hedge, booster, self-mention and connector matches per 1,000 words. Phrase matching handles connectors such as “in addition.” The opener measure counts sentences whose first counted tokens match a listed connector. The [methods supplement](https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/SUPPLEMENTARY_METHODS.md) gives the complete dictionaries and token rule. Keeping those definitions explicit matters because a change in tokenization can change both eligibility and the measurements.
+
+The local generated class has mean MTLD 118.90, compared with 76.69 in the published class. Its mean sentence-length coefficient of variation is 0.206, compared with 0.396. Generated texts also contain more self-mention matches. These findings oppose any simple rule that machine text must always have lower lexical diversity. They establish differences between these classes under this extractor; they do not make either direction a universal diagnostic.
+
+[Desaire and colleagues](https://pmc.ncbi.nlm.nih.gov/articles/PMC10328544/) previously used a compact set of features to distinguish scientific writing from ChatGPT output. Their material included paragraphs from Science Perspectives articles and generated essays. That precedent supports testing small feature sets, while the difference in task prevents importing their headline performance into an abstract detector. The measurement definition and the evaluated writing task belong beside the score.
+
+## 4. Length and related records
+
+Both texts in an eligible pair need at least 100 counted words and two recognized sentences containing word tokens. Sequential exclusions remove 19 pairs with missing source titles, one title-content conflict, 113 normalized duplicates, 23,501 pairs below the word minimum and 1,853 below the sentence minimum. These rules define the analysed population. They leave performance on short, incomplete and otherwise excluded texts unanswered.
+
+The length distributions offer a concrete reason to examine how the corpus was constructed. Local generated texts cluster tightly around 199 words. Published texts span a wider range. Requested output lengths and a token ceiling are therefore plausible contributors to class separation, although the missing request history prevents measuring their exact effects.
+
+| Corpus and recorded class | Median words | Interquartile range |
+| --- | ---: | ---: |
+| Local published | 186 | 141-245 |
+| Local generated | 199 | 193-205 |
+| External published | 234 | 168-291 |
+| External generated | 203 | 150-267 |
+
+The length-only forest reaches 90.38% internal accuracy using word and sentence counts. It separates most local texts without any of the rhetorical word-list features. A second analysis restricts both texts to 150-250 words and refits the full forest. Accuracy remains 94.82%. The restricted range narrows length variation but does not equalize the two distributions, and it changes both the fitted model and the evaluated sample. It cannot assign a causal percentage of the original accuracy to length.
+
+Related texts require a different control. Two records may share a normalized title, a DOI, a canonical identifier or nearly identical wording. Randomly separating such records can expose a training model to text related to its evaluation examples. The analysis connects detected related records before assigning folds. Its approximate search confirms candidates using exact word-five-gram Jaccard similarity of at least 0.85, yielding 521 accepted links.
+
+All detected links stay within the final source groups. The search can still miss relationships, and the folds do not establish separation by author or journal. That limitation should constrain the description of the validation result. Passing the implemented overlap checks establishes what those checks tested; it cannot establish the absence of every dependence between documents.
+
+## 5. The external test
+
+The external corpus comes from [Nicolai Thorer Sivesind's ChatGPT-Research-Abstracts dataset](https://huggingface.co/datasets/NicolaiSivesind/ChatGPT-Research-Abstracts/tree/07857e2a97571ab553421ed645ef470bef6fa05c). Its author reports GPT-3.5-turbo-0301 generation from titles, with requested word counts equal to the corresponding published abstracts. The dataset contains 10,000 pairs. The study pins its version and checks overlap against all 100,000 original local pairs, including local pairs later excluded from fitting.
+
+Eighteen external pairs overlap by title and two by normalized text. The word minimum excludes another 1,658 pairs; the sentence minimum excludes three. The remaining 8,319 pairs supply 16,638 texts. The study applies the same feature extractor and fixed model settings. External texts enter neither fitting nor scaling, and the primary decision threshold remains 0.5, with ties assigned to the published class.
+
+The internal and external percentages describe different fitting arrangements. Internal evaluation pools predictions from five held-out folds. External evaluation fits each procedure to all 149,026 eligible local texts and scores the external corpus. Calling these scores results from one identical fitted model would be inaccurate. The same-fitted-model check, discussed below, addresses that distinction directly.
+
+The forest's external error distribution is revealing. It correctly classifies 7,991 of 8,319 published texts and flags 328 as generated. For the generated class, it identifies 976 and misses 7,343. Its false-positive rate is 3.94%, close to its internal 3.60%, while generated-text recall falls from 95.59% to 11.73%. The transferred decision rule mostly favours the published label.
+
+Equal class sizes make the accuracy result easier to interpret. A constant rule that labels every text published scores exactly 50%. The forest's 53.89% exceeds that baseline by 3.89 percentage points. Describing it as statistically indistinguishable from chance would add a claim the analysis did not test. Its conditional accuracy interval is 53.50%-54.25%, compared with 95.89%-96.09% internally.
+
+The external ROC AUC is 0.7296. AUC measures how scores rank the two labelled classes across thresholds. That value shows that the scores retain some discrimination even though the default decision rule misses most generated examples. Accuracy, ranking and recall at a specified operating point answer different questions. Treating one as a substitute for the others hides the practical error pattern.
+
+## 6. What changing the threshold can recover
+
+A model score becomes a decision only after a threshold divides the outputs. A lower threshold can catch more generated texts while also flagging more published texts. The useful threshold depends on the costs of those errors and on the population receiving the decisions. The default value of 0.5 has no special authority as a calibrated probability of authorship.
+
+The study first chooses alternative thresholds from local out-of-fold scores. The rules maximize source balanced accuracy or target empirical source false-positive caps of 1% and 5%. Applied to the external scores, the listed source-selected rules produce accuracies from 51.30% to 55.01%. External false-positive point estimates under the two caps are 1.07% and 5.12%. Those small deviations alone do not demonstrate a meaningful calibration failure. Recall remains the more conspicuous weakness.
+
+The next calculation deliberately gives the threshold selector access to external labels. Searching all single thresholds on the fixed forest scores finds an observed maximum accuracy of 68.17% at a threshold of 0.03. Recall rises to 70.91%, while the false-positive rate reaches 34.57%. This calculation is a test-label oracle: the same labelled examples select the threshold and measure its performance.
+
+The oracle answers a limited but useful objection. A different threshold can recover part of the accuracy lost at 0.5, but no single threshold on these observed forest scores reaches the internal result. It supplies an optimistic description of this score vector, not a validated operating rule for future texts. Another detector or a procedure that changes score ordering falls outside that threshold-only comparison.
+
+This distinction also matters when reading other research. [RAID](https://arxiv.org/abs/2405.07940v2) evaluates generator, domain, decoding and attack variation and examines false-positive targets. The [GenAI Content Detection Task 3](https://arxiv.org/abs/2501.08913) reports high detection rates with represented training domains and generators under per-domain calibration. [MELD](https://arxiv.org/abs/2605.06903v2) reports multi-generator training and benchmark thresholds calibrated on each evaluation pool's human scores. Those results concern different procedures from transferring a previously fixed threshold. They provide reasons to specify the evaluation protocol, rather than declare detection generally successful or impossible.
+
+## 7. The simpler model changes the comparison
+
+Logistic regression uses the same eight measurements, with training-fold standardization and fixed regularization. It reaches 90.06% internal accuracy, below the forest's 95.99%. Externally, logistic accuracy is 68.91%, above the forest's 53.89%. The internal ordering reverses. A choice based solely on the larger local accuracy would have selected the weaker of these two external decision rules.
+
+The comparison includes a cost. Logistic regression's external false-positive rate is 11.97%, compared with 3.94% for the forest. Its external recall is 49.79%. The accuracy gain cannot serve as a complete judgment of usefulness without a statement about the relative costs of false accusations and missed generated texts. Both corpora weight the recorded classes equally; a working publication queue may not.
+
+Logistic regression also has higher external AUC, 0.8310 against 0.7296. Under an empirical external 5% false-positive cap, logistic recall reaches 24.45%, while forest recall reaches 14.29%. Those curve points use external labels and therefore remain descriptive. They show that the logistic advantage involves score ranking as well as accepting more false alarms at the default threshold.
+
+Paired group-bootstrap comparisons estimate an external accuracy advantage of 15.01 percentage points for logistic regression, with a conditional 95% interval of 14.36-15.63 points. The draws resample the same source groups for both models. They retain the dependence within pairs and compare the procedures on the same evaluated records.
+
+The interval excludes several sources of uncertainty. Predictions stay fixed during resampling. The calculation does not repeat corpus assembly, resolve disputed labels or train on independent collections. A narrow interval can support a precise statement about these saved predictions without supporting an equally precise forecast for a different corpus. The model ranking, like the absolute accuracy, belongs to the evaluation that produced it.
+
+## 8. Which explanations survived further checks
+
+Source consistency offers one way to test whether obvious record problems drive the result. The stricter subset requires agreement on title, year and cleaned abstract, a current English article label, and an explicit non-retracted status. It retains 56,355 pairs. The eight-feature forest still reaches 95.92% internally. Training on that subset and testing externally gives 53.85% accuracy. The declared index-consistency restriction leaves the broad contrast intact.
+
+Training randomness supplies another possible explanation. Forests fitted with seeds 7, 42 and 2026 produce external accuracies from 53.88% to 53.91%. The seed-42 fit reproduces the primary external scores. This is evidence about three specified repetitions. It neither estimates every possible seed outcome nor creates three independent external datasets.
+
+The fixed-score length analysis keeps the original predictions and restricts evaluation to pairs whose two texts fall between 150 and 250 words. Local accuracy is 94.86%; external accuracy is 57.35%. The local value differs from the earlier 94.82% because that earlier model was trained within the restricted range. Filtering evaluated predictions and changing training data are distinct operations, and their results need separate labels.
+
+Finally, each fitted fold forest scores both its local held-out fold and the external corpus. Local accuracies range from 95.79% to 96.19%; external accuracies range from 53.70% to 53.98%. The larger full-source refit is therefore unnecessary for the observed contrast. These comparisons reuse the external records and overlap in their training data, so they do not count as five independent replications.
+
+Together, the checks rule out several simple readings of the result. The contrast does not disappear under the tested seeds, the specified source-quality filter, the shared length band or the identical-fitted-model comparison. The corpora still differ in reported generator, prompting, source composition and other conditions. The evidence does not isolate any one of those differences as the cause.
+
+## 9. A false-positive rate is not the probability that a flag is wrong
+
+The difference between these quantities becomes visible when generated writing is uncommon. False-positive rate divides incorrect generated-text flags by all published-class texts. Precision divides correct generated-text flags by all flags. A classifier's precision therefore depends on how often each class occurs, even if its recall and false-positive rate remain fixed.
+
+The paper uses a hypothetical collection of 10,000 texts containing 100 generated records. If the measured internal recall and false-positive rate carried over, the classifier would flag about 96 generated texts and 356 published texts. Only about 21% of its flags would be correct. The 1% prevalence is an illustrative assumption. The study does not estimate real AI use or show that the internal error rates apply to such a collection.
+
+The arithmetic follows from three quantities: prevalence p, recall r and false-positive rate f. The expected fraction of flags that are correct is `r × p / (r × p + f × (1 - p))`. A large pool of published texts can produce more false flags than a small generated-text pool produces true flags. Reporting a high recall without the denominator for false alarms leaves that possibility hidden.
+
+An individual authorship claim adds further difficulties. Labels based on publication records and generation files differ from verified histories of how a particular manuscript was written. A person can use formulaic sentences; a model output can contain varied prose. Editing, translation and field conventions can alter measured features. [Liang and colleagues' findings on non-native English writing](https://arxiv.org/abs/2304.02819) give a concrete reason to examine the composition of comparison groups before applying a detector to people.
+
+Readable features do not remove these evidential requirements. A report that names sentence variation, connector density and MTLD makes the computation easier to inspect. It does not establish which writing process caused those values. [Gao and colleagues](https://www.nature.com/articles/s41746-023-00819-6) found mistakes in both automated detection and blinded human review of medical abstracts. The availability of an explanation for a score cannot make the associated allegation correct.
+
+## 10. What a defensible claim needs
+
+The internal reanalysis was retrospective. The primary external procedure was fixed before its scores were inspected; the later threshold and retraining checks were chosen after the external result was known. None was preregistered. Keeping those stages distinct lets a reader judge which observations challenged an existing procedure and which motivated additional tests on an already inspected corpus.
+
+A further study could retain provider responses and prompt assignments, verify source texts, and define an external evaluation before inspecting its labels. Giving the generator verified study notes would help separate writing form from differences in available information. A separate human calibration sample could establish a threshold before another untouched test. These designs answer questions that the current stored corpora cannot settle.
+
+The public [code and numerical reproduction package](https://github.com/vedangvatsa/research-paper-framework/tree/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper) make a narrower form of checking possible now. Readers can recalculate the saved metrics and refit the main forest from measured features. The package contains 22 prediction sets; a fresh forest fit reproduces its external scores exactly in the recorded environment. Original local raw texts remain unreleased, and missing generation records remain missing. Numerical reproduction establishes a computation, while provenance establishes what its inputs mean.
+
+For an editor receiving a detector report, the relevant evidence starts with the validation population, the threshold, the two types of error and the basis for the labels. A vendor's accuracy percentage supplies none of those details by itself. A decision about an individual manuscript needs a documented account of why the evaluated procedure applies to that manuscript, and a way to examine competing explanations for its score. The 95.99% result cannot provide that account on its own.
+
+---
+
+## Bitget reports $351.6 million wallet breach and pauses withdrawals
+URL: https://veda.ng/bitget-hack
+Summary: CEO Gracy Chen says unauthorized transfers affected about $351.6 million. Bitget says cold wallets are secure and its protection fund covers the loss; the attack method remains under investigation.
+
+Bitget says unauthorized transfers affected approximately **$351.6 million** across parts of its hot and warm wallet infrastructure on September 24, 2026. The exchange has temporarily suspended withdrawals while it reviews security. In a [statement on X](https://x.com/GracyBitget/status/2103235655879074084), CEO Gracy Chen said cold wallets remain secure and the exchange's User Protection Fund, which she put at more than **$464 million**, covers the estimated loss.
+
+![Bitget's September 24 statement distinguishes affected hot and warm wallets, paused withdrawals, and an investigation with no disclosed attack method.](/images/essays/bitget-hack.svg)
+
+Chen said Bitget detected the unauthorized transfers at **18:31 UTC** and activated its emergency response. Deposits and trading remain operational, according to the notice. She did not announce a time for withdrawals to resume.
+
+The statement confirms that Bitget regards the transfers as unauthorized, following earlier reports of suspicious movements from exchange-labelled addresses. It does not establish the final loss, explain how the attacker gained access, or provide an independent assessment of the remaining wallets.
+
+*This report covers the September 24 incident and the CEO's notice published at 21:30 UTC. Operational status and estimates may change as Bitget releases further updates.*
+
+## What Bitget has disclosed
+
+  - **$351.6M**: Estimated funds affected, according to Bitget (Gracy Chen's security notice)
+  - **$464M+**: Protection fund value stated by the CEO (Gracy Chen's security notice)
+  - **18:31 UTC**: Detection time reported for September 24 (Gracy Chen's security notice)
+
+Chen described a three-tier wallet architecture and said the breach affected only a portion of its hot and warm wallet layers. Her statement expressly says cold wallets remain secure. The distinction matters because some early public alerts referred to movements from addresses labelled as cold wallets.
+
+Bitget says its team identified, flagged and reported addresses associated with abnormal transfers. It also says law enforcement and blockchain security firms have received notification and are involved in the response. The notice does not name an attacker or explain whether compromised keys, a signing process, software or another point of access enabled the transfers.
+
+These are disclosures from the exchange's chief executive. They give customers an account of the response, but a technical report is still needed to evaluate the claimed containment and the cause of the incident.
+
+## Withdrawals are paused; deposits and trading continue
+
+The immediate operational change is the withdrawal suspension. Bitget describes it as a precaution pending a security review. Chen says account balances remain accurate, assets are protected, and deposits and trading continue to operate.
+
+| Service or issue | Status in the CEO's notice |
+|---|---|
+| Withdrawals | Temporarily suspended pending security review |
+| Deposits | Operational, according to Bitget |
+| Trading | Operational, according to Bitget |
+| Account balances | Accurate, according to Bitget |
+| Cold wallets | Secure, according to Bitget |
+| Withdrawal restart time | No specific time announced |
+| Attack method | Investigation ongoing; no conclusion disclosed |
+
+An accurate account balance and the ability to move assets off an exchange are separate matters. Customers may still see their balances and use trading functions during a withdrawal pause. That does not mean external transfers have resumed.
+
+The CEO's promise of a report within 24 hours should also not be read as a withdrawal deadline. Her notice ties withdrawals to completion of the security review. It gives no fixed restart time.
+
+## Why early loss estimates were lower
+
+Before the CEO's statement, [Hacken](https://x.com/hackenclub/status/2103216092583964978) described a reported incident involving around $100 million and several assets, including USDT, ETH, BTC, AVAX and BNB. The firm said its investigation was ongoing. [PeckShield](https://x.com/peckshield/status/2103220911075631533) subsequently flagged a potential hot-wallet hack involving more than $178 million and linked an Ethereum address for inspection.
+
+Those were preliminary observations from security researchers, rather than a final accounting from Bitget. [Bitcoin.com News](https://news.bitcoin.com/bitget-hit-by-351m-hack-withdrawals-frozen-as-probe-begins/) also tracked the changing estimates before reporting the CEO's approximately $351.6 million assessment.
+
+The figures should not be added together. They refer to evolving assessments of the same incident, with different information available to each observer. The latest company estimate is the appropriate figure to attribute to Bitget; it remains an estimate.
+
+Wallet labels need similar care. An address label helps researchers identify a possible relationship with an exchange. It does not, by itself, reveal who authorized a particular transfer or whether a movement represents theft, internal rebalancing or an emergency transfer. The CEO's later statement that cold wallets remain secure differs from the implication of some early alerts. A reconciliation of affected addresses and transactions would help resolve that discrepancy.
+
+## What the protection-fund statement establishes
+
+Chen says the full estimated loss falls within the coverage of Bitget's User Protection Fund. The stated fund value of more than $464 million exceeds the company's approximately $351.6 million estimate of affected funds.
+
+That comparison supports the arithmetic of the CEO's assurance. It is not an independent audit of the fund, an explanation of its available liquidity, or evidence that all incident-related transfers have already been reconciled. The notice does not describe the process or timing of any fund deployment.
+
+For customers, the relevant follow-up is how Bitget applies that protection while restoring withdrawals. For investigators, the questions include the final amount transferred without authorization, any recoveries, the assets involved and whether all affected systems have been identified. A changing dollar estimate could reflect additional transactions, revised valuations or recovered assets; the present notice does not provide that breakdown.
+
+## What remains unknown
+
+The source of the compromise is still undisclosed. Chen wrote: “We will not speculate on the attack vector until the investigation is complete.” The statement does not support assigning responsibility to a particular hacking group, employee, vendor or software flaw.
+
+It also does not provide a transaction-by-transaction loss schedule, a public recovery total or a detailed account of the controls that failed. Those gaps limit what can responsibly be concluded from the first disclosure. General explanations of exchange-wallet security should not be mistaken for evidence about this specific attack.
+
+Chen promised hourly updates through her account and Bitget's official channels, followed by a full incident report covering root-cause analysis and corrective actions within 24 hours. Both are commitments to future disclosure, rather than completed findings.
+
+The next useful update should answer two concrete questions: what authorized the transfers, and what has changed to make withdrawals safe to reopen?
+
+## Sources
+
+- [Gracy Chen, Bitget CEO: September 24 security notice](https://x.com/GracyBitget/status/2103235655879074084). Primary source for the estimated affected funds, detection time, wallet scope, fund value, service status and promised updates.
+- [Hacken: initial public alert](https://x.com/hackenclub/status/2103216092583964978). Preliminary assessment, not the final loss total.
+- [PeckShield: potential hot-wallet incident alert](https://x.com/peckshield/status/2103220911075631533). Preliminary estimate and linked address.
+- [Bitcoin.com News: report on Bitget's confirmation and withdrawal suspension](https://news.bitcoin.com/bitget-hit-by-351m-hack-withdrawals-frozen-as-probe-begins/). Secondary reporting used to cross-check the chronology.
+
+---
+
 ## The Web Is Not Ready for Agents
 URL: https://veda.ng/agentready
 Summary: I probed 50,000 websites with 61 machine-readability checks. Mean score: 25.7 out of 100. Here is what agents actually face.
 
-Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it reads reviews, compares prices, and hands you a shortlist. What you never see is the friction underneath. On roughly three of every five websites it visits, the bot fetching pages for that answer gets refused at the door. On most of the rest, it must scrape layout markup built for human eyes. I spent a week measuring exactly how bad it is across 50,000 domains, applying the same 61 machine-readability checks to every origin. The average score came back 25.7 out of 100.
+Ask ChatGPT to buy the cheapest noise-cancelling headphones under $200 and it reads reviews, compares prices, and hands you a shortlist. What you never see is the friction underneath. In this scan, neither of two crawler-user-agent probes was classified as an HTTP-200 success for 54.37% of sampled roots. That can mean a non-200 response, timeout, connection problem, or another failed fetch; it does not prove intentional blocking. I measured the public signals across 50,000 domains, applying the same 61 checks to every sampled root. The final recorded mean score was 25.7 out of 100.
 
 ## What I measured, and why those things
 
@@ -19,12 +247,11 @@ An autonomous agent performs six consecutive jobs on a website: it finds the ori
 5. **SEO & Citations (15 checks):** Standard title/meta tags, [JSON-LD `@graph`](https://json-ld.org/) entity schemas (`Organization`, `WebSite`, `Article`), E-E-A-T `sameAs` authority links, inverted pyramid content structure, and active RSS/Atom feeds.
 6. **Payments (3 checks):** [L402 / HTTP 402](https://l402.org/) payment headers, [WebLN](https://webln.guide/) wallet discovery, and machine terms of service (`/terms-of-use.md`).
 
-Each check consists of a single deterministic HTTP request with a clear, automated pass rule. No logins, no browser rendering overhead, and no manual rating.
+Each check uses a fixed automated rule over ordinary HTTP responses. No logins, browser rendering, or manual rating. Some checks use several probes, and a `pass` status can still represent partial credit.
 
   - **50,000**: Domains audited from Tranco top-1M sample (Census dataset)
   - **25.7**: Mean agentic readiness score / 100 (50,000-domain census)
   - **61**: Deterministic probes per domain (Scanner probe specification)
-  - **0**: Origins excluded or hand-picked (Sampling manifest)
 
 The sample avoids hand-picked bias. I drew from the [Tranco top-1M research ranking](https://tranco-list.eu/) across three stratified bands under a published random seed:
 
@@ -32,16 +259,16 @@ The sample avoids hand-picked bias. I drew from the [Tranco top-1M research rank
 - Ranks 10,001 to 100,000 (20,000 randomly selected domains)
 - Ranks 100,001 to 1,000,000 (20,000 randomly selected domains)
 
-A [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux) cross-reference flag identifies origins with verified human browser traffic. The entire dataset, code, and 50,000-domain leaderboard are published on the [scan page](https://veda.ng/scan), which also hosts the full research paper.
+A [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux) cross-reference flag identifies hostnames in Chrome's popular-site list. The scan page hosts the tool, leaderboard, and full paper; the raw scan rows and source snapshots are not currently tracked in the public repository.
 
 ## The headline adoption numbers
 
 The public web shows minimal adoption for machine-specific standards:
 
-- **llms.txt catalog:** 6.62% of domains publish a valid index file at root.
-- **Markdown content negotiation:** 2.95% respond to `Accept: text/markdown` with clean Markdown text.
-- **Live MCP server:** 1.82% expose an active Model Context Protocol endpoint.
-- **OpenAPI specification:** 0.16% publish a parseable OpenAPI 3.0/3.1 contract at a standard location.
+- **llms.txt catalog:** 6.62% receive a scanner `pass` status at the tested paths.
+- **Markdown probe:** 2.95% return a Markdown-like response to one `Accept` probe.
+- **Basic MCP screen:** 1.82% return an HTTP-2xx body containing `jsonrpc` at one of two guessed paths.
+- **OpenAPI marker:** 0.16% match an OpenAPI or Swagger marker in the selected candidate response.
 
 An `llms.txt` file is a plain Markdown file outlining core site URLs. Content negotiation uses standard HTTP headers supported by web servers for decades. Yet 75.4% of audited origins score below 30 out of 100, and only 4 domains in 50,000 reach a score above 85.
 
@@ -57,7 +284,7 @@ Scanning 50,000 origins without triggering network artifacts requires careful ra
 - Maximum concurrency capped at 3 target domains simultaneously.
 - Standardized custom User-Agent identifying the crawler and purpose.
 
-Initial test runs at high concurrency yielded a 95% origin failure rate caused by source-network throttling. Re-scanning failed origins with controlled rate limits adjusted scores from 6 up to 46. I discarded the high-speed pass, implemented strict worker pacing, and performed a secondary verification pass across all low-scoring domains.
+The final corpus is a two-wave, latest-result record. Every initial row scoring 10 or below received another scan; higher-scoring rows did not. This outcome-dependent refresh raised the mean from 22.7 to 25.7, so the final value is not a clean one-time snapshot.
 
 ## Layer-by-layer breakdown
 
@@ -74,15 +301,15 @@ Measuring readiness across functional layers highlights where infrastructure suc
 
 Dividing results across Tranco rank tiers shows almost no correlation between domain popularity and machine readiness:
 
-![Bar chart comparing mean readiness score and both-bot refusal rate across Tranco rank tiers.](/images/essays/agentready-tiers.svg)
+![Bar chart comparing mean recorded score and the share with no HTTP-200 success from either bot-user-agent probe across Tranco rank tiers.](/images/essays/agentready-tiers.svg)
 
 - **Ranks 1 to 10,000:** Mean score 26.1 / 100 (Both-bot refusal rate: 56.2%)
 - **Ranks 10,001 to 100,000:** Mean score 25.2 / 100 (Both-bot refusal rate: 55.6%)
 - **Ranks 100,001 to 1,000,000:** Mean score 25.9 / 100 (Both-bot refusal rate: 52.2%)
 
-High-traffic domains often employ strict WAF rules, CDN edge security, and anti-scraping protections that block automated bots by default. Consequently, top-tier origins score similarly to tail domains.
+The final tier means are close, but the initial one-pass means differed more and the refresh affected tiers unevenly. The data do not identify the cause.
 
-However, cross-referencing with CrUX field data reveals a different trend: origins with verified human browser traffic demonstrate roughly double the adoption rates for `llms.txt` and structured data compared to unvisited domains.
+CrUX-listed hostnames show higher simple status-pass shares than unlisted hostnames, but the comparison does not adjust for rank, host type, or other factors.
 
 ## WAF rules and policy contradictions
 
@@ -98,9 +325,7 @@ This mismatch occurs when security teams manage WAF settings independently from 
 
 ## Platform-driven adoption patterns
 
-Manual verification of the 910 domains reporting live MCP endpoints revealed identical JSON-RPC responses across unrelated retail stores. Every instance originated from a single major e-commerce platform that enabled a default catalog-search MCP tool for its hosted storefronts.
-
-Removing this single platform implementation reduces public web MCP availability to near zero. Machine-readability standards adopt quickly when platform providers ship them as default features rather than requiring manual setup by individual site owners.
+The 910 basic MCP-screen passes are not proof of conforming MCP services, available tools, or authentication. Only 3 rows passed the stricter saved status for `result.capabilities`, and response bodies were not retained for later review.
 
 ## Takeaways by role and domain
 
@@ -108,7 +333,7 @@ Different teams face distinct priorities when upgrading origins for machine cons
 
 - **Full-Stack & Frontend Engineers:** Add Markdown negotiation (`Accept: text/markdown`) middleware and ensure static SSR HTML fallbacks exist without client-JS rendering dependencies.
 - **SEO & Growth Specialists:** Maintain structured JSON-LD `@graph` entity graphs and publish an `llms.txt` index to preserve citations in AI search products.
-- **Security & Infrastructure Engineers:** Reconcile WAF edge rules with `robots.txt` policies so legitimate citation crawlers are not blocked by accidental 403/429 status codes.
+- **Security & Infrastructure Engineers:** Test the exact crawler clients and network conditions they intend to support; this scan cannot distinguish blocking from transport failure.
 - **Product Managers & Founders:** Prioritize platform-level defaults over one-off custom integrations. Frameworks and hosting platforms move adoption faster than custom code.
 - **AI & Agent Developers:** Design agents to handle high HTTP refusal rates gracefully and rely on explicit `RateLimit-*` headers to pace requests.
 
@@ -116,14 +341,14 @@ Different teams face distinct priorities when upgrading origins for machine cons
 
 Site operators can improve machine readiness through four straightforward additions:
 
-1. **Publish an `llms.txt` index:** Add a clean Markdown file at `/llms.txt` following the [llmstxt.org specification](https://llmstxt.org/).
-2. **Enable Markdown negotiation:** Configure server middleware to handle `Accept: text/markdown` headers by returning clean Markdown content.
+1. **Publish an `llms.txt` index:** Add a clear Markdown file at `/llms.txt` following the [llmstxt.org proposal](https://llmstxt.org/).
+2. **Test Markdown responses:** If useful for your clients, support an `Accept: text/markdown` request and verify the returned representation.
 3. **Align crawler policies:** Update `robots.txt` with clear directives for specific AI agents (`GPTBot`, `ClaudeBot`, `PerplexityBot`), and match WAF/CDN rules to those policies.
 4. **Expose structured schemas:** Provide an OpenAPI 3.1 specification at `/openapi.json` or `/.well-known/openapi.json` with concrete parameter examples.
 
 ## Reproducing the audit
 
-All dataset files, probe definitions, and analysis scripts are available under open-source licenses:
+The probe definitions, analysis scripts, and derived summaries are available from the project. The raw corpus and dated source snapshots remain local and should be archived before claiming full independent reproduction:
 
 - **Full Research Paper & Data:** linked from the [scan page](https://veda.ng/scan)
 - **Live Single-Domain Audit Tool:** [veda.ng/scan](https://veda.ng/scan)
@@ -8575,6 +8800,7 @@ Reach for veda.ng when your agent needs to perform the following specific jobs:
 - [Veda GitHub Repository](https://github.com/vedangvatsa/vedang-website): Open-source source code and issue tracking.
 - [Veda AI Agent Manifest](https://veda.ng/.well-known/agents.json): Machine capabilities and when-to-use task definitions.
 - [Veda MCP Manifest](https://veda.ng/.well-known/mcp.json): Multi-server discovery manifest for Product and Docs MCP servers.
+- [Veda Agent Plugin](https://veda.ng/plugin.json): Agent Plugins 1.0 manifest and Product/Docs MCP server configuration.
 - [Veda AI Catalog](https://veda.ng/.well-known/ai-catalog.json): Trust manifest and AIR registry entries.
 - [Veda Full-Text Research Corpus](https://veda.ng/llms-full.txt): Complete unpaginated text corpus for LLM training and RAG ingestion.
 

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+  <title id="title">Internal and external abstract detection accuracy</title>
+  <desc id="desc">An eight-feature random forest scores 95.99% in local grouped validation and 53.89% on a separately assembled corpus. Both evaluations use equal class counts and a score threshold of 0.5. The bars use a zero to one hundred percent scale.</desc>
+  <rect width="800" height="400" fill="#ffffff" />
+  <g font-family="Arial, Helvetica, sans-serif" fill="#37352f">
+    <text x="44" y="49" font-size="27" font-weight="700">High accuracy, poor transfer</text>
+    <text x="44" y="80" font-size="17" fill="#64748b">Eight-feature random forest · fixed 0.5 threshold</text>
+    <text x="44" y="136" font-size="21" font-weight="700">Internal validation</text>
+    <text x="756" y="138" font-size="32" text-anchor="end" fill="#1d4ed8" font-weight="700">95.99%</text>
+    <rect x="44" y="155" width="712" height="35" rx="2" fill="#f1f5f9" />
+    <rect x="44" y="155" width="683.4488" height="35" rx="2" fill="#2563eb" fill-opacity="0.65" />
+    <text x="44" y="243" font-size="21" font-weight="700">External corpus</text>
+    <text x="756" y="245" font-size="32" text-anchor="end" fill="#92400e" font-weight="700">53.89%</text>
+    <rect x="44" y="262" width="712" height="35" rx="2" fill="#f1f5f9" />
+    <rect x="44" y="262" width="383.6968" height="35" rx="2" fill="#b45309" fill-opacity="0.65" />
+    <g font-size="15" fill="#64748b">
+      <text x="44" y="325">0%</text>
+      <text x="400" y="325" text-anchor="middle">50%</text>
+      <text x="756" y="325" text-anchor="end">100%</text>
+    </g>
+    <line x1="44" y1="347" x2="756" y2="347" stroke="#e3e3e0" />
+    <text x="44" y="376" font-size="15" fill="#64748b">Source: study Tables 3 and 5 · balanced recorded classes</text>
+  </g>
+</svg>

@@ -44,6 +44,7 @@ import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlo
 import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum, StateOfAiGeography, StateOfAiCitations } from '@/components/mdx/stateofai-charts';
 import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable, InfraFundingByLayer, FundingVelocityChart, CapitalConcentrationChart } from '@/components/mdx/agentstack-charts';
 import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts';
+import { AbstractTransferComparison, AbstractTransferErrors } from '@/components/mdx/generalization-charts';
 import { ReceiptsExposureChart, ReceiptsLaborFacts, ReceiptsDemandChart } from '@/components/mdx/receipts-charts';
 import { AgentreadyLeaderboard } from '@/components/mdx/agentready-charts';
 type Props = {
@@ -526,6 +527,8 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               FundingVelocityChart,
               CapitalConcentrationChart,
               AIDetectorFeatureComparison,
+              AbstractTransferComparison,
+              AbstractTransferErrors,
               ReceiptsExposureChart,
               ReceiptsLaborFacts,
               ReceiptsDemandChart,

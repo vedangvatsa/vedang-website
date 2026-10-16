@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T01:20:37.947Z",
+  "generatedAt": "2026-10-16T20:18:03.090Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -78,6 +78,7 @@
     "/automation/module-6-pipelines",
     "/automation/module-7-production",
     "/bio",
+    "/bitget-hack",
     "/blockchain",
     "/blockchain-journey",
     "/bureaucracy",
@@ -155,6 +156,7 @@
     "/essays/universal-text-ui",
     "/essays/yc-landscape",
     "/funding",
+    "/generalization",
     "/glossary",
     "/glossary/51-percent-attack",
     "/glossary/account-abstraction",
@@ -701,6 +703,7 @@
     "/automation/module-5-mcp-automation",
     "/automation/module-6-pipelines",
     "/automation/module-7-production",
+    "/bitget-hack",
     "/blockchain",
     "/bureaucracy",
     "/cognition",
@@ -715,6 +718,7 @@
     "/empathy",
     "/essays",
     "/funding",
+    "/generalization",
     "/glossary",
     "/glossary/51-percent-attack",
     "/glossary/account-abstraction",
