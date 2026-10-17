@@ -8,7 +8,7 @@ import study from '../src/lib/personality-data.json';
 import { checkEssayFile } from '../scripts/check-ai-slop';
 
 const root = process.cwd();
-const file = path.join(root, 'src/content/essays/personality.mdx');
+const file = path.join(root, 'src/content/essays/llmpersonality.mdx');
 const { data: frontmatter, content } = matter(fs.readFileSync(file, 'utf8'));
 
 test('personality essay preserves denominators, eligibility, and missing scores', () => {

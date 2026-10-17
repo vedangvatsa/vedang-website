@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" role="img" aria-labelledby="chart-title chart-description" font-family="Arial, Helvetica, sans-serif">
-  <title id="chart-title">Does the recorded ordering hold?</title>
-  <desc id="chart-description">Selected three-score subset comparisons. Gemini Flash-Lite versus MiniMax reverses in 40 of 100 pairings. Other displayed examples have no reversal.</desc>
+  <title id="chart-title">Which model keeps the higher score?</title>
+  <desc id="chart-description">Extraversion averages from groups of three scores. Gemini Flash-Lite loses its lead over MiniMax in 40 of 100 pairings. Other displayed examples keep the same leader.</desc>
   <rect width="800" height="560" fill="#ffffff" />
-  <text x="34" y="48" font-size="29" fill="#37352f" font-weight="700" text-anchor="start">Does the recorded ordering hold?</text>
+  <text x="34" y="48" font-size="29" fill="#37352f" font-weight="700" text-anchor="start">Which model keeps the higher score?</text>
   <text x="34" y="110" font-size="23" fill="#37352f" font-weight="700" text-anchor="start">Gemma 3 4B / Gemma 3 12B</text>
   <rect x="34" y="128" width="732.0" height="32" fill="#4f46e5" />
-  <text x="34" y="190" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">14,400 retained / 14,400 comparisons</text>
+  <text x="34" y="190" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">14,400 of 14,400 pairings kept the lead</text>
   <text x="34" y="242" font-size="23" fill="#37352f" font-weight="700" text-anchor="start">Qwen3.8 Max Prime / MiniMax M3</text>
   <rect x="34" y="260" width="732.0" height="32" fill="#4f46e5" />
-  <text x="34" y="322" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">100 retained / 100 comparisons</text>
+  <text x="34" y="322" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">100 of 100 pairings kept the lead</text>
   <text x="34" y="374" font-size="23" fill="#37352f" font-weight="700" text-anchor="start">Gemini 3.5 Flash-Lite / MiniMax M3</text>
   <rect x="34" y="392" width="439.2" height="32" fill="#4f46e5" />
   <rect x="473.2" y="392" width="292.8" height="32" fill="#b45309" />
-  <text x="34" y="454" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">60 retained / 100 comparisons</text>
-  <text x="34" y="505" font-size="23" fill="#4f46e5" font-weight="700" text-anchor="start">Retained</text>
-  <text x="185" y="505" font-size="23" fill="#b45309" font-weight="700" text-anchor="start">Reversed</text>
-  <text x="34" y="540" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">Extraversion examples. Reused responses, not new trials.</text>
+  <text x="34" y="454" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">60 of 100 pairings kept the lead</text>
+  <text x="34" y="505" font-size="23" fill="#4f46e5" font-weight="700" text-anchor="start">Lead kept</text>
+  <text x="200" y="505" font-size="23" fill="#b45309" font-weight="700" text-anchor="start">Lead reversed</text>
+  <text x="34" y="540" font-size="22" fill="#52525b" font-weight="400" text-anchor="start">Recorded answers reused; no extra test runs.</text>
 </svg>

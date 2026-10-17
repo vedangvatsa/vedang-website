@@ -61,7 +61,7 @@ def axis(root, y, x0=250, width=470):
         x = x0 + (tick - 1) / 4 * width
         element(root, 'line', {'x1': x, 'x2': x, 'y1': 100, 'y2': y, 'stroke': LINE})
         label(root, x, y + 28, str(tick), 22, MUTED, anchor='middle')
-    label(root, x0 + width / 2, y + 60, 'Keyed score on the 1 to 5 scale', 22, MUTED, anchor='middle')
+    label(root, x0 + width / 2, y + 60, 'Score on the 1 to 5 scale', 22, MUTED, anchor='middle')
 
 
 def main():
@@ -139,26 +139,26 @@ def main():
     (data_dir / 'data.json').write_text(encoded)
     (ROOT / 'src/lib/personality-data.json').write_text(encoded)
 
-    hero = canvas('Which models produced reportable profiles?', '55 tested configurations; 47 have at least one eligible trait; 22 have all five.', 400)
-    for x, value, line1, line2 in [(34, 55, 'Configurations', 'in the comparison'), (292, 47, 'At least one', 'reportable trait'), (550, 22, 'All five traits', 'reportable')]:
+    hero = canvas('How many models had enough answers?', '55 tested model setups; 47 have at least one reported trait score; 22 have all five.', 400)
+    for x, value, line1, line2 in [(34, 55, 'Model setups', 'tested'), (292, 47, 'At least one', 'trait score'), (550, 22, 'All five', 'trait scores')]:
         element(hero, 'rect', {'x': x, 'y': 100, 'width': 216, 'height': 200, 'rx': 10, 'fill': '#eef2ff', 'stroke': '#c7d2fe'})
         label(hero, x + 108, 185, str(value), 68, INDIGO, 700, 'middle')
         label(hero, x + 108, 234, line1, 23, anchor='middle')
         label(hero, x + 108, 266, line2, 22, MUTED, anchor='middle')
-    label(hero, 400, 355, 'A complete answer map can still leave a trait unscored.', 24, anchor='middle')
+    label(hero, 400, 355, 'Some answers were marked not applicable.', 24, anchor='middle')
     save_svg(hero, images / 'personality-coverage.svg')
 
-    coverage_chart = canvas('Trait coverage across the 55 configurations', 'Eligible model counts differ by trait; the source data also accompany the essay.', 570)
+    coverage_chart = canvas('Models with a score for each trait', 'The number of models with a reported score differs by trait. Data for all 55 setups accompany the essay.', 570)
     for i, row in enumerate(bundle['domainSummary']):
         y = 100 + i * 88
         label(coverage_chart, 34, y, row['name'], 24)
         label(coverage_chart, 766, y, f"{row['models']} / 55", 24, INDIGO, 700, 'end')
         element(coverage_chart, 'rect', {'x': 34, 'y': y + 16, 'width': 732, 'height': 23, 'rx': 4, 'fill': '#f1f5f9'})
         element(coverage_chart, 'rect', {'x': 34, 'y': y + 16, 'width': 732 * row['models'] / 55, 'height': 23, 'rx': 4, 'fill': INDIGO, 'fill-opacity': '.75'})
-    label(coverage_chart, 34, 548, 'Counts of reportable traits, not personality scores', 22, MUTED)
+    label(coverage_chart, 34, 548, 'Each bar counts models with a reported score.', 22, MUTED)
     save_svg(coverage_chart, images / 'personality-trait-coverage.svg')
 
-    gemma = canvas('Two Gemma profiles', 'Gemma 3 4B has higher Extraversion; Gemma 3 12B has higher Conscientiousness. Both use ten complete assessments per trait.', 440)
+    gemma = canvas('Two Gemma profiles', 'Gemma 3 4B has higher Extraversion; Gemma 3 12B has higher Conscientiousness. Both use ten complete runs per trait.', 440)
     axis(gemma, 320)
     for y, trait in [(175, TRAITS[0]), (280, TRAITS[2])]:
         a, b = [float(profiles[(mid, trait)]['mean']) for mid in ('m23', 'm24')]
@@ -172,7 +172,7 @@ def main():
     label(gemma, 525, 412, 'Gemma 3 12B', 23, AMBER)
     save_svg(gemma, images / 'personality-gemma.svg')
 
-    stability = canvas('Does the recorded ordering hold?', 'Selected three-score subset comparisons. Gemini Flash-Lite versus MiniMax reverses in 40 of 100 pairings. Other displayed examples have no reversal.', 560)
+    stability = canvas('Which model keeps the higher score?', 'Extraversion averages from groups of three scores. Gemini Flash-Lite loses its lead over MiniMax in 40 of 100 pairings. Other displayed examples keep the same leader.', 560)
     selected = [(comparisons[0], 'Gemma 3 4B / Gemma 3 12B'), (comparisons[2], 'Qwen3.8 Max Prime / MiniMax M3'), (comparisons[3], 'Gemini 3.5 Flash-Lite / MiniMax M3')]
     for i, (row, name) in enumerate(selected):
         y = 110 + 132 * i
@@ -181,13 +181,13 @@ def main():
         element(stability, 'rect', {'x': 34, 'y': y + 18, 'width': 732 * share, 'height': 32, 'fill': INDIGO})
         if share < 1:
             element(stability, 'rect', {'x': 34 + 732 * share, 'y': y + 18, 'width': 732 * (1 - share), 'height': 32, 'fill': AMBER})
-        label(stability, 34, y + 80, f"{row['retained']:,} retained / {row['pairs']:,} comparisons", 22, MUTED)
-    label(stability, 34, 505, 'Retained', 23, INDIGO, 700)
-    label(stability, 185, 505, 'Reversed', 23, AMBER, 700)
-    label(stability, 34, 540, 'Extraversion examples. Reused responses, not new trials.', 22, MUTED)
+        label(stability, 34, y + 80, f"{row['retained']:,} of {row['pairs']:,} pairings kept the lead", 22, MUTED)
+    label(stability, 34, 505, 'Lead kept', 23, INDIGO, 700)
+    label(stability, 200, 505, 'Lead reversed', 23, AMBER, 700)
+    label(stability, 34, 540, 'Recorded answers reused; no extra test runs.', 22, MUTED)
     save_svg(stability, images / 'personality-orderings.svg')
 
-    limits = canvas('What incomplete answers can still determine', 'Kimi K3 has non-overlapping Extraversion and Conscientiousness completion bounds; Claude Opus bounds overlap.', 610)
+    limits = canvas('Possible scores with missing answers', 'Possible averages over all planned runs. Kimi K3 has separate Extraversion and Conscientiousness ranges; Claude Opus ranges overlap.', 610)
     axis(limits, 490)
     for y, mid, title in [(120, 'm56', 'Kimi K3'), (330, 'm53', 'Claude Opus 5.5')]:
         label(limits, 34, y, title, 26, weight=700)
@@ -198,7 +198,7 @@ def main():
             label(limits, 34, y + dy + 7, trait, 22)
             element(limits, 'line', {'x1': a, 'x2': b, 'y1': y + dy, 'y2': y + dy, 'stroke': color, 'stroke-width': 12, 'stroke-linecap': 'round'})
             label(limits, (a + b) / 2, y + dy - 20, f'{rounded(lo)} to {rounded(hi)}', 22, color, 700, 'middle')
-    label(limits, 34, 588, 'Hypothetical completions over all planned item positions', 21, MUTED)
+    label(limits, 34, 588, 'Unknown answers may take any value from 1 to 5.', 21, MUTED)
     save_svg(limits, images / 'personality-bounds.svg')
 
     copies = {'template.pdf': 'paper.pdf', 'supplement.html': 'supplement.html',
