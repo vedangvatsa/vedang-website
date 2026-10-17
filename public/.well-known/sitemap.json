@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.org/sitemap",
-  "generatedAt": "2026-10-16T23:58:40.150Z",
+  "generatedAt": "2026-10-17T08:52:29.699Z",
   "publisher": {
     "name": "Vedang Vatsa",
     "url": "https://veda.ng"
@@ -47,7 +47,7 @@
       "changefreq": "weekly"
     },
     {
-      "url": "https://veda.ng/detection",
+      "url": "https://veda.ng/aidetection",
       "title": "AI Text Detection and the Limits of 96% Accuracy",
       "lastmod": "2026-10-17",
       "changefreq": "monthly",

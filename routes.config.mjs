@@ -27,7 +27,6 @@ export const ESSAY_SLUG_MIGRATIONS = [
   ['computational-social-science', 'socialscience'],
   ['dark-forest-internet', 'darkforest'],
   ['digital-monasticism', 'monasticism'],
-  ['generalization', 'detection'],
   ['god-protocol', 'godprotocol'],
   ['great-funding-realignment', 'funding'],
   ['hustle-culture', 'hustle'],
@@ -64,8 +63,6 @@ export const ESSAY_SLUG_MIGRATIONS = [
 /** Non-essay redirects: [source path prefix, destination]. ':path*' suffixes preserved. */
 export const EXTRA_REDIRECTS = [
   ['/tokens.md', '/tokentax.md'],
-  ['/generalization.md', '/detection.md'],
-  ['/images/essays/generalization.svg', '/images/essays/detection.svg'],
   ['/who-buys', '/receipts'],
   ['/writings', '/essays'],
   ['/194', '/agenticweb'],

@@ -3,9 +3,9 @@
 const studyUrl = 'https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.md';
 
 const accuracy = [
-  { name: 'Forest, eight features', internal: 95.99, external: 53.89 },
-  { name: 'Logistic, eight features', internal: 90.06, external: 68.91 },
-  { name: 'Forest, length only', internal: 90.38, external: 51.60 },
+  { name: 'Random forest, eight measures', internal: 95.99, external: 53.89 },
+  { name: 'Logistic model, eight measures', internal: 90.06, external: 68.91 },
+  { name: 'Random forest, length only', internal: 90.38, external: 51.60 },
 ];
 
 function StudySource({ children }: { children: React.ReactNode }) {
@@ -23,11 +23,11 @@ export function AbstractTransferComparison() {
   return (
     <figure aria-labelledby="abstract-transfer-comparison" className="not-prose my-10 w-full overflow-hidden rounded-[3px] border border-[#e3e3e0] bg-white text-[#37352f]">
       <div className="p-5 sm:p-7">
-        <h3 id="abstract-transfer-comparison" className="text-lg font-bold tracking-tight sm:text-xl">Accuracy within and across corpora</h3>
-        <p className="mt-2 text-sm text-[#64748b]">Percentage correct at the fixed 0.5 threshold</p>
+        <h3 id="abstract-transfer-comparison" className="text-lg font-bold tracking-tight sm:text-xl">Accuracy on the two datasets</h3>
+        <p className="mt-2 text-sm text-[#64748b]">Correct predictions at the 0.5 score cutoff</p>
         <div className="my-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[#475569]">
-          <span className="flex items-center gap-2"><span aria-hidden="true" className="h-2.5 w-2.5 bg-[#2563eb]/65" />Internal validation</span>
-          <span className="flex items-center gap-2"><span aria-hidden="true" className="h-2.5 w-2.5 bg-[#b45309]/65" />External corpus</span>
+          <span className="flex items-center gap-2"><span aria-hidden="true" className="h-2.5 w-2.5 bg-[#2563eb]/65" />Original data</span>
+          <span className="flex items-center gap-2"><span aria-hidden="true" className="h-2.5 w-2.5 bg-[#b45309]/65" />Separate data</span>
         </div>
         <div className="space-y-6">
           {accuracy.map((model) => (
@@ -36,7 +36,7 @@ export function AbstractTransferComparison() {
               <dl className="space-y-2">
                 {(['internal', 'external'] as const).map((evaluation) => (
                   <div key={evaluation} className="grid grid-cols-[58px_minmax(0,1fr)_55px] items-center gap-2 text-xs sm:grid-cols-[66px_minmax(0,1fr)_60px] sm:text-sm">
-                    <dt>{evaluation === 'internal' ? 'Internal' : 'External'}</dt>
+                    <dt>{evaluation === 'internal' ? 'Original' : 'Separate'}</dt>
                     <dd className="col-span-2 grid grid-cols-[minmax(0,1fr)_55px] items-center gap-2 sm:grid-cols-[minmax(0,1fr)_60px]">
                       <div aria-hidden="true" className="h-4 bg-[#f1f5f9]">
                         <div className={`h-full ${evaluation === 'internal' ? 'bg-[#2563eb]/65' : 'bg-[#b45309]/65'}`} style={{ width: `${model[evaluation]}%` }} />
@@ -54,7 +54,7 @@ export function AbstractTransferComparison() {
         </div>
       </div>
       <StudySource>
-        Internal results pool five held-out source-group folds. External results use models fitted to all eligible local texts. Both corpora contain equal class counts. Bars start at zero.
+        Original data use five-part testing, keeping related records together. The separate test uses models trained on all retained original texts. Both datasets have equal numbers of published and generated texts. Bars start at zero.
       </StudySource>
     </figure>
   );
@@ -63,15 +63,15 @@ export function AbstractTransferComparison() {
 export function AbstractTransferErrors() {
   const total = 8319;
   const rows = [
-    { label: 'Published-class texts', correct: 7991, error: 328, correctLabel: 'Correctly accepted', errorLabel: 'Incorrectly flagged' },
-    { label: 'Generated-class texts', correct: 976, error: 7343, correctLabel: 'Correctly detected', errorLabel: 'Missed' },
+    { label: 'Published texts', correct: 7991, error: 328, correctLabel: 'Correct label', errorLabel: 'False alarms' },
+    { label: 'Generated texts', correct: 976, error: 7343, correctLabel: 'Correct label', errorLabel: 'Missed' },
   ];
 
   return (
     <figure aria-labelledby="abstract-transfer-errors" className="not-prose my-10 w-full overflow-hidden rounded-[3px] border border-[#e3e3e0] bg-white text-[#37352f]">
       <div className="p-5 sm:p-7">
-        <h3 id="abstract-transfer-errors" className="text-lg font-bold tracking-tight sm:text-xl">Where the external forest makes mistakes</h3>
-        <p className="mt-2 text-sm text-[#64748b]">8,319 texts in each recorded class; score above 0.5 means generated</p>
+        <h3 id="abstract-transfer-errors" className="text-lg font-bold tracking-tight sm:text-xl">Mistakes on the separate dataset</h3>
+        <p className="mt-2 text-sm text-[#64748b]">8,319 texts per group. Scores above 0.5 get the generated label.</p>
         <div className="mt-6 space-y-7">
           {rows.map((row) => (
             <div key={row.label}>
@@ -95,7 +95,7 @@ export function AbstractTransferErrors() {
         </div>
       </div>
       <StudySource>
-        Blue denotes correct classifications; brown denotes errors. Each percentage uses its own recorded class as the denominator. Counts describe the supplied labels, not independently authenticated authorship.
+        Each percentage uses 8,319 texts as its total. Blue shows labels that match the dataset; brown shows those that do not.
       </StudySource>
     </figure>
   );
