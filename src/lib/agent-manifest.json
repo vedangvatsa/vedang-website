@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T08:52:30.111Z",
+  "generatedAt": "2026-10-17T11:40:35.646892Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -157,6 +157,7 @@
     "/essays/twilight-economy",
     "/essays/universal-text-ui",
     "/essays/yc-landscape",
+    "/finance",
     "/funding",
     "/glossary",
     "/glossary/51-percent-attack",
@@ -724,6 +725,7 @@
     "/docs",
     "/empathy",
     "/essays",
+    "/finance",
     "/funding",
     "/glossary",
     "/glossary/51-percent-attack",

@@ -50,6 +50,7 @@ import { AgentreadyLeaderboard } from '@/components/mdx/agentready-charts';
 import { PersonalityProfileExplorer } from '@/components/mdx/personality-charts';
 import { CommerceBenchmarkScores, CommerceOutcomeChecks } from '@/components/mdx/agentcommerce-charts';
 import { TokenTaxFormatChart } from '@/components/mdx/token-tax-charts';
+import { FinanceCostModel } from '@/components/mdx/finance-charts';
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -541,6 +542,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               CommerceBenchmarkScores,
               CommerceOutcomeChecks,
               TokenTaxFormatChart,
+              FinanceCostModel,
               ResearchPaper,
               img: (props: any) => (
                 <ZoomableImage

@@ -1,0 +1,255 @@
+---
+title: 'Agentic Finance'
+date: '2026-10-17'
+author: 'Vedang Ratan Vatsa'
+summary: 'Financial agents across banking, investing, payments, and business finance, with their technology, costs, companies, regulation, and failures.'
+description: 'Financial agents across banking, investing, payments, and business finance, with their technology, costs, companies, regulation, and failures.'
+category: 'AI Research'
+keywords: ['agentic finance', 'financial agents', 'AI banking', 'agent payments', 'treasury', 'financial regulation', 'AI investing']
+---
+
+In the Bank of England and Financial Conduct Authority's [2024 survey](https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024), 75% of 118 responding firms reported using AI. Across the reported AI use cases, only 2% involved fully autonomous decision-making. These are different measures, with different denominators. A firm using AI to review documents can still require a person to approve every financial action.
+
+Financial agents extend this work by choosing steps, using tools, and checking what happened. They can help collect a debt, prepare a payment, investigate an accounting mismatch, or research an investment. The authority to move money, change a record, or bind a customer to an agreement needs separate controls.
+
+The commercial thesis is that narrow, repeatable financial jobs offer the clearest starting point for paid agents. Their results can be checked against bank records, invoices, contracts, and accounting entries. Whether they become good businesses depends on the cost of completing those jobs, the human work left over, and who pays when something goes wrong.
+
+<Figure
+  src="/images/essays/finance-workflow.svg"
+  alt="A financial task moves through source records, a proposed action, permission checks, execution, and confirmation in external records."
+  caption="A proposed design for financial-agent work. The model helps choose actions; separate systems enforce permissions and record the result."
+  width={800}
+  height={400}
+  wide
+/>
+
+## Automation and agents
+
+Finance already uses scheduled payments, credit scores, fraud models, trading algorithms, and software that matches transactions. A standing order follows a fixed instruction. A credit model predicts an outcome. Neither needs to decide its own sequence of tools to complete a changing task.
+
+An agent can choose a next step after seeing a result. When an invoice does not match an order, it might retrieve delivery records, ask for a missing document, or send the case to an employee. [Anthropic's architectural distinction](https://www.anthropic.com/engineering/building-effective-agents) separates fixed workflows from agents whose models direct their steps and tool use. This essay uses that distinction, while recognizing that products often combine both.
+
+An agent's permissions determine which actions it can take. A model that drafts an investment report has different powers from one that submits orders to a broker. Giving the second model a better prompt does not define its permitted securities, position limits, or access to client accounts.
+
+| Authority | Example | Required result |
+| --- | --- | --- |
+| Read and explain | Summarize transactions or a filing | An answer supported by dated records |
+| Prepare | Draft a journal entry or payment instruction | A proposed action a person or rule can inspect |
+| Execute after approval | Submit an approved transfer | An action tied to the approval and checked afterward |
+| Operate within a mandate | Pay eligible recurring invoices under agreed limits | Repeated actions within limits, with exceptions stopped |
+
+These are working categories, not a regulatory classification or a ranking of product quality. A read-only assistant may be the right product for a task. Extra authority adds obligations even when the underlying model stays the same.
+
+## One payment from start to finish
+
+An invoice-payment workflow shows the parts that a financial agent needs. The following is a design example, not a report of a live transaction.
+
+The company first defines the task. It names the legal entity, the bank account, eligible suppliers, spending limits, approval requirements, and the deadline. A useful instruction identifies what the agent may do when records disagree. An instruction such as “pay our suppliers efficiently” leaves too much unspecified.
+
+The agent then gathers the invoice, purchase order, evidence of delivery, supplier record, and relevant payment history. It checks identifiers, currency, tax, quantities, and whether another process has already paid the invoice. A changed bank account requires confirmation through an established supplier-verification process. Instructions embedded in an incoming invoice cannot grant permission to change the supplier record.
+
+The model can help read documents and investigate mismatches. Ordinary code can calculate totals, compare identifiers, and apply limits. The payment instruction goes through a separate approval check before any credential with spending power becomes available.
+
+Execution also needs a way to handle uncertainty. If a payment request times out, the agent cannot assume that the bank rejected it. It needs to query the transaction status before trying another payment. [Stripe's idempotent-request documentation](https://docs.stripe.com/api/idempotent_requests) describes a related mechanism for recognizing retries of the same operation. Its rules depend on the API version and key lifetime; an integration must follow the relevant contract.
+
+Finally, the system checks the result in the payment and accounting systems. Acceptance of a request, authorization, settlement, and a later return are different states. A reply saying “paid” is insufficient evidence. The record needs the payment identifier, amount, currency, recipient, status, and accounting entry.
+
+Separate workers must also coordinate. Two agents can each see an unpaid invoice before either updates it. A shared task record and duplicate-payment checks can prevent that race. A correction should leave a dated adjustment and its reason, rather than silently erase the earlier entry.
+
+## Financial data and access
+
+Financial records have dates, units, owners, and restrictions. A reported balance may include funds unavailable for immediate spending. A market quote can be delayed. An annual report can restate an earlier year. A transaction may appear as pending before it posts, and may later reverse.
+
+An agent needs the source and effective time of each fact. Combining a forecast with a settled balance without identifying the difference can produce a wrong cash decision even when both numbers were copied accurately. Currency conversions also need a dated rate and a rule for rounding.
+
+Access to account information and permission to transfer funds are separate product capabilities. [Plaid Auth](https://plaid.com/docs/auth/) provides account information for use with a payment processor. [Plaid Transfer](https://plaid.com/docs/transfer/) provides a US money-movement service, with an application and approval process. Reading a bank connection does not by itself supply every capability needed to pay someone.
+
+Permissions also expire or change. A customer can revoke access, an employee can leave, or a bank connection can require renewed consent. Cached records need retention and deletion rules. Revoking a connection does not automatically remove copies already stored by the application.
+
+Market-data licensing is another constraint. The right to view information, use it inside a model, store it, and redistribute it can differ. A financial-data business earns its fees partly by maintaining coverage, timeliness, and rights of use. An agent vendor must check those rights before promising customers access to every source.
+
+Persistent memory belongs within these controls. Remembering a customer's preferred report layout is different from retaining an old bank balance or a superseded investment instruction. Financial state should come from the relevant records; memory can help locate and interpret them.
+
+## Personal finance and banking
+
+Read-only services can categorize spending, identify recurring charges, explain fees, and prepare a cash forecast. Their output still depends on coverage. An agent that cannot see a second bank account, a cash expense, or an upcoming obligation has an incomplete household picture.
+
+Taking action introduces more decisions. Moving money between accounts requires checking ownership, available funds, timing, and possible fees. Paying a bill requires the right recipient and amount. Switching a product can change rates, withdrawal terms, tax treatment, or protection arrangements. A balance comparison alone cannot settle those choices.
+
+[Stripe's Link Agent Wallet](https://docs.stripe.com/agentic-commerce/agents/link-agent-wallet) documents two separate uses. An agent can request financial information from accounts the customer shares, or request permission for a particular purchase. In the documented payment flow, the customer approves the request before Link returns a one-time-use payment credential. The listed availability also differs: agent payments cover US and Canadian customers, while financial insights cover US customers.
+
+This gives a concrete example of an agent with useful abilities and bounded authority. It also shows why product names are a poor measure of autonomy. The relevant questions concern the operation, the permission granted, and the countries supported.
+
+The provider's incentives deserve attention. A service paid by a customer has a different commercial relationship from one paid by a lender, broker, or insurer for referrals. Product ranking needs to make those arrangements visible. Saving the customer time does not establish that the recommended product serves the customer's financial interests.
+
+Banks can supply agents through relationships they already hold. Independent providers can combine information across institutions, but need reliable connections, consent, and a reason for customers to maintain another service. Account access, service quality, and customer trust affect distribution alongside model performance.
+
+## Business finance and treasury
+
+Accounts payable concerns money a business owes. Accounts receivable concerns money customers owe the business. Reconciliation checks whether records agree. Treasury manages cash, funding, and financial exposures. Each provides a different set of tasks for an agent.
+
+In payables, an agent can assemble evidence for an invoice and route exceptions. In receivables, it can prepare invoices, send agreed reminders, match incoming payments, and investigate short payments. A collection agent also needs rules for disputed debts, customer communications, and settlement offers. Permission to send a reminder does not imply permission to waive an amount owed.
+
+Reconciliation has a measurable target: identify why two records differ and record an accepted resolution. Microsoft's [Account Reconciliation Agent](https://learn.microsoft.com/en-us/dynamics365/finance/general-ledger/acct-rec-agent), documented as a production-ready preview, evaluates selected exceptions and recommends actions. Users can accept a recommendation or choose another action, and the activity history records the work. A preview label and a documented function establish different facts from a measured production error rate.
+
+Treasury is harder because it combines current records with uncertain future cash flows. An agent might prepare a forecast, identify an expected shortfall, or propose a transfer between company accounts. Borrowing, foreign-exchange hedging, and investment of surplus cash add counterparty, liquidity, and market risk. The company needs limits across all agents using the same funds, not only limits on each individual request.
+
+Tax, payroll, and financial reporting add filing deadlines, local rules, and responsibility for submitted records. Agents can gather documents and draft calculations. The firm still needs a process for resolving uncertainty and deciding who can file or certify the result.
+
+Corporate-finance work can include organizing due-diligence documents, checking a financial model against source accounts, and tracking conditions attached to a financing. Confidential deal information needs its own access limits. A research agent with access to those documents must not carry their contents into a public-facing answer.
+
+The economic benefit may come from faster processing, fewer missed collections, or less staff time. These are separate measures. An earlier payment can improve a supplier relationship while reducing the buyer's cash balance sooner. A business case must state whose benefit it counts.
+
+## Lending and insurance
+
+In lending, an agent can collect documents, check completeness, identify inconsistencies, and prepare a case for a credit decision. Predicting default, deciding whether to lend, setting the price, issuing funds, and servicing the loan are separate functions.
+
+The information used to make a decision must remain traceable. A fluent explanation written afterward can be wrong about why an application failed. In the United States, [Regulation B, section 1002.9](https://www.consumerfinance.gov/rules-policy/regulations/1002/9/) requires specific reasons for covered adverse actions, subject to its notice rules. The official interpretation ties those reasons to the factors actually considered or scored. A generic statement that an applicant missed an internal score is insufficient.
+
+Credit quality also takes time to observe. A system that approves applications quickly can still produce poor loans. Evaluation needs repayment outcomes, comparable borrower groups, the economic conditions during lending, and treatment of rejected applicants. Historical lending records may reflect earlier selection or discrimination, so copying past decisions is not a complete validation method.
+
+The business structure changes the cost model. A software vendor can charge a lender for processing applications. A lender funds the loans and bears credit losses, with applicable capital and funding requirements. Revenue from software fees cannot be compared directly with a lender's interest income without accounting for those differences.
+
+Insurance has similar divisions. Agents can gather claim documents, check policy dates, identify missing evidence, and recommend routing. Coverage interpretation, claim acceptance, pricing, and payment have different consequences. Fast claim closure alone is a poor performance target if it encourages incorrect denials or discourages valid claims.
+
+Policy exclusions, deductibles, repair estimates, and appeals require evidence tied to the particular contract. An agent must distinguish a missing document from evidence that a loss falls outside coverage. Evaluation should track corrections and appeals, including cases initially marked complete.
+
+In the EU, [Annex III of the AI Act](https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3) lists creditworthiness assessment of natural persons, with an exception for financial-fraud detection, and risk assessment and pricing for life and health insurance. Classification follows the use case and the Act's rules, rather than the word “agent” in a product name.
+
+## Investing and trading
+
+An investment agent can search filings, compare reported figures, monitor a portfolio, draft research, or prepare an order. These tasks need different evidence of success. Accurate extraction from a filing does not establish that a trade will earn a return.
+
+Research systems need point-in-time data: information that was actually available on the date of the decision. A backtest can look better if it uses revised figures, excludes companies that failed, or lets later information enter an earlier decision. Transaction fees, market impact, execution delays, and capacity also affect results.
+
+Portfolio work adds objectives and constraints. A system needs an investment horizon, liquidity needs, permitted assets, concentration limits, and instructions about tax and trading. An agent cannot infer permission to take more risk merely because a customer asks for a higher return.
+
+Morgan Stanley's [June 2024 Debrief announcement](https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch) describes meeting notes, summaries, follow-up drafts, and records saved to Salesforce with client consent. The adviser edits and sends the email. This is documented assistance inside a financial practice, not evidence that an autonomous system manages the customer's portfolio.
+
+Order execution has older lessons. According to the [SEC's Knight Capital findings](https://www.sec.gov/newsroom/press-releases/2013-222), a faulty deployment in August 2012 led its router to send more than four million orders while trying to fill 212 customer orders during the first 45 minutes of trading. The firm eventually lost more than $460 million. This was a failure of earlier automated trading software, not an LLM agent.
+
+The case concerned controls immediately before orders reached the market, aggregate exposure, deployment tests, and response to errors. Adding a language model does not remove those engineering requirements. An agent that explains a position convincingly still needs a broker or execution system to enforce the actual limit.
+
+## Payments, protocols, and digital assets
+
+An agent's instruction passes through several systems before a seller receives usable funds. Card authorization, bank transfers, payment credentials, and blockchain transactions solve different parts of that process.
+
+| Component | Job | Boundary |
+| --- | --- | --- |
+| [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/learn/architecture) | Expose data and tools to an AI application | The application still decides how to use them and which actions to permit |
+| [AP2 v0.2](https://ap2-protocol.org/ap2/specification/) | Carry signed checkout and payment mandates and receipts | The specification leaves parts of dispute resolution and record retrieval outside its scope |
+| [Stripe shared payment tokens](https://docs.stripe.com/agentic-commerce/concepts/shared-payment-tokens.md?agent-seller=agent) | Give a seller scoped access to a payment method | Limits include the seller, currency, amount, and expiry; further customer authentication may be required |
+| [x402](https://docs.cdp.coinbase.com/x402/how-it-works) | Add payment to a request for a resource or service | Buyer and seller need a supported payment option; verification and settlement remain explicit steps |
+| Bank and card systems | Move funds and apply their transaction rules | Acceptance, settlement, returns, and disputes depend on the chosen service |
+
+AP2 v0.2 separates checkout authorization from payment authorization. Its direct mode obtains the user's approval for a particular transaction. Its autonomous mode uses previously approved constraints. Verification must happen in code that applies fixed rules, even when a language model handles other work. The current specification also places agent-to-agent delegation outside its scope.
+
+Signed records can help establish what someone approved. They cannot establish that a product description was honest, that a price was competitive, or that the purchase was suitable. Those require other evidence and, where relevant, dispute procedures.
+
+x402 lets a service quote a price and receive payment as part of a request. An agent could use it to buy a data query or tool call. The protocol does not make every returned answer worth its price. The buyer still needs a budget, a rule for choosing suppliers, and a way to judge the result.
+
+Stablecoins can support programmable transfers, but an operator must account for the asset issuer, custody, network fees, liquidity, redemption, and access to local currency. A completed blockchain transfer does not settle a separate question about a refund or a legal claim. Those rights depend on the surrounding arrangement.
+
+Agents using decentralized finance add smart-contract permissions and market exposures. A transaction can execute exactly as signed and still make a poor trade. Collateral can fall in value, an external price feed can fail, or a contract can contain an error. The execution record, the quality of the financial decision, and the recovery options need separate assessment.
+
+## Companies and competition
+
+The market includes financial institutions, business-software vendors, data suppliers, payment providers, and specialist agent builders. Their products sit at different points in a financial task.
+
+| Provider | Documented role | Evidence and limit |
+| --- | --- | --- |
+| [Morgan Stanley](https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch) | Notes, summaries, and follow-up drafts for advisers | June 2024 institutional announcement; adviser review remains part of the described workflow |
+| [Intuit](https://investors.intuit.com/news-events/press-releases/detail/1326/intuit-intelligence-now-available-internationally-fueling-success-for-businesses-and-accountants-on-one-unified-platform) | Recurring automations, invoicing, and reports in its accounting products | October 2026 announcement describes the listed international features as rolling out in beta, with regional and product differences |
+| [Ramp](https://ramp.com/ai) | Expense coding, policy checks, invoice work, and approvals | Product description; its FAQ says money movement requires human confirmation |
+| [Microsoft](https://learn.microsoft.com/en-us/dynamics365/finance/general-ledger/acct-rec-agent) | Investigation of selected account-reconciliation exceptions | Production-ready preview documentation describes recommendations and user actions |
+| [Plaid](https://plaid.com/docs/transfer/) | Account connections and separate money-movement products | API documentation distinguishes Auth from the US-only Transfer service |
+| [Stripe](https://docs.stripe.com/agentic-commerce/agents/link-agent-wallet) | Agent payment requests, payment credentials, and seller integrations | Product documentation defines consent, payment scopes, and country availability |
+| [Coinbase Developer Platform](https://docs.cdp.coinbase.com/x402/how-it-works) | x402 payment verification and settlement services | Protocol and implementation documentation; transaction volume alone does not measure profitable agent customers |
+
+These sources describe products and announced availability. They do not provide a comparable set of customer margins, error losses, or retention figures. The table is a map of functions, not a ranking by commercial success.
+
+Existing accounting and banking providers have access to records, established permissions, and purchasing relationships. Adding an agent inside an existing product can reduce the work needed to connect data and approve a vendor. It can also make it difficult to isolate how much customers pay for the agent itself.
+
+A specialist can compete through better results on a particular job or better coordination across systems. That advantage has to survive integration costs, customer-specific rules, and the cost of switching. A model available to competitors provides little protection on its own. Corrected workflows, trusted delivery, and distribution may matter more, but their value needs evidence from customers.
+
+Subscriptions charge for access. Usage fees charge for processing. Outcome fees charge for an agreed completion, such as an accepted reconciliation. Managed services include staff who handle exceptions. Payment and referral businesses may earn fees from another participant in the transaction.
+
+Each creates different incentives. Charging for attempts can reward extra work. Charging for completion requires a clear definition of acceptance and a policy for later corrections. Referral income can influence product selection. The contract needs to state the event that earns a fee and the event that requires a refund.
+
+## The cost of a completed task
+
+The relevant cost includes every submitted task, including those that fail. Counting only successful model calls omits the work spent on retries and unresolved cases. Integration, data access, review, corrections, and support can exceed the model bill.
+
+The following calculation is an illustrative operating-cost model, not a vendor estimate or an observed result. It assumes 10,000 submitted tasks in one month, of which 95% finish and receive acceptance. Automated processing costs $0.20 per submitted task, including retries. Monthly allocated overhead is $3,000. A human review takes three minutes at a loaded labor cost of $40 an hour.
+
+A review therefore costs $2. The cost per accepted task is total monthly operating cost divided by 9,500 accepted tasks. Holding completion fixed isolates the arithmetic effect of review; it does not imply that review has no effect on quality.
+
+| Submitted tasks reviewed by a person | Monthly review cost | Total monthly operating cost | Cost per accepted task |
+| --- | ---: | ---: | ---: |
+| 5% | $1,000 | $6,000 | $0.63 |
+| 20% | $4,000 | $9,000 | $0.95 |
+| 50% | $10,000 | $15,000 | $1.58 |
+
+<FinanceCostModel />
+
+At an illustrative fee of $1 per accepted task, these cases produce $9,500 in monthly revenue. The amounts left after the listed costs are $3,500, $500, and a loss of $5,500. These figures exclude financial-error losses, sales costs, taxes, and any costs not included in the stated overhead. They are not net-profit forecasts.
+
+Under the same assumptions, halving the automated-processing cost saves $1,000 a month. Reducing the reviewed share from 20% to 5% saves $3,000, but only if quality remains acceptable. Removing needed review to improve the displayed margin can transfer a much larger cost to customers.
+
+Financial losses need their own analysis. The party collecting a software fee may differ from the party bearing an incorrect transfer or credit loss. Contracts, insurance, recovery rights, and reserves determine that allocation. Average losses can also hide rare large events and failures that affect many customers at once.
+
+Market sizing should begin with eligible work and realistic prices. Annual task volume, the share a product can serve, the completion rate, and the fee per accepted task provide a revenue estimate with visible assumptions. Assets under management and the value of payments are not software revenue. Summing overlapping estimates for banking, payments, and AI can count the same spending several times.
+
+## Rules and responsibility
+
+The legal analysis starts with the activity and jurisdiction. Reading a statement, giving regulated advice, making a credit decision, holding customer assets, and transmitting money can involve different rules. A software tool's technical access does not establish the legal authority of its operator.
+
+In the United States, [FINRA Regulatory Notice 24-09](https://www.finra.org/rules-guidance/notices/24-09) reminds member firms that existing obligations continue to apply when they use generative AI. It specifically discusses supervision and public communications, including third-party tools. The notice does not create a separate license for autonomous agents. Credit decisions also need the applicable lending and notice rules described earlier.
+
+Marketing claims can create a separate problem. In March 2024, the [SEC announced settled charges against Delphia and Global Predictions](https://www.sec.gov/newsroom/press-releases/2024-36) over false and misleading claims about their use of AI. The firms agreed to pay $400,000 in total civil penalties without admitting or denying the findings. These were enforcement cases about representations and related conduct, not measured losses from autonomous agent trading.
+
+In the EU, the AI Act classifies specified uses and assigns duties to providers and deployers. The [Commission's implementation page](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), checked for this essay, places Annex III high-risk obligations on 2 December 2027 following the AI Omnibus changes. Other parts have different dates. That timetable should not be confused with financial-sector obligations already in force.
+
+[DORA](https://finance.ec.europa.eu/digital-finance/cyber-resilience_en) addresses digital operational resilience in finance, including oversight of critical technology providers. Its relevance extends beyond model accuracy to disruptions, recovery, and third-party dependencies. An agent service can perform well in a demonstration and still create an unacceptable operational dependency.
+
+India's [Digital Lending Directions, 2025](https://www.rbi.org.in/scripts/FS_Notification.aspx?Id=12848) define obligations for covered regulated entities and lending service providers. Paragraph 5 states that outsourcing does not remove the regulated entity's responsibility for the provider's acts and omissions. The directions also cover borrower disclosures, data consent, and restrictions on the flow of funds. Adding an agent to a lending app does not remove those requirements.
+
+International guidance is distinct from binding domestic rules. The [FSB's final report of 15 October 2026](https://www.fsb.org/2026/10/sound-practices-for-responsible-adoption-of-artificial-intelligence-ai-final-report/) sets out 12 sound practices for responsible AI adoption. These include governance, data quality, performance monitoring, human oversight, and third-party risk management. They give financial institutions a framework for assessment rather than a universal approval to deploy a product.
+
+## Testing, failure, and recovery
+
+Evaluation needs both correct answers and correct actions. [FinQA](https://github.com/czyssrs/FinQA) provides financial questions with supporting text, tables, and reference calculations. Such a dataset can help test retrieval and numerical reasoning. It cannot establish that a system correctly authorizes a transfer, handles a timeout, or restores service after a failure.
+
+| Test | Evidence to inspect |
+| --- | --- |
+| Source accuracy | The dated document or record supporting the answer |
+| Numerical accuracy | Recomputed amounts, units, currencies, and rounding |
+| Permission enforcement | Attempts beyond limits that the execution system rejects |
+| Completion | An accepted result in the destination system |
+| Duplicate handling | Repeated and concurrent requests without unintended extra actions |
+| Exceptions | Correct escalation, waiting, cancellation, and recovery |
+| Operating cost | All attempts, review time, corrections, and unresolved work |
+
+Tests should include hostile or misleading documents. An instruction hidden in an invoice could ask the agent to change a bank account or reveal records. That is a possible attack scenario, not an incident reported here. Source documents supply evidence; they cannot amend the application's permissions. Controls enforced outside the model reduce dependence on the model recognizing every misleading instruction.
+
+Human review also needs measurement. A reviewer who sees only the model's summary may miss an error in the original record. Useful measures include review time, corrections, false approvals, and cases reopened after acceptance. Calling a workflow “human supervised” does not establish how carefully anyone checked it.
+
+The audit trail should retain observable evidence: source versions, tool requests, approvals, transaction identifiers, status changes, and corrections. A model's later explanation can differ from the steps the system actually took. Model updates, tool changes, and policy changes need recorded versions so a result can be investigated.
+
+The [FSB's 2024 financial-stability report](https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/) identifies provider concentration, market correlations, cyber risks, and model and data weaknesses. A common outage or a shared error can affect many firms together. Testing each agent in isolation will not measure all of that exposure. Financial institutions also need to know how work continues when a provider becomes unavailable.
+
+## The commercial thesis
+
+Payables, reconciliation, document checks, and reporting offer observable work that companies already pay people and software to perform. An agent can begin with limited authority and earn wider use by reducing the cost of accepted work. Buyers include controllers responsible for closing the books and treasury teams responsible for cash. Their budgets and acceptance tests differ.
+
+That does not establish that a separate agent company captures the benefit. An existing bank or accounting platform may include the capability in a broader contract. A specialist may sell a managed service with substantial staff costs. A data or payment provider may earn fees even when the agent application has little pricing power.
+
+Existing platforms could retain customers by adding agents to familiar workflows. Specialists could win where they deliver better results across several systems. Broader delegated services could grow if authorization, recovery, and customer trust improve enough to support them. Each outcome would distribute revenue differently.
+
+The near-term thesis would weaken if customer-specific integration stays expensive, human handling grows with every deployment, or buyers refuse to pay enough to cover failures. It would also need revision if open-ended financial agents show better retained customer outcomes and lower total costs than narrowly scoped services.
+
+The strongest supporting evidence would be a history of paid tasks across several customer groups: accepted completions, corrections after acceptance, human minutes, costs, renewals, and losses borne by each party. Demonstrations and product announcements cannot supply that record. A financial agent earns a larger mandate through evidence about the work it has already completed.
+
+## Sources and scope
+
+Sources were checked on 17 October 2026. Survey figures retain their original dates and populations. Product descriptions establish documented capabilities and availability, rather than independently measured performance. The legal discussion uses selected US, EU, and Indian examples. The invoice workflow and cost model are illustrations; this essay reports no live payment or trading experiment. The [source and calculation register](/data/finance-research.json) records the supporting documents and model assumptions.

@@ -8,6 +8,13 @@
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Agentic Finance</title>
+      <link>https://veda.ng/finance</link>
+      <guid>https://veda.ng/finance</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Financial agents across banking, investing, payments, and business finance, with their technology, costs, companies, regulation, and failures.</description>
+    </item>
+    <item>
       <title>AI Text Detection and the Limits of 96% Accuracy</title>
       <link>https://veda.ng/aidetection</link>
       <guid>https://veda.ng/aidetection</guid>

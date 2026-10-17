@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+  <title id="title">A financial action and its record</title>
+  <desc id="desc">Proposed workflow. Read source records, plan an action, check authority, act through a financial system, and confirm the outcome. Return unresolved work for investigation or human handling.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="398" rx="8" fill="#ffffff" stroke="#e3e3e0"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#37352f">
+    <text x="32" y="58" font-size="32" font-weight="700">A financial action and its record</text>
+    <text x="32" y="94" font-size="23" fill="#52525b">Proposed workflow</text>
+    <g fill="#f8fafc" stroke="#e3e3e0">
+      <rect x="32" y="145" width="124" height="90" rx="5"/>
+      <rect x="185" y="145" width="124" height="90" rx="5"/>
+      <rect x="338" y="145" width="124" height="90" rx="5" fill="#eef2ff" stroke="#6366f1"/>
+      <rect x="491" y="145" width="124" height="90" rx="5"/>
+      <rect x="644" y="145" width="124" height="90" rx="5"/>
+    </g>
+    <g font-size="28" font-weight="700" text-anchor="middle">
+      <text x="94" y="200">Read</text>
+      <text x="247" y="200">Plan</text>
+      <text x="400" y="200">Check</text>
+      <text x="553" y="200">Act</text>
+      <text x="706" y="200">Confirm</text>
+    </g>
+    <g stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M158 190 H179"/>
+      <path d="M311 190 H332"/>
+      <path d="M464 190 H485"/>
+      <path d="M617 190 H638"/>
+      <path d="M706 238 V270 H247 V241"/>
+    </g>
+    <text x="32" y="316" font-size="24">Investigate or escalate unresolved work</text>
+    <text x="32" y="356" font-size="22" fill="#52525b">Check outcomes in payment and accounting records</text>
+    <text x="768" y="382" text-anchor="end" font-size="16" fill="#52525b">veda.ng/finance</text>
+  </g>
+</svg>
