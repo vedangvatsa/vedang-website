@@ -1,6 +1,6 @@
 # Agentic Finance research record
 
-Research date: 17 October 2026. Publication route: `/finance`.
+Research date: 17 October 2026. Publication route: `/agenticfinance`.
 
 ## Question and claim
 
@@ -58,10 +58,20 @@ Use direct language, preserve the scope of each number, and remove stock transit
 
 ## Verification results
 
-- The source register contains 25 primary sources; the generator checks that every registered URL is cited and every external citation is registered.
+- The source register contains 25 primary research sources and two credited visual sources; the generator checks that every registered URL is cited and every external citation is registered.
 - The cost-model tests pass for the three published scenarios, unaccepted work, zero accepted completions, and the separate savings from automation and review changes.
-- Targeted ESLint and the TypeScript check passed. The production Next.js build passed and generated `/finance`.
+- Targeted ESLint and the TypeScript check passed. The production Next.js build passed and generated `/agenticfinance`.
 - All SVGs under `public/images` passed XML validation.
 - Browser checks at 1440px and 390px passed. The calculator displayed USD 0.95 by default, USD 1.58 at 50% review, and USD 3.00 at 50% review with 50% acceptance. Reset restored the defaults.
 - No page JavaScript errors or mobile page-width overflow appeared. The essay, Markdown route, source register, hero image, and sharing image loaded. The homepage, essay index, RSS, sitemap, and LLM index included the route.
-- The rendered article contained 4,657 words including tables, calculator text, and captions. The writing assistant read the draft for clarity and repeated explanations; the automated phrase scan found zero violations.
+- After adding the sourced images and credits, the rendered article contained 4,701 words including tables, calculator text, and captions. The writing assistant read the draft for clarity and repeated explanations; the automated phrase scan found zero violations.
+
+## Sourced visuals and route update
+
+The user requested the route `/agenticfinance` and permitted relevant online imagery with attribution. The essay now includes a historical NYSE trading-floor photograph by Carol M. Highsmith from the Library of Congress collection, sourced through Wikimedia Commons. Its file page identifies the photograph as public domain. The image is a historical illustration, not a photograph of the Knight Capital incident or a current AI deployment.
+
+The second added image is the AP2 action-authorization diagram from the Google/AP2 repository at commit `e1ea56db72a6385bce3e5c1112b3a56ce60acb43`. The original SVG is preserved, and a copy of its Apache 2.0 license is supplied beside the image. Source links and creator credits appear in ordinary Markdown so they remain visible in both the HTML and Markdown versions of the essay.
+
+The original workflow diagram, interactive cost model, and custom sharing image remain in the article package. Graphic URL labels and the sharing-image path use `/agenticfinance`. Redirects preserve `/finance` and `/finance.md` links.
+
+The final local browser check returned HTTP 200 for the renamed essay, Markdown text, images, source register, and image-license file. The two former routes returned HTTP 308 to their new equivalents. All three inline images loaded, both external-image credits survived Markdown conversion, and the 390px layout had no page-width overflow or JavaScript errors. The NYSE photograph and AP2 diagram were visually inspected after download and in the rendered page.

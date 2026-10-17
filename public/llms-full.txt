@@ -9339,7 +9339,7 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
 
 ## Agentic Finance
 
-Source: https://veda.ng/finance
+Source: https://veda.ng/agenticfinance
 Published: 2026-10-17
 
 In the Bank of England and Financial Conduct Authority's [2024 survey](https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024), 75% of 118 responding firms reported using AI. Across the reported AI use cases, only 2% involved fully autonomous decision-making. These are different measures, with different denominators. A firm using AI to review documents can still require a person to approve every financial action.
@@ -9447,6 +9447,10 @@ In the EU, [Annex III of the AI Act](https://ai-act-service-desk.ec.europa.eu/en
 
 An investment agent can search filings, compare reported figures, monitor a portfolio, draft research, or prepare an order. These tasks need different evidence of success. Accurate extraction from a filing does not establish that a trade will earn a return.
 
+![Historical photograph of traders and workstations on the New York Stock Exchange trading floor.](/images/essays/agenticfinance-nyse.jpg)
+
+*Photo by Carol M. Highsmith, Library of Congress collection. [Source and public-domain notice](https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_trading_floor_on_Wall_Street,_New_York,_New_York_LCCN2011634218.tif).*
+
 Research systems need point-in-time data: information that was actually available on the date of the decision. A backtest can look better if it uses revised figures, excludes companies that failed, or lets later information enter an earlier decision. Transaction fees, market impact, execution delays, and capacity also affect results.
 
 Portfolio work adds objectives and constraints. A system needs an investment horizon, liquidity needs, permitted assets, concentration limits, and instructions about tax and trading. An agent cannot infer permission to take more risk merely because a customer asks for a higher return.
@@ -9470,6 +9474,10 @@ An agent's instruction passes through several systems before a seller receives u
 | Bank and card systems | Move funds and apply their transaction rules | Acceptance, settlement, returns, and disputes depend on the chosen service |
 
 AP2 v0.2 separates checkout authorization from payment authorization. Its direct mode obtains the user's approval for a particular transaction. Its autonomous mode uses previously approved constraints. Verification must happen in code that applies fixed rules, even when a language model handles other work. The current specification also places agent-to-agent delegation outside its scope.
+
+![AP2 project diagram showing the parties and signed messages in action authorization.](/images/essays/agenticfinance-ap2-authorization.svg)
+
+*Diagram by Google and AP2 contributors. [Original source](https://github.com/google-agentic-commerce/AP2/blob/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/docs/assets/action_authorization_overview.svg). [Apache 2.0 license](/images/essays/agenticfinance-ap2-LICENSE.txt).*
 
 Signed records can help establish what someone approved. They cannot establish that a product description was honest, that a price was competitive, or that the purchase was suitable. Those require other evidence and, where relevant, dispute procedures.
 

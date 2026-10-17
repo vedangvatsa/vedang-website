@@ -1,18 +1,24 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { calculateFinanceCosts, financeCostAssumptions, financeSources } from '../src/lib/finance-data';
+import { calculateFinanceCosts, financeCostAssumptions, financeMedia, financeSources } from '../src/lib/finance-data';
 import { generateTerminalOgImage } from '../src/lib/og-image';
 
 async function main() {
-  const manuscript = fs.readFileSync('src/content/essays/finance.mdx', 'utf8');
+  const manuscript = fs.readFileSync('src/content/essays/agenticfinance.mdx', 'utf8');
   const links = new Set([...manuscript.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map((match) => match[1]));
-  assert.equal(links.size, financeSources.length, 'Each external source must appear in the register.');
+  const registeredUrls = new Set<string>([...financeSources.map((source) => source.url), ...financeMedia.map((image) => image.sourceUrl)]);
+  assert.equal(links.size, registeredUrls.size, 'Every external research and image source must appear in the register.');
+  for (const url of links) assert(registeredUrls.has(url), `Unregistered source: ${url}`);
   for (const source of financeSources) assert(links.has(source.url), `Uncited source: ${source.id}`);
+  for (const image of financeMedia) {
+    assert(links.has(image.sourceUrl), `Missing visual credit: ${image.id}`);
+    assert(fs.existsSync(path.join('public', image.localPath)), `Missing image: ${image.localPath}`);
+  }
   const scenarios = [5, 20, 50].map((review) => calculateFinanceCosts(review));
   const register = {
     title: 'Agentic Finance',
-    url: 'https://veda.ng/finance',
+    url: 'https://veda.ng/agenticfinance',
     checkedOn: '2026-10-17',
     evidence: 'Review of linked public primary sources, not a live payment or trading experiment.',
     survey: { year: 2024, respondingFirms: 118, aiUsingFirmPercent: 75, fullyAutonomousUseCasePercent: 2,
@@ -25,19 +31,20 @@ async function main() {
       caveat: 'Holding acceptance constant isolates arithmetic sensitivity; it does not establish that less review preserves quality.',
     },
     sources: financeSources,
+    media: financeMedia,
   };
   const dataPath = path.resolve('public/data/finance-research.json');
-  const ogPath = path.resolve('public/og/finance.png');
+  const ogPath = path.resolve('public/og/agenticfinance.png');
   fs.mkdirSync(path.dirname(dataPath), { recursive: true });
   fs.mkdirSync(path.dirname(ogPath), { recursive: true });
   fs.writeFileSync(dataPath, `${JSON.stringify(register, null, 2)}\n`);
-  const image = generateTerminalOgImage('Agentic', 'Finance', 'veda.ng/finance', [
+  const image = generateTerminalOgImage('Agentic', 'Finance', 'veda.ng/agenticfinance', [
     { text: 'Read financial records', color: 'command' },
     { text: 'Check authority', color: 'success' },
     { text: 'Confirm the result', color: 'success' },
   ], 'Banking, payments, investing');
   fs.writeFileSync(ogPath, Buffer.from(await image.arrayBuffer()));
-  console.log(JSON.stringify({ sources: financeSources.length, scenarios, files: [dataPath, ogPath] }, null, 2));
+  console.log(JSON.stringify({ sources: financeSources.length, creditedImages: financeMedia.length, scenarios, files: [dataPath, ogPath] }, null, 2));
 }
 
 main().catch((error) => {

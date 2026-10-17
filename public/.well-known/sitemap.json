@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.org/sitemap",
-  "generatedAt": "2026-10-17T11:40:35.646211Z",
+  "generatedAt": "2026-10-17T13:34:06.920949Z",
   "publisher": {
     "name": "Vedang Vatsa",
     "url": "https://veda.ng"
@@ -2280,7 +2280,7 @@
       "priority": 0.6
     },
     {
-      "url": "https://veda.ng/finance",
+      "url": "https://veda.ng/agenticfinance",
       "title": "Agentic Finance",
       "lastmod": "2026-10-17",
       "changefreq": "monthly",

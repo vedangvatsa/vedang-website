@@ -8,6 +8,35 @@ export const financeCostAssumptions = {
   feePerAcceptedUsd: 1,
 };
 
+export const financeMedia = [
+  {
+    id: 'nyse-highsmith',
+    title: 'Historical New York Stock Exchange trading floor',
+    creator: 'Carol M. Highsmith',
+    collection: 'Library of Congress, Prints and Photographs Division',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_trading_floor_on_Wall_Street,_New_York,_New_York_LCCN2011634218.tif',
+    downloadUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/New_York_Stock_Exchange_trading_floor_on_Wall_Street%2C_New_York%2C_New_York_LCCN2011634218.tif/lossy-page1-1280px-New_York_Stock_Exchange_trading_floor_on_Wall_Street%2C_New_York%2C_New_York_LCCN2011634218.tif.jpg',
+    localPath: '/images/essays/agenticfinance-nyse.jpg',
+    license: 'Public domain (Highsmith collection)',
+    licenseUrl: 'https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_trading_floor_on_Wall_Street,_New_York,_New_York_LCCN2011634218.tif#Licensing',
+    changes: 'Uses the Wikimedia JPEG preview of the original photograph; no crop or added text.',
+    context: 'Historical trading-floor photograph. It does not depict the Knight Capital incident or an AI deployment.',
+  },
+  {
+    id: 'ap2-authorization',
+    title: 'AP2 action authorization overview',
+    creator: 'Google / AP2 contributors',
+    sourceUrl: 'https://github.com/google-agentic-commerce/AP2/blob/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/docs/assets/action_authorization_overview.svg',
+    downloadUrl: 'https://raw.githubusercontent.com/google-agentic-commerce/AP2/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/docs/assets/action_authorization_overview.svg',
+    localPath: '/images/essays/agenticfinance-ap2-authorization.svg',
+    license: 'Apache-2.0',
+    licenseUrl: 'https://github.com/google-agentic-commerce/AP2/blob/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/LICENSE',
+    localLicensePath: '/images/essays/agenticfinance-ap2-LICENSE.txt',
+    changes: 'Original SVG preserved; display size controlled by the page.',
+    context: 'Diagram from the protocol repository, not a measurement of live payment performance.',
+  },
+] as const;
+
 export function calculateFinanceCosts(
   reviewedPercent: number,
   acceptedPercent = financeCostAssumptions.acceptedPercent,
