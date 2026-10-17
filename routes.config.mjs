@@ -36,7 +36,6 @@ export const ESSAY_SLUG_MIGRATIONS = [
   ['internet-of-lies', 'lies'],
   ['intuitive-singularity', 'instinct'],
   ['mesh-economy', 'mesh'],
-  ['personality', 'llmpersonality'],
   ['plurality-trap', 'plurality'],
   ['post-interface-internet', 'postinterface'],
   ['post-scarcity-technology', 'postscarcity'],
@@ -64,7 +63,6 @@ export const ESSAY_SLUG_MIGRATIONS = [
 
 /** Non-essay redirects: [source path prefix, destination]. ':path*' suffixes preserved. */
 export const EXTRA_REDIRECTS = [
-  ['/personality.md', '/llmpersonality.md'],
   ['/finance.md', '/agenticfinance.md'],
   ['/tokens.md', '/tokentax.md'],
   ['/who-buys', '/receipts'],
