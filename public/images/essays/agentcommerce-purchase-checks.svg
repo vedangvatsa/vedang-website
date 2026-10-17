@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title description">
+  <title id="title">Four checks for one purchase</title>
+  <desc id="description">The request needs stated requirements. The choice needs checked evidence. Payment needs enforced limits. Delivery needs an item that meets the request. These are proposed checks, not measured results.</desc>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#37352f">
+    <text x="40" y="52" font-size="34" font-weight="700">Four checks for one purchase</text>
+    <g>
+      <rect x="40" y="88" width="344" height="122" rx="8" fill="#fafafa" stroke="#e3e3e0"/>
+      <rect x="40" y="104" width="4" height="90" rx="2" fill="#6366f1"/>
+      <text x="64" y="134" font-size="32" font-weight="700">Request</text>
+      <text x="64" y="177" font-size="30">Needs stated</text>
+    </g>
+    <g>
+      <rect x="416" y="88" width="344" height="122" rx="8" fill="#fafafa" stroke="#e3e3e0"/>
+      <rect x="416" y="104" width="4" height="90" rx="2" fill="#6366f1"/>
+      <text x="440" y="134" font-size="32" font-weight="700">Choice</text>
+      <text x="440" y="177" font-size="30">Evidence checked</text>
+    </g>
+    <g>
+      <rect x="40" y="234" width="344" height="122" rx="8" fill="#fafafa" stroke="#e3e3e0"/>
+      <rect x="40" y="250" width="4" height="90" rx="2" fill="#6366f1"/>
+      <text x="64" y="280" font-size="32" font-weight="700">Permission</text>
+      <text x="64" y="323" font-size="30">Limits enforced</text>
+    </g>
+    <g>
+      <rect x="416" y="234" width="344" height="122" rx="8" fill="#fafafa" stroke="#e3e3e0"/>
+      <rect x="416" y="250" width="4" height="90" rx="2" fill="#6366f1"/>
+      <text x="440" y="280" font-size="32" font-weight="700">Delivery</text>
+      <text x="440" y="323" font-size="30">Item received</text>
+    </g>
+  </g>
+</svg>

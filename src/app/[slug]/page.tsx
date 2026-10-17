@@ -48,6 +48,7 @@ import { AbstractTransferComparison, AbstractTransferErrors } from '@/components
 import { ReceiptsExposureChart, ReceiptsLaborFacts, ReceiptsDemandChart } from '@/components/mdx/receipts-charts';
 import { AgentreadyLeaderboard } from '@/components/mdx/agentready-charts';
 import { PersonalityProfileExplorer } from '@/components/mdx/personality-charts';
+import { CommerceBenchmarkScores, CommerceOutcomeChecks } from '@/components/mdx/agentcommerce-charts';
 import { TokenTaxFormatChart } from '@/components/mdx/token-tax-charts';
 type Props = {
   params: Promise<{ slug: string }>;
@@ -537,6 +538,8 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               ReceiptsDemandChart,
               AgentreadyLeaderboard,
               PersonalityProfileExplorer,
+              CommerceBenchmarkScores,
+              CommerceOutcomeChecks,
               TokenTaxFormatChart,
               ResearchPaper,
               img: (props: any) => (

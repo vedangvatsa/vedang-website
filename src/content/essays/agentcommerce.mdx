@@ -1,324 +1,175 @@
 ---
-title: 'Agentic Commerce'
-summary: >-
-  When algorithms start shopping on behalf of consumers, traditional e-commerce breaks.
+title: 'When an AI Buys the Wrong Thing'
+summary: 'A valid payment can buy an unsuitable item. What shopping-agent research says about product choice, buyer control, and the cost of fixing an order.'
 date: '2026-03-24'
+updated: '2026-10-17'
 author: 'Vedang Vatsa'
-keywords: ['agentic commerce', 'AI agents', 'e-commerce', 'x402', 'UCP', 'ACP', 'MPP', 'MCP', 'A2A']
+category: 'AI and Commerce'
+keywords: ['agentic commerce', 'AI shopping agents', 'buying permission', 'payment protocols', 'consumer protection', 'shopping benchmarks']
 ---
 
-Visa, Mastercard, PayPal, OpenAI, Google, and Anthropic have all shipped products where an agent can research, compare, and buy. Six protocols are in production. Market prints for 2030-2031 run from $218B (Mordor Intelligence) to $3-5T (McKinsey). Those are not one market. 54% of US adults use AI agents. 24% trust them to make purchases.
+A washing machine that does not fit the buyer's kitchen is a bad purchase, even if the payment goes through. An assistant asked to buy one needs measurements, installation details, a delivery date, and terms for sending it back. A request such as "find a good washing machine under $800" leaves several of those decisions open. The assistant can obey the price limit and still leave a large, expensive problem at the door.
 
-<Figure src="/images/essays/agentcommerce.svg?v=8" alt="Human-to-merchant checkout versus buyer-agent-to-seller-API" width={800} height={400} wide />
+<Figure src="/images/essays/agentcommerce-purchase-checks.svg" alt="Four checks for an agent-led purchase: the buyer's requirements, product evidence, payment permission, and the item actually received" caption="A purchase needs checks before and after payment." width={800} height={400} />
 
+Agentic commerce gives software responsibility for more of this work. An assistant might search a catalog, compare products, prepare a cart, or place an order. Some services ask for approval every time. Others offer purchases under limits set earlier. Those arrangements put different decisions in the buyer's hands, and they need different tests.
 
-## What is agentic commerce?
+The case for using an agent rests on the purchase it produces and the effort it saves. Finding a suitable item faster is useful. So is refusing to buy when a required measurement is missing. A checkout button that works quickly can still leave the customer checking specifications, arranging a return, or arguing about a charge. Those hours belong in the account of whether the agent helped.
 
-Agentic commerce is when AI agents handle shopping on your behalf. You tell an agent what you want, and it finds products, compares prices across stores, checks reviews, places the order using a tokenized payment method, and tracks delivery. You never open a browser or fill out a checkout form.
+## Who approves the order
 
-In traditional e-commerce, you browse, compare, and click. In agentic commerce, you say "get me running shoes under $150, good for flat feet, delivered by Friday" and the agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout. You go from *doing the shopping* to *describing what you want*.
+A recommendation leaves the purchase with the person. An agent that prepares a cart and waits for approval takes on more work, but still asks the buyer to authorize that order. An agent with advance permission can act later, perhaps when a price falls. Calling all of these "autonomous shopping" hides how much attention each requires.
 
-You accept a job in a new city and need to relocate your family. Today, that means weeks of juggling real estate listings, moving company quotes, utility transfers, school research, and furniture shopping across dozens of websites. In an agentic world, you describe your budget, commute preferences, and kids' school requirements. The agent scans rental listings, cross-references commute times, identifies neighborhoods with the right schools, gets moving quotes, negotiates rates, schedules utility transfers, and coordinates furniture deliveries to arrive the day you move in. Weeks of browser tabs and phone calls become a few days of conversation.
-
-The shift is structural. Each prior wave of commerce technology (web storefronts in the 2000s, mobile commerce in the 2010s, social commerce in the 2020s) added a new channel. Agentic commerce removes the human from the transaction loop. The agent is a new buyer. The interaction is machine-to-machine, governed by rules written into commerce protocols.
-
-## What shipped in 2026
-
-Three things converged in 2025-2026. Large language models got good enough to parse shopping intent and make reasonable purchase decisions. Google, OpenAI, and Stripe shipped open commerce protocols so agents can talk to any merchant through a standard API. And payment infrastructure caught up: Visa, Mastercard, PayPal, Coinbase, and Stripe each built dedicated products for agent-initiated transactions, including crypto-native protocols like x402 that let machines pay machines. The adoption curve could be faster than prior platform shifts because agents traverse the same digital paths as human shoppers, riding on rails already laid by two decades of e-commerce.
-
-
-## What has already shipped
-
-Every major platform and payment network has shipped agent commerce products in the past twelve months.
-
-<Timeline>
-<TimelineItem date="April 2025" title="Mastercard Agent Pay">
-A payment framework where the buyer is a machine. Uses tokenized credentials scoped per-agent and per-merchant.
-</TimelineItem>
-<TimelineItem date="May 2025" title="Coinbase x402 Protocol">
-Revived the dormant HTTP 402 "Payment Required" status code to enable machine-to-machine stablecoin payments over standard HTTP. An agent requests a resource, gets a 402 response with payment instructions (amount, asset, wallet address), sends a cryptographically signed stablecoin transaction, and gets access. No accounts, no API keys, no subscriptions needed. Cloudflare joined as a founding member of the x402 Foundation.
-</TimelineItem>
-<TimelineItem date="May 2025" title="PayPal × Perplexity">
-Checkout directly inside AI search results. You ask Perplexity a shopping question and can buy without leaving the conversation.
-</TimelineItem>
-<TimelineItem date="September 2025" title="ChatGPT In-Chat Purchasing">
-In-chat purchasing powered by the Agentic Commerce Protocol (ACP), co-built with Stripe.
-</TimelineItem>
-<TimelineItem date="November 2025" title="Visa Trusted Agent Protocol">
-APIs for integrating payment tools into AI agent apps. Visa now blocks over 500 fraudulent agent transactions per minute.
-</TimelineItem>
-<TimelineItem date="December 2025" title="Shopify Agentic Storefronts">
-Merchants sell products inside AI conversations on ChatGPT, Google, and Microsoft Copilot. Three tools: Checkout Kit, Shopify Catalog, Universal Cart.
-</TimelineItem>
-<TimelineItem date="December 2025" title="x402 V2">
-Multi-chain support (Base, Ethereum, Solana, Polygon), wallet-based identity for reusable sessions, and automatic service discovery.
-</TimelineItem>
-<TimelineItem date="January 2026" title="Google Universal Commerce Protocol">
-Open standard co-developed with Shopify, Walmart, Target, and Etsy. Powers "Buy for me" in Google Search AI Mode and the Gemini app.
-</TimelineItem>
-<TimelineItem date="March 2026" title="Stripe + Model launch MPP">
-Machine Payments Protocol: an open standard supporting stablecoins, card payments (via Visa), and Bitcoin Lightning. Built on their new Tempo blockchain with sub-second finality. Backed by Anthropic, OpenAI, Mastercard, Shopify, and DoorDash.
-</TimelineItem>
-<TimelineItem date="March 2026" title="Coinbase Agentic Wallets">
-Wallet infrastructure built specifically for AI agents. Agents can spend, earn, and trade autonomously using x402 and stablecoins.
-</TimelineItem>
-<TimelineItem date="March 2026" title="Cloudflare Agents SDK adds payments">
-Native support for both x402 and MPP. Any developer can add agent payments to their Cloudflare Worker in a few lines of code.
-</TimelineItem>
-<TimelineItem date="March 2026" title="OpenAI pivots strategy">
-Scaled back direct in-chat checkout, moved toward app-based integrations where merchants own the final purchase step. Signals that controlling discovery matters more than owning checkout.
-</TimelineItem>
-</Timeline>
-
-<Columns>
-<Column>
-
-<Figure src="/images/essays/agentcommerce/mastercard-agentpay.webp" alt="Mastercard Agent Pay announcement" caption="Mastercard's Agent Pay launch" source="mastercard.com" sourceUrl="https://www.mastercard.com/global/en/news-and-trends/press/2025/april/mastercard-unveils-agent-pay.html" />
-
-</Column>
-<Column>
-
-<Figure src="/images/essays/agentcommerce/tobi-tweet.webp" alt="Tobi Lutke tweet on agentic commerce" caption="Shopify CEO on agents as a shopping channel" source="@tobi on X" sourceUrl="https://x.com/tobi/status/1952800271257706676" />
-
-</Column>
-</Columns>
-
-<KeyTakeaway>
-Traditional payment rails (Visa, Mastercard, PayPal) tokenize existing card networks for agents. Crypto-native protocols (x402, MPP) let agents pay each other in stablecoins over HTTP, bypassing card networks. Both approaches are live and in production. The market has not picked a winner.
-</KeyTakeaway>
-
-
-## The protocol layer
-
-The pace of protocol development is what separates this from prior hype cycles. Six interoperability standards are driving real adoption:
-
-| Protocol | Creator | Type | Payment | Status |
-| --- | --- | --- | --- | --- |
-| MCP | Anthropic | Tool integration | None (context layer) | Adopted by major AI platforms |
-| A2A | Google | Agent coordination | None (negotiation layer) | 150+ organizations |
-| AP2 | Google | Payment authorization | Cryptographic mandates | Production |
-| ACP | OpenAI + Stripe | In-chat checkout | Stripe card processing | Live in ChatGPT |
-| x402 | Coinbase | HTTP-native payments | Stablecoins (USDC) | V2 live, multi-chain |
-| MPP | Stripe + Paradigm | Multi-rail payments | Stablecoins, cards, Lightning | Launched Mar 2026 |
-
-**Model Context Protocol (MCP)**, created by Anthropic, standardizes how AI agents connect to external tools and data sources. Unlike one-off API integrations, MCP provides persistent, structured communication. An agent retains memory, reasoning, and objectives across environments. For commerce, this means a shopping agent can maintain context about your preferences, price sensitivity, and past purchases across every merchant it interacts with, rather than starting from scratch each time.
-
-**Agent-to-Agent Protocol (A2A)**, from Google, enables autonomous agents to coordinate and negotiate with each other directly, regardless of vendor or architecture. Your shopping agent communicates with a retailer's commerce agent through standardized JSON-RPC and HTTP. This supports long-running tasks (like finding the best price over several days), dynamic capability discovery (one agent learning what another can do), and multimodal collaboration. The practical result is that a buyer's agent and a seller's agent can reach agreement on price, delivery terms, and return policy in seconds, at machine speed.
-
-**Agent Payments Protocol (AP2)**, also from Google, creates cryptographically signed mandates that link user intent, shopping cart, and payment into a single auditable chain. When an agent makes a purchase, the intent ("buy this specific camera for under $800") is cryptographically bound to the transaction. This creates accountability and reduces dispute risk: if something goes wrong, the signed mandate shows exactly what was authorized.
-
-**Agentic Commerce Protocol (ACP)**, built by OpenAI and Stripe, powers in-chat purchasing in ChatGPT. It connects the conversation layer (where intent is expressed) directly to payment processing. The merchant receives a structured order through Stripe's infrastructure, and the user sees a purchase confirmation without leaving the chat.
-
-**x402 and MPP** represent the crypto-native path. x402 operates at the HTTP layer: request a resource, get a 402 status code with payment details, send a signed stablecoin transaction in the HTTP header, receive the resource. MPP is the multi-rail version: stablecoins, card payments, and Lightning through one protocol. Both are designed for machines paying machines, with no human-oriented checkout flow.
-
-**Computer use agents** (Anthropic's Claude, OpenAI's Operator) skip structured APIs. These agents control a mouse and keyboard to use existing websites built for humans, which matters where merchants have not built agent-ready APIs. The agent fills out forms, clicks buttons, and completes checkout the same way a person would, faster.
-
-<Callout type="info" title="The x402 model is different">
-In the x402 model, payment happens at the HTTP layer. An agent requests a resource, gets back a 402 status code with payment instructions (price, accepted stablecoins, wallet address), constructs a signed transaction, and sends it in an HTTP header. The server verifies on-chain, then returns the resource. No checkout flow, no cart, no account. This is closer to how machines naturally transact: request, pay, receive.
-</Callout>
-
-
-## How a transaction works
-
-A typical agentic purchase has six steps. You state what you want ("order two bags of Colombian coffee beans, same brand as last time"). The agent checks your purchase history, brand preferences, and budget. It searches multiple stores simultaneously and compares options by weighing price, shipping speed, reviews, and your past preferences.
-
-When it finds the best match, it completes checkout through tokenized payment using Visa, Mastercard, or PayPal agent protocols. Your card details are never exposed to the agent. After purchase, it tracks shipping, handles returns if needed, and updates its model of your preferences for next time.
-
-McKinsey identified three interaction models ([mckinsey.com](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentcommerce)).
-
-<Figure src="/images/essays/agentcommerce-models.svg" alt="Three McKinsey interaction models: agent to site, agent to agent, and brokered" source="McKinsey" sourceUrl="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentcommerce" width={400} height={420} />
-
-In the **agent-to-site** model, your agent talks directly to a merchant's website or API. The merchant may not even know the buyer is an AI. In the **agent-to-agent** model, your shopping agent negotiates with a retailer's commerce agent, both communicating at machine speed through structured protocols. In the **brokered** model, an intermediary agent sits between you and multiple merchants, querying dozens of stores simultaneously.
-
-Each purchase teaches the agent something. After three coffee orders, it knows your preferred roast, your price ceiling, and how fast you go through a bag. By the tenth order, it reorders before you run out. This is predictive commerce: the agent makes decisions based on patterns you never explicitly described.
-
-
-## The five layers
-
-Agentic commerce runs on five layers, each depending on the ones above and below it.
-
-<Figure src="/images/essays/agentcommerce-layers.svg" alt="Five layers of agentic commerce: AI platforms, protocols, payment rails, retail platforms, agent startups" width={400} height={500} />
-
-<ResearchPaper
-  title="The Agent Infrastructure Stack"
-  authors="Vedang Ratan Vatsa"
-  date="June 2026"
-  venue="SSRN"
-  doi="10.2139/ssrn.6874178"
-  abstract="Maps the eight-layer infrastructure stack for autonomous AI agents at production scale, from perception and orchestration to security and deployment."
-/>
-
-<Columns>
-<Column>
-
-**AI Platforms** sit at the top: OpenAI (ChatGPT), Google (Gemini), Amazon (Alexa+), Perplexity, and Microsoft (Copilot). These are the surfaces where consumers express intent. Half of all consumers already use AI for internet search, and what starts as discovery increasingly extends to checkout.
-
-**Commerce Protocols** let agents talk to stores. Five main ones: ACP (OpenAI + Stripe), UCP (Google + Shopify/Walmart/Target), MCP (Anthropic), A2A (Google agent-to-agent), and x402/MPP (Coinbase/Stripe + Model) for machine-to-machine payments. The lack of a single standard is intentional: each protocol optimizes for a different architecture.
-
-**Payment Rails** handle the money. Two competing approaches: traditional tokenized cards (Visa, Mastercard, PayPal) and crypto-native stablecoin payments (x402, MPP on Tempo/Base/Solana).
-
-</Column>
-<Column>
-
-**Commerce Platforms** power the merchant side: Shopify, BigCommerce, Commercetools, and Salesforce are retooling their backends for agent-first shopping. The transition requires exposing product catalogs, inventory, and pricing through structured APIs rather than HTML pages designed for browsers.
-
-**Agent Startups** build specialized tools: Wildcard does merchant integration protocols, Sierra handles AI customer service, Anglera manages product data for AI, Operand builds AI decision systems, and Cloudflare provides the infrastructure layer with native x402 and MPP support. Skyfire launched Agent Checkout with KYAPay, an open standard that gives AI agents verified identities and programmable payment capabilities.
-
-</Column>
-</Columns>
-
-### The Artemis Market Map
-
-The startup map shows the same layering. According to the **Agentic Commerce Market Map** by [Artemis Analytics](https://www.artemis.xyz/dashboard/agentcommerce/market-map), there are already over 173 companies operating across 14 distinct categories in the space. 
-
-<Figure src="/images/essays/agentcommerce/artemis-market-map.webp" alt="Agentic Commerce Market Map by Artemis Analytics" caption="Agentic Commerce Market Map" source="Artemis Analytics" sourceUrl="https://www.artemis.xyz/dashboard/agentcommerce/market-map" wide />
-
-The market is currently heavily weighted toward foundational infrastructure rather than consumer-facing apps:
-- **Agent Frameworks & Tooling (33 companies)**: The largest category, building the core plumbing (e.g., MCP, A2A, thirdweb, Questflow, Privy).
-- **Payment Infrastructure (25 companies)**: Establishing the new rails (e.g., Stripe, Visa, Crossmint, Reveel, Superfluid).
-- **Facilitators & Discovery (37 companies)**: Helping agents find products and execute tasks (e.g., Coinbase, PayAI, Openx402, UCP).
-- **Wallets & Account Abstraction (32 companies)**: Managing agent identity and balances (e.g., Phantom, Dynamic, ERC-4337, Rhinestone).
-- **Data & Analytics (17 companies)**: Providing on-chain and off-chain insights (e.g., Dune, Nansen, Quicknode).
-- **Identity & Trust (17 companies)**: Verifying agents and managing permissions (e.g., Mastercard, AgentProof, Cred Protocol).
-
-With only 7 companies primarily classified as "User Interfaces" (like ChatGPT and Claude), no consumer access point has won yet. The rails are being laid before consumer applications dominate.
-
-## Key numbers
-
-<StatRow>
-<Stat value="$218B" label="Retail AI market by 2031" source="Mordor Intelligence" sourceUrl="https://mordorintelligence.com" />
-<Stat value="54%" label="US adults using AI agents" source="PYMNTS, Jan 2026" sourceUrl="https://pymnts.com" />
-<Stat value="24%" label="Trust agents to buy for them" source="Forrester, Mar 2025" sourceUrl="https://forrester.com" />
-<Stat value="13%" label="Have completed an AI purchase" source="Payments Industry Intel" sourceUrl="https://paymentsindustryintelligence.com" />
-</StatRow>
-
-These figures are not the same object. Mordor counts a retail-AI market. Morgan Stanley and Bain count US agent-driven e-commerce. McKinsey counts global transaction volume that an agent might touch. They are not one market.
-
-| Firm | Figure | What it counts |
+| Arrangement | Software handles | Buyer decides |
 | --- | --- | --- |
-| [Mordor Intelligence](https://mordorintelligence.com) | $218B | Retail AI market by 2031 |
-| Morgan Stanley (2025) | $190-385B | US e-commerce via agents, 2030 |
-| Bain & Company (2025) | $300-500B | US agentic commerce, 2030 |
-| [McKinsey](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentcommerce) | $3-5T | Global transaction volume, 2030 |
+| Advice | Search and comparison | Item and checkout |
+| Approval for each order | Cart preparation and submission | Whether to approve that purchase |
+| Advance permission | Later actions within agreed limits | What may be bought, when, and at what cost |
 
-36% of consumers say they are open to AI making purchases for them ([SWAP Commerce](https://swap-commerce.com)), and 84% consider one-click checkout important ([WPFactory](https://wpfactory.com)). McKinsey projects agent-intermediated transaction volume could reach $3-5 trillion globally by 2030. During Cyber Week 2025, one in five orders involved an AI agent. Morgan Stanley estimates US e-commerce spending through agentic shoppers could reach $190-385 billion by 2030, representing 10-20% of total US e-commerce. Bain projects the US agentic commerce market at $300-500 billion by the same year.
+OpenAI's [Instant Checkout announcement](https://openai.com/index/buy-it-in-chatgpt/) described a September 2025 launch for US users buying single items from US Etsy sellers. Buyers confirmed the order, shipping, and payment details. The seller handled delivery, returns, and support. OpenAI's [shopping guidance](https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search) describes both in-chat checkout for eligible products and links to merchants. Its [Shopify guidance](https://help.openai.com/en/articles/20001241-shopping-from-shopify-merchants-in-chatgpt) directs customers to checkout on the seller's store. A product appearing in a conversation does not tell the buyer which route applies.
 
-<StatRow>
-<Stat value="$3-5T" label="Projected transaction volume by 2030" source="McKinsey" sourceUrl="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentcommerce" />
-<Stat value="29.3%" label="Compound annual growth rate" source="Mordor Intelligence" sourceUrl="https://mordorintelligence.com" />
-<Stat value="+450%" label="Dark web AI exploit discussions" source="Visa, Fall 2025" sourceUrl="https://usa.visa.com/" />
-<Stat value="+25%" label="Malicious bot transactions (global)" source="Visa, Fall 2025" sourceUrl="https://usa.visa.com/" />
-</StatRow>
+Amazon's [Alexa for Shopping announcement](https://www.aboutamazon.com/news/retail/alexa-for-shopping-ai-assistant) describes Auto Buy at a chosen price alongside actions that send a notice or add an item to a cart. A notice, a prepared cart, and a paid order require different amounts of customer involvement. Counting them together makes a service look more capable than its completed purchases establish.
 
+Advance permission also needs a period and a quantity. A limit for one coffee order says little about the amount an agent may spend on repeated orders during a month. A buyer may approve a particular seller but reject a marketplace substitute. Permission can change before the next purchase. A service needs a way to check the current instruction rather than act on an earlier conversation that the buyer has since corrected.
 
-## What changes for consumers
+These decisions affect the product itself. A person who permits automatic replacement of a familiar item may still want to approve a different brand, a used model, or a delivery surcharge. The useful permission screen exposes those choices before the agent acts. A single spending cap leaves too much of the request to interpretation.
 
-Consumer purchasing shifts from manual browsing to intent-driven delegation, where autonomous agents manage discovery, price comparison, and checkout without requiring users to navigate individual retail websites.
+## What a payment protocol checks
 
-Brand attachment weakens for commoditized consumer goods when automated agents optimize for price, ingredients, and delivery speed. Predictive replenishment systems monitor consumption cycles and execute scheduled orders automatically.
+Commerce protocols describe how programs exchange product, cart, order, and payment information. They can make a transaction easier to process and easier to inspect afterward. Their documents need to be read at the level of the function they specify.
 
-<Figure src="/images/essays/agentcommerce/meme-marketer.webp" alt="Every e-commerce marketer in 2026" caption="The marketer's new reality" />
+| System | Documented job | Separate question |
+| --- | --- | --- |
+| [Agentic Commerce Protocol](https://developers.openai.com/commerce/specs/checkout.md) | Checkout sessions and order updates | Does the item meet the buyer's needs? |
+| [Universal Commerce Protocol](https://ucp.dev/2026-08-25/specification/overview/) | Commerce functions and version matching | Do these two services support the same functions? |
+| [Agent Payments Protocol](https://ap2-protocol.org/) | Signed buying and payment permission | Do services enforce the permitted action? |
+| [x402](https://docs.cdp.coinbase.com/x402/welcome) | Payment for a digital resource or API | Who handles a physical item's delivery and return? |
 
-<Figure src="/images/essays/agentcommerce-value.svg" alt="What loses value and what gains value when the buyer is an algorithm" width={400} height={440} />
+The checkout specification for ACP makes the seller responsible for the current items, shipping options, taxes, fees, and total. It describes creating, updating, completing, and cancelling a checkout session. That matters because a price in a search result can differ from the amount due when the order is ready. An agent needs the current checkout state before it commits the buyer's money.
 
-Product pages built for human eyes matter less than structured data built for agent consumption: schema.org markup, real-time inventory feeds, machine-readable specs. Traditional SEO gives way to what Commercetools calls "Answer Engine Optimization" and "LLM Optimization" ([commercetools.com](https://commercetools.com)). Display ads and retargeting lose relevance when the buyer is an algorithm. The traditional idea of visiting Amazon for shopping or Expedia for travel gives way to a single concierge that handles shopping and travel when your intent first surfaces.
+AP2 calls its signed permission records mandates. An open mandate sets limits before the final order is known. A closed mandate records permission for a particular checkout or payment. The [UCP integration](https://ucp.dev/documentation/ucp-and-ap2/) links a payment to the agreed cart. This helps prevent permission for one order from being reused for a different order.
 
-<Callout type="info" title="B2B moves faster">
-Procurement is structured and repetitive, exactly what agents handle well. Forrester projects B2B buying will be largely agent-intermediated by 2028. Agents already do supplier sourcing, PO creation, contract verification, and vendor scoring at companies using GEP, Ivalua, and Traxtech. The next step: a buyer's procurement agent negotiates directly with a seller's sales agent and reaches agreement in seconds.
-</Callout>
+The checks happen in services, not through the presence of a signature on a screen. AP2's [security requirements](https://ap2-protocol.org/ap2/security_and_privacy_considerations/) assign checkout-binding checks to the merchant and signature and payment-limit checks to credential and payment services. A model's instruction to stay within a budget cannot substitute for those checks. The service accepting the request has to reject an action that exceeds the permission.
 
+A lost connection creates another test. The merchant may accept an order before the assistant receives the reply. Retrying the same operation with the same request key should produce one order, with the seller enforcing that behavior. A demonstration needs to check the resulting orders and charges. Showing that the assistant sent a retry key proves little about what the merchant did with it.
 
-## What changes for businesses
+x402 covers a different purchase, such as access to an API. A shopping agent might pay to obtain information before choosing a product. If that charge falls on the buyer, it belongs in the shopping bill even when the search ends without an order. Digital-resource payment does not settle the return terms of a washing machine purchased afterward.
 
-Agentic commerce restructures how products get discovered, how buying decisions are made, and how customer relationships form.
+## A partly correct recommendation can still be unusable
 
-**Product discovery and engagement.** Companies need to build agents that understand customer intent and proactively suggest products, bundles, or alternatives. Product catalogs need semantic and behavioral metadata embedded at the data layer, more than keywords on a webpage. When an agent asks "what running shoes do you have under $150 with good arch support in size 11?", the response needs to come from structured data.
+A laptop can satisfy most of a checklist and still fail the purchase. The processor may be suitable and the price acceptable, while the memory falls below a stated requirement. A score for individual requirements rewards the details the agent got right. A score for a complete request asks whether the remaining failure prevents the buyer from using the item.
 
-**Customer loyalty and personalization.** Legacy loyalty programs (points, tiers, birthday coupons) break down when the customer never visits your app. Hyperpersonalized offers triggered by inferred intent replace generic promotions. If an agent knows a customer moves every two years based on lease history, furniture retailers can time outreach to coincide with the next likely move. The challenge is building persistent customer-context layers accessible by agents, and exposing loyalty eligibility through APIs rather than through sign-in walls.
+Shopee researchers built [EComAgentBench](https://arxiv.org/abs/2606.17698v3) around needs spread across an opening request, a buyer profile, and scripted replies to questions. The inspected version contains 662 valid tasks. Agents can make up to 100 tool calls and ask up to ten questions. The test checks whether they obtain and use information before recommending a product.
 
-**Core commerce platforms.** Existing e-commerce infrastructure was built around a human clicking through pages. Agents need structured transaction endpoints where they can query inventory, check pricing, and complete checkout in a single API call. Dynamic pricing, real-time inventory awareness, and machine-readable return policies become requirements.
+Among seven tested models, Claude Opus 4.6 led the reported full-task accuracy measure at 57.1%, compared with 47.0% for GPT-5.4. A different measure, satisfaction of individual requirements, placed GPT-5.4 first at 81.0%, ahead of Opus at 76.6%. Choosing the headline measure changes which model leads.
 
-**Payments and fraud.** Authentication moves from stopping bots to enabling the right agents to transact for the right customers. Know Your Customer (KYC) standards must extend to Know Your Agent (KYA): verifying users and the agents acting on their behalf. Tokenization, dispute resolution, and settlement systems need to carry richer context about agent identity within transaction metadata.
+<CommerceBenchmarkScores />
 
-**In-store operations.** Physical retail does not get a pass. Agents need to synchronize digital and physical customer journeys: sharing context with store associates, accessing digitized store maps and inventory, and eventually using spatial computing for in-store navigation. The agent that helps you shop online should know what is available at the store nearest you and hold items for pickup.
+These runs end with a recommendation. They use constructed profiles, fixed replies, and an English-language catalog concentrated in electronics-related goods. No delivery truck arrives, and no customer has to fit the product into a kitchen. The 57.1% result describes correctness under those test rules. It cannot serve as the success rate of customers handing over their shopping.
 
-**Fulfillment and returns.** Agents can automate fulfillment decisions, negotiate return logic, and coordinate post-purchase actions. This requires agent-ready fulfillment APIs and integration with multi-carrier and last-mile logistics through modular connectors. An agent that bought the wrong size should be able to initiate a return, select a replacement, and schedule delivery without the customer filing a support ticket.
+Scoring deserves scrutiny too. An exact match to the target counts as correct without an AI judge. An alternative product can pass if the judge finds that it meets every requirement. The authors cross-checked judgments against exact matches and manually examined accepted alternatives for one model. Those checks address some grading errors without establishing perfect judging for every model. The main results table also gives point estimates rather than repeat-run variation or uncertainty intervals.
 
-A stack built for a human clicking pages will miss the customer that never loads a page.
+Princeton's [WebShop](https://arxiv.org/abs/2207.01206v4) makes a related distinction in a simulated store. Agents search, select product options, and press a simulated buy button. In its reported training comparison, further training with task rewards improved the average matching score while slightly reducing full success. That small difference does not establish that the training method generally harms performance. It shows why the partial score and the share of fully satisfied requests need separate reporting.
 
+The testing rule has a practical consequence. A buyer may accept a different color but reject the wrong size. Required conditions and preferences need separate treatment before a run. Otherwise a grader can reward several minor matches while overlooking the requirement that made the purchase worthwhile.
 
-## How money flows change
+## Missing information has a cost
 
-Agentic commerce threatens existing revenue streams, particularly advertising. Retail media networks built on ad-based models face pressure as agents bypass traditional discovery channels. If your agent picks your toothpaste based on ingredient analysis and price comparison, the toothpaste brand's display ad budget is wasted.
+An assistant cannot check a detail it never obtains. Product information can sit in a specification sheet, a seller's answer, a review, or a tool that charges for access. A request for the "best deal" leaves the agent to decide how much of that material to read and when to stop.
 
-Several new monetization models are emerging:
+McGill researchers Wadi and Ma examine that decision in [Tool-Lab](https://arxiv.org/abs/2609.28372v1). Eight models choose among coffee products while details sit behind information requests. The researchers vary the stated cost of those requests and compare a vague buying goal with a precise request for the lowest price per ounce. Under costly access and vague goals, models often inspect fewer useful details, with differences among models. Clearer instructions generally preserve more of the relevant checking.
 
-**Bundled commerce and revenue sharing.** Agents coordinate purchases across multiple brands, assembling them into coherent experiences. A honeymoon planning agent negotiates flights, hotels, excursions, and dining from separate providers. Each provider gets a share. The coordinating platform takes a service fee.
+The main cost contrasts assign $10 or $50 to an information request. These are simulated charges, not fees observed in ordinary coffee shopping. The study's choice measure uses the product's price per ounce and leaves out those lookup charges. If another lookup costs more than the saving it might uncover, stopping can make sense for the buyer. A lower unit price alone does not establish a better purchase once information costs enter the bill.
 
-**Real-time negotiation fees.** Agents negotiate on behalf of users: seat upgrades, loyalty point redemptions, bulk discounts. Platforms enabling these negotiations charge success fees per transaction.
+For a service builder, the lesson concerns the information supplied and the goal given to the agent. Put package size beside price. Give delivery and return terms a defined place in the response. Ask for the missing measurement before choosing an appliance. Then test whether the agent used the information. Retrieving a profile or a review does not establish that its contents affected the final choice.
 
-**Premium agent capabilities.** Third-party developers offer vertical AI agents (fashion stylists, travel planners, procurement specialists) through subscription plans or tiered access to advanced features.
+## The shelf still matters
 
-**Data insights.** Brands pay for anonymized, agent-filtered consumer behavior analytics: which products get considered versus rejected, price sensitivities, competitor comparison patterns. This data is more granular than anything available through traditional analytics because agents evaluate products systematically rather than through emotional browsing.
+MyCustomAI, Columbia, and Yale researchers use [ACES](https://arxiv.org/abs/2508.02630v3) to study how agents choose from a controlled store. The setting contains eight product categories with eight items in each. The authors change position, labels, prices, ratings, and review counts, and also test a text-only list of product data.
 
-**Conversational marketplaces.** AI agents evolve into full marketplaces where purchases happen through dialogue. Marketplace operators monetize through listing fees, commissions, and payment processing.
+Under default buying prompts, agents respond to position and platform labels. A sponsored label reduces selection when position and other details stay fixed; an "Overall Pick" label increases it. The effects vary by model, prompt, and interface. Product-order effects persist in the text-only setting. Removing the visual storefront does not remove the ordering of the information the agent reads.
 
-**Inter-agent protocol fees.** When agents from different platforms interact, monetization can happen through protocol-level fees for interoperability or commission sharing when joint value is created. This is analogous to interchange fees in the card network world, but applied to agent-to-agent communication.
+This gives merchants a reason to care about presentation even when software does the reading. It also limits what can be concluded about advertising. A paid placement might give an item a position it would otherwise never receive. A penalty for the sponsored label at a fixed position does not measure the total effect of buying that placement.
 
-Most agent interactions are still free, and providers have not developed clear revenue strategies.
+Model changes complicate the seller's task. ACES reports improvement on simple tasks with a clear answer, while also finding changes in which products agents favor. A seller cannot assume that a result obtained with one model continues after an update. Repeating the same shopping tasks can reveal whether visibility or selection changed before the business attributes a sales change to its prices or product descriptions.
 
+Catalog access comes earlier still. OpenAI's shopping guidance says that not every available product appears and that prices can lag behind merchant updates. A small seller benefits from an assistant's search only if the assistant can find the product. Supporting checkout through an API makes an order possible once selected. It does not guarantee consideration or a favorable rank.
 
-## The trust gap and fraud problem
+## Cheaper search can help a seller keep its price
 
-There is a 30-point gap between agent usage and purchase trust: 54% of US adults use AI agents, but only 24% trust them to buy things. Top consumer concerns: payment security (32%), privacy (26%), agent errors (18%), loss of control (17%). According to a July 2025 [Kearney US Consumer Study](https://www.kearney.com/documents/d/asset-library-291362522/agentcommerce-retail-disruption-pdf), roughly 30% of the market consists of "privacy-conscious skeptics" who demand absolute data control and assurances that agent mistakes will be financially corrected before they will adopt agentic shopping.
+[Bakos's 1997 economic model](https://doi.org/10.1287/mnsc.43.12.1676) separates the cost of learning prices from the cost of learning product features. Making prices easier to compare can increase price competition. Helping a buyer find the closest match can instead make that seller harder to replace. A buyer who finds the exact fit may have less reason to keep searching.
 
-<Figure src="/images/essays/agentcommerce-trust.svg" alt="54 percent of US adults use AI agents, 24 percent trust them to buy, 13 percent have completed an AI purchase" width={400} height={280} />
+These results depend on the model's assumptions about preferences, information, and sellers. They are not observations of today's AI assistants. They do explain why making search cheaper is insufficient grounds for predicting a lower bill. An assistant can improve product matching without creating the same pressure on prices as a tool that makes competing offers easy to compare.
 
-<Figure src="/images/essays/agentcommerce-concerns.svg" alt="Top consumer concerns: payment security 32 percent, privacy 26 percent, agent errors 18 percent, loss of control 17 percent" source="Kearney US Consumer Study, July 2025" sourceUrl="https://www.kearney.com/documents/d/asset-library-291362522/agentcommerce-retail-disruption-pdf" width={400} height={300} />
+[Ursu's hotel-ranking dissertation](https://knowledge.uchicago.edu/records/w2hvk-p7722/files/Ursu_uchicago_0330D_13283.pdf?download=1) examines field data with randomized result order. Hotels in higher positions receive more clicks and bookings in the released sample. Among clicked hotels, the analysis finds no detectable association between position and booking conversion. Because ranking affects clicking, that selected subset is not a separate randomized test of what happens after a click.
 
-<Columns>
-<Column>
+The data also exclude searches with no click and oversample bookings. Their rates cannot describe all Expedia visitors. The finding concerns human hotel searches, not AI buying, but it gives a useful reason to distinguish getting considered from getting chosen after inspection.
 
-The fraud picture is worse than the trust numbers suggest. Visa's Fall 2025 report found that the threat model has shifted from stolen credit cards to compromising AI agents themselves. Malware that alters agent preferences to steer purchases toward fraudulent merchants. Fake stores designed to trick AI shopping agents. Traditional fraud detection was not built for the speed and scale of agent-driven attacks.
+To measure an assistant's effect on competition, record the products it could reach, the products it showed, the prices offered, and the resulting orders. Keep stock and fees in the comparison. Similar defaults could send many buyers toward a few products; wider access could help overlooked sellers. Simulated choices alone cannot establish either market result.
 
-<Callout type="warning" title="Legal grey zone">
-AI agents cannot form binding contracts in most jurisdictions. [Visa's analysis](https://www.visa.co.uk/content/dam/VCOM/regional/ve/unitedkingdom/PDF/agentic-payments.pdf) notes that under GDPR and the ePrivacy Directive, agents capturing personal data via web scraping or mimicking tracking footprint cookies require explicit legal bases. Some laws also mandate direct user acceptance of terms and conditions, which leaves autonomous purchasing agents in a legal bind when they act without active confirmation.
-</Callout>
+## Accepting advice does not authorize spending
 
-</Column>
-<Column>
+Consumer research gives different answers depending on the decision people face. In [Dietvorst, Simmons, and Massey's forecasting experiments](https://doi.org/10.1037/xge0000033), seeing an imperfect algorithm perform can reduce willingness to choose it, even when it outperforms the human comparison. Participants react to observed mistakes before selecting a forecaster for later predictions.
 
-<Figure src="/images/essays/agentcommerce/meme-agent.webp" alt="Is this a great deal?" caption="The agent trust dilemma" />
+[Logg, Minson, and Moore](https://doi.org/10.1016/j.obhdp.2018.12.005) test another decision. In key experiments, people receive identical advice labeled as coming from either a person or an algorithm. They often place more weight on algorithm-labeled advice. That preference weakens when the comparison concerns their own judgment and among forecasting experts. Advice weighting and forecaster choice after errors do not form one measure of trust.
 
-</Column>
-</Columns>
+The [follow-up control experiments](https://doi.org/10.1287/mnsc.2016.2643) by Dietvorst and colleagues find greater model use when people can change a forecast, even within a narrow range. More reliance on the model improves performance in those tasks. That does not mean each manual adjustment helps. Nor does it establish that an approval button improves the quality of a shopping order.
 
-### Systemic risk
+For shopping, control has to be specific enough to use. A buyer needs to see which item, total price, delivery commitment, and return conditions they are approving. Asking for consent after burying those details in a long conversation creates a checkbox without showing how carefully the buyer checked the order. Measure the checking time and the errors that survive approval.
 
-Autonomous agents are decision-makers operating at scale. A single faulty prompt or model update can trigger cascading failures: incorrectly booked flights, overordered inventory, purchases made without proper consent. When agents are interconnected across multiple systems and protocols, minor errors can compound exponentially. The question is whether an agent makes good decisions today, and whether the system can contain and recover from failures. Can agents backtrack? Can purchases be reversed automatically?
+[De Bellis and Johar's review of autonomous shopping](https://doi.org/10.1016/j.jretai.2019.12.004) also describes reasons people may retain parts of the process. Choosing can express identity, provide enjoyment, or involve someone else. Delegating the replacement of a familiar household item need not imply wanting an agent to choose a gift. These are reasons to test permission by task, rather than make one broad claim about consumers accepting AI.
 
-### Accountability
+## Keep the survey questions attached to the percentages
 
-When an agent makes a bad purchase, who is liable? The platform that trained the model? The brand that deployed the agent? The user who set the spending limit? There is no global consensus. The EU AI Act provides partial clarity for high-risk systems, but enforcement is still evolving. In the US, fragmented regulations leave companies in a liability vacuum. Until frameworks solidify, companies are building their own guardrails: permissions layers, identity mapping, tiered trust levels, and explainable decision logs.
+Riskified's releases illustrate how easily different questions turn into an apparent adoption story. Both surveys cover people aged 18 to 64 who bought online recently, but their country coverage differs.
 
-### Data sovereignty
+| Survey | Sample | Reported answers |
+| --- | --- | --- |
+| [September-October 2025](https://www.riskified.com/press/global-study-73-of-shoppers-using-ai-in-shopping-journey-but-merchants-face-new-agentic-commerce-risks/) | 5,400 people across nine markets | 73% used AI while shopping; 13% bought after an AI referral; 70% were at least somewhat comfortable with an agent buying |
+| [Q1 2026 edition](https://www.riskified.com/press/riskified-agentic-commerce-pulse/) | 2,000 people in the US and UK | 61.5% used AI for discovery or recommendations; 55.0% were uncomfortable with AI buying for them |
 
-AI agents operate on data, and data sovereignty is increasingly a geopolitical issue. Countries like India and France enforce data localization. Europe is pushing for AI sovereignty. If an agent processes EU citizen data through a US-based API, compliance is unclear. If it is trained on global data but acts locally, the legal status is ambiguous. OpenAI has already launched a "for countries" model offering localized infrastructure and regulatory flexibility, which shows how hard it is to scale agent platforms without breaching national data protection and consumer protection laws.
+The country mix changes, and the releases do not supply complete questionnaires and matched response options. Subtracting the totals cannot establish a change in the same population's trust. The share reporting discomfort also does not establish that everyone else felt comfortable; an unreported response category may sit between those positions.
 
-Trust is contextual. What feels intuitive in one market can be unacceptable in another. For agents to earn trust, they need transparent decision trails, fail-safes, reversibility, and boundaries the user can set.
+A purchase after an AI referral can end in ordinary human checkout. It says nothing by itself about whether an agent chose the item, submitted payment, or handled delivery. Within the 2026 survey, the published totals do not reveal exactly how advice users overlap with people reluctant to delegate buying. Treating those figures as a count of autonomous orders invents information the survey does not provide.
 
+Riskified sells fraud-prevention services. Its releases provide useful descriptions of the samples and answers, but not the weighting details or individual responses needed for a deeper check. Those limits matter more than attaching a large market forecast to the percentages. Product discovery, willingness to delegate, and completed paid orders need their own records.
 
-## Competitive field
+## An attack can succeed before the payment
 
-The core question: who controls the agent? That entity controls what gets bought.
+A product listing is input to a shopping agent. An attacker who controls that listing can place instructions inside the material the agent reads, trying to make it favor an item or misuse a tool. AP2's security document includes agents themselves in the threat model. Checking payment permission does not remove the need to check the actions that produce the proposed order.
 
-- **Google**: Open standard development paired with proprietary distribution through Search and Gemini interfaces.
-- **OpenAI**: Intent capture and discovery across its conversational user base, routing purchasing requests to integrated merchant endpoints.
-- **Coinbase**: Machine-to-machine payment infrastructure utilizing USDC and the x402 protocol for micro-settlements.
-- **Shopify**: Universal merchant catalog access and headless checkout tooling integrated across third-party agent interfaces.
-- **Stripe & Paradigm**: Protocol standardization across stablecoins, credit rails, and Lightning networks.
-- **Amazon**: Fulfillment infrastructure, verified purchase histories, and catalog logistics underpinning proprietary agents.
+ETH Zurich and Invariant Labs' [AgentDojo](https://arxiv.org/abs/2406.13352v3) pairs attacker goals with user tasks in controlled tool environments. Its 629 security cases reuse 97 user tasks. The benchmark measures task completion without attacks, attacker-goal completion, and successful user-task completion without adversarial side effects under attack. An agent that completes the requested booking and also leaks information has not met that last criterion.
 
-<KeyTakeaway>
-Autonomous commerce requires verifiable delegation frameworks, cryptographic agent authorization, and clear legal liability structures between consumer wallets, payment networks, and merchant APIs.
-</KeyTakeaway>
+Low attacker success can be misleading if an agent lacks the ability to carry out either goal. Defenses need a usefulness measure too. In AgentDojo's GPT-4o tests, some defenses reduce attacks while improving ordinary task completion. The attack detector has false alarms that block valid work. Restricting tools helps when an attack needs a forbidden action, but can fail when an allowed tool is enough to cause the harm.
+
+[Whispers of Wealth](https://arxiv.org/abs/2601.22569v2) tests a much smaller AP2-style shopping prototype. Four Gemini-2.5-Flash agents process synthetic data around one basketball-shoe request. The researchers repeat the baseline, product-description attack, and credential attack ten times each. The attacker's product ranks first in all ten product-attack runs. The authors judge six to conflict clearly with the request and describe ambiguity in the others. Synthetic cross-account exposure occurs in two of ten credential-attack runs.
+
+Those are repetitions of one task, not thirty independent shoppers. The study does not break cryptographic signatures or compromise real customer accounts. Its older mandate terminology also differs from the current AP2 documentation. It supplies examples of prototype failure paths, not a fraud rate or evidence that every AP2 implementation has the same flaw.
+
+Payment services need to enforce amounts and recipients; tools need to enforce account access. Test how the service handles a buyer changing or withdrawing future permission. Attempt an inappropriate action and inspect what the service allows, including whether a defense prevents an ordinary, permitted purchase.
+
+## The customer still has a contract
+
+Electronic agents do not place every purchase outside existing law. The US [E-SIGN Act](https://www.law.cornell.edu/uscode/text/15/7001) protects certain contracts from losing effect solely because electronic agents were involved. Section 7001(h) conditions that protection on the action being legally attributable to the person bound. It does not automatically make every agent action the user's action, and subsection (b) preserves other rights and duties.
+
+Washington's [automated-transaction provision](https://app.leg.wa.gov/RCW/default.aspx?cite=1.80.130) offers a state-law example of contract formation through electronic agents. Its [error provision](https://app.leg.wa.gov/RCW/default.aspx?cite=1.80.090) provides conditional relief for a person's error when dealing with another party's agent. Conditions include lack of an opportunity to prevent or correct the error, prompt notice, and return and non-use requirements. A general right to reverse any unwanted AI purchase does not follow from that text.
+
+For covered online goods purchases from traders, [EU consumers generally have 14 days after delivery to withdraw](https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm). Exceptions include perishable or customized goods; dated travel and some digital content have different rules. The general right excludes private-seller purchases. AI disclosure duties under [Article 50](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50) address another issue and do not settle who pays for a mistaken order.
+
+These rules make the order record useful. The buyer needs the seller, the item, the approved total and terms, the instruction that authorized the purchase, and a route to support. Keep requested, ordered, and received details separate. A seller sending the wrong product and an agent ordering the wrong product can leave the buyer with the same box, but they are different failures.
+
+[Busch's consumer-law analysis](https://doi.org/10.1017/glj.2026.10188) examines the earlier moment when people set an agent's goals and permissions. It distinguishes manipulation of an agent by outside parties from manipulation by the provider operating the agent. The argument supports examining defaults, paid recommendations, and the permission screen before the first order exists. Its reform proposals do not create additional binding duties.
+
+## Count the work after checkout
+
+A useful purchase test can compare ordinary shopping, AI advice, approval for each order, and advance permission on matched tasks and spending limits. State required conditions and acceptable substitutes beforehand, and record preferences separately. First-delivery success means receiving an item that meets those rules. Checkout completion is one event on the way there.
+
+<CommerceOutcomeChecks />
+
+Keep all attempts in the accounting, including abandoned searches, failed payments, duplicate orders, and unresolved returns. A service that reports only completed orders leaves out the work spent on its failures. A service that counts every refusal as a failure misses cases where the requested purchase is impossible or unauthorized. Define those cases before running the comparison, rather than relabel an inconvenient result afterward.
+
+Record buyer-paid charges net of refunds, with checking and correction time alongside them. A refunded mistake is still a wrong first order. Record the stage of failure and the reason for a return instead of treating every refund or delivery problem as a model error. A buyer changing their mind after a suitable delivery differs from an agent ignoring an agreed requirement.
+
+Tests with a shared catalog hold product access fixed. Comparisons of actual services also need to record which sellers and products each service can reach. Repeat tasks under changed model versions and attacks, while distinguishing different tasks from reruns of the same task. [WebArena's unachievable tasks](https://arxiv.org/abs/2307.13854v4) offer one example of treating a justified stop as an outcome worth checking.
+
+The spending limit, the permission record, and the receipt all answer useful questions. The washing machine still has to fit. Before calling the agent a time-saver, count the minutes the buyer spent getting the wrong machine out of the house.
