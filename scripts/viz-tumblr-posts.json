@@ -1319,8 +1319,8 @@
     "text": "How the largest natural honey producers changed.\n\n2000-2024. Natural honey production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-10-17",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-17T16:23:45.364Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/72-r2.txt",
     "captionStyle": "concise-v2",
@@ -1335,7 +1335,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-17T16:23:41.897Z",
+    "attemptedSlot": "2026-10-17T20:00",
+    "publishedText": "How the largest natural honey producers changed.\n\n2000-2024. Natural honey production by country, measured in thousands of tonnes.",
+    "platformPostId": "830738766547353600",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/830738766547353600"
   },
   {
     "id": "viz-b2-tumblr-73",
