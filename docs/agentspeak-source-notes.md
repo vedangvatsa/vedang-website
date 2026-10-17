@@ -1,41 +1,43 @@
-# Sources and scope for the agentspeak revision
+# Sources and scope for agentspeak
 
-The revised essay uses a fictional booking example to argue for clear message meanings, explicit limits, and checkable results. It reports no benchmark of agent communication. Prices and identifiers in the examples are illustrative application fields, not observed transactions or official MCP/A2A schemas.
+## Editorial scope
 
-Sources checked on 17 October 2026.
+The original essay, retained in commit `cf79b7befea2f5ca24733d88c073b7cbec8d5d5e`, concerned how agents communicate, the protocols they use, and the possible movement from human-language messages toward structured or learned representations. The author rejected the later booking-and-permissions framing because it changed that subject.
 
-## Claim support
+This revision restores the title *When Agents Stop Speaking English* and that original scope. It covers MCP, A2A, ACP, AGNTCY, AP2, x402, earlier agent languages, domain standards, communication cost, learned representations, and human readability. Permissions appear as one consequence of the communication design, not as the essay's main argument. The weather examples illustrate message structure; they are not observations of production traffic or a measured performance comparison.
 
-| Source | Claim used in the essay |
+The source review was completed on 17 October 2026. The original essay and both original diagrams were reread from Git before this correction was drafted.
+
+## Source support
+
+| Source | Use and boundary |
 |---|---|
-| [JSON-RPC 2.0](https://www.jsonrpc.org/specification) | Request/response structure, transport independence, and request IDs used to match responses. Correlation IDs alone do not define duplicate-effect prevention. |
-| [MCP tools, 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) | Tool definitions and input schemas; tool results can contain text and structured data; optional output schemas. |
-| [A2A core concepts](https://a2a-protocol.org/latest/topics/key-concepts/) | Messages, parts, artifacts, Agent Cards, and structured JSON values. Text is not limited to English, and numerical arrays are not inherently excluded. |
-| [A2A task lifecycle](https://a2a-protocol.org/latest/topics/life-of-a-task/) | Immediate messages versus tracked tasks, requests for input, and final task states. Business completion still needs an application definition. |
-| [JSON Schema object reference](https://json-schema.org/understanding-json-schema/reference/object) | Properties, required fields, allowed types, and the distinction between an absent property and a null value. |
-| [OpenAI Structured Outputs announcement](https://openai.com/index/introducing-structured-outputs-in-the-api/) | Constraining output shape does not prevent mistakes in field values. Historical announcement, not a current model-support or performance comparison. |
-| [ISO 20022 FAQ](https://www.iso20022.org/faq) | Data Dictionary, Business Process Catalogue, and the distinction between business concepts and message syntax. No claim that all banks adopted the standard because they were forced. |
-| [AP2 v0.2 specification](https://ap2-protocol.org/ap2/specification/) | Checkout and Payment Mandates, role-specific verification, and limits of scope. Delegating mandates between shopping agents is explicitly outside this version's scope. |
-| [x402 introduction](https://docs.x402.org/introduction) | HTTP 402 payment requirements and a flow that includes verification and settlement before serving the resource. This is distinct from AP2's mandate and authority model. |
-| [FHIR R5 narrative](https://www.hl7.org/fhir/narrative.html) | Many resource types can carry human-readable narrative alongside structured data. The essay does not claim that every resource type requires a narrative. |
-| [OpenAI embeddings documentation](https://platform.openai.com/docs/guides/embeddings) | Embeddings as numerical representations used for relatedness, retrieval, and similar tasks. No measured benefit for an agent-to-agent messaging format is inferred. |
-| [Morris et al., 2023](https://arxiv.org/abs/2310.06816) | The authors report reconstructing text from embeddings under their tested conditions. The essay makes no universal recovery-rate claim. |
-| [OWASP prompt injection guidance](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | Outside content can influence model behavior. Valid JSON does not make text inside a field an authorized instruction. |
+| [MCP tools, 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) | Tool definitions, calls, text and structured results, and optional output schemas. The weather values in the essay are fictional. |
+| [JSON-RPC 2.0](https://www.jsonrpc.org/specification) | Request/response envelope, method, parameters, response IDs, and transport independence. |
+| [A2A core concepts](https://a2a-protocol.org/latest/topics/key-concepts/) | Agent Cards, content parts, messages, and artifacts. Content is not restricted to English. |
+| [A2A task lifecycle](https://a2a-protocol.org/latest/topics/life-of-a-task/) | Work tracked across updates, requests for input, and final states. |
+| [A2A bindings](https://a2a-protocol.org/latest/topics/custom-protocol-bindings/) | Standard JSON-RPC, gRPC, and HTTP+JSON/REST bindings. Binding and content representation are distinct choices. |
+| [ACP repository](https://github.com/i-am-bee/acp) | Archive date of August 27, 2025, notice that ACP joined A2A, and REST/OpenAPI design. |
+| [AGNTCY documentation](https://docs.agntcy.org/) | Directory, OASF, identity, SLIM, and observation components. No claim that the project supplies one universal content language. |
+| [AP2 v0.2](https://ap2-protocol.org/ap2/specification/) and [x402](https://docs.x402.org/introduction) | Different payment-related responsibilities. AP2 is not equated with HTTP 402. |
+| [gRPC introduction](https://grpc.io/docs/what-is-grpc/introduction/) | Service definitions and Protocol Buffers as the default encoding, with support for other formats. Binary encoding can still carry language strings. |
+| [OpenAI Structured Outputs](https://openai.com/index/introducing-structured-outputs-in-the-api/) | Schema-constrained output and the remaining possibility of wrong values. No current model-support or accuracy claim is imported. |
+| [Finin et al., 1994, UMBC repository](https://doi.org/10.13016/m2bvis-7jvt) | Historical KQML message format, message-handling protocol, and named communication acts. The repository records the original ACM publication. |
+| [JADE ACLMessage API](https://jade-project.gitlab.io/API/jade/lang/acl/ACLMessage.html) | A documented FIPA message implementation with performatives, language, ontology, and conversation fields. The original FIPA host returned an access block; the essay cites this accessible implementation documentation. |
+| [FIX Protocol](https://fixtrading.org/standards/fix-protocol/) | Trading fields and workflows distinct from transport and encoding. No unverified order-message fragment is presented as a complete FIX request. |
+| [ISO 20022 FAQ](https://www.iso20022.org/faq) | Financial data dictionary and business process catalogue, beyond message syntax alone. |
+| [FHIR R5 narrative](https://www.hl7.org/fhir/narrative.html) | Coexistence of structured data and human-readable narrative in many resource types. |
+| [JSON Schema object reference](https://json-schema.org/understanding-json-schema/reference/object) | Required properties, types, and allowed values. Validation does not establish the truth of field values. |
+| [Embeddings documentation](https://platform.openai.com/docs/guides/embeddings) | Numerical representations used for relatedness and retrieval, not a universal agent language. |
+| [HyLaT, May 2026](https://arxiv.org/html/2605.25421v1) | Methods and main results reviewed. The paper trains hybrid latent/text exchange, primarily with a shared Llama model; it also tests a heterogeneous pair with adapters. Findings are limited to the paper's settings. Generation counts are not equated with network bytes or commercial API charges. |
+| [Morris et al., 2023](https://arxiv.org/abs/2310.06816) | Reported reconstruction of text from embeddings under tested conditions. Numerical representation is not treated as a privacy guarantee. |
 
-## Corrections to the earlier essay
+## Evidence boundaries
 
-- Removed the inference from a greeting in a sample to the content of production agent traffic.
-- Removed the claim that English cannot be tested and that structured values make an agent resistant to deception.
-- Corrected the diagram that described AP2 as HTTP 402 plus a payment field.
-- Removed unsupported fixed token-size comparisons and changing payment-dashboard totals.
-- Replaced the claim that embeddings cannot travel through A2A with the distinction between carrying an array and agreeing on its meaning.
-- Removed broad legal predictions and unsupported accounts of why earlier standards succeeded or failed.
-- Replaced an invented seat-fee allowance with an explicit unknown value, followed by a separately described user approval.
+The essay makes a reasoned argument about communication design and a qualified forecast about mixed representations. It does not measure how much production agent traffic uses English, JSON, or latent channels. Examples in protocol documentation are not used as adoption evidence. No fixed token saving, universal cross-model latent language, or prediction about what courts require is asserted.
 
-## Maintenance
+The HyLaT discussion reports the authors' work, not an independent replication. The inspected methods and tables support its training requirements and scoped efficiency comparison, rather than a claim that latent exchange is always better.
 
-The MCP citation is versioned. AP2 is identified as v0.2. The A2A and other documentation links can change over time, so recheck their content before updating technical details. Protocol documentation supports the stated interface features, not measured adoption, guaranteed task success, or the truth of data supplied by a service.
+## Verification
 
-## Revision checks
-
-The production build and its TypeScript check passed. The essay has 3,574 words excluding code and figure attributes, twelve sections, three valid JSON examples, and no exact repeated prose sentences. The targeted writing audit found zero violations. All 400 available image SVGs passed XML validation. Browser checks at 1440px and 390px confirmed the title, canonical URL, three tables, both figures, image zoom, and parseable rendered JSON examples, with no page-level JavaScript errors or horizontal page overflow. The booking example explicitly requires approval of a specific offer before a separate purchase operation.
+The revised essay has 3,580 words excluding code and figure attributes, thirteen sections, three tables, and three valid JSON examples. The example checks verify the MCP request/response identifiers, weather value and unit, and the A2A content parts. The writing audit found zero listed violations and no exact repeated prose sentences. The full production build and its TypeScript check passed. Browser checks at desktop and mobile widths passed for the restored title, metadata, canonical URL, rendered JSON, both diagrams, image zoom, and absence of page-level JavaScript errors or horizontal page overflow. All 400 available SVGs passed XML validation.

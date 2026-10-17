@@ -1228,212 +1228,229 @@ The next useful dataset is a merge of occupation-level hiring, household consump
 
 ---
 
-## How AI Agents Should Communicate
+## When Agents Stop Speaking English
 URL: https://veda.ng/agentspeak
-Summary: Clear messages need more than a valid format. How agents can share goals, exact values, permissions, and results without changing what the user asked for.
+Summary: How agents exchange text, data, and tool calls through MCP, A2A, and related protocols, and what communication beyond human language could look like.
 
-A traveller asks for an aisle seat "if it is cheap." The price limit is still open. If a booking agent turns that phrase into permission to spend another $40, it has added a decision the traveller never made. Putting the request in JSON can make the number easy to read and check, but cannot establish permission to spend it. When work passes between agents, the user's meaning and limits must survive the handoff. The receiver needs clear values, valid permissions, and a way to check the result.
+The [Model Context Protocol (MCP) tool specification](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) includes a weather reply written as a sentence. It also describes returning weather values in named fields. Both fit the protocol. A language model can read the sentence, while another program can use the fields without first extracting the temperature from prose. That choice raises a question about agents talking to other agents: how much of the exchange needs to be expressed in human language? The protocols already support several answers. The harder work is deciding which information belongs in sentences, which belongs in agreed data fields, and whether some exchanges can use representations that people do not read directly.
 
-![A handoff needs to preserve the goal, agreed values, permission to act, and evidence of the result. These responsibilities can use text and structured data together.](/images/essays/agentspeak-parts.svg)
+![Agent communication can use natural-language messages, structured fields and tool calls, or learned numerical representations. A system can combine these forms.](/images/essays/agentspeak-parts.svg)
 
-## 1. A message has a format and a meaning
+## 1. English can sit inside a machine protocol
 
-JSON is a text format for named values, lists, numbers, and other data. It can contain an English sentence, a Spanish sentence, a price, or a list of coordinates. A message can therefore be both JSON and ordinary language. The braces around a sentence do not change how much interpretation that sentence requires.
+An agent can send a JSON message whose main content is an English paragraph. JSON provides the outer structure; the paragraph supplies the request, answer, or explanation. The same format can carry dates, identifiers, numerical results, or text in another language. Using JSON therefore does not, by itself, mean that agents have stopped communicating in prose.
 
-An application also needs rules for sending and receiving messages. HTTP carries requests and replies between web systems. [JSON-RPC](https://www.jsonrpc.org/specification) defines a request with a method name, parameters, and an optional identifier, along with rules for responses and errors. It can operate over different transports. Those rules help software connect a response to a request; they do not define what a booking service means by "refundable."
+The distinction matters because several separate choices often get called a protocol. HTTP carries web requests and replies. JSON is a way to encode data. [JSON-RPC](https://www.jsonrpc.org/specification) defines how to name a remote operation, supply its parameters, and match a reply to a request. An application then decides what the operation and its contents mean. An API, or application programming interface, defines how one program can request data or actions from another.
 
-The Agent2Agent (A2A) protocol describes how an agent sends work to another system and receives updates. The Model Context Protocol (MCP) describes how an application finds and calls tools. The application must still define the work: which flight, which traveller, which price limit, and which actions the user permits.
+| Part of the exchange | Question it answers | Examples |
+|---|---|---|
+| Connection | How does information reach the other system? | HTTP, streaming connections |
+| Message structure | How are requests, replies, and errors arranged? | JSON-RPC, A2A messages |
+| Content | What information is being exchanged? | A sentence, an offer, a file, a vector |
+| Shared meaning | How should the receiver interpret that content? | Units, schemas, domain definitions, model agreements |
 
-| Question | What must be agreed |
-|---|---|
-| How does the message arrive? | Connection and request rules |
-| Can the receiver read its structure? | Format, field names, and value types |
-| Do both sides mean the same thing? | Units, definitions, identifiers, and business rules |
-| May the requested action happen? | Identity, permissions, and approved limits |
-| What counts as completion? | Expected result and a way to check it |
+In this essay, moving beyond English means reducing the need to turn known information into free-form sentences at every step. A price can remain a price field as it passes from a catalogue to a comparison tool. A task can report its status through an agreed value. An explanation can remain text when another model or a person needs to interpret it.
 
-These agreements can fail separately. A request can reach the correct address and contain valid JSON, yet refer to the wrong passenger. It can describe the correct flight but lack permission to buy it. A reply can arrive successfully while reporting that the booking failed. Treating all of these as one question about "speaking English" hides the checks an application actually needs.
+Some machine messages will still contain English words as field names. That does not make them equivalent to conversation. A program reading `temperature_c` follows a defined field contract. A model reading "it feels warmer than yesterday" must infer what the sentence means in context. The two forms ask different things of the receiver.
 
-## 2. What MCP and A2A provide
+## 2. MCP connects models and applications to tools
 
-The [Model Context Protocol's tool specification](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) describes how a server exposes named tools. A tool is a function an application can call, such as a flight search. Its input schema defines rules for the values it accepts. The client, the program making the request, can list the server's tools and request a call. The server and application still need to enforce their access rules.
+The Model Context Protocol, or MCP, gives applications a common way to work with tools and other resources supplied by servers. A tool is a callable function, such as a database lookup or a weather search. Its description helps a model decide when to use it; its input schema defines the values the function accepts.
 
-MCP tool results can contain text, structured data, and other content. The cited specification defines a `structuredContent` field and allows an output schema. It also describes returning text alongside structured results for compatibility. A tool description can explain when the tool is useful, while its arguments carry exact values. The protocol gives both forms a place.
-
-[A2A's content model](https://a2a-protocol.org/latest/topics/key-concepts/) describes messages made of parts that can carry text, files, or structured data. It also defines tasks and artifacts. An artifact is an output, such as a document or a data object. An Agent Card describes the system's skills, address, and requirements for identifying the caller. The client does not need access to that system's internal model or tools to request work from it.
-
-A booking application might use MCP to call its own flight-search tool and A2A to ask an outside travel service for options. It might also use a service's own application programming interface, or API, without either protocol. An API lets one program request data or actions from another. The choice depends on the functions and task handling the application needs.
-
-![MCP covers tools and their results; A2A covers messages and tasks; JSON Schema checks data shape; AP2 carries payment authority; x402 handles payment requirements for resources over HTTP.](/images/essays/agentspeak-stack.svg)
-
-## 3. Field names need shared definitions
-
-The field `price` looks precise because it holds a number. Its meaning remains incomplete until both parties agree on the currency, quantity, and charges included. A price per passenger differs from a total for two passengers. A base fare differs from the amount charged after taxes and seat fees. A correct number in the wrong category can produce the wrong purchase.
-
-The field `refundable` has a similar problem. It may refer to cash returned to the original payment method, a travel credit, or a refund after a cancellation fee. It may apply before departure but not afterward. Reducing those terms to `true` can remove the very distinction that matters to the traveller.
-
-| Field | Meaning that the application must define |
-|---|---|
-| Price | Currency, quantity, included charges, and whether the value is a limit or a quote |
-| Refund | Payment method, deadline, fees, and which parts of the purchase qualify |
-| Departure time | Date, time zone, and the location the time refers to |
-| Availability | Whether an option was found, held temporarily, or confirmed |
-| Passenger reference | Which traveller record the identifier names and who issued it |
-
-[JSON Schema](https://json-schema.org/understanding-json-schema/reference/object) can require fields, restrict types, and define allowed values. A schema can reject a missing currency or a text string where an amount must be numeric. Those checks become useful because someone has already defined the fields. A validator cannot infer an airline's refund terms from the name `refundable`.
-
-Shared meaning takes work beyond agent software. [ISO 20022](https://www.iso20022.org/faq) maintains a financial data dictionary and business process catalogue, as well as a method for defining messages. Its documentation distinguishes the business concepts from the syntax used to encode them. That is a more useful precedent than the idea that one file format can make every seller's terminology agree.
-
-Applications also need a way to change these definitions. A later version might change a price from a base fare to an all-in total. Keeping the old field name would let an older client read the number without noticing the changed meaning. A version change must therefore describe which definitions changed and how older clients should respond. An explicit rejection is better than quietly treating unfamiliar terms as familiar ones.
-
-## 4. Unknown values should remain unknown
-
-The booking request can become more useful before every question has an answer. The agent can record the route, dates, and confirmed budget while leaving the seat-fee limit open. It can search for options, then ask about the unresolved preference before making a purchase that depends on it.
-
-The JSON below shows the budget and seat fields of a fictional booking request. Assume the traveller has set a total budget of USD 1,200, including required charges, but has not said how much extra an aisle seat is worth. Amounts in this example use US cents. The application's `request_id` links its messages about the trip.
+The client, meaning the application making the request, can ask a server for its available tools and call one by name. The function does not need an English instruction each time if its arguments already specify the work. A server exposing an illustrative `get_weather` tool with a `location` argument could receive this call:
 
 ```json
 {
-  "request_id": "trip-example-17",
-  "operation": "search_options",
-  "max_total": {
-    "currency": "USD",
-    "amount_minor": 120000
-  },
-  "seat_preference": "aisle",
-  "max_extra_for_seat": null,
-  "purchase_authorization_ref": null
-}
-```
-
-Here, `null` means the application has no agreed value. It does not mean zero, unlimited spending, or permission to choose. [JSON Schema distinguishes a null value from a missing property](https://json-schema.org/understanding-json-schema/reference/object#required). The application must decide what each case means and which actions can proceed with missing information.
-
-If the traveller later approves up to USD 40 for the seat, the agent can record 4,000 cents as the extra-seat limit. The overall USD 1,200 cap stays in place. A USD 1,180 fare plus a USD 35 seat fee would still fail the total-budget check. Checking the two limits separately catches a mistake that a single "under budget" label could hide.
-
-The system should also retain where each value came from. A user-supplied limit, a seller's quoted price, a saved preference, and a model's estimate have different standing. A guessed value must not silently become an approved constraint in the next message. The same rule applies when one agent summarizes another agent's output: unresolved questions need to survive the summary.
-
-## 5. A valid structure can still contain a wrong answer
-
-Some model APIs can constrain generated output to a supplied schema. [OpenAI's Structured Outputs announcement](https://openai.com/index/introducing-structured-outputs-in-the-api/) explicitly notes that mistakes can still occur within the values of an otherwise structured response. The system may produce an allowed date that the user never requested or a correctly typed price copied from the wrong offer.
-
-The application therefore needs several kinds of checks. It can first check the message shape, then confirm the named offer, recompute the total, compare it with the budget, and verify the user's permission. These checks use different evidence. A schema describes the permitted shape; an offer record supplies the seller's terms; an approval record supplies the user's limits.
-
-Missing information should produce a clear response. In the booking example, the receiver can state which field is unresolved and ask a question:
-
-```json
-{
-  "request_id": "trip-example-17",
-  "status": "needs_clarification",
-  "missing_fields": ["max_extra_for_seat"],
-  "question": "What is the most you want to pay for an aisle seat within the total trip budget?"
-}
-```
-
-The status and field name let software decide what to do next. The question gives the person enough context to answer. Turning the question into an unexplained error code would make the exchange harder to use without resolving the missing decision.
-
-The receiver also needs to distinguish data from instructions. A seller's description field might contain text telling an agent to ignore its budget. That text remains untrusted even when it sits inside valid JSON. [OWASP's guidance on prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) describes this problem with outside content. Format validation helps identify what kind of value arrived, but the application must keep outside descriptions from changing the user's approved rules.
-
-## 6. Permission must travel with the task
-
-A request saying "I am acting for Alice" makes a claim about identity. The receiver needs evidence for that claim and for the requested action. Knowing which account sent a message does not by itself establish that the account may spend money, change a booking, or pass that authority to another service.
-
-The booking application's search request contains no purchase authorization. An agent may collect offers under its search permissions, but the purchase service must check the authority for a purchase separately. Flipping a field from `null` to `approved` cannot create that authority. The reference must lead to a valid approval with the relevant user, operation, limits, and lifetime.
-
-The [Agent Payments Protocol, AP2 v0.2](https://ap2-protocol.org/ap2/specification/), uses signed records of permission called checkout and payment mandates. The checkout mandate concerns what may be purchased; the linked payment mandate concerns payment for that checkout. The specification assigns verification duties to the parties involved. It leaves the exact commerce APIs outside its scope. It also leaves the transfer of mandates between shopping agents outside the current specification.
-
-AP2 and [x402](https://docs.x402.org/introduction) cover different concerns. x402 uses HTTP `402 Payment Required` and payment requirements to support paying for access to a resource. Its documented flow includes payment verification and settlement. AP2 concerns evidence of authority for checkout and payment. An application can combine them, but receiving a 402 response does not establish that a user authorized the requested expense.
-
-A signature ties content to a signing key. The receiver still has to verify the signer, the allowed action, the purchase covered, and any time or spending limits. A valid signature does not prove that the user saw an accurate explanation of what they signed. The approval screen and the record used for execution need to describe the same terms.
-
-## 7. A handoff needs a clear state and a checkable result
-
-Work can take longer than one request. A travel service may acknowledge a search, ask for a passenger detail, return offers, and later complete a booking. [A2A's task lifecycle](https://a2a-protocol.org/latest/topics/life-of-a-task/) supports tracked work, requests for further input, and final states such as completion, failure, or cancellation. These states let clients follow progress without treating every message as a final answer.
-
-The application must still define what completion means. Finishing a search is different from holding a seat, charging a card, or issuing a ticket. A caller that asked for options should not receive a purchase as an unexpected side effect. A caller that asked for a ticket needs evidence of the ticket, not a summary saying that the agent intended to book it.
-
-After the traveller approves a specific offer, the application can make a separate purchase request under that approval. This result gives the purchase its own operation reference and links it to the original trip request:
-
-```json
-{
-  "request_id": "trip-example-17",
-  "status": "booking_confirmed",
-  "operation_id": "purchase-example-1",
-  "booking_reference": "EXAMPLE-BOOKING-42",
-  "offer_reference": "EXAMPLE-OFFER-9",
-  "authorization_reference": "EXAMPLE-APPROVAL-3",
-  "charged_total": {
-    "currency": "USD",
-    "amount_minor": 113500
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "tools/call",
+  "params": {
+    "name": "get_weather",
+    "arguments": { "location": "Paris" }
   }
 }
 ```
 
-The charged total here is USD 1,135. These fields are claims until the caller checks them against the booking and payment records. The references make that check possible. They also connect the outcome to the offer and approval, rather than leaving the caller to infer the link from similar wording in a conversation.
+The name of the tool and the city carry the request. The application does not need to compose "Please look up the current weather in Paris" and then ask another program to interpret that sentence. The model may still use language when choosing the tool, combining its result with other information, or answering the user.
 
-Failures need equally clear handling. A timeout after a purchase request leaves the caller unsure whether the server acted. Repeating the request might create a second booking. An operation key that the service uses to recognize retries can prevent repeated effects under a defined policy. The request identifier in JSON-RPC matches a response to a request; it does not by itself provide that guarantee.
+MCP also supports structured tool results. The following illustrative reply combines a readable sentence with values that code can use directly:
 
-Cancellation has similar limits. Asking an agent to stop cannot, by itself, undo a charge or a ticket already issued. The application needs to report which actions finished, which remain pending, and what follow-up is possible. A single success-or-failure label is too coarse when parts of the work have already changed an outside system.
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "content": [
+      { "type": "text", "text": "The temperature in Paris is 22 degrees Celsius." }
+    ],
+    "structuredContent": {
+      "location": "Paris",
+      "temperature": 22,
+      "unit": "C"
+    }
+  }
+}
+```
 
-## 8. Natural language still carries useful information
+The temperature is fictional. The example shows a representation choice, not a measured advantage. A charting function can read the number and unit, while a language model can use the sentence. MCP's cited tool specification also allows an output schema, so the client can check the shape of structured results. The protocol supports this mix rather than requiring every response to become a conversation.
 
-People often begin with goals they cannot fully specify as fields. "Find a flight that lets me arrive rested" may involve travel time, layovers, departure hours, mobility needs, and personal preferences. A fixed form can omit a relevant concern before either the person or the agent notices that it matters. Conversation gives them a way to discover and explain those constraints.
+## 3. A2A connects independently built agents
 
-Text also helps when a task cannot proceed. An error code can identify a missing field, but a sentence can explain why the value matters and which alternatives exist. A useful response can include a status code, the disputed value, a reference to the relevant terms, and a short explanation. Each part serves a different reader or decision.
+Agent2Agent, or A2A, concerns exchanges with another agent system. The remote system may choose its own tools and methods. The caller needs an interface for requesting work and receiving results, without access to that system's internal model or implementation.
 
-Healthcare standards offer a practical example of combining forms. [HL7 FHIR](https://www.hl7.org/fhir/narrative.html) allows many resource types to include a human-readable narrative alongside structured data. Its rules address the information a person needs to understand the resource. The narrative may contain relevant information beyond the structured fields. A program that reads only the fields can miss that content.
+[A2A's core concepts](https://a2a-protocol.org/latest/topics/key-concepts/) include Agent Cards, messages, tasks, and artifacts. An Agent Card describes a system's skills, address, and access requirements. A message contains parts that can hold text, files, or structured data. An artifact is an output, such as a document or a data object. These structures allow more than a plain chat transcript.
 
-The two forms also need to agree. If a purchase summary says the fare is fully refundable while the attached terms allow only credit, the summary has changed the offer's meaning. Applications should derive routine summaries from the same values they act on and flag any conflict between text and fields. A model's explanation should not override an approved amount or a verified status merely because it sounds more plausible.
+The content parts of a hypothetical message could combine a request with machine-readable inputs. Only the parts are shown here; a complete message also includes the fields required by its protocol version.
 
-This division of work allows people to speak naturally while software handles exact values. It also permits multilingual use. Nothing about a text field makes English mandatory, and changing the language of the user's request need not change the meaning of a currency code or an order identifier.
+```json
+[
+  { "text": "Compare the forecasts for these cities." },
+  {
+    "data": {
+      "cities": ["Paris", "Lyon"],
+      "temperature_unit": "C"
+    },
+    "mediaType": "application/json"
+  }
+]
+```
 
-## 9. Vectors require another kind of agreement
+The text states the open-ended job. The fields specify the cities and unit. The receiving agent can return a written comparison, a structured table, or both. It can also ask for more information if the requested comparison needs a date or another missing input.
 
-An embedding is a list of numbers used to represent information for a particular model or task. [Embedding documentation](https://platform.openai.com/docs/guides/embeddings) describes uses such as finding related text, grouping similar items, and retrieving relevant material. These functions differ from stating an exact price limit or granting permission to buy a ticket.
+[A2A's task model](https://a2a-protocol.org/latest/topics/life-of-a-task/) supports work that continues beyond one reply. A task can report progress, require more input, or reach a final state. This separates communication about the work from the content produced by it. A large file, a partial result, and a final status do not need to be packed into one paragraph.
 
-Agents can exchange arrays of numbers if their interfaces allow it. A2A's structured data content can carry JSON values, so the format does not inherently exclude vectors. Both sides need to agree on the model version, the expected number of values, and the operations tested with those values. Equal array lengths do not establish that two models assign the same meaning to the coordinates.
+The protocol gives agents a shared procedure for exchanging work. It does not prescribe one language for every task. A research agent may need a detailed explanation from another researcher; a scheduling agent may need a list of available time slots. The appropriate content depends on the receiver and the next operation.
 
-A vector may help find offers similar to a user's description. The application still needs exact fields when checking dates, amounts, identifiers, and permission. Similarity to a request is not the same test as compliance with a budget. A developer claiming that a learned representation preserves those constraints needs to demonstrate that behavior on the intended tasks.
+## 4. The surrounding protocols do different jobs
 
-Unreadability also gives no privacy guarantee. [Morris and colleagues](https://arxiv.org/abs/2310.06816) showed that text could be reconstructed from embeddings in the settings they tested. A person being unable to interpret the coordinates by eye does not make those coordinates encrypted or anonymous. Systems should decide what information to exchange based on its use and sensitivity, rather than treating a numerical form as protection in itself.
+Other projects address discovery, identity, or payment messages. These functions can be combined with general-purpose tool and task protocols.
 
-## 10. Cost depends on the whole exchange
-
-A model processes text in tokens, which can represent words, parts of words, or punctuation. A long explanation can sometimes become a short object. An object can also repeat long field names, carry extra metadata, and require a lengthy schema in the model's input. To compare costs, count the actual input with the model's tokenizer, the software that splits text into tokens, and account for any provider caching.
-
-Network size and model input are different quantities. Compressing JSON for transport can reduce bytes sent over a connection. It does not necessarily reduce the tokens supplied to a model after the application reads the message. Likewise, replacing a paragraph with an identifier saves space only if the receiver can retrieve the intended record when needed.
-
-The comparison should include setup, tool descriptions, model calls, retries, and recovery from errors. A shorter message that creates another clarification round may cost more overall. A longer message that prevents a wrong purchase may be worth its extra cost.
-
-For a fair test, both message designs should carry the same information and serve the same tasks. Record correct completions, unauthorized actions, latency, and total cost, including failed attempts. Cost per correct completion should count the cost of failures too. Comparing a detailed paragraph with an object that omits its conditions would measure lost information along with any saving.
-
-## 11. Keep records that explain what happened
-
-An audit trail needs records of the exchange, including the request the system received, the version of the fields it used, the approval it checked, the action it sent, and the reply it received. Shared identifiers can connect these records across systems. A later reader can then trace a charge back to an approved offer instead of relying on a narrative written after the event.
-
-Human-readable views should come from those records. A support worker may need the amount, booking reference, approval time, and failure reason rather than a screen of raw JSON. A developer may need the exact request and response. Both views can refer to the same events. The application should show where a value came from and distinguish an observed result from a model's explanation of it.
-
-Keeping evidence does not require keeping every secret or every piece of customer information. Logs need access rules and a retention policy suited to their purpose. Payment credentials, for example, should not become routine log content simply because the system recorded a tool call. Observable actions and returned data are also different from a model's private internal processing; one cannot be treated as a complete account of the other.
-
-Records also need to identify the system that reported each event. A planner's "purchase complete" message and a merchant's booking confirmation provide different evidence. Linking both to the same request helps a reviewer locate an error in execution, in a handoff, or in the final summary.
-
-## 12. Test what the receiving system will do
-
-A useful test suite should cover requests that look ordinary but differ in meaning. Some should pass the schema and fail the business rules. Others should be valid requests that the caller lacks permission to make. Testing these cases separately helps identify which part of the application needs repair.
-
-| Test case | Expected response from the application |
+| Project or specification | Main role in the exchange |
 |---|---|
-| A price has no currency | Ask for the currency or reject the incomplete request |
-| The seat-fee limit is unknown | Keep it unresolved; do not invent spending permission |
-| Seat fee fits its limit but total exceeds the trip budget | Reject the offer under the total-budget rule |
-| A recognized account lacks purchase permission | Permit only actions within its actual permissions |
-| An offer expires before purchase | Recheck the offer and any affected approval |
-| A purchase reply times out | Check the operation's status before risking a duplicate |
-| A text summary contradicts the approved terms | Report the conflict rather than treating the summary as authority |
-| A message uses an unsupported version | Reject it clearly or use an agreed conversion |
+| MCP | Access to tools and resources, including typed tool calls |
+| A2A | Messages, tasks, and results exchanged with remote agent systems |
+| ACP (BeeAI) | An earlier REST-based agent protocol that joined A2A |
+| AGNTCY | Components for discovery, identity, messaging, and observation |
+| AP2 | Signed checkout and payment records used to establish authority |
+| x402 | Payment requirements and payment handling for HTTP resources |
 
-Independent implementations provide a further test. Two teams should be able to read the same definitions and agree on which requests are valid and what each outcome means. A disagreement may reveal a missing definition or a bug. Any agreed interpretation needs to appear in the shared rules so that another team can reproduce it. Examples help, but error cases and version changes need documentation as well.
+The BeeAI project's [Agent Communication Protocol repository](https://github.com/i-am-bee/acp) describes messages containing different media, runs, sessions, and a REST API defined through OpenAPI. It was archived on August 27, 2025, and its notice says ACP is now part of A2A. Combining protocol work does not, by itself, give every application the same data definitions.
 
-This gives agent communication a practical standard. Before an action, the receiver needs the agreed terms and permission to act on them. Afterward, the caller needs a result it can check. Plain language, structured fields, and other representations can all contribute, provided the exchange preserves those conditions when the task leaves one system and enters another.
+[AGNTCY](https://docs.agntcy.org/) is a collection of components. Its documentation includes an agent directory, the Open Agentic Schema Framework (OASF) for describing capabilities, identity services, and Secure Low-Latency Interactive Messaging (SLIM). These help systems find and connect to one another. They do not replace the application-level decision about how to describe a flight, a document, or a scientific result.
+
+The [Agent Payments Protocol, AP2 v0.2](https://ap2-protocol.org/ap2/specification/), defines checkout and payment mandates and associated verification. [x402](https://docs.x402.org/introduction) uses HTTP `402 Payment Required` and payment requirements to support paid access to resources. The two can be combined, but AP2 is not another name for an HTTP 402 response. Payment information is one specialized kind of agent exchange, rather than the model for every agent conversation.
+
+![MCP, A2A, ACP, AGNTCY, AP2, and x402 serve different roles in connecting agents, exchanging tasks, discovering services, and handling payments.](/images/essays/agentspeak-stack.svg)
+
+## 5. The network format does not choose the language
+
+A2A's documentation lists [JSON-RPC, gRPC, and HTTP+JSON/REST bindings](https://a2a-protocol.org/latest/topics/custom-protocol-bindings/). A binding specifies how the protocol's operations and data appear through a particular interface. The underlying task and content can retain their meaning across those interfaces.
+
+[gRPC](https://grpc.io/docs/what-is-grpc/introduction/) commonly uses Protocol Buffers to define services and messages. It can generate client and server code from those definitions. A binary message can contain a plain-language string, just as a JSON object can. Binary encoding changes how the information is represented on the connection; it does not automatically remove natural language from the content.
+
+This gives three questions that need different answers. How are the bytes sent? How is the message structured? How does the receiver understand the content? Improving one layer may help speed or reliability without changing the others. A faster transport can still carry a long English explanation between two models.
+
+The same point applies to streaming. Sending an answer in smaller pieces changes when the receiver gets it. Those pieces may contain text, data, or files. A stream of words remains a language exchange. A stream of typed status updates can support a different processing path, with code responding to events as they arrive.
+
+## 6. Why agents still use human language
+
+Language models already accept text and produce text. A system that gives one model's answer to another can use those interfaces directly. Developers do not have to define a separate vocabulary for every open-ended task before the models can exchange useful information.
+
+That flexibility matters when the job changes during the conversation. An agent asked to compare research papers may discover that the studies use different definitions of success. A paragraph can explain the difference before anyone has designed a field for it. Forcing the whole discussion into a small fixed schema too early can discard information the next agent needs.
+
+Tool use already shows how the forms can work together. A model can read a tool's description, choose it in response to a user's request, and supply structured arguments. The application then calls the tool and returns its result. Natural language helps choose and interpret an operation; the operation itself can use exact values.
+
+Schema-constrained generation extends this arrangement. [OpenAI's Structured Outputs announcement](https://openai.com/index/introducing-structured-outputs-in-the-api/) describes constraining generated output to a supplied JSON Schema. The same announcement notes that values can still be wrong. A structured response reduces some formatting problems, while the application still needs to check whether the response answers the intended question.
+
+English is also only one possible language at this level. A person can ask a question in another language, and text messages can carry that language. The more useful distinction is between free-form language that a model interprets and fields that a program can process under defined rules.
+
+## 7. Earlier agent languages faced the same problem
+
+Agent communication did not begin with language models. In [their 1994 KQML paper](https://doi.org/10.13016/m2bvis-7jvt), Tim Finin and colleagues described both a message format and a message-handling protocol for sharing information among agents. The design used named communication acts, giving software a way to distinguish different kinds of exchange.
+
+FIPA's Agent Communication Language makes a similar separation between the act and its content. The [JADE ACLMessage API](https://jade-project.gitlab.io/API/jade/lang/acl/ACLMessage.html), an implementation of FIPA message structure, exposes acts such as `REQUEST`, `INFORM`, and `REFUSE`. It also includes fields for the content language, ontology, sender, receiver, and conversation identifier. An ontology supplies an agreed set of concepts and relationships for interpreting the content.
+
+Those distinctions remain useful. Requesting a price is different from reporting a price. A reply belongs to a particular exchange. The receiver needs to know which vocabulary the sender uses. A transport connection alone supplies none of that meaning.
+
+Language models offer another way to handle some of the interpretation. A receiver can work with an unfamiliar description instead of requiring every term to have been encoded in a formal vocabulary. That makes the interface more flexible, but its interpretation can be mistaken. The older requirement for shared meaning returns wherever an application needs exact behaviour.
+
+The history therefore suggests a practical limit to format changes. Replacing an older message syntax with JSON can improve tooling and ease of use. It does not remove the work of defining a domain. The general messaging rules and the meaning of the content remain separate parts of the design.
+
+## 8. Whole industries already communicate through fields
+
+The [FIX Protocol](https://fixtrading.org/standards/fix-protocol/) defines trading messages, fields, and workflows for orders, executions, and market data. Its documentation separates those business definitions from transport and encoding. The same business message can use tag-value, binary, or JSON representations without changing its intended meaning.
+
+That is a useful model for routine agent exchanges. An order does not need to be rewritten as a fresh explanation every time it crosses a system boundary if both sides already understand its fields. The shared definitions, not the absence of prose alone, make that possible.
+
+[ISO 20022](https://www.iso20022.org/faq) likewise maintains a financial data dictionary and business process catalogue. It supplies a method for developing messages as well as the definitions used in them. Calling it an XML format misses much of the work that makes the messages usable across institutions.
+
+Healthcare shows why structured communication need not eliminate text. [HL7 FHIR](https://www.hl7.org/fhir/narrative.html) allows many resource types to contain a human-readable narrative alongside structured data. That narrative may carry relevant information beyond the fields. The receiving system needs to know which parts it can process automatically and which parts still require interpretation.
+
+The same split can apply to agents. A service can return an exact observation together with a note about missing context. An analyst agent may need both. A charting function may use only the numerical values. Moving beyond conversational messages is most useful when it follows the needs of those receivers, rather than treating every sentence as waste.
+
+## 9. Shared schemas make direct exchange possible
+
+The field `price` is not enough to establish whether a value is per item, per passenger, or for the entire order. It also needs a currency and a definition of which charges are included. The word `refundable` can hide differences between cash, credit, fees, and deadlines. Agents can exchange those labels perfectly while interpreting them differently.
+
+[JSON Schema](https://json-schema.org/understanding-json-schema/reference/object) can require properties and restrict their types and allowed values. It gives software a way to reject a malformed object or a missing required field. Domain definitions supply the next layer: what those fields refer to and how they fit together.
+
+A useful exchange also needs to distinguish observations, estimates, and unknowns. A missing delivery date should not silently become tomorrow's date when a model summarizes a response. A system can preserve an explicit unknown or attach the source of an estimate. These choices make the data easier to reuse without repeatedly asking another model to reconstruct its meaning from a paragraph.
+
+Versions matter as these definitions change. If a supplier changes a field from base price to total price, an older receiver may still read the number successfully and use it incorrectly. The parties need a way to identify the version and agree on any conversion. This is part of communication, even when the message contains no natural-language sentence.
+
+Open, stable definitions can make independent agents easier to connect. A private schema can work well inside one company, but an outside agent needs its documentation or an adapter. Protocol support and shared meaning therefore need to develop together if typed exchanges are to travel beyond one platform.
+
+## 10. The case for shorter, more direct messages
+
+A repeated exchange can create unnecessary work when one model turns known fields into prose and another extracts the same fields again. Passing the values directly can avoid that translation. It can also make simple filtering and calculations possible in ordinary code, without asking a model to interpret each result.
+
+The saving is not automatic. JSON can repeat long field names, and supplying a schema can add to a model's input. A compact identifier saves space only when the receiver can obtain the record it names. Removing an explanation can reduce message length while also removing information needed for the task.
+
+Costs need clear units. Bytes sent over a connection differ from tokens processed by a model. Tokens are pieces of text, such as words, word fragments, or punctuation. Network compression can reduce transmitted bytes without reducing the model input after the application reads the message. A comparison should count the actual representation used at each stage.
+
+The whole interaction matters too. Setup, tool descriptions, clarification rounds, retries, and recovery can outweigh a shorter individual message. A fair test gives both designs the same task and information, then measures correct results, time, and total cost. A fixed claim that an English plan takes thousands of tokens while a data object takes eighty needs evidence from a defined comparison.
+
+The economic reason to move some exchanges away from prose is therefore specific. Routine, well-defined information can often be handled directly. Open-ended reasoning may still justify the cost of an explanation. The useful boundary depends on the task and the receiving system.
+
+## 11. Learned representations go further than structured text
+
+JSON fields still use symbols whose meanings people define. A learned representation takes a different approach. A model turns information into numerical values whose use depends on its training. Other compatible components can work with those values without first receiving a full natural-language account.
+
+An embedding is one familiar example. [Text embeddings](https://platform.openai.com/docs/guides/embeddings) support tasks such as retrieving related documents or grouping similar items. An agent could pass such a representation to a compatible search system. That is different from assuming that the vector expresses a complete instruction in a universal language.
+
+Research also examines communication through model states. [HyLaT](https://arxiv.org/html/2605.25421v1), a May 2026 research paper, trains agents to exchange latent vectors alongside short text outputs. Its main experiments use a shared Llama model, with a two-stage training process and tests on question-answering tasks. The authors report lower generated-token counts and running time than their trained text baseline, with accuracy varying by task. They also test a pair of different model families using learned adapters.
+
+That is evidence for a trained hybrid method under the tested conditions. It does not establish a common latent language that unrelated commercial agents can use without preparation. Its generation counts also do not, by themselves, measure network bytes or commercial API charges. Those are separate questions when assessing an implementation.
+
+| Representation | What the receiver needs |
+|---|---|
+| Natural-language text | A way to interpret the language and context |
+| Structured data | Agreed fields, types, units, and definitions |
+| Embedding or model state | A compatible representation, model or adapter, and tested use |
+
+A2A can carry structured JSON values and file content, so transporting numerical arrays is possible. Transporting them does not make their coordinates meaningful to another model. Compatibility may require the same encoder, an agreed version, additional training, or a learned conversion between systems.
+
+This creates a plausible difference between tightly connected agents and an open network. A group trained together can develop an efficient internal exchange. Independent services may prefer text and published schemas because new participants can understand them with less preparation. Both forms can exist, with a human-readable or structured interface at the boundary.
+
+## 12. What people can still read
+
+A move away from English changes how people inspect an exchange. A JSON object is readable if its fields are documented. A binary message can be rendered through its schema and decoder. Learned model states are harder to explain directly because the meaning is not laid out as named fields or sentences.
+
+Unreadability should not be mistaken for privacy. [Morris and colleagues](https://arxiv.org/abs/2310.06816) showed that text could be reconstructed from embeddings in the settings they tested. A list of numbers is not automatically anonymous or encrypted. The choice of representation needs to account for the information it may reveal as well as the information a receiver can use.
+
+People also need a clear account of what an agent did. That account can be generated from recorded requests, responses, task states, and results. It should stay linked to those records, so a readable summary can be checked rather than accepted as a fresh story about an invisible process.
+
+Permissions remain part of this exchange, especially when agents purchase resources or act through another service. Signed records, identity checks, and action limits address who may do what. They accompany the communication problem; they do not decide whether the task description belongs in English, structured fields, or a learned representation.
+
+## 13. A mixed language for the agent web
+
+The likely direction is a mix of communication forms, chosen for the work involved. Natural language gives people and models room to explain unfamiliar goals and exceptions. Structured messages give software exact values for repeatable operations. Learned channels offer another option where compatible models and training make them useful.
+
+MCP, A2A, and related projects provide parts of the machinery for these exchanges. They make tools, remote tasks, discovery, and specialized messages easier to connect. Their existence does not mean that every participant already shares the same vocabulary or that one representation will replace all the others.
+
+An agent may eventually carry out much of a routine task without composing a paragraph for every other agent it contacts. People can still state their goals in ordinary language and receive a readable explanation at the end. The communication between those points can use whichever forms preserve the needed information and have been tested for the task.
+
+A useful sign of progress would be a task moving between independently built agents without repeatedly turning known facts into prose and back again. The systems would exchange the values and results directly, while leaving people enough information to understand the work. That is the change worth examining when agents stop speaking English to one another.
 
 ---
 

@@ -71,11 +71,11 @@
       <description>AI can cut a wage without cutting a customer, change a job, or create a new one. The open question is which of those three happens to the receipt.</description>
     </item>
     <item>
-      <title>How AI Agents Should Communicate</title>
+      <title>When Agents Stop Speaking English</title>
       <link>https://veda.ng/agentspeak</link>
       <guid>https://veda.ng/agentspeak</guid>
       <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
-      <description>Clear messages need more than a valid format. How agents can share goals, exact values, permissions, and results without changing what the user asked for.</description>
+      <description>How agents exchange text, data, and tool calls through MCP, A2A, and related protocols, and what communication beyond human language could look like.</description>
     </item>
     <item>
       <title>The IndiaAI Mission</title>
