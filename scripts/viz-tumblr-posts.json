@@ -1285,8 +1285,8 @@
     "text": "How the largest cocoa bean producers changed.\n\n2000-2024. Cocoa bean production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-17",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-17T09:19:42.225Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/71-r2.txt",
     "captionStyle": "concise-v2",
@@ -1301,7 +1301,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-17T09:19:39.277Z",
+    "attemptedSlot": "2026-10-17T14:00",
+    "publishedText": "How the largest cocoa bean producers changed.\n\n2000-2024. Cocoa bean production by country, measured in millions of tonnes.",
+    "platformPostId": "830712087464607744",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/830712087464607744"
   },
   {
     "id": "viz-b2-tumblr-72",
