@@ -1522,8 +1522,8 @@
     "description": "How the largest cocoa bean producers changed.\n\n2000-2024. Cocoa bean production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-17",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-17T05:07:08.984Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/71-r2.txt",
     "captionStyle": "concise-v2",
@@ -1534,7 +1534,14 @@
     "altText": "Cocoa, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest cocoa bean producers changed.\n\n2000-2024. Cocoa bean production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-17T09:00",
+    "attemptedAt": "2026-10-17T05:07:06.564Z",
+    "bufferPostId": "6ad3027a52adf2bfae77647c",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=hhjLtWjJ7cU"
   },
   {
     "id": "viz-b2-yt-72",

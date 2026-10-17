@@ -1240,8 +1240,8 @@
     "text": "How women's representation in parliament changed.\n\n2000-2024. Parliamentary seats held by women as a share of the total.",
     "scheduleDate": "2026-10-16",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-17T05:09:16.145Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/51-r2.txt",
     "captionStyle": "concise-v2",
@@ -1253,7 +1253,13 @@
     "sourceCredit": "IPU",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-17T05:09:03.465Z",
+    "attemptedSlot": "2026-10-17T09:00",
+    "publishedText": "How women's representation in parliament changed.\n\n2000-2024. Parliamentary seats held by women as a share of the total.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3my2d65tv5b2i",
+    "postUrl": "https://bsky.app/profile/did:plc:x3llxr24tbj72fy3nish3xrh/post/3my2d65tv5b2i"
   },
   {
     "id": "viz-b2-bluesky-71",

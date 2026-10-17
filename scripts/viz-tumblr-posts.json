@@ -1251,8 +1251,8 @@
     "text": "How women's representation in parliament changed.\n\n2000-2024. Parliamentary seats held by women as a share of the total.",
     "scheduleDate": "2026-10-16",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-17T05:09:40.708Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/51-r2.txt",
     "captionStyle": "concise-v2",
@@ -1267,7 +1267,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-17T05:09:37.165Z",
+    "attemptedSlot": "2026-10-17T09:00",
+    "publishedText": "How women's representation in parliament changed.\n\n2000-2024. Parliamentary seats held by women as a share of the total.",
+    "platformPostId": "830696357258002432",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/830696357258002432"
   },
   {
     "id": "viz-b2-tumblr-71",
