@@ -64,11 +64,11 @@
       <description>AI can cut a wage without cutting a customer, change a job, or create a new one. The open question is which of those three happens to the receipt.</description>
     </item>
     <item>
-      <title>When Agents Stop Speaking English</title>
+      <title>How AI Agents Should Communicate</title>
       <link>https://veda.ng/agentspeak</link>
       <guid>https://veda.ng/agentspeak</guid>
       <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
-      <description>A2A&apos;s sample message is still Hello, world. MCP and A2A already send JSON. Tickets and payments already use fields. The English in the sample is leftover from chat.</description>
+      <description>Clear messages need more than a valid format. How agents can share goals, exact values, permissions, and results without changing what the user asked for.</description>
     </item>
     <item>
       <title>The IndiaAI Mission</title>

@@ -1,38 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" preserveAspectRatio="xMidYMid meet">
-  <style>
-    text { font-family: Inter, system-ui, sans-serif; }
-    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
-    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
-    .row { font-size: 13px; fill: #18181b; }
-    .dim { font-size: 13px; fill: #52525b; }
-    .note { font-size: 12px; fill: #52525b; }
-  </style>
-
-  <text x="16" y="28" class="title">What an agent actually sends</text>
-
-  <rect x="16" y="44" width="368" height="88" fill="#f4f4f5"/>
-  <text x="28" y="70" class="name">TextPart</text>
-  <text x="28" y="90" class="row">English. "Book the cheapest flight."</text>
-  <text x="28" y="110" class="dim">A person can read it. A test cannot.</text>
-
-  <rect x="16" y="132" width="368" height="88" fill="#ffffff"/>
-  <text x="28" y="158" class="name">DataPart</text>
-  <text x="28" y="178" class="row">JSON. origin, date, cabin, max_usd</text>
-  <text x="28" y="198" class="dim">A person can still read it. A test can too.</text>
-
-  <rect x="16" y="220" width="368" height="88" fill="#f4f4f5"/>
-  <text x="28" y="246" class="name">Tool call</text>
-  <text x="28" y="266" class="row">Function name and typed arguments</text>
-  <text x="28" y="286" class="dim">What function calling already ships.</text>
-
-  <rect x="16" y="308" width="368" height="88" fill="#ffffff"/>
-  <text x="28" y="334" class="name">Embedding</text>
-  <text x="28" y="354" class="row">A vector. No words.</text>
-  <text x="28" y="374" class="dim">Not in A2A. You cannot read the log.</text>
-
-  <rect x="16" y="396" width="368" height="56" fill="#f4f4f5"/>
-  <text x="28" y="418" class="name">What A2A samples today</text>
-  <text x="28" y="438" class="row">A TextPart that says Hello, world</text>
-
-  <text x="16" y="480" class="note">veda.ng/agentspeak</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500" role="img" aria-labelledby="title description">
+  <title id="title">What a handoff needs to preserve</title>
+  <desc id="description">A design guide for the booking example. Preserve the user's goal, agreed values, permission to act, and evidence of the result. Text and structured data can work together.</desc>
+  <rect width="400" height="500" fill="#ffffff"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#37352f">
+    <text x="20" y="29" font-size="17" font-weight="700">What a handoff needs to preserve</text>
+    <text x="20" y="52" font-size="12" fill="#64748b">Design guide for a booking task</text>
+    <rect x="16" y="70" width="368" height="88" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="96" font-size="16" font-weight="700" fill="#4f46e5">Goal and context</text>
+    <text x="30" y="119" font-size="13">What did the user ask for?</text>
+    <text x="30" y="140" font-size="13">What still needs clarification?</text>
+    <rect x="16" y="170" width="368" height="88" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="196" font-size="16" font-weight="700" fill="#4f46e5">Agreed values</text>
+    <text x="30" y="219" font-size="13">Dates, amounts, units, and references</text>
+    <text x="30" y="240" font-size="13">Keep unknown values explicit.</text>
+    <rect x="16" y="270" width="368" height="88" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="296" font-size="16" font-weight="700" fill="#4f46e5">Permission to act</text>
+    <text x="30" y="319" font-size="13">Which actions did the user approve?</text>
+    <text x="30" y="340" font-size="13">Check the limits before acting.</text>
+    <rect x="16" y="370" width="368" height="88" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="396" font-size="16" font-weight="700" fill="#4f46e5">Evidence of the result</text>
+    <text x="30" y="419" font-size="13">What finished, failed, or is still pending?</text>
+    <text x="30" y="440" font-size="13">Keep a reference the caller can check.</text>
+    <text x="20" y="484" font-size="12" fill="#64748b">Booking example | veda.ng/agentspeak</text>
+  </g>
 </svg>

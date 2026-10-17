@@ -1,39 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" width="400" height="460" preserveAspectRatio="xMidYMid meet">
-  <style>
-    text { font-family: Inter, system-ui, sans-serif; }
-    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
-    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
-    .row { font-size: 13px; fill: #18181b; }
-    .dim { font-size: 13px; fill: #52525b; }
-    .note { font-size: 12px; fill: #52525b; }
-  </style>
-
-  <text x="16" y="28" class="title">What each protocol actually is</text>
-
-  <rect x="16" y="44" width="368" height="72" fill="#f4f4f5"/>
-  <text x="28" y="66" class="name">MCP</text>
-  <text x="28" y="86" class="row">Agent to tool. Anthropic, Nov 2024.</text>
-  <text x="28" y="106" class="dim">Linux Foundation AAIF, Dec 2025.</text>
-
-  <rect x="16" y="116" width="368" height="72" fill="#ffffff"/>
-  <text x="28" y="138" class="name">A2A</text>
-  <text x="28" y="158" class="row">Agent to agent. Google, Apr 2025.</text>
-  <text x="28" y="178" class="dim">JSON-RPC. Agent Card. Sample is English.</text>
-
-  <rect x="16" y="188" width="368" height="72" fill="#f4f4f5"/>
-  <text x="28" y="210" class="name">ACP (IBM)</text>
-  <text x="28" y="230" class="row">REST, not JSON-RPC. Mar 2025.</text>
-  <text x="28" y="250" class="dim">Merged into A2A, 27 Aug 2025.</text>
-
-  <rect x="16" y="260" width="368" height="72" fill="#ffffff"/>
-  <text x="28" y="282" class="name">AP2</text>
-  <text x="28" y="302" class="row">Agent to payment. A signed Mandate.</text>
-  <text x="28" y="322" class="dim">HTTP 402 plus a payment field.</text>
-
-  <rect x="16" y="332" width="368" height="72" fill="#f4f4f5"/>
-  <text x="28" y="354" class="name">AGNTCY</text>
-  <text x="28" y="374" class="row">Directory and transport. Cisco.</text>
-  <text x="28" y="394" class="dim">Not a message format.</text>
-
-  <text x="16" y="440" class="note">veda.ng/agentspeak</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="540" viewBox="0 0 400 540" role="img" aria-labelledby="title description">
+  <title id="title">Different specifications, different jobs</title>
+  <desc id="description">MCP describes tools and results. A2A describes messages and tasks. JSON Schema checks data shape. AP2 specifies signed payment authority records. x402 specifies payment requirements and verification for HTTP resources.</desc>
+  <rect width="400" height="540" fill="#ffffff"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#37352f">
+    <text x="20" y="29" font-size="17" font-weight="700">Different specifications, different jobs</text>
+    <rect x="16" y="47" width="368" height="84" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="72" font-size="16" font-weight="700" fill="#4f46e5">MCP</text>
+    <text x="30" y="95" font-size="13">Tools, calls, and tool results</text>
+    <text x="30" y="115" font-size="13">Results can contain text and structured data.</text>
+    <rect x="16" y="141" width="368" height="84" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="166" font-size="16" font-weight="700" fill="#4f46e5">A2A</text>
+    <text x="30" y="189" font-size="13">Messages, task status, and artifacts</text>
+    <text x="30" y="209" font-size="13">A way to exchange work across systems</text>
+    <rect x="16" y="235" width="368" height="84" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="260" font-size="16" font-weight="700" fill="#4f46e5">JSON Schema</text>
+    <text x="30" y="283" font-size="13">Required fields and allowed value types</text>
+    <text x="30" y="303" font-size="13">Checks data shape, not the truth of its claims.</text>
+    <rect x="16" y="329" width="368" height="84" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="354" font-size="16" font-weight="700" fill="#4f46e5">AP2</text>
+    <text x="30" y="377" font-size="13">Signed checkout and payment mandates</text>
+    <text x="30" y="397" font-size="13">Defines records and checks for authority.</text>
+    <rect x="16" y="423" width="368" height="84" rx="5" fill="#f8fafc" stroke="#e3e3e0"/>
+    <text x="30" y="448" font-size="16" font-weight="700" fill="#4f46e5">x402</text>
+    <text x="30" y="471" font-size="13">HTTP 402 and payment requirements</text>
+    <text x="30" y="491" font-size="13">Payment verification for a requested resource</text>
+    <text x="20" y="530" font-size="12" fill="#64748b">Protocol roles | veda.ng/agentspeak</text>
+  </g>
 </svg>
