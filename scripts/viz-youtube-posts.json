@@ -1677,8 +1677,8 @@
     "description": "How the largest wine producers changed.\n\n2000-2023. Wine production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-18",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-18T16:36:42.620Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/75-r2.txt",
     "captionStyle": "concise-v2",
@@ -1689,7 +1689,14 @@
     "altText": "Wine, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest wine producers changed.\n\n2000-2023. Wine production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-18T20:00",
+    "attemptedAt": "2026-10-18T16:36:40.687Z",
+    "bufferPostId": "6ad4f5980b0d72757a2e93a6",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=ztryidI7vq8"
   },
   {
     "id": "viz-b2-yt-76",
