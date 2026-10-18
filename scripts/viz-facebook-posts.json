@@ -1338,8 +1338,8 @@
     "text": "How the largest natural rubber producers changed.\n\n2000-2024. Natural rubber production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-17",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-18T04:57:03.076Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/73-r2.txt",
     "captionStyle": "concise-v2",
@@ -1350,7 +1350,13 @@
     "altText": "Natural rubber, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-18T04:56:31.925Z",
+    "attemptedSlot": "2026-10-18T09:00",
+    "publishedText": "How the largest natural rubber producers changed.\n\n2000-2024. Natural rubber production by country, measured in millions of tonnes.",
+    "platformPostId": "28360747056941028",
+    "postUrl": "https://www.facebook.com/watch/?v=28360747056941028"
   },
   {
     "id": "viz-b2-facebook-74",

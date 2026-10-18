@@ -1365,8 +1365,8 @@
     "text": "How the largest ginned cotton producers changed.\n\n2000-2023. Ginned cotton production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-18",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-18T04:56:22.947Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/74-r2.txt",
     "captionStyle": "concise-v2",
@@ -1377,7 +1377,14 @@
     "altText": "Cotton, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-18T04:56:16.046Z",
+    "attemptedSlot": "2026-10-18T09:00",
+    "publishedText": "How the largest ginned cotton producers changed.\n\n2000-2023. Ginned cotton production by country, measured in millions of tonnes.",
+    "platformPostId": "urn:li:ugcPost:7517448468731219968",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7517448468731219968/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-53",

@@ -1333,8 +1333,8 @@
     "text": "How the largest natural rubber producers changed.\n\n2000-2024. Natural rubber production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-17",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-18T04:57:14.034Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/73-r2.txt",
     "captionStyle": "concise-v2",
@@ -1346,7 +1346,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-18T04:57:13.816Z",
+    "attemptedSlot": "2026-10-18T09:00",
+    "publishedText": "How the largest natural rubber producers changed.\n\n2000-2024. Natural rubber production by country, measured in millions of tonnes.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0x571ef937",
+    "platformPostId": "0x571ef93702b885401eac5fbcb4b26b1309f6ccf7"
   },
   {
     "id": "viz-b2-farcaster-74",
