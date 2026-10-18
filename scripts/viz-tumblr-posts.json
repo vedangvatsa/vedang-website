@@ -1387,8 +1387,8 @@
     "text": "How the largest ginned cotton producers changed.\n\n2000-2023. Ginned cotton production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-18",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-18T09:16:36.588Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/74-r2.txt",
     "captionStyle": "concise-v2",
@@ -1403,7 +1403,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-18T09:16:33.359Z",
+    "attemptedSlot": "2026-10-18T14:00",
+    "publishedText": "How the largest ginned cotton producers changed.\n\n2000-2023. Ginned cotton production by country, measured in millions of tonnes.",
+    "platformPostId": "830802489776422912",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/830802489776422912"
   },
   {
     "id": "viz-b2-tumblr-53",

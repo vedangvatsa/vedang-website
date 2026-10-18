@@ -1396,8 +1396,8 @@
     "text": "How higher-education enrolment changed.\n\n2001-2023. Gross tertiary enrolment relative to the official age-group population, including students of all ages.",
     "scheduleDate": "2026-10-18",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-18T09:15:39.995Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/53-r2.txt",
     "captionStyle": "concise-v2",
@@ -1408,7 +1408,14 @@
     "altText": "Higher study, 2001-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-18T09:15:31.517Z",
+    "attemptedSlot": "2026-10-18T14:00",
+    "publishedText": "How higher-education enrolment changed.\n\n2001-2023. Gross tertiary enrolment relative to the official age-group population, including students of all ages.",
+    "platformPostId": "urn:li:ugcPost:7517513719757619201",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7517513719757619201/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-75",
