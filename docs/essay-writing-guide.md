@@ -71,10 +71,12 @@
 ## Writing Style Rules
 
 ### Structure
-- **Length**: 3,500-4,500 words. Each essay is a McKinsey-grade research piece with charts, data visualizations, and verified statistics.
-- **Opening**: Start with a concrete observation, historical fact, or provocative claim. NEVER start with a definition or "In today's world..." The opening paragraph MUST appear as plain text BEFORE the hero `<Figure>` component. Never put the image first.
-- **Body**: Build the argument through specific examples, data, and analogies. Each section should advance the thesis, not repeat it. Pair every core claim with a StatRow, chart component, or data table.
-- **Closing**: End with an implication or unanswered question. NOT a summary of what was just said.
+- **Purpose**: This is Vedang's personal website. Essays are readable blog posts, including when they draw on his research.
+- **Length**: There is no minimum. Use only the words needed to explain the idea. Do not pad a post to reach a word count.
+- **Opening**: State the idea or a supported observation in ordinary words. Avoid a forced hook or invented scene. The opening paragraph MUST appear as plain text BEFORE the hero `<Figure>` component.
+- **Body**: Give each paragraph one job. Explain a term when the reader needs it. Use only a few useful numbers and examples instead of walking through the paper's methods and results.
+- **Visuals**: Include a chart or table only when it makes the point easier to understand. Full score grids, formulas, and detailed checks belong in the linked research, not in the reading flow.
+- **Closing**: Stop when the point is clear. Avoid a repeated summary, a grand claim, or a forced question.
 
 ### MDX Components Used
 ```tsx
@@ -93,7 +95,7 @@
 - **Opening `<Callout>` boxes** — Do NOT wrap the essay's opening paragraph in a `<Callout>` (e.g., "The Core Thesis", "Key Findings", "Executive Summary"). The opening text must be a plain paragraph. Callouts are reserved for mid-body asides (warnings, supplementary info, inline data tables).
 
 ### Custom Chart Components
-Each essay should have its own chart file at `src/components/mdx/{essay-slug}-charts.tsx`. Charts must:
+If an essay needs an interactive chart, use `src/components/mdx/{essay-slug}-charts.tsx`. A chart is optional. Charts must:
 - Use `'use client'` directive
 - Follow light-mode aesthetic (white bg, `#37352f` text, `#e3e3e0` borders)
 - Include source attribution in `text-[10px] text-muted-foreground/60`
@@ -106,11 +108,11 @@ Each essay should have its own chart file at `src/components/mdx/{essay-slug}-ch
 - **Hyperlink all sources**. Every cited organization should link to the source report/page.
 
 ### Voice
-- **First person sparingly** — "The data shows..." not "I believe..."
-- **Active voice always** — "AI reshapes commerce" not "Commerce is being reshaped by AI"
-- **Concrete over abstract** — "DJI holds 70% of the drone market" not "China dominates technology sectors"
-- **Historical anchoring** — Connect new ideas to historical precedents
-- **Intellectual honesty** — Acknowledge counterarguments and limitations
+- **Vedang is the writer**: Use first person for his research and views. Do not describe him as an outside researcher on his own blog.
+- **Plain words**: Prefer everyday language. Replace jargon or explain it briefly. Use short sentences and short paragraphs without making the prose choppy.
+- **Direct wording**: Use active verbs. Remove filler, stock AI phrases, staged contrasts, repeated qualifications, and sentences that merely announce the next point.
+- **Supported examples**: Use examples from the actual evidence. Never invent a personal story, emotion, quote, source, number, or account of how a model reached an answer.
+- **Clear limits**: Say what the evidence supports and what remains unknown in simple words. Do not repeat the same caveat after every paragraph.
 
 ### Data Integrity
 - **Verify all funding/valuation numbers** against Crunchbase, SEC filings, or company disclosures before publishing
@@ -166,16 +168,16 @@ description: "One-sentence summary for SEO and social previews"
 - Preferred citation style: inline with parenthetical source notes and hyperlinks
 - Original research and primary sources preferred over news articles
 - **Accepted sources**: Gallup, Pew Research, Gartner, McKinsey, Edelman Trust Barometer, Imperva, Reuters Institute, Crunchbase, Tracxn, peer-reviewed journals (Science, Nature, PNAS)
-- **If a statistic cannot be verified**, label it clearly as "illustrative" or "directional estimate" with honest sourcing
+- **If a factual claim cannot be verified**, leave it out or state what is unknown. Label an opinion as an opinion; do not dress it up as a finding.
 
 ## Essay Pipeline
 
 1. **Ideation**: Identify a counter-narrative or underexplored angle on a trending topic
-2. **Research**: 5-10 specific, verified data points from primary sources to anchor the argument
-3. **Draft**: Write in MDX with StatRows, chart components, and tables for data density
-4. **Chart creation**: Build custom React chart components at `src/components/mdx/{slug}-charts.tsx`
+2. **Research**: Check each factual claim against a source. Use only the findings needed for the post.
+3. **Draft**: Write a plain-language MDX post with a clear point, short paragraphs, and useful examples.
+4. **Charts, if useful**: Add a visual only when it explains something better than the prose.
 5. **Registration**: Import and register chart components in `src/app/[slug]/page.tsx`
-6. **Fact-check**: Verify every number against its cited source. Remove or relabel anything unverifiable.
+6. **Fact-check**: Verify every number against its cited source. Remove unsupported factual claims and state uncertainty plainly.
 7. **Style audit**: Run all 4 checks:
    - `grep -r '—\|–' src/content/essays/` — Zero em-dashes
    - `grep -rn 'landscape\|tapestry\|leverage\|unlock\|holistic\|foster\|facilitate\|reshape\|redefine' src/content/essays/` — Zero AI slop in prose

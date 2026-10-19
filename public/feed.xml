@@ -19,14 +19,14 @@
       <link>https://veda.ng/aidetection</link>
       <guid>https://veda.ng/aidetection</guid>
       <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
-      <description>An AI detector scored 95.99% on one test and 53.89% on another. What these results tell us about judging who wrote a text.</description>
+      <description>Why a high test score does not prove how someone wrote a piece of text.</description>
     </item>
     <item>
-      <title>Personality Profiles Across 55 Language Models</title>
-      <link>https://veda.ng/personality</link>
-      <guid>https://veda.ng/personality</guid>
+      <title>What AI Personality Tests Tell Us</title>
+      <link>https://veda.ng/llmpersonality</link>
+      <guid>https://veda.ng/llmpersonality</guid>
       <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
-      <description>What repeated IPIP-50 assessments of 55 language model configurations show about personality scores and the comparisons they support.</description>
+      <description>Why I look at an AI’s work before trusting its personality score.</description>
     </item>
     <item>
       <title>The Token Tax of the Web</title>
@@ -34,13 +34,6 @@
       <guid>https://veda.ng/tokentax</guid>
       <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
       <description>In a test of 300 webpage sections, Markdown used 49.6% fewer input tokens than cleaned HTML. Both matched 798 of 888 expected answers.</description>
-    </item>
-    <item>
-      <title>Bitget reports $351.6 million wallet breach and pauses withdrawals</title>
-      <link>https://veda.ng/bitget-hack</link>
-      <guid>https://veda.ng/bitget-hack</guid>
-      <pubDate>Thu, 24 Sep 2026 22:10:00 GMT</pubDate>
-      <description>CEO Gracy Chen says unauthorized transfers affected about $351.6 million. Bitget says cold wallets are secure and its protection fund covers the loss; the attack method remains under investigation.</description>
     </item>
     <item>
       <title>Web Readiness for AI Agents</title>

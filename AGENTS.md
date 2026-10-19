@@ -3,6 +3,9 @@
 When working on this project, you MUST read and follow these guidelines before making any changes:
 
 ## Essay Content
+- This is Vedang's personal website. Essays should read like clear, approachable blog posts, using first person for his own research and views.
+- Use simple words, short paragraphs, and only the detail needed to explain the point. There is no minimum word count. Avoid stock AI phrases, filler, repeated conclusions, and research-paper structure.
+- Every factual claim must have support. Never invent statistics, sources, quotes, personal experiences, or reasons why a model behaved a certain way.
 - **Essay Writing Guide**: `docs/essay-writing-guide.md` — Structure, MDX components, formatting rules, banned phrases, citation standards, and the 10-step essay pipeline.
 - **AI Slop Avoidance**: `docs/ai-slop-avoidance.md` — Comprehensive list of banned AI-generated phrases. Check ALL content against this before committing.
 - **Opening paragraph before hero image**: Every essay MUST have a plain-text opening paragraph BEFORE the `<Figure>` hero infographic. Never put the image first.
@@ -41,6 +44,7 @@ When working on this project, you MUST read and follow these guidelines before m
 ## Website
 - Domain: `veda.ng`
 - Hosting: Cloudflare Workers (`veda-ng`, using OpenNext). The social-video endpoint is deployed separately with `workers/social-video/wrangler.jsonc`; see `docs/farcaster-video.md`.
+- Website deployment instructions: `docs/deployment.md`.
 - Essays use `[slug]` routing at root level (e.g., `veda.ng/agent-infrastructure-stack`, NOT `veda.ng/essays/...`)
 
 ## Layout & Components

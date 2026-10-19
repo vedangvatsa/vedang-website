@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
-  <title id="title">AI text detection on two datasets</title>
-  <desc id="desc">The random forest scores 95.99% on the original data and 53.89% on a separate dataset. Both tests have equal class counts and use a score cutoff of 0.5. The bars start at zero and end at one hundred percent.</desc>
+  <title id="title">AI text detection on two tests</title>
+  <desc id="desc">The detector setup matches 95.99% of the labels in the first collection and 53.89% in the second. Both tests have equal numbers of published and generated texts. The bars start at zero and end at one hundred percent.</desc>
   <rect width="800" height="400" fill="#ffffff" />
   <g font-family="Arial, Helvetica, sans-serif" fill="#37352f">
-    <text x="44" y="49" font-size="27" font-weight="700">AI text detection on two datasets</text>
-    <text x="44" y="80" font-size="17" fill="#64748b">Random forest · eight measures · score cutoff 0.5</text>
-    <text x="44" y="136" font-size="21" font-weight="700">Original dataset</text>
+    <text x="44" y="49" font-size="27" font-weight="700">AI text detection on two tests</text>
+    <text x="44" y="80" font-size="17" fill="#64748b">How often the detector matched the test labels</text>
+    <text x="44" y="136" font-size="21" font-weight="700">First collection</text>
     <text x="756" y="138" font-size="32" text-anchor="end" fill="#1d4ed8" font-weight="700">95.99%</text>
     <rect x="44" y="155" width="712" height="35" rx="2" fill="#f1f5f9" />
     <rect x="44" y="155" width="683.4488" height="35" rx="2" fill="#2563eb" fill-opacity="0.65" />
-    <text x="44" y="243" font-size="21" font-weight="700">Separate dataset</text>
+    <text x="44" y="243" font-size="21" font-weight="700">Second collection</text>
     <text x="756" y="245" font-size="32" text-anchor="end" fill="#92400e" font-weight="700">53.89%</text>
     <rect x="44" y="262" width="712" height="35" rx="2" fill="#f1f5f9" />
     <rect x="44" y="262" width="383.6968" height="35" rx="2" fill="#b45309" fill-opacity="0.65" />
@@ -19,6 +19,6 @@
       <text x="756" y="325" text-anchor="end">100%</text>
     </g>
     <line x1="44" y1="347" x2="756" y2="347" stroke="#e3e3e0" />
-    <text x="44" y="376" font-size="15" fill="#64748b">Source: study Tables 3 and 5 · equal class counts</text>
+    <text x="44" y="376" font-size="15" fill="#64748b">Source: my abstract study · equal numbers in both groups</text>
   </g>
 </svg>

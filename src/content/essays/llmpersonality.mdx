@@ -1,161 +1,65 @@
 ---
-title: "Personality Profiles Across 55 Language Models"
+title: "What AI Personality Tests Tell Us"
 date: '2026-10-17'
 author: 'Vedang Vatsa'
-summary: 'Repeated answers, missing scores, and comparisons between models.'
-description: 'Personality profiles from repeated IPIP-50 questionnaires, with model comparisons, missing answers, and checks on which score differences hold up.'
+summary: 'Why I look at an AI’s work before trusting its personality score.'
+description: 'What I learned from comparing 55 AI model setups, including missing answers and small scores that changed places.'
 category: 'Artificial Intelligence'
-keywords: ['LLM personality', 'IPIP-50', 'Big Five', 'language model evaluation', 'psychometrics', 'response consistency']
+keywords: ['AI personality', 'language models', 'personality tests', 'IPIP-50', 'AI behavior']
 ---
 
-Twenty of the 22 models with complete personality profiles scored higher on Agreeableness, Conscientiousness, and Intellect/Imagination than on Extraversion. The study tested 55 model setups in total. The other 33 did not give enough numeric answers for a reported score in at least one trait. The shared profile therefore describes a smaller group than the full list of models.
+“Am the life of the party” is one of the statements in the personality test I gave to language models. It is an odd thing to ask an AI assistant. Does the question mean keeping a conversation going, or taking part in an actual party?
 
-<Figure src="/images/essays/personality-coverage.svg" alt="Of 55 tested model setups, 47 had enough answers for at least one reported trait score and 22 had all five." caption="A model could answer every item, using numbers or non-applicable marks, while leaving some traits without a score." source="IPIP-50 comparison, ALL-9" sourceUrl="/research/personality/paper.pdf" width={800} height={400} wide />
+<Figure src="/images/essays/personality-coverage.svg" alt="Out of 55 tested model setups, 47 had enough answers for at least one trait score and 22 had scores for all five." caption="Only 22 of the 55 tested setups gave enough ratings for a complete profile." source="My personality study" sourceUrl="/research/personality/paper.pdf" width={800} height={400} />
 
-The [research paper](/research/personality/paper.pdf) behind this essay asks each model to complete the same fifty-item questionnaire several times. Some models give clearly different scores. Others sit close enough that a different choice of recorded answers puts them in the opposite order. Some repeatedly mark questions about human experiences as not applicable. Failed requests and non-applicable answers are recorded separately because they create different gaps in the evidence.
+My [study](/research/personality/paper.pdf) covered 55 model setups using the same fifty questions. A setup means the model and the settings used for its test. I asked each model to describe itself as an AI assistant and allowed it to mark a statement as not applicable.
 
-The study keeps the number of complete answers beside each score. It then checks which comparisons hold when different recorded responses are used. This lets a reader judge a claimed difference against the answers that support it, rather than relying on a table of averages alone.
+The test groups its questions into five traits, such as being outgoing or organized. Only 22 setups gave enough numeric answers to report a score for every trait. The rest had gaps.
 
-## The question answered by a questionnaire
+Those gaps matter. So do the small differences between models that appear next to each other in a score table.
 
-The [International Personality Item Pool sample questionnaire](https://ipip.ori.org/new_ipip-50-item-scale.htm) asks how well statements such as “Am always prepared,” “Worry about things,” and “Have a vivid imagination” describe the respondent. The five answer choices run from Very Inaccurate to Very Accurate. The scoring key groups the statements into Extraversion, Agreeableness, Conscientiousness, Emotional Stability, and Intellect/Imagination, with ten items for each trait.
+## Some questions do not fit
 
-Every main request asked the model to describe itself as an AI assistant as it generally is, rather than ideally. All fifty statements appeared together in the published order. Each request started a fresh study conversation, with no earlier answers or assigned fictional personality. A model could mark a statement not applicable instead of inventing an experience. The [supplement contains the exact prompt](/research/personality/supplement.html), including the answer choices and output instructions.
+The test asks about leaving belongings around, forgetting to put things back, and talking to people at parties. A model can give a number for these statements. It can also say they do not apply.
 
-An assistant might read “Start conversations” as beginning a chat. It might take “Leave my belongings around” literally and decline to give a number. Another model might treat belongings as a way to describe how it handles information. The saved answer shows which option the model returned, but does not reveal which reading led to it.
+Claude Sonnet 5.5 marked the two belongings statements and the statement about talking to people at parties as not applicable in all five responses. Its reported scores for the other traits stayed the same across those repeats.
 
-Higher Emotional Stability broadly corresponds to lower Neuroticism. Intellect/Imagination covers vocabulary, ideas, and imagination, rather than performance on an intelligence test. The trait names do not put all five scores on one proven psychological scale. A score of four for Agreeableness and three for Extraversion shows different answers to their question sets; it does not establish that the model has one unit more of one human trait than the other.
+I left the non-applicable answers unscored. Filling them with a middle score would change their meaning. “This does not apply” does not mean “this describes me a little.”
 
-The [IPIP scoring instructions](https://ipip.ori.org/newScoringInstructions.htm) account for statements that point in opposite directions. For statements that describe more of a trait, such as “Am always prepared,” the rating stays unchanged. For statements that describe less of a trait, the score is six minus the rating. A rating of one on “Feel little concern for others” therefore contributes five toward Agreeableness. The study averages the ten scores for a trait, giving a result between one and five. That calculation treats the step from one to two as equal to the step from four to five. A later check asks whether the findings depend on that choice.
+A missing score also cannot tell us that a model is disorganized or quiet. It tells us that the test did not get the ratings needed to calculate that score.
 
-## What entered the comparison
+This affects which models enter a comparison. If I show only complete profiles, I leave out models that repeatedly decline to rate certain human experiences. The finished table can hide that choice from the reader.
 
-The study covers 55 model setups from seventeen developer labels. A setup includes the model identifier and the settings sent with the request. The selection spans older and recent model families, subject to access and resource limits. The [Artificial Analysis model list](https://artificialanalysis.ai/models) helped guide which products to include. Its capability rankings played no part in scoring personality. The word “model” below refers to the setup that was tested, including those requested settings.
+## The profiles often looked alike
 
-Thirty-nine setups received ten planned questionnaire runs, eleven received five, and five received three. These 460 attempts produced 422 usable responses. A usable response gave a clear number or non-applicable mark for every item. The other outcomes included service errors, cut-off text, missing or invalid answers, and an interrupted request. They remain in the attempt count. Retrying a service error belongs to the same planned run rather than adding another questionnaire repetition.
+Twenty of the 22 complete profiles followed the same broad pattern. Their scores for the traits linked to cooperation, being organized, and interest in ideas were higher than their score for being outgoing.
 
-The usable responses contained 17,940 numeric ratings and 3,160 non-applicable marks. The latter made up 15.0% of the returned item positions. This percentage counts answers, so a model with ten usable responses contributes more than one with three. The trait summaries give each model's average equal weight instead. These calculations answer different questions: one describes all collected answers, while the other compares the model averages.
+That is a finding about the answers. It does not tell me whether an assistant will check a source, catch a mistake, or finish a task carefully.
 
-A trait needs all ten numeric answers before it receives a score for a run. To report a model's average for that trait, the study requires at least three complete scores and at least half its planned runs. The thresholds are five of ten, three of five, or three of three. The study chose this reporting rule after inspecting the results. It keeps averages based on only one or two complete runs out of the main comparison. Meeting the rule does not guarantee that a score will repeat in another test.
+The models also differed within families. Gemma 3 4B scored higher than Gemma 3 12B on being outgoing. The larger model scored higher on the trait linked to being organized. A shared family name did not give them the same profile.
 
-The ten-run setups requested temperature 0.7 and an output limit of 1,536 tokens. The five-run setups used a 4,096-token limit, and the three-run setups used 1,536 tokens. The latter two groups left temperature unspecified and requested low or disabled reasoning where supported. No generation seed was requested. Each model appears in only one repeat-count group. A difference between those groups could therefore reflect the models, the settings, or both.
+These results belong to the model versions and settings in the study. The settings were not identical across all groups. I cannot explain a difference by model size alone, or assume a later version will answer in the same way.
 
-The main requests ran between October 5 and 7, 2026. The supplement lists the API services, provider choices, service tiers, and collection times. All 45 setups that used a routing service requested one provider tag and disabled fallback to other providers. Those records show what the study requested and what labels the service returned. They do not verify the provider's hidden settings or hardware. The results describe the versions served during this collection.
+## A small lead can disappear
 
-## The recurring profile and its exceptions
+One comparison shows why I would be careful with a ranking.
 
-The 422 usable responses supplied 1,481 complete trait scores. Across 55 models and five traits, 178 of the 275 possible average scores met the reporting rule. Forty-seven models had enough answers for at least one reported trait score; twenty-two had all five. Conscientiousness had the fewest models with enough answers, while Intellect/Imagination had the most.
+For Extraversion, the trait about being outgoing, Gemini 3.5 Flash-Lite averaged 2.44 and MiniMax M3 averaged 2.38. The scale runs from one to five. A table sorted by the average would put Gemini first, with a lead of just 0.06.
 
-<Figure src="/images/essays/personality-trait-coverage.svg" alt="Models with a reported score out of 55: Extraversion 29, Agreeableness 40, Conscientiousness 25, Emotional Stability 38, and Intellect/Imagination 46." caption="The model groups differ by trait because some questions did not receive enough numeric answers." source="Coverage table" sourceUrl="/research/personality/coverage.csv" width={800} height={570} wide />
+Each model had five complete scores. I checked every possible group of three scores from each model and compared the averages. Across the 100 pairings, Gemini stayed ahead in 60. MiniMax was ahead in 40.
 
-Gemma 3 4B and Llama 3.2 1B were the two complete-profile exceptions to the shared ordering. Their Conscientiousness averages were 2.82 and 3.15, below their Extraversion averages of 3.49 and 3.26. The other twenty complete profiles placed Agreeableness, Conscientiousness, and Intellect/Imagination above Extraversion. That result also held when the analysis used only runs with numbers for all fifty items, keeping the answers for different traits on the same runs.
+These were comparisons of saved answers, not 100 fresh experiments. They show that this small lead changed depending on which recorded answers entered the average.
 
-The middle value among the reported model averages was 2.83 for Extraversion, 4.32 for Agreeableness, 4.44 for Conscientiousness, 4.03 for Emotional Stability, and 4.41 for Intellect/Imagination. These medians give each model equal weight. But Extraversion includes 29 models and Intellect/Imagination includes 46. Comparing those two middle values therefore compares different groups, unlike the within-profile comparison above.
+Other differences held up better. But I would not use this particular lead to choose an assistant for a job. The order in a table makes the result look more settled than those answers suggest.
 
-The twenty-two complete profiles cover 40% of the tested group. A model can give consistent answers about ideas or concern for others, yet fall out of that group because it marks a question about physical possessions as not applicable. Selecting only complete profiles can therefore favor models that give numbers to a wider range of human experiences. Their common scores cannot stand in for the missing profiles of the other 33.
+## I would check the work
 
-The table includes every tested setup. Each average appears beside the number of complete runs that support it. “No score” means too few runs met the rule. Models appear alphabetically, so the order of the rows carries no judgment about which personality is better. Standard deviation, shown as SD, measures how much the recorded scores varied.
+A personality test can help me notice patterns in how a model describes itself. It can also show where a question fails to get a useful rating.
 
-<PersonalityProfileExplorer />
+For choosing an assistant, I would look at the task I need it to do. Does it follow the instructions? Does it check a claim against the source? Does it say when it lacks the information needed to answer?
 
-## A model family can contain very different profiles
+My questionnaire did not test those abilities. A high score for being careful would need a separate check against careful work.
 
-Gemma 3 4B and Gemma 3 12B each supplied ten complete scores for every trait under the same requested temperature and output limit. Their Extraversion averages were 3.49 and 1.56, a difference of 1.93 points. Conscientiousness ran the other way, at 2.82 and 4.68. Gemma 3 27B supplied enough complete answers for four traits but too few for Conscientiousness. A family name or model size alone does not tell a reader what profile to expect.
+I would also keep the instructions close to any score. In this study, I asked models to describe themselves as assistants. Asking one to play a fictional character is a different task. We should test whether the answers change before carrying a profile from one use to another.
 
-<Figure src="/images/essays/personality-gemma.svg" alt="Gemma 3 4B scored 3.49 in Extraversion and 2.82 in Conscientiousness. Gemma 3 12B scored 1.56 and 4.68 respectively." caption="Gemma 3 4B scored higher on Extraversion; 12B scored higher on Conscientiousness. Both use ten complete runs per trait." source="Reported profile table" sourceUrl="/research/personality/reported-profiles.csv" width={800} height={440} wide />
-
-The three complete profiles in the five-run group also differed. Qwen3.8 Max Prime had Extraversion 3.20 and Emotional Stability 4.46. Gemini 3.5 Flash-Lite had 2.44 and 5.00, while MiniMax M3 had 2.38 and 3.90. Each average uses five complete scores. The Gemini and MiniMax Extraversion averages are close, but their Emotional Stability averages are further apart.
-
-A partial profile can still support a comparison on a trait with enough answers. Claude Sonnet 5.5 and Claude Opus 5.5 both averaged 4.50 in Agreeableness. Their Emotional Stability averages were 4.70 and 4.40; their Intellect/Imagination averages were 4.50 and 4.20. Those scores repeated exactly over five Sonnet and three Opus runs. The absent traits need separate treatment, rather than an assumed value that would complete the table.
-
-The differences above belong to these tested setups. The numbers alone cannot separate the effects of model size, training, and provider settings. Even two models with the same output limit may use different systems behind the API. Explaining the Gemma difference as an effect of size would require a test that controls the other possible causes.
-
-## Missing scores follow the questions
-
-The statement about leaving belongings around received a non-applicable answer in 181 of 422 usable questionnaires. Forgetting to put things back received 175 such answers. Being the life of the party received 141, and talking to different people at parties received 138. These were the most frequent gaps, accounting for 42.9%, 41.5%, 33.4%, and 32.7% of usable questionnaires for those items.
-
-Claude Sonnet 5.5 marked the two belongings statements and the statement about talking to different people at parties as not applicable in all five responses. Those three entries prevented Conscientiousness and Extraversion scores. The repeated gaps do not mean Sonnet scored low on either trait. They mean the study lacked the numeric answers needed to calculate those scores.
-
-GPT-6 Luna marked all fifty items not applicable in four of five responses, then supplied 36 numeric ratings in the remaining response. No item received a number twice, so the study could not compare repeated numeric answers. MiMo-V2.6-Pro marked every item not applicable once in three responses. A separate measure checks how often a model repeats the choice to give a number or mark an item not applicable. This applicability agreement was 71.2% for Luna and 34.7% for MiMo.
-
-Replacing a non-applicable answer with three would change its meaning. Three says that the statement is neither accurate nor inaccurate. A non-applicable mark gives no such rating. Filling the gap with three would turn a refusal to describe possessions into a middle-of-the-scale answer about possessions. The study keeps the gap and shows how it affects the available scores.
-
-The concentration of missing answers on parties and possessions suggests a testable explanation. Models may answer differently if asked to use a metaphor, pretend to be human, or choose a number for every item. This study did not vary those instructions. To find out which wording changes the answers, a follow-up would need to give the same model different instructions while keeping the other settings fixed.
-
-## Which model keeps the higher score?
-
-An average can depend on which runs enter the calculation. For each trait with enough answers, the study takes every possible group of three complete scores from a model. It compares each group's average with every three-score average from another model in the same repeat-count group. The test asks how often the model with the higher overall average stays higher. A tie counts among the comparisons, but does not count as keeping a strict lead.
-
-Gemini 3.5 Flash-Lite's Extraversion average exceeded MiniMax M3's by 0.06 points. Each had five complete scores, giving ten possible groups of three. Comparing the ten groups on one side with the ten on the other produced 100 pairings. Gemini stayed higher in sixty; MiniMax was higher in forty. These reuse the same ten recorded responses, not 100 fresh experiments.
-
-Qwen3.8 Max Prime stayed above MiniMax M3 in all 100 pairings for Extraversion, where their overall averages differed by 0.82 points. The Gemma comparisons also kept the same higher-scoring model for each trait. Ten complete scores give 120 groups of three per model, making 14,400 pairings. Gemma 3 4B stayed higher on Extraversion and 12B stayed higher on Conscientiousness throughout.
-
-<Figure src="/images/essays/personality-orderings.svg" alt="Extraversion comparisons that kept the original higher-scoring model: Gemma 3 4B versus 12B, 14,400 of 14,400; Qwen3.8 Max Prime versus MiniMax M3, 100 of 100; Gemini 3.5 Flash-Lite versus MiniMax M3, 60 of 100." caption="Each pairing uses three recorded scores per model. The bars show how often the original lead held within those pairings." source="All pair comparisons within each repeat-count group" sourceUrl="/research/personality/pair-stability.csv" width={800} height={560} wide />
-
-The analysis calls a comparison stable at 95% when the original higher-scoring model keeps its lead in at least 95% of the three-score pairings. It leaves out pairs tied on their overall averages and pairs with only one possible three-score pairing. In the ten-run group, 284 of 463 Agreeableness pairs met the 95% rule, or 61.3%. For Emotional Stability, 279 of 377 pairs met it, or 74.0%. These were the lowest and highest shares across traits. The 95% cutoff is a reporting choice, not a confidence level; the supplement gives results for other cutoffs too.
-
-The full data file keeps all 1,930 model-and-trait comparisons across repeat-count groups, including ties and cases with too few scores for the check. A model with only three complete scores supplies one group of three. The study cannot test whether a different group changes its average. This is why the three-run setups provide no pairs for the stability summary, even when their recorded scores have zero standard deviation.
-
-These results describe the recorded answers. A lead that holds in every recorded pairing is no promise about the next request, especially if instructions or provider settings change. The examples also do not show that large gaps are always stable and small gaps always unstable. The full pair file lets readers examine the cases beyond the examples shown here.
-
-## Do the results depend on how the scale is numbered?
-
-The five answer choices have an order, but their psychological spacing is unknown. Assigning the numbers one through five gives them equal gaps. Another scoring system could place the middle choices closer together while keeping Very Inaccurate below Very Accurate. If that change alters which trait has the higher average, part of the original result depends on the numbering.
-
-The study checks the answers after applying the usual reverse scoring. At each cutoff on the five-point scale, it counts the share of answers at or below that value. To guarantee a higher average under any new numbering, a trait must have no greater share at or below each cutoff than Extraversion, with a smaller share at least once. This rule is called first-order dominance. Each higher category must still receive a higher number, and the same new numbers must apply to every trait.
-
-Only runs with numeric answers to all fifty items enter this check, so the traits are compared on the same runs. Eighteen of the twenty-two complete profiles keep all three trait scores above Extraversion under the rule. Gemma 3 4B, Llama 3.2 1B, Command A Plus, and Granite 4 Micro do not. For those four, the study cannot guarantee all three comparisons under every allowed numbering of the scale.
-
-The supplement gives the proof behind this check. It concerns the numbers assigned to recorded answers. Even when an ordering survives, the result does not turn different trait scales into a shared psychological unit. It shows that a particular comparison holds without relying on equal numerical gaps between the answer choices.
-
-## What missing answers still allow us to compare
-
-An incomplete profile can sometimes show which trait score would be higher. The calculation keeps each known answer after reverse scoring and allows each unknown answer to take any value from one to five. Unknowns include non-applicable marks and every item in an unusable or missing response. Giving all unknowns the lowest value produces the lowest possible average; giving them the highest produces the highest possible average. These limits are called completion bounds.
-
-The bounds describe possible averages over all planned answers. The main score table instead averages only runs that supplied every numeric answer for a trait. These are different calculations. A bound does not fill the saved data with guessed answers, and it does not assume that a question marked not applicable has a hidden true rating. It asks what follows if every missing position could take a number within the allowed range.
-
-Even with that full range available, Agreeableness, Conscientiousness, and Intellect/Imagination stay above Extraversion for 26 of the 55 models. Nine of them lack a complete reported profile. Among the other models, the known answers either run against that ordering or leave too much room for the missing answers to decide it.
-
-<Figure src="/images/essays/personality-bounds.svg" alt="Possible score ranges when missing answers can take any value from one to five. Kimi K3 Extraversion spans 2.77 to 3.17 and Conscientiousness starts at 4.03. Claude Opus 5.5 Extraversion spans 2.80 to 3.60 and Conscientiousness 3.30 to 4.50." caption="Kimi's lowest possible Conscientiousness score exceeds its highest possible Extraversion score. Opus's two ranges overlap. These limits describe possible completions, not confidence intervals." source="All completion bounds" sourceUrl="/research/personality/completion-bounds.csv" width={800} height={610} wide />
-
-Kimi K3 has enough complete runs for a reported score only in Intellect/Imagination. Under the missing-answer calculation, its Extraversion average could range from 2.77 to 3.17. The lowest possible averages for Agreeableness, Conscientiousness, and Intellect/Imagination are 4.33, 4.03, and 4.53. Each exceeds the highest possible Extraversion value. The missing answers can change the exact averages without changing those comparisons.
-
-Claude Opus 5.5 leaves a different result. Extraversion could range from 2.80 to 3.60 and Conscientiousness from 3.30 to 4.50. These ranges overlap, so different allowed completions can put either trait above the other. The scores that Opus did supply repeated exactly, but that consistency cannot settle the missing comparison.
-
-The two checks should remain separate. Completion bounds vary missing values while keeping the original one-to-five scoring. The numbering check changes the scores assigned to answers already present on complete runs. A model can pass each check separately without a guarantee that it passes when both changes occur together. That combined claim would need its own calculation.
-
-## What earlier studies contribute
-
-[Miotto, Rossberg and Kleinberg's GPT-3 study](https://aclanthology.org/2022.nlpcss-1.24/) used HEXACO-60 and a questionnaire about human values. It asked the personality items separately and also tested prompts containing earlier questions and answers in the values study. Some scores resembled human reference values. Temperature changed several results, and the relationships among scores did not consistently match human data. This gives a reason to report the test procedure alongside a model's profile.
-
-[Jiang and colleagues](https://arxiv.org/abs/2206.07550) developed the Machine Personality Inventory, including 120-item and 1,000-item versions. They also used personality prompts and short scenarios to test assigned traits. A model may be able to act out a requested personality without choosing the same answers when asked to describe itself as an assistant. The present comparison uses the latter instruction and assigns no target character.
-
-[Shu and colleagues](https://aclanthology.org/2024.naacl-long.295/) turned material from 39 questionnaires into 693 yes/no questions and tested seventeen models overall. Changes to answer labels, option order, formatting, and negation could alter responses. Most models were more consistent after an option-order or answer-label change than after a reversal of the statement's meaning, which should reverse the answer. A tendency to agree can look like consistency when only the answer order changes. Repeating one fixed prompt, as this study does, cannot check all those sources of variation.
-
-[Bodroža, Dinić and Bojić](https://pmc.ncbi.nlm.nih.gov/articles/PMC11461045/) tested seven models twice, five days apart for each model. GPT-3 and the other models were tested in different collection periods. Their questionnaires included BFI-2 and HEXACO-100, and their prompts asked models to pretend to be human. Agreement varied by model, trait, and questionnaire. Their design tests consistency over a time gap, which the short-run repetitions here do not establish.
-
-[Serapio-García and colleagues](https://www.nature.com/articles/s42256-025-01115-6) tested eighteen models with IPIP-NEO-300, BFI-44, and a wider set of reliability and validity checks. They asked items separately while varying biographic descriptions and answer instructions. Some larger and instruction-tuned models gave more reliable scores and clearer links to later task responses. Their results concern those models and procedures. They do not validate a different questionnaire and prompt by themselves.
-
-[InCharacter](https://aclanthology.org/2024.acl-long.102/) uses psychological interviews to test how closely a model follows an assigned character. Other LLMs assess the answers against reference labels based on human views of those characters. [TRAIT](https://aclanthology.org/2025.findings-naacl.469/) uses 8,000 imagined situations built from Big Five and Short Dark Triad material. [Ma and colleagues' CSI preprint](https://arxiv.org/abs/2503.20182v2) measures word associations as optimism, pessimism, and neutrality. These methods collect different kinds of responses; their scores cannot be exchanged directly with IPIP-50 scores.
-
-## Which conclusions the answers support
-
-The rule for including a score changes which models enter a summary. Requiring every planned run to supply all ten answers for a trait reduces the number of reported averages from 178 to 112. Extraversion's median stays at 2.83, while Intellect/Imagination rises from 4.41 to 4.48. Agreeableness's median rises from 4.32 to 4.34 as its range narrows. Different models now contribute to the calculation; no missing answer has been recovered.
-
-Formatting rules also affect which scores survive. Accepting only the requested JSON format retains 157 averages. Every accepted Gemma 3 4B and Llama 3.2 1B response needed a format correction, so that stricter reading removes both exceptions to the shared profile pattern. The correction uses only ratings already present in the response. Two normally finished responses lacked only the final closing brace. A separate reader checked every original value; missing items and invalid ratings stayed excluded.
-
-The choice of questions can also change a comparison. Numeric agreement measures how often a model gives the same number when asked an item again. It ranges from 25.5% to 100% across the 53 models that rated some items numerically at least twice. But they did not all supply numbers for the same items. Using only fourteen shared items reverses 186 of 1,378 possible model-pair rankings compared with each model's own item set. The common set contains no Emotional Stability items, so it compares the models on a narrower part of the questionnaire.
-
-These checks show why the answer counts, scoring rules, and repeated responses need to stay beside the averages. A researcher can use the profile to describe a model's answers or select a difference for further testing. Someone choosing an assistant for negotiations or conversations needs evidence from those tasks as well. The questionnaire alone does not show whether a higher Agreeableness or Extraversion score predicts the behavior they need.
-
-A follow-up could fix the instructions and settings for each model, collect its questionnaire scores, and write down a prediction before running a separate task. For example, a negotiation test could record how often an assistant concedes a point under a fixed set of offers. Testing on unfamiliar cases and on later dates would show whether any link with the questionnaire score holds beyond the cases used to find it.
-
-## Paper and data
-
-- [Research paper PDF](/research/personality/paper.pdf)
-- [Supplementary methods, all fourteen tables, and the exact prompt](/research/personality/supplement.html)
-- [All reported model and trait scores](/research/personality/reported-profiles.csv)
-- [Coverage for all 55 configurations](/research/personality/coverage.csv)
-- [All 1,930 model-pair comparisons within repeat-count groups](/research/personality/pair-stability.csv)
-- [Completion bounds for all configurations and domains](/research/personality/completion-bounds.csv)
-- [Chart and profile data](/research/personality/data.json) and [source-file checksums](/research/personality/manifest.json)
+The scores gave me useful questions to follow up. They did not give me a complete account of a model's behavior. If I needed an assistant for a particular job, I would try it on that job and judge the result. Its personality profile would be one small part of the decision.

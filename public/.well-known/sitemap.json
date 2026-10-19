@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.org/sitemap",
-  "generatedAt": "2026-10-17T13:34:06.920949Z",
+  "generatedAt": "2026-10-19T14:26:20.508Z",
   "publisher": {
     "name": "Vedang Vatsa",
     "url": "https://veda.ng"
@@ -47,6 +47,13 @@
       "changefreq": "weekly"
     },
     {
+      "url": "https://veda.ng/agenticfinance",
+      "title": "Agentic Finance",
+      "lastmod": "2026-10-17",
+      "changefreq": "monthly",
+      "priority": 0.8
+    },
+    {
       "url": "https://veda.ng/aidetection",
       "title": "AI Text Detection and the Limits of 96% Accuracy",
       "lastmod": "2026-10-17",
@@ -54,8 +61,8 @@
       "priority": 0.8
     },
     {
-      "url": "https://veda.ng/personality",
-      "title": "Personality Profiles Across 55 Language Models",
+      "url": "https://veda.ng/llmpersonality",
+      "title": "What AI Personality Tests Tell Us",
       "lastmod": "2026-10-17",
       "changefreq": "monthly",
       "priority": 0.8
@@ -64,13 +71,6 @@
       "url": "https://veda.ng/tokentax",
       "title": "The Token Tax of the Web",
       "lastmod": "2026-10-17",
-      "changefreq": "monthly",
-      "priority": 0.8
-    },
-    {
-      "url": "https://veda.ng/bitget-hack",
-      "title": "Bitget reports $351.6 million wallet breach and pauses withdrawals",
-      "lastmod": "2026-09-24T22:10:00Z",
       "changefreq": "monthly",
       "priority": 0.8
     },
@@ -2278,13 +2278,6 @@
       "title": "Webhook",
       "changefreq": "monthly",
       "priority": 0.6
-    },
-    {
-      "url": "https://veda.ng/agenticfinance",
-      "title": "Agentic Finance",
-      "lastmod": "2026-10-17",
-      "changefreq": "monthly",
-      "priority": 0.8
     }
   ]
 }

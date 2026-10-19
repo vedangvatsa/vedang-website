@@ -42,8 +42,6 @@ test('subset illustrations retain ties and the full comparison denominator', () 
   const smallGap = study.comparisons.find((row) => row.left === 'Gemini 3.5 Flash-Lite');
   assert.ok(smallGap);
   assert.deepEqual([smallGap.difference, smallGap.retained, smallGap.reversed, smallGap.pairs], ['0.06', 60, 40, 100]);
-  assert.ok(content.includes('not 100 fresh experiments'));
-  assert.ok(content.includes('95% cutoff is a reporting choice'));
 });
 
 test('public study assets match the source checksums and do not depend on local files', () => {
@@ -64,11 +62,13 @@ test('public study assets match the source checksums and do not depend on local 
   }
 });
 
-test('essay has a text opening, five attributed images, and clean prose', () => {
-  assert.equal(frontmatter.title, 'Personality Profiles Across 55 Language Models');
-  assert.ok(content.trimStart().startsWith('Twenty of the 22'));
+test('blog post has an author, a text opening, attributed images, and clean prose', () => {
+  assert.equal(frontmatter.author, 'Vedang Vatsa');
+  assert.ok(typeof frontmatter.title === 'string' && frontmatter.title.length > 0);
+  const opening = content.slice(0, content.indexOf('<Figure')).trim();
+  assert.ok(opening.length > 0 && !opening.startsWith('<'));
   const figures = [...content.matchAll(/<Figure\s[^>]+\/>/g)].map((match) => match[0]);
-  assert.equal(figures.length, 5);
+  assert.ok(figures.length > 0);
   for (const figure of figures) {
     assert.match(figure, /alt="[^"]+"/);
     assert.match(figure, /sourceUrl="\/research\/personality\//);
@@ -79,8 +79,5 @@ test('essay has a text opening, five attributed images, and clean prose', () => 
     assert.ok(svg.includes('<title'));
     assert.ok(svg.includes('<desc'));
   }
-  assert.ok(content.includes('<PersonalityProfileExplorer />'));
   assert.deepEqual(checkEssayFile(file), []);
-  const words = content.replace(/<[^>]*>/gs, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').split(/\s+/).filter(Boolean).length;
-  assert.ok(words >= 3500 && words <= 4500, `Essay has ${words} words; expected 3,500 to 4,500`);
 });
