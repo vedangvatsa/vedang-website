@@ -8,61 +8,184 @@ description: 'The detector in my study worked well on one test and poorly on ano
 keywords: ['AI text detection', 'AI writing', 'false alarms', 'scientific abstracts', 'writing']
 ---
 
-I would be careful about using an AI detector to question someone's writing. In [my study](https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.pdf), one detector setup scored 95.99% on one collection of research abstracts and 53.89% on another. Both tests used short summaries of research papers.
+In my study, a text detector scored 95.99% in tests within one dataset of scientific abstracts. The same training method scored 53.89% on a separately assembled dataset. In that second test, it caught 976 of 8,319 texts labelled as AI-generated and missed 7,343.
 
-<Figure src="/images/essays/aidetection.svg" alt="The detector scored 95.99% on the original collection and 53.89% on a separate collection." caption="The same detector setup gave very different results on two collections. Each test had equal numbers of published and generated texts." source="My abstract-detection study" sourceUrl="https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.md" width={800} height={400} />
+<Figure
+  src="/images/essays/aidetection.svg"
+  alt="The random-forest detector scored 95.99% on the original dataset and 53.89% on a separate dataset, using a cutoff of 0.5."
+  caption="The same training method, tested within the original data and on a separate collection. Both tests have equal numbers of published and generated texts."
+  source="High Accuracy, Poor Transfer, Tables 3 and 5"
+  sourceUrl="https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.md"
+  width={800}
+  height={400}
+  wide
+/>
 
-An accuracy score counts how often the detector agrees with the labels in a test. It does not tell us how every writer produced a text. Before using that number to judge someone, I would want to know what the test covered and what the detector got wrong.
+I checked the data and several possible reasons for the gap in the [research paper](https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.pdf). A test score counts agreements with a set of labels. A claim about a writer asks who actually produced a document. Connecting the two requires evidence that the labels are sound and that the test covers the kind of writing under review.
 
-## The result did not hold up
+## What went into the dataset
 
-The first test used texts held back from training. But they still came from the same collection.
+The study starts with 100,000 pairs. Each pair contains a text supplied as a published abstract and another supplied as generated text. Abstracts are the short accounts of a paper's question, method and findings. After the study's exclusions, 74,513 pairs remain, giving 149,026 texts. The two groups have the same size because each retained pair contributes one text to each group.
 
-I then tested the approach on [a separately collected set of abstracts](https://huggingface.co/datasets/NicolaiSivesind/ChatGPT-Research-Abstracts/tree/07857e2a97571ab553421ed645ef470bef6fa05c). I checked for overlap and removed the matches I found. The detector did not use the remaining texts for training or for choosing its original cutoff.
+The source files contain [OpenAlex](https://arxiv.org/abs/2205.01833) record IDs, titles, publication years, DOI information and abstract fields. A DOI is an identifier used to locate a publication. The source file and the paired file agree on IDs, years and published-text strings. That checks whether the two local files line up. It does not check every stored abstract against the publisher's version.
 
-On this second test, it caught 976 of the 8,319 abstracts labelled as AI-generated. It missed 7,343. It caught about 12 of every 100 generated examples.
+The original records list publication years from 1670 to 2021. The pre-2022 cutoff gives a reason to use them as a presumed-human comparison, before ChatGPT became a public writing tool. Dates alone cannot prove who wrote every word in a stored text. Some abstract fields also contain extra material. The longest retained published record contains 5,162 counted words, far more than the short summary most readers would expect.
 
-It still labelled most of the published abstracts correctly. That is why the overall accuracy score does not show how often it missed the generated texts. I need to look at the two kinds of mistake separately: wrong flags and missed detections.
+The audit queried all 100,000 original IDs against OpenAlex on 5 October 2026. DOI lookups recovered ten more records after the first checks. The final count was 98,907 retrieved and 1,093 unresolved. Of the retained published texts, 66,605 matched the current abstract after cleaning. The current index classifies 5,134 retained works as conference papers and 654 as book reviews, and marks 31 as retracted.
 
-## Length was a useful clue
+An unresolved ID does not prove that a paper is invented. A record may have changed or merged with another entry. A retraction flag also says nothing about whether AI wrote the text. These checks describe agreement with a dated research index. They show why a field labelled “abstract” needs checking before it is used to train a detector.
 
-The main detector used eight text measurements. These included sentence lengths, word variety, and counts of words such as “may” or “however.” It had no access to the writer's notes or drafts.
+The generation records have their own gaps. Archived OpenAI scripts name GPT-4o-mini, temperature 0.7 and an output limit of 400 tokens. Two prompts ask for academic abstracts of 150-250 or about 200-300 words, using the paper title. The files do not preserve the date, returned model version, prompt assignment or stopping reason for each output. The study therefore measures agreement with the supplied labels, without claiming to know every text's full writing history.
 
-The generated abstracts in the original collection clustered around 200 words. The published abstracts varied more in length. A version of the detector using only word and sentence counts reached about 90% accuracy on that collection.
+<StatRow>
+  <Stat value="74,513" label="Pairs kept from the original data" source="Study data" sourceUrl="https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.md" />
+  <Stat value="73,886" label="Groups of related source records" source="Study data" sourceUrl="https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.md" />
+  <Stat value="8,319" label="Pairs kept for the separate test" source="Study data" sourceUrl="https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.md" />
+</StatRow>
 
-On the separate collection, the same length-only approach scored about 52%.
+## The eight measurements
 
-Length helped separate the labels in the first set of texts. It worked poorly in the second. That is a reason to check whether a detector has found a useful clue for a new use, or a pattern tied to the data it learned from.
+The detector receives eight numbers for each text. It does not read the full paper, check whether the research happened or inspect the writer's drafts. The measurements describe sentence lengths, vocabulary and matches with fixed word lists.
 
-Length did not explain the whole result. When I trained and tested the full model on pairs where both texts had 150-250 words, it still scored 94.82%. There were other useful differences within that set. The harder question was whether they would hold up elsewhere.
+| Measurement | What the code counts |
+| --- | --- |
+| Mean sentence length | Average words per sentence |
+| Sentence-length variation | Spread in sentence lengths relative to their average |
+| Vocabulary variety, or MTLD | How long word sequences maintain a chosen level of variety |
+| Hedge matches | Matches with words such as “may” and “perhaps” |
+| Booster matches | Matches with words such as “clearly” and “certainly” |
+| Self-mentions | Matches with words such as “I,” “we” and “our” |
+| Connector matches | Matches with words and phrases such as “however” and “in addition” |
+| Connector openings | Share of sentences whose first counted words match a connector |
 
-I could not identify one cause for the gap between the collections. They differed in several ways, including the reported generator, prompts, and source mix. The data did not separate those effects.
+The four word-list counts use matches per 1,000 words. That puts texts of different lengths on the same scale. A density of five means five matches per 1,000 counted words, not five matches in every abstract. The [methods supplement](https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/SUPPLEMENTARY_METHODS.md) lists the dictionaries and explains exactly how the code counts words and sentences.
 
-## A wrong flag still needs an answer
+Sentence-length variation uses the standard deviation divided by the mean. A lower value means the sentences are more similar in length relative to their average. The original generated texts have a mean value of 0.206, compared with 0.396 for published texts. This describes a difference in the stored writing; it does not explain why the difference arose.
 
-The detector wrongly flagged 328 of the published abstracts in the second test. These were errors against the labels in the data.
+MTLD comes from work by [McCarthy and Jarvis](https://doi.org/10.3758/BRM.42.2.381). It measures how long vocabulary variety stays above a chosen level as the code works through a text. This study uses a threshold of 0.72 and averages forward and reverse passes. Generated texts have mean MTLD 118.90, compared with 76.69 for published texts. Higher measured variety here does not imply that the model has a larger vocabulary than the authors.
 
-A reviewer would still need evidence about the document before making a claim about its writer. The files also lacked a complete writing history for every text. Neither a detector score nor a label in a dataset can supply that missing history.
+Word lists need similar care. “May” can express doubt or name a month. Counting the word does not settle its meaning. A self-mention count also cannot tell whether a writer made a deliberate choice, followed a journal's rules or copied a template. The names of the features are shorthand for the calculations, not direct readings of a person's intent.
 
-I later checked whether changing the cutoff would help. The cutoff is the score a text needs before the system flags it. Lowering it catches more generated texts, but can also flag more published ones.
+[Desaire and colleagues](https://pmc.ncbi.nlm.nih.gov/articles/PMC10328544/) earlier used 20 features to classify scientific writing and ChatGPT output. They studied paragraphs from Science Perspectives articles and generated essays. That work supports trying small feature sets. Its scores concern a different writing task, so they cannot serve as expected scores for this abstract dataset.
 
-The best cutoff I found after looking at the second test's answers reached about 68% accuracy. It also wrongly flagged more than a third of the published texts. And because I chose it after seeing the answers, that result was not a fresh test on new writing.
+## Why length and close copies matter
 
-That trade-off matters. A higher accuracy number is not automatically a better result for the people whose work receives a warning.
+Each text needs at least 100 counted words and two sentences with word tokens. Applying the rules in order removes 19 pairs with missing source titles, one title-content conflict, 113 normalized duplicates, 23,501 pairs below the word minimum and 1,853 below the sentence minimum. The resulting score applies to the remaining texts, not to the short or incomplete inputs left out.
 
-## What I would ask before using a detector
+The generated texts in the original data have a tight length range. Their median is 199 words, and the middle half run from 193 to 205 words. Published texts have a wider spread. The separate dataset differs again.
 
-This study tested one basic approach. Other tools may perform differently and need their own checks.
+| Dataset and label | Median words | Middle half of texts |
+| --- | ---: | ---: |
+| Original, published | 186 | 141-245 |
+| Original, generated | 199 | 193-205 |
+| Separate, published | 234 | 168-291 |
+| Separate, generated | 203 | 150-267 |
 
-Before using one, I would ask:
+A model using only word and sentence counts reaches 90.38% accuracy in the original data. It needs none of the hedge, booster or connector lists to separate most records. The requested lengths and output limit could help explain this result, but the missing request history prevents measuring their exact effect.
 
-- Did the test include writing like the documents I plan to review?
-- How many published texts did the tool wrongly flag?
-- How much generated writing did it miss?
-- Did the people choosing the cutoff already know the test's answers?
+The study also trains the full model where both texts have 150-250 words. Accuracy remains 94.82%. Restricting the range does not make the length distributions identical. It also changes which texts the model learns from and which texts test it. The difference between this result and the full-data result cannot be read as the amount of accuracy caused by length alone.
 
-I would also look at the writing itself. Are its sources real? Do its claims match those sources? Can the writer explain the work behind it? These questions can lead to evidence that a detector score alone does not provide.
+Close copies create another problem. A paper can appear under more than one ID, or two records can contain nearly the same text. If one copy enters training and another enters the test, their measurements may be almost identical. A test containing familiar copies can look better than a test on genuinely different examples.
 
-The rules matter too. Editing, translation, and generating a whole draft are different uses of AI. A pattern in sentence lengths does not establish which happened or whether it broke a rule.
+The study groups records with matching source IDs, titles after text cleaning, word sequences or valid DOIs. It also joins IDs that the current index links to the same work. To find close copies, the code compares sets of five-word sequences. A candidate pair gets a link when its exact Jaccard similarity is at least 0.85. That score compares the sequences shared by both texts with the distinct sequences across the pair. The search finds 521 links. The final 73,886 source groups stay together during testing, though the search can miss some relationships.
 
-If a tool raises a question about someone's work, the people using it should be able to show that it works on that kind of writing. A high percentage from a different test would not be enough for me.
+## What the 95.99% score means
+
+The main model is a random forest with 100 trees. Each tree learns rules based on the eight measurements, and the forest combines their outputs. The study keeps the model settings fixed. It also tests simpler models using length alone, vocabulary variety alone, sentence-length variation alone, or the full set without vocabulary variety.
+
+The original-data test assigns source groups to five parts, called folds. For each part, a model learns from the other four and predicts the part held back. Every text therefore gets one test prediction from a model that did not train on its source group. The 95.99% accuracy comes from those predictions, not from asking a model to label the same records it just learned.
+
+This is a useful check against simple memorization. But the five parts still share the same collection process. Similar prompts, requested lengths and formatting can appear throughout them. A pattern linked to that process may work in every part of the original dataset and fail on a different collection. Keeping texts apart does not automatically make their sources different.
+
+The forest correctly labels 71,831 published texts and 71,225 generated texts. It wrongly flags 2,682 published texts and misses 3,288 generated texts. The false-positive rate is 3.60%, meaning the share of published texts flagged as generated. Recall is 95.59%, meaning the share of generated texts detected.
+
+Accuracy averages these outcomes across equal-sized classes. A reader who expects mostly human writing needs more than that average. False alarms and missed generated texts have different costs, and their totals depend on how often each kind of text occurs. The separate-dataset test examines one further part of the problem: whether the measured error rates carry over at all.
+
+## Testing on a separate dataset
+
+The second collection comes from [Nicolai Thorer Sivesind's ChatGPT-Research-Abstracts dataset](https://huggingface.co/datasets/NicolaiSivesind/ChatGPT-Research-Abstracts/tree/07857e2a97571ab553421ed645ef470bef6fa05c). Its author reports using GPT-3.5-turbo-0301 to generate abstracts from titles, with requested word counts equal to the published abstracts. It contains 10,000 pairs. The study records the exact version and checks for overlap with all 100,000 original local pairs.
+
+Eighteen pairs overlap by title and two by normalized text. The word minimum excludes another 1,658 pairs, and the sentence minimum excludes three. The remaining 8,319 pairs provide 16,638 test texts. None enters model training, scaling, model selection or selection of the original decision cutoff.
+
+For this test, the models learn from all 149,026 retained original texts. That differs from the five-part test, where each fit leaves one part out. The training settings stay the same, but the amount of training data changes. A later check holds the trained models fixed across both datasets to see whether that difference explains the gap.
+
+<AbstractTransferComparison />
+
+On the separate dataset, the forest correctly labels 7,991 published texts and wrongly flags 328. It detects only 976 generated texts and misses 7,343. Its false-positive rate is 3.94%, close to the original 3.60%, but recall falls to 11.73%. The model gives the published label to most texts, including most of the generated ones.
+
+<AbstractTransferErrors />
+
+Because the classes have equal sizes, a rule that calls everything published would score 50%. The forest's 53.89% is 3.89 percentage points higher. Calling it “the same as chance” would go beyond the reported analysis. The measured gap is a loss of accuracy, with very low detection of generated texts at the chosen cutoff.
+
+The scores still contain some information. Their ROC AUC is 0.7296. This measure compares how the scores rank published and generated texts across cutoffs, giving tied scores half credit. The model can rank many pairs correctly while putting both scores below the cutoff used to flag generated text. That explains how useful ranking information can coexist with poor detection at one cutoff.
+
+## Changing the score cutoff
+
+The original rule flags a text when its score is above 0.5. Ties get the published label. Lowering that cutoff catches more generated texts, but can also flag more published texts. The model's score is not a measured probability that a particular writer used AI. A cutoff is a decision rule whose effects need testing.
+
+The study first chooses other cutoffs using only the original-data test scores. One choice seeks the best balanced accuracy, which here equals accuracy because the classes have equal sizes. Two others seek false-positive rates no higher than 1% or 5% in the original data. Applied to the separate dataset, the listed choices give accuracies from 51.30% to 55.01%.
+
+| How the cutoff was chosen | Cutoff | Accuracy on separate data | Generated texts detected | Published texts wrongly flagged |
+| --- | ---: | ---: | ---: | ---: |
+| Original default | 0.50 | 53.89% | 11.73% | 3.94% |
+| Best accuracy on original test scores | 0.49 | 53.99% | 12.09% | 4.11% |
+| At most 5% false alarms on original data | 0.41 | 55.01% | 15.15% | 5.12% |
+| Best result chosen using separate-test labels | 0.03 | 68.17% | 70.91% | 34.57% |
+
+The last row follows a different rule. It uses the separate test's answers to choose the cutoff, then scores that choice on the same records. This is often called a test-label oracle. It finds the best observed result for any single cutoff on these fixed forest scores. It is an optimistic check, not an independently tested setting for future texts.
+
+Even with that advantage, accuracy reaches 68.17% rather than the original 95.99%. It also wrongly flags 34.57% of published texts. Changing the cutoff recovers some accuracy, but does not restore the original result. This finding concerns the saved scores and single-cutoff rules; it says nothing about the best result another model could reach.
+
+The two false-positive targets give separate-test estimates of 1.07% and 5.12%. Those small differences from the targets do not, on their own, show a meaningful failure. The much clearer weakness is low recall. Judging every small numerical difference as a finding would make the argument less careful, not more complete.
+
+## A simpler model does better on the second test
+
+Logistic regression combines the same eight measurements using learned weights. The study fixes its settings and fits the scaling step using training data only. It reaches 90.06% accuracy on the original dataset and 68.91% on the separate dataset. Choosing between these two models using only original-data accuracy would have picked the forest, which then performs worse on the second test.
+
+The logistic model catches 49.79% of the generated texts, but its false-positive rate is 11.97%. The forest's rate is 3.94%. The logistic model's higher accuracy therefore comes with more false alarms at the 0.5 cutoff. An editor needs to know both outcomes before deciding whether either model would help with a particular review process.
+
+The difference goes beyond that cutoff. On the separate data, logistic regression has an AUC of 0.8310, compared with 0.7296 for the forest. At cutoffs chosen to keep the measured false-positive rate on these data at or below 5%, it detects 24.45% of generated texts; the forest detects 14.29%. These choices use the separate test's labels, so they describe the observed scores rather than a fresh test of a deployed rule.
+
+The estimated accuracy advantage is 15.01 percentage points, with a conditional 95% interval of 14.36-15.63 points. The calculation samples source groups with replacement 1,000 times and compares both models on the same sampled groups. It keeps each pair together and keeps the predictions fixed. The interval describes variation in the existing results; it does not include uncertainty from building another dataset or training on it.
+
+For the forest, the corresponding accuracy intervals are 95.89%-96.09% on the original data and 53.50%-54.25% on the separate data. Small intervals do not solve the larger question of which dataset represents a future use. More records can narrow a measured range while leaving the choice of records, their labels and their relevance open to doubt.
+
+## Checking other explanations
+
+The stricter source check keeps pairs whose title, year and cleaned abstract agree with the current index, which lists the source as an English article and marks it as not retracted. This leaves 56,355 pairs. The forest reaches 95.92% within that subset. Training on it and testing on the separate dataset gives 53.85% accuracy.
+
+Randomness during training also gets a check. Forests fitted with seeds 7, 42 and 2026 score from 53.88% to 53.91% on the separate dataset. The seed-42 fit reproduces its earlier scores. The result looks similar across these three fits, although repeated use of the same test records does not create three independent datasets.
+
+A length check keeps the original predictions but scores only pairs where both texts have 150-250 words. It gives 94.86% accuracy on original data and 57.35% on separate data. The first number differs from the earlier 94.82% because the earlier model learned only from texts within that range. Changing training data and filtering already-made predictions are different tests.
+
+The study then uses each trained fold model on both datasets. Original-data accuracy ranges from 95.79% to 96.19%; separate-data accuracy ranges from 53.70% to 53.98%. The gap appears even when the trained model itself stays fixed. It cannot be explained solely by the earlier comparison between five-part validation and a model trained on all original records.
+
+The two collections still differ in reported generator, prompt, requested length, source mix and other conditions. Title-based generation also gives the model less information than the original authors had. A shared title can align topics while leaving methods, findings and detail very different. The current comparison cannot separate those effects.
+
+## What false alarms mean for a writer
+
+A false-positive rate and the chance that a flag is wrong use different totals. The first divides false alarms by all published texts. The second divides false alarms by all flagged texts. Confusing the two can make a detector sound much safer than it is, especially when generated writing forms a small share of the documents under review.
+
+The paper gives a hypothetical example with 10,000 texts, of which 100 are generated. If the original test's recall and false-positive rate carried over, the model would flag about 96 generated texts and 356 published texts. Only about 21% of its flags would be correct. The calculation assumes a 1% generated-text share; it does not estimate how much AI writing an editor actually receives.
+
+The reason is the size of the published group. A small error rate applied to 9,900 texts can produce more false alarms than a high detection rate applied to 100 generated texts produces correct flags. The original test uses two equal-sized classes. A real queue of submissions may have a different mix.
+
+Using fractions rather than percentages, let `p` be the share of generated texts, `r` the fraction detected, and `f` the false-positive rate. The expected share of flags that are correct is `r × p / (r × p + f × (1 - p))`. The formula divides the expected rate of correct flags by the expected rate of all flags.
+
+The example also assumes that the error rates carry over. The separate-dataset test gives a reason to check that assumption. A detector can change both the number of flags it raises and the kinds of texts it misses. A single percentage from a balanced benchmark cannot describe all those changes.
+
+Writer background and editing create further questions. [Liang and colleagues](https://arxiv.org/abs/2304.02819) found that several detectors made more errors on non-native English writing. [Gao and colleagues](https://www.nature.com/articles/s41746-023-00819-6) found errors in both automated detection and blinded human review of medical abstracts. These studies give reasons to test on the kinds of writers and documents a system will judge, rather than assume a general score applies to everyone.
+
+An explanation naming sentence variation or connector use can help someone inspect a calculation. It still cannot tell an editor whether a writer used an allowed tool, revised a generated draft, translated their own work or wrote the text without assistance. A claim of misconduct also depends on the applicable rules. Those facts do not appear in the detector's eight measurements.
+
+## What an editor needs to know
+
+The results do not settle the performance of other detectors. [RAID](https://arxiv.org/abs/2405.07940v2) tests several methods across generators, domains, decoding choices and attacks. The [GenAI Content Detection Task 3](https://arxiv.org/abs/2501.08913) reports high detection rates when the tested domains and generators appear in training, using thresholds set separately by domain. [MELD](https://arxiv.org/abs/2605.06903v2) reports broader training and cutoffs set from each test pool's human scores. The way a threshold is chosen is part of what a reported result means.
+
+Earlier results from the original dataset were already known when the revised analysis began. The first test on the separate data used settings fixed before its scores were inspected. The later cutoff and retraining checks came after that result. The study recorded its plans locally but did not register them in advance. These dates distinguish the original test from questions raised by its outcome.
+
+A further study could keep generation responses and prompt assignments, check source texts, and choose a separate test before inspecting its answers. Giving a generator verified study notes would help test writing style under more similar information. Separate human examples could set a false-positive target before testing it on another collection. Each change would answer a question that the stored files cannot answer now.
+
+Before using a score to question a writer, an editor needs to know what texts tested the model, which cutoff produced the flag, how many false alarms that rule made, and how the test labels were checked. The next step is to examine the evidence about the manuscript itself. A 96% benchmark score cannot stand in for that review.
+
+[Paper](https://github.com/vedangvatsa/research-paper-framework/blob/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper/linguistic_markers_paper.pdf) · [Code and results](https://github.com/vedangvatsa/research-paper-framework/tree/076f6f45c7a71d801cb58d202938422b39b48e1f/papers/linguistic-markers-paper)

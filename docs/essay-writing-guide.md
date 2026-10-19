@@ -72,10 +72,10 @@
 
 ### Structure
 - **Purpose**: This is Vedang's personal website. Essays are readable blog posts, including when they draw on his research.
-- **Length**: There is no minimum. Use only the words needed to explain the idea. Do not pad a post to reach a word count.
+- **Length and depth**: Let the subject determine the length. Preserve substantive analysis when editing for clarity. Keep the evidence, examples, comparisons, and reasoning that answer the reader's questions. Remove padding and repetition without reducing a detailed essay to a basic overview. There is no word-count quota.
 - **Opening**: State the idea or a supported observation in ordinary words. Avoid a forced hook or invented scene. The opening paragraph MUST appear as plain text BEFORE the hero `<Figure>` component.
-- **Body**: Give each paragraph one job. Explain a term when the reader needs it. Use only a few useful numbers and examples instead of walking through the paper's methods and results.
-- **Visuals**: Include a chart or table only when it makes the point easier to understand. Full score grids, formulas, and detailed checks belong in the linked research, not in the reading flow.
+- **Body**: Give each paragraph one job. Develop the main claims with evidence, concrete examples, and explanations the reader can follow. Explain technical terms when they first matter. Include methods and checks when they help the reader judge the results.
+- **Visuals**: Use charts, comparisons, and score tables when they help answer the reader's questions. Explain how to read them and keep them near the relevant discussion. Important results should be understandable in the essay itself, with linked research for further detail.
 - **Closing**: Stop when the point is clear. Avoid a repeated summary, a grand claim, or a forced question.
 
 ### MDX Components Used

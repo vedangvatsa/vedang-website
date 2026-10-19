@@ -4,7 +4,7 @@ When working on this project, you MUST read and follow these guidelines before m
 
 ## Essay Content
 - This is Vedang's personal website. Essays should read like clear, approachable blog posts, using first person for his own research and views.
-- Use simple words, short paragraphs, and only the detail needed to explain the point. There is no minimum word count. Avoid stock AI phrases, filler, repeated conclusions, and research-paper structure.
+- Use simple words and short paragraphs while preserving the subject's depth. Keep useful evidence, examples, comparisons, charts, and explanations. Cut filler and repeated conclusions; do not compress a substantive essay into a short overview unless requested. There is no word-count quota.
 - Every factual claim must have support. Never invent statistics, sources, quotes, personal experiences, or reasons why a model behaved a certain way.
 - **Essay Writing Guide**: `docs/essay-writing-guide.md` — Structure, MDX components, formatting rules, banned phrases, citation standards, and the 10-step essay pipeline.
 - **AI Slop Avoidance**: `docs/ai-slop-avoidance.md` — Comprehensive list of banned AI-generated phrases. Check ALL content against this before committing.
