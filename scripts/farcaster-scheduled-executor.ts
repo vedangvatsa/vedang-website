@@ -94,10 +94,12 @@ function truncateForFarcaster(text: string): string {
   return text.substring(0, MAX_CAST_LENGTH - 3) + '...';
 }
 
+type VideoStreamMetadata = { width_px?: number; height_px?: number };
 type VideoMetadata = {
   _status?: string;
   content_type?: string;
-  video?: { duration_s?: number; stream?: Array<{ width_px?: number; height_px?: number }> };
+  // The live API returns streams; its OpenAPI schema also documents stream.
+  video?: { duration_s?: number; streams?: VideoStreamMetadata[]; stream?: VideoStreamMetadata[] };
 };
 
 export async function prepareVideoEmbed(source: string, request: typeof fetch = fetch, wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))): Promise<string> {
@@ -118,7 +120,7 @@ export async function prepareVideoEmbed(source: string, request: typeof fetch = 
     if (metadata?._status?.toUpperCase() === 'RESOLVED' &&
         /^video\/mp4(?:;|$)/i.test(metadata?.content_type || '') &&
         (metadata?.video?.duration_s || 0) > 0 &&
-        metadata?.video?.stream?.some(stream => (stream.width_px || 0) > 0 && (stream.height_px || 0) > 0)) {
+        (metadata?.video?.streams ?? metadata?.video?.stream)?.some(stream => (stream.width_px || 0) > 0 && (stream.height_px || 0) > 0)) {
       return url;
     }
     if (['RESOLVED', 'ERROR', 'FAILED'].includes(metadata?._status?.toUpperCase() || '')) break;

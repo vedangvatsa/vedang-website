@@ -8,7 +8,7 @@ import { ROOT } from './viz-publishing.js';
 
 const raw = 'https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/scripts/viz-assets/videos/01-population-2000-2024.mp4';
 const hosted = 'https://veda.ng/api/social-video/scripts/viz-assets/videos/01-population-2000-2024.mp4';
-const resolved = { metadata: { _status: 'RESOLVED', content_type: 'video/mp4', video: { duration_s: 30, stream: [{ width_px: 1080, height_px: 1920 }] } } };
+const resolved = { metadata: { _status: 'RESOLVED', content_type: 'video/mp4', video: { duration_s: 30, streams: [{ width_px: 1080, height_px: 1920 }] } } };
 
 test('Farcaster waits for video metadata and never treats binary download headers as video', async () => {
   const key = process.env.NEYNAR_API_KEY;
@@ -30,9 +30,17 @@ test('Farcaster waits for video metadata and never treats binary download header
     };
     assert.equal(await prepareVideoEmbed(raw, request, async () => {}), hosted);
     assert.equal(calls, 3);
+    const documented = { metadata: { ...resolved.metadata, video: { duration_s: 30, stream: resolved.metadata.video.streams } } };
+    assert.equal(await prepareVideoEmbed(raw, async (_url, init) => init?.method === 'HEAD'
+      ? new Response(null, { headers: { 'Content-Type': 'video/mp4' } }) : Response.json(documented)), hosted);
     await assert.rejects(prepareVideoEmbed(raw, async () => new Response(null, { headers: { 'Content-Type': 'application/octet-stream' } })), /video\/mp4/);
     await assert.rejects(prepareVideoEmbed(raw, async () => new Response(null, { status: 404 })), /deploy the media endpoint/);
-    for (const metadata of [{ _status: 'RESOLVED', content_type: 'text/html' }, { _status: 'PENDING' }, { _status: 'ERROR' }]) {
+    for (const metadata of [
+      { _status: 'RESOLVED', content_type: 'text/html' },
+      { ...resolved.metadata, video: { duration_s: 30, streams: [] } },
+      { ...resolved.metadata, video: { duration_s: 30, streams: [{ width_px: 0, height_px: 1920 }] } },
+      { _status: 'PENDING' }, { _status: 'ERROR' },
+    ]) {
       await assert.rejects(prepareVideoEmbed(raw, async (_url, init) => init?.method === 'HEAD'
         ? new Response(null, { headers: { 'Content-Type': 'video/mp4' } }) : Response.json({ metadata }), async () => {}), /no cast was sent/);
     }
