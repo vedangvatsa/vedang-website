@@ -1426,8 +1426,8 @@
     "text": "How the largest wine producers changed.\n\n2000-2023. Wine production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-18",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-19T13:15:36.217Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/75-r2.txt",
     "captionStyle": "concise-v2",
@@ -1439,7 +1439,14 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/75-wine-2000-2023.mp4",
+    "state": "sent",
+    "attemptedAt": "2026-10-19T13:15:36.009Z",
+    "attemptedSlot": "2026-10-19T14:00",
+    "publishedText": "How the largest wine producers changed.\n\n2000-2023. Wine production by country, measured in millions of tonnes.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0x92ba3e21",
+    "platformPostId": "0x92ba3e21225ac29ac9be4bdf4a3bb37684e2fe03"
   },
   {
     "id": "viz-b2-farcaster-76",
