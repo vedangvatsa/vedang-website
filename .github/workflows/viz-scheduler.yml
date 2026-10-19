@@ -34,6 +34,7 @@ jobs:
       DRY_RUN: ${{ inputs.mode == 'dry-run' && '1' || '0' }}
       VIZ_MEDIA_BASE_URL: ${{ vars.VIZ_MEDIA_BASE_URL }}
       VIZ_NOTES_BASE_URL: ${{ vars.VIZ_NOTES_BASE_URL }}
+      FARCASTER_MEDIA_PROXY_BASE_URL: ${{ vars.FARCASTER_MEDIA_PROXY_BASE_URL }}
       VIZ_DIRECT_PLATFORMS: ${{ (github.event_name == 'schedule' || inputs.include_direct == true) && vars.VIZ_DIRECT_PLATFORMS || '' }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
       BUFFER_YOUTUBE_CHANNEL_ID: ${{ secrets.BUFFER_YOUTUBE_CHANNEL_ID }}
@@ -96,7 +97,7 @@ jobs:
 
       - name: Validate publishing logic and all captions offline
         if: steps.due.outputs.run == 'true'
-        run: npx tsx --test scripts/viz-publishing.test.ts
+        run: npx tsx --test scripts/viz-publishing.test.ts scripts/farcaster-video.test.ts tests/social-video.test.ts
 
       - name: Read-only account preflight
         id: buffer_preflight

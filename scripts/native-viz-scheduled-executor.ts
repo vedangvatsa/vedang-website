@@ -62,8 +62,7 @@ export async function publish(platform: string, post: VizPost, video: string, ur
   }
 }
 
-export async function runPlatform(platform: string, dryRun: boolean) {
-  const file = path.join(ROOT, 'scripts', `viz-${platform}-posts.json`);
+export async function runPlatform(platform: string, dryRun: boolean, file = path.join(ROOT, 'scripts', `viz-${platform}-posts.json`)) {
   const posts = readQueue(file);
   if (dryRun) {
     for (const p of posts) { localVideo(p); validateCaption(platform, p.text); }
@@ -80,7 +79,13 @@ export async function runPlatform(platform: string, dryRun: boolean) {
   let url: string | undefined;
   if (['threads', 'farcaster'].includes(platform)) {
     url = publicVideoUrl(post);
-    await checkPublicVideo(url);
+    if (platform === 'farcaster') {
+      const { prepareVideoEmbed } = await import('./farcaster-scheduled-executor.js');
+      url = await prepareVideoEmbed(url);
+      post.videoEmbedUrl = url;
+    } else {
+      await checkPublicVideo(url);
+    }
   }
   post.state = 'publishing';
   post.attemptedAt = new Date().toISOString();

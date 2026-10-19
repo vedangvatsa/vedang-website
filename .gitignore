@@ -59,6 +59,8 @@ scripts/analytics-report.json
 *.test.js
 *.test.ts
 !scripts/viz-publishing.test.ts
+!scripts/farcaster-video.test.ts
+!tests/social-video.test.ts
 __pycache__/
 .wp-browser-session/
 .health-protocols-data/

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Farcaster Scheduled Executor
- * Posts text + image content to Farcaster via Neynar API.
+ * Posts text with validated image or video embeds via Neynar API.
  * Reads from farcaster-posts.json (same format as linkedin-posts.json).
  */
 import dotenv from 'dotenv';
@@ -9,6 +9,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { isMain } from './viz-publishing.js';
+import { farcasterVideoUrl, socialVideoSource } from '../src/lib/social-video.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -93,11 +94,47 @@ function truncateForFarcaster(text: string): string {
   return text.substring(0, MAX_CAST_LENGTH - 3) + '...';
 }
 
+type VideoMetadata = {
+  _status?: string;
+  content_type?: string;
+  video?: { duration_s?: number; stream?: Array<{ width_px?: number; height_px?: number }> };
+};
+
+export async function prepareVideoEmbed(source: string, request: typeof fetch = fetch, wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))): Promise<string> {
+  const apiKey = process.env.NEYNAR_API_KEY;
+  if (!apiKey) throw new Error('NEYNAR_API_KEY is required to verify the video embed');
+  const url = farcasterVideoUrl(source, process.env.FARCASTER_MEDIA_PROXY_BASE_URL || undefined);
+  const head = await request(url, { method: 'HEAD', signal: AbortSignal.timeout(30000) });
+  if (!head.ok) throw new Error(`Farcaster video returned HTTP ${head.status}; deploy the media endpoint before publishing`);
+  if (!/^video\/mp4(?:;|$)/i.test(head.headers.get('content-type') || '')) {
+    throw new Error('Farcaster video must be served as video/mp4, not a binary download');
+  }
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const response = await request(`https://api.neynar.com/v2/farcaster/cast/embed/crawl/?url=${encodeURIComponent(url)}`, {
+      headers: { 'x-api-key': apiKey }, signal: AbortSignal.timeout(30000),
+    });
+    if (!response.ok) throw new Error(`Farcaster video metadata check returned HTTP ${response.status}`);
+    const { metadata } = await response.json() as { metadata?: VideoMetadata };
+    if (metadata?._status?.toUpperCase() === 'RESOLVED' &&
+        /^video\/mp4(?:;|$)/i.test(metadata?.content_type || '') &&
+        (metadata?.video?.duration_s || 0) > 0 &&
+        metadata?.video?.stream?.some(stream => (stream.width_px || 0) > 0 && (stream.height_px || 0) > 0)) {
+      return url;
+    }
+    if (['RESOLVED', 'ERROR', 'FAILED'].includes(metadata?._status?.toUpperCase() || '')) break;
+    if (attempt < 2) await wait(5000);
+  }
+  throw new Error('Farcaster could not recognise the embed as a playable video; no cast was sent');
+}
+
 export async function postCast(text: string, imageUrl?: string | null): Promise<{ success: boolean; hash?: string; url?: string; error?: string }> {
+  const apiKey = process.env.NEYNAR_API_KEY;
+  const signerUuid = process.env.NEYNAR_SIGNER_UUID;
+  if (!apiKey || !signerUuid) return { success: false, error: 'Farcaster credentials are missing' };
   const castText = truncateForFarcaster(text);
 
   const body: Record<string, unknown> = {
-    signer_uuid: SIGNER_UUID,
+    signer_uuid: signerUuid,
     text: castText,
   };
 
@@ -108,7 +145,7 @@ export async function postCast(text: string, imageUrl?: string | null): Promise<
   const res = await fetch('https://api.neynar.com/v2/farcaster/cast', {
     method: 'POST',
     headers: {
-      'x-api-key': NEYNAR_API_KEY,
+      'x-api-key': apiKey,
       'content-type': 'application/json',
     },
     body: JSON.stringify(body),
@@ -175,10 +212,13 @@ async function main() {
     console.log(`   Text: ${post.text.substring(0, 80)}...`);
 
     let imageUrl: string | null = null;
-    if (post.image) {
-      // Try Neynar CDN first (required for video, preferred for images)
-      const mediaType = isVideo(post.image) ? '🎬 video' : '📷 image';
-      console.log(`  ${mediaType}: Uploading via Neynar storage...`);
+    if (post.image && isVideo(post.image)) {
+      const absolute = path.resolve(REPO_ROOT, post.image);
+      if (!fs.existsSync(absolute)) throw new Error('Farcaster video file is missing');
+      const relative = path.relative(REPO_ROOT, absolute).split(path.sep).join('/');
+      imageUrl = await prepareVideoEmbed(socialVideoSource(relative));
+    } else if (post.image) {
+      console.log('  Uploading image via Neynar storage...');
       imageUrl = await uploadToNeynarStorage(post.image);
       
       // Fallback: use GitHub raw URL for images if CDN upload failed (e.g. free plan 402)

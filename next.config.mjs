@@ -135,6 +135,14 @@ const nextConfig = {
         ],
       },
       {
+        source: '/api/social-video/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Methods', value: 'GET, HEAD, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: 'Range, If-Range' },
+          { key: 'Access-Control-Expose-Headers', value: 'Content-Length, Content-Range, Accept-Ranges, ETag, Last-Modified' },
+        ],
+      },
+      {
         source: '/.well-known/mcp/:path*',
         headers: [
           { key: 'RateLimit', value: 'limit=60, remaining=59, reset=60' },
