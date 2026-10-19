@@ -1,0 +1,50 @@
+name: Farcaster Video Check (read-only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_url:
+        description: Public MP4 URL to validate without publishing a cast
+        type: string
+        required: true
+        default: https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/scripts/viz-batch2-assets/no-attribution/74-cotton-lint-2000-2023.mp4
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /package.json
+            /package-lock.json
+            /scripts/farcaster-scheduled-executor.ts
+            /scripts/viz-publishing.ts
+            /scripts/viz-queue-time.mjs
+            /src/lib/social-video.ts
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Require a playable video from Neynar
+        env:
+          NEYNAR_API_KEY: ${{ secrets.NEYNAR_API_KEY }}
+          FARCASTER_MEDIA_PROXY_BASE_URL: ${{ vars.FARCASTER_MEDIA_PROXY_BASE_URL }}
+          VIDEO_URL: ${{ inputs.video_url }}
+        run: |
+          npx tsx -e '
+            import { prepareVideoEmbed } from "./scripts/farcaster-scheduled-executor.ts";
+            prepareVideoEmbed(process.env.VIDEO_URL!)
+              .then(url => console.log(`Validated playable video: ${url}`))
+              .catch(error => { console.error(error.message); process.exitCode = 1; });
+          '

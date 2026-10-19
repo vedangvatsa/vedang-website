@@ -62,6 +62,14 @@ metadata without publishing a cast:
 npx tsx -e "import { prepareVideoEmbed } from './scripts/farcaster-scheduled-executor.ts'; prepareVideoEmbed('https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/scripts/viz-batch2-assets/no-attribution/74-cotton-lint-2000-2023.mp4').then(console.log).catch(error => { console.error(error.message); process.exitCode = 1; });"
 ```
 
+When credentials are held in GitHub Secrets, run the **Farcaster Video Check
+(read-only)** workflow. It checks the live media and Neynar metadata using only
+`NEYNAR_API_KEY`. The check has no signer credential or queue-writing step.
+
+```sh
+gh workflow run farcaster-video-check.yml --ref main
+```
+
 Casts created before this change embedded their original GitHub Raw URLs.
 Deploying the publisher does not rewrite those immutable embeds. Preserve
 their queue receipts; do not mark them unposted or replay the queue.
