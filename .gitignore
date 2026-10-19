@@ -46,6 +46,7 @@ firestore-debug.logvedang-website/
 vedang-website/
 .open-next/
 .wrangler/
+.dev.vars*
 
 # local scratch / research files
 extract_pdfs.py

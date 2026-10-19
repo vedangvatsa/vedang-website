@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 import { SITE_URL } from '@/lib/site';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const dynamic = 'force-static';
 
 const MARKDOWN = `# Vedang Vatsa MCP Documentation Server

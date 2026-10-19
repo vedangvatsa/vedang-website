@@ -44,8 +44,12 @@
     "lint": "eslint . && npx tsx scripts/check-ai-slop.ts",
     "lint:slop": "npx tsx scripts/check-ai-slop.ts",
     "typecheck": "tsc --noEmit",
+    "typecheck:worker": "tsc --noEmit -p tsconfig.cloudflare.json",
     "test": "npx tsx --test tests/**/*.test.ts",
     "build:worker": "opennextjs-cloudflare build",
+    "preview:worker": "opennextjs-cloudflare preview",
+    "deploy:worker": "opennextjs-cloudflare deploy --keep-vars",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "x:authorize": "npx tsx scripts/x-authorize.ts",
     "x:post-essays": "npx tsx scripts/x-auto-post.ts",
     "x:thread": "npx tsx scripts/x-post-thread.ts",
@@ -61,6 +65,7 @@
     "@mdx-js/react": "^3.0.1",
     "@microsoft/clarity": "^1.0.2",
     "@next/mdx": "^16.1.6",
+    "@opennextjs/cloudflare": "1.19.11",
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
@@ -105,7 +110,8 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "tsx": "^4.16.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "4.151.1"
   },
   "overrides": {
     "glob": "^13.0.0",

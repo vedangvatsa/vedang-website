@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["cloudflare-env.d.ts", "open-next.config.ts"],
+  "exclude": ["node_modules"]
+}
