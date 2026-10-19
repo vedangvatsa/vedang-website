@@ -1739,8 +1739,8 @@
     "description": "How the largest banana producers changed.\n\n2000-2024. Banana production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-19",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-19T09:15:18.589Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/77-r2.txt",
     "captionStyle": "concise-v2",
@@ -1751,7 +1751,14 @@
     "altText": "Bananas, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest banana producers changed.\n\n2000-2024. Banana production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-19T14:00",
+    "attemptedAt": "2026-10-19T09:15:16.751Z",
+    "bufferPostId": "6ad5dfa5ea56886c47184b30",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=M4ynscswHfw"
   },
   {
     "id": "viz-b2-yt-78",

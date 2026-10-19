@@ -1457,8 +1457,8 @@
     "text": "How the largest malted-barley beer producers changed.\n\n2000-2023. Malted-barley beer production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-19",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-19T09:17:23.298Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/76-r2.txt",
     "captionStyle": "concise-v2",
@@ -1470,7 +1470,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-19T09:17:11.600Z",
+    "attemptedSlot": "2026-10-19T14:00",
+    "publishedText": "How the largest malted-barley beer producers changed.\n\n2000-2023. Malted-barley beer production by country, measured in millions of tonnes.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3my7rxooked2p",
+    "postUrl": "https://bsky.app/profile/did:plc:x3llxr24tbj72fy3nish3xrh/post/3my7rxooked2p"
   },
   {
     "id": "viz-b2-bluesky-77",
