@@ -44,7 +44,19 @@ jobs:
         run: |
           npx tsx -e '
             import { prepareVideoEmbed } from "./scripts/farcaster-scheduled-executor.ts";
-            prepareVideoEmbed(process.env.VIDEO_URL!)
+            prepareVideoEmbed(process.env.VIDEO_URL!, async (url, init) => {
+              const response = await fetch(url, init);
+              if (String(url).startsWith("https://api.neynar.com/")) {
+                const { metadata } = await response.clone().json();
+                console.log(JSON.stringify({
+                  status: metadata?._status,
+                  contentType: metadata?.content_type,
+                  contentLength: metadata?.content_length,
+                  video: metadata?.video,
+                }));
+              }
+              return response;
+            })
               .then(url => console.log(`Validated playable video: ${url}`))
               .catch(error => { console.error(error.message); process.exitCode = 1; });
           '
