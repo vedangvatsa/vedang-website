@@ -1523,8 +1523,8 @@
     "text": "How the largest banana producers changed.\n\n2000-2024. Banana production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-19",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-19T19:25:12.319Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/77-r2.txt",
     "captionStyle": "concise-v2",
@@ -1539,7 +1539,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-19T19:25:08.306Z",
+    "attemptedSlot": "2026-10-19T20:00",
+    "publishedText": "How the largest banana producers changed.\n\n2000-2024. Banana production by country, measured in millions of tonnes.",
+    "platformPostId": "830931376290267136",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/830931376290267136"
   },
   {
     "id": "viz-b2-tumblr-78",

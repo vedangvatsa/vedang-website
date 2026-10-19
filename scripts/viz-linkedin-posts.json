@@ -1520,8 +1520,8 @@
     "text": "How the largest pineapple producers changed.\n\n2000-2024. Pineapple production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-19",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-19T19:24:33.825Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/78-r2.txt",
     "captionStyle": "concise-v2",
@@ -1532,7 +1532,14 @@
     "altText": "Pineapples, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-19T19:24:26.788Z",
+    "attemptedSlot": "2026-10-19T20:00",
+    "publishedText": "How the largest pineapple producers changed.\n\n2000-2024. Pineapple production by country, measured in millions of tonnes.",
+    "platformPostId": "urn:li:ugcPost:7518029341516001280",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518029341516001280/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-54",
