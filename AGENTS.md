@@ -40,7 +40,7 @@ When working on this project, you MUST read and follow these guidelines before m
 
 ## Website
 - Domain: `veda.ng`
-- Hosting: Firebase App Hosting (backend: `studio`, project: `studio-9488916948-c80fb`)
+- Hosting: Cloudflare Workers (`veda-ng`, using OpenNext). The social-video endpoint is deployed separately with `workers/social-video/wrangler.jsonc`; see `docs/farcaster-video.md`.
 - Essays use `[slug]` routing at root level (e.g., `veda.ng/agent-infrastructure-stack`, NOT `veda.ng/essays/...`)
 
 ## Layout & Components

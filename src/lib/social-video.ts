@@ -54,10 +54,13 @@ export async function serveSocialVideo(request: Request, segments: string[], fet
   let upstream: Response;
   try {
     upstream = await fetcher(source, {
-      method: request.method, headers: upstreamHeaders, redirect: 'error',
+      method: request.method, headers: upstreamHeaders, redirect: 'manual',
       cache: 'no-store', signal: AbortSignal.timeout(30000),
     });
-  } catch { return fail(502, 'Video origin unavailable'); }
+  } catch (error) {
+    console.error(JSON.stringify({ event: 'social_video_origin_unavailable', message: error instanceof Error ? error.message : 'Fetch failed' }));
+    return fail(502, 'Video origin unavailable');
+  }
   if (upstream.status === 416) {
     if (upstream.headers.has('content-range')) headers.set('Content-Range', upstream.headers.get('content-range')!);
     await upstream.body?.cancel();

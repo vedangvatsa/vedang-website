@@ -31,7 +31,7 @@ test('full and ranged videos keep their bytes while receiving video MIME and COR
   for (const ranged of [false, true]) {
     const request: typeof fetch = async (input, init) => {
       assert.equal(input, socialVideoSource(asset));
-      assert.equal(init?.redirect, 'error');
+      assert.equal(init?.redirect, 'manual');
       const incoming = new Headers(init?.headers);
       assert.equal(incoming.get('authorization'), null);
       assert.equal(incoming.get('cookie'), null);
@@ -66,7 +66,7 @@ test('HEAD keeps video metadata without a response body', async () => {
 });
 
 test('origin failures and non-media responses cannot become cacheable fake MP4s', async () => {
-  for (const upstream of [new Response('not found', { status: 404 }), new Response('error', { status: 503 }), new Response('<html>error</html>', { headers: { 'Content-Type': 'text/html' } })]) {
+  for (const upstream of [new Response('not found', { status: 404 }), new Response('error', { status: 503 }), new Response(null, { status: 302, headers: { Location: 'https://other.example/video.mp4' } }), new Response('<html>error</html>', { headers: { 'Content-Type': 'text/html' } })]) {
     const response = await serveSocialVideo(new Request(url), asset.split('/'), async () => upstream);
     assert.ok([404, 502].includes(response.status));
     assert.equal(response.headers.get('cache-control'), 'no-store');

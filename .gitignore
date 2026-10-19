@@ -45,6 +45,7 @@ firebase-debug.log
 firestore-debug.logvedang-website/
 vedang-website/
 .open-next/
+.wrangler/
 
 # local scratch / research files
 extract_pdfs.py

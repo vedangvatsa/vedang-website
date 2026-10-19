@@ -34,8 +34,22 @@ fall back to a text-only cast when video delivery fails.
 
 ## Rollout
 
-Deploy the website endpoint before running the updated publisher. For example,
-HEAD and a ranged GET of the following URL must succeed as MP4 responses:
+Production runs on Cloudflare Workers. `veda-social-video` serves the two
+`/api/social-video/*` routes configured in `workers/social-video/wrangler.jsonc`.
+These more-specific routes take precedence over the main `veda-ng` website
+routes. Both the Worker and the Next.js route use `src/lib/social-video.ts`.
+
+A Git push alone does not deploy this Worker. Authenticate to the account in
+the configuration, then validate and deploy from the repository root:
+
+```sh
+npx wrangler@4.151.1 whoami
+npx wrangler@4.151.1 deploy --config workers/social-video/wrangler.jsonc --dry-run
+npx wrangler@4.151.1 deploy --config workers/social-video/wrangler.jsonc --keep-vars
+```
+
+Deploy the media Worker before running the updated publisher. HEAD and a ranged
+GET of the following URL must succeed as MP4 responses:
 
 ```
 https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/74-cotton-lint-2000-2023.mp4
