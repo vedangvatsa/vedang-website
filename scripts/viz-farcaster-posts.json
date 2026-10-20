@@ -1522,8 +1522,8 @@
     "text": "How the largest pineapple producers changed.\n\n2000-2024. Pineapple production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-19",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-20T08:53:21.176Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/78-r2.txt",
     "captionStyle": "concise-v2",
@@ -1535,7 +1535,14 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/78-pineapples-2000-2024.mp4",
+    "state": "sent",
+    "attemptedAt": "2026-10-20T08:53:21.054Z",
+    "attemptedSlot": "2026-10-20T14:00",
+    "publishedText": "How the largest pineapple producers changed.\n\n2000-2024. Pineapple production by country, measured in millions of tonnes.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0xbaab72fe",
+    "platformPostId": "0xbaab72fef3be15370cd7ee7d6503939b9ba15994"
   },
   {
     "id": "viz-b2-farcaster-54",

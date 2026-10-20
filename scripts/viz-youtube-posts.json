@@ -1832,8 +1832,8 @@
     "description": "How the largest strawberry producers changed.\n\n2000-2024. Strawberry production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-20",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-20T08:50:36.229Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/79-r2.txt",
     "captionStyle": "concise-v2",
@@ -1844,7 +1844,14 @@
     "altText": "Strawberries, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest strawberry producers changed.\n\n2000-2024. Strawberry production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-20T14:00",
+    "attemptedAt": "2026-10-20T08:50:33.755Z",
+    "bufferPostId": "6ad72b5aec8e66c06202ebd2",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=q6FAjS_NwsE"
   },
   {
     "id": "viz-b2-yt-80",
