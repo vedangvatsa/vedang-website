@@ -1490,8 +1490,8 @@
     "text": "How the largest banana producers changed.\n\n2000-2024. Banana production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-19",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-20T06:35:09.494Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/77-r2.txt",
     "captionStyle": "concise-v2",
@@ -1503,7 +1503,14 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/77-bananas-2000-2024.mp4",
+    "state": "sent",
+    "attemptedAt": "2026-10-20T06:35:09.298Z",
+    "attemptedSlot": "2026-10-20T09:00",
+    "publishedText": "How the largest banana producers changed.\n\n2000-2024. Banana production by country, measured in millions of tonnes.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0xab55027f",
+    "platformPostId": "0xab55027f90ebd1adc6b45ba764eaa02e696b4b59"
   },
   {
     "id": "viz-b2-farcaster-78",

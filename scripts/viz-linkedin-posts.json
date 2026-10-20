@@ -1551,8 +1551,8 @@
     "text": "How pupil-to-teacher ratios changed across countries.\n\n2000-2017. The average number of primary-school pupils per teacher.",
     "scheduleDate": "2026-10-20",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-20T06:34:22.525Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/54-r2.txt",
     "captionStyle": "concise-v2",
@@ -1563,7 +1563,14 @@
     "altText": "Pupil ratios, 2000-2017. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-20T06:34:14.005Z",
+    "attemptedSlot": "2026-10-20T09:00",
+    "publishedText": "How pupil-to-teacher ratios changed across countries.\n\n2000-2017. The average number of primary-school pupils per teacher.",
+    "platformPostId": "urn:li:ugcPost:7518197905233600513",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518197905233600513/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-79",
