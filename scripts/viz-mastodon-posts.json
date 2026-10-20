@@ -1581,8 +1581,8 @@
     "text": "How the largest strawberry producers changed.\n\n2000-2024. Strawberry production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-20",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-20T16:54:47.107Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/79-r2.txt",
     "captionStyle": "concise-v2",
@@ -1594,7 +1594,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-20T16:54:39.954Z",
+    "attemptedSlot": "2026-10-20T20:00",
+    "publishedText": "How the largest strawberry producers changed.\n\n2000-2024. Strawberry production by country, measured in millions of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117474281849555355",
+    "platformPostId": "117474281849555355"
   },
   {
     "id": "viz-b2-mastodon-80",

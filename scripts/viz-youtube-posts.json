@@ -1863,8 +1863,8 @@
     "description": "How the largest grape producers changed.\n\n2000-2024. Grape production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-20",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-20T16:50:53.927Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/80-r2.txt",
     "captionStyle": "concise-v2",
@@ -1875,7 +1875,14 @@
     "altText": "Grapes, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest grape producers changed.\n\n2000-2024. Grape production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-20T20:00",
+    "attemptedAt": "2026-10-20T16:50:52.074Z",
+    "bufferPostId": "6ad79bec0f081b0afa08954f",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=Oyt8VuW5kMc"
   },
   {
     "id": "viz-b2-yt-81",
