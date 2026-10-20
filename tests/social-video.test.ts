@@ -1,18 +1,39 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { farcasterVideoUrl, serveSocialVideo, socialVideoSource } from '../src/lib/social-video';
+import { farcasterVideoUrl, serveSocialVideo, socialVideoSource, HLS_CONTENT_TYPE } from '../src/lib/social-video';
 
 const asset = 'scripts/viz-batch2-assets/no-attribution/74-cotton-lint-2000-2023.mp4';
 const url = `https://veda.ng/api/social-video/${asset}`;
+const hls = 'scripts/viz-batch2-assets/no-attribution/hls/74-cotton-lint-2000-2023.m3u8';
 
-test('Farcaster gets a first-party MP4 URL instead of the GitHub download URL', () => {
-  assert.equal(farcasterVideoUrl(socialVideoSource(asset)), url);
+test('Farcaster gets an HLS embed and pinned playlists keep their relative media pinned', () => {
+  assert.equal(farcasterVideoUrl(socialVideoSource(asset)), `https://veda.ng/api/social-video/${hls}`);
   const sha = 'a'.repeat(40);
-  assert.equal(farcasterVideoUrl(socialVideoSource(asset, sha)), `${url}?ref=${sha}`);
-  assert.equal(farcasterVideoUrl('https://media.example/clip.mp4?signature=123'), 'https://media.example/clip.mp4?signature=123');
+  const pinned = farcasterVideoUrl(socialVideoSource(asset, sha));
+  assert.equal(pinned, `https://veda.ng/api/social-video/${sha}/${hls}`);
+  assert.equal(new URL('74-cotton-lint-2000-2023.mp4', pinned).pathname, `/api/social-video/${sha}/${hls.replace('.m3u8', '.mp4')}`);
+  assert.equal(farcasterVideoUrl(socialVideoSource(hls)), `https://veda.ng/api/social-video/${hls}`);
+  assert.equal(farcasterVideoUrl('https://media.example/clip.m3u8?signature=123'), 'https://media.example/clip.m3u8?signature=123');
   assert.throws(() => farcasterVideoUrl('http://example.com/video.mp4'), /HTTPS/);
   assert.throws(() => farcasterVideoUrl('https://raw.githubusercontent.com/other/repo/main/file.mp4'), /Unsupported/);
   assert.throws(() => farcasterVideoUrl(socialVideoSource(asset), 'http://example.com/proxy'), /HTTPS/);
+});
+
+test('HLS playlists use their own MIME type and keep relative byte-range media references', async () => {
+  const sha = 'b'.repeat(40);
+  const text = '#EXTM3U\n#EXT-X-MAP:URI="74-cotton-lint-2000-2023.mp4",BYTERANGE="16@0"\n#EXTINF:30,\n#EXT-X-BYTERANGE:100@16\n74-cotton-lint-2000-2023.mp4\n#EXT-X-ENDLIST\n';
+  const response = await serveSocialVideo(new Request(`https://veda.ng/api/social-video/${sha}/${hls}`), [sha, ...hls.split('/')], async input => {
+    assert.equal(input, socialVideoSource(hls, sha));
+    return new Response(text, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+  });
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get('content-type'), HLS_CONTENT_TYPE);
+  assert.equal(response.headers.get('access-control-allow-origin'), '*');
+  assert.equal(await response.text(), text);
+  const invalid = await serveSocialVideo(new Request(`https://veda.ng/api/social-video/${hls}?ref=${sha}`), hls.split('/'), async () => { throw new Error('Must not fetch a mixed-revision playlist'); });
+  assert.equal(invalid.status, 404);
+  const html = await serveSocialVideo(new Request(`https://veda.ng/api/social-video/${hls}`), hls.split('/'), async () => new Response('<html>Error</html>', { headers: { 'Content-Type': 'text/html' } }));
+  assert.equal(html.status, 502);
 });
 
 test('the media endpoint cannot read arbitrary repository paths or origins', async () => {

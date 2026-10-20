@@ -12,6 +12,7 @@ import { needsBufferWork } from './viz-queue-time.mjs';
 import { sourceCredit } from './viz-source-credit.mjs';
 import { configuredDirectPlatforms, DIRECT_PLATFORMS } from './viz-platforms.mjs';
 import { encodeLinkedInPlainText } from './linkedin-plain-text.mjs';
+import { farcasterPlaylistAsset } from '../src/lib/social-video.js';
 
 const entry = (id: string, time = '09:00'): VizPost => ({ id, posted: false, scheduleDate: '2026-09-25', scheduleTime: time, title: 'Population', text: 'Population, 2000-2024.', description: 'Population, 2000-2024.' });
 
@@ -237,6 +238,35 @@ test('video-only captions reject links and production notes without confusing fi
   assert.equal(input.text, good);
 });
 
+test('pending Farcaster videos and recent receipts have matching, complete HLS packages', () => {
+  const { assets } = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/farcaster-hls-assets.json'), 'utf8'));
+  const posts = readQueue(path.join(ROOT, 'scripts/viz-farcaster-posts.json')).filter(post => !post.posted || post.videoEmbedUrl);
+  assert.ok(posts.length > 0);
+  for (const post of posts) {
+    const source = String(post.video);
+    const receipt = assets.find((asset: { source: string }) => asset.source === source);
+    assert.ok(receipt, `Package HLS for ${post.id} before publishing`);
+    assert.equal(receipt.playlist, farcasterPlaylistAsset(source));
+    assert.equal(receipt.media, receipt.playlist.replace(/\.m3u8$/, '.mp4'));
+    assert.equal(receipt.sourceSha256, createHash('sha256').update(fs.readFileSync(localVideo(post))).digest('hex'));
+    assert.equal(receipt.streamsUnchanged, true);
+    const media = fs.readFileSync(path.join(ROOT, receipt.media));
+    const playlist = fs.readFileSync(path.join(ROOT, receipt.playlist), 'utf8');
+    assert.equal(createHash('sha256').update(media).digest('hex'), receipt.mediaSha256);
+    assert.equal(createHash('sha256').update(playlist).digest('hex'), receipt.playlistSha256);
+    assert.equal(media.subarray(4, 8).toString(), 'ftyp');
+    assert.ok(playlist.startsWith('#EXTM3U\n') && playlist.includes('#EXT-X-ENDLIST'));
+    assert.ok(playlist.split('\n').filter(line => line && !line.startsWith('#')).every(line => line === path.basename(receipt.media)));
+    let end = 0;
+    for (const range of playlist.matchAll(/BYTERANGE[:=]"?(\d+)@(\d+)/g)) {
+      assert.equal(Number(range[2]), end);
+      assert.ok(Number(range[1]) > 0);
+      end += Number(range[1]);
+    }
+    assert.equal(end, media.length, `HLS byte ranges must cover the full file for ${post.id}`);
+  }
+});
+
 test('hosted notes support three-digit second-batch video numbers', () => {
   const old = process.env.VIZ_NOTES_BASE_URL;
   process.env.VIZ_NOTES_BASE_URL = 'https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public';
@@ -435,12 +465,13 @@ test('Farcaster includes the video embed and never downgrades to text-only in th
   const { publish } = await import('./native-viz-scheduled-executor.js');
   const original = globalThis.fetch;
   globalThis.fetch = async (_url, init: RequestInit = {}) => {
-    assert.deepEqual(JSON.parse(String(init.body)).embeds, [{ url: 'https://cdn.example/video.mp4' }]);
+    assert.deepEqual(JSON.parse(String(init.body)).embeds, [{ url: 'https://cdn.example/video.m3u8' }]);
     return Response.json({ cast: { hash: '0x123' } });
   };
   try {
-    assert.equal(await publish('farcaster', entry('one'), '/unused.mp4', 'https://cdn.example/video.mp4'), '0x123');
-    await assert.rejects(publish('farcaster', entry('two'), '/unused.mp4'), /public video/);
+    assert.equal(await publish('farcaster', entry('one'), '/unused.mp4', 'https://cdn.example/video.m3u8'), '0x123');
+    await assert.rejects(publish('farcaster', entry('two'), '/unused.mp4'), /public HLS/);
+    await assert.rejects(publish('farcaster', entry('three'), '/unused.mp4', 'https://cdn.example/video.mp4'), /public HLS/);
   } finally { globalThis.fetch = original; }
 });
 

@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       video_url:
-        description: Public MP4 URL to validate without publishing a cast
+        description: Source MP4 or HLS URL to validate without publishing a cast
         type: string
         required: true
         default: https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/scripts/viz-batch2-assets/no-attribution/74-cotton-lint-2000-2023.mp4

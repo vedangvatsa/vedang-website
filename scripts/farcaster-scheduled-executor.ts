@@ -9,7 +9,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { isMain } from './viz-publishing.js';
-import { farcasterVideoUrl, socialVideoSource } from '../src/lib/social-video.js';
+import { farcasterVideoUrl, HLS_CONTENT_TYPE_PATTERN, socialVideoSource } from '../src/lib/social-video.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -102,14 +102,46 @@ type VideoMetadata = {
   video?: { duration_s?: number; streams?: VideoStreamMetadata[]; stream?: VideoStreamMetadata[] };
 };
 
+async function readPlaylist(response: Response): Promise<string> {
+  const reader = response.body?.getReader();
+  if (!reader) throw new Error('Farcaster HLS playlist is empty');
+  const decoder = new TextDecoder();
+  let size = 0;
+  let text = '';
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) return text + decoder.decode();
+      size += value.byteLength;
+      if (size > 65536) {
+        await reader.cancel();
+        throw new Error('Farcaster HLS playlist exceeds 64 KiB');
+      }
+      text += decoder.decode(value, { stream: true });
+    }
+  } finally { reader.releaseLock(); }
+}
+
 export async function prepareVideoEmbed(source: string, request: typeof fetch = fetch, wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))): Promise<string> {
   const apiKey = process.env.NEYNAR_API_KEY;
   if (!apiKey) throw new Error('NEYNAR_API_KEY is required to verify the video embed');
   const url = farcasterVideoUrl(source, process.env.FARCASTER_MEDIA_PROXY_BASE_URL || undefined);
+  if (!new URL(url).pathname.endsWith('.m3u8')) {
+    throw new Error('Farcaster requires an HLS .m3u8 embed; its client does not render these direct MP4 links');
+  }
   const head = await request(url, { method: 'HEAD', signal: AbortSignal.timeout(30000) });
   if (!head.ok) throw new Error(`Farcaster video returned HTTP ${head.status}; deploy the media endpoint before publishing`);
-  if (!/^video\/mp4(?:;|$)/i.test(head.headers.get('content-type') || '')) {
-    throw new Error('Farcaster video must be served as video/mp4, not a binary download');
+  if (!HLS_CONTENT_TYPE_PATTERN.test(head.headers.get('content-type') || '')) {
+    throw new Error('Farcaster video must be served as HLS, not MP4 or a binary download');
+  }
+  const manifest = await request(url, { method: 'GET', signal: AbortSignal.timeout(30000) });
+  if (!manifest.ok || !HLS_CONTENT_TYPE_PATTERN.test(manifest.headers.get('content-type') || '')) {
+    await manifest.body?.cancel();
+    throw new Error('Farcaster HLS playlist is unavailable');
+  }
+  const playlist = await readPlaylist(manifest);
+  if (!playlist.startsWith('#EXTM3U') || !/^#EXT(?:INF:|-X-STREAM-INF:)/m.test(playlist)) {
+    throw new Error('Farcaster URL did not return a playable HLS playlist');
   }
   for (let attempt = 0; attempt < 3; attempt++) {
     const response = await request(`https://api.neynar.com/v2/farcaster/cast/embed/crawl/?url=${encodeURIComponent(url)}`, {
@@ -118,7 +150,7 @@ export async function prepareVideoEmbed(source: string, request: typeof fetch = 
     if (!response.ok) throw new Error(`Farcaster video metadata check returned HTTP ${response.status}`);
     const { metadata } = await response.json() as { metadata?: VideoMetadata };
     if (metadata?._status?.toUpperCase() === 'RESOLVED' &&
-        /^video\/mp4(?:;|$)/i.test(metadata?.content_type || '') &&
+        (HLS_CONTENT_TYPE_PATTERN.test(metadata?.content_type || '') || /^video\/mp4(?:;|$)/i.test(metadata?.content_type || '')) &&
         (metadata?.video?.duration_s || 0) > 0 &&
         (metadata?.video?.streams ?? metadata?.video?.stream)?.some(stream => (stream.width_px || 0) > 0 && (stream.height_px || 0) > 0)) {
       return url;

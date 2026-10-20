@@ -51,7 +51,9 @@ export async function publish(platform: string, post: VizPost, video: string, ur
       });
     }
     case 'farcaster': {
-      if (!url) throw new Error('Farcaster requires a public video embed URL');
+      if (!url || new URL(url).protocol !== 'https:' || !new URL(url).pathname.endsWith('.m3u8')) {
+        throw new Error('Farcaster requires a public HLS video embed URL');
+      }
       const { postCast } = await import('./farcaster-scheduled-executor.js');
       const result = await postCast(text, url);
       if (!result.success || !result.hash) throw new Error(result.error || 'Farcaster returned no cast hash');
