@@ -35,17 +35,37 @@ metadata alone do not establish Farcaster client compatibility.
   pins relative media references to that revision. Original MP4 URLs continue
   to accept the `ref` query parameter.
 - GitHub Raw MP4 URLs are converted to their packaged first-party HLS URLs.
-  Existing HTTPS HLS URLs on media hosts remain supported.
+  HTTPS media hosts serving the same packaged VOD format remain supported.
 - `FARCASTER_MEDIA_PROXY_BASE_URL` can override the first-party base when a
   separate deployment serves the same endpoint. The default is
   `https://veda.ng/api/social-video`.
 
-Before publishing, the scheduler requires a `.m3u8` URL, the HLS MIME type,
-and a valid playlist of at most 64 KiB. It then uses
-[Neynar's embed metadata API](https://docs.neynar.com/reference/fetch-embedded-url-metadata)
-to require resolved video metadata, a duration, and video dimensions. An
-unready or invalid embed fails before a visualization queue slot is claimed.
-The outgoing URL is retained as `videoEmbedUrl` in the publication receipt.
+Before publishing, the scheduler requires a `.m3u8` URL and checks all of the
+following before claiming a queue slot:
+
+- HLS MIME and cross-origin access for Farcaster.
+- A complete, unencrypted, single-file fMP4 VOD playlist, at most 64 KiB and
+  ten minutes long, with contiguous byte ranges covering its media file.
+- HTTP 206 responses with the exact bytes and range headers for every range.
+- Playlist and media checksums matching the queued video's approved HLS package.
+- H.264 8-bit video and AAC audio, plus a complete FFmpeg decode with decoded
+  frames and a duration matching the playlist. Validation is bounded to 128 MiB.
+- [Neynar's resolved video metadata](https://docs.neynar.com/reference/fetch-embedded-url-metadata),
+  with dimensions and duration matching the decoded media.
+
+Scheduled workflows set `FARCASTER_MEDIA_REVISION` to the checked-out Git
+commit. The outgoing `videoEmbedUrl` pins both the playlist and its media to
+that revision. A later asset edit therefore does not change an existing cast.
+
+After Neynar accepts a cast, the executor saves its hash and URL immediately,
+then reads the cast through Farcaster's public client API. The expected caption
+and HLS video must appear in `embeds.videos`, with no unknown embed, before the
+queue entry becomes `sent`. `mediaValidatedAt` and `clientEmbedVerifiedAt`
+record these separate checks.
+
+Failed or inconclusive client verification leaves the entry `uncertain`, with
+its publication receipt retained. Subsequent runs stop that Farcaster queue
+for reconciliation. They do not treat API acceptance as proof of playback.
 The legacy Farcaster scheduler also uses this path for MP4s and cannot silently
 fall back to a text-only cast when video delivery fails.
 
@@ -96,12 +116,17 @@ npx tsx -e "import { prepareVideoEmbed } from './scripts/farcaster-scheduled-exe
 ```
 
 When credentials are held in GitHub Secrets, run the **Farcaster Video Check
-(read-only)** workflow. It checks the live media and Neynar metadata using only
-`NEYNAR_API_KEY`. The check has no signer credential or queue-writing step.
+(read-only)** workflow. By default it verifies the latest recorded cast in
+Farcaster and fully validates the next three active queued videos. It uses only
+`NEYNAR_API_KEY`, with no signer credential or queue-writing step.
 
 ```sh
 gh workflow run farcaster-video-check.yml --ref main
+gh workflow run farcaster-video-check.yml --ref main -f count=5
 ```
+
+Provide `video_url` to check one URL instead. Locally, with credentials and
+FFmpeg installed, use `npx tsx scripts/farcaster-video-preflight.ts --next=3`.
 
 Also check the HLS URL in [Farcaster's embed debugger](https://farcaster.xyz/~/developers/embeds)
 and verify a video player in the Farcaster composer or cast. Playback and

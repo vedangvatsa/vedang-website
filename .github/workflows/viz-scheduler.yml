@@ -99,6 +99,15 @@ jobs:
         if: steps.due.outputs.run == 'true'
         run: npx tsx --test scripts/viz-publishing.test.ts scripts/farcaster-video.test.ts tests/social-video.test.ts
 
+      - name: Prepare Farcaster playback validation
+        if: steps.due.outputs.run == 'true' && (contains(env.VIZ_DIRECT_PLATFORMS, 'farcaster') || contains(env.VIZ_DIRECT_PLATFORMS, 'all'))
+        run: |
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          echo "FARCASTER_MEDIA_REVISION=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
       - name: Read-only account preflight
         id: buffer_preflight
         continue-on-error: true

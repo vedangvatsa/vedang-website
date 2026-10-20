@@ -124,10 +124,16 @@ jobs:
       - name: Post to Farcaster
         id: farcaster
         continue-on-error: true
-        run: npx tsx scripts/farcaster-scheduled-executor.ts
+        run: |
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          FARCASTER_MEDIA_REVISION="$(git rev-parse HEAD)" npx tsx scripts/farcaster-scheduled-executor.ts
         env:
           NEYNAR_API_KEY: ${{ secrets.NEYNAR_API_KEY }}
           NEYNAR_SIGNER_UUID: ${{ secrets.NEYNAR_SIGNER_UUID }}
+          FARCASTER_MEDIA_PROXY_BASE_URL: ${{ vars.FARCASTER_MEDIA_PROXY_BASE_URL }}
 
       - name: Farcaster engagement comments
         continue-on-error: true

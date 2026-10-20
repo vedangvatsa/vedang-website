@@ -8,8 +8,10 @@ import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { createHash } from 'node:crypto';
 import { isMain } from './viz-publishing.js';
-import { farcasterVideoUrl, HLS_CONTENT_TYPE_PATTERN, socialVideoSource } from '../src/lib/social-video.js';
+import { farcasterVideoUrl, HLS_CONTENT_TYPE_PATTERN, SOCIAL_VIDEO_ORIGIN, socialVideoSource } from '../src/lib/social-video.js';
+import { decodeHlsVideo, fetchHlsMedia, hlsReceipt, requireMediaCors, verifyFarcasterCast, type HlsReceipt, type VideoDecoder } from './farcaster-video-validation.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -31,6 +33,11 @@ interface FarcasterPost {
   postedAt?: string;
   castHash?: string;
   error?: string;
+  state?: 'publishing' | 'submitted' | 'sent' | 'uncertain';
+  postUrl?: string;
+  videoEmbedUrl?: string;
+  mediaValidatedAt?: string;
+  clientEmbedVerifiedAt?: string;
 }
 
 function isVideo(filePath: string): boolean {
@@ -122,26 +129,42 @@ async function readPlaylist(response: Response): Promise<string> {
   } finally { reader.releaseLock(); }
 }
 
-export async function prepareVideoEmbed(source: string, request: typeof fetch = fetch, wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))): Promise<string> {
+export type VideoChecks = { expected?: HlsReceipt; decode?: VideoDecoder };
+
+export async function prepareVideoEmbed(source: string, request: typeof fetch = fetch, wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms)), checks: VideoChecks = {}): Promise<string> {
   const apiKey = process.env.NEYNAR_API_KEY;
   if (!apiKey) throw new Error('NEYNAR_API_KEY is required to verify the video embed');
-  const url = farcasterVideoUrl(source, process.env.FARCASTER_MEDIA_PROXY_BASE_URL || undefined);
+  const revision = process.env.FARCASTER_MEDIA_REVISION;
+  if (revision && !/^[a-f0-9]{40}$/.test(revision)) throw new Error('FARCASTER_MEDIA_REVISION must be a full commit SHA');
+  const mutablePrefix = `${SOCIAL_VIDEO_ORIGIN}/main/`;
+  const pinnedSource = revision && source.startsWith(mutablePrefix)
+    ? `${SOCIAL_VIDEO_ORIGIN}/${revision}/${source.slice(mutablePrefix.length)}` : source;
+  const url = farcasterVideoUrl(pinnedSource, process.env.FARCASTER_MEDIA_PROXY_BASE_URL || undefined);
   if (!new URL(url).pathname.endsWith('.m3u8')) {
     throw new Error('Farcaster requires an HLS .m3u8 embed; its client does not render these direct MP4 links');
   }
-  const head = await request(url, { method: 'HEAD', signal: AbortSignal.timeout(30000) });
+  const headers = { Origin: 'https://farcaster.xyz' };
+  const head = await request(url, { method: 'HEAD', headers, redirect: 'manual', signal: AbortSignal.timeout(30000) });
   if (!head.ok) throw new Error(`Farcaster video returned HTTP ${head.status}; deploy the media endpoint before publishing`);
   if (!HLS_CONTENT_TYPE_PATTERN.test(head.headers.get('content-type') || '')) {
     throw new Error('Farcaster video must be served as HLS, not MP4 or a binary download');
   }
-  const manifest = await request(url, { method: 'GET', signal: AbortSignal.timeout(30000) });
+  requireMediaCors(head);
+  const manifest = await request(url, { method: 'GET', headers, redirect: 'manual', signal: AbortSignal.timeout(30000) });
   if (!manifest.ok || !HLS_CONTENT_TYPE_PATTERN.test(manifest.headers.get('content-type') || '')) {
     await manifest.body?.cancel();
     throw new Error('Farcaster HLS playlist is unavailable');
   }
+  requireMediaCors(manifest);
   const playlist = await readPlaylist(manifest);
   if (!playlist.startsWith('#EXTM3U') || !/^#EXT(?:INF:|-X-STREAM-INF:)/m.test(playlist)) {
     throw new Error('Farcaster URL did not return a playable HLS playlist');
+  }
+  const delivery = await fetchHlsMedia(url, playlist, request, checks.expected);
+  const decoded = await (checks.decode || decodeHlsVideo)(delivery.media, delivery.durationSeconds);
+  if (checks.expected && (decoded.width !== checks.expected.width || decoded.height !== checks.expected.height ||
+      Math.abs(decoded.durationSeconds - checks.expected.durationSeconds) > 1)) {
+    throw new Error('Decoded video differs from its approved package');
   }
   for (let attempt = 0; attempt < 3; attempt++) {
     const response = await request(`https://api.neynar.com/v2/farcaster/cast/embed/crawl/?url=${encodeURIComponent(url)}`, {
@@ -151,8 +174,9 @@ export async function prepareVideoEmbed(source: string, request: typeof fetch = 
     const { metadata } = await response.json() as { metadata?: VideoMetadata };
     if (metadata?._status?.toUpperCase() === 'RESOLVED' &&
         (HLS_CONTENT_TYPE_PATTERN.test(metadata?.content_type || '') || /^video\/mp4(?:;|$)/i.test(metadata?.content_type || '')) &&
-        (metadata?.video?.duration_s || 0) > 0 &&
-        (metadata?.video?.streams ?? metadata?.video?.stream)?.some(stream => (stream.width_px || 0) > 0 && (stream.height_px || 0) > 0)) {
+        (metadata?.video?.duration_s || 0) > 0 && Math.abs(metadata!.video!.duration_s! - decoded.durationSeconds) <= 1 &&
+        (metadata?.video?.streams ?? metadata?.video?.stream)?.some(stream => stream.width_px === decoded.width && stream.height_px === decoded.height)) {
+      console.log(`Verified HLS playback: ${decoded.frames} frames, ${decoded.width}x${decoded.height}, ${decoded.durationSeconds.toFixed(2)}s`);
       return url;
     }
     if (['RESOLVED', 'ERROR', 'FAILED'].includes(metadata?._status?.toUpperCase() || '')) break;
@@ -192,6 +216,9 @@ export async function postCast(text: string, imageUrl?: string | null): Promise<
 
   const data = await res.json() as any;
   const hash = data.cast?.hash;
+  if (typeof hash !== 'string' || !/^0x[0-9a-f]{40}$/i.test(hash)) {
+    return { success: false, error: 'Neynar returned no valid cast receipt; reconcile before retrying' };
+  }
   const username = data.cast?.author?.username;
   const url = typeof hash === 'string' && /^0x[0-9a-f]{40}$/i.test(hash) && typeof username === 'string'
     ? `https://farcaster.xyz/${encodeURIComponent(username)}/${hash.slice(0, 10)}` : undefined;
@@ -210,6 +237,8 @@ async function main() {
   }
 
   const posts: FarcasterPost[] = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8'));
+  const unresolved = posts.find(post => !post.posted && (post.castHash || ['publishing', 'submitted', 'uncertain'].includes(post.state || '')));
+  if (unresolved) throw new Error(`${unresolved.id} has an unverified publication; reconcile its receipt before sending another cast`);
   const now = new Date();
   const istNow = new Date(now.getTime() + TIMEZONE_OFFSET_HOURS * 60 * 60 * 1000);
   const todayIST = istNow.toISOString().slice(0, 10);
@@ -250,7 +279,10 @@ async function main() {
       const absolute = path.resolve(REPO_ROOT, post.image);
       if (!fs.existsSync(absolute)) throw new Error('Farcaster video file is missing');
       const relative = path.relative(REPO_ROOT, absolute).split(path.sep).join('/');
-      imageUrl = await prepareVideoEmbed(socialVideoSource(relative));
+      const sourceSha256 = createHash('sha256').update(fs.readFileSync(absolute)).digest('hex');
+      imageUrl = await prepareVideoEmbed(socialVideoSource(relative), fetch, undefined, { expected: hlsReceipt(relative, sourceSha256) });
+      post.videoEmbedUrl = imageUrl;
+      post.mediaValidatedAt = new Date().toISOString();
     } else if (post.image) {
       console.log('  Uploading image via Neynar storage...');
       imageUrl = await uploadToNeynarStorage(post.image);
@@ -262,18 +294,31 @@ async function main() {
       }
     }
 
+    if (post.image && !imageUrl) throw new Error('Farcaster attachment could not be prepared; no cast was sent');
+    post.state = 'publishing';
+    fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
     const result = await postCast(post.text, imageUrl);
     if (result.success) {
+      post.castHash = result.hash;
+      post.postUrl = result.url;
+      post.state = 'submitted';
+      fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
+      if (post.videoEmbedUrl) {
+        post.clientEmbedVerifiedAt = await verifyFarcasterCast(result.hash || '', result.url, post.videoEmbedUrl, truncateForFarcaster(post.text));
+      }
       post.posted = true;
       post.postedAt = new Date().toISOString();
-      post.castHash = result.hash;
+      post.state = 'sent';
+      delete post.error;
       console.log(`  Posted: ${result.hash}`);
     } else {
+      post.state = 'uncertain';
       post.error = result.error;
       process.exitCode = 1;
       console.error(`  Failed: ${result.error}`);
     }
   } catch (err: any) {
+    if (post.state === 'publishing' || post.state === 'submitted') post.state = 'uncertain';
     post.error = err.message;
     process.exitCode = 1;
     console.error(`  ❌ Failed: ${err.message}`);

@@ -3,11 +3,16 @@ name: Farcaster Video Check (read-only)
 on:
   workflow_dispatch:
     inputs:
+      count:
+        description: Number of upcoming videos to check
+        type: choice
+        options: ['1', '3', '5']
+        default: '3'
       video_url:
-        description: Source MP4 or HLS URL to validate without publishing a cast
+        description: Optional source MP4 or HLS URL; leave blank to check upcoming videos
         type: string
-        required: true
-        default: https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/scripts/viz-batch2-assets/no-attribution/74-cotton-lint-2000-2023.mp4
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -15,7 +20,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
         with:
@@ -25,6 +30,10 @@ jobs:
             /package.json
             /package-lock.json
             /scripts/farcaster-scheduled-executor.ts
+            /scripts/farcaster-video-validation.ts
+            /scripts/farcaster-video-preflight.ts
+            /scripts/farcaster-hls-assets.json
+            /scripts/viz-farcaster-posts.json
             /scripts/viz-publishing.ts
             /scripts/viz-queue-time.mjs
             /src/lib/social-video.ts
@@ -36,27 +45,24 @@ jobs:
 
       - run: npm ci --no-audit --no-fund
 
-      - name: Require a playable video from Neynar
+      - name: Prepare playback validation
+        run: |
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          echo "FARCASTER_MEDIA_REVISION=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Verify live media and Farcaster client receipts
         env:
           NEYNAR_API_KEY: ${{ secrets.NEYNAR_API_KEY }}
+          VIZ_MEDIA_BASE_URL: ${{ vars.VIZ_MEDIA_BASE_URL }}
           FARCASTER_MEDIA_PROXY_BASE_URL: ${{ vars.FARCASTER_MEDIA_PROXY_BASE_URL }}
           VIDEO_URL: ${{ inputs.video_url }}
+          NEXT_COUNT: ${{ inputs.count }}
         run: |
-          npx tsx -e '
-            import { prepareVideoEmbed } from "./scripts/farcaster-scheduled-executor.ts";
-            prepareVideoEmbed(process.env.VIDEO_URL!, async (url, init) => {
-              const response = await fetch(url, init);
-              if (String(url).startsWith("https://api.neynar.com/")) {
-                const { metadata } = await response.clone().json();
-                console.log(JSON.stringify({
-                  status: metadata?._status,
-                  contentType: metadata?.content_type,
-                  contentLength: metadata?.content_length,
-                  video: metadata?.video,
-                }));
-              }
-              return response;
-            })
-              .then(url => console.log(`Validated playable video: ${url}`))
-              .catch(error => { console.error(error.message); process.exitCode = 1; });
-          '
+          if [ -n "$VIDEO_URL" ]; then
+            npx tsx scripts/farcaster-video-preflight.ts --url="$VIDEO_URL"
+          else
+            npx tsx scripts/farcaster-video-preflight.ts --next="$NEXT_COUNT"
+          fi

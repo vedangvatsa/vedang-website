@@ -466,10 +466,10 @@ test('Farcaster includes the video embed and never downgrades to text-only in th
   const original = globalThis.fetch;
   globalThis.fetch = async (_url, init: RequestInit = {}) => {
     assert.deepEqual(JSON.parse(String(init.body)).embeds, [{ url: 'https://cdn.example/video.m3u8' }]);
-    return Response.json({ cast: { hash: '0x123' } });
+    return Response.json({ cast: { hash: `0x${'1'.repeat(40)}` } });
   };
   try {
-    assert.equal(await publish('farcaster', entry('one'), '/unused.mp4', 'https://cdn.example/video.m3u8'), '0x123');
+    assert.equal(await publish('farcaster', entry('one'), '/unused.mp4', 'https://cdn.example/video.m3u8'), `0x${'1'.repeat(40)}`);
     await assert.rejects(publish('farcaster', entry('two'), '/unused.mp4'), /public HLS/);
     await assert.rejects(publish('farcaster', entry('three'), '/unused.mp4', 'https://cdn.example/video.mp4'), /public HLS/);
   } finally { globalThis.fetch = original; }

@@ -6,6 +6,9 @@ import { REQUIRED, requireCredentials } from './viz-platform-preflight.js';
 import { validateCaption, validateConciseBufferCaption, validateVideoOnlyCaption } from './viz-captions.mjs';
 import { configuredDirectPlatforms } from './viz-platforms.mjs';
 import { encodeLinkedInPlainText } from './linkedin-plain-text.mjs';
+import { hlsReceipt, verifyFarcasterCast, type VideoDecoder } from './farcaster-video-validation.js';
+
+type FarcasterChecks = { decode?: VideoDecoder; confirm?: typeof verifyFarcasterCast };
 
 dotenv.config({ path: path.join(ROOT, '.env.local'), quiet: true });
 
@@ -64,7 +67,7 @@ export async function publish(platform: string, post: VizPost, video: string, ur
   }
 }
 
-export async function runPlatform(platform: string, dryRun: boolean, file = path.join(ROOT, 'scripts', `viz-${platform}-posts.json`)) {
+export async function runPlatform(platform: string, dryRun: boolean, file = path.join(ROOT, 'scripts', `viz-${platform}-posts.json`), checks: FarcasterChecks = {}) {
   const posts = readQueue(file);
   if (dryRun) {
     for (const p of posts) { localVideo(p); validateCaption(platform, p.text); }
@@ -83,8 +86,10 @@ export async function runPlatform(platform: string, dryRun: boolean, file = path
     url = publicVideoUrl(post);
     if (platform === 'farcaster') {
       const { prepareVideoEmbed } = await import('./farcaster-scheduled-executor.js');
-      url = await prepareVideoEmbed(url);
+      const expected = post.videoSha256 ? hlsReceipt(String(post.video || post.videoPath), String(post.videoSha256)) : undefined;
+      url = await prepareVideoEmbed(url, fetch, undefined, { expected, decode: checks.decode });
       post.videoEmbedUrl = url;
+      post.mediaValidatedAt = new Date().toISOString();
     } else {
       await checkPublicVideo(url);
     }
@@ -98,6 +103,14 @@ export async function runPlatform(platform: string, dryRun: boolean, file = path
     const id = await publish(platform, post, video, url);
     if (!id) throw new Error('Publisher returned no ID');
     post.platformPostId = id;
+    if (platform === 'farcaster') {
+      // Save the accepted cast before checking the client. A crash or failed lookup
+      // must hold this queue, not create a duplicate or advance to another video.
+      post.state = 'submitted';
+      post.publicationAcceptedAt = new Date().toISOString();
+      saveQueue(file, posts);
+      post.clientEmbedVerifiedAt = await (checks.confirm || verifyFarcasterCast)(id, post.postUrl, url!, String(post.publishedText || post.text));
+    }
     post.posted = true;
     post.postedAt = new Date().toISOString();
     post.state = 'sent';
