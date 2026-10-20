@@ -112,10 +112,20 @@ Earlier casts embedded GitHub Raw or direct MP4 URLs.
 Deploying the publisher does not rewrite those immutable embeds. Preserve
 their queue receipts; do not mark them unposted or replay the queue.
 The historical GitHub Raw and text-only casts were removed separately on
-19 October 2026. The four direct-MP4 casts from 19 and 20 October require
-separate replacement; changing delivery does not change their stored embeds.
+19 October 2026. With the user's approval, the four direct-MP4 casts from 19
+and 20 October were replaced on 20 October. Each replacement was checked for
+a native video embed, decoded frames, and playback after seeking inside
+Farcaster before its original was deleted. Their queue entries retain the
+original receipts in `repairHistory` and point to the verified replacements.
 Replacing an old cast is a separate publication decision, with a new cast hash
 and separate engagement.
+
+| Video | Verified HLS replacement |
+| --- | --- |
+| Wine | <https://farcaster.xyz/vedangvatsa/0x1749986e> |
+| Beer | <https://farcaster.xyz/vedangvatsa/0xb24d7282> |
+| Bananas | <https://farcaster.xyz/vedangvatsa/0xde80a2f3> |
+| Pineapples | <https://farcaster.xyz/vedangvatsa/0xf2a8a943> |
 
 ## Focused checks
 

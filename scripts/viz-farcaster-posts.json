@@ -1427,7 +1427,7 @@
     "scheduleDate": "2026-10-18",
     "scheduleTime": "20:00",
     "posted": true,
-    "postedAt": "2026-10-19T13:15:36.217Z",
+    "postedAt": "2026-10-20T11:17:32.000Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/75-r2.txt",
     "captionStyle": "concise-v2",
@@ -1440,13 +1440,25 @@
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
     "audioRevision": "no-attribution-v1",
-    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/75-wine-2000-2023.mp4",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/hls/75-wine-2000-2023.m3u8",
     "state": "sent",
     "attemptedAt": "2026-10-19T13:15:36.009Z",
     "attemptedSlot": "2026-10-19T14:00",
     "publishedText": "How the largest wine producers changed.\n\n2000-2023. Wine production by country, measured in millions of tonnes.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0x92ba3e21",
-    "platformPostId": "0x92ba3e21225ac29ac9be4bdf4a3bb37684e2fe03"
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0x1749986e",
+    "platformPostId": "0x1749986e2543bed59b4d1ef5f99c502b149b7b39",
+    "publishedVia": "farcaster-web",
+    "playbackVerifiedAt": "2026-10-20T11:23:21.860Z",
+    "repairHistory": [
+      {
+        "reason": "Direct MP4 embed replaced with HLS",
+        "platformPostId": "0x92ba3e21225ac29ac9be4bdf4a3bb37684e2fe03",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0x92ba3e21",
+        "postedAt": "2026-10-19T13:15:36.217Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/75-wine-2000-2023.mp4",
+        "deletedAt": "2026-10-20T11:24:25.796Z"
+      }
+    ]
   },
   {
     "id": "viz-b2-farcaster-76",
@@ -1459,7 +1471,7 @@
     "scheduleDate": "2026-10-19",
     "scheduleTime": "09:00",
     "posted": true,
-    "postedAt": "2026-10-19T19:25:21.497Z",
+    "postedAt": "2026-10-20T11:26:38.000Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/76-r2.txt",
     "captionStyle": "concise-v2",
@@ -1472,13 +1484,25 @@
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
     "audioRevision": "no-attribution-v1",
-    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/76-beer-2000-2023.mp4",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/hls/76-beer-2000-2023.m3u8",
     "state": "sent",
     "attemptedAt": "2026-10-19T19:25:21.304Z",
     "attemptedSlot": "2026-10-19T20:00",
     "publishedText": "How the largest malted-barley beer producers changed.\n\n2000-2023. Malted-barley beer production by country, measured in millions of tonnes.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0xde259142",
-    "platformPostId": "0xde259142e44bbde1ffb6df7ef82b745200a75e8c"
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0xb24d7282",
+    "platformPostId": "0xb24d72826cfd5dacc201fd0f059f1126a5924d3d",
+    "publishedVia": "farcaster-web",
+    "playbackVerifiedAt": "2026-10-20T11:26:45.345Z",
+    "repairHistory": [
+      {
+        "reason": "Direct MP4 embed replaced with HLS",
+        "platformPostId": "0xde259142e44bbde1ffb6df7ef82b745200a75e8c",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0xde259142",
+        "postedAt": "2026-10-19T19:25:21.497Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/76-beer-2000-2023.mp4",
+        "deletedAt": "2026-10-20T11:26:50.470Z"
+      }
+    ]
   },
   {
     "id": "viz-b2-farcaster-77",
@@ -1491,7 +1515,7 @@
     "scheduleDate": "2026-10-19",
     "scheduleTime": "14:00",
     "posted": true,
-    "postedAt": "2026-10-20T06:35:09.494Z",
+    "postedAt": "2026-10-20T11:29:02.000Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/77-r2.txt",
     "captionStyle": "concise-v2",
@@ -1504,13 +1528,25 @@
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
     "audioRevision": "no-attribution-v1",
-    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/77-bananas-2000-2024.mp4",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/hls/77-bananas-2000-2024.m3u8",
     "state": "sent",
     "attemptedAt": "2026-10-20T06:35:09.298Z",
     "attemptedSlot": "2026-10-20T09:00",
     "publishedText": "How the largest banana producers changed.\n\n2000-2024. Banana production by country, measured in millions of tonnes.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0xab55027f",
-    "platformPostId": "0xab55027f90ebd1adc6b45ba764eaa02e696b4b59"
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0xde80a2f3",
+    "platformPostId": "0xde80a2f32063067c47cd21bc6c58032386669767",
+    "publishedVia": "farcaster-web",
+    "playbackVerifiedAt": "2026-10-20T11:29:09.282Z",
+    "repairHistory": [
+      {
+        "reason": "Direct MP4 embed replaced with HLS",
+        "platformPostId": "0xab55027f90ebd1adc6b45ba764eaa02e696b4b59",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0xab55027f",
+        "postedAt": "2026-10-20T06:35:09.494Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/77-bananas-2000-2024.mp4",
+        "deletedAt": "2026-10-20T11:29:14.811Z"
+      }
+    ]
   },
   {
     "id": "viz-b2-farcaster-78",
@@ -1523,7 +1559,7 @@
     "scheduleDate": "2026-10-19",
     "scheduleTime": "20:00",
     "posted": true,
-    "postedAt": "2026-10-20T08:53:21.176Z",
+    "postedAt": "2026-10-20T11:29:24.000Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/78-r2.txt",
     "captionStyle": "concise-v2",
@@ -1536,13 +1572,25 @@
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
     "audioRevision": "no-attribution-v1",
-    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/78-pineapples-2000-2024.mp4",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/hls/78-pineapples-2000-2024.m3u8",
     "state": "sent",
     "attemptedAt": "2026-10-20T08:53:21.054Z",
     "attemptedSlot": "2026-10-20T14:00",
     "publishedText": "How the largest pineapple producers changed.\n\n2000-2024. Pineapple production by country, measured in millions of tonnes.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0xbaab72fe",
-    "platformPostId": "0xbaab72fef3be15370cd7ee7d6503939b9ba15994"
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0xf2a8a943",
+    "platformPostId": "0xf2a8a94376c04edf9e3cdd120d9b6bbbdcff9f42",
+    "publishedVia": "farcaster-web",
+    "playbackVerifiedAt": "2026-10-20T11:29:29.622Z",
+    "repairHistory": [
+      {
+        "reason": "Direct MP4 embed replaced with HLS",
+        "platformPostId": "0xbaab72fef3be15370cd7ee7d6503939b9ba15994",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0xbaab72fe",
+        "postedAt": "2026-10-20T08:53:21.176Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/scripts/viz-batch2-assets/no-attribution/78-pineapples-2000-2024.mp4",
+        "deletedAt": "2026-10-20T11:29:34.628Z"
+      }
+    ]
   },
   {
     "id": "viz-b2-farcaster-54",
