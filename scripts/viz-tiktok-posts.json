@@ -1956,8 +1956,8 @@
     "text": "How private-sector credit changed across economies.\n\n2001-2024. Credit to the private sector as a share of GDP.",
     "scheduleDate": "2026-10-21",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-21T17:20:27.810Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/55-r2.txt",
     "captionStyle": "concise-v2",
@@ -1968,7 +1968,14 @@
     "altText": "Private credit, 2001-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How private-sector credit changed across economies.\n\n2001-2024. Credit to the private sector as a share of GDP.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-21T20:00",
+    "attemptedAt": "2026-10-21T17:18:42.765Z",
+    "bufferPostId": "6ad8f3f34e03d128758ea8f9",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7699171728865512712"
   },
   {
     "id": "viz-b2-tt-83",

@@ -1668,8 +1668,8 @@
     "text": "How the largest lemon and lime producers changed.\n\n2000-2024. Lemon and lime production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-21",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-21T17:21:29.632Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/82-r2.txt",
     "captionStyle": "concise-v2",
@@ -1680,7 +1680,13 @@
     "altText": "Lemons & limes, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-21T17:21:04.933Z",
+    "attemptedSlot": "2026-10-21T20:00",
+    "publishedText": "How the largest lemon and lime producers changed.\n\n2000-2024. Lemon and lime production by country, measured in millions of tonnes.",
+    "platformPostId": "1645194210390051",
+    "postUrl": "https://www.facebook.com/watch/?v=1645194210390051"
   },
   {
     "id": "viz-b2-facebook-55",
