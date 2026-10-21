@@ -1693,8 +1693,8 @@
     "text": "How the largest orange producers changed.\n\n2000-2024. Orange production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-21",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-21T08:55:45.789Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/81-r2.txt",
     "captionStyle": "concise-v2",
@@ -1709,7 +1709,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-21T08:55:41.935Z",
+    "attemptedSlot": "2026-10-21T14:00",
+    "publishedText": "How the largest orange producers changed.\n\n2000-2024. Orange production by country, measured in millions of tonnes.",
+    "platformPostId": "831072969108455424",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831072969108455424"
   },
   {
     "id": "viz-b2-tumblr-82",
