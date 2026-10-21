@@ -1838,8 +1838,8 @@
     "text": "How the largest orange producers changed.\n\n2000-2024. Orange production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-21",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-21T06:34:16.597Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/81-r2.txt",
     "captionStyle": "concise-v2",
@@ -1850,7 +1850,14 @@
     "altText": "Oranges, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest orange producers changed.\n\n2000-2024. Orange production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-21T09:00",
+    "attemptedAt": "2026-10-21T06:33:19.758Z",
+    "bufferPostId": "6ad85cb0a9967de0497b0a0b",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DevxgztjEow/"
   },
   {
     "id": "viz-b2-ig-82",
