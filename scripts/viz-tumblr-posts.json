@@ -1795,8 +1795,8 @@
     "text": "How the largest mango, guava and mangosteen producers changed.\n\n2000-2024. Mango, guava and mangosteen production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-22",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-22T08:56:29.603Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/83-r2.txt",
     "captionStyle": "concise-v2",
@@ -1811,7 +1811,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-22T08:56:26.920Z",
+    "attemptedSlot": "2026-10-22T14:00",
+    "publishedText": "How the largest mango, guava and mangosteen producers changed.\n\n2000-2024. Mango, guava and mangosteen production by country, measured in millions of tonnes.",
+    "platformPostId": "831163612061122560",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831163612061122560"
   },
   {
     "id": "viz-b2-tumblr-84",
