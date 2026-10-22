@@ -1737,8 +1737,8 @@
     "text": "How the largest mango, guava and mangosteen producers changed.\n\n2000-2024. Mango, guava and mangosteen production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-22",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-22T06:47:34.715Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/83-r2.txt",
     "captionStyle": "concise-v2",
@@ -1749,7 +1749,14 @@
     "altText": "Mango family, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-22T06:47:26.186Z",
+    "attemptedSlot": "2026-10-22T09:00",
+    "publishedText": "How the largest mango, guava and mangosteen producers changed.\n\n2000-2024. Mango, guava and mangosteen production by country, measured in millions of tonnes.",
+    "platformPostId": "urn:li:ugcPost:7518926003478413312",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518926003478413312/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-84",

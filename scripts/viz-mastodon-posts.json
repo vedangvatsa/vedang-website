@@ -1705,8 +1705,8 @@
     "text": "How private-sector credit changed across economies.\n\n2001-2024. Credit to the private sector as a share of GDP.",
     "scheduleDate": "2026-10-21",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-22T06:48:28.286Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/55-r2.txt",
     "captionStyle": "concise-v2",
@@ -1718,7 +1718,13 @@
     "sourceCredit": "IMF, OECD, World Bank",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-22T06:48:18.980Z",
+    "attemptedSlot": "2026-10-22T09:00",
+    "publishedText": "How private-sector credit changed across economies.\n\n2001-2024. Credit to the private sector as a share of GDP.",
+    "postUrl": "https://hachyderm.io/@vedang/117483222345790101",
+    "platformPostId": "117483222345790101"
   },
   {
     "id": "viz-b2-mastodon-83",
