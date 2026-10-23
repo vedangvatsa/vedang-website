@@ -1931,8 +1931,8 @@
     "text": "How electricity use per person changed.\n\n2000-2024. Electricity consumption per person, measured in megawatt-hours.",
     "scheduleDate": "2026-10-23",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-23T17:56:49.321Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/56-r2.txt",
     "captionStyle": "concise-v2",
@@ -1947,7 +1947,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-23T17:56:45.083Z",
+    "attemptedSlot": "2026-10-23T20:00",
+    "publishedText": "How electricity use per person changed.\n\n2000-2024. Electricity consumption per person, measured in megawatt-hours.",
+    "platformPostId": "831288203518607360",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831288203518607360"
   },
   {
     "id": "viz-b2-tumblr-87",
