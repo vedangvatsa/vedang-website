@@ -1965,8 +1965,8 @@
     "text": "How the largest papaya producers changed.\n\n2000-2024. Papaya production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-23",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-24T06:43:24.848Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/87-r2.txt",
     "captionStyle": "concise-v2",
@@ -1981,7 +1981,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-24T06:43:22.464Z",
+    "attemptedSlot": "2026-10-24T09:00",
+    "publishedText": "How the largest papaya producers changed.\n\n2000-2024. Papaya production by country, measured in millions of tonnes.",
+    "platformPostId": "831336433362075648",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831336433362075648"
   },
   {
     "id": "viz-b2-tumblr-88",

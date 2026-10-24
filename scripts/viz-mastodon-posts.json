@@ -1891,8 +1891,8 @@
     "text": "How the largest papaya producers changed.\n\n2000-2024. Papaya production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-23",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-24T06:43:32.174Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/87-r2.txt",
     "captionStyle": "concise-v2",
@@ -1904,7 +1904,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-24T06:43:24.852Z",
+    "attemptedSlot": "2026-10-24T09:00",
+    "publishedText": "How the largest papaya producers changed.\n\n2000-2024. Papaya production by country, measured in millions of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117494527562261928",
+    "platformPostId": "117494527562261928"
   },
   {
     "id": "viz-b2-mastodon-88",
