@@ -2049,8 +2049,8 @@
     "text": "How the largest date producers changed.\n\n2000-2024. Date production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-22",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-24T14:57:34.821Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/85-r2.txt",
     "captionStyle": "concise-v2",
@@ -2061,7 +2061,14 @@
     "altText": "Dates, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest date producers changed.\n\n2000-2024. Date production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-24T20:00",
+    "attemptedAt": "2026-10-24T14:55:51.559Z",
+    "bufferPostId": "6adcc6f70b5343d0708b5ed9",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7700248239580155143"
   },
   {
     "id": "viz-b2-tt-86",

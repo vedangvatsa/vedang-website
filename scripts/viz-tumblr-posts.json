@@ -2033,8 +2033,8 @@
     "text": "How the largest in-shell walnut producers changed.\n\n2000-2024. In-shell walnut production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-24",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-24T14:58:30.412Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/89-r2.txt",
     "captionStyle": "concise-v2",
@@ -2049,7 +2049,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-24T14:58:26.654Z",
+    "attemptedSlot": "2026-10-24T20:00",
+    "publishedText": "How the largest in-shell walnut producers changed.\n\n2000-2024. In-shell walnut production by country, measured in millions of tonnes.",
+    "platformPostId": "831367581872029696",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831367581872029696"
   },
   {
     "id": "viz-b2-tumblr-90",
