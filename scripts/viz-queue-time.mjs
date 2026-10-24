@@ -21,7 +21,13 @@ export function selectDuePost(posts, now = new Date()) {
 }
 
 export function needsBufferWork(posts, now = new Date()) {
-  // Accepted posts need status reconciliation even before another slot is due.
-  if (posts.some(p => !p.paused && p.bufferPostId && !p.posted && p.state !== 'failed')) return true;
+  // Accepted posts need status reconciliation even before another slot is due,
+  // but only if attempted recently (within 2 hours) to avoid hammering APIs on stale entries.
+  const hasRecentPending = posts.some(p => {
+    if (p.paused || !p.bufferPostId || p.posted || p.state === 'failed') return false;
+    if (!p.attemptedAt) return true;
+    return (now.getTime() - Date.parse(p.attemptedAt)) < 2 * 3600000;
+  });
+  if (hasRecentPending) return true;
   return Boolean(selectDuePost(posts, now).post);
 }

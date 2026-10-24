@@ -24,17 +24,38 @@ export const CREATE_POST = `mutation PublishVizNow($input: CreatePostInput!) {
   }
 }`;
 
-export async function gql(query: string, variables: Record<string, unknown> = {}) {
+export async function gql(query: string, variables: Record<string, unknown> = {}, retries = 2) {
   if (!process.env.BUFFER_API_KEY) throw new Error('Missing BUFFER_API_KEY');
-  const res = await fetch('https://api.buffer.com', {
-    method: 'POST', signal: AbortSignal.timeout(60000),
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.BUFFER_API_KEY}` },
-    body: JSON.stringify({ query, variables }),
-  });
-  if (!res.ok) throw new Error(`Buffer HTTP ${res.status}`);
-  const data = await res.json() as any;
-  if (data.errors?.length) throw new Error(`Buffer GraphQL error: ${JSON.stringify(data.errors).slice(0, 600)}`);
-  return data.data;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const res = await fetch('https://api.buffer.com', {
+      method: 'POST', signal: AbortSignal.timeout(60000),
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.BUFFER_API_KEY}` },
+      body: JSON.stringify({ query, variables }),
+    });
+    if (res.status === 429 && attempt < retries) {
+      const retryAfter = parseInt(res.headers.get('retry-after') || '3', 10);
+      const waitMs = Math.min(Math.max(retryAfter * 1000, 2000), 10000);
+      await sleep(waitMs);
+      continue;
+    }
+    if (!res.ok) {
+      const errorBody = await res.text().catch(() => '');
+      const retryAfter = res.headers.get('retry-after');
+      const limit = res.headers.get('x-ratelimit-limit');
+      const remaining = res.headers.get('x-ratelimit-remaining');
+      const reset = res.headers.get('x-ratelimit-reset');
+      const headerInfo = [
+        retryAfter ? `retry-after=${retryAfter}` : '',
+        limit ? `limit=${limit}` : '',
+        remaining ? `remaining=${remaining}` : '',
+        reset ? `reset=${reset}` : '',
+      ].filter(Boolean).join(' ');
+      throw new Error(`Buffer HTTP ${res.status}${headerInfo ? ` [${headerInfo}]` : ''}: ${errorBody.slice(0, 500)}`);
+    }
+    const data = await res.json() as any;
+    if (data.errors?.length) throw new Error(`Buffer GraphQL error: ${JSON.stringify(data.errors).slice(0, 600)}`);
+    return data.data;
+  }
 }
 
 export async function channels() {
@@ -102,17 +123,26 @@ export function applyBufferStatus(entry: VizPost, remote: any) {
     entry.state = 'failed';
     entry.error = `Buffer status ${remote.status}; inspect post ${remote.id}`;
   } else {
-    entry.state = 'submitted';
+    // If it was attempted more than 6 hours ago and is still not sent, mark it failed to unblock queue
+    const ageMs = entry.attemptedAt ? Date.now() - Date.parse(entry.attemptedAt as string) : 0;
+    if (ageMs > 6 * 3600000) {
+      entry.state = 'failed';
+      entry.error = `Buffer post ${remote.id} timed out in status ${remote.status} after ${Math.round(ageMs / 3600000)}h`;
+    } else {
+      entry.state = 'submitted';
+    }
   }
 }
 
 async function reconcile(entry: VizPost, save: () => void) {
-  for (let i = 0; i < 60; i++) {
+  const isStale = entry.attemptedAt && (Date.now() - Date.parse(entry.attemptedAt as string)) > 2 * 3600000;
+  const maxAttempts = isStale ? 1 : 30;
+  for (let i = 0; i < maxAttempts; i++) {
     const data = await gql(`query($id: PostId!) { post(input: {id: $id}) { ${POST_FIELDS} } }`, { id: entry.bufferPostId });
     applyBufferStatus(entry, data.post);
     save();
     if (entry.state !== 'submitted') break;
-    await sleep(5000);
+    await sleep(Math.min(5000 + i * 1000, 15000));
   }
   if (entry.state !== 'sent') throw new Error(entry.error || `Buffer ${entry.bufferPostId} is still processing; publication not confirmed`);
 }
