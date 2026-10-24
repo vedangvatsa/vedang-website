@@ -2018,8 +2018,8 @@
     "description": "How the largest apricot producers changed.\n\n2000-2024. Apricot production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-22",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-24T12:54:09.153Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/84-r2.txt",
     "captionStyle": "concise-v2",
@@ -2030,7 +2030,14 @@
     "altText": "Apricots, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest apricot producers changed.\n\n2000-2024. Apricot production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-24T14:00",
+    "attemptedAt": "2026-10-24T12:54:07.586Z",
+    "bufferPostId": "6adcaa6fbd33ce99c322cda3",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=peq3iKqD-Xc"
   },
   {
     "id": "viz-b2-yt-85",
