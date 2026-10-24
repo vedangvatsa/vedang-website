@@ -1999,8 +1999,8 @@
     "text": "How the largest in-shell coconut producers changed.\n\n2000-2024. In-shell coconut production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-24",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-24T11:42:11.436Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/88-r2.txt",
     "captionStyle": "concise-v2",
@@ -2015,7 +2015,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-24T11:42:08.067Z",
+    "attemptedSlot": "2026-10-24T14:00",
+    "publishedText": "How the largest in-shell coconut producers changed.\n\n2000-2024. In-shell coconut production by country, measured in millions of tonnes.",
+    "platformPostId": "831355230754045952",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831355230754045952"
   },
   {
     "id": "viz-b2-tumblr-89",
