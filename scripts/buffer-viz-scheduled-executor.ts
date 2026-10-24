@@ -201,11 +201,27 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
 
 export async function main() {
   const dryRun = process.env.DRY_RUN === '1';
-  const available = dryRun ? [] : await channels();
+  let available: any[] = [];
+  try {
+    available = dryRun ? [] : await channels();
+  } catch (err: any) {
+    if (err.message?.includes('429') && err.message?.includes('RATE_LIMIT_EXCEEDED')) {
+      console.warn(`⚠️ Buffer 30-day rate limit reached. Pausing Buffer publishing until quota window resets.\nDetails: ${err.message}`);
+      return;
+    }
+    throw err;
+  }
   let failures = 0;
   await Promise.all(PLATFORMS.map(async platform => {
     try { await runPlatform(platform, available, dryRun); }
-    catch (err) { failures++; console.error(`${platform.service}: ${(err as Error).message}`); }
+    catch (err) {
+      if ((err as Error).message?.includes('RATE_LIMIT_EXCEEDED')) {
+        console.warn(`⚠️ ${platform.service}: Buffer rate limit reached. Will retry after quota reset.`);
+      } else {
+        failures++;
+        console.error(`${platform.service}: ${(err as Error).message}`);
+      }
+    }
   }));
   if (failures) throw new Error(`${failures} Buffer platform(s) failed`);
 }

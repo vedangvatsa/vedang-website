@@ -14,9 +14,12 @@ for (const platform of [...BUFFER_PLATFORMS, ...configuredDirectPlatforms()]) {
     console.log(`${platform}: ${due ? 'publication or reconciliation due' : 'nothing due'}`);
     needed ||= due;
   } catch (err) {
-    // Let the publisher surface an unresolved state as a failed job, never as success.
     console.error(`${platform}: ${err.message}`);
-    needed = true;
+    const staleBlocked = posts.find(p => !p.posted && ['publishing', 'uncertain', 'failed', 'submitted'].includes(p.state || ''));
+    const isRecent = staleBlocked?.attemptedAt && (Date.now() - Date.parse(staleBlocked.attemptedAt)) < 2 * 3600000;
+    if (isRecent || process.env.VIZ_FORCE_CHECKS === '1') {
+      needed = true;
+    }
   }
 }
 if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `run=${needed}\n`);
