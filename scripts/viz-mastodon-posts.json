@@ -2015,8 +2015,8 @@
     "text": "How undernourishment changed across countries.\n\n2001-2024. The estimated share of people whose habitual food intake provides insufficient dietary energy.",
     "scheduleDate": "2026-10-25",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-25T08:44:27.037Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/57-r2.txt",
     "captionStyle": "concise-v2",
@@ -2028,7 +2028,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-25T08:44:16.844Z",
+    "attemptedSlot": "2026-10-25T14:00",
+    "publishedText": "How undernourishment changed across countries.\n\n2001-2024. The estimated share of people whose habitual food intake provides insufficient dietary energy.",
+    "postUrl": "https://hachyderm.io/@vedang/117500665323727291",
+    "platformPostId": "117500665323727291"
   },
   {
     "id": "viz-b2-mastodon-91",

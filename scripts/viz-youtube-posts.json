@@ -2111,8 +2111,8 @@
     "description": "How electricity use per person changed.\n\n2000-2024. Electricity consumption per person, measured in megawatt-hours.",
     "scheduleDate": "2026-10-23",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-25T08:41:41.061Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/56-r2.txt",
     "captionStyle": "concise-v2",
@@ -2123,7 +2123,14 @@
     "altText": "Power use, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How electricity use per person changed.\n\n2000-2024. Electricity consumption per person, measured in megawatt-hours.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-25T14:00",
+    "attemptedAt": "2026-10-25T08:41:39.289Z",
+    "bufferPostId": "6addc0c3e4be8a4d869ad88b",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=TG7oBo2EfX4"
   },
   {
     "id": "viz-b2-yt-87",
