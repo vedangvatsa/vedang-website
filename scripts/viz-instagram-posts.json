@@ -2024,8 +2024,8 @@
     "text": "How the largest cherry producers changed.\n\n2000-2024. Cherry production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-10-23",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-25T04:45:43.757Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/86-r2.txt",
     "captionStyle": "concise-v2",
@@ -2036,7 +2036,14 @@
     "altText": "Cherries, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest cherry producers changed.\n\n2000-2024. Cherry production by country, measured in thousands of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-25T09:00",
+    "attemptedAt": "2026-10-25T04:42:43.400Z",
+    "bufferPostId": "6add88c38b3d437ddceff74e",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/De54GWrn4iA/"
   },
   {
     "id": "viz-b2-ig-56",

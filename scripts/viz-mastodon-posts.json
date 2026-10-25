@@ -1984,8 +1984,8 @@
     "text": "How the largest in-shell pistachio producers changed.\n\n2000-2024. In-shell pistachio production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-10-24",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-25T04:47:34.436Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/90-r2.txt",
     "captionStyle": "concise-v2",
@@ -1997,7 +1997,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-25T04:47:25.515Z",
+    "attemptedSlot": "2026-10-25T09:00",
+    "publishedText": "How the largest in-shell pistachio producers changed.\n\n2000-2024. In-shell pistachio production by country, measured in thousands of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117499733884876366",
+    "platformPostId": "117499733884876366"
   },
   {
     "id": "viz-b2-mastodon-57",
