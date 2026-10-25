@@ -2046,8 +2046,8 @@
     "text": "How the largest in-shell cashew nut producers changed.\n\n2000-2024. In-shell cashew nut production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-25",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-25T17:21:39.197Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/91-r2.txt",
     "captionStyle": "concise-v2",
@@ -2059,7 +2059,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-25T17:21:31.947Z",
+    "attemptedSlot": "2026-10-25T20:00",
+    "publishedText": "How the largest in-shell cashew nut producers changed.\n\n2000-2024. In-shell cashew nut production by country, measured in millions of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117502699052028727",
+    "platformPostId": "117502699052028727"
   },
   {
     "id": "viz-b2-mastodon-92",

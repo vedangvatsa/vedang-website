@@ -2078,8 +2078,8 @@
     "text": "How the largest soybean producers changed.\n\n2000-2024. Soybean production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-25",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-25T17:20:56.938Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/92-r2.txt",
     "captionStyle": "concise-v2",
@@ -2090,7 +2090,14 @@
     "altText": "Soybeans, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-25T17:20:44.546Z",
+    "attemptedSlot": "2026-10-25T20:00",
+    "publishedText": "How the largest soybean producers changed.\n\n2000-2024. Soybean production by country, measured in millions of tonnes.",
+    "platformPostId": "urn:li:ugcPost:7520172560152608769",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7520172560152608769/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-93",
