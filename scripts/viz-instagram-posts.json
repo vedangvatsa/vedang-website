@@ -2117,8 +2117,8 @@
     "text": "How the largest in-shell coconut producers changed.\n\n2000-2024. In-shell coconut production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-24",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-26T04:47:49.419Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/88-r2.txt",
     "captionStyle": "concise-v2",
@@ -2129,7 +2129,14 @@
     "altText": "Coconuts, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest in-shell coconut producers changed.\n\n2000-2024. In-shell coconut production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-26T09:00",
+    "attemptedAt": "2026-10-26T04:46:51.847Z",
+    "bufferPostId": "6adedb3c8b3d437ddc46c466",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/De8dS5lkiKf/"
   },
   {
     "id": "viz-b2-ig-89",
