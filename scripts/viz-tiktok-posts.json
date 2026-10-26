@@ -2235,8 +2235,8 @@
     "text": "How the largest in-shell pistachio producers changed.\n\n2000-2024. In-shell pistachio production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-10-24",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-26T16:59:32.927Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/90-r2.txt",
     "captionStyle": "concise-v2",
@@ -2247,7 +2247,14 @@
     "altText": "Pistachios, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest in-shell pistachio producers changed.\n\n2000-2024. In-shell pistachio production by country, measured in thousands of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-26T20:00",
+    "attemptedAt": "2026-10-26T16:58:50.252Z",
+    "bufferPostId": "6adf86ca0f72382ba9781e81",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7701022112978488596"
   },
   {
     "id": "viz-b2-tt-57",
