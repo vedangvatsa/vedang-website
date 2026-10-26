@@ -2204,8 +2204,8 @@
     "description": "How the largest in-shell walnut producers changed.\n\n2000-2024. In-shell walnut production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-24",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-26T09:45:21.667Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/89-r2.txt",
     "captionStyle": "concise-v2",
@@ -2216,7 +2216,14 @@
     "altText": "Walnuts, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest in-shell walnut producers changed.\n\n2000-2024. In-shell walnut production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-26T14:00",
+    "attemptedAt": "2026-10-26T09:45:19.793Z",
+    "bufferPostId": "6adf2130a4ca599b2445fb54",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=a0L0D8q2Jio"
   },
   {
     "id": "viz-b2-yt-90",

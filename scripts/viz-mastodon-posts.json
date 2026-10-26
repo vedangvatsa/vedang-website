@@ -2108,8 +2108,8 @@
     "text": "How the largest unshelled groundnut producers changed.\n\n2000-2024. Unshelled groundnut production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-26",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-26T09:48:10.903Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/93-r2.txt",
     "captionStyle": "concise-v2",
@@ -2121,7 +2121,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-26T09:48:02.344Z",
+    "attemptedSlot": "2026-10-26T14:00",
+    "publishedText": "How the largest unshelled groundnut producers changed.\n\n2000-2024. Unshelled groundnut production by country, measured in millions of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117506578236684151",
+    "platformPostId": "117506578236684151"
   },
   {
     "id": "viz-b2-mastodon-94",
