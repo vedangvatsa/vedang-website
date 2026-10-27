@@ -167,7 +167,7 @@ export default function MediaPage() {
           <section className="max-w-4xl mx-auto py-8">
             <ul className="space-y-1 text-sm text-muted-foreground text-left md:columns-2 md:gap-4">
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)</span></li>
-              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Featured in Favikon’s Top 50 Fintech & Crypto Creators, Thinkers360’s Top 50 Metaverse Thought Leaders, and Creator Chart's Top 200 Creator Professionals</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Speaker at IIT Delhi, IIT Kanpur, OP Jindal University, Bharati Vidyapeeth, TUM Munich, ISB Hyderabad, ETH Enugu, India Blockchain Month, Premier AI and Web3 Gala, The Responsible AI Forum, Bizthon, Code Africa Conference, NIFT Panchkula, etc.</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Young Researcher 2020 (with 25 publications) and Young Achiever 2020-21 awardee</span></li>
