@@ -116,6 +116,7 @@ const speakingEngagementImages = [
   '/images/speaker/Vedang - speaker26.jpg',
   '/images/speaker/Vedang - speaker27.jpeg',
   '/images/speaker/Vedang - speaker28.jpeg',
+  '/images/speaker/Vedang - speaker29.jpg',
 ];
 
 
