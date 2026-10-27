@@ -2203,7 +2203,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "postedAt": null,
-    "error": null,
+    "error": "Bluesky video processing failed",
     "notesUrl": "https://veda.ng/viz-notes/95-r2.txt",
     "captionStyle": "concise-v2",
     "indicator": "FAO.QCL.187.5510",
@@ -2214,7 +2214,11 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "uncertain",
+    "attemptedAt": "2026-10-27T10:56:26.265Z",
+    "attemptedSlot": "2026-10-27T14:00",
+    "publishedText": "How the largest dry pea producers changed.\n\n2000-2024. Dry pea production by country, measured in millions of tonnes."
   },
   {
     "id": "viz-b2-bluesky-96",
