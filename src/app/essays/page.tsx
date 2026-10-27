@@ -11,6 +11,7 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.essays.title,
   description: pageMetadata.essays.description,
   url: pageMetadata.essays.url,
+  ogImage: '/essays/opengraph-image',
   ogImageAlt: 'Essays & Research Papers - Vedang Vatsa',
 });
 

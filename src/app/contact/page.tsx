@@ -9,7 +9,7 @@ const baseMetadata = generateMetadata({
   title: pageMetadata.contact.title,
   description: pageMetadata.contact.description,
   url: pageMetadata.contact.url,
-  ogImage: '/og/contact.png',
+  ogImage: '/contact/opengraph-image',
   ogImageAlt: 'Book a meeting with Vedang Vatsa',
 });
 

@@ -16,8 +16,8 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.media.title,
   description: pageMetadata.media.description,
   url: pageMetadata.media.url,
-
-  ogImageAlt: 'Vedang Vatsa speaking at a conference.',
+  ogImage: '/media/opengraph-image',
+  ogImageAlt: 'Speaking Engagements & Media | Vedang Vatsa',
 });
 
 const mediaMentions = [
