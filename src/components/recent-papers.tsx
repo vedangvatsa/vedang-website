@@ -48,7 +48,7 @@ export const recentPapers = [
     url: 'https://dx.doi.org/10.21474/IJAR01/11418',
   },
   {
-    title: 'Emergence of TechFin in the emerging economies',
-    url: 'https://doi.org/10.9790/487X-2207075660',
+    title: 'Growth of Digital Payments and the emergence of FinTech in India',
+    url: 'https://www.researchgate.net/publication/343365922_Growth_of_Digital_Payments_and_the_emergence_of_FinTech_in_India',
   },
 ];
