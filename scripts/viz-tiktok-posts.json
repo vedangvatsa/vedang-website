@@ -2266,8 +2266,8 @@
     "text": "How undernourishment changed across countries.\n\n2001-2024. The estimated share of people whose habitual food intake provides insufficient dietary energy.",
     "scheduleDate": "2026-10-25",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-27T05:54:58.363Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/57-r2.txt",
     "captionStyle": "concise-v2",
@@ -2278,7 +2278,14 @@
     "altText": "Hunger, 2001-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How undernourishment changed across countries.\n\n2001-2024. The estimated share of people whose habitual food intake provides insufficient dietary energy.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-27T09:00",
+    "attemptedAt": "2026-10-27T05:53:14.532Z",
+    "bufferPostId": "6ae03c4a913aa340c54166f1",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7701221029162667316"
   },
   {
     "id": "viz-b2-tt-91",

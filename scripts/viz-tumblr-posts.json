@@ -2271,8 +2271,8 @@
     "text": "How exposure to fine-particle air pollution changed.\n\n2000-2023. Population-weighted annual PM2.5 exposure, measured in micrograms per cubic metre.",
     "scheduleDate": "2026-10-26",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-27T05:55:51.565Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/58-r2.txt",
     "captionStyle": "concise-v2",
@@ -2287,7 +2287,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-27T05:55:48.365Z",
+    "attemptedSlot": "2026-10-27T09:00",
+    "publishedText": "How exposure to fine-particle air pollution changed.\n\n2000-2023. Population-weighted annual PM2.5 exposure, measured in micrograms per cubic metre.",
+    "platformPostId": "831605232355213312",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831605232355213312"
   },
   {
     "id": "viz-b2-tumblr-95",

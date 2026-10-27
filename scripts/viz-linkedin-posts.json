@@ -2202,8 +2202,8 @@
     "text": "How the largest dry pea producers changed.\n\n2000-2024. Dry pea production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-27",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-27T05:55:10.016Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/95-r2.txt",
     "captionStyle": "concise-v2",
@@ -2214,7 +2214,14 @@
     "altText": "Dry peas, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-27T05:55:02.545Z",
+    "attemptedSlot": "2026-10-27T09:00",
+    "publishedText": "How the largest dry pea producers changed.\n\n2000-2024. Dry pea production by country, measured in millions of tonnes.",
+    "platformPostId": "urn:li:ugcPost:7520724753519652864",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7520724753519652864/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-96",
