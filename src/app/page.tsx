@@ -15,6 +15,7 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.home.title,
   description: pageMetadata.home.description,
   url: pageMetadata.home.url,
+  ogImage: '/opengraph-image',
   ogImageAlt: 'Vedang Vatsa - AI & Web3 Innovator, Community Founder',
 });
 
