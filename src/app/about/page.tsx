@@ -309,6 +309,7 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4">
                         <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-6">
+                            <li><Link href="https://doi.org/10.5281/zenodo.23661069" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Delegation and Trust in Agentic Commerce</Link>; Zenodo</li>
                             <li><Link href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218" target="_blank" rel="noopener noreferrer" className="hover:text-primary">State of AI Research</Link>; SSRN</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.6874178" target="_blank" rel="noopener noreferrer" className="hover:text-primary">AI Agent Infrastructure Stack</Link>; SSRN</li>
                             <li><Link href="https://doi.org/10.2139/ssrn.6990919" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Web3 Research Trends</Link>; SSRN</li>

@@ -1,5 +1,9 @@
 export const recentPapers = [
   {
+    title: 'Delegation and Trust in Agentic Commerce',
+    url: 'https://doi.org/10.5281/zenodo.23661069',
+  },
+  {
     title: 'State of AI Research',
     url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218',
   },
