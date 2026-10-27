@@ -24,6 +24,7 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.about.title,
   description: pageMetadata.about.description,
   url: pageMetadata.about.url,
+  ogImage: '/about/opengraph-image',
   ogImageAlt: 'About Vedang Vatsa - Full Profile',
 });
 
