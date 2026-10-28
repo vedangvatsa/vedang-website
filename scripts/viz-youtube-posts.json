@@ -2390,8 +2390,8 @@
     "description": "How the largest dry bean producers changed.\n\n2000-2024. Dry bean production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-26",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-28T10:04:33.148Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/94-r2.txt",
     "captionStyle": "concise-v2",
@@ -2402,7 +2402,14 @@
     "altText": "Dry beans, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest dry bean producers changed.\n\n2000-2024. Dry bean production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-28T14:00",
+    "attemptedAt": "2026-10-28T10:00:12.961Z",
+    "bufferPostId": "6ae1c7b026cf140c4c84d953",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=mPeO2LZWkj0"
   },
   {
     "id": "viz-b2-yt-58",
