@@ -2390,9 +2390,9 @@
     "text": "How the largest dry bean producers changed.\n\n2000-2024. Dry bean production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-26",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
-    "error": "Buffer 6ae1c7ad2d290d34867f8fc7 is still processing; publication not confirmed",
+    "posted": true,
+    "postedAt": "2026-10-28T10:12:18.058Z",
+    "error": null,
     "notesUrl": "https://veda.ng/viz-notes/94-r2.txt",
     "captionStyle": "concise-v2",
     "indicator": "FAO.QCL.176.5510",
@@ -2404,11 +2404,12 @@
     "audioLicense": "Mixkit Stock Music Free License",
     "audioRevision": "no-attribution-v1",
     "publishedText": "How the largest dry bean producers changed.\n\n2000-2024. Dry bean production by country, measured in millions of tonnes.",
-    "state": "submitted",
+    "state": "sent",
     "attemptedSlot": "2026-10-28T14:00",
     "attemptedAt": "2026-10-28T10:00:12.971Z",
     "bufferPostId": "6ae1c7ad2d290d34867f8fc7",
-    "bufferStatus": "sending"
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7701657333436452114"
   },
   {
     "id": "viz-b2-tt-58",
