@@ -37,10 +37,10 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
 }`}</code></pre>
             <p><strong>Key fields:</strong></p>
             <ul>
-                <li><code>command</code>. The executable to run (node, npx, python, etc.)</li>
-                <li><code>args</code>. Command-line arguments</li>
-                <li><code>cwd</code>. Working directory for the server process</li>
-                <li><code>env</code>. Environment variables (use this for API keys and secrets)</li>
+                <li><code>command</code>: The executable to run (node, npx, python, etc.)</li>
+                <li><code>args</code>: Command-line arguments</li>
+                <li><code>cwd</code>: Working directory for the server process</li>
+                <li><code>env</code>: Environment variables (use this for API keys and secrets)</li>
             </ul>
         </AccordionContent>
     </AccordionItem>
@@ -67,7 +67,7 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
     }
   }
 }`}</code></pre>
-            <p>This means you can ship MCP configurations with your codebase. team members automatically get the same tools when they open the project.</p>
+            <p>This means you can ship MCP configurations with your codebase—team members automatically get the same tools when they open the project.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
@@ -143,7 +143,7 @@ console.log("Result:", result);`}</code></pre>
             <p><strong>Per-project configuration:</strong></p>
             <ul>
                 <li>Stored in the project repo (<code>.cursor/mcp.json</code>, <code>.vscode/mcp.json</code>)</li>
-                <li>Committed to Git. team members get the same tools automatically</li>
+                <li>Committed to Git—team members get the same tools automatically</li>
                 <li>Best for: project-specific servers (project database, deployment tools, internal APIs)</li>
                 <li>Security: use environment variable references, not raw secrets in config files</li>
             </ul>

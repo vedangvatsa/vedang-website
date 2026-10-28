@@ -1,6 +1,6 @@
 ---
 title: "Tools, Resources & Prompts: The Three Primitives"
-description: "MCP servers expose three types of capabilities. Understanding when to use each. and who controls them. is the key to building well-designed servers."
+description: "MCP servers expose three types of capabilities. Understanding when to use each, and who controls them, is the key to building well-designed servers."
 ---
 
 <MCPPrimitives />
@@ -27,7 +27,7 @@ A common mistake is putting everything into tools. MCP gives you three distinct 
                 <li><strong>Idempotent when possible:</strong> Calling the same tool twice with the same input should produce the same result. This makes error recovery simple.</li>
             </ul>
             <p><strong>Advanced: Annotations</strong></p>
-            <p>Tools can include annotations that hint at their behavior:</p>
+            <p>Tools can include annotations that hint at their behavior to the host application:</p>
             <pre><code>{`server.tool(
   "delete_user",
   { userId: z.string().describe("The user's unique ID") },
@@ -40,6 +40,12 @@ A common mistake is putting everything into tools. MCP gives you three distinct 
     }
   }
 );`}</code></pre>
+            <p><strong>How hosts use annotations:</strong></p>
+            <ul>
+                <li><code>destructive: true</code>: Informs clients that the tool performs irreversible state changes. Clients like Claude Desktop or Cursor can display a user confirmation dialog before invoking the action.</li>
+                <li><code>readOnlyHint: true</code>: Tells clients that the tool has no side effects. Autonomous multi-agent systems can safely parallelize read-only tool calls without race conditions.</li>
+                <li><code>openWorldHint: true</code>: Flags that the tool interacts with untrusted external resources (like fetching arbitrary web URLs).</li>
+            </ul>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -50,14 +56,14 @@ A common mistake is putting everything into tools. MCP gives you three distinct 
             <ul>
                 <li>Configuration files and schemas</li>
                 <li>Documentation and knowledge bases</li>
-                <li>Database schemas (not data. that's a tool)</li>
+                <li>Database schemas (not live data—that belongs in a tool)</li>
                 <li>Any read-only context the AI needs to do its job well</li>
             </ul>
             <p><strong>Resource URIs:</strong> Every resource has a unique URI. You can use any scheme, but common patterns include:</p>
             <ul>
-                <li><code>file:///path/to/document.md</code>. Local files</li>
-                <li><code>db://mydb/schema</code>. Database schemas</li>
-                <li><code>config://app/settings</code>. Application configuration</li>
+                <li><code>file:///path/to/document.md</code>: Local files</li>
+                <li><code>db://mydb/schema</code>: Database schemas</li>
+                <li><code>config://app/settings</code>: Application configuration</li>
             </ul>
             <p><strong>Static vs. Dynamic Resources:</strong></p>
             <ul>
@@ -202,7 +208,7 @@ fs.watch(configPath, () => {
     params: { uri: "config://app/settings" },
   });
 });`}</code></pre>
-            <p>This enables real-time context updates. the LLM always has the latest data without needing to re-fetch manually.</p>
+            <p>This enables real-time context updates: the LLM always has the latest data without needing to re-fetch manually.</p>
         </AccordionContent>
     </AccordionItem>
 </Accordion>

@@ -93,10 +93,10 @@ server.tool(
 );`}</code></pre>
             <p><strong>Best practices for API wrappers:</strong></p>
             <ul>
-                <li>Always handle API errors gracefully. return <code>isError: true</code> with a descriptive message</li>
-                <li>Use environment variables for API keys. never hardcode secrets</li>
+                <li>Always handle API errors gracefully: return <code>isError: true</code> with a descriptive message</li>
+                <li>Use environment variables for API keys; never hardcode secrets</li>
                 <li>Add rate limiting to prevent the LLM from making too many API calls</li>
-                <li>Format responses for readability. the LLM will process them better</li>
+                <li>Format responses for readability; the LLM will process them better</li>
             </ul>
         </AccordionContent>
     </AccordionItem>
@@ -124,20 +124,53 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">
-        <AccordionTrigger className="text-lg text-left">Pattern 4: Authenticated Servers</AccordionTrigger>
+        <AccordionTrigger className="text-lg text-left">Pattern 4: Authenticated & Remote HTTP Servers</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
-            <p>Many real-world MCP servers need authentication. either to access external APIs or to verify the identity of the connecting client.</p>
+            <p>Many real-world MCP servers need authentication—either to access external APIs or to verify the identity of the connecting client over HTTP.</p>
             <p><strong>API Key Authentication (Server → External API):</strong></p>
             <ul>
                 <li>Store API keys in environment variables</li>
                 <li>Pass them via the <code>env</code> field in the client configuration</li>
                 <li>Never log or expose API keys in tool responses</li>
             </ul>
+            <p><strong>Building a Remote HTTP / SSE Server:</strong></p>
+            <p>When running a server on a remote host (e.g. EC2, a VPS, or a container), you expose an HTTP endpoint with <code>SSEServerTransport</code>:</p>
+            <pre><code>{`import express from "express";
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
+
+const app = express();
+const server = new McpServer({ name: "remote-mcp", version: "1.0.0" });
+
+// Active SSE transports keyed by session ID
+const transports = new Map<string, SSEServerTransport>();
+
+app.get("/sse", async (req, res) => {
+  const transport = new SSEServerTransport("/messages", res);
+  transports.set(transport.sessionId, transport);
+  res.on("close", () => {
+    transports.delete(transport.sessionId);
+  });
+  await server.connect(transport);
+});
+
+app.post("/messages", async (req, res) => {
+  const sessionId = String(req.query.sessionId);
+  const transport = transports.get(sessionId);
+  if (!transport) {
+    return res.status(404).send("Session not found");
+  }
+  await transport.handlePostMessage(req, res);
+});
+
+app.listen(3001, () => {
+  console.error("Remote MCP server listening on http://localhost:3001/sse");
+});`}</code></pre>
             <p><strong>OAuth 2.0 (Client → Server) for remote HTTP MCP:</strong></p>
             <p>Local stdio servers often trust the desktop user. Remote Streamable HTTP servers on the public internet must not. Use OAuth so the MCP client proves who is calling you.</p>
             <p><strong>Remote OAuth cookbook (high level):</strong></p>
             <ol>
-                <li><strong>Host the server over HTTPS</strong> with Streamable HTTP (not plain stdio).</li>
+                <li><strong>Host the server over HTTPS</strong> with Streamable HTTP or SSE (not plain stdio).</li>
                 <li><strong>Register an OAuth app</strong> with your IdP (Auth0, Clerk, Google, GitHub App, or your own AS). Note client id, authorization URL, token URL, and scopes.</li>
                 <li><strong>Client obtains a token</strong> (authorization code + PKCE for public clients). Desktop MCP hosts may handle this flow for you when the server advertises auth metadata.</li>
                 <li><strong>Client sends</strong> <code>Authorization: Bearer &lt;access_token&gt;</code> on every MCP HTTP request.</li>
@@ -175,7 +208,7 @@ async function requireUser(req) {
             <ul>
                 <li>All secrets in environment variables, never in code</li>
                 <li>Input validation on every tool parameter</li>
-                <li>Principle of least privilege. only request permissions you need</li>
+                <li>Principle of least privilege: only request permissions you need</li>
                 <li>Audit logging for all tool invocations</li>
                 <li>Rate limiting to prevent abuse</li>
                 <li>Remote servers: HTTPS + bearer validation on every request</li>
@@ -188,11 +221,11 @@ async function requireUser(req) {
             <p>One of the most practical MCP servers is a Google Sheets connector. It turns spreadsheets into a real-time data layer for AI agents:</p>
             <p><strong>Tools exposed:</strong></p>
             <ul>
-                <li><code>get_sheet_data</code>. Read data from a specific sheet and range</li>
-                <li><code>update_cells</code>. Write data to specific cells</li>
-                <li><code>search_spreadsheet</code>. Find cells containing specific text</li>
-                <li><code>create_spreadsheet</code>. Create new spreadsheets</li>
-                <li><code>add_chart</code>. Generate visualizations from data</li>
+                <li><code>get_sheet_data</code>: Read data from a specific sheet and range</li>
+                <li><code>update_cells</code>: Write data to specific cells</li>
+                <li><code>search_spreadsheet</code>: Find cells containing specific text</li>
+                <li><code>create_spreadsheet</code>: Create new spreadsheets</li>
+                <li><code>add_chart</code>: Generate visualizations from data</li>
             </ul>
             <p><strong>Real-world use cases:</strong></p>
             <ul>
@@ -207,7 +240,7 @@ async function requireUser(req) {
     <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">Pattern 5: File System Server with Sandboxing</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
-            <p>A file system MCP server gives AI read/write access to files. This is powerful and dangerous. you must sandbox it properly.</p>
+            <p>A file system MCP server gives AI read/write access to files. This is powerful and dangerous; you must sandbox it properly.</p>
             <p><strong>Implementation pattern:</strong></p>
             <pre><code>{`import path from 'path';
 
@@ -251,8 +284,8 @@ server.tool(
 
 <KnowledgeCheck
   question="When building a database MCP server, why should you expose the database schema as a Resource rather than a Tool?"
-  options={["Resources are faster to read than tools.", "The schema is static context the host app should pre-load, not something the LLM needs to 'call'. it's read-only background data that helps the LLM generate correct SQL.", "Resources can handle larger data than tools.", "Tools cannot return text content."]}
+  options={["Resources are faster to read than tools.", "The schema is static context the host app should pre-load, not something the LLM needs to 'call'—it's read-only background data that helps the LLM generate correct SQL.", "Resources can handle larger data than tools.", "Tools cannot return text content."]}
   correctAnswerIndex={1}
-  explanation="Resources are app-controlled read-only data. perfect for static context like a database schema. The host can pre-load it so the LLM always has schema context available. A tool would require the LLM to explicitly call it, adding unnecessary round-trips and complexity."
+  explanation="Resources are app-controlled read-only data, perfect for static context like a database schema. The host can pre-load it so the LLM always has schema context available. A tool would require the LLM to explicitly call it, adding unnecessary round-trips and complexity."
 />
 
