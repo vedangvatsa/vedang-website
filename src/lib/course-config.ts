@@ -92,7 +92,7 @@ export const courseConfigs = {
       { slug: 'day-1-discover', title: 'Day 1 - Discover Your AI Idea' },
       { slug: 'day-2-scope', title: 'Day 2 - Scope and Plan' },
       { slug: 'day-3-build', title: 'Day 3 - Build Your First App' },
-      { slug: 'day-4-design', title: 'Day 4 - Design and AI Superpowers' },
+      { slug: 'day-4-design', title: 'Day 4 - Design and Multimodal Features' },
       { slug: 'day-5-ship', title: 'Day 5 - Ship It Live' },
       { slug: 'day-6-grow', title: 'Day 6 - Get Users and Grow' },
       { slug: 'day-7-sell', title: 'Day 7 - Sell and Beyond' },

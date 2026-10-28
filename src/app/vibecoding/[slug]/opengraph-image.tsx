@@ -1,4 +1,4 @@
-import { generateTerminalOgImage, ogSize } from '@/lib/og-image';
+import { buildCourseOgImage, ogSize } from '@/lib/og-image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -11,7 +11,15 @@ export const contentType = 'image/png';
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const filePath = path.join(process.cwd(), 'src', 'content', 'courses', 'vibecoding', `${slug}.mdx`);
-  let title = 'Vibe Coding 101';
-  try { const raw = fs.readFileSync(filePath, 'utf8'); const { data } = matter(raw); title = data.title || title; } catch {}
-  return generateTerminalOgImage('Vibe', 'Coding 101', `veda.ng/vibecoding/${slug}`, [{ text: title, color: 'success' }]);
+  let subtitle = 'Module';
+  try {
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const { data } = matter(raw);
+    subtitle = data.title || subtitle;
+  } catch {}
+  return buildCourseOgImage({
+    title: 'Vibe Coding 101',
+    subtitle,
+    url: `veda.ng/vibecoding/${slug}`,
+  });
 }

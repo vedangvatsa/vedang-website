@@ -84,7 +84,7 @@ const response = await anthropic.messages.create({
       "post a summary to Telegram, and log them in the spreadsheet."
   }],
 });`}</code></pre>
-            <p>The model will call <code>search_jobs</code>, process the results, call <code>post_to_telegram</code> with a formatted message, then call <code>update_spreadsheet</code>—all autonomously.</p>
+            <p>The model will call <code>search_jobs</code>, process the results, call <code>post_to_telegram</code> with a formatted message, then call <code>update_spreadsheet</code>, all autonomously.</p>
             <p>For deeper coverage of how prompting drives agent behavior, see the [Prompt Engineering](/prompt) course.</p>
         </AccordionContent>
     </AccordionItem>
@@ -157,7 +157,7 @@ const response = await anthropic.messages.create({
                 <li><strong>Nurture sequences:</strong> Agent writes a 5-email series: Day 0 welcome, Day 3 value, Day 7 authority, Day 14 soft CTA, Day 21+ newsletter. Each email follows your <code>brand-guidelines.md</code>.</li>
                 <li><strong>Personalized outreach:</strong> Agent researches each prospect (company, role, recent news), then drafts a personalized cold email. See the <a href="https://github.com/vedangvatsa/b2b-outreach" target="_blank" rel="noopener noreferrer">B2B Outreach</a> framework.</li>
                 <li><strong>Inbox triage:</strong> Tools like <a href="https://github.com/elie222/inbox-zero" target="_blank" rel="noopener noreferrer">Inbox Zero</a> use AI to classify incoming emails, auto-archive noise, draft responses to common questions, and flag urgent items.</li>
-                <li><strong>Transactional emails:</strong> Welcome emails, password resets, payment receipts—all templated and triggered by webhooks from your app.</li>
+                <li><strong>Transactional emails:</strong> Welcome emails, password resets, payment receipts: all templated and triggered by webhooks from your app.</li>
             </ul>
         </AccordionContent>
     </AccordionItem>

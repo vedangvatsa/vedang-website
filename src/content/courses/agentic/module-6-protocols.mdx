@@ -11,7 +11,7 @@ For agents to work across the open internet, they need standardized languages. J
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">MCP (Model Context Protocol): The USB-C for AI</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
-            <p>MCP, created by Anthropic, is an open standard that lets any AI agent connect to any data source or tool through a single, universal protocol. Think of it as the USB-C port for AI: one standard connector that works with everything.</p>
+            <p>MCP, created by Anthropic, is an open standard that lets any AI agent connect to any data source or tool through a single, universal protocol: one standard connector that works with everything.</p>
             <p><strong>The MCP Architecture:</strong></p>
             <ul>
                 <li><strong>MCP Host:</strong> The AI application (like Claude Desktop, Cursor, or your custom agent) that needs to access tools. It initiates connections to MCP servers.</li>
@@ -33,7 +33,7 @@ For agents to work across the open internet, they need standardized languages. J
             <p>A2A, created by Google, is an open standard for agents to communicate with each other across organizational boundaries. While MCP connects agents to tools, A2A connects agents to other agents.</p>
             <p><strong>Key Concepts:</strong></p>
             <ul>
-                <li><strong>Agent Card:</strong> A JSON manifest hosted at a well-known URL (<code>/.well-known/agent.json</code>) that describes the agent's capabilities, authentication requirements, and supported interaction patterns. Think of it as an agent's "business card" that other agents can read to understand what it does.</li>
+                <li><strong>Agent Card:</strong> A JSON manifest hosted at a well-known URL (<code>/.well-known/agent.json</code>) that describes the agent's capabilities, authentication requirements, and supported interaction patterns, allowing external agents to programmatically discover what it does.</li>
                 <li><strong>Tasks:</strong> The fundamental unit of work in A2A. A client agent creates a task for a remote agent, and the remote agent processes it. Tasks have statuses (submitted, working, completed, failed).</li>
                 <li><strong>Messages and Parts:</strong> Communication happens through messages, which can contain multiple parts: text, files, structured data, or even UI components (called "artifacts").</li>
                 <li><strong>Streaming:</strong> For long-running tasks, A2A supports Server-Sent Events (SSE) so the client agent can receive real-time progress updates instead of waiting for the task to complete.</li>
@@ -44,14 +44,14 @@ For agents to work across the open internet, they need standardized languages. J
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">MCP vs A2A: Complementary, Not Competing</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
-            <p>A common misconception is that MCP and A2A are competitors. They are complementary—they solve different problems:</p>
+            <p>A common misconception is that MCP and A2A are competitors. They are complementary; they solve different problems:</p>
             <div className="grid md:grid-cols-2 gap-6 my-6">
                 <Card>
                     <CardHeader>
                         <CardTitle className="text-base font-semibold">MCP = Agent ↔ Tool</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-sm text-muted-foreground">Connects agents to data sources and tools. Think of it as giving an agent "hands" to interact with APIs, databases, and file systems. The tools are passive; they execute what the agent asks.</p>
+                        <p className="text-sm text-muted-foreground">Connects agents to data sources and tools, providing an agent with execution capabilities to interact with APIs, databases, and file systems. The tools are passive; they execute what the agent asks.</p>
                     </CardContent>
                 </Card>
                 <Card className="border-primary/50">
@@ -59,7 +59,7 @@ For agents to work across the open internet, they need standardized languages. J
                         <CardTitle className="text-base font-semibold">A2A = Agent ↔ Agent</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-sm text-muted-foreground">Connects agents to other agents. Think of it as giving agents "voices" to negotiate, collaborate, and delegate tasks. Both sides are intelligent and can make decisions.</p>
+                        <p className="text-sm text-muted-foreground">Connects agents to other agents, enabling autonomous negotiation, collaboration, and task delegation. Both sides execute logic and maintain independent goals.</p>
                     </CardContent>
                 </Card>
             </div>

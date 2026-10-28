@@ -30,6 +30,7 @@ export const pageMetadata = {
     description:
       'Free course on blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and decentralized systems by Vedang Vatsa on veda.ng.',
     url: '/web3',
+    ogImage: 'https://veda.ng/web3/opengraph-image',
     keywords: ['Web3 Course', 'Blockchain Fundamentals', 'Learn Crypto', 'Smart Contracts', 'dApps', 'NFTs', 'DAOs', 'Vedang Vatsa'],
   },
   promptEngineering: {
@@ -37,6 +38,7 @@ export const pageMetadata = {
     description:
       'Master prompt engineering fundamentals. Learn to craft effective prompts for LLMs and AI agents with practical examples by Vedang Vatsa on veda.ng.',
     url: '/prompt',
+    ogImage: 'https://veda.ng/prompt/opengraph-image',
     keywords: ['Prompt Engineering Course', 'Learn AI Prompts', 'LLM Tutorial', 'AI Assistants', 'Generative AI', 'Prompt Design', 'Vedang Vatsa'],
   },
   community: {
@@ -65,6 +67,7 @@ export const pageMetadata = {
     description:
       'Free course on autonomous AI agents, multi-agent coordination, MCP protocols, and agentic architecture by Vedang Vatsa on veda.ng.',
     url: '/agentic',
+    ogImage: 'https://veda.ng/agentic/opengraph-image',
     keywords: ['Agentic Web', 'AI Agents Course', 'Autonomous AI', 'Agentic Systems', 'Digital Economy', 'Future of Web', 'Vedang Vatsa'],
   },
   vibeCoding: {
@@ -72,7 +75,16 @@ export const pageMetadata = {
     description:
       'Vibe Coding 101: Free course by Vedang Vatsa on building production software with AI tools like Cursor, Antigravity, and Replit.',
     url: '/vibecoding',
+    ogImage: 'https://veda.ng/vibecoding/opengraph-image',
     keywords: ['Vibe Coding', 'Intuitive Engineering', 'Creative Software Design', 'Technical Excellence', 'Design Engineering', 'Vedang Vatsa'],
+  },
+  vibeCodingBootcamp: {
+    title: 'Vibe Coding Bootcamp - From Zero to Shipped AI App in 7 Days',
+    description:
+      'A free, 7-day intensive bootcamp that takes you from knowing nothing about AI to shipping a real app with paying users. No coding experience required.',
+    url: '/vibecoding/bootcamp',
+    ogImage: 'https://veda.ng/vibecoding/bootcamp/opengraph-image',
+    keywords: ['Vibe Coding Bootcamp', 'Learn Vibe Coding', 'AI App Development', 'No-Code AI', 'Cursor AI', 'Vedang Vatsa'],
   },
   seo: {
     title: 'Growth Marketing & SEO Expertise | Vedang Vatsa',
@@ -93,6 +105,7 @@ export const pageMetadata = {
     description:
       'Free course on Model Context Protocol (MCP) by Vedang Vatsa. Learn to build tool servers connecting AI agents to APIs, databases, and services.',
     url: '/mcp',
+    ogImage: 'https://veda.ng/mcp/opengraph-image',
     keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude MCP', 'Cursor MCP', 'TypeScript MCP', 'Build MCP Server', 'Vedang Vatsa'],
   },
   aiAutomation: {
@@ -100,6 +113,7 @@ export const pageMetadata = {
     description:
       'Free guide to AI automation by Vedang Vatsa: build autonomous pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools.',
     url: '/automation',
+    ogImage: 'https://veda.ng/automation/opengraph-image',
     keywords: ['AI Automation', 'n8n', 'MCP Automation', 'AI Agents', 'API Automation', 'Workflow Automation', 'No-Code AI', 'Telegram Bot', 'Vedang Vatsa'],
   },
   healthProtocols: {
@@ -152,23 +166,29 @@ export function generateMetadata(params: MetadataParams): Metadata {
     description,
     url,
     keywords,
-    ogImage = 'https://veda.ng/images/og-homepage.png',
+    ogImage: explicitOgImage,
     ogImageAlt = 'Vedang Vatsa - Personal Website, Essays & Research Hub',
     type = 'website',
   } = params;
 
+  const pageKey = Object.keys(pageMetadata).find(
+    key => pageMetadata[key as keyof typeof pageMetadata].url === url
+  );
+
   // Auto-resolve keywords from pageMetadata if missing
   let resolvedKeywords = keywords;
-  if (!resolvedKeywords) {
-    const pageKey = Object.keys(pageMetadata).find(
-      key => pageMetadata[key as keyof typeof pageMetadata].url === url
-    );
-    if (pageKey) {
-      resolvedKeywords = pageMetadata[pageKey as keyof typeof pageMetadata].keywords;
-    }
+  if (!resolvedKeywords && pageKey) {
+    resolvedKeywords = pageMetadata[pageKey as keyof typeof pageMetadata].keywords;
   }
 
-  const resolvedOgImage = ogImage.startsWith('http') ? ogImage : `https://veda.ng${ogImage}`;
+  // Auto-resolve ogImage from pageMetadata if missing
+  let effectiveOgImage = explicitOgImage;
+  if (!effectiveOgImage && pageKey && (pageMetadata[pageKey as keyof typeof pageMetadata] as any).ogImage) {
+    effectiveOgImage = (pageMetadata[pageKey as keyof typeof pageMetadata] as any).ogImage;
+  }
+  const resolvedOgImage = (effectiveOgImage || 'https://veda.ng/images/og-homepage.png').startsWith('http')
+    ? (effectiveOgImage || 'https://veda.ng/images/og-homepage.png')
+    : `https://veda.ng${effectiveOgImage}`;
 
   const openGraph: any = {
     title,

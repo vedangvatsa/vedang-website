@@ -1,5 +1,5 @@
 ---
-title: "Day 4 - Design and AI Superpowers"
+title: "Day 4 - Design and Multimodal Features"
 description: "Make your app look like it came from a top studio, then wire in text, image, voice, and video AI."
 order: 4
 ---
@@ -91,58 +91,58 @@ Build for mobile first. Then adjust for desktop. Not the other way around.
 
 <SectionLabel label="Multi-Modal AI" />
 
-## Adding Superpowers to Your App
+## Adding Multimodal Capabilities to Your App
 
-Your app does one thing well. Now you're going to make it smarter by wiring in AI capabilities. This is where apps go from "useful tool" to "this feels like magic."
+Your app solves a specific problem. You can extend its utility by integrating specialized models across text, image, audio, and video interfaces.
 
 ### Text Generation
 
-The foundation. Every AI app starts here.
+The foundation. Most AI workflows start with structured text generation.
 
-- **Claude** - Best for reasoning, analysis, and following complex instructions. Great for anything that requires thinking through a problem.
-- **GPT-4o** - Good all-around performer. Strong at creative writing and conversation.
-- **Gemini** - Best for multimodal input. It can process images, video, and audio natively in the same request.
+- **Claude**: Best for reasoning, analysis, and following complex instructions. Suited for tasks that require systematic problem solving.
+- **GPT-4o**: Versatile model with solid general capability across conversational and structured generation.
+- **Gemini**: Strong native handling of text, image, audio, and video within the same prompt context.
 
 ### Image Generation
 
-Turn text descriptions into visuals.
+Synthesize images directly from prompts.
 
-- **Flux** - Open source, fast, good quality. Free to run locally, cheap via API.
-- **DALL-E 3** - High quality, easy API, integrated with ChatGPT. Good default choice.
-- **Midjourney** - Best quality for artistic images. No API (Discord-based), so hard to integrate into apps.
+- **Flux**: Open-weight architecture with fast inference and high fidelity. Feasible to self-host or access through API providers.
+- **DALL-E 3**: Reliable fidelity and straightforward API integration via OpenAI.
+- **Midjourney**: High aesthetic quality, primarily accessed through community interfaces rather than a direct developer API.
 
 ### Voice
 
-Give your app ears and a mouth.
+Add auditory input and audio synthesis to your application.
 
-- **ElevenLabs** - Text-to-speech. Incredibly realistic voices. Great for narration, assistants, and accessibility.
-- **Whisper by OpenAI** - Speech-to-text. Free and open source. Runs locally or via API. Accurate across languages.
+- **ElevenLabs**: High-fidelity text-to-speech synthesis with latency controls for conversational interfaces.
+- **Whisper by OpenAI**: Robust automatic speech recognition. Can run locally or via API with broad multilingual support.
 
 ### Video
 
-Still early, but moving fast.
+Rapidly advancing generation space.
 
-- **Luma** - Dream Machine. Good for short clips from text or image prompts.
-- **Pika** - Quick video generation with good motion.
-- **Runway** - Gen-3. Most control over style and camera movement.
+- **Luma**: Produces short video sequences from text or reference image inputs.
+- **Pika**: Quick turnaround video generation for short clips and animations.
+- **Runway Gen-3**: Fine-grained camera controls and prompt-driven motion direction.
 
-### Music
+### Audio & Music
 
-- **Suno** - Generate full songs from text prompts. Vocals included.
-- **Udio** - Similar to Suno. Good for instrumentals and specific genres.
+- **Suno**: Generates vocal tracks and arrangements from structured text descriptions.
+- **Udio**: Audio synthesis engine focused on genre-specific musical arrangements.
 
-## The Key Insight
+## Combining Modalities
 
-Winning AI apps combine 2 or more modalities. Single-modality apps are easy to copy. Multi-modal apps feel like magic.
+Strong AI applications combine two or more interfaces. Single-modality workflows face low technical moats, whereas multi-modal integrations create distinct end-user utility.
 
-**Examples of multi-modal combinations:**
+**Practical multi-modal patterns:**
 
-- Photo of your fridge → recipe suggestions → voice instructions while you cook
-- Upload lecture notes → AI generates flashcards → audio quiz reads them to you
-- Describe a product → AI generates marketing copy + product photos + a 15-second ad video
-- Voice memo from a meeting → written summary → action items in your project board
+- Photo of raw ingredients -> recipe generation -> voice-guided step playback
+- Lecture document upload -> structured flashcard extraction -> audio review prompts
+- Product specification -> copy generation -> imagery -> short video creative
+- Recorded meeting audio -> transcript extraction -> structured action items in a database
 
-Think about your app. What's the second modality that would make it 10x more useful?
+Review your product concept and identify which secondary modality creates genuine leverage for your users.
 
 ## The Cost Math
 

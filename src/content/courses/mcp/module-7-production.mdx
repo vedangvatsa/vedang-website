@@ -250,6 +250,6 @@ await transport.close();`}</code></pre>
   question="What's the difference between throwing an McpError and returning isError: true in a tool response?"
   options={["There is no difference; they're interchangeable.", "McpError is for protocol-level errors (bad parameters, server crash); isError: true is for application-level errors (not found, validation failed) that the LLM should reason about.", "McpError is for warnings, isError: true is for fatal errors.", "McpError can only be used in production, isError: true is for development."]}
   correctAnswerIndex={1}
-  explanation="McpError (thrown as an exception) signals protocol-level problems—the request itself was malformed or the server encountered an internal error. isError: true (in the response) signals application-level problems—the request was valid but the operation failed (e.g., user not found). The LLM uses isError to adjust its strategy."
+  explanation="McpError (thrown as an exception) signals protocol-level problems: the request itself was malformed or the server encountered an internal error. isError: true (in the response) signals application-level problems: the request was valid but the operation failed (e.g., user not found). The LLM uses isError to adjust its strategy."
 />
 

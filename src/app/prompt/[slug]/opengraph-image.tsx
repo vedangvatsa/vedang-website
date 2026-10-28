@@ -1,4 +1,4 @@
-import { generateOgImage, ogSize } from '@/lib/og-image';
+import { buildCourseOgImage, ogSize } from '@/lib/og-image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -11,13 +11,15 @@ export const contentType = 'image/png';
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const filePath = path.join(process.cwd(), 'src', 'content', 'courses', 'prompt', `${slug}.mdx`);
-  let title = 'Prompt Engineering 101';
-  let subtitle = 'Learn to write effective AI prompts';
+  let subtitle = 'Module';
   try {
     const raw = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(raw);
-    title = data.title || title;
-    subtitle = data.description || subtitle;
+    subtitle = data.title || subtitle;
   } catch {}
-  return generateOgImage(title, subtitle);
+  return buildCourseOgImage({
+    title: 'Prompt Engineering 101',
+    subtitle,
+    url: `veda.ng/prompt/${slug}`,
+  });
 }

@@ -13,10 +13,10 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">The Problem: The N×M Integration Nightmare</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
-            <p>Imagine you have 5 AI applications (Claude, Cursor, VS Code, a custom chatbot, a data pipeline) and 10 data sources (Slack, GitHub, Google Drive, PostgreSQL, Jira, etc.). Without a standard protocol, you'd need to build <strong>5 × 10 = 50 custom integrations</strong>. Each with its own authentication, error handling, and data formatting.</p>
-            <p>Now add one more AI application—you need 10 more integrations. Add one more data source—5 more. This is the <strong>N×M problem</strong>, and it doesn't scale.</p>
+            <p>A team deploying 5 AI applications (Claude, Cursor, VS Code, a custom chatbot, a data pipeline) across 10 data sources (Slack, GitHub, Google Drive, PostgreSQL, Jira) without a standard protocol must build <strong>5 × 10 = 50 custom integrations</strong>, each with its own authentication, error handling, and data formatting.</p>
+            <p>Now add one more AI application, you need 10 more integrations. Add one more data source, 5 more. This is the <strong>N×M problem</strong>, and it doesn't scale.</p>
             <p><strong>MCP solves this by reducing it to N+M.</strong> Each AI app implements one MCP client. Each data source implements one MCP server. Now adding a new app means one integration, and adding a new data source means one integration. The protocol handles everything in between.</p>
-            <p>Think of it like USB-C. Before USB-C, every device had its own charger. Now, one cable works with everything. MCP is the USB-C port for AI.</p>
+            <p>Much like USB-C standardized physical connectors across hardware devices, MCP standardizes context exchange across models, tools, and servers.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -25,7 +25,7 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
             <p>MCP has three components that work together:</p>
             <ul>
                 <li><strong>MCP Host:</strong> The AI application the user interacts with (Claude Desktop, Cursor, VS Code, or your own app). The host creates and manages MCP clients. It's the "brain" that the user talks to.</li>
-                <li><strong>MCP Client:</strong> A lightweight connector that lives inside the host. Each client maintains a 1:1 connection with a specific MCP server. The host can have many clients—one for each server it connects to.</li>
+                <li><strong>MCP Client:</strong> A lightweight connector that lives inside the host. Each client maintains a 1:1 connection with a specific MCP server. The host can have many clients, one for each server it connects to.</li>
                 <li><strong>MCP Server:</strong> A lightweight program that exposes specific capabilities (tools, resources, prompts) through the MCP protocol. Servers are where the actual work happens: querying databases, calling APIs, reading files. Anyone can build an MCP server.</li>
             </ul>
             <p>The communication flow: User → Host → Client → Server → Data Source. The LLM inside the host decides which tools to use, the client routes the request to the right server, and the server executes the action and returns results.</p>

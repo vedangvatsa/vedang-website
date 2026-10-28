@@ -18,7 +18,7 @@ const curriculumItems = [
   { href: '/vibecoding/bootcamp/day-1-discover', title: 'Day 1 - Discover Your AI Idea', description: 'What AI actually is, the boring niche framework, and finding your first real idea before building the wrong thing.' },
   { href: '/vibecoding/bootcamp/day-2-scope', title: 'Day 2 - Scope and Plan', description: 'Kill your darlings, write a 1-page PRD, and learn the one-feature MVP discipline that separates shippers from dreamers.' },
   { href: '/vibecoding/bootcamp/day-3-build', title: 'Day 3 - Build Your First App', description: 'Pick your weapon, describe your app in 3 sentences, and get something running in under an hour.' },
-  { href: '/vibecoding/bootcamp/day-4-design', title: 'Day 4 - Design and AI Superpowers', description: 'Make your app look like it came from a top studio, then wire in text, image, voice, and video AI.' },
+  { href: '/vibecoding/bootcamp/day-4-design', title: 'Day 4 - Design and Multimodal Features', description: 'Make your app look like it came from a top studio, then wire in text, image, voice, and video AI.' },
   { href: '/vibecoding/bootcamp/day-5-ship', title: 'Day 5 - Ship It Live', description: 'Auth, payments, deploy. Walk out today with a live URL on your own domain and real users logging in.' },
   { href: '/vibecoding/bootcamp/day-6-grow', title: 'Day 6 - Get Users and Grow', description: '10 testers, brutal feedback, build in public, and your first 25 real users.' },
   { href: '/vibecoding/bootcamp/day-7-sell', title: 'Day 7 - Sell and Beyond', description: 'Pricing, your first paying customer, pitch decks, and the post-bootcamp playbook.' },

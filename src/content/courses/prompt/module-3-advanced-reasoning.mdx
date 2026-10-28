@@ -34,7 +34,7 @@ For complex problems, you need to guide the model's reasoning process. These tec
     <AccordionItem value="item-2b">
         <AccordionTrigger className="text-lg">Tree of Thoughts (ToT)</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
-            <p>Tree of Thoughts extends Chain of Thought from a single linear path into a search tree. Instead of one reasoning chain, the model explores multiple intermediate "thoughts," evaluates which branches look promising, and can backtrack when a path fails.</p>
+            <p>Tree of Thoughts extends Chain of Thought from a single linear path into a search tree. Instead of one reasoning chain, the model generates and evaluates multiple intermediate "thoughts," determines which branches look promising, and can backtrack when a path fails.</p>
             <p><strong>How ToT works (conceptually):</strong></p>
             <ol>
                 <li><strong>Decompose:</strong> Break the problem into intermediate steps that can branch (options, hypotheses, or sub-plans).</li>
@@ -53,7 +53,7 @@ For complex problems, you need to guide the model's reasoning process. These tec
             <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
                 "We need a go-to-market plan for a B2B API product. Generate three distinct strategies (product-led, sales-led, community-led). For each strategy, list 4 steps, risks, and a 0-10 viability score. Then pick the best strategy and expand only that branch into a detailed 30-day plan."
             </blockquote>
-            <p><strong>Cost tradeoff:</strong> ToT uses many more tokens than single-path CoT because it explores and evaluates multiple branches. Use it when accuracy matters more than latency or cost. For simple multi-step math or one correct answer, CoT or self-consistency is usually enough.</p>
+            <p><strong>Cost tradeoff:</strong> ToT uses many more tokens than single-path CoT because it generates and evaluates multiple branches. Use it when accuracy matters more than latency or cost. For simple multi-step math or one correct answer, CoT or self-consistency is usually enough.</p>
             <p><strong>Practical shortcut:</strong> You do not need a full research implementation of ToT. A "manual ToT" prompt that forces the model to propose alternatives, score them, then expand the winner captures most of the benefit for product and planning work.</p>
         </AccordionContent>
     </AccordionItem>
@@ -122,7 +122,7 @@ For complex problems, you need to guide the model's reasoning process. These tec
             <p><strong>Use Tree of Thoughts when:</strong></p>
             <ul>
                 <li>The problem has many valid intermediate paths and early choices matter</li>
-                <li>You need exploration, comparison, and backtracking (planning, strategy, constraint satisfaction)</li>
+                <li>You need branch evaluation, comparison, and backtracking (planning, strategy, constraint satisfaction)</li>
                 <li>You can afford higher token cost for better solutions</li>
             </ul>
             <p><strong>Use Multimodal prompting when:</strong></p>

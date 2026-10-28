@@ -398,6 +398,111 @@ export function buildMeetingOgImage() {
   });
 }
 
+export function buildCourseOgImage({
+  title,
+  subtitle = 'Free Course',
+  url = 'veda.ng',
+}: {
+  title: string;
+  subtitle?: string;
+  url?: string;
+}) {
+  const { interBold, interRegular } = loadOgAssets();
+
+  let fontSize = 80;
+  if (title.length > 30) fontSize = 56;
+  else if (title.length > 20) fontSize = 66;
+  else if (title.length > 14) fontSize = 76;
+
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontFamily: 'Inter',
+          backgroundColor: '#ffffff',
+          padding: '60px 80px',
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            maxWidth: 1040,
+            gap: 16,
+          }}
+        >
+          <div
+            style={{
+              fontSize,
+              fontWeight: 700,
+              color: '#000000',
+              letterSpacing: '-0.03em',
+              lineHeight: 1.15,
+              display: 'flex',
+              textAlign: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {title}
+          </div>
+          {subtitle ? (
+            <div
+              style={{
+                fontSize: 34,
+                color: '#333333',
+                fontWeight: 400,
+                display: 'flex',
+                textAlign: 'center',
+                justifyContent: 'center',
+                marginTop: 8,
+              }}
+            >
+              {subtitle}
+            </div>
+          ) : null}
+          <div
+            style={{
+              fontSize: 26,
+              color: '#777777',
+              fontWeight: 400,
+              display: 'flex',
+              textAlign: 'center',
+              justifyContent: 'center',
+              marginTop: 12,
+            }}
+          >
+            {url}
+          </div>
+        </div>
+      </div>
+    ),
+    {
+      ...ogSize,
+      headers: {
+        'Content-Type': 'image/png',
+        'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800',
+      },
+      ...(interBold && interRegular
+        ? {
+            fonts: [
+              { name: 'Inter', data: interRegular, weight: 400 as const, style: 'normal' as const },
+              { name: 'Inter', data: interBold, weight: 700 as const, style: 'normal' as const },
+            ],
+          }
+        : {}),
+    }
+  );
+}
+
 export function buildPageOgImage(slug: string) {
   const cleanSlug = slug.replace(/\.png$/i, '');
   if (cleanSlug === 'contact') return buildMeetingOgImage();

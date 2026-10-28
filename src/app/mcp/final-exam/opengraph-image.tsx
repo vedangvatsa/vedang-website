@@ -1,10 +1,14 @@
-import { generateOgImage, ogSize } from '@/lib/og-image';
+import { buildCourseOgImage, ogSize } from '@/lib/og-image';
 
 export const runtime = 'nodejs';
-export const alt = 'Final Exam | MCP Development 101';
+export const alt = 'Final Exam | Model Context Protocol (MCP)';
 export const size = ogSize;
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return generateOgImage('Final Exam', 'MCP Development 101 Certificate');
+  return buildCourseOgImage({
+    title: 'Model Context Protocol (MCP)',
+    subtitle: 'Final Certification Exam',
+    url: 'veda.ng/mcp/final-exam',
+  });
 }
