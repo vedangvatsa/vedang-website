@@ -47,8 +47,4 @@ export const recentPapers = [
     title: 'Identification of Algorithmic Bias Through Policy Instruments',
     url: 'https://dx.doi.org/10.21474/IJAR01/11418',
   },
-  {
-    title: 'Growth of Digital Payments and the emergence of FinTech in India',
-    url: 'https://www.researchgate.net/publication/343365922_Growth_of_Digital_Payments_and_the_emergence_of_FinTech_in_India',
-  },
 ];

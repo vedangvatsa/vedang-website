@@ -327,7 +327,7 @@ export default function ProfilePage() {
                             <li>The emerging Internet of Value; Inc42</li>
                             <li>Emergence of TechFin in the emerging economies; IOSR</li>
                             <li>Base erosion and profit shifting in multinational corporations; Theoretical &amp; Applied Economics</li>
-                            <li><Link href="https://www.researchgate.net/publication/343365922_Growth_of_Digital_Payments_and_the_emergence_of_FinTech_in_India" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Growth of Digital Payments and the emergence of FinTech in India</Link>; Indian Journal of Research</li>
+                            <li>Growth of Digital Payments and the emergence of FinTech ecosystem in India; Indian Journal of Research</li>
                             <li>Coronavirus Outbreak: Trillion-Dollar Crisis and Evolution of New Global Order; Diplomacy and Beyond</li>
                             <li>A literature review on Internet of Things (IoT); IJCS</li>
                             <li>Current Trends and Approaches of Network Intrusion Detection System; IJCSMC</li>
