@@ -2303,8 +2303,8 @@
     "text": "How the largest unshelled groundnut producers changed.\n\n2000-2024. Unshelled groundnut production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-26",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-28T05:28:12.919Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/93-r2.txt",
     "captionStyle": "concise-v2",
@@ -2315,7 +2315,14 @@
     "altText": "Peanuts, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest unshelled groundnut producers changed.\n\n2000-2024. Unshelled groundnut production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-28T09:00",
+    "attemptedAt": "2026-10-28T05:27:15.184Z",
+    "bufferPostId": "6ae187b31aac2b225f7db571",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DfBrgchiRUk/"
   },
   {
     "id": "viz-b2-ig-94",
