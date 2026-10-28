@@ -145,3 +145,16 @@ The value of simply "knowing how to code" is dropping. The value of "knowing how
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<KnowledgeCheck
+  question="What is the primary purpose of an AI rules file (such as .cursorrules or workspace instructions) in a production vibe-coding project?"
+  options={[
+    "To permanently inject architectural standards, design tokens, security rules, and code conventions into every AI interaction without retyping them.",
+    "To encrypt the repository's source code so cloud AI providers cannot view it.",
+    "To throttle the speed of code generation to prevent compiler overheating.",
+    "To disable all TypeScript type checks and linting rules across the codebase."
+  ]}
+  correctAnswerIndex={0}
+  explanation="Rules files (.cursorrules, system prompts, or workspace rules) act as a permanent memory layer for the AI. They ensure that every prompt automatically adheres to your chosen tech stack (e.g., Tailwind, Next.js App Router, Zod validation) and security practices (e.g., never expose private API keys in client components)."
+/>
+

@@ -93,3 +93,16 @@ Never let the AI make 10 changes before you save. Small, frequent saves are your
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<KnowledgeCheck
+  question="Why is 'making one atomic change per prompt' considered a core best practice in AI-assisted development?"
+  options={[
+    "AI models cannot process prompts with more than twenty words.",
+    "It isolates changes, makes immediate visual and functional verification straightforward, and ensures git checkpoints can cleanly undo errors.",
+    "It reduces total token usage by skipping context reloading between prompts.",
+    "It forces the AI to write unit tests automatically without being instructed."
+  ]}
+  correctAnswerIndex={1}
+  explanation="Asking an AI to build multiple complex features simultaneously often leads to hallucinated files, broken dependencies, and tangled logic. Single-focus prompts paired with frequent git checkpoints give you full control to verify each change and instantly roll back if needed."
+/>
+

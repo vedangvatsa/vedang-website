@@ -106,3 +106,16 @@ Replit gives you a full cloud development environment with built-in hosting.
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<KnowledgeCheck
+  question="In the lab workflow, why is it recommended to draft a PRD (Product Requirements Document) or clear specification before prompting the AI for code?"
+  options={[
+    "Modern AI models will refuse to generate code without a signed legal specification document.",
+    "Upfront constraints and clear feature boundaries prevent the AI from hallucinating unwanted complexity, scope creep, and incompatible libraries.",
+    "Drafting a PRD automatically compiles markdown text into optimized WebAssembly bytecode.",
+    "It eliminates the need to ever test or verify the application in a local browser."
+  ]}
+  correctAnswerIndex={1}
+  explanation="Upfront scoping defines what the application does AND what it does not do (Anti-Features). Providing this complete context in your initial prompt prevents AI feature creep, ensures consistent UI libraries, and produces clean, focused architecture on the first pass."
+/>
+
