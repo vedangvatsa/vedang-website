@@ -1,20 +1,14 @@
-import { generateTerminalOgImage, ogSize } from '@/lib/og-image';
+import { buildMinimalistProfileOgImage, ogSize } from '@/lib/og-image';
 
 export const runtime = 'nodejs';
-export const alt = 'Evidence-Based Health Protocols';
+export const alt = 'Bryan Johnson Blueprint Protocol - Reference Guide | Vedang Vatsa';
 export const size = ogSize;
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return generateTerminalOgImage(
-    'Health',
-    'Protocols',
-    'veda.ng/health-protocols',
-    [
-      { text: '327 protocols', color: 'success' },
-      { text: '1,876 videos analyzed', color: 'success' },
-      { text: 'timestamped sources', color: 'success' },
-      { text: 'ranked by frequency', color: 'success' },
-    ],
-  );
+  return buildMinimalistProfileOgImage({
+    name: 'Vedang Vatsa FRSA',
+    role: 'Health Protocols Reference Guide',
+    url: 'veda.ng/health-protocols',
+  });
 }
