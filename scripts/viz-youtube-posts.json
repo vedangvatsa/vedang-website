@@ -2421,8 +2421,8 @@
     "description": "How exposure to fine-particle air pollution changed.\n\n2000-2023. Population-weighted annual PM2.5 exposure, measured in micrograms per cubic metre.",
     "scheduleDate": "2026-10-26",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-28T17:23:42.788Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/58-r2.txt",
     "captionStyle": "concise-v2",
@@ -2433,7 +2433,14 @@
     "altText": "Air pollution, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How exposure to fine-particle air pollution changed.\n\n2000-2023. Population-weighted annual PM2.5 exposure, measured in micrograms per cubic metre.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-28T20:00",
+    "attemptedAt": "2026-10-28T17:23:40.542Z",
+    "bufferPostId": "6ae22f9c609f9c0d1d44a4e9",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=HwXTaIYOZ_w"
   },
   {
     "id": "viz-b2-yt-95",

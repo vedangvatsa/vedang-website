@@ -2325,8 +2325,8 @@
     "text": "How food production changed against each country's baseline.\n\n2000-2024. Food production indexed to each country's 2014-2016 average of 100.",
     "scheduleDate": "2026-10-28",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-28T17:26:11.733Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/59-r2.txt",
     "captionStyle": "concise-v2",
@@ -2338,7 +2338,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-28T17:26:02.484Z",
+    "attemptedSlot": "2026-10-28T20:00",
+    "publishedText": "How food production changed against each country's baseline.\n\n2000-2024. Food production indexed to each country's 2014-2016 average of 100.",
+    "postUrl": "https://hachyderm.io/@vedang/117519703839682742",
+    "platformPostId": "117519703839682742"
   },
   {
     "id": "viz-b2-mastodon-99",

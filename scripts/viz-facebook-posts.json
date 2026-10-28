@@ -2298,8 +2298,8 @@
     "text": "How food production changed against each country's baseline.\n\n2000-2024. Food production indexed to each country's 2014-2016 average of 100.",
     "scheduleDate": "2026-10-28",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-28T17:25:57.591Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/59-r2.txt",
     "captionStyle": "concise-v2",
@@ -2310,7 +2310,13 @@
     "altText": "Food output, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-28T17:25:37.614Z",
+    "attemptedSlot": "2026-10-28T20:00",
+    "publishedText": "How food production changed against each country's baseline.\n\n2000-2024. Food production indexed to each country's 2014-2016 average of 100.",
+    "platformPostId": "4073137742991456",
+    "postUrl": "https://www.facebook.com/watch/?v=4073137742991456"
   },
   {
     "id": "viz-b2-facebook-99",
