@@ -42,8 +42,8 @@ console.log(\`Found \${data.jobs.length} open positions\`);`}</code></pre>
         <AccordionTrigger className="text-lg text-left">Authentication: API Keys, OAuth, and Tokens</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Most APIs require authentication. The three common patterns:</p>
-            <p><strong>1. API Keys</strong>. Simple, static tokens. Include in headers or query params.</p>
-            <pre><code>{`// Telegram Bot API. send a message to a channel
+            <p><strong>1. API Keys:</strong> Simple, static tokens. Include in headers or query params.</p>
+            <pre><code>{`// Telegram Bot API: send a message to a channel
 const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHANNEL_ID = process.env.TELEGRAM_CHANNEL_ID;
 
@@ -56,7 +56,7 @@ await fetch(\`https://api.telegram.org/bot\${TELEGRAM_TOKEN}/sendMessage\`, {
     parse_mode: "HTML",
   }),
 });`}</code></pre>
-            <p><strong>2. Bearer Tokens</strong>. Short-lived tokens, usually from OAuth flows.</p>
+            <p><strong>2. Bearer Tokens:</strong> Short-lived tokens, usually from OAuth flows.</p>
             <pre><code>{`// Using a bearer token with the OpenAI API
 await fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
@@ -69,7 +69,7 @@ await fetch("https://api.openai.com/v1/chat/completions", {
     messages: [{ role: "user", content: "Summarize these job listings..." }],
   }),
 });`}</code></pre>
-            <p><strong>3. OAuth 2.0</strong>. For accessing user data (Google Sheets, Twitter, LinkedIn). Involves redirect flows and token refresh. No-code tools handle this for you; for code, libraries like <code>googleapis</code> simplify it.</p>
+            <p><strong>3. OAuth 2.0:</strong> For accessing user data (Google Sheets, Twitter, LinkedIn). Involves redirect flows and token refresh. No-code tools handle this for you; for code, libraries like <code>googleapis</code> simplify it.</p>
             <p><strong>Golden rule:</strong> Never hardcode secrets. Always use environment variables (<code>process.env.API_KEY</code>).</p>
             
             <div className="mt-4 border-t border-border/20 pt-4">

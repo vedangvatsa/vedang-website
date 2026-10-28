@@ -15,13 +15,13 @@ A pipeline is a sequence of stages where the output of each stage feeds into the
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Every automation pipeline follows the same five-stage pattern:</p>
             <ol>
-                <li><strong>Trigger:</strong> What starts the pipeline. a cron schedule, a webhook, a database change, or a manual command.</li>
-                <li><strong>Fetch:</strong> Gather the input data. call APIs, read databases, scrape websites, check MCP resources.</li>
-                <li><strong>Transform:</strong> Process the data. filter, deduplicate, enrich with AI, normalize formats, calculate metrics.</li>
-                <li><strong>Act:</strong> Do something with the processed data. write to a database, send messages, publish content, update spreadsheets.</li>
+                <li><strong>Trigger:</strong> What starts the pipeline: a cron schedule, a webhook, a database change, or a manual command.</li>
+                <li><strong>Fetch:</strong> Gather the input data: call APIs, read databases, scrape websites, check MCP resources.</li>
+                <li><strong>Transform:</strong> Process the data: filter, deduplicate, enrich with AI, normalize formats, calculate metrics.</li>
+                <li><strong>Act:</strong> Do something with the processed data: write to a database, send messages, publish content, update spreadsheets.</li>
                 <li><strong>Report:</strong> Log results, send notifications, update dashboards, handle errors.</li>
             </ol>
-            <p>The key to reliable pipelines is making each stage independent and idempotent. if stage 3 fails, you can re-run it without duplicating the work from stages 1-2.</p>
+            <p>The key to reliable pipelines is making each stage independent and idempotent: if stage 3 fails, you can re-run it without duplicating the work from stages 1-2.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">

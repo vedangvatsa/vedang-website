@@ -34,7 +34,7 @@ jobs:
         env:
           SUPABASE_URL: \${{ secrets.SUPABASE_URL }}
           TELEGRAM_BOT_TOKEN: \${{ secrets.TELEGRAM_BOT_TOKEN }}`}</code></pre>
-            <p><strong>2. Vercel Cron Jobs</strong>. For Next.js apps, add cron triggers to API routes:</p>
+            <p><strong>2. Vercel Cron Jobs:</strong> For Next.js apps, add cron triggers to API routes:</p>
             <pre><code>{`// vercel.json
 {
   "crons": [{
@@ -42,14 +42,14 @@ jobs:
     "schedule": "0 8 * * *"
   }]
 }`}</code></pre>
-            <p><strong>3. n8n / Make Schedules</strong>. Built-in scheduling in no-code tools. Best for non-technical teams.</p>
-            <p><strong>4. Railway / Render Cron</strong>. For standalone scripts that need more compute time than GitHub Actions allows (6 hours max).</p>
+            <p><strong>3. n8n / Make Schedules:</strong> Built-in scheduling in no-code tools. Best for non-technical teams.</p>
+            <p><strong>4. Railway / Render Cron:</strong> For standalone scripts that need more compute time than GitHub Actions allows (6 hours max).</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Monitoring & Alerting</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
-            <p>You need to know when automations fail. before your users notice.</p>
+            <p>You need to know when automations fail—before your users notice.</p>
             <p><strong>Lightweight monitoring stack:</strong></p>
             <pre><code>{`// At the end of every pipeline run, send a heartbeat
 async function reportPipelineStatus(pipeline, results) {
@@ -72,7 +72,7 @@ async function reportPipelineStatus(pipeline, results) {
     await sendSlackAlert(\`Pipeline \${pipeline} had \${results.failures} failures\`);
   }
 
-  // 4. Heartbeat. external monitoring tools (UptimeRobot, Better Uptime)
+  // 4. Heartbeat: external monitoring tools (UptimeRobot, Better Uptime)
   //    will alert if the heartbeat stops arriving
   await fetch(\`https://heartbeat.uptimerobot.com/\${HEARTBEAT_ID}\`);
 }`}</code></pre>
@@ -91,7 +91,7 @@ async function reportPipelineStatus(pipeline, results) {
             <p>AI-powered automations have running costs. Track and optimize them:</p>
             <p><strong>Cost categories:</strong></p>
             <ul>
-                <li><strong>AI API calls:</strong> OpenAI, Anthropic. charged per token. Use cheaper models (GPT-4o-mini, Haiku) for simple tasks, expensive models only when quality matters.</li>
+                <li><strong>AI API calls:</strong> OpenAI, Anthropic: charged per token. Use cheaper models (GPT-4o-mini, Haiku) for simple tasks, expensive models only when quality matters.</li>
                 <li><strong>Hosting:</strong> GitHub Actions (2,000 free minutes/month), Vercel (free hobby tier), Railway ($5/month for always-on).</li>
                 <li><strong>No-code tools:</strong> Zapier charges per task, Make charges per operation. n8n self-hosted = only hosting costs.</li>
                 <li><strong>Database:</strong> Supabase free tier covers most use cases. Neon, PlanetScale also have generous free tiers.</li>
@@ -100,7 +100,7 @@ async function reportPipelineStatus(pipeline, results) {
             <ul>
                 <li>Cache API responses to avoid redundant calls</li>
                 <li>Use GPT-4o-mini for classification/formatting, reserve Claude/GPT-4 for complex reasoning</li>
-                <li>Batch operations. send 10 messages in one API call instead of 10 separate calls</li>
+                <li>Batch operations: send 10 messages in one API call instead of 10 separate calls</li>
                 <li>Run compute-heavy tasks during off-peak hours</li>
                 <li>Set billing alerts on all AI API accounts</li>
             </ul>
@@ -111,7 +111,7 @@ async function reportPipelineStatus(pipeline, results) {
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>As you build more automations, organization becomes critical:</p>
             <p><strong>1. Documentation:</strong> Every automation should have a README with: what it does, what triggers it, what services it connects to, what secrets it needs, and how to test it. Future-you (or your team) will thank you.</p>
-            <p><strong>2. Version Control:</strong> Keep all automation code in Git repositories. Use the same workflow you'd use for any software. branches, pull requests, code review. The [Vibe Coding](/vibecoding) course covers these fundamentals.</p>
+            <p><strong>2. Version Control:</strong> Keep all automation code in Git repositories. Use the same workflow you'd use for any software: branches, pull requests, and code reviews. The [Vibe Coding](/vibecoding) course covers these fundamentals.</p>
             <p><strong>3. Centralized Secrets:</strong> Use a secrets manager (GitHub Secrets, Vercel Environment Variables, 1Password) instead of scattering API keys across config files.</p>
             <p><strong>4. Automation Inventory:</strong> Maintain a spreadsheet or dashboard listing all running automations:</p>
             <div className="grid md:grid-cols-2 gap-4 my-4">
@@ -145,10 +145,10 @@ async function reportPipelineStatus(pipeline, results) {
             <p>If your automations produce public-facing content (websites, APIs, data feeds), you should optimize for AI discovery. This means ensuring AI agents and search engines can find, understand, and cite your content.</p>
             <p><strong>Essential discovery files:</strong></p>
             <ul>
-                <li><strong><code>llms.txt</code></strong>. A markdown summary of your site designed for LLMs. Describes what your site is, what it offers, and links to key pages. See <a href="https://llmstxt.org" target="_blank">llmstxt.org</a> for the format.</li>
-                <li><strong><code>agents.json</code></strong>. A machine-readable file at <code>/.well-known/agents.json</code> that tells autonomous agents what your site can do, what APIs are available, and how to interact.</li>
-                <li><strong><code>ai-plugin.json</code></strong>. The OpenAI plugin format. Describes your site's capabilities for ChatGPT and other platforms.</li>
-                <li><strong><code>robots.txt</code></strong>. Updated to explicitly welcome AI crawlers: OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended.</li>
+                <li><strong><code>llms.txt</code>:</strong> A markdown summary of your site designed for LLMs. Describes what your site is, what it offers, and links to key pages. See <a href="https://llmstxt.org" target="_blank" rel="noopener noreferrer">llmstxt.org</a> for the format.</li>
+                <li><strong><code>agents.json</code>:</strong> A machine-readable file at <code>/.well-known/agents.json</code> that tells autonomous agents what your site can do, what APIs are available, and how to interact.</li>
+                <li><strong><code>ai-plugin.json</code>:</strong> The OpenAI plugin format. Describes your site's capabilities for ChatGPT and other platforms.</li>
+                <li><strong><code>robots.txt</code>:</strong> Updated to explicitly welcome AI crawlers: OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended.</li>
             </ul>
             <p>Deploy all of these at once with the <a href="/aistandards">AI Discovery Standards</a> framework: <code>npx github:vedangvatsa/aistandards</code></p>
             <p><strong>Why this matters for automation:</strong> If your automated content pipeline publishes blog posts, those posts need to be discoverable by Perplexity, ChatGPT Search, and Google AI Overviews. Without proper discovery files, your automated content is invisible to the fastest-growing search channels.</p>
