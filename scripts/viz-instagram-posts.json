@@ -2427,8 +2427,8 @@
     "text": "How the largest sesame seed producers changed.\n\n2000-2024. Sesame seed production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-27",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-29T10:23:25.350Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/96-r2.txt",
     "captionStyle": "concise-v2",
@@ -2439,7 +2439,14 @@
     "altText": "Sesame, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest sesame seed producers changed.\n\n2000-2024. Sesame seed production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-29T14:00",
+    "attemptedAt": "2026-10-29T10:22:26.430Z",
+    "bufferPostId": "6ae31e6207196764b37290d7",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DfEyG75gIRX/"
   },
   {
     "id": "viz-b2-ig-97",
