@@ -6,6 +6,12 @@ import '@/app/globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ClarityAnalytics } from '@/components/clarity-analytics';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
+
+const SocialPopup = dynamic(
+  () => import('@/components/social-popup').then((mod) => ({ default: mod.SocialPopup })),
+  { ssr: false }
+);
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 
@@ -500,6 +506,7 @@ export default function RootLayout({
           <a href="https://pypi.org/project/vedang-cli/" rel="package sdk" className="sr-only">Veda Python SDK & CLI: vedang-cli on PyPI</a>
           <a href="https://www.npmjs.com/package/vedang" rel="package sdk" className="sr-only">Veda TypeScript & JavaScript SDK: vedang on NPM</a>
           {children}
+          <SocialPopup />
           <ClarityAnalytics />
           <Toaster />
       </body>
