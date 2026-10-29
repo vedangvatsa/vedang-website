@@ -2514,8 +2514,8 @@
     "text": "How the largest rapeseed producers changed.\n\n2000-2024. Rapeseed production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-27",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-29T19:46:03.257Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/97-r2.txt",
     "captionStyle": "concise-v2",
@@ -2526,7 +2526,14 @@
     "altText": "Rapeseed, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest rapeseed producers changed.\n\n2000-2024. Rapeseed production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-29T20:00",
+    "attemptedAt": "2026-10-29T19:44:19.590Z",
+    "bufferPostId": "6ae3a2141026f5c4e0bfe9ec",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7702178011201735956"
   },
   {
     "id": "viz-b2-tt-98",

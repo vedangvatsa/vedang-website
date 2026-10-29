@@ -2418,8 +2418,8 @@
     "text": "How the largest tomato producers changed.\n\n2000-2024. Tomato production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-29",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-29T19:48:11.294Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/101-r2.txt",
     "captionStyle": "concise-v2",
@@ -2431,7 +2431,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-29T19:48:03.712Z",
+    "attemptedSlot": "2026-10-29T20:00",
+    "publishedText": "How the largest tomato producers changed.\n\n2000-2024. Tomato production by country, measured in millions of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117525924491780330",
+    "platformPostId": "117525924491780330"
   },
   {
     "id": "viz-b2-mastodon-102",
