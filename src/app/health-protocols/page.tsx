@@ -195,16 +195,15 @@ export default function HealthProtocolsPage() {
       <BreadcrumbSchema items={[{ name: 'Health Protocols', url: 'https://veda.ng/health-protocols' }]} />
 
       {/* ── Editorial Header ── */}
-      <header className="border-b border-border/40 pb-10">
-        <div className="space-y-4">
-          <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Longevity & Biomarkers</p>
+      <header className="border-b border-border/40 pb-10 text-center">
+        <div className="space-y-4 max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
             Bryan Johnson&apos;s Blueprint Protocol
           </h1>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             A structured, evidence-based reference guide to the Blueprint protocol: nutrition, biomarker targets, exercise programming, and sleep architecture.
           </p>
-          <div className="pt-2">
+          <div className="pt-1">
             <AuthorByline />
           </div>
           <p className="text-xs text-muted-foreground pt-1">
