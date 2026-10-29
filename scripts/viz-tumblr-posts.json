@@ -2475,8 +2475,8 @@
     "text": "How the largest potato producers changed.\n\n2000-2024. Potato production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-28",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-29T07:15:19.692Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/99-r2.txt",
     "captionStyle": "concise-v2",
@@ -2491,7 +2491,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-29T07:15:15.842Z",
+    "attemptedSlot": "2026-10-29T09:00",
+    "publishedText": "How the largest potato producers changed.\n\n2000-2024. Potato production by country, measured in millions of tonnes.",
+    "platformPostId": "831791426028306432",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831791426028306432"
   },
   {
     "id": "viz-b2-tumblr-100",
