@@ -5,13 +5,8 @@ import '@/app/globals.css';
 
 import { Toaster } from '@/components/ui/toaster';
 import { ClarityAnalytics } from '@/components/clarity-analytics';
+import { SocialPopup } from '@/components/social-popup';
 import Script from 'next/script';
-import dynamic from 'next/dynamic';
-
-const SocialPopup = dynamic(
-  () => import('@/components/social-popup').then((mod) => ({ default: mod.SocialPopup })),
-  { ssr: false }
-);
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 
