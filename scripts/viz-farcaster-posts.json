@@ -2549,7 +2549,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "postedAt": null,
-    "error": null,
+    "error": "Farcaster cast 0xb9a1448b1cabc5e2d0b0f729c9acc9da9b59eccf is unverified (cast not visible); keep its receipt and hold the queue",
     "notesUrl": "https://veda.ng/viz-notes/100-r2.txt",
     "captionStyle": "concise-v2",
     "indicator": "FAO.QCL.125.5510",
@@ -2560,7 +2560,16 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/adad8dd6bad5cc2897199095a9c79162c587031c/scripts/viz-batch2-assets/no-attribution/hls/100-cassava-2000-2024.m3u8",
+    "mediaValidatedAt": "2026-10-30T09:14:28.443Z",
+    "state": "uncertain",
+    "attemptedAt": "2026-10-30T09:14:28.443Z",
+    "attemptedSlot": "2026-10-30T14:00",
+    "publishedText": "How the largest fresh cassava producers changed.\n\n2000-2024. Fresh cassava production by country, measured in millions of tonnes.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0xb9a1448b",
+    "platformPostId": "0xb9a1448b1cabc5e2d0b0f729c9acc9da9b59eccf",
+    "publicationAcceptedAt": "2026-10-30T09:14:28.598Z"
   },
   {
     "id": "viz-b2-farcaster-101",

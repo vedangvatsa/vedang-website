@@ -2545,8 +2545,8 @@
     "description": "How the largest sunflower seed producers changed.\n\n2000-2024. Sunflower seed production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-28",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-30T09:11:52.243Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/98-r2.txt",
     "captionStyle": "concise-v2",
@@ -2557,7 +2557,14 @@
     "altText": "Sunflowers, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest sunflower seed producers changed.\n\n2000-2024. Sunflower seed production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-30T14:00",
+    "attemptedAt": "2026-10-30T09:11:50.516Z",
+    "bufferPostId": "6ae45f5638b96b6f5b9d9c50",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=OnfaG8DK0KM"
   },
   {
     "id": "viz-b2-yt-59",

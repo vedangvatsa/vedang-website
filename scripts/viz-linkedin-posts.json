@@ -2481,8 +2481,8 @@
     "text": "How scientific publishing changed across countries.\n\n2000-2023. Scientific and technical articles, shown in thousands.",
     "scheduleDate": "2026-10-30",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-30T09:13:45.281Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/60-r2.txt",
     "captionStyle": "concise-v2",
@@ -2493,7 +2493,14 @@
     "altText": "Science papers, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-30T09:13:37.850Z",
+    "attemptedSlot": "2026-10-30T14:00",
+    "publishedText": "How scientific publishing changed across countries.\n\n2000-2023. Scientific and technical articles, shown in thousands.",
+    "platformPostId": "urn:li:ugcPost:7521861892760305664",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7521861892760305664/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-103",
