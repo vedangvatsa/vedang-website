@@ -2512,8 +2512,8 @@
     "text": "How the largest cauliflower and broccoli producers changed.\n\n2000-2024. Cauliflower and broccoli production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-30",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-30T15:59:58.298Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/103-r2.txt",
     "captionStyle": "concise-v2",
@@ -2524,7 +2524,14 @@
     "altText": "Broccoli family, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-30T15:59:50.920Z",
+    "attemptedSlot": "2026-10-30T20:00",
+    "publishedText": "How the largest cauliflower and broccoli producers changed.\n\n2000-2024. Cauliflower and broccoli production by country, measured in millions of tonnes.",
+    "platformPostId": "urn:li:ugcPost:7521964120988942336",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7521964120988942336/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-104",

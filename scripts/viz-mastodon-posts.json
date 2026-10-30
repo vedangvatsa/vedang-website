@@ -2480,8 +2480,8 @@
     "text": "How scientific publishing changed across countries.\n\n2000-2023. Scientific and technical articles, shown in thousands.",
     "scheduleDate": "2026-10-30",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-30T16:00:40.359Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/60-r2.txt",
     "captionStyle": "concise-v2",
@@ -2493,7 +2493,13 @@
     "sourceCredit": "NSF",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-30T16:00:31.724Z",
+    "attemptedSlot": "2026-10-30T20:00",
+    "publishedText": "How scientific publishing changed across countries.\n\n2000-2023. Scientific and technical articles, shown in thousands.",
+    "postUrl": "https://hachyderm.io/@vedang/117530692171682234",
+    "platformPostId": "117530692171682234"
   },
   {
     "id": "viz-b2-mastodon-103",

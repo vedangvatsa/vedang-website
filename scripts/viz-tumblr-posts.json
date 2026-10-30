@@ -2611,8 +2611,8 @@
     "text": "How scientific publishing changed across countries.\n\n2000-2023. Scientific and technical articles, shown in thousands.",
     "scheduleDate": "2026-10-30",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-30T16:00:31.721Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/60-r2.txt",
     "captionStyle": "concise-v2",
@@ -2627,7 +2627,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-30T16:00:27.762Z",
+    "attemptedSlot": "2026-10-30T20:00",
+    "publishedText": "How scientific publishing changed across countries.\n\n2000-2023. Scientific and technical articles, shown in thousands.",
+    "platformPostId": "831915065745801216",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/831915065745801216"
   },
   {
     "id": "viz-b2-tumblr-103",
