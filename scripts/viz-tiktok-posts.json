@@ -2607,8 +2607,8 @@
     "text": "How the largest potato producers changed.\n\n2000-2024. Potato production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-28",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-31T09:53:18.382Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/99-r2.txt",
     "captionStyle": "concise-v2",
@@ -2619,7 +2619,14 @@
     "altText": "Potatoes, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest potato producers changed.\n\n2000-2024. Potato production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-31T14:00",
+    "attemptedAt": "2026-10-31T09:51:34.446Z",
+    "bufferPostId": "6ae5ba26b84259308bcc1c39",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7702767404614847764"
   },
   {
     "id": "viz-b2-tt-100",
