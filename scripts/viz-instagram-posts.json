@@ -2582,8 +2582,8 @@
     "text": "How the largest fresh cassava producers changed.\n\n2000-2024. Fresh cassava production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-29",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-31T15:34:38.640Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/100-r2.txt",
     "captionStyle": "concise-v2",
@@ -2594,7 +2594,14 @@
     "altText": "Cassava, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest fresh cassava producers changed.\n\n2000-2024. Fresh cassava production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-10-31T20:00",
+    "attemptedAt": "2026-10-31T15:33:40.290Z",
+    "bufferPostId": "6ae60a56cf3a3112f3ad3faa",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DfKfS6EiL7C/"
   },
   {
     "id": "viz-b2-ig-101",

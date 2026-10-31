@@ -2542,8 +2542,8 @@
     "text": "How the largest pumpkin, squash and gourd producers changed.\n\n2000-2024. Pumpkin, squash and gourd production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-30",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-10-31T15:36:24.300Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/104-r2.txt",
     "captionStyle": "concise-v2",
@@ -2555,7 +2555,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-10-31T15:36:15.330Z",
+    "attemptedSlot": "2026-10-31T20:00",
+    "publishedText": "How the largest pumpkin, squash and gourd producers changed.\n\n2000-2024. Pumpkin, squash and gourd production by country, measured in millions of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117536259056286917",
+    "platformPostId": "117536259056286917"
   },
   {
     "id": "viz-b2-mastodon-105",
