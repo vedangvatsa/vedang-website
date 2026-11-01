@@ -2700,8 +2700,8 @@
     "description": "How the largest dry onion and shallot producers changed.\n\n2000-2024. Dry onion and shallot production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-29",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-01T10:46:48.460Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/102-r2.txt",
     "captionStyle": "concise-v2",
@@ -2712,7 +2712,14 @@
     "altText": "Onions, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest dry onion and shallot producers changed.\n\n2000-2024. Dry onion and shallot production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-01T14:00",
+    "attemptedAt": "2026-11-01T10:46:46.312Z",
+    "bufferPostId": "6ae718961ee172cd6df05527",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=zICszeUMmGk"
   },
   {
     "id": "viz-b2-yt-60",
