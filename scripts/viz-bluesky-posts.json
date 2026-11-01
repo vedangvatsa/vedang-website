@@ -2263,8 +2263,8 @@
     "text": "How the largest rapeseed producers changed.\n\n2000-2024. Rapeseed production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-27",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-01T08:07:04.552Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/97-r2.txt",
     "captionStyle": "concise-v2",
@@ -2276,7 +2276,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-01T08:06:51.382Z",
+    "attemptedSlot": "2026-11-01T09:00",
+    "publishedText": "How the largest rapeseed producers changed.\n\n2000-2024. Rapeseed production by country, measured in millions of tonnes.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mzae3v37yg23",
+    "postUrl": "https://bsky.app/profile/did:plc:x3llxr24tbj72fy3nish3xrh/post/3mzae3v37yg23"
   },
   {
     "id": "viz-b2-bluesky-98",

@@ -2669,8 +2669,8 @@
     "description": "How the largest tomato producers changed.\n\n2000-2024. Tomato production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-29",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-01T08:04:57.518Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/101-r2.txt",
     "captionStyle": "concise-v2",
@@ -2681,7 +2681,14 @@
     "altText": "Tomatoes, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest tomato producers changed.\n\n2000-2024. Tomato production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-01T09:00",
+    "attemptedAt": "2026-11-01T08:04:55.747Z",
+    "bufferPostId": "6ae6f2a8ab019b908749dfc5",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=tIjsJyeeg_M"
   },
   {
     "id": "viz-b2-yt-102",
