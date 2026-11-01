@@ -23,6 +23,7 @@ const asSeenInLogos = [
     { name: 'TheNewsCrypto', logo: '/images/press/thenewscrypto_vedang.webp' },
     { name: 'The Crypto Times', logo: '/images/press/TheCryptoTimes_logo.svg' },
     { name: 'NDTVGadgets360', logo: '/images/press/image-48.webp' },
+    { name: 'NDTV', logo: '/images/press/NDTV_logo.svg' },
     { name: 'BritishNewsNetwork', logo: '/images/press/BritishNewsNetwork_vedang.webp' },
     { name: 'Yourstory', logo: '/images/press/yourstory_vedang.webp' },
     { name: 'Outlook Money', logo: '/images/press/money-logo.webp' },
