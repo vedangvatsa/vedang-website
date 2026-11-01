@@ -21,6 +21,7 @@ const asSeenInLogos = [
     { name: 'Lebigdata', logo: '/images/press/image-32.webp' },
     { name: 'Cryptonews', logo: '/images/press/cryptonews_Vedang.webp' },
     { name: 'TheNewsCrypto', logo: '/images/press/thenewscrypto_vedang.webp' },
+    { name: 'The Crypto Times', logo: '/images/press/TheCryptoTimes_logo.svg' },
     { name: 'NDTVGadgets360', logo: '/images/press/image-48.webp' },
     { name: 'BritishNewsNetwork', logo: '/images/press/BritishNewsNetwork_vedang.webp' },
     { name: 'Yourstory', logo: '/images/press/yourstory_vedang.webp' },

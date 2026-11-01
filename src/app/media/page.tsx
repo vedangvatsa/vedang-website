@@ -21,6 +21,7 @@ export const metadata: Metadata = generateMetadata({
 });
 
 const mediaMentions = [
+  { title: 'Bharat Web3 Association Launches Crypto Self-Regulatory Body in India', source: 'The Crypto Times', url: 'https://www.cryptotimes.io/2026/10/28/bharat-web3-association-launches-crypto-self-regulatory-body-in-india/' },
   { title: "India's CBI Raids 60 Locations in Crackdown on GainBitcoin Scam", source: 'Decrypt', url: 'https://decrypt.co/307790/indias-cbi-raids-60-locations-in-crackdown-on-gainbitcoin-scam' },
   { title: 'Indian Web3 Delegation Submits Recommendations to Chairperson of Parliamentary Standing Committee on Finance', source: 'ANI News', url: 'https://aninews.in/news/business/indian-web3-delegation-submits-recommendations-to-chairperson-of-parliamentary-standing-committee-on-finance20250731143537/' },
   { title: "#Web3 Releases a Collaborative Report on India's Digital Currency", source: 'Business Standard', url: 'https://www.business-standard.com/content/press-releases-ani/hashtag-web3-releases-a-collaborative-report-on-indias-digital-currency-124111200684_1.html' },
