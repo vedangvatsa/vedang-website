@@ -2781,8 +2781,8 @@
     "text": "How primary-school completion ratios changed.\n\n2001-2024. New entrants to the last primary-school grade relative to the relevant-age population.",
     "scheduleDate": "2026-10-31",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-01T15:02:41.614Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/61-r2.txt",
     "captionStyle": "concise-v2",
@@ -2797,7 +2797,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-01T15:02:36.371Z",
+    "attemptedSlot": "2026-11-01T20:00",
+    "publishedText": "How primary-school completion ratios changed.\n\n2001-2024. New entrants to the last primary-school grade relative to the relevant-age population.",
+    "platformPostId": "832092621008699393",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/832092621008699393"
   },
   {
     "id": "viz-b2-tumblr-107",

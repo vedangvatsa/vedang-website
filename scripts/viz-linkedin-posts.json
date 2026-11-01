@@ -2667,8 +2667,8 @@
     "text": "How the largest raw ginger producers changed.\n\n2000-2024. Raw ginger production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-01",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-01T15:01:52.068Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/107-r2.txt",
     "captionStyle": "concise-v2",
@@ -2679,7 +2679,14 @@
     "altText": "Ginger, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-01T15:01:45.006Z",
+    "attemptedSlot": "2026-11-01T20:00",
+    "publishedText": "How the largest raw ginger producers changed.\n\n2000-2024. Raw ginger production by country, measured in millions of tonnes.",
+    "platformPostId": "urn:li:ugcPost:7522674274495627264",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7522674274495627264/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-108",
