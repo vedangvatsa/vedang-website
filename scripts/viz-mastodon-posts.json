@@ -2697,8 +2697,8 @@
     "text": "How the largest raw peppercorn producers changed.\n\n2000-2024. Raw peppercorn production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-01",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-02T19:53:21.383Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/108-r2.txt",
     "captionStyle": "concise-v2",
@@ -2710,7 +2710,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-02T19:53:13.010Z",
+    "attemptedSlot": "2026-11-02T20:00",
+    "publishedText": "How the largest raw peppercorn producers changed.\n\n2000-2024. Raw peppercorn production by country, measured in thousands of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117548594052063913",
+    "platformPostId": "117548594052063913"
   },
   {
     "id": "viz-b2-mastodon-109",

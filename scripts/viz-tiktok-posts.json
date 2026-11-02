@@ -2793,8 +2793,8 @@
     "text": "How the largest pumpkin, squash and gourd producers changed.\n\n2000-2024. Pumpkin, squash and gourd production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-30",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-02T19:51:56.357Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/104-r2.txt",
     "captionStyle": "concise-v2",
@@ -2805,7 +2805,14 @@
     "altText": "Pumpkin family, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest pumpkin, squash and gourd producers changed.\n\n2000-2024. Pumpkin, squash and gourd production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-02T20:00",
+    "attemptedAt": "2026-11-02T19:51:13.299Z",
+    "bufferPostId": "6ae8e9b14efbf4f5475f1cc9",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7703664101137960213"
   },
   {
     "id": "viz-b2-tt-105",
