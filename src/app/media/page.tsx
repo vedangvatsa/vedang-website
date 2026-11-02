@@ -21,6 +21,9 @@ export const metadata: Metadata = generateMetadata({
 });
 
 const mediaMentions = [
+  { title: "Crypto Cards Enter RBI's Radar as Indians Use Offshore Wallets for Everyday Payments", source: 'The Economic Times', url: 'https://economictimes.com/news/india/crypto-cards-enter-rbis-radar-as-indians-use-offshore-wallets-for-everyday-payments/amp_articleshow/135436233.cms' },
+  { title: "India's Crypto Card Crackdown? RBI Probes RedotPay as Users Face Sudden Deactivations", source: 'Yahoo Finance', url: 'https://finance.yahoo.com/markets/crypto/articles/indias-crypto-card-crackdown-rbi-122716635.html' },
+  { title: 'Crypto Cards Under RBI, FIU Scrutiny', source: 'Elets BFSI', url: 'https://bfsi.eletsonline.com/crypto-cards-rbi-fiu-scrutiny' },
   { title: 'Bharat Web3 Association Launches Crypto Self-Regulatory Body in India', source: 'The Crypto Times', url: 'https://www.cryptotimes.io/2026/10/28/bharat-web3-association-launches-crypto-self-regulatory-body-in-india/' },
   { title: "India's CBI Raids 60 Locations in Crackdown on GainBitcoin Scam", source: 'Decrypt', url: 'https://decrypt.co/307790/indias-cbi-raids-60-locations-in-crackdown-on-gainbitcoin-scam' },
   { title: 'Indian Web3 Delegation Submits Recommendations to Chairperson of Parliamentary Standing Committee on Finance', source: 'ANI News', url: 'https://aninews.in/news/business/indian-web3-delegation-submits-recommendations-to-chairperson-of-parliamentary-standing-committee-on-finance20250731143537/' },
