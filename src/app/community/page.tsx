@@ -141,12 +141,12 @@ export default function CommunityProfilePage() {
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
-                      <li>Built a 120k+ member networking community for Web3, a social-messaging-first forum, and one of the largest Telegram channels for Web3 jobs.</li>
+                      <li>Built a 120k+ member networking community, a social-messaging-first forum, and one of the largest Telegram channels for Web3 jobs.</li>
                       <li>Achieved 55 million post views in the first year on Telegram and 80 million annual post views on LinkedIn.</li>
                       <li>Hosted weekly Twitter Spaces with 20-30k live attendees, featuring guests like a Pink Floyd band member, Big4 partners, and the CSO of Microsoft.</li>
                       <li>Published influential crash courses on Web3 topics (NFT, Metaverse, DAO) with 50,000+ accesses in the first month.</li>
                       <li>Grew a newsletter to 40,000 subscribers and a Medium publication to 150,000 subscribers.</li>
-                      <li>Formed partnerships with Harvard Blockchain Club, ETH Oxford, Token 2049, and other leading global entities.</li>
+                      <li>Formed partnerships with Harvard Blockchain Club, ETH Oxford, London Business School, Token 2049, and other leading global entities.</li>
                       <li>Created an exclusive community for Indian Web3 executives from companies like Gemini, Circle, Coinbase, and KPMG.</li>
                     </ul>
                   </CardContent>

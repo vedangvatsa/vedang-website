@@ -186,14 +186,13 @@ export default function ProfilePage() {
                   </CardHeader>
                   <CardContent className="p-4">
                     <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                        <li>Ecosystem Strategist at The Hashgraph Group (Hedera), Head of Marketing at Routespring, and Software Engineer at Network School (by Balaji Srinivasan).</li>
-                        <li>Built a 120k+ member networking community for Web3, a social-messaging-first forum, and one of the largest channels for Web3 jobs - 55 million post views in the first year.</li>
+                        <li>Ecosystem Strategist at The Hashgraph Group (Hedera), Head of Marketing at Routespring, and Software Engineer at Network School (founded by Balaji Srinivasan, ex-General Partner at Andreessen Horowitz / a16z and CTO at Coinbase).</li>
+                        <li>Built a 120k+ member networking community, a social-messaging-first forum, and one of the largest channels for Web3 jobs (55M+ post views in year one), operated autonomously through custom AI agent workflows.</li>
                         <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
-                        <li>Hosted weekly Twitter Spaces with high-profile guests (including a band member of Pink Floyd, partners of Big4 firms, the father of digital twin technology, and the CSO of Microsoft), attracting 20-30k live attendees.</li>
-                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, ETH Vietnam, Taipei Blockchain Week, Oxford Blockchain Conference, Malaysia Blockchain Week, ETH Brussels, EDCON Tokyo, etc.</li>
-                        <li>Published crash courses on NFT, Metaverse, Tokenomics, DAO, Blockchain, and DeFi, with 50,000 accesses in the first month and 40,000 newsletter subscribers.</li>
-                        <li>Among top 100 thought leaders & influencers in Metaverse and Smart Cities by Thinkers360.</li>
-                        <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views & features by LinkedIn News UK & Europe.</li>
+                        <li>Hosted weekly Twitter Spaces attracting 20–30k live attendees, featuring Microsoft's CSO, Big-4 partners, and a Pink Floyd band member.</li>
+                        <li>Partnered with Harvard Blockchain Club, ETH Oxford, London Business School, Token 2049, EDCON Tokyo, and many more.</li>
+                        <li>Published crash courses on AI automation, MCP, AI agents, the Metaverse, tokenomics, blockchain, and DeFi, reaching 50,000 learners in the first month and growing the newsletter to 40,000 subscribers.</li>
+                        <li>Generated 80M+ annual LinkedIn impressions, featured in LinkedIn News (Europe & UK), Favikon's Top 50 Fintech & Crypto Creators, Thinkers360's Top 50 Metaverse Thought Leaders, and Creator Charts' Top 200 Creator Professionals.</li>
                     </ul>
                   </CardContent>
                 </Card>
