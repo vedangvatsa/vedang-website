@@ -2824,8 +2824,8 @@
     "text": "How the largest sugar cane producers changed.\n\n2000-2024. Sugar cane production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-31",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-03T08:45:28.249Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/105-r2.txt",
     "captionStyle": "concise-v2",
@@ -2836,7 +2836,14 @@
     "altText": "Sugar cane, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest sugar cane producers changed.\n\n2000-2024. Sugar cane production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-03T14:00",
+    "attemptedAt": "2026-11-03T08:43:44.958Z",
+    "bufferPostId": "6ae99ec1310a3657584bdc2b",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7703863181373902087"
   },
   {
     "id": "viz-b2-tt-106",
