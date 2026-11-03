@@ -2799,8 +2799,8 @@
     "text": "How the largest sugar beet producers changed.\n\n2000-2024. Sugar beet production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-10-31",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-03T16:38:48.730Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/106-r2.txt",
     "captionStyle": "concise-v2",
@@ -2811,7 +2811,14 @@
     "altText": "Sugar beet, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest sugar beet producers changed.\n\n2000-2024. Sugar beet production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-03T20:00",
+    "attemptedAt": "2026-11-03T16:37:49.822Z",
+    "bufferPostId": "6aea0ddeb75704f9ac63b486",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DfSVBDxAW-1/"
   },
   {
     "id": "viz-b2-ig-61",

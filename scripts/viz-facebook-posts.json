@@ -2718,8 +2718,8 @@
     "text": "How the largest greasy shorn wool producers changed.\n\n2000-2017. Greasy shorn wool production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-02",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-03T16:40:20.137Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/110-r2.txt",
     "captionStyle": "concise-v2",
@@ -2730,7 +2730,13 @@
     "altText": "Wool, 2000-2017. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-03T16:39:58.692Z",
+    "attemptedSlot": "2026-11-03T20:00",
+    "publishedText": "How the largest greasy shorn wool producers changed.\n\n2000-2017. Greasy shorn wool production by country, measured in thousands of tonnes.",
+    "platformPostId": "2261336481266360",
+    "postUrl": "https://www.facebook.com/watch/?v=2261336481266360"
   },
   {
     "id": "viz-b2-facebook-62",
