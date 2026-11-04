@@ -2853,8 +2853,8 @@
     "text": "How the largest goat meat producers changed.\n\n2000-2024. Goat meat production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-03",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-04T11:30:22.292Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/112-r2.txt",
     "captionStyle": "concise-v2",
@@ -2865,7 +2865,14 @@
     "altText": "Goat meat, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-04T11:30:13.984Z",
+    "attemptedSlot": "2026-11-04T14:00",
+    "publishedText": "How the largest goat meat producers changed.\n\n2000-2024. Goat meat production by country, measured in millions of tonnes.",
+    "platformPostId": "urn:li:ugcPost:7523708213133803520",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523708213133803520/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "viz-b2-linkedin-113",
