@@ -2830,8 +2830,8 @@
     "text": "How primary-school completion ratios changed.\n\n2001-2024. New entrants to the last primary-school grade relative to the relevant-age population.",
     "scheduleDate": "2026-10-31",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-04T08:14:29.790Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/61-r2.txt",
     "captionStyle": "concise-v2",
@@ -2842,7 +2842,14 @@
     "altText": "Completion, 2001-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How primary-school completion ratios changed.\n\n2001-2024. New entrants to the last primary-school grade relative to the relevant-age population.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-04T09:00",
+    "attemptedAt": "2026-11-04T08:13:31.193Z",
+    "bufferPostId": "6aeae92bdc38f4d7badf6151",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DfUAGOIlbQU/"
   },
   {
     "id": "viz-b2-ig-107",

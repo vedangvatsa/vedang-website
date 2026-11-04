@@ -2951,8 +2951,8 @@
     "text": "How fixed-line telephone subscriptions changed.\n\n2000-2023. Fixed telephone subscriptions, shown in millions.",
     "scheduleDate": "2026-11-02",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-04T08:16:13.723Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/62-r2.txt",
     "captionStyle": "concise-v2",
@@ -2967,7 +2967,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-04T08:16:10.135Z",
+    "attemptedSlot": "2026-11-04T09:00",
+    "publishedText": "How fixed-line telephone subscriptions changed.\n\n2000-2023. Fixed telephone subscriptions, shown in millions.",
+    "platformPostId": "832338838849503232",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/832338838849503232"
   },
   {
     "id": "viz-b2-tumblr-111",
