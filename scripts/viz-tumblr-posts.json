@@ -3087,8 +3087,8 @@
     "text": "How the largest cheese producers changed.\n\n2000-2023. Cheese production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-03",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-05T17:41:47.049Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/114-r2.txt",
     "captionStyle": "concise-v2",
@@ -3103,7 +3103,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-05T17:41:42.236Z",
+    "attemptedSlot": "2026-11-05T20:00",
+    "publishedText": "How the largest cheese producers changed.\n\n2000-2023. Cheese production by country, measured in millions of tonnes.",
+    "platformPostId": "832465017454608384",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/832465017454608384"
   },
   {
     "id": "viz-b2-tumblr-63",
