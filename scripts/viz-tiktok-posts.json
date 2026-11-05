@@ -2979,8 +2979,8 @@
     "text": "How the largest hop cone producers changed.\n\n2000-2024. Hop cone production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-01",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-05T09:34:12.976Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/109-r2.txt",
     "captionStyle": "concise-v2",
@@ -2991,7 +2991,14 @@
     "altText": "Hops, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest hop cone producers changed.\n\n2000-2024. Hop cone production by country, measured in thousands of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-05T14:00",
+    "attemptedAt": "2026-11-05T09:32:29.849Z",
+    "bufferPostId": "6aec4d2e534ed2a8ec8fde72",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7704617926275419399"
   },
   {
     "id": "viz-b2-tt-110",

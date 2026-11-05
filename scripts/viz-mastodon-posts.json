@@ -2883,8 +2883,8 @@
     "text": "How the largest sheep meat producers changed.\n\n2000-2024. Sheep meat production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-03",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-05T09:35:22.942Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/113-r2.txt",
     "captionStyle": "concise-v2",
@@ -2896,7 +2896,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-05T09:35:15.651Z",
+    "attemptedSlot": "2026-11-05T14:00",
+    "publishedText": "How the largest sheep meat producers changed.\n\n2000-2024. Sheep meat production by country, measured in millions of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117563151012043457",
+    "platformPostId": "117563151012043457"
   },
   {
     "id": "viz-b2-mastodon-114",
