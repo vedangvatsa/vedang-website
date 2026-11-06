@@ -12,13 +12,18 @@ import {
   Mail,
   Send,
   Twitter,
+  MoveUpRight,
 } from 'lucide-react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 import Link from 'next/link';
 import { AsSeenIn } from '@/components/as-seen-in';
 import { Button } from '@/components/ui/button';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
+import { ParliamentCallout } from '@/components/parliament-callout';
+import { MediaMentionsGrid } from '@/components/media-mentions-grid';
+import { SpeakingGallery } from '@/components/speaking-gallery';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.about.title,
@@ -117,7 +122,7 @@ const organizationSchema = {
 
 export default function ProfilePage() {
   return (
-    <PageLayout>
+    <PageLayout className="about-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
@@ -373,6 +378,74 @@ export default function ProfilePage() {
                             <h3 className="font-semibold text-base">DELL</h3>
                             <p className="text-muted-foreground mt-0.5 text-sm">Intranet portal for micro project management via team update submission.</p>
                         </div>
+                        <div>
+                            <h3 className="font-semibold text-base">THE HASHGRAPH GROUP</h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Marketing consultant for org aimed at commercializing enterprise-grade distributed ledger technology solutions.</p>
+                        </div>
+                    </CardContent>
+                </Card>
+            </section>
+
+            <section id="courses">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    Course Content
+                </h2>
+                <Card>
+                    <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div>
+                            <h3 className="font-semibold text-base">
+                                <Link href="/automation" className="hover:text-primary transition-colors flex items-center justify-between">
+                                    <span>AI Automation</span>
+                                    <MoveUpRight className="h-3.5 w-3.5 text-muted-foreground" />
+                                </Link>
+                            </h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Automate anything with AI agents, n8n, APIs, and custom execution pipelines.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-base">
+                                <Link href="/mcp" className="hover:text-primary transition-colors flex items-center justify-between">
+                                    <span>MCP Development</span>
+                                    <MoveUpRight className="h-3.5 w-3.5 text-muted-foreground" />
+                                </Link>
+                            </h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Build AI tool servers, transports (stdio/SSE), resources, and client connectors.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-base">
+                                <Link href="/agentic" className="hover:text-primary transition-colors flex items-center justify-between">
+                                    <span>Agentic Web</span>
+                                    <MoveUpRight className="h-3.5 w-3.5 text-muted-foreground" />
+                                </Link>
+                            </h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Architectures, protocols, and multi-agent systems moving from info to action.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-base">
+                                <Link href="/prompt" className="hover:text-primary transition-colors flex items-center justify-between">
+                                    <span>Prompt Engineering</span>
+                                    <MoveUpRight className="h-3.5 w-3.5 text-muted-foreground" />
+                                </Link>
+                            </h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Structured outputs, advanced reasoning, code prompting, and function calling.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-base">
+                                <Link href="/vibecoding" className="hover:text-primary transition-colors flex items-center justify-between">
+                                    <span>Vibe Coding</span>
+                                    <MoveUpRight className="h-3.5 w-3.5 text-muted-foreground" />
+                                </Link>
+                            </h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">From idea to full-stack production product using modern AI-first coding tools.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-base">
+                                <Link href="/web3" className="hover:text-primary transition-colors flex items-center justify-between">
+                                    <span>Web3 101</span>
+                                    <MoveUpRight className="h-3.5 w-3.5 text-muted-foreground" />
+                                </Link>
+                            </h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Blockchains, smart contracts, decentralized governance, tokenomics, and L2s.</p>
+                        </div>
                     </CardContent>
                 </Card>
             </section>
@@ -384,28 +457,28 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
-                            <h3 className="font-semibold text-base">Programmatic SEO</h3>
-                            <p className="text-muted-foreground mt-0.5 text-sm">1,000+ auto-generated pages on hashtagweb3.com. Grew Google Search impressions from zero to 1 million in 3 months.</p>
+                            <h3 className="font-semibold text-base">Programmatic Media</h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">1,000+ auto-generated pages (0 to 1M Google impressions in 3 months) and 100+ AI-rendered video assets.</p>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-base">Swarm Intelligence Engine</h3>
-                            <p className="text-muted-foreground mt-0.5 text-sm">10-100 AI agents debate across multiple rounds to produce consensus forecasts. 8 LLM providers supported. Live at veda.ng/swarm-prediction.</p>
+                            <h3 className="font-semibold text-base">Swarm Intelligence</h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">10-100 AI agents debating across multiple rounds to produce consensus forecasts across 8 LLM providers.</p>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-base">Autonomous Social Distribution</h3>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Auto-publishes to 7 platforms, 3x/day, zero manual work. Deployed across 3 projects (veda.ng, CVin.Bio, hashtagweb3.com).</p>
+                            <h3 className="font-semibold text-base">Autonomous Community</h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">120k+ member professional community and 55M+ annual views operated via custom AI agent pipelines.</p>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-base">Programmatic Video Factory</h3>
-                            <p className="text-muted-foreground mt-0.5 text-sm">100+ short-form videos produced end-to-end by AI: script, voiceover, animated visuals, captions, and final render.</p>
+                            <h3 className="font-semibold text-base">Research Extraction</h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">6,300+ health protocols extracted via local AI inference, plus curated AI and Web3 research report libraries.</p>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-base">Health Protocol Extraction</h3>
-                            <p className="text-muted-foreground mt-0.5 text-sm">6,300+ protocols extracted from 1,200+ Huberman Lab, Bryan Johnson, and Peter Attia videos using local AI inference.</p>
+                            <h3 className="font-semibold text-base">Stylometric AI Detection</h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Stylometric AI detection model trained on 2.77M texts with 99.97% benchmark accuracy.</p>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-base">AI Content Generation Engine</h3>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Built an AI-powered content engine that produces long-form research reports on AI, Web3, and emerging tech, and distributes them across 10 platforms.</p>
+                            <h3 className="font-semibold text-base">Agent Readiness Audit</h3>
+                            <p className="text-muted-foreground mt-0.5 text-sm">100k website census auditing AI agent readiness across 120 protocol standards (MCP, OpenAPI, llms.txt).</p>
                         </div>
                     </CardContent>
                 </Card>
@@ -429,7 +502,7 @@ export default function ProfilePage() {
 
                          <div>
                             <h3 className="font-semibold text-base">Public Speaking</h3>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Workshops on Computational Social Science, China’s Approach to AI, Citizens of the Metaverse, Digital Payments in India, Data Privacy, Blockchain use-cases, e-Governance in Estonia, Network States, Responsible AI, etc.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Delivered lectures on Computational Social Science, China’s Approach to AI, Citizens of the Metaverse, Blockchain use-cases, e-Gov in Estonia, Network States, Responsible AI, etc.</p>
                         </div>
                     </CardContent>
                 </Card>
@@ -469,18 +542,30 @@ export default function ProfilePage() {
                     </Card>
                  </div>
             </section>
+
+            <AsSeenIn />
+
+            <section id="speaking" className="py-8">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-3">
+                Speaker on Emerging Technologies
+              </h2>
+              <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto mb-6">
+                Speaker and panelist across IIT Delhi, IIT Kanpur, OP Jindal University, Bharati Vidyapeeth, TUM Munich, ISB Hyderabad, ETH Enugu, India Blockchain Month, Premier AI and Web3 Gala, The Responsible AI Forum, Bizthon, Code Africa Conference, NIFT Panchkula, and more.
+              </p>
+              <SpeakingGallery />
+            </section>
+
+            <ParliamentCallout />
+
+            <section id="media-mentions" className="py-8 pb-16">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">
+                Media Mentions
+              </h2>
+              <MediaMentionsGrid />
+            </section>
           </div>
         </div>
       </div>
-
-      <AsSeenIn />
-
-      <section id="media-link" className="text-center pb-16">
-          <Button variant="outline" asChild size="lg" className="w-full md:max-w-sm">
-              <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
-          </Button>
-      </section>
-
     </PageLayout>
   );
 }

@@ -95,7 +95,7 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://platform.twitter.com https://cdn.syndication.twimg.com https://app.cal.com https://*.cal.com https://www.clarity.ms https://*.clarity.ms",
+              `script-src 'self' 'unsafe-inline' ${process.env.NODE_ENV === 'development' ? "'unsafe-eval' " : ""}https://www.googletagmanager.com https://platform.twitter.com https://cdn.syndication.twimg.com https://app.cal.com https://*.cal.com https://www.clarity.ms https://*.clarity.ms`,
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https: https://www.clarity.ms https://*.clarity.ms",
               "font-src 'self' data: https://basemaps.cartocdn.com https://*.cal.com",

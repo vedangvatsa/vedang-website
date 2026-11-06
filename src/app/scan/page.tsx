@@ -33,17 +33,17 @@ const SCAN_STEPS = [
   'Verifying HTTPS, HSTS, and CSP...',
   'Inspecting JSON-LD entity graph...',
   'Checking micropayments & payment headers...',
-  'Aggregating readiness scores...',
+  'Computing scores across 120 checks...',
 ];
 
 const LAYER_LABELS: Record<string, string> = {
   all: 'All',
   discovery: 'Discovery',
   access: 'Access',
-  usability: 'Usability',
-  security: 'Security',
-  seo: 'SEO & Web Standards',
-  payments: 'Payments',
+  usability: 'Usability & Interaction',
+  security: 'Security & Authorization',
+  seo: 'Content & Structured Data',
+  payments: 'Commerce',
 };
 
 const MASTER_PROMPT = `# AI & Web Readiness - Master Implementation Prompt
@@ -55,24 +55,34 @@ Audit and upgrade our web application to achieve 100/100 on https://veda.ng/scan
 Our website URL: [PASTE YOUR URL]
 Our tech stack: [e.g. Next.js / Astro / Django / FastAPI / Express]
 
-Implement the following 6 layers:
+Implement the 6 operational lifecycle layers defined by the 100,000-domain AI Agent Readiness census:
 
-1. DISCOVERY - robots.txt AI bot rules, /llms.txt, /llms-full.txt,
-   /.well-known/agents.json, /.well-known/api-catalog (RFC 9727), /.well-known/ard.json
+1. DISCOVERY - Standardized machine entry points: robots.txt AI bot directives (RFC 9309),
+   /llms.txt, /llms-full.txt, RFC 9727 API discovery catalogs (/.well-known/api-catalog),
+   Agent Resource Discovery manifests (/.well-known/ard.json), /.well-known/agents.json,
+   XML sitemaps (sitemap.xml), and syndication feeds (RSS/Atom).
 
-2. ACCESS - Markdown content negotiation (Accept: text/markdown),
-   .md URL twins for each page, SSR no-JS fallback, RateLimit-* headers
+2. ACCESS - Reliable transport & content ingestion: HTTP 200 delivery, UTF-8 charset declarations,
+   Markdown content negotiation (Accept: text/markdown), alternate .md representations,
+   SSR / clean text extraction without requiring JavaScript execution, and RFC 9457 Problem Details.
 
-3. MCP & USABILITY - Streamable HTTP MCP server at /.well-known/mcp,
-   OpenAPI 3.1 at /openapi.json with concrete examples, /auth.md spec
+3. USABILITY & INTERACTION - Browser controls & machine interfaces: Accessible computed control names
+   and form field labels across interactive DOM elements, streamable HTTP Model Context Protocol (MCP)
+   servers (/.well-known/mcp), OpenAPI 3.1 specifications (/openapi.json) with concrete examples,
+   idempotency keys, dry-run flags, pagination parameters, and Agent-to-Agent (A2A) cards.
 
-4. SECURITY - HTTPS, HSTS preload (max-age=63072000; includeSubDomains; preload),
-   strict CSP, /.well-known/security.txt (RFC 9116)
+4. SECURITY & AUTHORIZATION - Verified transport & access delegation: Valid TLS certificates,
+   HTTP Strict Transport Security (HSTS preload), Content Security Policy (CSP),
+   RFC 9116 security contacts (/.well-known/security.txt), and OAuth 2.0 authorization server
+   metadata (RFC 8414 /.well-known/oauth-authorization-server) with PKCE S256.
 
-5. SEO & CITATIONS - JSON-LD @graph (Organization, WebSite, Article),
-   E-E-A-T sameAs links, inverted pyramid headings, active RSS feed
+5. CONTENT & STRUCTURED DATA - Semantic entity extraction: Distinct document titles, HTML5 landmarks,
+   language tags, resolvable canonical links, and expanded Schema.org JSON-LD entity graphs
+   (Organization, WebSite, Article, BreadcrumbList) with author E-E-A-T credentials.
 
-6. MICROPAYMENTS - L402 / HTTP 402 payment headers or /terms-of-use.md
+6. COMMERCE - Autonomous machine transactions: Structured Schema.org Offer pricing and uppercase
+   currency declarations, RFC payment requirement headers (HTTP 402 / x402 / L402),
+   Universal Commerce Protocol (UCP) discovery, and explicit machine terms of service (/terms-of-use.md).
 
 Provide exact code files, server configuration, and curl verification commands.`;
 
@@ -172,9 +182,9 @@ Issues: ${failing.length} failures, ${warnings.length} warnings
   prompt += `
 ---
 Instructions:
-1. Detect the tech stack and apply static file + header fixes.
-2. Implement missing endpoints (robots.txt, llms.txt, /.well-known/*, MCP, OpenAPI).
-3. Return verification curl commands for each fix.`;
+1. Detect the tech stack and apply static file, route handler, and header fixes according to the 6-layer agent lifecycle (Discovery, Access, Usability & Interaction, Security & Authorization, Content & Structured Data, Commerce).
+2. Implement missing machine contracts (robots.txt AI directives, llms.txt, /.well-known/api-catalog, /.well-known/ard.json, Model Context Protocol endpoints, OpenAPI 3.1 with examples, RFC 9116 security.txt, OAuth metadata, Offer schemas).
+3. Return verification curl commands and test assertions for each fix.`;
 
   return prompt;
 }
@@ -602,7 +612,7 @@ export default function ScanPage() {
         <div>
           <PageHero
             title="AI & Web Readiness Scanner"
-            subtitle="Deterministic audit for AI answer engines, MCP clients, and machine consumers."
+            subtitle="120 checks across 6 layers: see how crawlers, agents, and automated tools experience your site."
           />
           <div className="-mt-3">
             <AuthorByline links={[{ label: 'Audit Tool' }]} />
@@ -680,6 +690,83 @@ export default function ScanPage() {
         )}
 
         {/* ── Pre-scan state ── */}
+        {!result && !loading && !error && (
+          <section className="p-5 rounded-lg border border-border/70 bg-card space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/50 pb-3">
+              <div>
+                <h3 className="text-sm font-semibold text-foreground tracking-tight">
+                  Evaluated Against the 100,000-Domain AI Agent Readiness Census
+                </h3>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Derived from first principles across the 6 sequential dependency stages of an autonomous web agent lifecycle.
+                </p>
+              </div>
+              <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-muted text-muted-foreground shrink-0 self-start sm:self-auto">
+                120 variables · 96 checks · 24 context
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">
+              {[
+                {
+                  num: '1',
+                  layer: 'Discovery',
+                  spec: 'RFC 9309, RFC 9727, Sitemaps.org',
+                  desc: 'Machine-readable navigation paths: robots.txt AI rules, llms.txt, API catalogs, ARD manifests, and feeds.',
+                },
+                {
+                  num: '2',
+                  layer: 'Access',
+                  spec: 'RFC 9110, RFC 9457',
+                  desc: 'Reliable message body ingestion: Markdown negotiation (Accept: text/markdown), UTF-8 text, and problem details.',
+                },
+                {
+                  num: '3',
+                  layer: 'Usability & Interaction',
+                  spec: 'W3C WAI-ARIA, OpenAPI 3.1, MCP',
+                  desc: 'Interactive controls in browser accessibility trees, live Model Context Protocol servers, and structured API contracts.',
+                },
+                {
+                  num: '4',
+                  layer: 'Security & Authorization',
+                  spec: 'RFC 8414, RFC 9116, W3C TDM',
+                  desc: 'Cryptographic transport security, HSTS, CSP headers, security.txt contacts, and OAuth 2.0 PKCE discovery.',
+                },
+                {
+                  num: '5',
+                  layer: 'Content & Structured Data',
+                  spec: 'W3C HTML5, Schema.org JSON-LD',
+                  desc: 'Document identity metadata, language tags, canonical links, and expanded machine-readable entity graphs.',
+                },
+                {
+                  num: '6',
+                  layer: 'Commerce',
+                  spec: 'Schema.org Offer, HTTP 402, UCP',
+                  desc: 'Machine-assisted commerce: typed price/currency offers, micropayment challenge headers, and machine terms of use.',
+                },
+              ].map(stage => (
+                <div key={stage.num} className="p-3 rounded-md border border-border/50 bg-background/50 space-y-1.5">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs font-semibold text-foreground">
+                      Stage {stage.num}: {stage.layer}
+                    </span>
+                    <span className="text-[10px] text-muted-foreground font-mono truncate max-w-[140px]">{stage.spec}</span>
+                  </div>
+                  <p className="text-[11px] text-muted-foreground leading-relaxed">{stage.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2 text-xs text-muted-foreground flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-border/40">
+              <span>
+                Readiness score bounds from the 100k census: mean lower bound <strong>21.33</strong> to upper bound <strong>83.05</strong>.
+              </span>
+              <span className="text-[11px] font-mono text-muted-foreground/80">
+                Anchored directly in IETF, W3C, and OpenAPI standards.
+              </span>
+            </div>
+          </section>
+        )}
 
         {/* ── Results ── */}
         {result && !loading && (

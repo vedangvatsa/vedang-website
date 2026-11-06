@@ -16,22 +16,22 @@ const SOCIAL_CHANNELS: SocialChannel[] = [
   {
     name: 'LinkedIn',
     url: 'https://linkedin.com/in/vedangvatsa',
-    icon: <Linkedin className="h-4 w-4" />,
+    icon: <Linkedin className="h-5 w-5" />,
   },
   {
     name: 'X',
     url: 'https://x.com/vedangvatsa',
-    icon: <XBrandIcon className="h-3.5 w-3.5" />,
+    icon: <XBrandIcon className="h-4 w-4" />,
   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/vedangvatsa',
-    icon: <Instagram className="h-4 w-4" />,
+    icon: <Instagram className="h-5 w-5" />,
   },
   {
     name: 'Facebook',
     url: 'https://www.facebook.com/vedangvatsa',
-    icon: <Facebook className="h-4 w-4" />,
+    icon: <Facebook className="h-5 w-5" />,
   },
 ];
 
@@ -95,31 +95,31 @@ export function SocialPopup() {
       />
 
       {/* Modal Card */}
-      <div className="relative bg-background text-foreground border border-border rounded-lg shadow-xl w-full max-w-xs p-5 z-10 animate-in zoom-in-95 duration-200">
+      <div className="relative bg-background text-foreground border border-border rounded-xl shadow-2xl w-full max-w-sm sm:max-w-md p-6 sm:p-7 z-10 animate-in zoom-in-95 duration-200">
         {/* Close Button */}
         <button
           onClick={dismiss}
-          className="absolute top-2.5 right-2.5 p-1 rounded-md text-muted-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
+          className="absolute top-3 right-3 p-1.5 rounded-md text-muted-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
           aria-label="Close dialog"
         >
           <X className="h-4 w-4" />
         </button>
 
         {/* Content */}
-        <div className="flex flex-col items-center text-center space-y-3 pt-1">
+        <div className="flex flex-col items-center text-center space-y-4 pt-1">
           <img
             src="/images/ved.png"
             alt="Vedang Vatsa"
-            width={44}
-            height={44}
-            className="h-11 w-11 rounded-full object-cover border border-border/80 shadow-sm"
+            width={60}
+            height={60}
+            className="h-15 w-15 rounded-full object-cover border border-border/80 shadow-md"
           />
-          <h2 id="social-popup-title" className="text-sm font-semibold tracking-tight text-foreground">
+          <h2 id="social-popup-title" className="text-base sm:text-lg font-semibold tracking-tight text-foreground">
             Connect with Vedang on Social Media
           </h2>
 
           {/* Horizontal Social Icons */}
-          <div className="flex items-center justify-center gap-2.5 pt-1">
+          <div className="flex items-center justify-center gap-3 pt-1">
             {SOCIAL_CHANNELS.map((item) => (
               <a
                 key={item.name}
@@ -129,7 +129,7 @@ export function SocialPopup() {
                 onClick={dismiss}
                 aria-label={item.name}
                 title={item.name}
-                className="w-10 h-10 rounded-md border border-border/60 bg-card hover:bg-muted hover:border-foreground/20 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-150 group"
+                className="w-12 h-12 rounded-lg border border-border/70 bg-card hover:bg-muted hover:border-foreground/30 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-150 shadow-xs hover:scale-105 group"
               >
                 {item.icon}
               </a>

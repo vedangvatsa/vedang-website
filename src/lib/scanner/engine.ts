@@ -200,7 +200,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   }
 
   // ──────────────────────────────────────────────────────────────────────────
-  // LAYER 1 — Discovery (13 checks)
+  // LAYER 1: Discovery (13 checks)
   // ──────────────────────────────────────────────────────────────────────────
   const discoveryChecks: CheckResult[] = [];
 
@@ -217,7 +217,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
         id: 'robots-ai-policy', name: 'AI Crawler Policy (robots.txt)', layer: 'discovery',
         status: 'pass', score: 3, maxScore: 3, impact: 'critical',
         details: 'robots.txt explicitly allows GPTBot, ClaudeBot, and PerplexityBot with dedicated Allow directives.',
-        why: 'ChatGPT, Perplexity, and Claude\'s web search bots consult robots.txt before crawling. If your site isn\'t explicitly allowed, you won\'t appear in AI-generated answers — even if your content is publicly accessible via a browser.',
+        why: 'ChatGPT, Perplexity, and Claude\'s web search bots consult robots.txt before crawling. If your site isn\'t explicitly allowed, you won\'t appear in AI-generated answers, even if your content is publicly accessible via a browser.',
         referenceUrl: 'https://veda.ng/scan',
       });
     } else if (allowsGptBot || allowsClaudeBot) {
@@ -235,7 +235,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
         id: 'robots-ai-policy', name: 'AI Crawler Policy (robots.txt)', layer: 'discovery',
         status: 'warning', score: 1, maxScore: 3, impact: 'critical',
         details: 'robots.txt does not include explicit directives for AI answer engine bots, or actively blocks them.',
-        why: 'Without explicit AI bot rules, answer engines like ChatGPT and Perplexity may not index your content. A catch-all `Allow: *` is insufficient — dedicated per-agent rules signal intent and prevent over-broad blocks from applying.',
+        why: 'Without explicit AI bot rules, answer engines like ChatGPT and Perplexity may not index your content. A catch-all `Allow: *` is insufficient: dedicated per-agent rules signal intent and prevent over-broad blocks from applying.',
         recommendation: 'Add explicit Allow rules for AI answer engines. You can separately block training crawlers (CCBot, ByteSpider) while keeping search bots open.',
         fixSnippet: { language: 'robots.txt', filename: 'public/robots.txt', code: `# Allow AI Answer Engines & Search Bots\nUser-agent: GPTBot\nUser-agent: ClaudeBot\nUser-agent: PerplexityBot\nUser-agent: OAI-SearchBot\nUser-agent: Google-Extended\nUser-agent: DeepSeekBot\nAllow: /\n\n# Block Scraping / Mass Dataset Harvesters\nUser-agent: CCBot\nUser-agent: ByteSpider\nDisallow: /` },
         referenceUrl: 'https://veda.ng/scan',
@@ -246,7 +246,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       id: 'robots-ai-policy', name: 'AI Crawler Policy (robots.txt)', layer: 'discovery',
       status: 'fail', score: 0, maxScore: 3, impact: 'critical',
       details: 'No robots.txt file found at /robots.txt (returned 404 or connection error).',
-      why: 'robots.txt is the first thing AI crawlers check before visiting any page. Without it, bots must assume default behaviour — some may avoid your site entirely, costing you citations in AI search products.',
+      why: 'robots.txt is the first thing AI crawlers check before visiting any page. Without it, bots must assume default behaviour: some may avoid your site entirely, costing you citations in AI search products.',
       recommendation: 'Publish a robots.txt file at the root of your domain with explicit AI bot directives and a Sitemap reference.',
       fixSnippet: { language: 'robots.txt', filename: 'public/robots.txt', code: `User-agent: *\nAllow: /\n\n# Allow AI Answer Engines explicitly\nUser-agent: GPTBot\nUser-agent: ClaudeBot\nUser-agent: PerplexityBot\nAllow: /\n\nSitemap: ${origin}/sitemap.xml` },
       referenceUrl: 'https://veda.ng/scan',
@@ -535,7 +535,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   }
 
   // ──────────────────────────────────────────────────────────────────────────
-  // LAYER 2 — Access & Bot Ingestion (9 checks)
+  // LAYER 2: Access & Bot Ingestion (9 checks)
   // ──────────────────────────────────────────────────────────────────────────
   const accessChecks: CheckResult[] = [];
 
@@ -717,7 +717,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     accessChecks.push({
       id: 'access-js-hydration', name: 'SSR Content (No-JS Readiness)', layer: 'access',
       status: 'fail', score: 0, maxScore: 2, impact: 'critical',
-      details: 'Initial HTML contains very little static text (<300 characters) — likely requires client-side JS.',
+      details: 'Initial HTML contains very little static text (<300 characters), likely requiring client-side JS.',
       why: 'AI crawlers and agents do not execute JavaScript. Client-only Single Page Apps (SPAs) appear completely blank to LLM search engines.',
       recommendation: 'Enable Server-Side Rendering (SSR) or Static Site Generation (SSG) so your content is present in the initial HTML response.',
       referenceUrl: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics',
@@ -749,7 +749,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   });
 
   // ──────────────────────────────────────────────────────────────────────────
-  // LAYER 3 — Usability & Agent Interfaces (10 checks)
+  // LAYER 3: Usability & Agent Interfaces (10 checks)
   // ──────────────────────────────────────────────────────────────────────────
   const usabilityChecks: CheckResult[] = [];
 
@@ -987,7 +987,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   });
 
   // ──────────────────────────────────────────────────────────────────────────
-  // LAYER 4 — Security & Integrity (11 checks)
+  // LAYER 4: Security & Integrity (11 checks)
   // ──────────────────────────────────────────────────────────────────────────
   const securityChecks: CheckResult[] = [];
 
@@ -1140,7 +1140,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   });
 
   // ──────────────────────────────────────────────────────────────────────────
-  // LAYER 5 — SEO, Google Search & AI Citations (15 checks)
+  // LAYER 5: SEO, Google Search & AI Citations (15 checks)
   // ──────────────────────────────────────────────────────────────────────────
   const seoChecks: CheckResult[] = [];
 
@@ -1574,7 +1574,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   });
 
   // ──────────────────────────────────────────────────────────────────────────
-  // LAYER 6 — Micropayments & Machine Commerce (3 checks)
+  // LAYER 6: Micropayments & Machine Commerce (3 checks)
   // ──────────────────────────────────────────────────────────────────────────
   const paymentsChecks: CheckResult[] = [];
 
@@ -1671,12 +1671,12 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
   }
 
   const layers = [
-    { id: 'discovery' as const, name: 'Discovery', description: 'robots.txt AI rules, llms.txt, ARD catalog, agents.txt, sitemaps', ...discoveryScore, checks: discoveryChecks },
-    { id: 'access' as const, name: 'Access', description: 'Markdown twins, Accept: text/markdown, SSR content, bot reachability', ...accessScore, checks: accessChecks },
-    { id: 'usability' as const, name: 'Usability & MCP', description: 'MCP Streamable servers, OpenAPI 3.1 schema, examples, auth guide', ...usabilityScore, checks: usabilityChecks },
-    { id: 'security' as const, name: 'Security', description: 'HTTPS, HSTS preload, CSP, nosniff, RFC 9116 security.txt', ...securityScore, checks: securityChecks },
-    { id: 'seo' as const, name: 'SEO & Web Standards', description: 'HTML5, A11y, Title/Meta, JSON-LD @graph, E-E-A-T sameAs, RSS feeds', ...seoScore, checks: seoChecks },
-    { id: 'payments' as const, name: 'Micropayments', description: 'x402 / L402 macaroons, WebLN, machine terms of use', ...paymentsScore, checks: paymentsChecks },
+    { id: 'discovery' as const, name: 'Discovery', description: 'Standardized entry points, robots.txt AI rules, llms.txt, ARD catalogs, sitemaps, and feeds', ...discoveryScore, checks: discoveryChecks },
+    { id: 'access' as const, name: 'Access', description: 'Reliable content delivery, Markdown content negotiation, readable text extraction, and server retry advice', ...accessScore, checks: accessChecks },
+    { id: 'usability' as const, name: 'Usability & Interaction', description: 'Interactive browser control names, accessible form fields, and programmatic API contracts (MCP, OpenAPI, A2A)', ...usabilityScore, checks: usabilityChecks },
+    { id: 'security' as const, name: 'Security & Authorization', description: 'Verified TLS transport, HSTS, CSP policies, RFC 9116 security.txt, and OAuth authorization metadata', ...securityScore, checks: securityChecks },
+    { id: 'seo' as const, name: 'Content & Structured Data', description: 'Document identity, HTML5 markup, canonical links, and expanded Schema.org JSON-LD entity graphs', ...seoScore, checks: seoChecks },
+    { id: 'payments' as const, name: 'Commerce', description: 'Machine-assisted commerce, typed product offer schemas, x402 payment headers, and machine terms of service', ...paymentsScore, checks: paymentsChecks },
   ];
 
   const badges = {
