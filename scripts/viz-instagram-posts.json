@@ -3016,8 +3016,8 @@
     "text": "How the largest raw sisal producers changed.\n\n2000-2024. Raw sisal production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-02",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-06T18:09:10.398Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/111-r2.txt",
     "captionStyle": "concise-v2",
@@ -3028,7 +3028,14 @@
     "altText": "Sisal, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest raw sisal producers changed.\n\n2000-2024. Raw sisal production by country, measured in thousands of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-06T20:00",
+    "attemptedAt": "2026-11-06T18:06:52.983Z",
+    "bufferPostId": "6aee173d9214322f68a237ad",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DfaNwjdFO7c/"
   },
   {
     "id": "viz-b2-ig-112",
