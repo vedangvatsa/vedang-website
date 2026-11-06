@@ -2928,8 +2928,8 @@
     "text": "How the largest yoghurt producers changed.\n\n2010-2023. Yoghurt production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-04",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-06T20:34:14.489Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/115-r2.txt",
     "captionStyle": "concise-v2",
@@ -2940,7 +2940,13 @@
     "altText": "Yoghurt, 2010-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-06T20:33:45.466Z",
+    "attemptedSlot": "2026-11-06T20:00",
+    "publishedText": "How the largest yoghurt producers changed.\n\n2010-2023. Yoghurt production by country, measured in thousands of tonnes.",
+    "platformPostId": "1632363551761172",
+    "postUrl": "https://www.facebook.com/watch/?v=1632363551761172"
   },
   {
     "id": "viz-b2-facebook-116",
