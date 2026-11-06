@@ -2635,8 +2635,8 @@
     "text": "How primary-school completion ratios changed.\n\n2001-2024. New entrants to the last primary-school grade relative to the relevant-age population.",
     "scheduleDate": "2026-10-31",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-06T10:08:43.641Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/61-r2.txt",
     "captionStyle": "concise-v2",
@@ -2648,7 +2648,13 @@
     "sourceCredit": "UNESCO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-06T10:08:31.491Z",
+    "attemptedSlot": "2026-11-06T14:00",
+    "publishedText": "How primary-school completion ratios changed.\n\n2001-2024. New entrants to the last primary-school grade relative to the relevant-age population.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mzn5a25kqb2r",
+    "postUrl": "https://bsky.app/profile/did:plc:x3llxr24tbj72fy3nish3xrh/post/3mzn5a25kqb2r"
   },
   {
     "id": "viz-b2-bluesky-107",

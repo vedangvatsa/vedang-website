@@ -3041,8 +3041,8 @@
     "text": "How fixed-line telephone subscriptions changed.\n\n2000-2023. Fixed telephone subscriptions, shown in millions.",
     "scheduleDate": "2026-11-02",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-06T10:08:14.789Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/62-r2.txt",
     "captionStyle": "concise-v2",
@@ -3053,7 +3053,14 @@
     "altText": "Landline phones, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How fixed-line telephone subscriptions changed.\n\n2000-2023. Fixed telephone subscriptions, shown in millions.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-06T14:00",
+    "attemptedAt": "2026-11-06T10:06:31.726Z",
+    "bufferPostId": "6aeda6a8dbada656be0a5d48",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7704997237503364404"
   },
   {
     "id": "viz-b2-tt-111",

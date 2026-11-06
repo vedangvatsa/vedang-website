@@ -3121,8 +3121,8 @@
     "text": "How government consumption changed across economies.\n\n2000-2024. Government final consumption expenditure as a share of GDP.",
     "scheduleDate": "2026-11-04",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-06T10:09:07.138Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/63-r2.txt",
     "captionStyle": "concise-v2",
@@ -3137,7 +3137,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-06T10:09:03.791Z",
+    "attemptedSlot": "2026-11-06T14:00",
+    "publishedText": "How government consumption changed across economies.\n\n2000-2024. Government final consumption expenditure as a share of GDP.",
+    "platformPostId": "832527135762677760",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/832527135762677760"
   },
   {
     "id": "viz-b2-tumblr-115",
