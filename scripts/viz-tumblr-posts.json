@@ -3223,8 +3223,8 @@
     "text": "How the largest quince producers changed.\n\n2000-2017. Quince production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-05",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-07T10:40:42.192Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/117-r2.txt",
     "captionStyle": "concise-v2",
@@ -3239,7 +3239,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-07T10:40:37.915Z",
+    "attemptedSlot": "2026-11-07T14:00",
+    "publishedText": "How the largest quince producers changed.\n\n2000-2017. Quince production by country, measured in thousands of tonnes.",
+    "platformPostId": "832619719755448320",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/832619719755448320"
   },
   {
     "id": "viz-b2-tumblr-118",
