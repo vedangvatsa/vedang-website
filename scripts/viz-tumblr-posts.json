@@ -3257,8 +3257,8 @@
     "text": "How the largest pomelo and grapefruit producers changed.\n\n2000-2024. Pomelo and grapefruit production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-05",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-07T14:56:33.869Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/118-r2.txt",
     "captionStyle": "concise-v2",
@@ -3273,7 +3273,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-07T14:56:29.978Z",
+    "attemptedSlot": "2026-11-07T20:00",
+    "publishedText": "How the largest pomelo and grapefruit producers changed.\n\n2000-2024. Pomelo and grapefruit production by country, measured in millions of tonnes.",
+    "platformPostId": "832635817196437504",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/832635817196437504"
   },
   {
     "id": "viz-b2-tumblr-64",

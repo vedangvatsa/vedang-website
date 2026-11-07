@@ -3018,8 +3018,8 @@
     "text": "How the largest pomelo and grapefruit producers changed.\n\n2000-2024. Pomelo and grapefruit production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-05",
     "scheduleTime": "14:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-07T14:56:29.974Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/118-r2.txt",
     "captionStyle": "concise-v2",
@@ -3030,7 +3030,13 @@
     "altText": "Grapefruit, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-07T14:56:04.968Z",
+    "attemptedSlot": "2026-11-07T20:00",
+    "publishedText": "How the largest pomelo and grapefruit producers changed.\n\n2000-2024. Pomelo and grapefruit production by country, measured in millions of tonnes.",
+    "platformPostId": "1008808085613776",
+    "postUrl": "https://www.facebook.com/watch/?v=1008808085613776"
   },
   {
     "id": "viz-b2-facebook-64",

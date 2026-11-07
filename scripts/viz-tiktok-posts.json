@@ -3165,8 +3165,8 @@
     "text": "How the largest cheese producers changed.\n\n2000-2023. Cheese production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-03",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-07T14:55:48.704Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/114-r2.txt",
     "captionStyle": "concise-v2",
@@ -3177,7 +3177,14 @@
     "altText": "Cheese, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How the largest cheese producers changed.\n\n2000-2023. Cheese production by country, measured in millions of tonnes.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-07T20:00",
+    "attemptedAt": "2026-11-07T14:54:04.636Z",
+    "bufferPostId": "6aef3b8d004e4879a7619554",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7705442982597496082"
   },
   {
     "id": "viz-b2-tt-63",
