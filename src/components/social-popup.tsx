@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import { X, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { XBrandIcon } from '@/components/x-brand-icon';
 
@@ -36,6 +37,7 @@ const SOCIAL_CHANNELS: SocialChannel[] = [
 ];
 
 export function SocialPopup() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const dismiss = useCallback(() => {
@@ -46,6 +48,10 @@ export function SocialPopup() {
   }, []);
 
   useEffect(() => {
+    if (pathname === '/invoice' || pathname?.startsWith('/invoice')) {
+      return;
+    }
+
     try {
       if (localStorage.getItem(STORAGE_KEY) === 'true') {
         return;
@@ -57,7 +63,7 @@ export function SocialPopup() {
     }, 4500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -78,14 +84,14 @@ export function SocialPopup() {
     };
   }, [isOpen, dismiss]);
 
-  if (!isOpen) return null;
+  if (!isOpen || pathname === '/invoice' || pathname?.startsWith('/invoice')) return null;
 
   return (
     <div
       role="dialog"
       aria-modal="true"
       aria-labelledby="social-popup-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-in fade-in duration-200"
+      className="print:hidden fixed inset-0 z-50 flex items-center justify-center p-4 animate-in fade-in duration-200"
     >
       {/* Backdrop */}
       <div
