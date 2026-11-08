@@ -3078,8 +3078,8 @@
     "text": "How the largest linseed producers changed.\n\n2000-2024. Linseed production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-06",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-08T10:45:11.935Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/119-r2.txt",
     "captionStyle": "concise-v2",
@@ -3090,7 +3090,13 @@
     "altText": "Linseed, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-08T10:44:46.494Z",
+    "attemptedSlot": "2026-11-08T14:00",
+    "publishedText": "How the largest linseed producers changed.\n\n2000-2024. Linseed production by country, measured in millions of tonnes.",
+    "platformPostId": "2403536177055018",
+    "postUrl": "https://www.facebook.com/watch/?v=2403536177055018"
   },
   {
     "id": "viz-b2-facebook-120",
