@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { TwitterApi } from 'twitter-api-v2';
 import { triggerBoost } from './smm-boost-trigger.js';
 import { isMain } from './viz-publishing.js';
 
@@ -11,12 +10,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
 dotenv.config({ path: path.resolve(REPO_ROOT, '.env.local') });
 
-const client = new TwitterApi({
-  appKey: process.env.X_API_KEY!,
-  appSecret: process.env.X_API_KEY_SECRET!,
-  accessToken: process.env.X_ACCESS_TOKEN!,
-  accessSecret: process.env.X_ACCESS_TOKEN_SECRET!,
-});
+// Buffer API configuration
+const BUFFER_TOKEN = process.env.BUFFER_API_KEY || process.env.BUFFER_TOKEN || 'xnKLtTNKv7L8BBk2pcYYiNsulFVohykNTGo944Sox0S';
+const BUFFER_CHANNEL_ID = process.env.BUFFER_TWITTER_CHANNEL_ID || '6ae459612f1f5ed6481d5b6b';
+
+let twitterClient: any | undefined;
+async function getTwitterClient(): Promise<any> {
+  if (!twitterClient) {
+    const { TwitterApi } = await import('twitter-api-v2');
+    twitterClient = new TwitterApi({
+      appKey: process.env.X_API_KEY!,
+      appSecret: process.env.X_API_KEY_SECRET!,
+      accessToken: process.env.X_ACCESS_TOKEN!,
+      accessSecret: process.env.X_ACCESS_TOKEN_SECRET!,
+    });
+  }
+  return twitterClient;
+}
 
 const TIMEZONE_OFFSET_HOURS = 5.5; // IST
 const POSTS_FILE = path.resolve(__dirname, process.env.X_POSTS_FILE || 'x-posts.json');
@@ -47,7 +57,135 @@ interface XPost {
   error?: string;
 }
 
+async function postSingleViaBuffer(text: string, image?: string): Promise<{ success: boolean; id?: string; error?: string }> {
+  try {
+    const isUrl = image && (image.startsWith('http://') || image.startsWith('https://'));
+    const variables = {
+      input: {
+        channelId: BUFFER_CHANNEL_ID,
+        mode: 'shareNow',
+        schedulingType: 'automatic',
+        text,
+        assets: isUrl ? [{ image: { url: image } }] : [],
+      },
+    };
+
+    const mutation = `
+      mutation PublishSingleNow($input: CreatePostInput!) {
+        createPost(input: $input) {
+          ... on PostActionSuccess {
+            post {
+              id
+              status
+              externalLink
+              sentAt
+            }
+          }
+          ... on MutationError {
+            message
+          }
+        }
+      }
+    `;
+
+    const res = await fetch('https://api.buffer.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${BUFFER_TOKEN}`,
+      },
+      body: JSON.stringify({ query: mutation, variables }),
+    });
+
+    const data = (await res.json()) as any;
+    if (data?.data?.createPost?.post?.id) {
+      const p = data.data.createPost.post;
+      return { success: true, id: p.id };
+    } else {
+      const msg = data?.data?.createPost?.message || JSON.stringify(data.errors || data);
+      return { success: false, error: msg };
+    }
+  } catch (err) {
+    return { success: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
+async function postThreadViaBuffer(tweets: TweetItem[]): Promise<{ success: boolean; id?: string; error?: string }> {
+  try {
+    const threadItems = tweets.map((t) => {
+      const isUrl = t.image && (t.image.startsWith('http://') || t.image.startsWith('https://'));
+      return {
+        text: t.text,
+        assets: isUrl ? [{ image: { url: t.image } }] : [],
+      };
+    });
+
+    const firstImgUrl = tweets[0].image && (tweets[0].image.startsWith('http://') || tweets[0].image.startsWith('https://'))
+      ? tweets[0].image
+      : undefined;
+
+    const variables = {
+      input: {
+        channelId: BUFFER_CHANNEL_ID,
+        mode: 'shareNow',
+        schedulingType: 'automatic',
+        text: tweets[0].text,
+        assets: firstImgUrl ? [{ image: { url: firstImgUrl } }] : [],
+        metadata: {
+          twitter: {
+            thread: threadItems,
+          },
+        },
+      },
+    };
+
+    const mutation = `
+      mutation PublishThreadNow($input: CreatePostInput!) {
+        createPost(input: $input) {
+          ... on PostActionSuccess {
+            post {
+              id
+              status
+              externalLink
+              sentAt
+            }
+          }
+          ... on MutationError {
+            message
+          }
+        }
+      }
+    `;
+
+    const res = await fetch('https://api.buffer.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${BUFFER_TOKEN}`,
+      },
+      body: JSON.stringify({ query: mutation, variables }),
+    });
+
+    const data = (await res.json()) as any;
+    if (data?.data?.createPost?.post?.id) {
+      const p = data.data.createPost.post;
+      return { success: true, id: p.id };
+    } else {
+      const msg = data?.data?.createPost?.message || JSON.stringify(data.errors || data);
+      return { success: false, error: msg };
+    }
+  } catch (err) {
+    return { success: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
 export async function postSingleTweet(text: string, image?: string): Promise<{ success: boolean; id?: string; error?: string }> {
+  if (BUFFER_TOKEN) {
+    console.log(`📡 Publishing single tweet via Buffer API (Channel: ${BUFFER_CHANNEL_ID})...`);
+    return postSingleViaBuffer(text, image);
+  }
+
+  // Fallback to TwitterApi
   try {
     const params: Record<string, unknown> = { text };
 
@@ -57,10 +195,12 @@ export async function postSingleTweet(text: string, image?: string): Promise<{ s
         return { success: false, error: `Image not found: ${absImage} — aborting (will not post text-only)` };
       }
       const mimeType = absImage.endsWith('.mp4') ? 'video/mp4' : absImage.endsWith('.gif') ? 'image/gif' : 'image/png';
+      const client = getTwitterClient();
       const mediaId = await client.v1.uploadMedia(absImage, { mimeType });
       params.media = { media_ids: [mediaId] };
     }
 
+    const client = getTwitterClient();
     const { data } = await client.v2.tweet(params as Parameters<typeof client.v2.tweet>[0]);
     return { success: true, id: data.id };
   } catch (err) {
@@ -70,12 +210,10 @@ export async function postSingleTweet(text: string, image?: string): Promise<{ s
 
 async function postQuoteTweet(text: string, quoteTweetId: string, authorHandle?: string): Promise<{ success: boolean; id?: string; error?: string }> {
   try {
-    // Use URL embedding because X API restricts quote_tweet_id for non-mentioned users
     const handle = (authorHandle || '').replace('@', '');
     const tweetUrl = `https://x.com/${handle}/status/${quoteTweetId}`;
     const fullText = `${text}\n\n${tweetUrl}`;
-    const { data } = await client.v2.tweet({ text: fullText });
-    return { success: true, id: data.id };
+    return postSingleTweet(fullText);
   } catch (err) {
     return { success: false, error: err instanceof Error ? err.message : String(err) };
   }
@@ -83,21 +221,25 @@ async function postQuoteTweet(text: string, quoteTweetId: string, authorHandle?:
 
 async function postReply(text: string, replyToId: string, authorHandle?: string): Promise<{ success: boolean; id?: string; error?: string }> {
   try {
-    // X API blocks direct replies. Instead, post a standalone tweet
-    // with @mention + embedded URL for notification + visibility.
     const handle = (authorHandle || '').replace('@', '');
     const tweetUrl = `https://x.com/${handle}/status/${replyToId}`;
     const fullText = `${text}\n\n${tweetUrl}`;
-    const { data } = await client.v2.tweet({ text: fullText });
-    return { success: true, id: data.id };
+    return postSingleTweet(fullText);
   } catch (err) {
     return { success: false, error: err instanceof Error ? err.message : String(err) };
   }
 }
 
 async function postThread(tweets: TweetItem[]): Promise<{ success: boolean; id?: string; error?: string }> {
+  if (BUFFER_TOKEN) {
+    console.log(`📡 Publishing thread via Buffer API (Channel: ${BUFFER_CHANNEL_ID}, ${tweets.length} tweets)...`);
+    return postThreadViaBuffer(tweets);
+  }
+
+  // Fallback to TwitterApi
   let previousId: string | undefined;
   let firstId: string | undefined;
+  const client = getTwitterClient();
 
   for (let i = 0; i < tweets.length; i++) {
     const { text, image } = tweets[i];
@@ -135,7 +277,6 @@ async function postThread(tweets: TweetItem[]): Promise<{ success: boolean; id?:
 async function main() {
   // Load from both post files
   let posts: XPost[] = [];
-  let postsSource = '';
 
   if (fs.existsSync(POSTS_FILE)) {
     const regular = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8')) as XPost[];
@@ -183,7 +324,7 @@ async function main() {
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
   });
   if (recentlyPosted) {
-    console.log('⏸️ Posted within last 8h — skipping (max 3 posts/day)');
+    console.log('⏸️ Posted within last 7-8h — skipping (max 3 posts/day)');
     return;
   }
 
@@ -233,8 +374,7 @@ async function main() {
     // Write back to the correct files
     if (fs.existsSync(POSTS_FILE)) {
       const regular = posts.filter(p => p.type !== 'quote' && p.type !== 'reply');
-      
-    fs.writeFileSync(POSTS_FILE, JSON.stringify(regular, null, 2));
+      fs.writeFileSync(POSTS_FILE, JSON.stringify(regular, null, 2));
     }
     if (!process.env.X_POSTS_FILE && fs.existsSync(QUOTE_POSTS_FILE)) {
       const quotes = posts.filter(p => p.type === 'quote');
@@ -245,7 +385,6 @@ async function main() {
       fs.writeFileSync(REPLY_POSTS_FILE, JSON.stringify(replies, null, 2));
     }
     console.log('📝 Updated posts files');
-    console.log('::set-output name=modified::true');
   } else {
     console.log('😴 No posts due at this time');
   }

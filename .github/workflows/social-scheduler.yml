@@ -44,6 +44,8 @@ jobs:
         continue-on-error: true
         run: npx tsx scripts/x-scheduled-executor.ts
         env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_TWITTER_CHANNEL_ID: ${{ secrets.BUFFER_TWITTER_CHANNEL_ID || '6ae459612f1f5ed6481d5b6b' }}
           X_API_KEY: ${{ secrets.X_API_KEY }}
           X_API_KEY_SECRET: ${{ secrets.X_API_KEY_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}

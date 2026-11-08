@@ -1284,89 +1284,108 @@
     "id": "li-draft-1",
     "scheduleDate": "2026-06-27",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Micromanagers buy physical presence. Leaders buy outcomes.\n\nResults and client satisfaction matter. Location doesn't.\n\nStop watching the clock.",
     "image": "scripts/linkedin-assets/clean/draft1_micromanagers_v2_1782464292325.jpg",
-    "error": "Request failed with code 401 - Invalid or expired token (Twitter code 89)"
+    "postedAt": "2026-11-08T13:49:53.857Z",
+    "tweetId": "2119427189582053882"
   },
   {
     "id": "li-draft-2",
     "scheduleDate": "2026-06-27",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Ageism in tech is a hiring mistake.\n\n\"Overqualified\" is usually code for \"we want to underpay.\" In doing so, you lose decades of experience.\n\nYou can't Google institutional knowledge.",
-    "image": "scripts/linkedin-assets/clean/draft2_ageism_v2_1782464310753.jpg"
+    "image": "scripts/linkedin-assets/clean/draft2_ageism_v2_1782464310753.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "li-draft-3",
     "scheduleDate": "2026-06-28",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Recruiting pipelines optimize for compliance and call it professionalism.\n\nThe best hires are rarely perfect on paper. Drive and grit don't show up on checklists.\n\nStop optimizing for perfection.",
-    "image": "scripts/linkedin-assets/clean/draft3_grit_1782464279318.jpg"
+    "image": "scripts/linkedin-assets/clean/draft3_grit_1782464279318.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "li-draft-4",
     "scheduleDate": "2026-06-28",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "A resume gap is not a competence gap. Life happens.\n\nAutomated tools filter out qualified candidates for arbitrary breaks.\n\nIf the skills and drive are there, the timeline doesn't matter.",
-    "image": "scripts/linkedin-assets/clean/draft4_resumegaps_1782464328098.jpg"
+    "image": "scripts/linkedin-assets/clean/draft4_resumegaps_1782464328098.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "li-draft-5",
     "scheduleDate": "2026-06-28",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Abuse is not the price of high performance.\n\nIf your \"top performer\" destroys team cohesion, they are costing the business money.\n\nPerformance is built on trust, not fear.",
-    "image": "scripts/linkedin-assets/clean/draft5_toxic_culture.jpg"
+    "image": "scripts/linkedin-assets/clean/draft5_toxic_culture.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "li-draft-6",
     "scheduleDate": "2026-06-29",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Counting minutes destroys discretionary effort.\n\nWrite someone up for arriving 10 minutes late. Don't be surprised they leave on time when a project is failing.\n\nYou cannot command loyalty.",
-    "image": "scripts/linkedin-assets/clean/draft6_micromanagertax_1782464343920.jpg"
+    "image": "scripts/linkedin-assets/clean/draft6_micromanagertax_1782464343920.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "li-draft-7",
     "scheduleDate": "2026-06-29",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Net worth and job titles are lagging indicators of privilege, not leading indicators of intelligence.\n\nThe systems that keep society running are built by people who rarely get the titles.\n\nDon't confuse prestige with utility.",
-    "image": "scripts/linkedin-assets/clean/draft7_jobtitles_1782464359677.jpg"
+    "image": "scripts/linkedin-assets/clean/draft7_jobtitles_1782464359677.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "li-draft-8",
     "scheduleDate": "2026-06-29",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "In 1994, Bill Gates sat on 330,000 sheets of paper to show a CD-ROM's capacity.\n\nToday's 2M token context window holds four of those CD-ROMs in active LLM memory.\n\n30 years. From storage constraints to cognitive synthesis.",
-    "image": "scripts/linkedin-assets/clean/draft8_cdrom.jpg"
+    "image": "scripts/linkedin-assets/clean/draft8_cdrom.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "li-draft-9",
     "scheduleDate": "2026-06-30",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Expecting employees to work with the passion of a founder is a delusion.\n\nThey don't have your equity. They don't have your upside. It is your business, not theirs.\n\nPay people fairly, trust them, and align incentives. Don't expect founder effort for salary compensation.",
-    "image": "scripts/linkedin-assets/clean/draft9_ceo_expectations.jpg"
+    "image": "scripts/linkedin-assets/clean/draft9_ceo_expectations.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "li-draft-10",
     "scheduleDate": "2026-06-30",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Lowballing candidates in salary negotiations is a net-negative strategy.\n\nThey will leave the moment they see the pay disparity. Rehiring and training costs will dwarf the initial savings.\n\nPay what the role is worth.",
-    "image": "scripts/linkedin-assets/clean/draft10_salarybackfire_1782464377011.jpg"
+    "image": "scripts/linkedin-assets/clean/draft10_salarybackfire_1782464377011.jpg",
+    "postedAt": "2026-06-27T00:00:00.000Z",
+    "error": "Archived old draft"
   },
   {
     "id": "agent-infrastructure-stack-thread",
     "type": "thread",
     "scheduleDate": "2026-06-30",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "I mapped the entire AI agent infrastructure market. 75+ companies, $14B+ in disclosed funding, 8 infrastructure layers.\n\nMost of the money is going to 2 layers. Bigger platforms are slowly absorbing the other 6.\n\nA thread on what I found.",
@@ -1414,6 +1433,365 @@
       {
         "text": "I wrote this as a proper academic paper referencing 67 sources, funding data from Crunchbase and SEC filings, and a market map of every major company.\n\nRead the full paper on SSRN http://dx.doi.org/10.2139/ssrn.6874178\n\nWould genuinely appreciate reads and feedback.",
         "image": "scripts/thread-assets/agent_paper_cover.png"
+      }
+    ],
+    "postedAt": "2026-11-07T09:00:00.000Z",
+    "tweetId": "2118991434472649165"
+  },
+  {
+    "id": "mcp-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-08",
+    "scheduleTime": "18:03",
+    "posted": true,
+    "postedAt": "2026-11-08T12:33:49.703Z",
+    "tweetId": "2119408026939457704",
+    "tweets": [
+      {
+        "text": "1/ Anthropic's Model Context Protocol (MCP) is the open standard for AI tools.\n\nInstead of custom API glue for every app, MCP gives models a universal plug for data and tools.\n\n8 free resources to learn MCP 🧵👇",
+        "image": "https://iili.io/nbdMZJI.png"
+      },
+      {
+        "text": "2/ Official MCP Documentation\n\nThe core protocol specification.\n\n• Architecture: Host, Client, Server\n• JSON-RPC message formats\n• Standard tools and prompt templates\n\nhttps://modelcontextprotocol.io",
+        "image": "https://iili.io/nbdNOQ9.png"
+      },
+      {
+        "text": "3/ MCP Development Course\n\nA practical guide on veda.ng.\n\n• Core protocol mechanics\n• Building custom server connectors\n• Connecting Cursor & Claude Desktop\n\nhttps://veda.ng/mcp",
+        "image": "https://iili.io/nbdNZEg.png"
+      },
+      {
+        "text": "4/ Cursor MCP Documentation\n\nTurn your code editor into an MCP client.\n\n• Connect databases, APIs, GitHub repos\n• Multi-server setup guides\n• Practical workflow tutorials\n\nhttps://docs.cursor.com/context/model-context-protocol",
+        "image": "https://iili.io/nb2Mvpt.png"
+      },
+      {
+        "text": "5/ FastMCP (by Prefect)\n\nThe fastest way to build MCP servers in Python.\n\n• Pythonic decorators: @mcp.tool()\n• Built-in CLI for server testing\n• Production deployment guides\n\nhttps://github.com/jlowin/fastmcp",
+        "image": "https://iili.io/nb2jQII.png"
+      },
+      {
+        "text": "6/ Official Reference Servers\n\nAnthropic's open-source reference implementations.\n\n• Postgres, SQLite, Slack, GitHub, Fetch\n• Clean TypeScript and Python templates\n• Best practices for tool design\n\nhttps://github.com/modelcontextprotocol/servers",
+        "image": "https://iili.io/nb2wxYx.png"
+      },
+      {
+        "text": "7/ Smithery.ai\n\nThe registry for discovering and installing MCP servers.\n\n• 1-click install into Cursor and Claude Desktop\n• Browse 1,000+ community servers\n• Search by integration (DB, Notion, GitHub)\n\nhttps://smithery.ai",
+        "image": "https://iili.io/nb2wEpp.png"
+      },
+      {
+        "text": "8/ MCP Inspector\n\nInteractive developer tool for testing and debugging MCP servers.\n\n• Inspect server capabilities and prompts\n• Test tool execution in real-time\n• Official debugging suite by Anthropic\n\nhttps://github.com/modelcontextprotocol/inspector",
+        "image": "https://iili.io/nb2weaf.png"
+      },
+      {
+        "text": "9/ Awesome MCP Servers\n\nCurated community collection of MCP servers and tools.\n\n• Categorized directory: Enterprise, Dev, Cloud\n• Clients, libraries, and frameworks\n• Maintained by punkpeye\n\nhttps://github.com/punkpeye/awesome-mcp-servers",
+        "image": "https://iili.io/nb2wDuV.png"
+      },
+      {
+        "text": "10/ 10 Free courses to learn AI agents:\nhttps://x.com/hashtag_web3/status/2118330257568592049"
+      },
+      {
+        "text": "11/ Out of $13B in AI agents, 88% went to compute and finished apps while middleware tools get acquired in under 18 months:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
+      },
+      {
+        "text": "12/ My courses:\n\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• AI Automation: https://veda.ng/automation\n• Vibe Coding: https://veda.ng/vibecoding",
+        "image": "https://iili.io/nb2NqwN.png"
+      }
+    ]
+  },
+  {
+    "id": "agent-frameworks-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-09",
+    "scheduleTime": "01:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Over 300 AI agent frameworks launched this year. Most were brittle demos that fail in production.\n\nIf you are building autonomous agents, here are the top 10 open-source frameworks worth using 🧵👇",
+        "image": "https://iili.io/nb2gYGV.png"
+      },
+      {
+        "text": "2/ LangGraph (by LangChain)\n\nCyclic graph runtime for complex agents.\n\n• State persistence across multi-turn loops\n• Human-in-the-loop approvals\n• Streaming tokens & debugging\n\nhttps://github.com/langchain-ai/langgraph",
+        "image": "https://iili.io/nb2g4n4.png"
+      },
+      {
+        "text": "3/ CrewAI\n\nMulti-agent role-playing workflows.\n\n• Role-based teams (Researcher, Writer)\n• Hierarchical task execution\n• Clean Python API with native tools\n\nhttps://github.com/crewAIInc/crewAI",
+        "image": "https://iili.io/nb2rfAg.png"
+      },
+      {
+        "text": "4/ PydanticAI\n\nType-safe agent framework by the Pydantic team.\n\n• Built on Pydantic v2 validation\n• Type-safe structured outputs\n• Model-agnostic with automatic retries\n\nhttps://github.com/pydantic/pydantic-ai",
+        "image": "https://iili.io/nb2rjDb.png"
+      },
+      {
+        "text": "5/ Browser-Use\n\nAutonomous web navigation for AI agents.\n\n• Interacts with buttons, forms, and logins\n• Vision-driven DOM element tree parsing\n• Full Playwright integration\n\nhttps://github.com/browser-use/browser-use",
+        "image": "https://iili.io/nb24Fql.png"
+      },
+      {
+        "text": "6/ Microsoft AutoGen\n\nConversational multi-agent framework.\n\n• Multi-agent conversation patterns\n• Code generation, execution, and debugging\n• AutoGen Studio for visual prototyping\n\nhttps://github.com/microsoft/autogen",
+        "image": "https://iili.io/nb2462S.png"
+      },
+      {
+        "text": "7/ Hugging Face smolagents\n\nMinimalist code-first agent library.\n\n• Code agents write Python instead of JSON\n• Tiny core logic (~1,000 lines)\n• Sandboxed execution runtimes\n\nhttps://github.com/huggingface/smolagents",
+        "image": "https://iili.io/nb26qCv.png"
+      },
+      {
+        "text": "8/ OpenHands\n\nOpen-source autonomous software engineer.\n\n• Edits code, executes commands, browses web\n• Sandboxed Docker execution\n• Resolves real GitHub issues autonomously\n\nhttps://github.com/All-Hands-AI/OpenHands",
+        "image": "https://iili.io/nb26xaI.png"
+      },
+      {
+        "text": "9/ ElizaOS (by ai16z)\n\nAutonomous agent platform for social & web3.\n\n• Discord, X, and Telegram connectors\n• Multi-agent simulation environments\n• Long-term memory with document chunking\n\nhttps://github.com/elizaOS/eliza",
+        "image": "https://iili.io/nb267nf.png"
+      },
+      {
+        "text": "10/ DSPy (Stanford NLP)\n\nProgramming foundation models with code, not prompts.\n\n• Compiles prompts into optimized instructions\n• Automatic few-shot example selection\n• Algorithmic prompt tuning on benchmarks\n\nhttps://github.com/stanfordnlp/dspy",
+        "image": "https://iili.io/nb26jMx.png"
+      },
+      {
+        "text": "11/ LlamaIndex Workflows\n\nEvent-driven agent orchestration.\n\n• Async event-driven pipelines\n• Step-by-step state handling and branching\n• Deep RAG and data ingestion connectors\n\nhttps://github.com/run-llama/llama_index",
+        "image": "https://iili.io/nb26gta.png"
+      },
+      {
+        "text": "12/ 10 Free courses to learn AI agents:\nhttps://x.com/hashtag_web3/status/2118330257568592049"
+      },
+      {
+        "text": "13/ Out of $13B in AI agents, 88% went to compute and finished apps while middleware tools get acquired in under 18 months:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
+      },
+      {
+        "text": "14/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
+      },
+      {
+        "text": "15/ My courses:\n\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• AI Automation: https://veda.ng/automation\n• Vibe Coding: https://veda.ng/vibecoding",
+        "image": "https://iili.io/nb2NqwN.png"
+      }
+    ]
+  },
+  {
+    "id": "vibe-coding-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-09",
+    "scheduleTime": "09:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Coding shifted from typing boilerplate syntax to architecture, context hygiene, and reviewing code.\n\n8 essential tools, frameworks, and engineering rules to build reliable software with AI 🧵👇",
+        "image": "https://iili.io/nb26yoG.png"
+      },
+      {
+        "text": "2/ Vibe Coding Bootcamp\n\nA structured engineering course on veda.ng.\n\n• Context window management (.cursorrules)\n• Multi-file refactoring workflows\n• Verification loops: tests, linters, pre-commit\n\nhttps://veda.ng/vibecoding",
+        "image": "https://iili.io/nb2PqNe.png"
+      },
+      {
+        "text": "3/ Cursor: Rules & Composer\n\nThe standard for AI-assisted coding.\n\n• .cursorrules: Repo-specific constraints\n• Composer (Cmd+I): Multi-file edits in real time\n• MCP integration for live DB & docs context\n\nhttps://cursor.com",
+        "image": "https://iili.io/nb2Mvpt.png"
+      },
+      {
+        "text": "4/ Windsurf: The Cascade Flow\n\nDeep contextual codebase understanding.\n\n• Cascade: Agent tracking multi-step edits\n• Real-time terminal execution & error fixes\n• Native indexing for massive codebases\n\nhttps://codeium.com/windsurf",
+        "image": "https://iili.io/nb2PDgV.png"
+      },
+      {
+        "text": "5/ Terminal Agents: Claude Code & OpenCode\n\nAutonomous coding in your CLI.\n\n• Git-aware: creates branches, commits, PRs\n• Runs tests, lints, and builds autonomously\n• Self-corrects errors in agent loops\n\nhttps://github.com/anthropics/claude-code",
+        "image": "https://iili.io/nb2iK1R.png"
+      },
+      {
+        "text": "6/ v0 by Vercel: Rapid UI Generation\n\nGenerative UI for modern frontend stacks.\n\n• Produces clean React & Tailwind components\n• Iterative visual edits through chat\n• Direct copy-paste into codebases\n\nhttps://v0.dev",
+        "image": "https://iili.io/nb2i5rl.png"
+      },
+      {
+        "text": "7/ Bolt.new: Full-Stack in Browser\n\nIn-browser full-stack development.\n\n• Runs Node.js & Vite via WebContainers\n• Instant live preview with zero setup\n• Direct GitHub export & 1-click deploy\n\nhttps://bolt.new",
+        "image": "https://iili.io/nb2sz8B.png"
+      },
+      {
+        "text": "8/ Verification Loops: Prevent Code Rot\n\nFast AI output without tests creates broken code.\n\n• Run tests after every edit (Vitest, PyTest)\n• Regression checks with Playwright\n• Treat AI as a junior dev: always verify",
+        "image": "https://iili.io/nb2s89S.png"
+      },
+      {
+        "text": "9/ 5 Rules for Vibe Coding:\n\n1. Never commit without passing tests\n2. Keep .cursorrules or CLAUDE.md updated\n3. One task per prompt\n4. Review every diff before applying\n5. Delegate repetitive chores to CLI agents",
+        "image": "https://iili.io/nb2ssKx.png"
+      },
+      {
+        "text": "10/ 61.5% use AI to find products, but 55% reject autonomous buying. In tests, hidden text in listings tricked shopping bots 10/10 times.\n\nDelegation & Trust in Agentic Commerce:\nhttps://x.com/vedangvatsa/status/2115039235938144473"
+      },
+      {
+        "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
+      },
+      {
+        "text": "12/ My courses:\n\n• Vibe Coding: https://veda.ng/vibecoding\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• AI Automation: https://veda.ng/automation",
+        "image": "https://iili.io/nb2NqwN.png"
+      }
+    ]
+  },
+  {
+    "id": "ai-automation-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-09",
+    "scheduleTime": "17:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ You do not need a computer science degree to automate 80% of repetitive business operations.\n\n8 free courses, open-source frameworks, and architecture rules to build reliable AI automations 🧵👇",
+        "image": "https://iili.io/nb2smDF.png"
+      },
+      {
+        "text": "2/ AI Automation Course\n\nPractical guide on veda.ng.\n\n• Replace manual work with agent pipelines\n• Build reliable integrations without vendor lock-in\n• Case studies across ops, finance, marketing\n\nhttps://veda.ng/automation",
+        "image": "https://iili.io/nb2L2lR.png"
+      },
+      {
+        "text": "3/ n8n Academy: AI Workflows\n\nSelf-hosted automation with native AI nodes.\n\n• Visual graphs connecting LLM nodes\n• Multi-step data pipelines with webhooks\n• Docker self-hosting for full privacy\n\nhttps://academy.n8n.io",
+        "image": "https://iili.io/nb2p54n.png"
+      },
+      {
+        "text": "4/ Make.com: AI Automation Blueprints\n\nVisual automation platform for business ops.\n\n• Routes prompts to LLM APIs\n• Data transformation & webhook routing\n• Error handling & lead scoring\n\nhttps://www.make.com",
+        "image": "https://iili.io/nb2pX4e.png"
+      },
+      {
+        "text": "5/ LlamaParse: Document Intelligence\n\nDocument parsing engine for complex files.\n\n• Extracts structured tables from PDFs\n• Handles financial statements & legal filings\n• Clean markdown output for LLMs\n\nhttps://www.llamaindex.ai",
+        "image": "https://iili.io/nb2LuUl.png"
+      },
+      {
+        "text": "6/ Web Automation with Browser-Use\n\nAutomate repetitive web-based tasks.\n\n• Scrapes data behind logins & portals\n• Fills complex web forms autonomously\n• Vision-driven navigation with Playwright\n\nhttps://github.com/browser-use/browser-use",
+        "image": "https://iili.io/nb24Fql.png"
+      },
+      {
+        "text": "7/ LangChain Academy\n\nCourses on agent architectures.\n\n• Building LangGraph workflows\n• State management & checkpoints\n• Handling retries & human approvals\n\nhttps://academy.langchain.com",
+        "image": "https://iili.io/nb2LNzF.png"
+      },
+      {
+        "text": "8/ Activepieces: Open-Source Automation\n\nSelf-hosted automation engine.\n\n• Open-source Zapier alternative\n• Built-in AI tools (OpenAI, Anthropic)\n• Custom piece builder in TypeScript\n\nhttps://github.com/activepieces/activepieces",
+        "image": "https://iili.io/nb2L4eI.png"
+      },
+      {
+        "text": "9/ 4 Rules for Reliable Business Automations:\n\n1. Always set fallbacks for API errors\n2. Enforce structured JSON (never raw text)\n3. Never automate high-risk actions without approval\n4. Log all inputs, outputs, and token costs",
+        "image": "https://iili.io/nb2Qfrx.png"
+      },
+      {
+        "text": "10/ 10 Free courses to learn AI agents:\nhttps://x.com/hashtag_web3/status/2118330257568592049"
+      },
+      {
+        "text": "11/ Out of $13B in AI agents, 88% went to compute and finished apps while middleware tools get acquired in under 18 months:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
+      },
+      {
+        "text": "12/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
+      },
+      {
+        "text": "13/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding",
+        "image": "https://iili.io/nb2NqwN.png"
+      }
+    ]
+  },
+  {
+    "id": "university-ai-courses-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-10",
+    "scheduleTime": "01:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ You do not need a $60,000 tuition bill to learn AI from top researchers.\n\nThe best universities publish full lectures, assignments, and syllabi completely free.\n\n10 free university AI and deep learning courses 🧵👇",
+        "image": "https://iili.io/nb2Q63x.png"
+      },
+      {
+        "text": "2/ UC Berkeley CS294: LLM Agents\n\nGraduate course on autonomous agents.\n\n• Agent architectures & tool-use foundations\n• Multi-agent debate and collaboration\n• Memory, reasoning, and reflection loops\n\nhttps://llmagents-learning.org",
+        "image": "https://iili.io/nb2QbCg.png"
+      },
+      {
+        "text": "3/ Stanford CS229: Machine Learning (Andrew Ng)\n\nThe definitive machine learning foundation.\n\n• Supervised learning & linear models\n• Deep learning & neural architectures\n• Free lecture videos & assignments\n\nhttps://cs229.stanford.edu",
+        "image": "https://iili.io/nb2ZoFf.png"
+      },
+      {
+        "text": "4/ Stanford CS25: Transformers United\n\nSeminar on transformer architectures.\n\n• Attention mechanisms & innovations\n• Vision transformers, diffusion, audio\n• Free YouTube lecture recordings\n\nhttps://stanford-cs25.github.io",
+        "image": "https://iili.io/nb2ZYMu.png"
+      },
+      {
+        "text": "5/ MIT 6.S191: Intro to Deep Learning\n\nMIT's foundational deep learning course.\n\n• Neural networks, CNNs, transformers\n• Generative models & RL\n• Free code labs & lectures online\n\nhttps://introtodeeplearning.com",
+        "image": "https://iili.io/nb2ZUNI.png"
+      },
+      {
+        "text": "6/ Fast.ai: Deep Learning for Coders\n\nTop-down, code-first deep learning course.\n\n• Build models from day one in PyTorch\n• Computer vision, NLP, & tabular data\n• 100% free, pragmatic engineering focus\n\nhttps://course.fast.ai",
+        "image": "https://iili.io/nb2ZbNS.png"
+      },
+      {
+        "text": "7/ Harvard CS50 AI: Artificial Intelligence\n\nFoundations of modern AI using Python.\n\n• Graph search, optimization, game theory\n• Probability, Markov models, neural networks\n• Hands-on programming projects\n\nhttps://cs50.harvard.edu/ai",
+        "image": "https://iili.io/nb2txig.png"
+      },
+      {
+        "text": "8/ Stanford CS224N: NLP with Deep Learning\n\nThe gold standard for language models.\n\n• Word vectors, attention, transformers\n• Pre-training & fine-tuning (PEFT)\n• PyTorch assignments on Colab\n\nhttps://web.stanford.edu/class/cs224n",
+        "image": "https://iili.io/nb2tG0G.png"
+      },
+      {
+        "text": "9/ Carnegie Mellon 11-711: Advanced NLP\n\nDeep dive into modern NLP architectures.\n\n• Prompting, fine-tuning, and PEFT\n• Pre-training objectives and tokenization\n• Scaling laws and compute-optimal models\n\nhttps://phontron.com/class/anlp2024",
+        "image": "https://iili.io/nb2tvqu.png"
+      },
+      {
+        "text": "10/ Stanford CS330: Deep Multi-Task Learning\n\nChelsea Finn's course on adaptive AI.\n\n• Multi-task & transfer learning\n• Meta-learning (MAML) & few-shot adaptation\n• In-context learning mechanics in LLMs\n\nhttps://cs330.stanford.edu",
+        "image": "https://iili.io/nb2tp7R.png"
+      },
+      {
+        "text": "11/ UC Berkeley CS188: Intro to AI\n\nClassic foundational artificial intelligence.\n\n• Informed search algorithms (A*, heuristics)\n• Markov Decision Processes & RL\n• The famous Berkeley Pacman projects\n\nhttps://inst.eecs.berkeley.edu/~cs188",
+        "image": "https://iili.io/nb2DC74.png"
+      },
+      {
+        "text": "12/ Data from 5 Million AI papers: China leads publication volume, US leads LLM research, and India has grown 32x:\nhttps://x.com/227386316/status/2116096531337994712"
+      },
+      {
+        "text": "13/ 10 Free courses to learn AI agents:\nhttps://x.com/hashtag_web3/status/2118330257568592049"
+      },
+      {
+        "text": "14/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
+      },
+      {
+        "text": "15/ My courses:\n\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• AI Automation: https://veda.ng/automation\n• Vibe Coding: https://veda.ng/vibecoding",
+        "image": "https://iili.io/nb2NqwN.png"
+      }
+    ]
+  },
+  {
+    "id": "prompt-engineering-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-10",
+    "scheduleTime": "09:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Prompt engineering is no longer \"act as a marketer.\"\n\nWith frontier reasoning models, prompting is structured specification, test-driven validation, and system framing.\n\n8 guides, curricula, & production rules 🧵👇",
+        "image": "https://iili.io/nb2DaYx.png"
+      },
+      {
+        "text": "2/ Prompt Engineering Course\n\nA rigorous guide on veda.ng.\n\n• Chain-of-thought & structured reasoning\n• Enforcing strict JSON schemas & types\n• Defending against prompt injection attacks\n\nhttps://veda.ng/prompt",
+        "image": "https://iili.io/nb2Div4.png"
+      },
+      {
+        "text": "3/ Anthropic: Prompting Tutorial\n\nOfficial guide from Anthropic.\n\n• Clear vs. vague prompt structure\n• Using XML tags (<context>, <instructions>)\n• Chain-of-thought prompting for reasoning\n\nhttps://docs.anthropic.com",
+        "image": "https://iili.io/nb2pZjp.png"
+      },
+      {
+        "text": "4/ OpenAI: Prompting & Reasoning Guide\n\nOfficial prompt strategies for frontier LLMs.\n\n• Clear delimiters & instructions\n• Reference text to stop hallucination\n• Strict JSON schemas for outputs\n\nhttps://platform.openai.com/docs/guides/prompt-engineering",
+        "image": "https://iili.io/nb2yoFe.png"
+      },
+      {
+        "text": "5/ LearnPrompting.org\n\nOpen-source prompting curriculum.\n\n• From zero-shot to Directional Stimulus\n• ReAct prompting & tool-augmented reasoning\n• Adversarial defense & red-teaming\n\nhttps://learnprompting.org",
+        "image": "https://iili.io/nb2b93b.png"
+      },
+      {
+        "text": "6/ DSPy (Stanford NLP)\n\nProgramming foundation models with code.\n\n• Modules replace brittle prompt strings\n• Optimizes few-shot examples automatically\n• Compiles pipelines against quality metrics\n\nhttps://github.com/stanfordnlp/dspy",
+        "image": "https://iili.io/nb26jMx.png"
+      },
+      {
+        "text": "7/ DeepLearning.AI: Prompt Engineering\n\nAndrew Ng & Isa Fulford's course.\n\n• Clear vs. specific prompt instructions\n• Iterative prompt development workflows\n• Summarizing, inferring, and transforming data\n\nhttps://www.deeplearning.ai",
+        "image": "https://iili.io/nb2bVN2.png"
+      },
+      {
+        "text": "8/ Brex: Production Prompt Engineering\n\nBattle-tested guidelines for production LLMs.\n\n• Defend against prompt injection\n• Reliable JSON outputs in production\n• Automated evals & regression tests\n\nhttps://github.com/brexhq/prompt-engineering",
+        "image": "https://iili.io/nb2bSAQ.png"
+      },
+      {
+        "text": "9/ Microsoft: Prompt Engineering Guide\n\nEnterprise prompt engineering principles.\n\n• System message design & role framing\n• Few-shot examples and output constraints\n• Grounding prompts on retrieved context\n\nhttps://learn.microsoft.com",
+        "image": "https://iili.io/nb2btHv.png"
+      },
+      {
+        "text": "10/ 61.5% use AI to find products, but 55% reject autonomous buying. In tests, hidden text in listings tricked shopping bots 10/10 times.\n\nDelegation & Trust in Agentic Commerce:\nhttps://x.com/vedangvatsa/status/2115039235938144473"
+      },
+      {
+        "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
+      },
+      {
+        "text": "12/ My courses:\n\n• Prompt Engineering: https://veda.ng/prompt\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp",
+        "image": "https://iili.io/nb2NqwN.png"
       }
     ]
   }
