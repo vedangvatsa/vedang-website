@@ -2,8 +2,8 @@ name: Data-Viz Videos (Buffer + direct platforms)
 
 on:
   schedule:
-    # 09:00, 14:00, 20:00 IST (3 runs/day, one video per platform per run)
-    - cron: "30 3,8,14 * * *"
+    # 01:00, 09:00, 17:00 IST (3 runs/day, 8-hour gap between each, one video per platform per run)
+    - cron: "30 3,11,19 * * *"
     # Catch-up checks if a slot trigger is delayed/dropped. Queue logic still limits
     # publication to one video per platform per slot; GitHub cron is best-effort.
     - cron: "7,17,27,37,47,57 * * * *"

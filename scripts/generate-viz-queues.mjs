@@ -37,7 +37,7 @@ const CHART_DIR = args['chart-dir'];
 const VIDEOS_DIR = args['videos-dir'] || 'scripts/viz-assets/videos';
 const PREVIEWS_DIR = args['previews-dir'] || 'scripts/viz-assets/previews';
 const START = args.start || '2026-09-25';
-const SLOTS = (args.slots || '09:00,14:00,20:00').split(',');
+const SLOTS = (args.slots || '01:00,09:00,17:00').split(',');
 const OUTPUT_DIR = args['output-dir'] || __dirname;
 const NOTES_DIR = args['notes-dir'] || path.join(REPO_ROOT, 'public/viz-notes');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(START) || !Number.isFinite(Date.parse(START))) throw new Error('Invalid start date');

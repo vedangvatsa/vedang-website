@@ -38,6 +38,20 @@ test('catch-up gate waits for the slot, recovers a missed trigger and skips comp
   assert.equal(needsBufferWork(posts, new Date('2026-09-25T08:30:00Z')), true);
 });
 
+test('cooldown enforces minimum 7-8h gap between consecutive publications', () => {
+  const posts = [
+    { ...entry('one'), posted: true, attemptedSlot: '2026-09-25T09:00', attemptedAt: '2026-09-25T03:30:00Z' },
+    entry('two', '17:00'),
+  ];
+  // 3 hours after first post (06:30Z = 12:00 IST): in cooldown, must return false / no post
+  assert.equal(needsBufferWork(posts, new Date('2026-09-25T06:30:00Z')), false);
+  // 6 hours after first post (09:30Z = 15:00 IST): still in 7h cooldown, must return false
+  assert.equal(needsBufferWork(posts, new Date('2026-09-25T09:30:00Z')), false);
+  // 8 hours after first post (11:30Z = 17:00 IST): slot 17:00 active, cooldown expired, post is due!
+  assert.equal(needsBufferWork(posts, new Date('2026-09-25T11:30:00Z')), true);
+  assert.equal(selectDue(posts, new Date('2026-09-25T11:30:00Z')).post?.id, 'two');
+});
+
 test('catch-up gate reconciles submitted posts without creating a second post', () => {
   const posts = [{ ...entry('one'), state: 'submitted' as const, bufferPostId: 'remote' }];
   assert.equal(needsBufferWork(posts, new Date('2026-09-25T05:00:00Z')), true);
@@ -204,7 +218,7 @@ test('second batch covers all eleven platforms with 88 entries and two editorial
     assert.equal(posts.length, 88);
     assert.equal(posts[0].slug, 'coffee');
     assert.ok(posts.every(p => !Object.hasOwn(manifest.holds, String(p.slug))));
-    assert.ok(posts.every(p => ['09:00', '14:00', '20:00'].includes(p.scheduleTime)));
+    assert.ok(posts.every(p => ['01:00', '09:00', '17:00', '14:00', '20:00'].includes(p.scheduleTime)));
     const current = posts.map(p => [p.slug, p.scheduleDate, p.scheduleTime]);
     if (schedule) assert.deepEqual(current, schedule);
     else schedule = current;
