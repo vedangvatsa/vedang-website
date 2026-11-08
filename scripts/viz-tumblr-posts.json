@@ -3291,8 +3291,8 @@
     "text": "How household spending per person changed.\n\n2002-2024. Household and nonprofit consumption per person, in thousands of constant 2015 US dollars.",
     "scheduleDate": "2026-11-05",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-08T08:11:07.230Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/64-r2.txt",
     "captionStyle": "concise-v2",
@@ -3307,7 +3307,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-08T08:11:03.185Z",
+    "attemptedSlot": "2026-11-08T09:00",
+    "publishedText": "How household spending per person changed.\n\n2002-2024. Household and nonprofit consumption per person, in thousands of constant 2015 US dollars.",
+    "platformPostId": "832700905823617024",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/832700905823617024"
   },
   {
     "id": "viz-b2-tumblr-119",

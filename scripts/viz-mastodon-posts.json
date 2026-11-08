@@ -3100,8 +3100,8 @@
     "text": "How household spending per person changed.\n\n2002-2024. Household and nonprofit consumption per person, in thousands of constant 2015 US dollars.",
     "scheduleDate": "2026-11-05",
     "scheduleTime": "20:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-08T08:11:15.538Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/64-r2.txt",
     "captionStyle": "concise-v2",
@@ -3113,7 +3113,13 @@
     "sourceCredit": "World Bank, national statistics and central banks",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-08T08:11:07.234Z",
+    "attemptedSlot": "2026-11-08T09:00",
+    "publishedText": "How household spending per person changed.\n\n2002-2024. Household and nonprofit consumption per person, in thousands of constant 2015 US dollars.",
+    "postUrl": "https://hachyderm.io/@vedang/117579807154886225",
+    "platformPostId": "117579807154886225"
   },
   {
     "id": "viz-b2-mastodon-119",

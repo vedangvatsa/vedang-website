@@ -3140,8 +3140,8 @@
     "text": "How government consumption changed across economies.\n\n2000-2024. Government final consumption expenditure as a share of GDP.",
     "scheduleDate": "2026-11-04",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-08T08:09:34.251Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/63-r2.txt",
     "captionStyle": "concise-v2",
@@ -3152,7 +3152,14 @@
     "altText": "Govt. spending, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "publishedText": "How government consumption changed across economies.\n\n2000-2024. Government final consumption expenditure as a share of GDP.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-08T09:00",
+    "attemptedAt": "2026-11-08T08:08:36.917Z",
+    "bufferPostId": "6af02e059214322f683e16e7",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DfeSt5rlcDd/"
   },
   {
     "id": "viz-b2-ig-115",
