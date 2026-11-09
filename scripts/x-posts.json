@@ -1500,7 +1500,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-09",
     "scheduleTime": "01:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Over 300 AI agent frameworks launched this year. Most were brittle demos that fail in production.\n\nIf you are building autonomous agents, here are the top 10 open-source frameworks worth using 🧵👇",
@@ -1560,7 +1560,9 @@
         "image": "https://iili.io/nbTjh0J.png"
       }
     ],
-    "error": "Account is not allowed to perform this action"
+    "postedAt": "2026-11-09T07:43:18.426Z",
+    "tweetId": "2119697297692827750",
+    "bufferPostId": "6af1798fe44ddbb57c3e8027"
   },
   {
     "id": "vibe-coding-thread",
