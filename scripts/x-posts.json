@@ -1569,7 +1569,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-10",
     "scheduleTime": "01:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Coding shifted from typing boilerplate syntax to architecture, context hygiene, and reviewing code.\n\n8 essential tools, frameworks, and engineering rules to build reliable software with AI 🧵👇",
@@ -1617,7 +1617,9 @@
         "text": "12/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
         "image": "https://iili.io/nbTjh0J.png"
       }
-    ]
+    ],
+    "postedAt": "2026-11-10T02:25:11.327Z",
+    "tweetId": "6af28080e261c09acc94c1ad"
   },
   {
     "id": "ai-automation-thread",
