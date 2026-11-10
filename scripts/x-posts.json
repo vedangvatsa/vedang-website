@@ -1626,7 +1626,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-10",
     "scheduleTime": "09:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ You do not need a computer science degree to automate 80% of repetitive business operations.\n\n8 free courses, open-source frameworks, and architecture rules to build reliable AI automations 🧵👇",
@@ -1677,7 +1677,9 @@
         "text": "13/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
         "image": "https://iili.io/nbTjh0J.png"
       }
-    ]
+    ],
+    "postedAt": "2026-11-10T11:44:06.563Z",
+    "tweetId": "6af3037ecbbac94e1ea38260"
   },
   {
     "id": "university-ai-courses-thread",
