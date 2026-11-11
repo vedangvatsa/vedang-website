@@ -86,14 +86,15 @@
       }
     ],
     "posted": false,
-    "type": "thread"
+    "type": "thread",
+    "error": "Pre-flight failed: Broken URL(s): https://doi.org/10.5281/zenodo.24121071 (HTTP 500)"
   },
   {
     "id": "lit-thread",
     "type": "thread",
     "scheduleDate": "2026-03-25",
     "scheduleTime": "12:57",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
@@ -120,7 +121,9 @@
         "image": "scripts/thread-assets/lit_5.png",
         "posted": false
       }
-    ]
+    ],
+    "postedAt": "2026-11-11T14:25:57.056Z",
+    "tweetId": "6af47af200263add00a78af3"
   },
   {
     "id": "agentic-commerce-thread",
