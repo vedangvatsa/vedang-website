@@ -2354,5 +2354,82 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
+  },
+  {
+    "id": "ai-agent-readiness-100k-thread",
+    "scheduleDate": "2026-11-11",
+    "scheduleTime": "19:30",
+    "tweets": [
+      {
+        "text": "Everyone talks about AI agents taking over the web.\n\nI audited 100,000 top domains to measure how ready the internet actually is for autonomous agents 🧵👇",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/01_paper_header.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "Overall AI readiness across the web is only 18.23/100.\n\n85.6% of websites score under 25, failing even basic machine discovery and execution.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/02_table2_overview.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "llms.txt adoption sits at a negligible 0.58%.\n\nOver 99% of sites offer zero curated markdown or guidance for LLM context windows.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/03_llmstxt_table.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "Public OpenAPI schemas exist on only 0.44% of domains.\n\nAutonomous agents cannot discover endpoints or call backend tools without manual human integration.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/04_openapi_table.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "Model Context Protocol (MCP) server endpoints exist on just 0.08% of sites.\n\nStandardized agent-to-tool connectivity remains virtually nonexistent on the live web.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/05_mcp_table.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "99.07% of domains have zero structured machine-readable APIs or manifests.\n\nThe modern internet remains completely optimized for human eyeballs, not agent runtimes.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/06_figure1_outcomes.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "Agent-readiness does not correlate with traffic rank.\n\nTop 1k domains average 18.49/100, while ranks 50k-100k average 18.17/100. Everyone is unprepared.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/07_table6_bounds.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "Web architecture is polarizing into two extremes.\n\nSites either serve purely human-facing HTML, or build complete machine APIs. Almost no middle tier exists.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/08_figure3_cooccurrence.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "Check your website's AI Agent Readiness score and areas for improvement:\n\nhttps://veda.ng/scan",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_veda_ng_scan.png"
+        ],
+        "posted": false
+      },
+      {
+        "text": "Read the full paper here:\n\nhttps://doi.org/10.5281/zenodo.24121071",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_conclusion.png"
+        ],
+        "posted": false
+      }
+    ]
   }
 ]
