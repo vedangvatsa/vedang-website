@@ -1,32 +1,123 @@
 [
   {
+    "id": "ai-agent-readiness-100k-thread",
+    "scheduleDate": "2026-11-11",
+    "scheduleTime": "00:00",
+    "tweets": [
+      {
+        "text": "Everyone talks about AI agents taking over the web.\n\nI audited 100,000 top domains to measure how ready the internet actually is for autonomous agents 🧵👇",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/01_paper_header.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/01_paper_header.png"
+      },
+      {
+        "text": "Overall AI readiness across the web is only 18.23/100.\n\n85.6% of websites score under 25, failing even basic machine discovery and execution.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/02_table2_overview.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/02_table2_overview.png"
+      },
+      {
+        "text": "llms.txt adoption sits at a negligible 0.58%.\n\nOver 99% of sites offer zero curated markdown or guidance for LLM context windows.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/03_llmstxt_table.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/03_llmstxt_table.png"
+      },
+      {
+        "text": "Public OpenAPI schemas exist on only 0.44% of domains.\n\nAutonomous agents cannot discover endpoints or call backend tools without manual human integration.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/04_openapi_table.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/04_openapi_table.png"
+      },
+      {
+        "text": "Model Context Protocol (MCP) server endpoints exist on just 0.08% of sites.\n\nStandardized agent-to-tool connectivity remains virtually nonexistent on the live web.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/05_mcp_table.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/05_mcp_table.png"
+      },
+      {
+        "text": "99.07% of domains have zero structured machine-readable APIs or manifests.\n\nThe modern internet remains completely optimized for human eyeballs, not agent runtimes.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/06_figure1_outcomes.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/06_figure1_outcomes.png"
+      },
+      {
+        "text": "Agent-readiness does not correlate with traffic rank.\n\nTop 1k domains average 18.49/100, while ranks 50k-100k average 18.17/100. Everyone is unprepared.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/07_table6_bounds.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/07_table6_bounds.png"
+      },
+      {
+        "text": "Web architecture is polarizing into two extremes.\n\nSites either serve purely human-facing HTML, or build complete machine APIs. Almost no middle tier exists.",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/08_figure3_cooccurrence.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/08_figure3_cooccurrence.png"
+      },
+      {
+        "text": "Check your website's AI Agent Readiness score and areas for improvement:\n\nhttps://veda.ng/scan",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_veda_ng_scan.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_veda_ng_scan.png"
+      },
+      {
+        "text": "Read the full paper here:\n\nhttps://doi.org/10.5281/zenodo.24121071",
+        "images": [
+          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_conclusion.png"
+        ],
+        "posted": false,
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_conclusion.png"
+      }
+    ],
+    "posted": false
+  },
+  {
     "id": "lit-thread",
     "type": "thread",
     "scheduleDate": "2026-03-25",
     "scheduleTime": "12:57",
-    "posted": true,
-    "postedAt": "2026-03-25T08:32:13.000Z",
-    "tweetId": "2036722749054353704",
+    "posted": false,
     "tweets": [
       {
         "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
-        "image": "scripts/thread-assets/lit_1.png"
+        "image": "scripts/thread-assets/lit_1.png",
+        "posted": false
       },
       {
         "text": "Nobody you know speaks like this in real life.\nYet somehow, on LinkedIn, it's the only language.\n\nSo I asked: what if we just... admitted that?",
-        "image": "scripts/thread-assets/lit_2.png"
+        "image": "scripts/thread-assets/lit_2.png",
+        "posted": false
       },
       {
         "text": "My personal favourite.\n\nYou took a nap. You are not optimising anything. You were tired.\nLinkedIn disagrees.",
-        "image": "scripts/thread-assets/lit_3.png"
+        "image": "scripts/thread-assets/lit_3.png",
+        "posted": false
       },
       {
         "text": "The product launch one broke me.\n\n\"Had an intimate, high-signal gathering.\" Zero people showed up. The translator felt nothing.",
-        "image": "scripts/thread-assets/lit_4.png"
+        "image": "scripts/thread-assets/lit_4.png",
+        "posted": false
       },
       {
         "text": "I got arrested for fraud.\n\"Thrilled to announce I'm starting a new chapter.\"\n\nAt some point the platform became a parody of itself. I just made it official.\n\nTry it: veda.ng/lit",
-        "image": "scripts/thread-assets/lit_5.png"
+        "image": "scripts/thread-assets/lit_5.png",
+        "posted": false
       }
     ]
   },
@@ -1690,60 +1781,75 @@
     "tweets": [
       {
         "text": "1/ You do not need a $60,000 tuition bill to learn AI from top researchers.\n\nThe best universities publish full lectures, assignments, and syllabi completely free.\n\n10 free university AI and deep learning courses 🧵👇",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_01_cover.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_01_cover.png",
+        "posted": false
       },
       {
         "text": "2/ UC Berkeley CS294: LLM Agents\n\nGraduate course on autonomous agents.\n\n• Agent architectures & tool-use foundations\n• Multi-agent debate and collaboration\n• Memory, reasoning, and reflection loops\n\nhttps://llmagents-learning.org",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_02_berkeley.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_02_berkeley.png",
+        "posted": false
       },
       {
         "text": "3/ Stanford CS229: Machine Learning (Andrew Ng)\n\nThe definitive machine learning foundation.\n\n• Supervised learning & linear models\n• Deep learning & neural architectures\n• Free lecture videos & assignments\n\nhttps://cs229.stanford.edu",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_03_stanford_cs229.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_03_stanford_cs229.png",
+        "posted": false
       },
       {
         "text": "4/ Stanford CS25: Transformers United\n\nSeminar on transformer architectures.\n\n• Attention mechanisms & innovations\n• Vision transformers, diffusion, audio\n• Free YouTube lecture recordings\n\nhttps://web.stanford.edu/class/cs25/",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_04_stanford_cs25.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_04_stanford_cs25.png",
+        "posted": false
       },
       {
         "text": "5/ MIT 6.S191: Intro to Deep Learning\n\nMIT's foundational deep learning course.\n\n• Neural networks, CNNs, transformers\n• Generative models & RL\n• Free code labs & lectures online\n\nhttps://introtodeeplearning.com",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_05_mit_6s191.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_05_mit_6s191.png",
+        "posted": false
       },
       {
         "text": "6/ Fast.ai: Deep Learning for Coders\n\nTop-down, code-first deep learning course.\n\n• Build models from day one in PyTorch\n• Computer vision, NLP, & tabular data\n• 100% free, pragmatic engineering focus\n\nhttps://course.fast.ai",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_06_fastai.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_06_fastai.png",
+        "posted": false
       },
       {
         "text": "7/ Harvard CS50 AI: Artificial Intelligence\n\nFoundations of modern AI using Python.\n\n• Graph search, optimization, game theory\n• Probability, Markov models, neural networks\n• Hands-on programming projects\n\nhttps://cs50.harvard.edu/ai",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_07_harvard_cs50.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_07_harvard_cs50.png",
+        "posted": false
       },
       {
         "text": "8/ Stanford CS224N: NLP with Deep Learning\n\nThe gold standard for language models.\n\n• Word vectors, attention, transformers\n• Pre-training & fine-tuning (PEFT)\n• PyTorch assignments on Colab\n\nhttps://web.stanford.edu/class/cs224n",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_08_stanford_cs224n.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_08_stanford_cs224n.png",
+        "posted": false
       },
       {
         "text": "9/ Carnegie Mellon 11-711: Advanced NLP\n\nDeep dive into modern NLP architectures.\n\n• Prompting, fine-tuning, and PEFT\n• Pre-training objectives and tokenization\n• Scaling laws and compute-optimal models\n\nhttps://phontron.com/class/anlp2024",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_09_cmu_11711.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_09_cmu_11711.png",
+        "posted": false
       },
       {
         "text": "10/ Stanford CS330: Deep Multi-Task Learning\n\nChelsea Finn's course on adaptive AI.\n\n• Multi-task & transfer learning\n• Meta-learning (MAML) & few-shot adaptation\n• In-context learning mechanics in LLMs\n\nhttps://cs330.stanford.edu",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_10_stanford_cs330.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_10_stanford_cs330.png",
+        "posted": false
       },
       {
         "text": "11/ UC Berkeley CS188: Intro to AI\n\nClassic foundational artificial intelligence.\n\n• Informed search algorithms (A*, heuristics)\n• Markov Decision Processes & RL\n• The famous Berkeley Pacman projects\n\nhttps://inst.eecs.berkeley.edu/~cs188",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_11_berkeley_cs188.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_11_berkeley_cs188.png",
+        "posted": false
       },
       {
-        "text": "12/ Data from 5 Million AI papers: China leads publication volume, US leads LLM research, and India has grown 32x:\nhttps://x.com/227386316/status/2116096531337994712"
+        "text": "12/ Data from 5 Million AI papers: China leads publication volume, US leads LLM research, and India has grown 32x:\nhttps://x.com/227386316/status/2116096531337994712",
+        "posted": false
       },
       {
-        "text": "13/ 10 Free courses to learn AI agents:\nhttps://x.com/hashtag_web3/status/2118330257568592049"
+        "text": "13/ 10 Free courses to learn AI agents:\nhttps://x.com/hashtag_web3/status/2118330257568592049",
+        "posted": false
       },
       {
-        "text": "14/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
+        "text": "14/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai",
+        "posted": false
       },
       {
         "text": "15/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png",
+        "posted": false
       }
     ],
     "postedAt": "2026-11-11T13:57:36.730Z",
@@ -2354,83 +2460,6 @@
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
-      }
-    ]
-  },
-  {
-    "id": "ai-agent-readiness-100k-thread",
-    "scheduleDate": "2026-11-11",
-    "scheduleTime": "19:30",
-    "tweets": [
-      {
-        "text": "Everyone talks about AI agents taking over the web.\n\nI audited 100,000 top domains to measure how ready the internet actually is for autonomous agents 🧵👇",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/01_paper_header.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "Overall AI readiness across the web is only 18.23/100.\n\n85.6% of websites score under 25, failing even basic machine discovery and execution.",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/02_table2_overview.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "llms.txt adoption sits at a negligible 0.58%.\n\nOver 99% of sites offer zero curated markdown or guidance for LLM context windows.",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/03_llmstxt_table.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "Public OpenAPI schemas exist on only 0.44% of domains.\n\nAutonomous agents cannot discover endpoints or call backend tools without manual human integration.",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/04_openapi_table.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "Model Context Protocol (MCP) server endpoints exist on just 0.08% of sites.\n\nStandardized agent-to-tool connectivity remains virtually nonexistent on the live web.",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/05_mcp_table.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "99.07% of domains have zero structured machine-readable APIs or manifests.\n\nThe modern internet remains completely optimized for human eyeballs, not agent runtimes.",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/06_figure1_outcomes.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "Agent-readiness does not correlate with traffic rank.\n\nTop 1k domains average 18.49/100, while ranks 50k-100k average 18.17/100. Everyone is unprepared.",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/07_table6_bounds.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "Web architecture is polarizing into two extremes.\n\nSites either serve purely human-facing HTML, or build complete machine APIs. Almost no middle tier exists.",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/08_figure3_cooccurrence.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "Check your website's AI Agent Readiness score and areas for improvement:\n\nhttps://veda.ng/scan",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_veda_ng_scan.png"
-        ],
-        "posted": false
-      },
-      {
-        "text": "Read the full paper here:\n\nhttps://doi.org/10.5281/zenodo.24121071",
-        "images": [
-          "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_conclusion.png"
-        ],
-        "posted": false
       }
     ]
   }
