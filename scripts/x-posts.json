@@ -1684,53 +1684,53 @@
   {
     "id": "university-ai-courses-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-10",
+    "scheduleDate": "2026-11-11",
     "scheduleTime": "17:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ You do not need a $60,000 tuition bill to learn AI from top researchers.\n\nThe best universities publish full lectures, assignments, and syllabi completely free.\n\n10 free university AI and deep learning courses 🧵👇",
-        "image": "https://iili.io/nb2Q63x.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_01_cover.png"
       },
       {
         "text": "2/ UC Berkeley CS294: LLM Agents\n\nGraduate course on autonomous agents.\n\n• Agent architectures & tool-use foundations\n• Multi-agent debate and collaboration\n• Memory, reasoning, and reflection loops\n\nhttps://llmagents-learning.org",
-        "image": "https://iili.io/nb2QbCg.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_02_berkeley.png"
       },
       {
         "text": "3/ Stanford CS229: Machine Learning (Andrew Ng)\n\nThe definitive machine learning foundation.\n\n• Supervised learning & linear models\n• Deep learning & neural architectures\n• Free lecture videos & assignments\n\nhttps://cs229.stanford.edu",
-        "image": "https://iili.io/nb2ZoFf.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_03_stanford_cs229.png"
       },
       {
         "text": "4/ Stanford CS25: Transformers United\n\nSeminar on transformer architectures.\n\n• Attention mechanisms & innovations\n• Vision transformers, diffusion, audio\n• Free YouTube lecture recordings\n\nhttps://web.stanford.edu/class/cs25/",
-        "image": "https://iili.io/nb2ZYMu.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_04_stanford_cs25.png"
       },
       {
         "text": "5/ MIT 6.S191: Intro to Deep Learning\n\nMIT's foundational deep learning course.\n\n• Neural networks, CNNs, transformers\n• Generative models & RL\n• Free code labs & lectures online\n\nhttps://introtodeeplearning.com",
-        "image": "https://iili.io/nb2ZUNI.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_05_mit_6s191.png"
       },
       {
         "text": "6/ Fast.ai: Deep Learning for Coders\n\nTop-down, code-first deep learning course.\n\n• Build models from day one in PyTorch\n• Computer vision, NLP, & tabular data\n• 100% free, pragmatic engineering focus\n\nhttps://course.fast.ai",
-        "image": "https://iili.io/nb2ZbNS.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_06_fastai.png"
       },
       {
         "text": "7/ Harvard CS50 AI: Artificial Intelligence\n\nFoundations of modern AI using Python.\n\n• Graph search, optimization, game theory\n• Probability, Markov models, neural networks\n• Hands-on programming projects\n\nhttps://cs50.harvard.edu/ai",
-        "image": "https://iili.io/nb2txig.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_07_harvard_cs50.png"
       },
       {
         "text": "8/ Stanford CS224N: NLP with Deep Learning\n\nThe gold standard for language models.\n\n• Word vectors, attention, transformers\n• Pre-training & fine-tuning (PEFT)\n• PyTorch assignments on Colab\n\nhttps://web.stanford.edu/class/cs224n",
-        "image": "https://iili.io/nb2tG0G.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_08_stanford_cs224n.png"
       },
       {
         "text": "9/ Carnegie Mellon 11-711: Advanced NLP\n\nDeep dive into modern NLP architectures.\n\n• Prompting, fine-tuning, and PEFT\n• Pre-training objectives and tokenization\n• Scaling laws and compute-optimal models\n\nhttps://phontron.com/class/anlp2024",
-        "image": "https://iili.io/nb2tvqu.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_09_cmu_11711.png"
       },
       {
         "text": "10/ Stanford CS330: Deep Multi-Task Learning\n\nChelsea Finn's course on adaptive AI.\n\n• Multi-task & transfer learning\n• Meta-learning (MAML) & few-shot adaptation\n• In-context learning mechanics in LLMs\n\nhttps://cs330.stanford.edu",
-        "image": "https://iili.io/nb2tp7R.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_10_stanford_cs330.png"
       },
       {
         "text": "11/ UC Berkeley CS188: Intro to AI\n\nClassic foundational artificial intelligence.\n\n• Informed search algorithms (A*, heuristics)\n• Markov Decision Processes & RL\n• The famous Berkeley Pacman projects\n\nhttps://inst.eecs.berkeley.edu/~cs188",
-        "image": "https://iili.io/nb2DC74.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_11_berkeley_cs188.png"
       },
       {
         "text": "12/ Data from 5 Million AI papers: China leads publication volume, US leads LLM research, and India has grown 32x:\nhttps://x.com/227386316/status/2116096531337994712"
@@ -1743,53 +1743,52 @@
       },
       {
         "text": "15/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
-    ],
-    "error": "Invalid post: Image could not be read from its URL., Image could not be read from its URL., Image could not be read from its URL., Image could not be read from its URL., Image could not be read from its URL., Image could not be read from its URL."
+    ]
   },
   {
     "id": "prompt-engineering-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-11",
+    "scheduleDate": "2026-11-12",
     "scheduleTime": "01:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Prompt engineering is no longer \"act as a marketer.\"\n\nWith frontier reasoning models, prompting is structured specification, test-driven validation, and system framing.\n\n8 guides, curricula, & production rules 🧵👇",
-        "image": "https://iili.io/nb2DaYx.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_01_cover.png"
       },
       {
         "text": "2/ Prompt Engineering Course\n\nA rigorous guide on veda.ng.\n\n• Chain-of-thought & structured reasoning\n• Enforcing strict JSON schemas & types\n• Defending against prompt injection attacks\n\nhttps://veda.ng/prompt",
-        "image": "https://iili.io/nb2Div4.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_02_prompt_course.png"
       },
       {
         "text": "3/ Anthropic: Prompting Tutorial\n\nOfficial guide from Anthropic.\n\n• Clear vs. vague prompt structure\n• Using XML tags (<context>, <instructions>)\n• Chain-of-thought prompting for reasoning\n\nhttps://docs.anthropic.com",
-        "image": "https://iili.io/nb2pZjp.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_03_anthropic_prompting.png"
       },
       {
         "text": "4/ OpenAI: Prompting & Reasoning Guide\n\nOfficial prompt strategies for frontier LLMs.\n\n• Clear delimiters & instructions\n• Reference text to stop hallucination\n• Strict JSON schemas for outputs\n\nhttps://platform.openai.com/docs/guides/prompt-engineering",
-        "image": "https://iili.io/nb2yoFe.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_04_openai_prompting.png"
       },
       {
         "text": "5/ LearnPrompting.org\n\nOpen-source prompting curriculum.\n\n• From zero-shot to Directional Stimulus\n• ReAct prompting & tool-augmented reasoning\n• Adversarial defense & red-teaming\n\nhttps://learnprompting.org",
-        "image": "https://iili.io/nb2b93b.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_05_learnprompting.png"
       },
       {
         "text": "6/ DSPy (Stanford NLP)\n\nProgramming foundation models with code.\n\n• Modules replace brittle prompt strings\n• Optimizes few-shot examples automatically\n• Compiles pipelines against quality metrics\n\nhttps://github.com/stanfordnlp/dspy",
-        "image": "https://iili.io/nb26jMx.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_06_dspy.png"
       },
       {
         "text": "7/ DeepLearning.AI: Prompt Engineering\n\nAndrew Ng & Isa Fulford's course.\n\n• Clear vs. specific prompt instructions\n• Iterative prompt development workflows\n• Summarizing, inferring, and transforming data\n\nhttps://www.deeplearning.ai",
-        "image": "https://iili.io/nb2bVN2.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_07_deeplearning_ai.png"
       },
       {
         "text": "8/ Brex: Production Prompt Engineering\n\nBattle-tested guidelines for production LLMs.\n\n• Defend against prompt injection\n• Reliable JSON outputs in production\n• Automated evals & regression tests\n\nhttps://github.com/brexhq/prompt-engineering",
-        "image": "https://iili.io/nb2bSAQ.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_08_brex_guide.png"
       },
       {
         "text": "9/ Microsoft: Prompt Engineering Guide\n\nEnterprise prompt engineering principles.\n\n• System message design & role framing\n• Few-shot examples and output constraints\n• Grounding prompts on retrieved context\n\nhttps://learn.microsoft.com",
-        "image": "https://iili.io/nb2btHv.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_09_microsoft_guide.png"
       },
       {
         "text": "10/ 61.5% use AI to find products, but 55% reject autonomous buying. In tests, hidden text in listings tricked shopping bots 10/10 times.\n\nDelegation & Trust in Agentic Commerce:\nhttps://x.com/vedangvatsa/status/2115039235938144473"
@@ -1799,52 +1798,52 @@
       },
       {
         "text": "12/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "local-ai-models-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-11",
+    "scheduleDate": "2026-11-12",
     "scheduleTime": "09:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Open-weights models now run completely offline on consumer hardware with zero API fees.\n\n8 essential tools & runtimes to run local AI 🧵👇",
-        "image": "https://iili.io/nbTvtzQ.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_01_cover.png"
       },
       {
         "text": "2/ Ollama\n\nThe simplest way to run open LLMs locally.\n\n• 1-command install for macOS, Linux, Windows\n• Pulls and runs Llama, Mistral, Qwen models\n• Native OpenAI-compatible REST API\n\nhttps://ollama.com",
-        "image": "https://iili.io/nbT83mv.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_02_ollama.png"
       },
       {
         "text": "3/ LM Studio\n\nDesktop GUI for running open LLMs locally.\n\n• Discover and run Hugging Face models\n• GPU acceleration for Apple Silicon and CUDA\n• Local server with OpenAI endpoint format\n\nhttps://lmstudio.ai",
-        "image": "https://iili.io/nbT8RI4.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_03_lmstudio.png"
       },
       {
         "text": "4/ vLLM\n\nHigh-throughput, low-latency LLM serving engine.\n\n• PagedAttention manages KV cache memory\n• Continuous batching for high concurrency\n• The industry standard for self-hosted LLM clusters\n\nhttps://github.com/vllm-project/vllm",
-        "image": "https://iili.io/nbT812e.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_04_vllm.png"
       },
       {
         "text": "5/ llama.cpp\n\nPure C/C++ inference engine for local hardware.\n\n• Minimal footprint with zero dependencies\n• Optimized GGUF quantization (4-bit, 8-bit)\n• Blazing CPU and GPU inference across devices\n\nhttps://github.com/ggerganov/llama.cpp",
-        "image": "https://iili.io/nbT8hQV.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_05_llamacpp.png"
       },
       {
         "text": "6/ Open WebUI\n\nSelf-hosted, user-friendly chat interface for LLMs.\n\n• Full-featured ChatGPT clone running locally\n• Built-in RAG and document upload support\n• Connects directly to Ollama and OpenAI APIs\n\nhttps://github.com/open-webui/open-webui",
-        "image": "https://iili.io/nbT8PCN.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_06_openwebui.png"
       },
       {
         "text": "7/ Jan\n\nOpen-source desktop AI client running 100% offline.\n\n• Clean native desktop client for macOS & Windows\n• 100% offline privacy with zero telemetry\n• Built-in model hub and hardware monitoring\n\nhttps://jan.ai",
-        "image": "https://iili.io/nbTS3F9.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_07_jan.png"
       },
       {
         "text": "8/ Hugging Face TGI\n\nProduction engine for deploying open LLMs.\n\n• Tensor parallelism for multi-GPU serving\n• Token streaming via Server-Sent Events\n• Production metrics and health checks\n\nhttps://github.com/huggingface/text-generation-inference",
-        "image": "https://iili.io/nbTSzMB.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_08_tgi.png"
       },
       {
         "text": "9/ LocalAI\n\nFree, open-source alternative to OpenAI APIs.\n\n• Drop-in replacement for OpenAI endpoints\n• Runs text, audio, image generation, and embeddings\n• Zero GPU required: fast CPU inference support\n\nhttps://github.com/mudler/LocalAI",
-        "image": "https://iili.io/nbTS0np.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_09_localai.png"
       },
       {
         "text": "10/ Out of $13B in AI agents, 88% went to compute and finished apps while middleware tools get acquired in under 18 months:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
@@ -1854,52 +1853,52 @@
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "ai-code-editors-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-11",
+    "scheduleDate": "2026-11-12",
     "scheduleTime": "17:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ AI coding tools evolved from tab-autocomplete into full autonomous engineering agents.\n\n8 modern AI code editors & developer tools 🧵👇",
-        "image": "https://iili.io/nbTSgSe.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_01_cover.png"
       },
       {
         "text": "2/ Cursor\n\nThe standard for AI-assisted software engineering.\n\n• .cursorrules: repo-specific coding rules\n• Composer: multi-file generation & edits\n• MCP integration for live DB & terminal context\n\nhttps://cursor.com",
-        "image": "https://iili.io/nbTSDKP.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_02_cursor.png"
       },
       {
         "text": "3/ Windsurf\n\nContext-driven IDE by Codeium.\n\n• Cascade: agent tracking multi-turn edits\n• Supercomplete: multi-line predictive changes\n• Real-time terminal execution & error fixes\n\nhttps://codeium.com/windsurf",
-        "image": "https://iili.io/nbTUFiN.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_03_windsurf.png"
       },
       {
         "text": "4/ Claude Code\n\nAutonomous command-line coding agent from Anthropic.\n\n• Direct CLI access to git, linter, tests\n• Multi-file codebase refactoring loops\n• Self-corrects errors in agent cycles\n\nhttps://github.com/anthropics/claude-code",
-        "image": "https://iili.io/nbTU0Ob.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_04_claude_code.png"
       },
       {
         "text": "5/ Aider\n\nTerminal-based AI pair programming tool.\n\n• Auto-commits changes with clean git messages\n• Uses repository map for deep contextual awareness\n• Works with any LLM via API or local models\n\nhttps://github.com/paul-gauthier/aider",
-        "image": "https://iili.io/nbTU41I.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_05_aider.png"
       },
       {
         "text": "6/ Continue.dev\n\nOpen-source AI assistant for VS Code & JetBrains.\n\n• Autocomplete and chat in your editor\n• Connects to local models or cloud APIs\n• Zero vendor lock-in and full privacy\n\nhttps://continue.dev",
-        "image": "https://iili.io/nbTgJ29.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_06_continue.png"
       },
       {
         "text": "7/ OpenCode\n\nOpen-source terminal-based AI coding assistant.\n\n• Interactive terminal interface for development\n• Multi-file editing and code generation\n• Works with both local runtimes and frontier APIs\n\nhttps://github.com/opencode-ai/opencode",
-        "image": "https://iili.io/nbTgz21.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_07_opencode.png"
       },
       {
         "text": "8/ Zed AI\n\nHigh-performance, GPU-accelerated code editor.\n\n• Built in Rust for instant load times & typing\n• Native assistant panel with model routing\n• Inline transformations and completions\n\nhttps://zed.dev",
-        "image": "https://iili.io/nbTgl4I.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_08_zed.png"
       },
       {
         "text": "9/ Void Editor\n\nOpen-source, privacy-first Cursor alternative.\n\n• Fork of VS Code with native AI integration\n• Full control over model providers & hosting\n• Complete local data privacy and custom endpoints\n\nhttps://github.com/voideditor/void",
-        "image": "https://iili.io/nbTgWTG.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_09_void.png"
       },
       {
         "text": "10/ 61.5% use AI to find products, but 55% reject autonomous buying. In tests, hidden text in listings tricked shopping bots 10/10 times.\n\nDelegation & Trust in Agentic Commerce:\nhttps://x.com/vedangvatsa/status/2115039235938144473"
@@ -1909,52 +1908,52 @@
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "production-rag-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-12",
+    "scheduleDate": "2026-11-13",
     "scheduleTime": "01:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Naive vector search fails in production without proper chunking, reranking, and evaluation.\n\n8 essential tools for production RAG pipelines 🧵👇",
-        "image": "https://iili.io/nbTgva9.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_01_cover.png"
       },
       {
         "text": "2/ LlamaIndex\n\nThe data framework for connecting LLMs to your data.\n\n• 300+ data loaders for docs, DBs, and APIs\n• Advanced query engines & routing logic\n• Production RAG evaluation and monitoring\n\nhttps://www.llamaindex.ai",
-        "image": "https://iili.io/nbTgDyg.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_02_llamaindex.png"
       },
       {
         "text": "3/ Qdrant\n\nVector search engine built in Rust for speed.\n\n• Native hybrid search: dense + sparse vectors\n• Fast payload filtering alongside vector queries\n• Production scale with disk-backed storage\n\nhttps://qdrant.tech",
-        "image": "https://iili.io/nbTrYAu.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_03_qdrant.png"
       },
       {
         "text": "4/ pgvector\n\nOpen-source vector similarity search for PostgreSQL.\n\n• Store vector embeddings inside standard Postgres\n• HNSW & IVFFlat indexing for fast queries\n• Avoids dedicated vector database complexity\n\nhttps://github.com/pgvector/pgvector",
-        "image": "https://iili.io/nbTrwNa.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_04_pgvector.png"
       },
       {
         "text": "5/ Cohere Rerank\n\nTwo-stage relevance booster for search pipelines.\n\n• Re-orders vector results by semantic match\n• Filters noisy context before model input\n• Measurably boosts retrieval accuracy\n\nhttps://cohere.com",
-        "image": "https://iili.io/nbTrDf2.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_05_cohere_rerank.png"
       },
       {
         "text": "6/ Ragas\n\nAutomated evaluation framework for RAG systems.\n\n• Evaluates context precision and recall\n• Measures faithfulness and hallucination rates\n• Continuous CI/CD testing for retrieval pipelines\n\nhttps://github.com/explodinggradients/ragas",
-        "image": "https://iili.io/nbT470N.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_06_ragas.png"
       },
       {
         "text": "7/ Unstructured.io\n\nData ingestion and parsing engine for LLMs.\n\n• Parses complex PDFs, Word, and slides\n• Extracts tables and clean text chunks\n• Prepares raw files for vector indexing\n\nhttps://unstructured.io",
-        "image": "https://iili.io/nbT6KIs.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_07_unstructured.png"
       },
       {
         "text": "8/ Chonkie\n\nBlazingly fast, lightweight text chunking library.\n\n• Token, sentence, and semantic chunking methods\n• Zero heavy dependencies for maximum speed\n• Keeps prompt context clean and token-efficient\n\nhttps://github.com/feyninc/chonkie",
-        "image": "https://iili.io/nbT67Qj.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_08_chonkie.png"
       },
       {
         "text": "9/ FastEmbed (by Qdrant)\n\nFast, lightweight Python library for embeddings.\n\n• Runs embeddings locally via ONNX Runtime\n• No PyTorch or GPU required\n• Supports dense, sparse, and multilingual models\n\nhttps://github.com/qdrant/fastembed",
-        "image": "https://iili.io/nbT6Gv1.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_09_fastembed.png"
       },
       {
         "text": "10/ Memory is the most vulnerable middleware layer: dedicated vector DB funding stalled as relational engines (Postgres pgvector) absorbed search:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
@@ -1964,108 +1963,108 @@
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "web3-ai-depin-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-12",
+    "scheduleDate": "2026-11-13",
     "scheduleTime": "09:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Decentralized physical infrastructure networks (DePIN) offer an alternative to centralized GPU monopolies.\n\n8 Web3 projects powering decentralized AI compute 🧵👇",
-        "image": "https://iili.io/nbT6NGR.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_01_cover.png"
       },
       {
         "text": "2/ Bittensor (TAO)\n\nDecentralized market for machine intelligence.\n\n• Subnets specialize in text, voice, and vision\n• Yuma Consensus rewards top models\n• Competitive peer-to-peer compute network\n\nhttps://bittensor.com",
-        "image": "https://iili.io/nbT6gun.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_02_bittensor.png"
       },
       {
         "text": "3/ Render Network (RENDER)\n\nDecentralized GPU compute network.\n\n• Connects node operators with AI workloads\n• Distributed GPU clusters for rendering and ML\n• Cost-efficient alternative to cloud providers\n\nhttps://rendernetwork.com",
-        "image": "https://iili.io/nbTPK8P.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_03_render.png"
       },
       {
         "text": "4/ Akash Network (AKT)\n\nDecentralized marketplace for cloud compute.\n\n• Open bidding on idle data center capacity\n• Deploy containers and AI workloads\n• Access to NVIDIA H100 and A100 clusters\n\nhttps://akash.network",
-        "image": "https://iili.io/nbTP0oG.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_04_akash.png"
       },
       {
         "text": "5/ io.net\n\nDecentralized GPU network for AI compute.\n\n• Aggregates GPUs from independent data centers\n• Clusters distributed hardware for ML inference\n• Fast on-demand provisioning\n\nhttps://io.net",
-        "image": "https://iili.io/nbTPWSS.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_05_ionet.png"
       },
       {
         "text": "6/ Ritual\n\nDecentralized AI coprocessor network.\n\n• Connects smart contracts directly to AI models\n• Cryptographic verification of model execution\n• Sovereign execution layer for decentralized apps\n\nhttps://ritual.net",
-        "image": "https://iili.io/nbTPDfR.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_06_ritual.png"
       },
       {
         "text": "7/ Grass\n\nDecentralized web data scraping network.\n\n• Users share unused bandwidth for rewards\n• Scrapes web data for open AI training\n• Community-owned dataset collection\n\nhttps://getgrass.io",
-        "image": "https://iili.io/nbTizbe.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_07_grass.png"
       },
       {
         "text": "8/ Gensyn\n\nDecentralized protocol for deep learning.\n\n• Verification system for ML training\n• Uses probabilistic proof-of-learning\n• Connects global compute hardware\n\nhttps://gensyn.ai",
-        "image": "https://iili.io/nbTi0e1.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_08_gensyn.png"
       },
       {
         "text": "9/ Fetch.ai (ASI Alliance)\n\nAutonomous economic agent framework.\n\n• Agents transact on-chain independently\n• Connects web services to smart contracts\n• Member of Artificial Superintelligence Alliance\n\nhttps://fetch.ai",
-        "image": "https://iili.io/nbTi8In.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_09_fetch.png"
       },
       {
         "text": "10/ In tests, prompt injection in listings tricked shopping bots 10/10 times. How autonomous agents safely transact without human fraud:\nhttps://x.com/vedangvatsa/status/2115039235938144473"
       },
       {
         "text": "11/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
-        "image": "https://iili.io/nbTjUsn.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png"
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "voice-multimodal-agents-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-12",
+    "scheduleDate": "2026-11-13",
     "scheduleTime": "17:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Conversational AI has moved from robotic turn delay to sub-500ms real-time voice streaming.\n\n8 tools powering real-time voice AI agents 🧵👇",
-        "image": "https://iili.io/nbTis7S.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_01_cover.png"
       },
       {
         "text": "2/ ElevenLabs\n\nFrontier voice synthesis and audio platform.\n\n• Natural text-to-speech across 30+ languages\n• Real-time conversational agent platform\n• Low-latency streaming WebSocket endpoints\n\nhttps://elevenlabs.io",
-        "image": "https://iili.io/nbTiyEx.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_02_elevenlabs.png"
       },
       {
         "text": "3/ LiveKit\n\nOpen-source WebRTC stack for voice agents.\n\n• Sub-100ms audio and video transport\n• Python and Node.js agent frameworks\n• Built-in barge-in and audio buffering\n\nhttps://livekit.io",
-        "image": "https://iili.io/nbTso4R.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_03_livekit.png"
       },
       {
         "text": "4/ Cartesia\n\nUltra-low latency streaming voice generation.\n\n• Sonic model serves voice in under 100ms\n• Natural human cadence and pronunciation\n• Built specifically for real-time interactive agents\n\nhttps://cartesia.ai",
-        "image": "https://iili.io/nbTs13l.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_04_cartesia.png"
       },
       {
         "text": "5/ Deepgram\n\nReal-time speech-to-text API engine.\n\n• Nova-2 model delivers fast transcription\n• Word-level timestamps & speaker diarization\n• Streaming audio recognition with WebSocket endpoints\n\nhttps://deepgram.com",
-        "image": "https://iili.io/nbTsNGj.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_05_deepgram.png"
       },
       {
         "text": "6/ Vapi\n\nVoice AI platform for developers.\n\n• Orchestrates STT, LLM, and TTS in one API\n• Built-in telephony and SIP trunking\n• Fast interruption handling and noise removal\n\nhttps://vapi.ai",
-        "image": "https://iili.io/nbTss6v.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_06_vapi.png"
       },
       {
         "text": "7/ Pipecat\n\nOpen-source framework for voice agents.\n\n• Pipeline architecture for audio and LLMs\n• Native support for WebRTC and Daily\n• Swap STT, model, and TTS providers easily\n\nhttps://github.com/pipecat-ai/pipecat",
-        "image": "https://iili.io/nbTLnte.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_07_pipecat.png"
       },
       {
         "text": "8/ Whisper (OpenAI)\n\nOpen-source speech recognition model.\n\n• Accurate multilingual transcription\n• Robust to background noise and accents\n• Runs locally on CPU or GPU via whisper.cpp\n\nhttps://github.com/openai/whisper",
-        "image": "https://iili.io/nbTLaN1.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_08_whisper.png"
       },
       {
         "text": "9/ Kokoro (by Hexgrad)\n\nOpen-weight text-to-speech model.\n\n• 82M parameters: runs fast on consumer CPU\n• Studio-quality audio with zero license fees\n• Open alternative to proprietary voice APIs\n\nhttps://huggingface.co/hexgrad/Kokoro-82M",
-        "image": "https://iili.io/nbTLVlR.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_09_kokoro.png"
       },
       {
         "text": "10/ Protocols turn tool integration from N×M custom code into N+M. How standard specifications structure modern agent runtimes:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
@@ -2075,108 +2074,108 @@
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "smart-contract-security-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-13",
+    "scheduleDate": "2026-11-14",
     "scheduleTime": "01:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Defending on-chain protocols against exploits requires rigorous fuzzing, static analysis, and formal verification.\n\n8 essential tools to audit smart contracts 🧵👇",
-        "image": "https://iili.io/ntYH3uf.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_01_cover.png"
       },
       {
         "text": "2/ Foundry\n\nFast Ethereum development toolkit in Rust.\n\n• Write unit and fuzz tests in Solidity\n• Built-in invariant and differential fuzzing\n• Blazing execution with Forge and Anvil\n\nhttps://getfoundry.sh",
-        "image": "https://iili.io/nbTLDfj.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_02_foundry.png"
       },
       {
         "text": "3/ Slither (by Trail of Bits)\n\nStatic analysis framework for Solidity.\n\n• Detects reentrancy and storage bugs\n• Visualizes call graphs and contract paths\n• CI/CD integration for automated checks\n\nhttps://github.com/crytic/slither",
-        "image": "https://iili.io/nbTQ1m7.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_03_slither.png"
       },
       {
         "text": "4/ Echidna (by Trail of Bits)\n\nProperty-based fuzz tester for smart contracts.\n\n• Generates inputs to break protocol invariants\n• Catches edge cases unit tests miss\n• Standard for fuzz testing DeFi logic\n\nhttps://github.com/crytic/echidna",
-        "image": "https://iili.io/nbTZnEb.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_04_echidna.png"
       },
       {
         "text": "5/ Solodit\n\nSearch engine for smart contract bugs.\n\n• Index of 15,000+ real audit reports\n• Search by protocol, bug type, and severity\n• Essential research tool for security auditors\n\nhttps://solodit.xyz",
-        "image": "https://iili.io/nbTZGvp.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_05_solodit.png"
       },
       {
         "text": "6/ Damn Vulnerable DeFi\n\nHands-on wargame for offensive DeFi security.\n\n• Exploit broken flash loans and oracles\n• Solve real-world exploit challenges in Foundry\n• Practical training ground for auditors\n\nhttps://damnvulnerabledefi.xyz",
-        "image": "https://iili.io/nbTZU92.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_06_damnvulnerabledefi.png"
       },
       {
         "text": "7/ Cyfrin Updraft\n\nSmart contract security learning platform.\n\n• Patrick Collins' curriculum from basics to audits\n• Invariant testing and formal verification\n• Free, practical developer education\n\nhttps://updraft.cyfrin.io",
-        "image": "https://iili.io/nbTtzVn.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_07_cyfrin_updraft.png"
       },
       {
         "text": "8/ Certora Prover\n\nFormal verification engine for smart contracts.\n\n• Mathematically proves contract specifications\n• Verifies invariants across every state\n• Trusted by top protocols like Aave & Maker\n\nhttps://certora.com",
-        "image": "https://iili.io/nbTt4JR.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_08_certora.png"
       },
       {
         "text": "9/ OpenZeppelin Contracts & Defender\n\nBattle-tested smart contract library.\n\n• Standard ERC-20, ERC-721, and access control\n• Defender: automated monitoring & operations\n• Foundational code for EVM protocols\n\nhttps://openzeppelin.com",
-        "image": "https://iili.io/nbTDo5Q.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_09_openzeppelin.png"
       },
       {
         "text": "10/ Data from 5 Million AI papers: China leads publication volume, US leads LLM research, and India has grown 32x:\nhttps://x.com/227386316/status/2116096531337994712"
       },
       {
         "text": "11/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
-        "image": "https://iili.io/nbTjUsn.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png"
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "ai-web-scrapers-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-13",
+    "scheduleDate": "2026-11-14",
     "scheduleTime": "09:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ AI scrapers handle dynamic JavaScript rendering and extract clean markdown and structured schemas automatically.\n\n8 modern AI web scrapers & extraction engines 🧵👇",
-        "image": "https://iili.io/nbTDbQ1.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_01_cover.png"
       },
       {
         "text": "2/ Firecrawl (YC W24)\n\nTurn websites into clean, LLM-ready markdown.\n\n• Crawls entire domains with subpage recursion\n• Handles JS rendering and bot barriers\n• Clean markdown and JSON schema outputs\n\nhttps://www.firecrawl.dev",
-        "image": "https://iili.io/nbTbqQt.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_02_firecrawl.png"
       },
       {
         "text": "3/ Crawl4AI\n\nOpen-source web crawler optimized for LLMs.\n\n• Extracts structured data from dynamic apps\n• Semantic text chunking with CSS pruning\n• Free, fast, and self-hosted\n\nhttps://github.com/unclecode/crawl4ai",
-        "image": "https://iili.io/nbTb5jS.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_03_crawl4ai.png"
       },
       {
         "text": "4/ Jina Reader\n\nConvert any URL into clean markdown instantly.\n\n• Prefix any URL with r.jina.ai to read it\n• Strips ads, navigation, and cookie banners\n• Built-in web search via s.jina.ai\n\nhttps://jina.ai/reader",
-        "image": "https://iili.io/nbTbMyQ.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_04_jina_reader.png"
       },
       {
         "text": "5/ ScrapeGraphAI\n\nPython library using LLMs to scrape websites.\n\n• Specify target data in plain English\n• Automatically builds extraction logic\n• Resilient to CSS and page layout updates\n\nhttps://github.com/ScrapeGraphAI/Scrapegraph-ai",
-        "image": "https://iili.io/nbTb88v.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_05_scrapegraph.png"
       },
       {
         "text": "6/ Browser-Use\n\nAutonomous web navigation for AI agents.\n\n• Interacts with buttons, logins, and forms\n• Vision-driven DOM tree parsing\n• Automates multi-step workflows online\n\nhttps://github.com/browser-use/browser-use",
-        "image": "https://iili.io/nbTbiMX.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_06_browser_use.png"
       },
       {
         "text": "7/ Apify\n\nCloud platform for web scraping and automation.\n\n• 1,500+ pre-built scrapers for top platforms\n• Handles proxy rotation and retries\n• Serverless actors for scheduled data jobs\n\nhttps://apify.com",
-        "image": "https://iili.io/nbTbb94.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_07_apify.png"
       },
       {
         "text": "8/ Browserless\n\nHeadless Chrome for scalable automation.\n\n• Run Playwright and Puppeteer in the cloud\n• Manages browser scaling and memory\n• Built-in proxy rotation and CAPTCHA handling\n\nhttps://www.browserless.io",
-        "image": "https://iili.io/nbTmnDB.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_08_browserless.png"
       },
       {
         "text": "9/ Trafilatura\n\nPython library for clean web text extraction.\n\n• Fast, lightweight main body parser\n• Strips headers, footers, and boilerplate\n• Standard tool for web dataset curation\n\nhttps://trafilatura.readthedocs.io",
-        "image": "https://iili.io/nbTm1Vt.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_09_trafilatura.png"
       },
       {
         "text": "10/ Sandboxes like E2B ($32M) turned isolated execution into an API call, while scraping pipelines feed frontier models:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
@@ -2186,52 +2185,52 @@
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "ai-evaluation-testing-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-13",
+    "scheduleDate": "2026-11-14",
     "scheduleTime": "17:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Rigorous AI development requires automated benchmark suites, CI assertions, and regression testing beyond playground vibes.\n\n8 essential frameworks to test & evaluate AI 🧵👇",
-        "image": "https://iili.io/nbTmjR4.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_01_cover.png"
       },
       {
         "text": "2/ SWE-bench\n\nGold standard benchmark for software agents.\n\n• Evaluates models on real GitHub issues\n• Tests repo navigation, editing, and bug fixes\n• Industry benchmark for coding capabilities\n\nhttps://www.swebench.com",
-        "image": "https://iili.io/nbTm4Jj.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_02_swebench.png"
       },
       {
         "text": "3/ Promptfoo\n\nOpen-source CLI for testing prompts and outputs.\n\n• Automated regression testing for prompts\n• Red-teaming and injection vulnerability scans\n• CI/CD integration for production safety\n\nhttps://github.com/promptfoo/promptfoo",
-        "image": "https://iili.io/nbTp95v.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_03_promptfoo.png"
       },
       {
         "text": "4/ DeepEval\n\nUnit testing framework for LLM applications.\n\n• Evaluates hallucination and answer relevancy\n• Pytest-like syntax for custom eval assertions\n• Track eval metrics across model iterations\n\nhttps://github.com/confident-ai/deepeval",
-        "image": "https://iili.io/nbTpndG.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_04_deepeval.png"
       },
       {
         "text": "5/ LangSmith (by LangChain)\n\nObservability and evaluation for LLM apps.\n\n• Step-by-step tracing of agent loops\n• Curate test sets from production logs\n• Benchmark prompts on real user queries\n\nhttps://smith.langchain.com",
-        "image": "https://iili.io/nbTpl7j.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_05_langsmith.png"
       },
       {
         "text": "6/ Braintrust\n\nEvaluation and experimentation platform.\n\n• Fast scoring against golden test datasets\n• Playground with side-by-side model diffs\n• Built for engineering and product teams\n\nhttps://www.braintrust.dev",
-        "image": "https://iili.io/nbTpN2a.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_06_braintrust.png"
       },
       {
         "text": "7/ GAIA Benchmark\n\nBenchmark for General AI Assistants.\n\n• Tests complex reasoning, multimodal, and web\n• Resistant to gaming: clear human questions\n• Measures autonomy on real-world tasks\n\nhttps://huggingface.co/spaces/gaia-benchmark/leaderboard",
-        "image": "https://iili.io/nbTpShN.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_07_gaia.png"
       },
       {
         "text": "8/ Inspect AI\n\nModel evaluation framework from the UK AISI.\n\n• Framework for model capabilities & safety\n• Standardized evaluation of reasoning tasks\n• Extensible definitions for agent tests\n\nhttps://inspect.ai-safety-institute.org.uk",
-        "image": "https://iili.io/nbTpi2s.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_08_inspect.png"
       },
       {
         "text": "9/ LM Eval Suite (EleutherAI)\n\nThe standard evaluation suite for open LLMs.\n\n• 60+ benchmarks (MMLU, GSM8K, ARC)\n• Powers Hugging Face Open LLM Leaderboard\n• Unified interface for testing open weights\n\nhttps://github.com/EleutherAI/lm-evaluation-harness",
-        "image": "https://iili.io/nbTydYb.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_09_lmeval.png"
       },
       {
         "text": "10/ Platforms buy security and observability faster than startups scale: 5 of 7 early agent security and eval startups were acquired in under 18 months:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
@@ -2241,108 +2240,108 @@
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "defi-architecture-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-14",
+    "scheduleDate": "2026-11-15",
     "scheduleTime": "01:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Modern DeFi protocols manage tens of billions across automated liquidity, lending, and cross-chain messaging.\n\n8 protocols that define modern DeFi architecture 🧵👇",
-        "image": "https://iili.io/nbTyanI.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_01_cover.png"
       },
       {
         "text": "2/ Uniswap v4\n\nThe definitive automated market maker (AMM).\n\n• Singleton contract slashes multi-hop gas fees\n• Customizable pool hooks for dynamic fees\n• Flash accounting with transient storage\n\nhttps://uniswap.org",
-        "image": "https://iili.io/nbTyNM7.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_02_uniswap.png"
       },
       {
         "text": "3/ Aave v3\n\nNon-custodial liquidity market protocol.\n\n• Borrow and lend crypto assets programmatically\n• Isolation mode for safer new asset onboarding\n• High-efficiency mode (eMode) for correlated assets\n\nhttps://aave.com",
-        "image": "https://iili.io/nbTyrwQ.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_03_aave.png"
       },
       {
         "text": "4/ Curve Finance\n\nAMM optimized for pegged assets and stablecoins.\n\n• StableSwap invariant minimizes slippage\n• veCRV governance and liquidity gauge voting\n• Core liquidity layer for on-chain dollars\n\nhttps://curve.fi",
-        "image": "https://iili.io/nbu9JVI.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_04_curve.png"
       },
       {
         "text": "5/ Chainlink CCIP\n\nCross-Chain Interoperability Protocol for DeFi.\n\n• Cross-chain token transfers and messages\n• Risk Management Network verifies transactions\n• Enables multi-chain lending and liquidity\n\nhttps://chain.link",
-        "image": "https://iili.io/nbu9uf9.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_05_chainlink_ccip.png"
       },
       {
         "text": "6/ EigenLayer\n\nRestaking primitive for Ethereum security.\n\n• Staked ETH secures external networks (AVSs)\n• Pooled validation for bridges and oracles\n• Programmatic rewards for node operators\n\nhttps://www.eigenlayer.xyz",
-        "image": "https://iili.io/nbu9EiP.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_06_eigenlayer.png"
       },
       {
         "text": "7/ Morpho\n\nPermissionless lending primitive and optimizer.\n\n• Morpho Blue: isolated, immutable lending pairs\n• MetaMorpho: automated risk curation vaults\n• High capital efficiency for lenders\n\nhttps://morpho.org",
-        "image": "https://iili.io/nbu9wOv.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_07_morpho.png"
       },
       {
         "text": "8/ Sky (formerly MakerDAO)\n\nDecentralized collateralized debt engine.\n\n• Issues USDS backed by crypto and RWAs\n• Stability fees maintain peg resilience\n• The longest-running DeFi credit protocol\n\nhttps://sky.money",
-        "image": "https://iili.io/nbu9QX2.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_08_sky.png"
       },
       {
         "text": "9/ Ethena Labs\n\nSynthetic dollar protocol (USDe).\n\n• Delta-neutral hedging with perpetual futures\n• Generates yield from staking and basis spread\n• Crypto-native synthetic dollar primitive\n\nhttps://ethena.fi",
-        "image": "https://iili.io/nbuH95b.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_09_ethena.png"
       },
       {
         "text": "10/ Stripe ACP, OpenAI Function Calling, and Anthropic MCP: how shared protocols turn integration from N×M custom code into N+M:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
       },
       {
         "text": "11/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
-        "image": "https://iili.io/nbTjUsn.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png"
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   },
   {
     "id": "computer-vision-models-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-14",
+    "scheduleDate": "2026-11-15",
     "scheduleTime": "09:05",
     "posted": false,
     "tweets": [
       {
         "text": "1/ Open vision models can now segment video, estimate 3D depth, and run document OCR completely offline.\n\n8 state-of-the-art open vision models you can run 🧵👇",
-        "image": "https://iili.io/nbuHfqP.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_01_cover.png"
       },
       {
         "text": "2/ SAM 2 (by Meta)\n\nPromptable visual segmentation for images and video.\n\n• Zero-shot mask tracking for video objects\n• Real-time tracking through visual occlusion\n• Apache 2.0 open weights and codebase\n\nhttps://github.com/facebookresearch/segment-anything-2",
-        "image": "https://iili.io/nbuHYrX.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_02_sam2.png"
       },
       {
         "text": "3/ YOLOv11 (by Ultralytics)\n\nReal-time object detection and segmentation.\n\n• Fast detection, pose tracking, and masks\n• Lightweight architecture for edge devices\n• Low latency on CPU, mobile, and GPUs\n\nhttps://github.com/ultralytics/ultralytics",
-        "image": "https://iili.io/nbuHXBS.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_03_yolov11.png"
       },
       {
         "text": "4/ Florence-2 (by Microsoft)\n\nLightweight vision model for visual grounding.\n\n• Unified model for captioning, detection, OCR\n• Detailed spatial region descriptions\n• Compact design runs fast on consumer GPUs\n\nhttps://huggingface.co/microsoft/Florence-2-large",
-        "image": "https://iili.io/nbuHrCB.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_04_florence2.png"
       },
       {
         "text": "5/ Depth Anything v2\n\nMonocular depth estimation from 2D images.\n\n• Accurate 3D depth maps from regular photos\n• Fast inference with sharp boundary detail\n• Essential primitive for robotics and 3D\n\nhttps://github.com/DepthAnything/Depth-Anything-V2",
-        "image": "https://iili.io/nbuJ94t.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_05_depth_anything.png"
       },
       {
         "text": "6/ Flux.1 (by Black Forest Labs)\n\nOpen-weights text-to-image foundation model.\n\n• 12B parameter rectified flow transformer\n• Accurate typography and high photorealism\n• Schnell & Dev weights for local GPUs\n\nhttps://github.com/black-forest-labs/flux",
-        "image": "https://iili.io/nbuJT8u.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_06_flux.png"
       },
       {
         "text": "7/ Qwen2-VL (by Alibaba)\n\nOpen vision-language foundation model.\n\n• Processes high-res images and long video\n• Reads complex charts, diagrams, and tables\n• Operates mobile and desktop UIs directly\n\nhttps://github.com/QwenLM/Qwen2-VL",
-        "image": "https://iili.io/nbuJV9a.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_07_qwen2_vl.png"
       },
       {
         "text": "8/ Stable Diffusion 3.5\n\nMultimodal open image generation model.\n\n• Diffusion Transformer (MMDiT) design\n• Strong prompt adherence and visual quality\n• Permissive license for self-hosted use\n\nhttps://stability.ai",
-        "image": "https://iili.io/nbuJgAG.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_08_sd35.png"
       },
       {
         "text": "9/ PaddleOCR\n\nLightweight optical character recognition toolkit.\n\n• Multilingual OCR supporting 80+ languages\n• Ultra-compact size (8.6 MB) runs fast on CPU\n• High accuracy on receipts, tables, and forms\n\nhttps://github.com/PaddlePaddle/PaddleOCR",
-        "image": "https://iili.io/nbuJZl9.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_09_paddleocr.png"
       },
       {
         "text": "10/ Data from 5 Million AI papers: China leads publication volume, US leads LLM research, and India has grown 32x:\nhttps://x.com/227386316/status/2116096531337994712"
@@ -2352,7 +2351,7 @@
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://iili.io/nbTjh0J.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png"
       }
     ]
   }
