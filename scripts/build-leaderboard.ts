@@ -115,10 +115,6 @@ async function main() {
 
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, "summary.json"), JSON.stringify(summary, null, 2));
-  for (const f of ["summary.json", "top500.json", "index.json"]) {
-    const kb = (fs.statSync(path.join(OUT, f)).size / 1024).toFixed(1);
-    console.log(`${f}: ${kb} KB`);
-  }
   console.log(`domains=${byDomain.size} scored=${scored.length} errors=${errors} mean=${summary.meanScore}`);
 
   // Self-hosted favicons for the top 500 (no external tracker at page-view time)
@@ -178,6 +174,10 @@ async function main() {
   fs.writeFileSync(path.join(OUT, "top500.json"), JSON.stringify(top500WithIcons));
   const indexWithIcons = scored.map((r) => [r.domain, r.score, r.grade, tierOf(r.domain), (r.scannedAt ?? "").slice(0, 10), iconFor.get(r.domain) ?? null]);
   fs.writeFileSync(path.join(OUT, "index.json"), JSON.stringify(indexWithIcons));
+  for (const f of ["summary.json", "top500.json", "index.json"]) {
+    const kb = (fs.statSync(path.join(OUT, f)).size / 1024).toFixed(1);
+    console.log(`${f}: ${kb} KB`);
+  }
 }
 
 main();

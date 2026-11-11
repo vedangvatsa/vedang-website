@@ -106,9 +106,8 @@ export function LeaderboardSection() {
   return (
     <div ref={ref} className="text-xs space-y-4 pt-4 border-t border-border">
       <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">
-        Leaderboard
+        LEADERBOARD: <span className="font-normal normal-case text-muted-foreground">Top 500 domains ranked by Agent Readiness Score (0–100).</span>
       </h3>
-      <p className="text-xs text-muted-foreground -mt-2">Top 500 domains ranked by Agent Readiness Score (0–100).</p>
       {failed && (
         <p className="text-xs text-muted-foreground">Leaderboard data is not published yet.</p>
       )}
