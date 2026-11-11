@@ -42,6 +42,7 @@ jobs:
       - name: Post to X (Twitter)
         id: x
         continue-on-error: true
+        timeout-minutes: 5
         run: npx tsx scripts/x-scheduled-executor.ts
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
@@ -126,6 +127,7 @@ jobs:
       - name: Post to Farcaster
         id: farcaster
         continue-on-error: true
+        timeout-minutes: 3
         run: |
           if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
             sudo apt-get update
