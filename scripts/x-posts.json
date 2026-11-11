@@ -1745,7 +1745,8 @@
         "text": "15/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
         "image": "https://iili.io/nbTjh0J.png"
       }
-    ]
+    ],
+    "error": "Invalid post: Image could not be read from its URL., Image could not be read from its URL., Image could not be read from its URL., Image could not be read from its URL., Image could not be read from its URL., Image could not be read from its URL."
   },
   {
     "id": "prompt-engineering-thread",
