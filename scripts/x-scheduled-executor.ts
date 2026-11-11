@@ -282,14 +282,8 @@ async function main() {
     const regular = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8')) as XPost[];
     posts.push(...regular);
   }
-  if (!process.env.X_POSTS_FILE && fs.existsSync(QUOTE_POSTS_FILE)) {
-    const quotes = JSON.parse(fs.readFileSync(QUOTE_POSTS_FILE, 'utf-8')) as XPost[];
-    posts.push(...quotes);
-  }
-  if (!process.env.X_POSTS_FILE && fs.existsSync(REPLY_POSTS_FILE)) {
-    const replies = JSON.parse(fs.readFileSync(REPLY_POSTS_FILE, 'utf-8')) as XPost[];
-    posts.push(...replies);
-  }
+  // NOTE: Auto-replies and auto-quotes are disabled to prevent unapproved posts.
+  // Only explicitly curated posts and threads in x-posts.json will be published.
 
   if (posts.length === 0) {
     console.log('⚠️  No posts files found');

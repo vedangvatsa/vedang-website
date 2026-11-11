@@ -1,8 +1,8 @@
 name: X Quote-Tweet Discovery
 
 on:
-  schedule:
-    - cron: "30 1 * * *" # 07:00 IST daily
+  # schedule:
+  #   - cron: "30 1 * * *" # 07:00 IST daily (disabled to prevent auto-posting unapproved quotes)
   workflow_dispatch:
 
 jobs:

@@ -1,8 +1,8 @@
 name: X Reply Discovery
 
 on:
-  schedule:
-    - cron: "0 2 * * *" # 07:30 IST daily
+  # schedule:
+  #   - cron: "0 2 * * *" # 07:30 IST daily (disabled to prevent auto-posting unapproved replies)
   workflow_dispatch:
 
 jobs:
