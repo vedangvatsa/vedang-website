@@ -274,6 +274,48 @@ async function postThread(tweets: TweetItem[]): Promise<{ success: boolean; id?:
   return { success: true, id: firstId };
 }
 
+async function validateUrlsInText(text: string): Promise<{ valid: boolean; badUrls: string[] }> {
+  const urlRegex = /https?:\/\/[^\s\n)]+/g;
+  const urls = text.match(urlRegex) || [];
+  const badUrls: string[] = [];
+
+  for (const url of urls) {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 6000);
+      const res = await fetch(url, {
+        method: 'HEAD',
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+        signal: controller.signal,
+        redirect: 'follow',
+      });
+      clearTimeout(timeout);
+      if (res.status === 404 || res.status >= 500) {
+        badUrls.push(`${url} (HTTP ${res.status})`);
+      }
+    } catch {
+      try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 6000);
+        const res = await fetch(url, {
+          method: 'GET',
+          headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+          signal: controller.signal,
+          redirect: 'follow',
+        });
+        clearTimeout(timeout);
+        if (res.status === 404 || res.status >= 500) {
+          badUrls.push(`${url} (HTTP ${res.status})`);
+        }
+      } catch (e) {
+        console.warn(`⚠️ Warning: could not reach ${url}:`, e);
+      }
+    }
+  }
+
+  return { valid: badUrls.length === 0, badUrls };
+}
+
 async function main() {
   // Load from both post files
   let posts: XPost[] = [];
@@ -331,9 +373,36 @@ async function main() {
 
     if (!isDue) continue;
 
-    const isThread = post.type === 'thread' && post.tweets;
+    const isThread = (post.type === 'thread' || Array.isArray(post.tweets)) && (post.tweets?.length || 0) > 0;
     const isQuote = post.type === 'quote' && post.quote_tweet_id;
     const isReply = post.type === 'reply' && post.reply_to_tweet_id;
+
+    // PRE-FLIGHT VALIDATION: Check all URLs in post to guarantee no 404 or dead links
+    let hasBrokenUrl = false;
+    if (isThread && post.tweets) {
+      for (const tw of post.tweets) {
+        const check = await validateUrlsInText(tw.text);
+        if (!check.valid) {
+          console.error(`🚨 Thread "${post.id}" contains broken URL(s):`, check.badUrls);
+          post.error = `Pre-flight failed: Broken URL(s): ${check.badUrls.join(', ')}`;
+          hasBrokenUrl = true;
+          break;
+        }
+      }
+    } else if (post.text) {
+      const check = await validateUrlsInText(post.text);
+      if (!check.valid) {
+        console.error(`🚨 Post "${post.id}" contains broken URL(s):`, check.badUrls);
+        post.error = `Pre-flight failed: Broken URL(s): ${check.badUrls.join(', ')}`;
+        hasBrokenUrl = true;
+      }
+    }
+
+    if (hasBrokenUrl) {
+      console.warn(`⏭️ Skipping "${post.id}" due to broken URL pre-flight failure.`);
+      continue;
+    }
+
     console.log(`🚀 Posting ${isReply ? 'reply' : isQuote ? 'quote' : isThread ? 'thread' : 'tweet'}: "${post.id}"`);
 
     let result;
