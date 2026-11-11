@@ -148,7 +148,7 @@ Fix everything below to raise the score as far as this stack allows. Some checks
 
 ---
 Domain: ${result.domain}
-Score: ${result.score}/100 · Grade ${result.grade}
+Score: ${result.score}/100
 Issues: ${failing.length} failures, ${warnings.length} warnings
 
 ---
@@ -610,12 +610,11 @@ export default function ScanPage() {
     <PageLayout>
       <div className="w-full space-y-8 pb-16">
         <div>
-          <PageHero
-            title="AI & Web Readiness Scanner"
-            subtitle="120 checks across 6 layers: see how crawlers, agents, and automated tools experience your site."
-          />
+          <PageHero title="AI & Web Readiness Scanner" />
           <div className="-mt-3">
-            <AuthorByline links={[{ label: 'Audit Tool' }]} />
+            <AuthorByline links={[
+              { label: 'Research Paper', href: 'https://doi.org/10.5281/zenodo.24121071' },
+            ]} />
           </div>
         </div>
 
@@ -689,85 +688,6 @@ export default function ScanPage() {
           </section>
         )}
 
-        {/* ── Pre-scan state ── */}
-        {!result && !loading && !error && (
-          <section className="p-5 rounded-lg border border-border/70 bg-card space-y-4">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/50 pb-3">
-              <div>
-                <h3 className="text-sm font-semibold text-foreground tracking-tight">
-                  Evaluated Against the 100,000-Domain AI Agent Readiness Census
-                </h3>
-                <p className="text-xs text-muted-foreground mt-0.5">
-                  Derived from first principles across the 6 sequential dependency stages of an autonomous web agent lifecycle.
-                </p>
-              </div>
-              <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-muted text-muted-foreground shrink-0 self-start sm:self-auto">
-                120 variables · 96 checks · 24 context
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">
-              {[
-                {
-                  num: '1',
-                  layer: 'Discovery',
-                  spec: 'RFC 9309, RFC 9727, Sitemaps.org',
-                  desc: 'Machine-readable navigation paths: robots.txt AI rules, llms.txt, API catalogs, ARD manifests, and feeds.',
-                },
-                {
-                  num: '2',
-                  layer: 'Access',
-                  spec: 'RFC 9110, RFC 9457',
-                  desc: 'Reliable message body ingestion: Markdown negotiation (Accept: text/markdown), UTF-8 text, and problem details.',
-                },
-                {
-                  num: '3',
-                  layer: 'Usability & Interaction',
-                  spec: 'W3C WAI-ARIA, OpenAPI 3.1, MCP',
-                  desc: 'Interactive controls in browser accessibility trees, live Model Context Protocol servers, and structured API contracts.',
-                },
-                {
-                  num: '4',
-                  layer: 'Security & Authorization',
-                  spec: 'RFC 8414, RFC 9116, W3C TDM',
-                  desc: 'Cryptographic transport security, HSTS, CSP headers, security.txt contacts, and OAuth 2.0 PKCE discovery.',
-                },
-                {
-                  num: '5',
-                  layer: 'Content & Structured Data',
-                  spec: 'W3C HTML5, Schema.org JSON-LD',
-                  desc: 'Document identity metadata, language tags, canonical links, and expanded machine-readable entity graphs.',
-                },
-                {
-                  num: '6',
-                  layer: 'Commerce',
-                  spec: 'Schema.org Offer, HTTP 402, UCP',
-                  desc: 'Machine-assisted commerce: typed price/currency offers, micropayment challenge headers, and machine terms of use.',
-                },
-              ].map(stage => (
-                <div key={stage.num} className="p-3 rounded-md border border-border/50 bg-background/50 space-y-1.5">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs font-semibold text-foreground">
-                      Stage {stage.num}: {stage.layer}
-                    </span>
-                    <span className="text-[10px] text-muted-foreground font-mono truncate max-w-[140px]">{stage.spec}</span>
-                  </div>
-                  <p className="text-[11px] text-muted-foreground leading-relaxed">{stage.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-2 text-xs text-muted-foreground flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-border/40">
-              <span>
-                Readiness score bounds from the 100k census: mean lower bound <strong>21.33</strong> to upper bound <strong>83.05</strong>.
-              </span>
-              <span className="text-[11px] font-mono text-muted-foreground/80">
-                Anchored directly in IETF, W3C, and OpenAPI standards.
-              </span>
-            </div>
-          </section>
-        )}
-
         {/* ── Results ── */}
         {result && !loading && (
           <section className="w-full space-y-6 animate-in fade-in duration-200">
@@ -794,7 +714,7 @@ export default function ScanPage() {
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-4xl font-bold tracking-tight">{result.score}</span>
                     <span className="text-sm text-muted-foreground">/100</span>
-                    <span className="text-xs font-semibold text-muted-foreground ml-1">Grade {result.grade}</span>
+
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <Button type="button" size="sm" onClick={handleCopyFixPrompt} className="text-xs gap-1.5 h-8 px-3 bg-black text-white hover:bg-zinc-800">
@@ -845,8 +765,14 @@ export default function ScanPage() {
                         subtitle={dial.subtitle}
                         active={isActive}
                         onClick={() => {
-                          setActiveCategory(isActive ? null : dial.key);
+                          const next = isActive ? null : dial.key;
+                          setActiveCategory(next);
                           setFilterLayer('all');
+                          if (next) {
+                            setTimeout(() => {
+                              document.getElementById('findings-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }, 50);
+                          }
                         }}
                       />
                     );
@@ -860,16 +786,18 @@ export default function ScanPage() {
               {result.layers.map(layer => {
                 const isSelected = filterLayer === layer.id && !activeCategory;
                 return (
-                  <button
+                  <div
                     key={layer.id}
-                    type="button"
+                    role="button"
+                    tabIndex={0}
                     onClick={() => {
                       setActiveCategory(null);
                       setFilterLayer(isSelected ? 'all' : layer.id);
                       setFilterStatus('all');
                     }}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { setActiveCategory(null); setFilterLayer(isSelected ? 'all' : layer.id); setFilterStatus('all'); } }}
                     className={cn(
-                      'p-3 rounded-lg border text-left flex flex-col gap-1.5 transition-colors group',
+                      'p-3 rounded-lg border text-left flex flex-col gap-1.5 transition-colors group cursor-pointer',
                       isSelected
                         ? 'border-foreground bg-muted/40'
                         : 'border-border/60 hover:border-foreground/30'
@@ -895,12 +823,12 @@ export default function ScanPage() {
                       <div className="bg-zinc-900 dark:bg-zinc-100 h-full rounded-full" style={{ width: `${layer.percentage}%` }} />
                     </div>
                     <span className="text-[11px] text-muted-foreground">{layer.percentage}% · {layer.checks.filter(c => c.status === 'pass').length}/{layer.checks.length} passed</span>
-                  </button>
+                  </div>
                 );
               })}
             </div>
 
-            {/* Capabilities grid */}
+            {/* Capabilities grid */
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
               {[
                 { label: 'robots.txt AI policy',   active: result.badges.aiBotFriendly },
@@ -933,7 +861,7 @@ export default function ScanPage() {
             </div>
 
             {/* Findings */}
-            <div className="space-y-3 pt-2">
+            <div id="findings-section" className="space-y-3 pt-2 scroll-mt-20">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                 <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider flex-1">Findings</h3>
                 <div className="flex items-center gap-1.5 text-xs">

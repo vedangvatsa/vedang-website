@@ -71,7 +71,6 @@ export function LeaderboardSection() {
   const [top, setTop] = useState<TopEntry[]>([]);
   const [expanded, setExpanded] = useState(false);
   const [query, setQuery] = useState('');
-  const [tierFilter, setTierFilter] = useState<number>(0);
   const [index, setIndex] = useState<[string, number, string, number, string, string | null][] | null>(null);
   const [indexLoading, setIndexLoading] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -98,10 +97,10 @@ export function LeaderboardSection() {
   }
 
   const results = query.trim().length >= 2 && index
-    ? index.filter(([d, , , t]) => d.includes(query.trim().toLowerCase()) && (tierFilter === 0 || t === tierFilter)).slice(0, 50)
+    ? index.filter(([d]) => d.includes(query.trim().toLowerCase())).slice(0, 50)
     : null;
-  const visible = (tierFilter === 0 ? top : top.filter((e) => e.tier === tierFilter)).slice(0, expanded ? 500 : 100);
-  const visibleTotal = tierFilter === 0 ? top.length : top.filter((e) => e.tier === tierFilter).length;
+  const visible = top.slice(0, expanded ? 500 : 100);
+  const visibleTotal = top.length;
   const partial = summary && summary.domainsScored < TARGET_N;
 
   return (
@@ -109,6 +108,7 @@ export function LeaderboardSection() {
       <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">
         Leaderboard
       </h3>
+      <p className="text-xs text-muted-foreground -mt-2">Top 500 domains ranked by Agent Readiness Score (0–100).</p>
       {failed && (
         <p className="text-xs text-muted-foreground">Leaderboard data is not published yet.</p>
       )}
@@ -143,10 +143,7 @@ export function LeaderboardSection() {
                   <span className="truncate">{d}</span>
                 </a>
                 <div className="flex items-center gap-2 shrink-0">
-                  <span className="tabular-nums font-medium text-foreground">{s}</span>
-                  <span className={cn('font-bold text-xs w-6 text-center rounded px-1 py-0.5 bg-muted/40', gradeClass(g))}>
-                    {g}
-                  </span>
+                  <span className="tabular-nums font-medium text-foreground">{s}/100</span>
                 </div>
               </div>
             ))}
@@ -155,28 +152,6 @@ export function LeaderboardSection() {
       </div>
       {top.length > 0 && !results && (
         <>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1 border-b border-border/40">
-            {[
-              { key: 0, label: 'All tiers' },
-              { key: 1, label: 'Ranks 1-10k' },
-              { key: 2, label: 'Ranks 10-100k' },
-              { key: 3, label: 'Ranks 100k-1M' },
-            ].map((f) => (
-              <button
-                key={f.key}
-                type="button"
-                onClick={() => setTierFilter(f.key)}
-                className={cn(
-                  'py-1 text-xs transition border-b-2 -mb-px',
-                  tierFilter === f.key
-                    ? 'border-foreground text-foreground font-semibold'
-                    : 'border-transparent text-muted-foreground hover:text-foreground'
-                )}
-              >
-                {f.label}
-              </button>
-            ))}
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-0.5 pt-1">
             {visible.map((e) => (
               <div
@@ -197,10 +172,7 @@ export function LeaderboardSection() {
                   </a>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
-                  <span className="tabular-nums font-medium text-foreground">{e.score}</span>
-                  <span className={cn('font-bold text-xs w-6 text-center rounded px-1 py-0.5 bg-muted/40', gradeClass(e.grade))}>
-                    {e.grade}
-                  </span>
+                  <span className="tabular-nums font-medium text-foreground">{e.score}/100</span>
                 </div>
               </div>
             ))}
