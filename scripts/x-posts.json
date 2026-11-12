@@ -85,9 +85,10 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/09_conclusion.png"
       }
     ],
-    "posted": false,
+    "posted": true,
     "type": "thread",
-    "error": "Pre-flight failed: Broken URL(s): https://doi.org/10.5281/zenodo.24121071 (HTTP 500)"
+    "postedAt": "2026-11-12T01:41:56.158Z",
+    "tweetId": "6af5195ebc9f3773a1b26fad"
   },
   {
     "id": "lit-thread",
