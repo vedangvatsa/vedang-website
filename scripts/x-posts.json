@@ -1856,7 +1856,8 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png",
         "posted": false
       }
-    ]
+    ],
+    "error": "Invalid post: Whoops, it looks like you've already got this one scheduled or posted around the same time. We're not able to post the same thing twice so close together."
   },
   {
     "id": "prompt-engineering-thread",
