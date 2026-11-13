@@ -1865,7 +1865,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-12",
     "scheduleTime": "01:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Prompt engineering is no longer \"act as a marketer.\"\n\nWith frontier reasoning models, prompting is structured specification, test-driven validation, and system framing.\n\n8 guides, curricula, & production rules 🧵👇",
@@ -1913,7 +1913,9 @@
         "text": "12/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "postedAt": "2026-11-13T18:44:50.684Z",
+    "tweetId": "6af75a9cc578ae3e2b396ddc"
   },
   {
     "id": "local-ai-models-thread",
