@@ -32,7 +32,7 @@ const TIMEZONE_OFFSET_HOURS = 5.5; // IST
 const POSTS_FILE = path.resolve(__dirname, process.env.X_POSTS_FILE || 'x-posts.json');
 const QUOTE_POSTS_FILE = path.resolve(__dirname, 'x-quote-posts.json');
 const REPLY_POSTS_FILE = path.resolve(__dirname, 'x-reply-posts.json');
-const COOLDOWN_HOURS = Number(process.env.X_COOLDOWN_HOURS || '7');
+const COOLDOWN_HOURS = Number(process.env.X_COOLDOWN_HOURS || '3');
 
 interface TweetItem {
   text: string;

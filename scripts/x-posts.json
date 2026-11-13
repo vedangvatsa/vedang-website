@@ -1782,7 +1782,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-11",
     "scheduleTime": "17:05",
-    "posted": true,
+    "posted": false,
     "tweets": [
       {
         "text": "1/ You do not need a $60,000 tuition bill to learn AI from top researchers.\n\nThe best universities publish full lectures, assignments, and syllabi completely free.\n\n10 free university AI and deep learning courses 🧵👇",
@@ -1856,9 +1856,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png",
         "posted": false
       }
-    ],
-    "postedAt": "2026-11-13T00:41:58.495Z",
-    "tweetId": "6af65ccffb90ccefdd0ceda5"
+    ]
   },
   {
     "id": "prompt-engineering-thread",
