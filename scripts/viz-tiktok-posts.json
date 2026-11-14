@@ -4002,11 +4002,7 @@
     "id": "explainer-tiktok-circle_area",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/circle_area_9x16.mp4",
     "text": "Why circle area is pi times radius squared.\n\nUnroll the rings of a circle.\n\nThey make a triangle.\n\nBottom is circumference. Height is radius.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "title": "Why circle area is pi times radius squared.\n\nUnroll the rings of a circle.\n\nThey make a triangle.\n\nBottom is circumference. Height is radius.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "09:00",
     "posted": false
@@ -4015,11 +4011,7 @@
     "id": "explainer-tiktok-pythagorean_theorem",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/pythagorean_theorem_9x16.mp4",
     "text": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "title": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
     "posted": false
@@ -4028,11 +4020,7 @@
     "id": "explainer-tiktok-sum_of_odds",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/sum_of_odds_9x16.mp4",
     "text": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "title": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
     "posted": false
@@ -4041,11 +4029,7 @@
     "id": "explainer-tiktok-sum_of_integers",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/sum_of_integers_9x16.mp4",
     "text": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "title": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
     "posted": false
@@ -4054,11 +4038,7 @@
     "id": "explainer-tiktok-geometric_series",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/geometric_series_9x16.mp4",
     "text": "Why halves add up to 1.\n\nStart with a square of 1.\n\nColor half, then half of what is left, forever.\n\nAll the pieces fill the square.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "title": "Why halves add up to 1.\n\nStart with a square of 1.\n\nColor half, then half of what is left, forever.\n\nAll the pieces fill the square.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
     "posted": false
@@ -4067,38 +4047,161 @@
     "id": "explainer-tiktok-difference_of_squares",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/difference_of_squares_9x16.mp4",
     "text": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "title": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-sphere_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sphere_volume_9x16.mp4",
+    "text": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
+    "title": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "09:00",
     "posted": false
   },
   {
     "id": "explainer-tiktok-binary_search",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/binary_search_9x16.mp4",
     "text": "How binary search works.\n\nDo not check items one by one.\n\nCheck the middle.\n\nThrow away half the list every time.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "title": "How binary search works.\n\nDo not check items one by one.\n\nCheck the middle.\n\nThrow away half the list every time.",
     "scheduleDate": "2026-11-17",
-    "scheduleTime": "09:00",
+    "scheduleTime": "17:00",
     "posted": false
   },
   {
     "id": "explainer-tiktok-bubble_vs_quicksort",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/bubble_vs_quicksort_9x16.mp4",
     "text": "Bubble sort vs Quick sort.\n\nBubble sort swaps neighbors slowly.\n\nQuick sort splits around a pivot.\n\nQuick sort finishes much faster.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-17",
+    "title": "Bubble sort vs Quick sort.\n\nBubble sort swaps neighbors slowly.\n\nQuick sort splits around a pivot.\n\nQuick sort finishes much faster.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-bfs_vs_dfs",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/bfs_vs_dfs_9x16.mp4",
+    "text": "Two ways to search a network.\n\nBreadth-first search expands in waves.\n\nDepth-first search goes deep down one path first.",
+    "title": "Two ways to search a network.\n\nBreadth-first search expands in waves.\n\nDepth-first search goes deep down one path first.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-hash_tables",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/hash_tables_9x16.mp4",
+    "text": "Why hash tables are fast.\n\nNo searching through lists.\n\nA math function turns the name into an address.\n\nJumps directly there.",
+    "title": "Why hash tables are fast.\n\nNo searching through lists.\n\nA math function turns the name into an address.\n\nJumps directly there.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-dijkstra",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/dijkstra_9x16.mp4",
+    "text": "Finding the shortest route.\n\nDijkstra tracks the shortest path so far.\n\nAlways picks the closest point next.\n\nGuarantees the shortest route.",
+    "title": "Finding the shortest route.\n\nDijkstra tracks the shortest path so far.\n\nAlways picks the closest point next.\n\nGuarantees the shortest route.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-derivative_tangent",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/derivative_tangent_9x16.mp4",
+    "text": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
+    "title": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-product_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/product_rule_9x16.mp4",
+    "text": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
+    "title": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-sin_derivative",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sin_derivative_9x16.mp4",
+    "text": "Why the derivative of sine is cosine.\n\nMove around a circle.\n\nHeight is sine.\n\nHow fast height changes matches the cosine distance.",
+    "title": "Why the derivative of sine is cosine.\n\nMove around a circle.\n\nHeight is sine.\n\nHow fast height changes matches the cosine distance.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-riemann_sums",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/riemann_sums_9x16.mp4",
+    "text": "Finding area under a curve.\n\nDraw rectangles under the curve.\n\nMake the rectangles thinner.\n\nThey turn into the smooth area.",
+    "title": "Finding area under a curve.\n\nDraw rectangles under the curve.\n\nMake the rectangles thinner.\n\nThey turn into the smooth area.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-monty_hall",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/monty_hall_9x16.mp4",
+    "text": "Why you should switch doors.\n\nYour first pick is only 1 in 3.\n\nThe other doors hold 2 in 3.\n\nWhen one wrong door is opened, switch.",
+    "title": "Why you should switch doors.\n\nYour first pick is only 1 in 3.\n\nThe other doors hold 2 in 3.\n\nWhen one wrong door is opened, switch.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-central_limit_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/central_limit_theorem_9x16.mp4",
+    "text": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
+    "title": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-bayes_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/bayes_theorem_9x16.mp4",
+    "text": "Why 99 percent test accuracy is tricky.\n\nIf a disease is rare, false alarms on healthy people can add up.\n\nAlways compare real cases to false alarms.",
+    "title": "Why 99 percent test accuracy is tricky.\n\nIf a disease is rare, false alarms on healthy people can add up.\n\nAlways compare real cases to false alarms.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-simpsons_paradox",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/simpsons_paradox_9x16.mp4",
+    "text": "Simpson's paradox.\n\nBetter in group 1.\n\nBetter in group 2.\n\nCombine them, and it looks worse. Uneven sizes flip the total.",
+    "title": "Simpson's paradox.\n\nBetter in group 1.\n\nBetter in group 2.\n\nCombine them, and it looks worse. Uneven sizes flip the total.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-stack_vs_queue",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/stack_vs_queue_9x16.mp4",
+    "text": "Stack vs Queue.\n\nStack last one in, first one out.\n\nQueue first one in, first one out.",
+    "title": "Stack vs Queue.\n\nStack last one in, first one out.\n\nQueue first one in, first one out.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-dynamic_array",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/dynamic_array_9x16.mp4",
+    "text": "How dynamic arrays grow.\n\nWhen the list is full, it doubles the memory size.\n\nCopies all items over.\n\nFrees up the old space.",
+    "title": "How dynamic arrays grow.\n\nWhen the list is full, it doubles the memory size.\n\nCopies all items over.\n\nFrees up the old space.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-tiktok-binary_heap",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/binary_heap_9x16.mp4",
+    "text": "Binary heap in an array.\n\nLooks like a tree, stored as a flat list.\n\nSmallest item stays on top.\n\nUses math on the index to find branches.",
+    "title": "Binary heap in an array.\n\nLooks like a tree, stored as a flat list.\n\nSmallest item stays on top.\n\nUses math on the index to find branches.",
+    "scheduleDate": "2026-11-22",
     "scheduleTime": "17:00",
     "posted": false
   }

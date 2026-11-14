@@ -3787,12 +3787,7 @@
   {
     "id": "explainer-linkedin-circle_area",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/circle_area_4x5.mp4",
-    "text": "Why the area of a circle equals pi times radius squared.\n\nIf you take the rings of a circle and unroll them flat, they stack into a right triangle.\n\nThe widest ring at the bottom is the circumference.\n\nThe height is the radius of the circle.\n\nFinding the area of that triangle gives the area of the circle.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "text": "Why circle area is pi times radius squared.\n\nUnroll the rings of a circle.\n\nThey make a triangle.\n\nBottom is circumference. Height is radius.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "09:00",
     "posted": false
@@ -3800,12 +3795,7 @@
   {
     "id": "explainer-linkedin-pythagorean_theorem",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/pythagorean_theorem_4x5.mp4",
-    "text": "A visual proof of the Pythagorean theorem.\n\nPlace four identical right triangles inside a square.\n\nRearranging them changes the shape of the empty space, but not the total area.\n\nThe empty area of the two smaller squares equals the area of the square on the longest side.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "text": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
     "posted": false
@@ -3813,12 +3803,7 @@
   {
     "id": "explainer-linkedin-sum_of_odds",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/sum_of_odds_4x5.mp4",
-    "text": "Why adding consecutive odd numbers always creates a square number.\n\nStart with 1 block.\n\nWrap 3 blocks around it to make a 2 by 2 square.\n\nWrap 5 blocks around that to make a 3 by 3 square.\n\nEvery odd number fits as the next outer layer.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "text": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
     "posted": false
@@ -3826,12 +3811,7 @@
   {
     "id": "explainer-linkedin-sum_of_integers",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/sum_of_integers_4x5.mp4",
-    "text": "Adding numbers from 1 to n quickly.\n\nStack blocks into a staircase from 1 up to n.\n\nTake an identical copy, turn it upside down, and lock the two stairs together.\n\nThey form a rectangle with width n and height n plus 1.\n\nHalf of that rectangle is the exact sum.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "text": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
     "posted": false
@@ -3839,12 +3819,7 @@
   {
     "id": "explainer-linkedin-geometric_series",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/geometric_series_4x5.mp4",
-    "text": "Why an infinite series can add up to a whole number.\n\nStart with a square that has an area of 1.\n\nColor in half of it. Then color half of what is left, and keep going.\n\nEach step fills half of the remaining space.\n\nTogether, 1/2 plus 1/4 plus 1/8 and so on fill the whole square to 1.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "text": "Why halves add up to 1.\n\nStart with a square of 1.\n\nColor half, then half of what is left, forever.\n\nAll the pieces fill the square.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
     "posted": false
@@ -3852,39 +3827,144 @@
   {
     "id": "explainer-linkedin-difference_of_squares",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/difference_of_squares_4x5.mp4",
-    "text": "Why the difference of two squares equals a minus b times a plus b.\n\nStart with a square of size a by a, and remove a corner square of size b by b.\n\nThe remaining shape divides into two rectangular pieces.\n\nMoving one piece makes a single rectangle with width a plus b and height a minus b.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "text": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
     "posted": false
   },
   {
-    "id": "explainer-linkedin-binary_search",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/binary_search_4x5.mp4",
-    "text": "How binary search works.\n\nIf you have a sorted list of items, checking each item one by one is slow.\n\nBy checking the middle element first, you can throw away half the list in one step.\n\nRepeating this cuts a million items down to twenty checks.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
+    "id": "explainer-linkedin-sphere_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/sphere_volume_4x5.mp4",
+    "text": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
     "posted": false
   },
   {
+    "id": "explainer-linkedin-binary_search",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/binary_search_4x5.mp4",
+    "text": "How binary search works.\n\nDo not check items one by one.\n\nCheck the middle.\n\nThrow away half the list every time.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
     "id": "explainer-linkedin-bubble_vs_quicksort",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/bubble_vs_quicksort_4x5.mp4",
-    "text": "Why algorithm choice matters in sorting.\n\nBubble sort checks and swaps neighboring items, which takes too many steps on large data.\n\nQuick sort picks a pivot and splits items into smaller and larger sides.\n\nOn one million items, quick sort finishes thousands of times faster.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-17",
+    "text": "Bubble sort vs Quick sort.\n\nBubble sort swaps neighbors slowly.\n\nQuick sort splits around a pivot.\n\nQuick sort finishes much faster.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-bfs_vs_dfs",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/bfs_vs_dfs_4x5.mp4",
+    "text": "Two ways to search a network.\n\nBreadth-first search expands in waves.\n\nDepth-first search goes deep down one path first.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-hash_tables",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/hash_tables_4x5.mp4",
+    "text": "Why hash tables are fast.\n\nNo searching through lists.\n\nA math function turns the name into an address.\n\nJumps directly there.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-dijkstra",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/dijkstra_4x5.mp4",
+    "text": "Finding the shortest route.\n\nDijkstra tracks the shortest path so far.\n\nAlways picks the closest point next.\n\nGuarantees the shortest route.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-derivative_tangent",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/derivative_tangent_4x5.mp4",
+    "text": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-product_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/product_rule_4x5.mp4",
+    "text": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-sin_derivative",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/sin_derivative_4x5.mp4",
+    "text": "Why the derivative of sine is cosine.\n\nMove around a circle.\n\nHeight is sine.\n\nHow fast height changes matches the cosine distance.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-riemann_sums",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/riemann_sums_4x5.mp4",
+    "text": "Finding area under a curve.\n\nDraw rectangles under the curve.\n\nMake the rectangles thinner.\n\nThey turn into the smooth area.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-monty_hall",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/monty_hall_4x5.mp4",
+    "text": "Why you should switch doors.\n\nYour first pick is only 1 in 3.\n\nThe other doors hold 2 in 3.\n\nWhen one wrong door is opened, switch.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-central_limit_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/central_limit_theorem_4x5.mp4",
+    "text": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-bayes_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/bayes_theorem_4x5.mp4",
+    "text": "Why 99 percent test accuracy is tricky.\n\nIf a disease is rare, false alarms on healthy people can add up.\n\nAlways compare real cases to false alarms.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-simpsons_paradox",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/simpsons_paradox_4x5.mp4",
+    "text": "Simpson's paradox.\n\nBetter in group 1.\n\nBetter in group 2.\n\nCombine them, and it looks worse. Uneven sizes flip the total.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-stack_vs_queue",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/stack_vs_queue_4x5.mp4",
+    "text": "Stack vs Queue.\n\nStack last one in, first one out.\n\nQueue first one in, first one out.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-dynamic_array",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/dynamic_array_4x5.mp4",
+    "text": "How dynamic arrays grow.\n\nWhen the list is full, it doubles the memory size.\n\nCopies all items over.\n\nFrees up the old space.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-linkedin-binary_heap",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/binary_heap_4x5.mp4",
+    "text": "Binary heap in an array.\n\nLooks like a tree, stored as a flat list.\n\nSmallest item stays on top.\n\nUses math on the index to find branches.",
+    "scheduleDate": "2026-11-22",
     "scheduleTime": "17:00",
     "posted": false
   }

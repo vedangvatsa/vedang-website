@@ -1325,7 +1325,7 @@
   {
     "id": "explainer-fb-circle_area",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/circle_area_1x1.mp4",
-    "text": "Why the area of a circle equals pi times radius squared.\n\nCut a circle into thin rings and unroll them.\n\nThey form a triangle.\n\nThe bottom line is the circumference. The height is the radius.",
+    "text": "Why the area of a circle equals pi times radius squared.\n\nIf you take the rings of a circle and unroll them flat, they stack into a right triangle.\n\nThe widest ring at the bottom is the circumference.\n\nThe height is the radius of the circle.\n\nFinding the area of that triangle gives the area of the circle.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "09:00",
     "posted": false
@@ -1333,7 +1333,7 @@
   {
     "id": "explainer-fb-pythagorean_theorem",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/pythagorean_theorem_1x1.mp4",
-    "text": "Four matching right triangles placed inside a square.\n\nMoving them around shows the leftover space stays the same.\n\nThe two smaller squares equal the big square on the longest side.",
+    "text": "A visual proof of the Pythagorean theorem.\n\nPlace four identical right triangles inside a square.\n\nRearranging them changes the shape of the empty space, but not the total area.\n\nThe empty area of the two smaller squares equals the area of the square on the longest side.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
     "posted": false
@@ -1341,7 +1341,7 @@
   {
     "id": "explainer-fb-sum_of_odds",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/sum_of_odds_1x1.mp4",
-    "text": "Adding odd numbers in order always makes a square number.\n\n1 makes a 1 by 1 square.\n\nAdd 3, you get a 2 by 2 square.\n\nAdd 5, you get a 3 by 3 square.",
+    "text": "Why adding consecutive odd numbers always creates a square number.\n\nStart with 1 block.\n\nWrap 3 blocks around it to make a 2 by 2 square.\n\nWrap 5 blocks around that to make a 3 by 3 square.\n\nEvery odd number fits as the next outer layer.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
     "posted": false
@@ -1349,7 +1349,7 @@
   {
     "id": "explainer-fb-sum_of_integers",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/sum_of_integers_1x1.mp4",
-    "text": "How to add the numbers from 1 to n without adding each one.\n\nBuild a staircase of blocks from 1 to n.\n\nMake a second copy, flip it upside down, and fit them together.\n\nThey make a rectangle. Cut the total area in half.",
+    "text": "Adding numbers from 1 to n quickly.\n\nStack blocks into a staircase from 1 up to n.\n\nTake an identical copy, turn it upside down, and lock the two stairs together.\n\nThey form a rectangle with width n and height n plus 1.\n\nHalf of that rectangle is the exact sum.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
     "posted": false
@@ -1357,7 +1357,7 @@
   {
     "id": "explainer-fb-geometric_series",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/geometric_series_1x1.mp4",
-    "text": "Take a square with an area of 1.\n\nCut it in half. That is 1/2.\n\nCut the leftover space in half. That is 1/4.\n\nKeep cutting halves forever. Together they fill the square.",
+    "text": "Why an infinite series can add up to a whole number.\n\nStart with a square that has an area of 1.\n\nColor in half of it. Then color half of what is left, and keep going.\n\nEach step fills half of the remaining space.\n\nTogether, 1/2 plus 1/4 plus 1/8 and so on fill the whole square to 1.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
     "posted": false
@@ -1365,24 +1365,144 @@
   {
     "id": "explainer-fb-difference_of_squares",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/difference_of_squares_1x1.mp4",
-    "text": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
+    "text": "Why the difference of two squares equals a minus b times a plus b.\n\nStart with a square of size a by a, and remove a corner square of size b by b.\n\nThe remaining shape divides into two rectangular pieces.\n\nMoving one piece makes a single rectangle with width a plus b and height a minus b.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
     "posted": false
   },
   {
-    "id": "explainer-fb-binary_search",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/binary_search_1x1.mp4",
-    "text": "Finding an item in a sorted list.\n\nChecking one by one takes too long.\n\nChecking the middle cuts the remaining list in half every time.",
+    "id": "explainer-fb-sphere_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sphere_volume_1x1.mp4",
+    "text": "How Archimedes figured out the volume of a sphere.\n\nBreak a sphere down into many tiny pyramids with their points touching the center.\n\nThe height of every pyramid is the radius, and the sum of their bases is the surface area.\n\nAdding the volume of all the pyramids gives four thirds pi r cubed.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
     "posted": false
   },
   {
+    "id": "explainer-fb-binary_search",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/binary_search_1x1.mp4",
+    "text": "How binary search works.\n\nIf you have a sorted list of items, checking each item one by one is slow.\n\nBy checking the middle element first, you can throw away half the list in one step.\n\nRepeating this cuts a million items down to twenty checks.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
     "id": "explainer-fb-bubble_vs_quicksort",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/bubble_vs_quicksort_1x1.mp4",
-    "text": "Why some sorting methods are much faster.\n\nBubble sort checks two neighbors at a time and moves slowly.\n\nQuick sort picks a pivot and splits the whole list into two groups.",
-    "scheduleDate": "2026-11-17",
+    "text": "Why algorithm choice matters in sorting.\n\nBubble sort checks and swaps neighboring items, which takes too many steps on large data.\n\nQuick sort picks a pivot and splits items into smaller and larger sides.\n\nOn one million items, quick sort finishes thousands of times faster.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-bfs_vs_dfs",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/bfs_vs_dfs_1x1.mp4",
+    "text": "The difference between breadth-first search and depth-first search.\n\nBreadth-first search uses a queue to look at nearby nodes first, level by level.\n\nDepth-first search uses a stack to go as deep as possible down one path before backing up.\n\nBreadth-first search finds the shortest path, while depth-first search uses less memory.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-hash_tables",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/hash_tables_1x1.mp4",
+    "text": "How hash tables find data without searching.\n\nInstead of looking through items one by one, a hash function converts the key into an index number.\n\nThe computer jumps directly to that memory slot in a single step.\n\nThis makes lookups take constant time, no matter how much data is stored.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-dijkstra",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/dijkstra_1x1.mp4",
+    "text": "How Dijkstra's algorithm finds the shortest path.\n\nIt tracks the shortest known distance to every point on a map.\n\nAt each step, it picks the nearest unvisited point and checks if moving through it gives a shorter route.\n\nThis guarantees the shortest path without checking every route.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-derivative_tangent",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/derivative_tangent_1x1.mp4",
+    "text": "The geometric meaning of a derivative.\n\nPick two points on a curve and draw a line between them.\n\nAs the distance between the two points shrinks toward zero, the line rotates.\n\nAt the limit, it touches the curve at a single point, showing the exact slope at that instant.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-product_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/product_rule_1x1.mp4",
+    "text": "A visual explanation of the product rule in calculus.\n\nPicture a rectangle with width u and height v.\n\nWhen both sides grow a little bit, the extra area comes from two side strips and one tiny corner.\n\nAs the changes get smaller, the corner disappears, leaving only the two strips.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-sin_derivative",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sin_derivative_1x1.mp4",
+    "text": "Why the derivative of sine is cosine.\n\nTrace a point moving around a unit circle.\n\nSine measures the vertical height of the point, while cosine measures the horizontal distance.\n\nWhen the point moves a tiny step along the circle, the change in height equals the horizontal distance.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-riemann_sums",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/riemann_sums_1x1.mp4",
+    "text": "How Riemann sums turn into an integral.\n\nTo find the area under a curve, start by drawing rectangles under it and adding their areas.\n\nIf you use four wide bars, the estimate is rough.\n\nAs you make the bars thinner, the jagged steps smooth out into the exact area.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-monty_hall",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/monty_hall_1x1.mp4",
+    "text": "Why you should always switch doors in the Monty Hall problem.\n\nWhen you make your first pick out of three doors, your chance of finding the car is 1 in 3.\n\nThat leaves a 2 in 3 chance that the car is behind one of the other doors.\n\nThe host reveals a goat behind one of them, which means that full 2 in 3 chance moves to the remaining closed door.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-central_limit_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/central_limit_theorem_1x1.mp4",
+    "text": "Why the bell curve shows up everywhere.\n\nWhen you drop balls through rows of pegs, each ball makes several random choices to bounce left or right.\n\nExtreme paths to the far sides are rare, while paths that balance out are common.\n\nAdding many small random steps always builds a normal distribution.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-bayes_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/bayes_theorem_1x1.mp4",
+    "text": "Why a positive medical test does not always mean you are sick.\n\nImagine a rare disease that only 1 person in 100 has.\n\nEven with an accurate test, false alarms on the 99 healthy people can add up quickly.\n\nLooking at the actual counts of true positives versus false alarms gives the real probability.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-simpsons_paradox",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/simpsons_paradox_1x1.mp4",
+    "text": "How Simpson's paradox flips numbers upside down.\n\nA treatment can have a higher success rate than a competitor in mild cases, and also in severe cases.\n\nYet when you look at the combined total, it can appear worse overall.\n\nThis happens when one group gets far more difficult cases than the other.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-stack_vs_queue",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/stack_vs_queue_1x1.mp4",
+    "text": "The difference between a stack and a queue.\n\nA stack works on a last-in, first-out rule, like adding and removing trays from a single pile.\n\nA queue works on a first-in, first-out rule, like people standing in line at a checkout.\n\nBoth allow adding and removing items in a single quick step.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-dynamic_array",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/dynamic_array_1x1.mp4",
+    "text": "How dynamic arrays grow when they run out of space.\n\nComputers store arrays in continuous memory blocks of a fixed size.\n\nWhen you add an item past the limit, the array creates a new block double the size, copies everything over, and deletes the old one.\n\nBecause doubling happens less and less often, the average cost per item stays low.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-fb-binary_heap",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/binary_heap_1x1.mp4",
+    "text": "How a binary heap stores a tree inside an array.\n\nEven though it behaves like a tree where each parent is smaller than its children, it is stored in a flat array.\n\nThe left child of item i is at 2i plus 1, and the right child is at 2i plus 2.\n\nNew items bubble up to keep the smallest number on top.",
+    "scheduleDate": "2026-11-22",
     "scheduleTime": "17:00",
     "posted": false
   }
