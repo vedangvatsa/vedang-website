@@ -4261,7 +4261,7 @@
   {
     "id": "explainer-tiktok-stack_vs_queue",
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/stack_vs_queue_9x16.mp4",
-    "text": "Stack vs Queue.\n\nStack: last one in, first one out.\n\nQueue: first one in, first one out.",
+    "text": "Stack vs Queue.\n\nStack means last one in, first one out.\n\nQueue means first one in, first one out.",
     "tags": [
       "math",
       "computerscience",

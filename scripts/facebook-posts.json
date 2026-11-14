@@ -1397,7 +1397,7 @@
   {
     "id": "explainer-fb-bfs_vs_dfs",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/bfs_vs_dfs_1x1.mp4",
-    "text": "Two ways to explore a graph or maze.\n\nBreadth-first search checks every close neighbor before going deeper.\n\nDepth-first search goes straight down one path until it hits a dead end.",
+    "text": "Two ways to search through a graph or maze.\n\nBreadth-first search checks every close neighbor before going deeper.\n\nDepth-first search goes straight down one path until it hits a dead end.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
     "posted": false
