@@ -3359,8 +3359,8 @@
     "text": "How the largest dry cowpea producers changed.\n\n2000-2024. Dry cowpea production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-06",
     "scheduleTime": "17:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-14T20:20:32.115Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/120-r2.txt",
     "captionStyle": "concise-v2",
@@ -3375,7 +3375,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-14T20:20:28.843Z",
+    "attemptedSlot": "2026-11-15T01:00",
+    "publishedText": "How the largest dry cowpea producers changed.\n\n2000-2024. Dry cowpea production by country, measured in millions of tonnes.",
+    "platformPostId": "833290378464657408",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833290378464657408"
   },
   {
     "id": "viz-b2-tumblr-121",
