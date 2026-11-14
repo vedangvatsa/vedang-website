@@ -995,7 +995,7 @@
     "notesUrl": "https://veda.ng/viz-notes/36.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "publishedText": "The share of people mainly using clean cooking fuels.\n\n2000-2023. The share of residents mainly using clean cooking fuels and technologies. Data source: Tracking SDG 7.",
     "state": "sent",
     "attemptedSlot": "2026-10-09T14:00",
@@ -1107,7 +1107,7 @@
     "notesUrl": "https://veda.ng/viz-notes/40.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "publishedText": "How much primary energy each unit of output requires.\n\n2000-2021. Primary energy use per unit of GDP, adjusted for purchasing power. Data source: Tracking SDG 7.",
     "state": "sent",
     "attemptedSlot": "2026-10-10T20:00",
@@ -3214,7 +3214,8 @@
     "altText": "Raspberries, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-117",
@@ -3238,7 +3239,8 @@
     "altText": "Quinces, 2000-2017. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-118",
@@ -3262,7 +3264,8 @@
     "altText": "Grapefruit, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-64",
@@ -3286,7 +3289,8 @@
     "altText": "Households, 2002-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-119",
@@ -3310,7 +3314,8 @@
     "altText": "Linseed, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-120",
@@ -3334,7 +3339,8 @@
     "altText": "Cowpeas, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-121",
@@ -3358,7 +3364,8 @@
     "altText": "Broad beans, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-122",
@@ -3382,7 +3389,8 @@
     "altText": "Taro, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-65",
@@ -3406,7 +3414,8 @@
     "altText": "Medical bills, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-123",
@@ -3430,7 +3439,8 @@
     "altText": "Leeks, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-124",
@@ -3454,7 +3464,8 @@
     "altText": "Dried chillies, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-125",
@@ -3478,7 +3489,8 @@
     "altText": "Vanilla, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-126",
@@ -3502,7 +3514,8 @@
     "altText": "Nutmeg family, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-66",
@@ -3526,7 +3539,8 @@
     "altText": "Tuberculosis, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-127",
@@ -3550,7 +3564,8 @@
     "altText": "Olive oil, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-128",
@@ -3574,7 +3589,8 @@
     "altText": "Palm oil, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-129",
@@ -3598,7 +3614,8 @@
     "altText": "Camel meat, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-130",
@@ -3622,7 +3639,8 @@
     "altText": "Cream, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-67",
@@ -3646,7 +3664,8 @@
     "altText": "HIV prevalence, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-131",
@@ -3670,7 +3689,8 @@
     "altText": "Milk powder, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-132",
@@ -3694,7 +3714,8 @@
     "altText": "Plantains, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-133",
@@ -3718,7 +3739,8 @@
     "altText": "Tea leaves, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-134",
@@ -3742,7 +3764,8 @@
     "altText": "Molasses, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-68",
@@ -3766,7 +3789,8 @@
     "altText": "Problem loans, 2011-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-135",
@@ -3790,7 +3814,8 @@
     "altText": "Sheep milk, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-136",
@@ -3814,7 +3839,8 @@
     "altText": "Sunflower oil, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-137",
@@ -3838,7 +3864,8 @@
     "altText": "Peanut oil, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-138",
@@ -3862,7 +3889,8 @@
     "altText": "Rapeseed oil, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-139",
@@ -3886,7 +3914,8 @@
     "altText": "Soybean oil, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
   },
   {
     "id": "viz-b2-ig-140",
@@ -3910,6 +3939,306 @@
     "altText": "Cottonseed oil, 2000-2023. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true
+  },
+  {
+    "id": "explainer-ig-circle_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/circle_area_9x16.mp4",
+    "text": "Why circle area is pi times radius squared.\n\nUnroll the rings of a circle.\n\nThey make a triangle.\n\nBottom is circumference. Height is radius.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-15",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-pythagorean_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/pythagorean_theorem_9x16.mp4",
+    "text": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-15",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-sum_of_odds",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sum_of_odds_9x16.mp4",
+    "text": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-sum_of_integers",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sum_of_integers_9x16.mp4",
+    "text": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-geometric_series",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/geometric_series_9x16.mp4",
+    "text": "Why halves add up to 1.\n\nStart with a square of 1.\n\nColor half, then half of what is left, forever.\n\nAll the pieces fill the square.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-difference_of_squares",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/difference_of_squares_9x16.mp4",
+    "text": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-sphere_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sphere_volume_9x16.mp4",
+    "text": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-binary_search",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/binary_search_9x16.mp4",
+    "text": "How binary search works.\n\nDo not check items one by one.\n\nCheck the middle.\n\nThrow away half the list every time.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-bubble_vs_quicksort",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/bubble_vs_quicksort_9x16.mp4",
+    "text": "Bubble sort vs Quick sort.\n\nBubble sort swaps neighbors slowly.\n\nQuick sort splits around a pivot.\n\nQuick sort finishes much faster.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-bfs_vs_dfs",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/bfs_vs_dfs_9x16.mp4",
+    "text": "Two ways to search a network.\n\nBreadth-first search expands in waves.\n\nDepth-first search goes deep down one path first.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-hash_tables",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/hash_tables_9x16.mp4",
+    "text": "Why hash tables are fast.\n\nNo searching through lists.\n\nA math function turns the name into an address.\n\nJumps directly there.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-dijkstra",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/dijkstra_9x16.mp4",
+    "text": "Finding the shortest route.\n\nDijkstra tracks the shortest path so far.\n\nAlways picks the closest point next.\n\nGuarantees the shortest route.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-derivative_tangent",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/derivative_tangent_9x16.mp4",
+    "text": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-product_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/product_rule_9x16.mp4",
+    "text": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-sin_derivative",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sin_derivative_9x16.mp4",
+    "text": "Why the derivative of sine is cosine.\n\nMove around a circle.\n\nHeight is sine.\n\nHow fast height changes matches the cosine distance.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-riemann_sums",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/riemann_sums_9x16.mp4",
+    "text": "Finding area under a curve.\n\nDraw rectangles under the curve.\n\nMake the rectangles thinner.\n\nThey turn into the smooth area.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-monty_hall",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/monty_hall_9x16.mp4",
+    "text": "Why you should switch doors.\n\nYour first pick is only 1 in 3.\n\nThe other doors hold 2 in 3.\n\nWhen one wrong door is opened, switch.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-central_limit_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/central_limit_theorem_9x16.mp4",
+    "text": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-bayes_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/bayes_theorem_9x16.mp4",
+    "text": "Why 99 percent test accuracy is tricky.\n\nIf a disease is rare, false alarms on healthy people can add up.\n\nAlways compare real cases to false alarms.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-simpsons_paradox",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/simpsons_paradox_9x16.mp4",
+    "text": "Simpson's paradox.\n\nBetter in group 1.\n\nBetter in group 2.\n\nCombine them, and it looks worse. Uneven sizes flip the total.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-stack_vs_queue",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/stack_vs_queue_9x16.mp4",
+    "text": "Stack vs Queue.\n\nStack: last one in, first one out.\n\nQueue: first one in, first one out.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-dynamic_array",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/dynamic_array_9x16.mp4",
+    "text": "How dynamic arrays grow.\n\nWhen the list is full, it doubles the memory size.\n\nCopies all items over.\n\nFrees up the old space.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "explainer-ig-binary_heap",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/binary_heap_9x16.mp4",
+    "text": "Binary heap in an array.\n\nLooks like a tree, stored as a flat list.\n\nSmallest item stays on top.\n\nUses math on the index to find branches.",
+    "tags": [
+      "math",
+      "computerscience",
+      "education"
+    ],
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "17:00",
+    "posted": false
   }
 ]
