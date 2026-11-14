@@ -1922,7 +1922,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-12",
     "scheduleTime": "09:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Open-weights models now run completely offline on consumer hardware with zero API fees.\n\n8 essential tools & runtimes to run local AI 🧵👇",
@@ -1970,7 +1970,9 @@
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "postedAt": "2026-11-14T00:28:48.307Z",
+    "tweetId": "6af7ab3a4b28296eb124f0e3"
   },
   {
     "id": "ai-code-editors-thread",
