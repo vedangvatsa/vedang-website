@@ -3863,19 +3863,6 @@
     "posted": false
   },
   {
-    "id": "explainer-linkedin-sphere_volume",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/sphere_volume_4x5.mp4",
-    "text": "How Archimedes figured out the volume of a sphere.\n\nBreak a sphere down into many tiny pyramids with their points touching the center.\n\nThe height of every pyramid is the radius, and the sum of their bases is the surface area.\n\nAdding the volume of all the pyramids gives four thirds pi r cubed.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-17",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
     "id": "explainer-linkedin-binary_search",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/binary_search_4x5.mp4",
     "text": "How binary search works.\n\nIf you have a sorted list of items, checking each item one by one is slow.\n\nBy checking the middle element first, you can throw away half the list in one step.\n\nRepeating this cuts a million items down to twenty checks.",
@@ -3885,7 +3872,7 @@
       "education"
     ],
     "scheduleDate": "2026-11-17",
-    "scheduleTime": "17:00",
+    "scheduleTime": "09:00",
     "posted": false
   },
   {
@@ -3897,189 +3884,7 @@
       "computerscience",
       "education"
     ],
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-bfs_vs_dfs",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/bfs_vs_dfs_4x5.mp4",
-    "text": "The difference between breadth-first search and depth-first search.\n\nBreadth-first search uses a queue to look at nearby nodes first, level by level.\n\nDepth-first search uses a stack to go as deep as possible down one path before backing up.\n\nBreadth-first search finds the shortest path, while depth-first search uses less memory.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-hash_tables",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/hash_tables_4x5.mp4",
-    "text": "How hash tables find data without searching.\n\nInstead of looking through items one by one, a hash function converts the key into an index number.\n\nThe computer jumps directly to that memory slot in a single step.\n\nThis makes lookups take constant time, no matter how much data is stored.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "17:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-dijkstra",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/dijkstra_4x5.mp4",
-    "text": "How Dijkstra's algorithm finds the shortest path.\n\nIt tracks the shortest known distance to every point on a map.\n\nAt each step, it picks the nearest unvisited point and checks if moving through it gives a shorter route.\n\nThis guarantees the shortest path without checking every route.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-derivative_tangent",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/derivative_tangent_4x5.mp4",
-    "text": "The geometric meaning of a derivative.\n\nPick two points on a curve and draw a line between them.\n\nAs the distance between the two points shrinks toward zero, the line rotates.\n\nAt the limit, it touches the curve at a single point, showing the exact slope at that instant.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-product_rule",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/product_rule_4x5.mp4",
-    "text": "A visual explanation of the product rule in calculus.\n\nPicture a rectangle with width u and height v.\n\nWhen both sides grow a little bit, the extra area comes from two side strips and one tiny corner.\n\nAs the changes get smaller, the corner disappears, leaving only the two strips.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "17:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-sin_derivative",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/sin_derivative_4x5.mp4",
-    "text": "Why the derivative of sine is cosine.\n\nTrace a point moving around a unit circle.\n\nSine measures the vertical height of the point, while cosine measures the horizontal distance.\n\nWhen the point moves a tiny step along the circle, the change in height equals the horizontal distance.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-riemann_sums",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/riemann_sums_4x5.mp4",
-    "text": "How Riemann sums turn into an integral.\n\nTo find the area under a curve, start by drawing rectangles under it and adding their areas.\n\nIf you use four wide bars, the estimate is rough.\n\nAs you make the bars thinner, the jagged steps smooth out into the exact area.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-monty_hall",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/monty_hall_4x5.mp4",
-    "text": "Why you should always switch doors in the Monty Hall problem.\n\nWhen you make your first pick out of three doors, your chance of finding the car is 1 in 3.\n\nThat leaves a 2 in 3 chance that the car is behind one of the other doors.\n\nThe host reveals a goat behind one of them, which means that full 2 in 3 chance moves to the remaining closed door.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "17:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-central_limit_theorem",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/central_limit_theorem_4x5.mp4",
-    "text": "Why the bell curve shows up everywhere.\n\nWhen you drop balls through rows of pegs, each ball makes several random choices to bounce left or right.\n\nExtreme paths to the far sides are rare, while paths that balance out are common.\n\nAdding many small random steps always builds a normal distribution.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-bayes_theorem",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/bayes_theorem_4x5.mp4",
-    "text": "Why a positive medical test does not always mean you are sick.\n\nImagine a rare disease that only 1 person in 100 has.\n\nEven with an accurate test, false alarms on the 99 healthy people can add up quickly.\n\nLooking at the actual counts of true positives versus false alarms gives the real probability.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-simpsons_paradox",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/simpsons_paradox_4x5.mp4",
-    "text": "How Simpson's paradox flips numbers upside down.\n\nA treatment can have a higher success rate than a competitor in mild cases, and also in severe cases.\n\nYet when you look at the combined total, it can appear worse overall.\n\nThis happens when one group gets far more difficult cases than the other.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "17:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-stack_vs_queue",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/stack_vs_queue_4x5.mp4",
-    "text": "The difference between a stack and a queue.\n\nA stack works on a last-in, first-out rule, like adding and removing trays from a single pile.\n\nA queue works on a first-in, first-out rule, like people standing in line at a checkout.\n\nBoth allow adding and removing items in a single quick step.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-22",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-dynamic_array",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/dynamic_array_4x5.mp4",
-    "text": "How dynamic arrays grow when they run out of space.\n\nComputers store arrays in continuous memory blocks of a fixed size.\n\nWhen you add an item past the limit, the array creates a new block double the size, copies everything over, and deletes the old one.\n\nBecause doubling happens less and less often, the average cost per item stays low.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-22",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-linkedin-binary_heap",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/binary_heap_4x5.mp4",
-    "text": "How a binary heap stores a tree inside an array.\n\nEven though it behaves like a tree where each parent is smaller than its children, it is stored in a flat array.\n\nThe left child of item i is at 2i plus 1, and the right child is at 2i plus 2.\n\nNew items bubble up to keep the smallest number on top.",
-    "tags": [
-      "math",
-      "computerscience",
-      "education"
-    ],
-    "scheduleDate": "2026-11-22",
+    "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
     "posted": false
   }

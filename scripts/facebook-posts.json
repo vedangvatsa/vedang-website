@@ -1371,138 +1371,18 @@
     "posted": false
   },
   {
-    "id": "explainer-fb-sphere_volume",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sphere_volume_1x1.mp4",
-    "text": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
-    "scheduleDate": "2026-11-17",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
     "id": "explainer-fb-binary_search",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/binary_search_1x1.mp4",
     "text": "Finding an item in a sorted list.\n\nChecking one by one takes too long.\n\nChecking the middle cuts the remaining list in half every time.",
     "scheduleDate": "2026-11-17",
-    "scheduleTime": "17:00",
+    "scheduleTime": "09:00",
     "posted": false
   },
   {
     "id": "explainer-fb-bubble_vs_quicksort",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/bubble_vs_quicksort_1x1.mp4",
     "text": "Why some sorting methods are much faster.\n\nBubble sort checks two neighbors at a time and moves slowly.\n\nQuick sort picks a pivot and splits the whole list into two groups.",
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-bfs_vs_dfs",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/bfs_vs_dfs_1x1.mp4",
-    "text": "Two ways to search through a graph or maze.\n\nBreadth-first search checks every close neighbor before going deeper.\n\nDepth-first search goes straight down one path until it hits a dead end.",
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-hash_tables",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/hash_tables_1x1.mp4",
-    "text": "Why looking up data in a hash table is fast.\n\nYou do not search through a list.\n\nA function turns the key into an exact slot number and jumps right there.",
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "17:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-dijkstra",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/dijkstra_1x1.mp4",
-    "text": "Finding the shortest route between two places.\n\nDijkstra starts at the beginning and keeps track of the shortest path found so far.\n\nIt always visits the closest unvisited point next.",
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-derivative_tangent",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/derivative_tangent_1x1.mp4",
-    "text": "What a derivative means in geometry.\n\nDraw a line through two points on a curve.\n\nMove the two points closer together.\n\nThe line turns into a tangent touching at just one point.",
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-product_rule",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/product_rule_1x1.mp4",
-    "text": "Why the derivative of u times v is u dv plus v du.\n\nPicture a rectangle of width u and height v.\n\nIf both sides grow slightly, the new area is two thin strips plus a tiny corner.\n\nThe corner is too small to matter.",
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "17:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-sin_derivative",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sin_derivative_1x1.mp4",
-    "text": "Why the rate of change of sine equals cosine.\n\nMove a point around a circle.\n\nSine is how high the point is.\n\nAs you move along the circle, how fast height changes matches horizontal distance.",
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-riemann_sums",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/riemann_sums_1x1.mp4",
-    "text": "Finding the area under a curve.\n\nFill the space with wide rectangular bars.\n\nMake the bars thinner and thinner.\n\nThe bumpy top flattens out into the smooth curve.",
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-monty_hall",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/monty_hall_1x1.mp4",
-    "text": "The Monty Hall problem.\n\nPick one of three doors. You have a 1 in 3 chance of being right.\n\nThe host opens a goat door.\n\nSwitching gives you the other 2 in 3 chance.",
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "17:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-central_limit_theorem",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/central_limit_theorem_1x1.mp4",
-    "text": "Drop balls through rows of pins.\n\nEach ball bounces randomly left or right.\n\nMost balls end up near the center.\n\nThe pile naturally forms a bell shape.",
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-bayes_theorem",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/bayes_theorem_1x1.mp4",
-    "text": "A test has 99 percent accuracy, and you test positive.\n\nAre you 99 percent likely to have the disease?\n\nIf the disease is rare, false alarms can still outnumber real cases.",
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-simpsons_paradox",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/simpsons_paradox_1x1.mp4",
-    "text": "A treatment does better in group 1.\n\nIt also does better in group 2.\n\nCombine both groups, and it looks worse.\n\nUneven group sizes can flip the final result.",
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "17:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-stack_vs_queue",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/stack_vs_queue_1x1.mp4",
-    "text": "A stack is like a pile of plates. The last plate placed on top is the first one taken off.\n\nA queue is like a line of people. The first person to arrive is the first one served.",
-    "scheduleDate": "2026-11-22",
-    "scheduleTime": "01:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-dynamic_array",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/dynamic_array_1x1.mp4",
-    "text": "Arrays have a fixed size in memory.\n\nWhen a dynamic array runs out of room, it asks for a space twice as large.\n\nIt copies the items over and drops the old space.",
-    "scheduleDate": "2026-11-22",
-    "scheduleTime": "09:00",
-    "posted": false
-  },
-  {
-    "id": "explainer-fb-binary_heap",
-    "video": "scripts/viz-assets/videos/explainer_videos/1x1/binary_heap_1x1.mp4",
-    "text": "A binary heap looks like a tree, but lives in a simple array.\n\nThe smallest item stays at the top.\n\nChild positions are found by simple math on the index numbers.",
-    "scheduleDate": "2026-11-22",
+    "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
     "posted": false
   }
