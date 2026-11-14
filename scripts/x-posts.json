@@ -1979,7 +1979,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-12",
     "scheduleTime": "17:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ AI coding tools evolved from tab-autocomplete into full autonomous engineering agents.\n\n8 modern AI code editors & developer tools 🧵👇",
@@ -2027,7 +2027,9 @@
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "postedAt": "2026-11-14T10:53:51.033Z",
+    "tweetId": "6af83db878196a0a9759dd73"
   },
   {
     "id": "production-rag-thread",
