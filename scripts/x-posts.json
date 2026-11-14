@@ -2036,7 +2036,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-13",
     "scheduleTime": "01:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Naive vector search fails in production without proper chunking, reranking, and evaluation.\n\n8 essential tools for production RAG pipelines 🧵👇",
@@ -2084,7 +2084,9 @@
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "postedAt": "2026-11-14T17:19:31.838Z",
+    "tweetId": "6af8981d918fe79d2e93011b"
   },
   {
     "id": "web3-ai-depin-thread",
