@@ -3700,12 +3700,12 @@
   {
     "id": "explainer-bsky-pythagorean_theorem",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/pythagorean_theorem_1x1.mp4",
-    "title": "A Visual Proof of the Pythagorean Theorem",
+    "title": "The Pythagorean Theorem",
     "text": "Four matching right triangles placed inside a square.\n\nMoving them around shows the leftover space stays the same.\n\nThe two smaller squares equal the big square on the longest side.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
     "posted": false,
-    "altText": "A Visual Proof of the Pythagorean Theorem",
+    "altText": "The Pythagorean Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_1x1.png",
     "batchId": "explainer-v1"
   },
@@ -3748,7 +3748,7 @@
   {
     "id": "explainer-bsky-difference_of_squares",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/difference_of_squares_1x1.mp4",
-    "title": "Visualizing the Difference of Squares",
+    "title": "The Difference of Squares",
     "text": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
