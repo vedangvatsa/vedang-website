@@ -4901,5 +4901,310 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
+  },
+  {
+    "id": "ai-gateway-rate-limiting-thread",
+    "topic": "ai-infra",
+    "date": "2026-03-27",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Production AI apps cannot rely on single provider endpoints. Routing proxies provide failover, rate limiting, and cost controls.\n\n8 open-source AI gateways & proxy layers 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ LiteLLM — Universal model proxy.\n\n• Standardizes 100+ LLM APIs into OpenAI format\n• Native fallback logic and team budget controls\n\nhttps://github.com/BerriAI/litellm",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_02_litellm.png"
+      },
+      {
+        "text": "3/ Portkey AI Gateway — Fast model proxy.\n\n• Handles 4B+ requests with sub-millisecond overhead\n• Automatic retries, canary releases, and load balancing\n\nhttps://github.com/Portkey-AI/gateway",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_03_portkey.png"
+      },
+      {
+        "text": "4/ Bifrost — Low-latency Rust gateway.\n\n• Ultra-lightweight reverse proxy built by Helicone\n• Zero-copy streaming response caching and tracking\n\nhttps://github.com/Helicone/bifrost",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_04_bifrost.png"
+      },
+      {
+        "text": "5/ Kong AI Gateway — Enterprise API proxy.\n\n• Centralizes governance across internal microservices\n• Dynamic prompt decoration and token quota enforcement\n\nhttps://github.com/Kong/kong",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_05_kong.png"
+      },
+      {
+        "text": "6/ Envoy AI Gateway — Cloud-native filter.\n\n• Integrates model routing into Envoy service mesh\n• Dynamic token bucket rate limiting on L7 data plane\n\nhttps://github.com/envoyproxy/ai-gateway",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_06_envoy_ai.png"
+      },
+      {
+        "text": "7/ BerriAI Virtual Keys — Budget proxy.\n\n• Maps internal user tokens to external provider keys\n• Hard monthly spending limits per developer or service\n\nhttps://github.com/BerriAI/litellm",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_07_berriai.png"
+      },
+      {
+        "text": "8/ Higress AI — Ingress gateway.\n\n• Cloud-native API gateway built on Envoy and Istio\n• Wasm plugins for semantic caching and token limits\n\nhttps://github.com/alibaba/higress",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_08_higress.png"
+      },
+      {
+        "text": "9/ OpenResty AI Proxy — Lua Nginx gateway.\n\n• Nginx event loop with Lua streaming response parser\n• Zero runtime GC pauses during massive concurrent loads\n\nhttps://github.com/openresty/openresty",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_09_openresty.png"
+      },
+      {
+        "text": "10/ Gateway architecture trade-offs:\n\n• Central proxy adds ~1ms network hop but guarantees team-wide rate limits, observability, and failover without redeploying code."
+      },
+      {
+        "text": "11/ Dive into our breakdown on continuous batching engines for high-throughput LLM serving:\n\nhttps://x.com/vedangvatsa/status/1987654321098765432"
+      },
+      {
+        "text": "12/ For edge and browser neural execution, explore WebAssembly runtimes:\n\nhttps://x.com/vedangvatsa/status/1987654321098765433"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "webassembly-ai-runtimes-thread",
+    "topic": "edge-ai",
+    "date": "2026-03-28",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Client-side AI protects user privacy and eliminates cloud GPU costs. Modern WebAssembly runtimes bring models directly into browsers.\n\n8 WebAssembly AI runtimes for edge & browser 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ WebLLM — In-browser LLM engine.\n\n• Compiles PyTorch weights via Apache TVM to WebGPU\n• Zero server calls; complete private local inference\n\nhttps://github.com/mlc-ai/web-llm",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_02_webllm.png"
+      },
+      {
+        "text": "3/ Transformers.js — Client-side pipelines.\n\n• Runs BERT, Whisper, and CLIP directly in browsers\n• Drop-in Hugging Face pipeline API with ONNX Web\n\nhttps://github.com/huggingface/transformers.js",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_03_transformers_js.png"
+      },
+      {
+        "text": "4/ WasmEdge — Cloud-native Wasm.\n\n• High-performance sandbox with WASI-NN plugins\n• Executes quantized LLMs on edge nodes and K8s pods\n\nhttps://github.com/WasmEdge/WasmEdge",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_04_wasmedge.png"
+      },
+      {
+        "text": "5/ Wasmtime — Bytecode Alliance engine.\n\n• Production-grade WebAssembly runtime in Rust\n• Granular capability-based sandboxing for untrusted code\n\nhttps://github.com/bytecodealliance/wasmtime",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_05_wasmtime.png"
+      },
+      {
+        "text": "6/ ONNX Runtime Web — Cross-platform web ML.\n\n• Official Microsoft ONNX runtime for browser environments\n• Automatic fallback between WebGPU, Wasm SIMD, and WebGL\n\nhttps://github.com/microsoft/onnxruntime",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_06_onnx_web.png"
+      },
+      {
+        "text": "7/ Candle (Wasm) — Minimal Rust ML.\n\n• Lightweight tensor library without heavy C++ dependencies\n• Pure WebAssembly compilation with WebGPU compute shaders\n\nhttps://github.com/huggingface/candle",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_07_candle.png"
+      },
+      {
+        "text": "8/ TensorFlow.js — Edge vision runtime.\n\n• Hardware-accelerated client inference for computer vision\n• Optimized Wasm SIMD kernels for mobile web browsers\n\nhttps://github.com/tensorflow/tfjs",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_08_tfjs.png"
+      },
+      {
+        "text": "9/ Ratchet — WebGPU inference engine.\n\n• Rust-native compute shaders optimized for client devices\n• Instant model warmup with zero compile-time latency\n\nhttps://github.com/FL3R/ratchet",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_09_ratchet.png"
+      },
+      {
+        "text": "10/ Edge Wasm trade-offs:\n\n• Client inference eliminates server GPU bills and preserves user privacy, but requires streaming quantized weights via Cache API and WebGPU."
+      },
+      {
+        "text": "11/ Check our full technical breakdown on on-device NPU runtimes across iOS and Android:\n\nhttps://x.com/vedangvatsa/status/1987654321098765434"
+      },
+      {
+        "text": "12/ For serverless model quantization strategies (AWQ, GGUF), revisit our guide:\n\nhttps://x.com/vedangvatsa/status/1987654321098765435"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "stablecoin-payment-rails-thread",
+    "topic": "web3",
+    "date": "2026-03-29",
+    "category": "Web3",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Autonomous agents cannot open bank accounts, but they can hold stablecoin balances and settle API costs programmatically onchain.\n\n8 programmable stablecoin APIs for agents 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Circle APIs — Programmable wallets.\n\n• Native USDC transfers across major EVM chains & Solana\n• Smart contract accounts with automated gas sponsorship\n\nhttps://www.circle.com/en/programmable-wallets",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_02_circle.png"
+      },
+      {
+        "text": "3/ Coinbase AgentKit — Onchain agent toolkit.\n\n• Integrates LangChain with Base EVM smart accounts\n• Enables agents to send USDC, deploy tokens, and pay fees\n\nhttps://github.com/coinbase/agentkit",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_03_coinbase_agentkit.png"
+      },
+      {
+        "text": "4/ BVNK — Fiat & stablecoin bridge.\n\n• Unified API converting USDC and EURC to bank ACH/SEPA\n• Automated compliance screening and real-time quotes\n\nhttps://bvnk.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_04_bvnk.png"
+      },
+      {
+        "text": "5/ Helio — Web3 payment gateway.\n\n• Low-fee Solana and polygon checkout integration\n• Webhook triggers for API key unlock and license renewals\n\nhttps://helio.co",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_05_helio.png"
+      },
+      {
+        "text": "6/ Decaf — Micropayment streaming.\n\n• Programmatic stablecoin streams on fast L1/L2 rails\n• Enables sub-cent compensation per API query completed\n\nhttps://decaf.so",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_06_decaf.png"
+      },
+      {
+        "text": "7/ L402 Protocol — HTTP payment protocol.\n\n• Standardized HTTP 402 status headers for API billing\n• Macaroon authentication tokens minted upon satoshi receipt\n\nhttps://docs.lightning.engineering/the-lightning-network/l402",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_07_l402.png"
+      },
+      {
+        "text": "8/ Rain Cards — Virtual agent debit cards.\n\n• Corporate credit lines backed directly by onchain treasuries\n• Generates disposable cards for agents to pay legacy SaaS\n\nhttps://raincards.xyz",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_08_rain.png"
+      },
+      {
+        "text": "9/ ZeroHash — Embedded settlement API.\n\n• Institutional custody and regulatory compliance rails\n• Turnkey API infrastructure for automated balance rebalancing\n\nhttps://zerohash.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_09_zerohash.png"
+      },
+      {
+        "text": "10/ Agent payments architecture:\n\n• Account Abstraction (ERC-4337) allows operators to assign autonomous spending caps, while L2 rollups keep fees below a fraction of a cent."
+      },
+      {
+        "text": "11/ Read our architecture guide on smart contract account abstraction and ERC-4337:\n\nhttps://x.com/vedangvatsa/status/1987654321098765436"
+      },
+      {
+        "text": "12/ For cross-chain intent solvers and gasless swaps, explore our deep-dive:\n\nhttps://x.com/vedangvatsa/status/1987654321098765437"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "chunking-tokenization-engines-thread",
+    "topic": "rag",
+    "date": "2026-03-30",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Retrieval quality in RAG is determined at the chunking phase. Naive character splitting severs context and corrupts embedding vectors.\n\n8 document chunking & tokenization engines 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Chonkie — Lightweight Python chunker.\n\n• Fast token, word, and sentence semantic chunking\n• Clean API with zero heavy dependencies or memory bloat\n\nhttps://github.com/bhavnicksm/chonkie",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_02_chonkie.png"
+      },
+      {
+        "text": "3/ SemChunk — Fast semantic splitting.\n\n• Respects exact token limits while preserving full sentences\n• Integrates seamlessly with Hugging Face and Tiktoken\n\nhttps://github.com/umarbutler/semchunk",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_03_semchunk.png"
+      },
+      {
+        "text": "4/ Tiktoken — Fast BPE tokenizer.\n\n• High-performance Rust library for cl100k_base & o200k_base\n• 3-6x faster than comparable Python tokenizer libraries\n\nhttps://github.com/openai/tiktoken",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_04_tiktoken.png"
+      },
+      {
+        "text": "5/ HF Tokenizers — Rust tokenization engine.\n\n• Ultra-fast training and tokenization for custom vocabularies\n• Native multi-threading for processing gigabyte corpora\n\nhttps://github.com/huggingface/tokenizers",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_05_hf_tokenizers.png"
+      },
+      {
+        "text": "6/ LlamaIndex Node Parser — Hierarchical nodes.\n\n• Generates small child chunks for precise vector retrieval\n• Returns broader parent sections to LLM for full reasoning\n\nhttps://github.com/run-llama/llama_index",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_06_llamaindex.png"
+      },
+      {
+        "text": "7/ Recursive Character Splitter — Dynamic chunker.\n\n• Iterates through delimiters (\\n\\n, \\n, space) to fit size\n• Standard baseline for unstructured enterprise documentation\n\nhttps://github.com/langchain-ai/langchain",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_07_langchain_splitter.png"
+      },
+      {
+        "text": "8/ Tree-sitter Code Chunker — AST code parser.\n\n• Parses source code into abstract syntax trees\n• Keeps functions, classes, and types unified within single chunks\n\nhttps://github.com/tree-sitter/tree-sitter",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_08_treesitter.png"
+      },
+      {
+        "text": "9/ Semantic Router Splitter — Vector-based cuts.\n\n• Tracks sentence-by-sentence similarity with small encoders\n• Triggers chunk split when topic shift exceeds threshold\n\nhttps://github.com/aurelio-labs/semantic-router",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_09_semantic_router.png"
+      },
+      {
+        "text": "10/ Chunking trade-offs:\n\n• Fixed character cuts split sentences mid-thought. Hierarchical chunking indexes small sentences for retrieval while passing full parent sections."
+      },
+      {
+        "text": "11/ Explore our guide on cross-encoder rerankers to boost precision after retrieval:\n\nhttps://x.com/vedangvatsa/status/1987654321098765438"
+      },
+      {
+        "text": "12/ For hybrid dense and sparse BM25 search pipelines, check our breakdown:\n\nhttps://x.com/vedangvatsa/status/1987654321098765439"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "diffusion-video-models-thread",
+    "topic": "generative-media",
+    "date": "2026-03-31",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Generative video has transitioned to open-weights. Diffusion transformers (DiTs) with 3D spatial-temporal VAEs run on consumer workstations.\n\n8 open video generation models & stacks 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ CogVideoX — 3D DiT architecture.\n\n• Expert transformer architecture by THUDM\n• 3D causal VAE compresses temporal frames with zero flicker\n\nhttps://github.com/THUDM/CogVideo",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_02_cogvideox.png"
+      },
+      {
+        "text": "3/ Mochi 1 — 10B parameter DiT.\n\n• Open-weights by Genmo with fluid natural physics\n• Asymmetric Diffusion Transformer architecture\n\nhttps://github.com/genmoai/models",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_03_mochi.png"
+      },
+      {
+        "text": "4/ LTX-Video — Real-time DiT engine.\n\n• Generates high-res video faster than playback speed\n• Highly compressed latent space running on single consumer GPUs\n\nhttps://github.com/Lightricks/LTX-Video",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_04_ltx_video.png"
+      },
+      {
+        "text": "5/ HunyuanVideo — Enterprise open DiT.\n\n• Tencent open-source dual-stream transformer model\n• Unmatched prompt adherence with native bilingual tokenizers\n\nhttps://github.com/Tencent/HunyuanVideo",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_05_hunyuan_video.png"
+      },
+      {
+        "text": "6/ AnimateDiff — Motion adapter.\n\n• Injects temporal attention layers into SD1.5 & SDXL\n• Converts static LoRAs into smooth continuous animations\n\nhttps://github.com/guoyww/AnimateDiff",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_06_animatediff.png"
+      },
+      {
+        "text": "7/ ComfyUI Video Workflows — Node runner.\n\n• Graph-based execution with FP8 and dynamic memory tiling\n• Chain IP-Adapter, ControlNet, and video DiTs seamlessly\n\nhttps://github.com/comfyanonymous/ComfyUI",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_07_comfyui.png"
+      },
+      {
+        "text": "8/ HF Diffusers — Production inference.\n\n• Standardized Hugging Face pipelines for video diffusion\n• Native integration with bitsandbytes 4-bit/8-bit quantization\n\nhttps://github.com/huggingface/diffusers",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_08_diffusers.png"
+      },
+      {
+        "text": "9/ Wan2.1 — Advanced video transformer.\n\n• Alibaba state-of-the-art open-weight video foundation model\n• Exceptional temporal consistency across complex camera motions\n\nhttps://github.com/Wan-Video/Wan2.1",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_09_wan21.png"
+      },
+      {
+        "text": "10/ Video generation engineering:\n\n• 3D attention matrices scale quadratically with frame count. FP8 quantization and temporal block tiling fit 10B DiT models on consumer GPUs."
+      },
+      {
+        "text": "11/ Check our technical review on open-source synthetic voice and TTS models:\n\nhttps://x.com/vedangvatsa/status/1987654321098765440"
+      },
+      {
+        "text": "12/ For model weight quantization techniques (AWQ, EXL2), view our breakdown:\n\nhttps://x.com/vedangvatsa/status/1987654321098765441"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
   }
 ]
