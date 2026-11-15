@@ -4191,5 +4191,213 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_9x16.png",
     "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-yt-square_of_sum",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/square_of_sum_9x16.mp4",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/square_of_sum_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Square of a Sum",
+    "description": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-riemann_integral",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/riemann_integral_9x16.mp4",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Riemann Integral",
+    "description": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-chain_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/chain_rule_9x16.mp4",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/chain_rule_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Chain Rule",
+    "description": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-birthday_paradox",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/birthday_paradox_9x16.mp4",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/birthday_paradox_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Birthday Paradox",
+    "description": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-irrationality_sqrt2",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/irrationality_sqrt2_9x16.mp4",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Irrationality of √2",
+    "description": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-ln_derivative",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/ln_derivative_9x16.mp4",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/ln_derivative_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Derivative of ln(x)",
+    "description": "Why the derivative of ln(x) equals 1/x.\n\nThe natural logarithm is defined as the area under the hyperbola 1/t.\n\nScaling the area horizontally by x scales the height by 1/x, proving the derivative is exactly 1/x.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-matrix_transform",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/matrix_transform_9x16.mp4",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/matrix_transform_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "What is a Matrix?",
+    "description": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-graph_shift",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/graph_shift_9x16.mp4",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Function Transformations",
+    "description": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-curve_arclength",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/curve_arclength_9x16.mp4",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/curve_arclength_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Arc Length of a Curve",
+    "description": "How to calculate the length of a curved line.\n\nZoom into an infinitesimal segment.\n\nPythagoras on differentials gives dL squared equals dx squared plus dy squared, leading directly to the arc length integral.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-integration_by_parts",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/integration_by_parts_9x16.mp4",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/integration_by_parts_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Integration by Parts",
+    "description": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-normal_distribution",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/normal_distribution_9x16.mp4",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/normal_distribution_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Normal Distribution",
+    "description": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-inclined_plane",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/inclined_plane_9x16.mp4",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/inclined_plane_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Forces on a Ramp",
+    "description": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-rubiks_permutations",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/rubiks_permutations_9x16.mp4",
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/rubiks_permutations_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Permutations of Rubik's Cube",
+    "description": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
   }
 ]
