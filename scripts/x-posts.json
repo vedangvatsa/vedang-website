@@ -2093,57 +2093,96 @@
     "type": "thread",
     "scheduleDate": "2026-11-13",
     "scheduleTime": "09:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Decentralized physical infrastructure networks (DePIN) offer an alternative to centralized GPU monopolies.\n\n8 Web3 projects powering decentralized AI compute 🧵👇",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_01_cover.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_01_cover.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "2/ Bittensor (TAO)\n\nDecentralized market for machine intelligence.\n\n• Subnets specialize in text, voice, and vision\n• Yuma Consensus rewards top models\n• Competitive peer-to-peer compute network\n\nhttps://bittensor.com",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_02_bittensor.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_02_bittensor.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "3/ Render Network (RENDER)\n\nDecentralized GPU compute network.\n\n• Connects node operators with AI workloads\n• Distributed GPU clusters for rendering and ML\n• Cost-efficient alternative to cloud providers\n\nhttps://rendernetwork.com",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_03_render.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_03_render.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "4/ Akash Network (AKT)\n\nDecentralized marketplace for cloud compute.\n\n• Open bidding on idle data center capacity\n• Deploy containers and AI workloads\n• Access to NVIDIA H100 and A100 clusters\n\nhttps://akash.network",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_04_akash.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_04_akash.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "5/ io.net\n\nDecentralized GPU network for AI compute.\n\n• Aggregates GPUs from independent data centers\n• Clusters distributed hardware for ML inference\n• Fast on-demand provisioning\n\nhttps://io.net",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_05_ionet.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_05_ionet.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "6/ Ritual\n\nDecentralized AI coprocessor network.\n\n• Connects smart contracts directly to AI models\n• Cryptographic verification of model execution\n• Sovereign execution layer for decentralized apps\n\nhttps://ritual.net",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_06_ritual.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_06_ritual.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "7/ Grass\n\nDecentralized web data scraping network.\n\n• Users share unused bandwidth for rewards\n• Scrapes web data for open AI training\n• Community-owned dataset collection\n\nhttps://getgrass.io",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_07_grass.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_07_grass.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "8/ Gensyn\n\nDecentralized protocol for deep learning.\n\n• Verification system for ML training\n• Uses probabilistic proof-of-learning\n• Connects global compute hardware\n\nhttps://gensyn.ai",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_08_gensyn.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_08_gensyn.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "9/ Fetch.ai (ASI Alliance)\n\nAutonomous economic agent framework.\n\n• Agents transact on-chain independently\n• Connects web services to smart contracts\n• Member of Artificial Superintelligence Alliance\n\nhttps://fetch.ai",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_09_fetch.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_09_fetch.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "10/ In tests, prompt injection in listings tricked shopping bots 10/10 times. How autonomous agents safely transact without human fraud:\nhttps://x.com/vedangvatsa/status/2115039235938144473"
+        "text": "10/ In tests, prompt injection in listings tricked shopping bots 10/10 times. How autonomous agents safely transact without human fraud:\nhttps://x.com/vedangvatsa/status/2115039235938144473",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "11/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       },
       {
         "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
+        "posted": true,
+        "postedAt": "2026-11-15T06:59:58.413Z",
+        "tweetId": "6af95869b9a106584c916a85"
       }
     ],
-    "error": "Account is not allowed to perform this action"
+    "error": "Account is not allowed to perform this action",
+    "postedAt": "2026-11-15T06:59:58.413Z",
+    "tweetId": "6af95869b9a106584c916a85",
+    "externalLink": "https://twitter.com/vedangvatsa/status/2121860727015084259"
   },
   {
     "id": "voice-multimodal-agents-thread",
