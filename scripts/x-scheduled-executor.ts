@@ -57,16 +57,21 @@ interface XPost {
   error?: string;
 }
 
-async function postSingleViaBuffer(text: string, image?: string): Promise<{ success: boolean; id?: string; error?: string }> {
+async function postSingleViaBuffer(text: string, media?: string, publicUrl?: string): Promise<{ success: boolean; id?: string; error?: string }> {
   try {
-    const isUrl = image && (image.startsWith('http://') || image.startsWith('https://'));
+    const targetUrl = publicUrl || (media && (media.startsWith('http://') || media.startsWith('https://')) ? media : undefined);
+    const isVideo = (targetUrl && targetUrl.includes('.mp4')) || (media && media.endsWith('.mp4'));
+    let assets: any[] = [];
+    if (targetUrl) {
+      assets = isVideo ? [{ video: { url: targetUrl } }] : [{ image: { url: targetUrl } }];
+    }
     const variables = {
       input: {
         channelId: BUFFER_CHANNEL_ID,
         mode: 'shareNow',
         schedulingType: 'automatic',
         text,
-        assets: isUrl ? [{ image: { url: image } }] : [],
+        assets,
       },
     };
 
@@ -179,10 +184,10 @@ async function postThreadViaBuffer(tweets: TweetItem[]): Promise<{ success: bool
   }
 }
 
-export async function postSingleTweet(text: string, image?: string): Promise<{ success: boolean; id?: string; error?: string }> {
+export async function postSingleTweet(text: string, image?: string, publicUrl?: string): Promise<{ success: boolean; id?: string; error?: string }> {
   if (BUFFER_TOKEN) {
     console.log(`📡 Publishing single tweet via Buffer API (Channel: ${BUFFER_CHANNEL_ID})...`);
-    return postSingleViaBuffer(text, image);
+    return postSingleViaBuffer(text, image, publicUrl);
   }
 
   // Fallback to TwitterApi

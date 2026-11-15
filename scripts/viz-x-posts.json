@@ -751,7 +751,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "paused": true,
     "pauseReason": "Earlier campaign backlog retained for audit; the October batch is the active campaign."
   },
@@ -835,7 +835,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "paused": true,
     "pauseReason": "Earlier campaign backlog retained for audit; the October batch is the active campaign."
   },
@@ -3470,15 +3470,18 @@
     "text": "Adding odd numbers in order always makes a square number.\n\n1 makes a 1 by 1 square.\n\nAdd 3, you get a 2 by 2 square.\n\nAdd 5, you get a 3 by 3 square.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why Adding Odd Numbers Makes Square Numbers",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_1x1.png",
     "batchId": "explainer-v1",
-    "state": "uncertain",
+    "state": "sent",
     "attemptedAt": "2026-11-15T20:37:31.271Z",
     "attemptedSlot": "2026-11-16T01:00",
     "publishedText": "Adding odd numbers in order always makes a square number.\n\n1 makes a 1 by 1 square.\n\nAdd 3, you get a 2 by 2 square.\n\nAdd 5, you get a 3 by 3 square.",
-    "error": "Account is not allowed to perform this action"
+    "postedAt": "2026-11-15T20:58:52.735Z",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2122071836917637572",
+    "platformPostId": "2122071836917637572",
+    "bufferPostId": "6afa1d058e87c256a38eec36"
   },
   {
     "id": "explainer-x-sum_of_integers",
@@ -3632,8 +3635,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_1x1.png",
     "batchId": "explainer-v1",
-    "title": "Irrationality of \u221a2",
-    "altText": "Irrationality of \u221a2",
+    "title": "Irrationality of √2",
+    "altText": "Irrationality of √2",
     "text": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist."
   },
   {
@@ -3753,7 +3756,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_mean_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Geometric Mean",
-    "text": "Geometric proof of the geometric mean theorem.\n\nDraw a semicircle over diameter a plus b.\n\nAn altitude h to the circle forms similar right triangles.\n\nCross-multiplying gives h\u00b2 = a\u00b7b, proving h is the square root of a times b.",
+    "text": "Geometric proof of the geometric mean theorem.\n\nDraw a semicircle over diameter a plus b.\n\nAn altitude h to the circle forms similar right triangles.\n\nCross-multiplying gives h² = a·b, proving h is the square root of a times b.",
     "altText": "The Geometric Mean"
   },
   {
@@ -3765,7 +3768,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_secant_1x1.png",
     "batchId": "explainer-v1",
     "title": "Tangent-Secant Theorem",
-    "text": "Geometric proof of the tangent-secant theorem.\n\nFrom point P, draw tangent PT and secant PAB.\n\nAlternate segment theorem gives angle PTA = angle PBT, making triangles PTA and PBT similar.\n\nCross-multiplying PT / PB = PA / PT proves PT\u00b2 = PA \u00b7 PB.",
+    "text": "Geometric proof of the tangent-secant theorem.\n\nFrom point P, draw tangent PT and secant PAB.\n\nAlternate segment theorem gives angle PTA = angle PBT, making triangles PTA and PBT similar.\n\nCross-multiplying PT / PB = PA / PT proves PT² = PA · PB.",
     "altText": "Tangent-Secant Theorem"
   },
   {
@@ -3777,7 +3780,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/euler_formula_1x1.png",
     "batchId": "explainer-v1",
     "title": "Euler Identity",
-    "text": "Geometric intuition behind Euler identity.\n\nIn the complex plane, e^(i\u03b8) rotates by angle \u03b8.\n\nSetting \u03b8 = \u03c0 produces a 180\u00b0 rotation around the origin, landing directly at -1.\n\nAdding 1 to both sides establishes e^(i\u03c0) + 1 = 0.",
+    "text": "Geometric intuition behind Euler identity.\n\nIn the complex plane, e^(iθ) rotates by angle θ.\n\nSetting θ = π produces a 180° rotation around the origin, landing directly at -1.\n\nAdding 1 to both sides establishes e^(iπ) + 1 = 0.",
     "altText": "Euler Identity"
   },
   {
@@ -3789,7 +3792,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/am_gm_inequality_1x1.png",
     "batchId": "explainer-v1",
     "title": "AM-GM Inequality",
-    "text": "Geometric proof of the AM-GM inequality.\n\nDraw a semicircle over diameter a + b.\n\nThe radius is the arithmetic mean R = (a + b) / 2, while the altitude is the geometric mean h = \u221a(ab).\n\nSince no altitude exceeds the radius, (a + b) / 2 \u2265 \u221a(ab).",
+    "text": "Geometric proof of the AM-GM inequality.\n\nDraw a semicircle over diameter a + b.\n\nThe radius is the arithmetic mean R = (a + b) / 2, while the altitude is the geometric mean h = √(ab).\n\nSince no altitude exceeds the radius, (a + b) / 2 ≥ √(ab).",
     "altText": "AM-GM Inequality"
   },
   {
@@ -3801,7 +3804,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sine_addition_1x1.png",
     "batchId": "explainer-v1",
     "title": "Sine Addition Formula",
-    "text": "Geometric proof of the sine addition formula.\n\nStack two right triangles with angles \u03b1 and \u03b2.\n\nThe total vertical height sin(\u03b1 + \u03b2) naturally splits into two rectangular projections - sin\u03b1\u00b7cos\u03b2 and cos\u03b1\u00b7sin\u03b2.\n\nThus sin(\u03b1 + \u03b2) = sin\u03b1\u00b7cos\u03b2 + cos\u03b1\u00b7sin\u03b2.",
+    "text": "Geometric proof of the sine addition formula.\n\nStack two right triangles with angles α and β.\n\nThe total vertical height sin(α + β) naturally splits into two rectangular projections - sinα·cosβ and cosα·sinβ.\n\nThus sin(α + β) = sinα·cosβ + cosα·sinβ.",
     "altText": "Sine Addition Formula"
   },
   {
@@ -3813,7 +3816,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cosine_addition_1x1.png",
     "batchId": "explainer-v1",
     "title": "Cosine Addition Formula",
-    "text": "Geometric proof of the cosine addition formula.\n\nIn stacked right triangles with angles \u03b1 and \u03b2, horizontal base cos(\u03b1 + \u03b2) equals base projection cos\u03b1\u00b7cos\u03b2 minus pullback segment sin\u03b1\u00b7sin\u03b2.\n\nThus cos(\u03b1 + \u03b2) = cos\u03b1\u00b7cos\u03b2 \u2212 sin\u03b1\u00b7sin\u03b2.",
+    "text": "Geometric proof of the cosine addition formula.\n\nIn stacked right triangles with angles α and β, horizontal base cos(α + β) equals base projection cosα·cosβ minus pullback segment sinα·sinβ.\n\nThus cos(α + β) = cosα·cosβ − sinα·sinβ.",
     "altText": "Cosine Addition Formula"
   },
   {
@@ -3825,7 +3828,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_cubes_1x1.png",
     "batchId": "explainer-v1",
     "title": "Sum of Consecutive Cubes",
-    "text": "Geometric proof that 1\u00b3 + 2\u00b3 + \u22ef + n\u00b3 = (1 + 2 + \u22ef + n)\u00b2.\n\nA square of side (1 + 2 + \u22ef + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k\u00b3.\n\nSumming all bands yields Nicomachus theorem.",
+    "text": "Geometric proof that 1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)².\n\nA square of side (1 + 2 + ⋯ + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k³.\n\nSumming all bands yields Nicomachus theorem.",
     "altText": "Sum of Consecutive Cubes"
   },
   {

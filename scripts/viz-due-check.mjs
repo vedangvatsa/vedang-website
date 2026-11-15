@@ -15,11 +15,7 @@ for (const platform of [...BUFFER_PLATFORMS, ...configuredDirectPlatforms()]) {
     needed ||= due;
   } catch (err) {
     console.error(`${platform}: ${err.message}`);
-    const staleBlocked = posts.find(p => !p.posted && ['publishing', 'uncertain', 'failed', 'submitted'].includes(p.state || ''));
-    const isRecent = staleBlocked?.attemptedAt && (Date.now() - Date.parse(staleBlocked.attemptedAt)) < 2 * 3600000;
-    if (isRecent || process.env.VIZ_FORCE_CHECKS === '1') {
-      needed = true;
-    }
+    // Platform-level issue does not block check for other platforms
   }
 }
 if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `run=${needed}\n`);

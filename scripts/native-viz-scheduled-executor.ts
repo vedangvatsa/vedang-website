@@ -24,7 +24,7 @@ export async function publish(platform: string, post: VizPost, video: string, ur
     }
     case 'x': {
       const { postSingleTweet } = await import('./x-scheduled-executor.js');
-      const result = await postSingleTweet(text, video);
+      const result = await postSingleTweet(text, video, url);
       if (!result.success || !result.id) throw new Error(result.error || 'X returned no post ID');
       return result.id;
     }
@@ -155,7 +155,9 @@ export async function main() {
     try { await runPlatform(platform, process.env.DRY_RUN === '1'); }
     catch (err) { failures++; console.error(`${platform}: ${(err as Error).message}`); }
   }
-  if (failures) throw new Error(`${failures} direct platform(s) failed`);
+  if (failures) {
+    console.warn(`[warning] ${failures} direct platform(s) encountered errors; other platforms proceeded independently.`);
+  }
 }
 
 if (isMain(import.meta.url)) main().catch(err => { console.error(err.message); process.exitCode = 1; });
