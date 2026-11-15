@@ -3719,7 +3719,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "altText": "Why Circle Area is Pi Times Radius Squared",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/circle_area_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/circle_area_4x5.png"
   },
   {
     "id": "explainer-fb-pythagorean_theorem",
@@ -3730,7 +3730,7 @@
     "scheduleTime": "17:00",
     "posted": false,
     "altText": "A Visual Proof of the Pythagorean Theorem",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_4x5.png"
   },
   {
     "id": "explainer-fb-sum_of_odds",
@@ -3741,7 +3741,7 @@
     "scheduleTime": "01:00",
     "posted": false,
     "altText": "Why Adding Odd Numbers Makes Square Numbers",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_4x5.png"
   },
   {
     "id": "explainer-fb-sum_of_integers",
@@ -3752,7 +3752,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "altText": "How to Add Numbers from 1 to n",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_4x5.png"
   },
   {
     "id": "explainer-fb-geometric_series",
@@ -3763,7 +3763,7 @@
     "scheduleTime": "17:00",
     "posted": false,
     "altText": "Why Halves Add Up to One",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_4x5.png"
   },
   {
     "id": "explainer-fb-difference_of_squares",
@@ -3774,7 +3774,7 @@
     "scheduleTime": "01:00",
     "posted": false,
     "altText": "Visualizing the Difference of Squares",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_4x5.png"
   },
   {
     "id": "explainer-fb-sphere_volume",
@@ -3785,7 +3785,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "altText": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_4x5.png"
   },
   {
     "id": "explainer-fb-derivative_tangent",
@@ -3796,7 +3796,7 @@
     "scheduleTime": "17:00",
     "posted": false,
     "altText": "What a Derivative Actually Is",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_4x5.png"
   },
   {
     "id": "explainer-fb-product_rule",
@@ -3807,7 +3807,7 @@
     "scheduleTime": "01:00",
     "posted": false,
     "altText": "The Product Rule Made Simple",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_4x5.png"
   },
   {
     "id": "explainer-fb-sin_derivative",
@@ -3818,7 +3818,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "altText": "Why the Derivative of Sine is Cosine",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_4x5.png"
   },
   {
     "id": "explainer-fb-central_limit_theorem",
@@ -3829,6 +3829,6 @@
     "scheduleTime": "17:00",
     "posted": false,
     "altText": "Why the Bell Curve Shows Up Everywhere",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_4x5.png"
   }
 ]

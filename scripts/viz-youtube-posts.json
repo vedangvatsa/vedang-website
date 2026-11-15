@@ -4124,7 +4124,8 @@
     ],
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/binary_search_1x1.png"
   },
   {
     "id": "explainer-yt-bubble_vs_quicksort",
@@ -4138,7 +4139,8 @@
     ],
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bubble_vs_quicksort_1x1.png"
   },
   {
     "id": "explainer-yt-bfs_vs_dfs",
@@ -4152,7 +4154,8 @@
     ],
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bfs_vs_dfs_1x1.png"
   },
   {
     "id": "explainer-yt-hash_tables",
@@ -4166,7 +4169,8 @@
     ],
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/hash_tables_1x1.png"
   },
   {
     "id": "explainer-yt-dijkstra",
@@ -4180,7 +4184,8 @@
     ],
     "scheduleDate": "2026-11-19",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/dijkstra_1x1.png"
   },
   {
     "id": "explainer-yt-derivative_tangent",
@@ -4239,7 +4244,8 @@
     ],
     "scheduleDate": "2026-11-20",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_sums_1x1.png"
   },
   {
     "id": "explainer-yt-monty_hall",
@@ -4253,7 +4259,8 @@
     ],
     "scheduleDate": "2026-11-20",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/monty_hall_1x1.png"
   },
   {
     "id": "explainer-yt-central_limit_theorem",
@@ -4282,7 +4289,8 @@
     ],
     "scheduleDate": "2026-11-21",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bayes_theorem_1x1.png"
   },
   {
     "id": "explainer-yt-simpsons_paradox",
@@ -4296,7 +4304,8 @@
     ],
     "scheduleDate": "2026-11-21",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/simpsons_paradox_1x1.png"
   },
   {
     "id": "explainer-yt-stack_vs_queue",
@@ -4310,7 +4319,8 @@
     ],
     "scheduleDate": "2026-11-22",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/stack_vs_queue_1x1.png"
   },
   {
     "id": "explainer-yt-dynamic_array",
@@ -4324,7 +4334,8 @@
     ],
     "scheduleDate": "2026-11-22",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/dynamic_array_1x1.png"
   },
   {
     "id": "explainer-yt-binary_heap",
@@ -4338,6 +4349,7 @@
     ],
     "scheduleDate": "2026-11-22",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/binary_heap_1x1.png"
   }
 ]

@@ -3861,7 +3861,8 @@
     "text": "How binary search works.\n\nDo not check items one by one.\n\nCheck the middle.\n\nThrow away half the list every time.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/binary_search_1x1.png"
   },
   {
     "id": "explainer-linkedin-bubble_vs_quicksort",
@@ -3869,7 +3870,8 @@
     "text": "Bubble sort vs Quick sort.\n\nBubble sort swaps neighbors slowly.\n\nQuick sort splits around a pivot.\n\nQuick sort finishes much faster.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bubble_vs_quicksort_1x1.png"
   },
   {
     "id": "explainer-linkedin-bfs_vs_dfs",
@@ -3877,7 +3879,8 @@
     "text": "Two ways to search a network.\n\nBreadth-first search expands in waves.\n\nDepth-first search goes deep down one path first.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bfs_vs_dfs_1x1.png"
   },
   {
     "id": "explainer-linkedin-hash_tables",
@@ -3885,7 +3888,8 @@
     "text": "Why hash tables are fast.\n\nNo searching through lists.\n\nA math function turns the name into an address.\n\nJumps directly there.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/hash_tables_1x1.png"
   },
   {
     "id": "explainer-linkedin-dijkstra",
@@ -3893,7 +3897,8 @@
     "text": "Finding the shortest route.\n\nDijkstra tracks the shortest path so far.\n\nAlways picks the closest point next.\n\nGuarantees the shortest route.",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/dijkstra_1x1.png"
   },
   {
     "id": "explainer-linkedin-derivative_tangent",
@@ -3928,7 +3933,8 @@
     "text": "Finding area under a curve.\n\nDraw rectangles under the curve.\n\nMake the rectangles thinner.\n\nThey turn into the smooth area.",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_sums_1x1.png"
   },
   {
     "id": "explainer-linkedin-monty_hall",
@@ -3936,7 +3942,8 @@
     "text": "Why you should switch doors.\n\nYour first pick is only 1 in 3.\n\nThe other doors hold 2 in 3.\n\nWhen one wrong door is opened, switch.",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/monty_hall_1x1.png"
   },
   {
     "id": "explainer-linkedin-central_limit_theorem",
@@ -3953,7 +3960,8 @@
     "text": "Why 99 percent test accuracy is tricky.\n\nIf a disease is rare, false alarms on healthy people can add up.\n\nAlways compare real cases to false alarms.",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bayes_theorem_1x1.png"
   },
   {
     "id": "explainer-linkedin-simpsons_paradox",
@@ -3961,7 +3969,8 @@
     "text": "Simpson's paradox.\n\nBetter in group 1.\n\nBetter in group 2.\n\nCombine them, and it looks worse. Uneven sizes flip the total.",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/simpsons_paradox_1x1.png"
   },
   {
     "id": "explainer-linkedin-stack_vs_queue",
@@ -3969,7 +3978,8 @@
     "text": "Stack vs Queue.\n\nStack last one in, first one out.\n\nQueue first one in, first one out.",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/stack_vs_queue_1x1.png"
   },
   {
     "id": "explainer-linkedin-dynamic_array",
@@ -3977,7 +3987,8 @@
     "text": "How dynamic arrays grow.\n\nWhen the list is full, it doubles the memory size.\n\nCopies all items over.\n\nFrees up the old space.",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/dynamic_array_1x1.png"
   },
   {
     "id": "explainer-linkedin-binary_heap",
@@ -3985,6 +3996,7 @@
     "text": "Binary heap in an array.\n\nLooks like a tree, stored as a flat list.\n\nSmallest item stays on top.\n\nUses math on the index to find branches.",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/binary_heap_1x1.png"
   }
 ]
