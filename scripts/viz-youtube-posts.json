@@ -4604,5 +4604,33 @@
     "postedAt": null,
     "description": "Visual geometric explanation of the 2x2 determinant showing how det(A) = ad - bc measures the exact area scaling factor of transformed basis vectors.",
     "tags": []
+  },
+  {
+    "id": "explainer-yt-eigenvalues_2x2",
+    "batchId": "explainer-v1",
+    "slug": "eigenvalues_2x2",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/eigenvalues_2x2_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/eigenvalues_2x2_9x16.png",
+    "title": "Eigenvectors & Invariant Directions | Math Explained",
+    "scheduleDate": "2026-12-01",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visual geometric explanation of eigenvectors and eigenvalues showing how certain invariant axes maintain their direction under matrix transformation.",
+    "tags": []
+  },
+  {
+    "id": "explainer-yt-harmonic_series_divergence",
+    "batchId": "explainer-v1",
+    "slug": "harmonic_series_divergence",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/harmonic_series_divergence_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/harmonic_series_divergence_9x16.png",
+    "title": "Divergence of the Harmonic Series | Math Explained",
+    "scheduleDate": "2026-12-02",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visual proof of why the harmonic series diverges to infinity. By grouping terms into powers of 2, each block sums to greater than one half, showing that adding infinitely many halves grows without bound.",
+    "tags": []
   }
 ]
