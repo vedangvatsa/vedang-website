@@ -3429,7 +3429,7 @@
     "id": "explainer-x-circle_area",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/circle_area_1x1.mp4",
     "title": "Why Circle Area is Pi Times Radius Squared",
-    "text": "Why the area of a circle equals pi times radius squared.\n\nCut a circle into thin rings and unroll them.\n\nThey form a triangle.\n\nThe bottom line is the circumference. The height is the radius.",
+    "text": "Visual proof of why the area of a circle equals pi times radius squared by unrolling concentric rings into a right triangle.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "09:00",
     "posted": false,
@@ -3487,7 +3487,7 @@
     "id": "explainer-x-sum_of_integers",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/sum_of_integers_1x1.mp4",
     "title": "How to Add Numbers from 1 to n",
-    "text": "How to add the numbers from 1 to n without adding each one.\n\nBuild a staircase of blocks from 1 to n.\n\nMake a second copy, flip it upside down, and fit them together.\n\nThey make a rectangle. Cut the total area in half.",
+    "text": "Visual proof of why the sum of integers from 1 to n equals n(n+1)/2 by interlocking two staircases into a rectangle.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
     "posted": false,
@@ -3499,7 +3499,7 @@
     "id": "explainer-x-geometric_series",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/geometric_series_1x1.mp4",
     "title": "Why Halves Add Up to One",
-    "text": "Take a square with an area of 1.\n\nCut it in half. That is 1/2.\n\nCut the leftover space in half. That is 1/4.\n\nKeep cutting halves forever. Together they fill the square.",
+    "text": "Visual geometric proof of the infinite series sum 1/2 + 1/4 + 1/8 + ... = 1 by repeatedly halving the remaining area of a unit square.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
     "posted": false,
@@ -3511,7 +3511,7 @@
     "id": "explainer-x-difference_of_squares",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/difference_of_squares_1x1.mp4",
     "title": "The Difference of Squares",
-    "text": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
+    "text": "Visual proof of the difference of squares a^2 - b^2 = (a-b)(a+b) by rearranging a corner cutout into a single rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
     "posted": false,
@@ -3523,7 +3523,7 @@
     "id": "explainer-x-sphere_volume",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/sphere_volume_1x1.mp4",
     "title": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
-    "text": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
+    "text": "Visual derivation of the volume of a sphere V = 4/3 pi r^3 by partitioning the sphere into infinitesimal pyramids meeting at the center.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
     "posted": false,
@@ -3535,7 +3535,7 @@
     "id": "explainer-x-derivative_tangent",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/derivative_tangent_1x1.mp4",
     "title": "What a Derivative Actually Is",
-    "text": "What a derivative means in geometry.\n\nDraw a line through two points on a curve.\n\nMove the two points closer together.\n\nThe line turns into a tangent touching at just one point.",
+    "text": "Visualizing the geometric definition of a derivative as secant lines between two points converge into a single tangent line.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
     "posted": false,
@@ -3547,7 +3547,7 @@
     "id": "explainer-x-product_rule",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/product_rule_1x1.mp4",
     "title": "The Product Rule Made Simple",
-    "text": "Why the derivative of u times v is u dv plus v du.\n\nPicture a rectangle of width u and height v.\n\nIf both sides grow slightly, the new area is two thin strips plus a tiny corner.\n\nThe corner is too small to matter.",
+    "text": "Visual proof of the calculus product rule d(uv) = u dv + v du using the expanding area of a rectangle.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
     "posted": false,
@@ -3559,7 +3559,7 @@
     "id": "explainer-x-sin_derivative",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/sin_derivative_1x1.mp4",
     "title": "Why the Derivative of Sine is Cosine",
-    "text": "Why the rate of change of sine equals cosine.\n\nMove a point around a circle.\n\nSine is how high the point is.\n\nAs you move along the circle, how fast height changes matches horizontal distance.",
+    "text": "Visualizing why the rate of change of sine equals cosine through circular motion on the unit circle.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
     "posted": false,
@@ -3571,7 +3571,7 @@
     "id": "explainer-x-central_limit_theorem",
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/central_limit_theorem_1x1.mp4",
     "title": "Why the Bell Curve Shows Up Everywhere",
-    "text": "Drop balls through rows of pins.\n\nEach ball bounces randomly left or right.\n\nMost balls end up near the center.\n\nThe pile naturally forms a bell shape.",
+    "text": "Visualizing the central limit theorem as independent random bounces through a Galton board assemble into a normal bell curve.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
     "posted": false,
@@ -3589,7 +3589,7 @@
     "batchId": "explainer-v1",
     "title": "Square of a Sum",
     "altText": "Square of a Sum",
-    "text": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared."
+    "text": "Geometric visual proof of (a + b)^2 = a^2 + 2ab + b^2 by partitioning a square into four component areas."
   },
   {
     "id": "explainer-x-riemann_integral",
@@ -3601,7 +3601,7 @@
     "batchId": "explainer-v1",
     "title": "The Riemann Integral",
     "altText": "The Riemann Integral",
-    "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve."
+    "text": "Visualizing the Riemann integral as the sum of increasingly narrow vertical rectangles converging to the exact area under a curve."
   },
   {
     "id": "explainer-x-chain_rule",
@@ -3613,7 +3613,7 @@
     "batchId": "explainer-v1",
     "title": "The Chain Rule",
     "altText": "The Chain Rule",
-    "text": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x."
+    "text": "Visual proof of the calculus chain rule showing how rates of change multiply across connected dimensions."
   },
   {
     "id": "explainer-x-birthday_paradox",
@@ -3625,7 +3625,7 @@
     "batchId": "explainer-v1",
     "title": "The Birthday Paradox",
     "altText": "The Birthday Paradox",
-    "text": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons."
+    "text": "Visualizing the birthday paradox where 23 people create 253 pairwise comparisons giving a greater than 50% chance of a shared birthday."
   },
   {
     "id": "explainer-x-irrationality_sqrt2",
@@ -3637,7 +3637,7 @@
     "batchId": "explainer-v1",
     "title": "Irrationality of √2",
     "altText": "Irrationality of √2",
-    "text": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist."
+    "text": "Geometric visual proof that the square root of 2 is irrational through infinite descent of folded squares."
   },
   {
     "id": "explainer-x-ln_derivative",
@@ -3649,7 +3649,7 @@
     "batchId": "explainer-v1",
     "title": "Derivative of ln(x)",
     "altText": "Derivative of ln(x)",
-    "text": "Why the derivative of ln(x) equals 1/x.\n\nThe natural logarithm is defined as the area under the hyperbola 1/t.\n\nScaling the area horizontally by x scales the height by 1/x, proving the derivative is exactly 1/x."
+    "text": "Visualizing why the derivative of ln(x) equals 1/x using hyperbolic area scaling under 1/t."
   },
   {
     "id": "explainer-x-matrix_transform",
@@ -3661,7 +3661,7 @@
     "batchId": "explainer-v1",
     "title": "What is a Matrix?",
     "altText": "What is a Matrix?",
-    "text": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid."
+    "text": "Visualizing linear algebra transformations by tracking where the standard basis vectors land on the grid."
   },
   {
     "id": "explainer-x-graph_shift",
@@ -3673,7 +3673,7 @@
     "batchId": "explainer-v1",
     "title": "Function Transformations",
     "altText": "Function Transformations",
-    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger."
+    "text": "Visualizing why replacing x with x - c creates an input delay that shifts the entire graph to the right."
   },
   {
     "id": "explainer-x-curve_arclength",
@@ -3685,7 +3685,7 @@
     "batchId": "explainer-v1",
     "title": "Arc Length of a Curve",
     "altText": "Arc Length of a Curve",
-    "text": "How to calculate the length of a curved line.\n\nZoom into an infinitesimal segment.\n\nPythagoras on differentials gives dL squared equals dx squared plus dy squared, leading directly to the arc length integral."
+    "text": "Visualizing the arc length integral by applying the Pythagorean theorem to infinitesimal segments along a curve."
   },
   {
     "id": "explainer-x-integration_by_parts",
@@ -3697,7 +3697,7 @@
     "batchId": "explainer-v1",
     "title": "Integration by Parts",
     "altText": "Integration by Parts",
-    "text": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral."
+    "text": "Visual proof of integration by parts showing how the bounding rectangle splits into two complementary integrals."
   },
   {
     "id": "explainer-x-normal_distribution",
@@ -3709,7 +3709,7 @@
     "batchId": "explainer-v1",
     "title": "The Normal Distribution",
     "altText": "The Normal Distribution",
-    "text": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three."
+    "text": "Visualizing the 68-95-99.7 empirical rule across standard deviations of the normal distribution."
   },
   {
     "id": "explainer-x-inclined_plane",
@@ -3721,7 +3721,7 @@
     "batchId": "explainer-v1",
     "title": "Forces on a Ramp",
     "altText": "Forces on a Ramp",
-    "text": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface."
+    "text": "Visualizing vector mechanics on an inclined plane by decomposing gravity into parallel and perpendicular components."
   },
   {
     "id": "explainer-x-rubiks_permutations",
@@ -3733,7 +3733,7 @@
     "batchId": "explainer-v1",
     "title": "Permutations of Rubik's Cube",
     "altText": "Permutations of Rubik's Cube",
-    "text": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe."
+    "text": "Visualizing the combinatorial scale of a Rubik cube with 43 quintillion reachable positions."
   },
   {
     "id": "explainer-x-power_rule",
@@ -3744,7 +3744,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/power_rule_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Power Rule",
-    "text": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
+    "text": "Visual proof of the calculus power rule for x^2 by expanding a square by differential increments.",
     "altText": "The Power Rule"
   },
   {
@@ -3756,7 +3756,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_mean_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Geometric Mean",
-    "text": "Geometric proof of the geometric mean theorem.\n\nDraw a semicircle over diameter a plus b.\n\nAn altitude h to the circle forms similar right triangles.\n\nCross-multiplying gives h² = a·b, proving h is the square root of a times b.",
+    "text": "Visual proof of the geometric mean theorem using similar right triangles inscribed in a semicircle.",
     "altText": "The Geometric Mean"
   },
   {
@@ -3768,7 +3768,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_secant_1x1.png",
     "batchId": "explainer-v1",
     "title": "Tangent-Secant Theorem",
-    "text": "Geometric proof of the tangent-secant theorem.\n\nFrom point P, draw tangent PT and secant PAB.\n\nAlternate segment theorem gives angle PTA = angle PBT, making triangles PTA and PBT similar.\n\nCross-multiplying PT / PB = PA / PT proves PT² = PA · PB.",
+    "text": "Visual proof of the tangent-secant theorem PT^2 = PA * PB using similar triangles formed by subtended angles.",
     "altText": "Tangent-Secant Theorem"
   },
   {
@@ -3780,7 +3780,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/euler_formula_1x1.png",
     "batchId": "explainer-v1",
     "title": "Euler Identity",
-    "text": "Geometric intuition behind Euler identity.\n\nIn the complex plane, e^(iθ) rotates by angle θ.\n\nSetting θ = π produces a 180° rotation around the origin, landing directly at -1.\n\nAdding 1 to both sides establishes e^(iπ) + 1 = 0.",
+    "text": "Visualizing Euler formula e^(i pi) + 1 = 0 as a continuous half-turn rotation in the complex plane.",
     "altText": "Euler Identity"
   },
   {
@@ -3792,7 +3792,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/am_gm_inequality_1x1.png",
     "batchId": "explainer-v1",
     "title": "AM-GM Inequality",
-    "text": "Geometric proof of the AM-GM inequality.\n\nDraw a semicircle over diameter a + b.\n\nThe radius is the arithmetic mean R = (a + b) / 2, while the altitude is the geometric mean h = √(ab).\n\nSince no altitude exceeds the radius, (a + b) / 2 ≥ √(ab).",
+    "text": "Geometric visual proof of the AM-GM inequality showing that altitude never exceeds the radius of a semicircle.",
     "altText": "AM-GM Inequality"
   },
   {
@@ -3804,7 +3804,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sine_addition_1x1.png",
     "batchId": "explainer-v1",
     "title": "Sine Addition Formula",
-    "text": "Geometric proof of the sine addition formula.\n\nStack two right triangles with angles α and β.\n\nThe total vertical height sin(α + β) naturally splits into two rectangular projections - sinα·cosβ and cosα·sinβ.\n\nThus sin(α + β) = sinα·cosβ + cosα·sinβ.",
+    "text": "Geometric visual proof of the sine addition formula by projecting stacked right triangles inside a rectangle.",
     "altText": "Sine Addition Formula"
   },
   {
@@ -3816,7 +3816,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cosine_addition_1x1.png",
     "batchId": "explainer-v1",
     "title": "Cosine Addition Formula",
-    "text": "Geometric proof of the cosine addition formula.\n\nIn stacked right triangles with angles α and β, horizontal base cos(α + β) equals base projection cosα·cosβ minus pullback segment sinα·sinβ.\n\nThus cos(α + β) = cosα·cosβ − sinα·sinβ.",
+    "text": "Geometric visual proof of the cosine addition formula by projecting stacked right triangles inside a rectangle.",
     "altText": "Cosine Addition Formula"
   },
   {
@@ -3828,7 +3828,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_cubes_1x1.png",
     "batchId": "explainer-v1",
     "title": "Sum of Consecutive Cubes",
-    "text": "Geometric proof that 1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)².\n\nA square of side (1 + 2 + ⋯ + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k³.\n\nSumming all bands yields Nicomachus theorem.",
+    "text": "Visual proof of Nicomachus theorem 1^3 + 2^3 + ... + n^3 = (1 + 2 + ... + n)^2 using nested L-shaped bands.",
     "altText": "Sum of Consecutive Cubes"
   },
   {
