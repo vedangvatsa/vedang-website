@@ -3774,5 +3774,53 @@
     "title": "Euler Identity",
     "text": "Geometric intuition behind Euler identity.\n\nIn the complex plane, e^(iθ) rotates by angle θ.\n\nSetting θ = π produces a 180° rotation around the origin, landing directly at -1.\n\nAdding 1 to both sides establishes e^(iπ) + 1 = 0.",
     "altText": "Euler Identity"
+  },
+  {
+    "id": "explainer-x-am_gm_inequality",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/am_gm_inequality_1x1.mp4",
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/am_gm_inequality_1x1.png",
+    "batchId": "explainer-v1",
+    "title": "AM-GM Inequality",
+    "text": "Geometric proof of the AM-GM inequality.\n\nDraw a semicircle over diameter a + b.\n\nThe radius is the arithmetic mean R = (a + b) / 2, while the altitude is the geometric mean h = √(ab).\n\nSince no altitude exceeds the radius, (a + b) / 2 ≥ √(ab).",
+    "altText": "AM-GM Inequality"
+  },
+  {
+    "id": "explainer-x-sine_addition",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sine_addition_1x1.mp4",
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sine_addition_1x1.png",
+    "batchId": "explainer-v1",
+    "title": "Sine Addition Formula",
+    "text": "Geometric proof of the sine addition formula.\n\nStack two right triangles with angles α and β.\n\nThe total vertical height sin(α + β) naturally splits into two rectangular projections - sinα·cosβ and cosα·sinβ.\n\nThus sin(α + β) = sinα·cosβ + cosα·sinβ.",
+    "altText": "Sine Addition Formula"
+  },
+  {
+    "id": "explainer-x-cosine_addition",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/cosine_addition_1x1.mp4",
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/cosine_addition_1x1.png",
+    "batchId": "explainer-v1",
+    "title": "Cosine Addition Formula",
+    "text": "Geometric proof of the cosine addition formula.\n\nIn stacked right triangles with angles α and β, horizontal base cos(α + β) equals base projection cosα·cosβ minus pullback segment sinα·sinβ.\n\nThus cos(α + β) = cosα·cosβ − sinα·sinβ.",
+    "altText": "Cosine Addition Formula"
+  },
+  {
+    "id": "explainer-x-sum_of_cubes",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sum_of_cubes_1x1.mp4",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_cubes_1x1.png",
+    "batchId": "explainer-v1",
+    "title": "Sum of Consecutive Cubes",
+    "text": "Geometric proof that 1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)².\n\nA square of side (1 + 2 + ⋯ + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k³.\n\nSumming all bands yields Nicomachus theorem.",
+    "altText": "Sum of Consecutive Cubes"
   }
 ]
