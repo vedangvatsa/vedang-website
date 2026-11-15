@@ -4620,5 +4620,57 @@
     "posted": false,
     "postedAt": null,
     "text": "Visual proof that adding any two consecutive triangular numbers always produces a perfect square where T_(n-1) + T_n = n^2. Interlocking an n-staircase with an (n-1)-staircase tiles an exact n by n square."
+  },
+  {
+    "id": "explainer-tiktok-infinite_geometric_series_third",
+    "batchId": "explainer-v1",
+    "slug": "infinite_geometric_series_third",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/infinite_geometric_series_third_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/infinite_geometric_series_third_9x16.png",
+    "title": "Infinite Geometric Series Sum",
+    "scheduleDate": "2026-12-04",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "text": "Visual geometric proof that the infinite series sum of (1/4)^k equals exactly 1/3. Recursive quadrant trisection divides a unit square into three congruent color sets that completely tile an area of 1."
+  },
+  {
+    "id": "explainer-tiktok-collatz_conjecture",
+    "batchId": "explainer-v1",
+    "slug": "collatz_conjecture",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/collatz_conjecture_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/collatz_conjecture_9x16.png",
+    "title": "The Collatz Conjecture 3n + 1",
+    "scheduleDate": "2026-12-05",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "postedAt": null,
+    "text": "Visualizing the hailstone orbit of the Collatz 3n + 1 conjecture for n = 7. Starting from 7, the orbit climbs to a peak of 52 before descending into the universal 4 -> 2 -> 1 terminal loop."
+  },
+  {
+    "id": "explainer-tiktok-sieve_of_eratosthenes",
+    "batchId": "explainer-v1",
+    "slug": "sieve_of_eratosthenes",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sieve_of_eratosthenes_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sieve_of_eratosthenes_9x16.png",
+    "title": "The Sieve of Eratosthenes",
+    "scheduleDate": "2026-12-05",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "text": "Visualizing how prime numbers are filtered using the ancient Sieve of Eratosthenes on a grid. Systematically eliminating multiples of primes 2, 3, and 5 reveals all prime numbers in the remainder."
+  },
+  {
+    "id": "explainer-tiktok-dot_product_projection",
+    "batchId": "explainer-v1",
+    "slug": "dot_product_projection",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/dot_product_projection_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/dot_product_projection_9x16.png",
+    "title": "The Dot Product as a Shadow",
+    "scheduleDate": "2026-12-06",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "postedAt": null,
+    "text": "Visualizing the dot product as a geometric shadow projection. The scalar product u . v measures the length of the orthogonal shadow cast by vector u onto base vector v multiplied by the length of v."
   }
 ]
