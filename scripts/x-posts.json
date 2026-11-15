@@ -2187,8 +2187,8 @@
   {
     "id": "voice-multimodal-agents-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-13",
-    "scheduleTime": "17:05",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "09:05",
     "posted": false,
     "tweets": [
       {
@@ -2257,8 +2257,8 @@
   {
     "id": "smart-contract-security-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-14",
-    "scheduleTime": "01:05",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "17:05",
     "posted": false,
     "tweets": [
       {
@@ -2321,8 +2321,8 @@
   {
     "id": "ai-web-scrapers-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-14",
-    "scheduleTime": "09:05",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "01:05",
     "posted": false,
     "tweets": [
       {
@@ -2390,8 +2390,8 @@
   {
     "id": "ai-evaluation-testing-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-14",
-    "scheduleTime": "17:05",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "09:05",
     "posted": false,
     "tweets": [
       {
@@ -2459,8 +2459,8 @@
   {
     "id": "defi-architecture-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-15",
-    "scheduleTime": "01:05",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "17:05",
     "posted": false,
     "tweets": [
       {
@@ -2523,8 +2523,8 @@
   {
     "id": "computer-vision-models-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-15",
-    "scheduleTime": "09:05",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "01:05",
     "posted": false,
     "tweets": [
       {
@@ -2587,8 +2587,8 @@
   {
     "id": "ai-agents-wallets-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-16",
-    "scheduleTime": "01:05",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "09:05",
     "posted": false,
     "tweets": [
       {
@@ -2660,8 +2660,8 @@
   {
     "id": "ai-second-brain-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-16",
-    "scheduleTime": "09:05",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "17:05",
     "posted": false,
     "tweets": [
       {
@@ -2733,7 +2733,7 @@
   {
     "id": "quantum-pqc-security-thread",
     "type": "thread",
-    "scheduleDate": "2026-11-17",
+    "scheduleDate": "2026-11-19",
     "scheduleTime": "01:05",
     "posted": false,
     "tweets": [
@@ -2873,7 +2873,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "09:05"
   },
   {
     "id": "agent-memory-context-thread",
@@ -2945,7 +2947,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "17:05"
   },
   {
     "id": "terminal-ai-coding-agents-thread",
@@ -3017,7 +3021,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "01:05"
   },
   {
     "id": "zkml-verifiable-ai-thread",
@@ -3089,7 +3095,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "09:05"
   },
   {
     "id": "crypto-account-abstraction-thread",
@@ -3161,7 +3169,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "17:05"
   },
   {
     "id": "agent-orchestration-frameworks-thread",
@@ -3233,7 +3243,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "01:05"
   },
   {
     "id": "agent-browser-environments-thread",
@@ -3305,7 +3317,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "09:05"
   },
   {
     "id": "depin-hardware-sensor-networks-thread",
@@ -3377,7 +3391,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "17:05"
   },
   {
     "id": "hybrid-search-sparse-dense-thread",
@@ -3449,7 +3465,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "01:05"
   },
   {
     "id": "continuous-batching-inference-thread",
@@ -3521,7 +3539,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "09:05"
   },
   {
     "id": "reranking-models-retrieval-thread",
@@ -3593,7 +3613,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "17:05"
   },
   {
     "id": "tee-confidential-compute-thread",
@@ -3665,7 +3687,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "01:05"
   },
   {
     "id": "small-language-models-thread",
@@ -3737,7 +3761,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "09:05"
   },
   {
     "id": "structured-data-extraction-thread",
@@ -3809,7 +3835,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "17:05"
   },
   {
     "id": "fhe-encrypted-computation-thread",
@@ -3881,7 +3909,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-24",
+    "scheduleTime": "01:05"
   },
   {
     "id": "model-quantization-techniques-thread",
@@ -3953,7 +3983,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-24",
+    "scheduleTime": "09:05"
   },
   {
     "id": "agent-observability-tracing-thread",
@@ -4025,7 +4057,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-24",
+    "scheduleTime": "17:05"
   },
   {
     "id": "llms-txt-standard-thread",
@@ -4097,7 +4131,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "01:05"
   },
   {
     "id": "prompt-injection-defenses-thread",
@@ -4169,7 +4205,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "09:05"
   },
   {
     "id": "speculative-decoding-engines-thread",
@@ -4241,7 +4279,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "17:05"
   },
   {
     "id": "graph-rag-knowledge-bases-thread",
@@ -4313,7 +4353,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "01:05"
   },
   {
     "id": "web-scraping-proxy-networks-thread",
@@ -4385,7 +4427,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "09:05"
   },
   {
     "id": "cross-chain-intent-solvers-thread",
@@ -4457,7 +4501,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "17:05"
   },
   {
     "id": "on-device-npu-runtimes-thread",
@@ -4529,7 +4575,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "01:05"
   },
   {
     "id": "ai-synthetic-voice-cloning-thread",
@@ -4601,7 +4649,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "09:05"
   },
   {
     "id": "browser-automation-libraries-thread",
@@ -4660,7 +4710,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "17:05"
   },
   {
     "id": "blockchain-rpc-indexing-thread",
@@ -4719,7 +4771,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-28",
+    "scheduleTime": "01:05"
   },
   {
     "id": "synthetic-evaluation-rag-thread",
@@ -4778,7 +4832,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-28",
+    "scheduleTime": "09:05"
   },
   {
     "id": "long-context-mechanisms-thread",
@@ -4837,7 +4893,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-28",
+    "scheduleTime": "17:05"
   },
   {
     "id": "agentic-sql-data-analysts-thread",
@@ -4896,7 +4954,9 @@
         "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• Prompt Engineering: https://veda.ng/prompt-engineering\n• RAG Architecture: https://veda.ng/rag\n• Agent Architecture: https://veda.ng/agents",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-29",
+    "scheduleTime": "01:05"
   },
   {
     "id": "ai-gateway-rate-limiting-thread",
@@ -4958,7 +5018,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-29",
+    "scheduleTime": "09:05"
   },
   {
     "id": "webassembly-ai-runtimes-thread",
@@ -5020,7 +5082,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-29",
+    "scheduleTime": "17:05"
   },
   {
     "id": "stablecoin-payment-rails-thread",
@@ -5082,7 +5146,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "01:05"
   },
   {
     "id": "chunking-tokenization-engines-thread",
@@ -5144,7 +5210,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "09:05"
   },
   {
     "id": "diffusion-video-models-thread",
@@ -5206,7 +5274,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "17:05"
   },
   {
     "id": "autonomous-coding-sandboxes-thread",
@@ -5268,7 +5338,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-01",
+    "scheduleTime": "01:05"
   },
   {
     "id": "smart-contract-formal-verification-thread",
@@ -5330,7 +5402,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-01",
+    "scheduleTime": "09:05"
   },
   {
     "id": "semantic-cache-engines-thread",
@@ -5392,7 +5466,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-01",
+    "scheduleTime": "17:05"
   },
   {
     "id": "event-driven-agent-orchestrators-thread",
@@ -5454,7 +5530,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-02",
+    "scheduleTime": "01:05"
   },
   {
     "id": "open-source-robotics-ai-thread",
@@ -5516,7 +5594,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-02",
+    "scheduleTime": "09:05"
   },
   {
     "id": "agent-tool-calling-protocols-thread",
@@ -5578,7 +5658,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-02",
+    "scheduleTime": "17:05"
   },
   {
     "id": "distributed-validator-technology-thread",
@@ -5640,7 +5722,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-03",
+    "scheduleTime": "01:05"
   },
   {
     "id": "document-layout-parsing-thread",
@@ -5702,7 +5786,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-03",
+    "scheduleTime": "09:05"
   },
   {
     "id": "web-performance-cwv-thread",
@@ -5764,7 +5850,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-03",
+    "scheduleTime": "17:05"
   },
   {
     "id": "synthetic-dataset-generation-thread",
@@ -5826,7 +5914,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-04",
+    "scheduleTime": "01:05"
   },
   {
     "id": "hierarchical-agent-architectures-thread",
@@ -5888,7 +5978,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-04",
+    "scheduleTime": "09:05"
   },
   {
     "id": "decentralized-inference-networks-thread",
@@ -5950,7 +6042,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-04",
+    "scheduleTime": "17:05"
   },
   {
     "id": "entity-resolution-knowledge-thread",
@@ -6012,7 +6106,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-05",
+    "scheduleTime": "01:05"
   },
   {
     "id": "edge-compute-runtimes-thread",
@@ -6074,7 +6170,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-05",
+    "scheduleTime": "09:05"
   },
   {
     "id": "browser-extension-agent-bridges-thread",
@@ -6136,7 +6234,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-05",
+    "scheduleTime": "17:05"
   },
   {
     "id": "ai-agent-testing-benchmarks-thread",
@@ -6198,7 +6298,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-06",
+    "scheduleTime": "01:05"
   },
   {
     "id": "decentralized-identity-attestation-thread",
@@ -6260,7 +6362,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-06",
+    "scheduleTime": "09:05"
   },
   {
     "id": "geo-ai-search-crawlers-thread",
@@ -6322,7 +6426,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-06",
+    "scheduleTime": "17:05"
   },
   {
     "id": "content-negotiation-ai-thread",
@@ -6384,7 +6490,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-07",
+    "scheduleTime": "01:05"
   },
   {
     "id": "autonomous-qa-test-generators-thread",
@@ -6446,7 +6554,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-07",
+    "scheduleTime": "09:05"
   },
   {
     "id": "agent-permissioning-guardrails-thread",
@@ -6508,7 +6618,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-07",
+    "scheduleTime": "17:05"
   },
   {
     "id": "hardware-accelerated-crypto-thread",
@@ -6570,7 +6682,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-08",
+    "scheduleTime": "01:05"
   },
   {
     "id": "metadata-enrichment-pipelines-thread",
@@ -6632,7 +6746,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-08",
+    "scheduleTime": "09:05"
   },
   {
     "id": "api-mocking-synthetic-data-thread",
@@ -6694,7 +6810,9 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-08",
+    "scheduleTime": "17:05"
   },
   {
     "id": "differential-privacy-ml-thread",
@@ -6756,6 +6874,8 @@
         "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
-    ]
+    ],
+    "scheduleDate": "2026-12-09",
+    "scheduleTime": "01:05"
   }
 ]
