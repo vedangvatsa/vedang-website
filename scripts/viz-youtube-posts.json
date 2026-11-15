@@ -4399,5 +4399,37 @@
       "education",
       "visualization"
     ]
+  },
+  {
+    "id": "explainer-yt-power_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/power_rule_9x16.mp4",
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/power_rule_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Power Rule",
+    "description": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
+  },
+  {
+    "id": "explainer-yt-geometric_mean",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/geometric_mean_9x16.mp4",
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_mean_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Geometric Mean",
+    "description": "Geometric proof of the geometric mean theorem.\n\nConstruct a semicircle over a diameter of length a plus b.\n\nErecting an altitude h from the split point to the circle forms similar right triangles.\n\nCross-multiplying gives h squared equals a times b, proving h is the square root of a times b.",
+    "tags": [
+      "math",
+      "education",
+      "visualization"
+    ]
   }
 ]

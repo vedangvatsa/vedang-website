@@ -4279,5 +4279,27 @@
     "batchId": "explainer-v1",
     "title": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
     "text": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe."
+  },
+  {
+    "id": "explainer-tiktok-power_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/power_rule_9x16.mp4",
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/power_rule_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
+    "text": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x."
+  },
+  {
+    "id": "explainer-tiktok-geometric_mean",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/geometric_mean_9x16.mp4",
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_mean_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Geometric proof of the geometric mean theorem.\n\nConstruct a semicircle over a diameter of length a plus b.\n\nErecting an altitude h from the split point to the circle forms similar right triangles.\n\nCross-multiplying gives h squared equals a times b, proving h is the square root of a times b.",
+    "text": "Geometric proof of the geometric mean theorem.\n\nConstruct a semicircle over a diameter of length a plus b.\n\nErecting an altitude h from the split point to the circle forms similar right triangles.\n\nCross-multiplying gives h squared equals a times b, proving h is the square root of a times b."
   }
 ]
