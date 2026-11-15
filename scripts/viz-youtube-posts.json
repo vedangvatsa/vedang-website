@@ -4632,5 +4632,61 @@
     "postedAt": null,
     "description": "Visual proof of why the harmonic series diverges to infinity. By grouping terms into powers of 2, each block sums to greater than one half, showing that adding infinitely many halves grows without bound.",
     "tags": []
+  },
+  {
+    "id": "explainer-yt-telescoping_series",
+    "batchId": "explainer-v1",
+    "slug": "telescoping_series",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/telescoping_series_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/telescoping_series_9x16.png",
+    "title": "The Telescoping Series | Math Explained",
+    "scheduleDate": "2026-12-02",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visual proof of why the infinite series sum 1 / (n(n+1)) equals exactly 1. Partial fractions split each term into 1/n - 1/(n+1), causing all intermediate terms to cancel out like a collapsing telescope.",
+    "tags": []
+  },
+  {
+    "id": "explainer-yt-taylor_series_sin",
+    "batchId": "explainer-v1",
+    "slug": "taylor_series_sin",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/taylor_series_sin_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/taylor_series_sin_9x16.png",
+    "title": "Taylor Series Approximation of Sine | Math Explained",
+    "scheduleDate": "2026-12-03",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visualizing how polynomials approximate a sine wave around the origin. A linear tangent gives slope, degree 3 captures inflection curvature, and degree 5 hugs the peak, showing how infinite polynomial terms converge to the exact wave.",
+    "tags": []
+  },
+  {
+    "id": "explainer-yt-extreme_value_theorem",
+    "batchId": "explainer-v1",
+    "slug": "extreme_value_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/extreme_value_theorem_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/extreme_value_theorem_9x16.png",
+    "title": "Stationary Points and Fermat Theorem | Math Explained",
+    "scheduleDate": "2026-12-03",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visual proof of Fermat theorem on stationary points. As a curve transitions from rising to falling, its tangent slope changes sign, requiring the derivative to vanish completely at every peak and trough.",
+    "tags": []
+  },
+  {
+    "id": "explainer-yt-triangular_numbers_square",
+    "batchId": "explainer-v1",
+    "slug": "triangular_numbers_square",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/triangular_numbers_square_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangular_numbers_square_9x16.png",
+    "title": "Two Triangular Numbers Make a Square | Math Explained",
+    "scheduleDate": "2026-12-04",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visual proof that adding any two consecutive triangular numbers always produces a perfect square where T_(n-1) + T_n = n^2. Interlocking an n-staircase with an (n-1)-staircase tiles an exact n by n square.",
+    "tags": []
   }
 ]
