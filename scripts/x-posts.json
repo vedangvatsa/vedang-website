@@ -2228,7 +2228,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_09_kokoro.png"
       },
       {
-        "text": "10/ Protocols turn tool integration from N×M custom code into N+M. How standard specifications structure modern agent runtimes:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
+        "text": "10/ Voice agents rely on low-latency tool execution and structured tool calling. Breakdown of Anthropic's Model Context Protocol (MCP):\n\nhttps://x.com/vedangvatsa/status/2119408026939457704"
       },
       {
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
@@ -2283,7 +2283,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_09_openzeppelin.png"
       },
       {
-        "text": "10/ Data from 5 Million AI papers: China leads publication volume, US leads LLM research, and India has grown 32x:\nhttps://x.com/227386316/status/2116096531337994712"
+        "text": "10/ Auditing on-chain code is only half the battle; decentralised infra and AI compute networks bring new security primitives. DePIN & Web3 AI breakdown:\n\nhttps://x.com/vedangvatsa/status/2121860727015084259"
       },
       {
         "text": "11/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
@@ -2339,7 +2339,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_09_trafilatura.png"
       },
       {
-        "text": "10/ Sandboxes like E2B ($32M) turned isolated execution into an API call, while scraping pipelines feed frontier models:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
+        "text": "10/ AI scrapers feed live web data directly into autonomous agents. We audited 100,000 top websites to see how machine-readable the internet actually is:\n\nhttps://x.com/vedangvatsa/status/2120693526409154986"
       },
       {
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
@@ -2394,7 +2394,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_09_lmeval.png"
       },
       {
-        "text": "10/ Platforms buy security and observability faster than startups scale: 5 of 7 early agent security and eval startups were acquired in under 18 months:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
+        "text": "10/ Evals are critical when deploying RAG systems to production. How to benchmark chunking, reranking, and hallucination rates:\n\nhttps://x.com/vedangvatsa/status/2121654252732825728"
       },
       {
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
@@ -2449,7 +2449,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_09_ethena.png"
       },
       {
-        "text": "10/ Stripe ACP, OpenAI Function Calling, and Anthropic MCP: how shared protocols turn integration from N×M custom code into N+M:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
+        "text": "10/ How autonomous agents will transact natively across DeFi and modern e-commerce without checkout forms:\n\nhttps://x.com/vedangvatsa/status/2036831607038877820"
       },
       {
         "text": "11/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
@@ -2505,7 +2505,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_09_paddleocr.png"
       },
       {
-        "text": "10/ Data from 5 Million AI papers: China leads publication volume, US leads LLM research, and India has grown 32x:\nhttps://x.com/227386316/status/2116096531337994712"
+        "text": "10/ Vision models are increasingly deployed on-device. Complete guide to running open-weights AI models locally with zero API fees:\n\nhttps://x.com/vedangvatsa/status/2121399894938108256"
       },
       {
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
