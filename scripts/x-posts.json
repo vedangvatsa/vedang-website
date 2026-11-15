@@ -3531,5 +3531,365 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
+  },
+  {
+    "id": "reranking-models-retrieval-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Bi-encoder vector search finds relevant neighborhoods, but cross-encoders determine exact relevance order.\n\n8 reranking models and engines for RAG \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Cohere Rerank 3.5 \u2014 Enterprise cross-encoder.\n\n\u2022 Jointly scores query and document tokens\n\u2022 4k token context support for semi-structured data\n\nhttps://cohere.com/rerank",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_02_cohere.png",
+        "url": "https://cohere.com/rerank"
+      },
+      {
+        "text": "3/ BGE-Reranker-v2-m3 \u2014 Open-weights multilingual.\n\n\u2022 Top-ranked open model on the MTEB leaderboard\n\u2022 Supports 100+ languages with 8k sequence lengths\n\nhttps://github.com/FlagOpen/FlagEmbedding",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_03_bge.png",
+        "url": "https://github.com/FlagOpen/FlagEmbedding"
+      },
+      {
+        "text": "4/ Jina Reranker v2 \u2014 Fast sequence scorer.\n\n\u2022 2x faster inference latency than legacy cross-encoders\n\u2022 Native support for multi-vector code and tabular data\n\nhttps://jina.ai/reranker",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_04_jina.png",
+        "url": "https://jina.ai/reranker"
+      },
+      {
+        "text": "5/ ColBERTv2 \u2014 Late-interaction retrieval.\n\n\u2022 Computes token-level multi-vector MaxSim interactions\n\u2022 Delivers cross-encoder accuracy at vector search latency\n\nhttps://github.com/stanford-futuredata/ColBERT",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_05_colbert.png",
+        "url": "https://github.com/stanford-futuredata/ColBERT"
+      },
+      {
+        "text": "6/ FlashRank \u2014 Ultra-lite in-process.\n\n\u2022 Zero PyTorch or CUDA dependencies\n\u2022 Runs ONNX models in-process using under 20MB of RAM\n\nhttps://github.com/PrithivirajDamodaran/FlashRank",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_06_flashrank.png",
+        "url": "https://github.com/PrithivirajDamodaran/FlashRank"
+      },
+      {
+        "text": "7/ mxbai-rerank \u2014 Open-source SOTA scorer.\n\n\u2022 Apache 2.0 licensed weights trained on diverse domains\n\u2022 Beats commercial alternatives on BEIR retrieval benchmarks\n\nhttps://www.mixedbread.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_07_mixedbread.png",
+        "url": "https://www.mixedbread.ai"
+      },
+      {
+        "text": "8/ RankGPT \u2014 LLM permutation scorer.\n\n\u2022 Uses reasoning LLMs directly via sliding-window prompts\n\u2022 Highly effective for domain-specific complex sorting\n\nhttps://github.com/sunnweiwei/RankGPT",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_08_rankgpt.png",
+        "url": "https://github.com/sunnweiwei/RankGPT"
+      },
+      {
+        "text": "9/ Sentence-Transformers \u2014 PyTorch reference library.\n\n\u2022 Foundational framework powering open neural reranking\n\u2022 Easy fine-tuning scripts for custom enterprise datasets\n\nhttps://sbert.net",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/reranking_models_retrieval/tweet_09_sbert.png",
+        "url": "https://sbert.net"
+      },
+      {
+        "text": "10/ Rerankers are the highest-ROI component in modern RAG. Adding a 50ms cross-encoder stage after hybrid retrieval regularly boosts generation accuracy by 25% to 35%.",
+        "image": null
+      },
+      {
+        "text": "11/ Hybrid search combines BM25 keywords with dense embeddings before reranking. Complete architectural breakdown:",
+        "image": null
+      },
+      {
+        "text": "12/ Document chunking determines retrieval precision. Full technical guide to semantic parsers and text chunkers:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "tee-confidential-compute-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Cloud providers and server hosts can view model weights and user prompts in RAM. Hardware TEEs guarantee confidential execution.\n\n8 hardware TEE & confidential compute rails \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ NVIDIA Confidential Computing \u2014 GPU hardware enclave.\n\n\u2022 Encrypts data in transit and memory on H100 GPUs\n\u2022 Hardware root-of-trust protects proprietary weights\n\nhttps://www.nvidia.com/en-us/data-center/solutions/confidential-computing",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_02_nvidia.png",
+        "url": "https://www.nvidia.com/en-us/data-center/solutions/confidential-computing"
+      },
+      {
+        "text": "3/ AWS Nitro Enclaves \u2014 Isolated cloud microVM.\n\n\u2022 Ephemeral computing environments with no external network\n\u2022 Cryptographic attestation verifies enclave image integrity\n\nhttps://aws.amazon.com/ec2/nitro/nitro-enclaves",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_03_awsnitro.png",
+        "url": "https://aws.amazon.com/ec2/nitro/nitro-enclaves"
+      },
+      {
+        "text": "4/ Flashbots TEE Builders \u2014 Verifiable execution rail.\n\n\u2022 Runs block building and MEV extraction inside SGX\n\u2022 Prevents front-running and toxic order snooping\n\nhttps://docs.flashbots.net",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_04_flashbots.png",
+        "url": "https://docs.flashbots.net"
+      },
+      {
+        "text": "5/ Phala Network \u2014 Decentralized TEE cloud.\n\n\u2022 dstack framework for deploying dockerized AI agents\n\u2022 Proof of attestation verified directly on Ethereum\n\nhttps://phala.network",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_05_phala.png",
+        "url": "https://phala.network"
+      },
+      {
+        "text": "6/ Marlin Oyster \u2014 TEE coprocessor network.\n\n\u2022 Offloads heavy AI and ZK computation to enclaves\n\u2022 Automated attestation proofs passed back to smart contracts\n\nhttps://www.marlin.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_06_marlin.png",
+        "url": "https://www.marlin.org"
+      },
+      {
+        "text": "7/ Oasis Sapphire \u2014 Confidential smart contracts.\n\n\u2022 EVM runtime executing encrypted state transitions\n\u2022 Ideal for private voting, dark pools, and agent secrets\n\nhttps://oasisprotocol.org/sapphire",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_07_oasis.png",
+        "url": "https://oasisprotocol.org/sapphire"
+      },
+      {
+        "text": "8/ Gramine OS \u2014 LibOS enclave runtime.\n\n\u2022 Runs unmodified PyTorch and Python apps inside Intel SGX\n\u2022 Eliminates need to rewrite software for enclave isolation\n\nhttps://gramineproject.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_08_gramine.png",
+        "url": "https://gramineproject.io"
+      },
+      {
+        "text": "9/ Automata Network \u2014 Modular TEE attestation.\n\n\u2022 On-chain verification of hardware enclave signatures\n\u2022 Cross-chain attestation bridging SGX and AMD SEV\n\nhttps://ata.network",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/tee_confidential_compute/tweet_09_automata.png",
+        "url": "https://ata.network"
+      },
+      {
+        "text": "10/ Confidential computing transforms the security model of AI. Hardware enclaves ensure that even the infrastructure owner cannot tamper with model execution or siphon user private keys.",
+        "image": null
+      },
+      {
+        "text": "11/ Zero-knowledge ML provides mathematical proof without enclave trust. Complete guide to zkML proof systems:",
+        "image": null
+      },
+      {
+        "text": "12/ Post-quantum cryptography secures hardware communications against future quantum computers. Full guide:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "small-language-models-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ You don't need a 70B cloud model for classification, extraction, or tool calling. Sub-3B SLMs run fast on edge hardware.\n\n8 high-performance small language models \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ SmolLM2-1.7B \u2014 Open-weights compact SLM.\n\n\u2022 Trained on 11 trillion tokens of curated synthetic text\n\u2022 Fits entirely into 2GB of RAM on mobile hardware\n\nhttps://huggingface.co/blog/smollm2",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_02_smollm.png",
+        "url": "https://huggingface.co/blog/smollm2"
+      },
+      {
+        "text": "3/ Llama-3.2-1B / 3B \u2014 On-device mobile foundation.\n\n\u2022 Meta's official lightweight weights for edge runtimes\n\u2022 128k context window support on consumer smartphones\n\nhttps://ai.meta.com/blog/llama-3-2-connect-2024",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_03_llama.png",
+        "url": "https://ai.meta.com/blog/llama-3-2-connect-2024"
+      },
+      {
+        "text": "4/ Qwen2.5-1.5B \u2014 High-density reasoning SLM.\n\n\u2022 Benchmark leader in math, coding, and multi-turn chat\n\u2022 Exceptional JSON and structured tool-calling accuracy\n\nhttps://qwenlm.github.io/blog/qwen2.5",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_04_qwen.png",
+        "url": "https://qwenlm.github.io/blog/qwen2.5"
+      },
+      {
+        "text": "5/ Phi-3.5-mini \u2014 Synthetic data reasoning.\n\n\u2022 Trained extensively on textbook-grade synthetic data\n\u2022 Matches or beats legacy 13B models on STEM benchmarks\n\nhttps://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_05_phi.png",
+        "url": "https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms"
+      },
+      {
+        "text": "6/ Gemma 2 2B \u2014 Distilled compact architecture.\n\n\u2022 Distilled from Google's flagship 27B model architecture\n\u2022 Sliding-window local attention cutting memory overhead\n\nhttps://blog.google/technology/developers/google-gemma-2",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_06_gemma.png",
+        "url": "https://blog.google/technology/developers/google-gemma-2"
+      },
+      {
+        "text": "7/ Danube3-4B \u2014 Enterprise edge architecture.\n\n\u2022 Tuned specifically for low-latency edge computing\n\u2022 High accuracy on entity extraction and summarization\n\nhttps://h2o.ai/platform/danube3",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_07_danube.png",
+        "url": "https://h2o.ai/platform/danube3"
+      },
+      {
+        "text": "8/ StableLM-2-1.6B \u2014 Fast multilingual SLM.\n\n\u2022 Trained across 21 languages with clean balance\n\u2022 Low-memory footprint ideal for local background agents\n\nhttps://stability.ai/news/stable-lm-2-12b",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_08_stablelm.png",
+        "url": "https://stability.ai/news/stable-lm-2-12b"
+      },
+      {
+        "text": "9/ TinyLlama-1.1B \u2014 Open-source research baseline.\n\n\u2022 Pioneered aggressive 3-trillion-token training on 1B params\n\u2022 100% open-source pretraining codebase and data logs\n\nhttps://github.com/jzhang38/TinyLlama",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_09_tinyllama.png",
+        "url": "https://github.com/jzhang38/TinyLlama"
+      },
+      {
+        "text": "10/ Small models run at hundreds of tokens per second with zero cloud API latency or ongoing token bills. Synthetic data distillation has closed the reasoning gap between SLMs and legacy LLMs.",
+        "image": null
+      },
+      {
+        "text": "11/ Serving SLMs locally requires high-throughput continuous batching. Complete guide to vLLM and SGLang runtimes:",
+        "image": null
+      },
+      {
+        "text": "12/ Quantization techniques reduce model footprints down to 4-bit and 2-bit weights. Full technical breakdown:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "structured-data-extraction-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Prompting LLMs with 'respond in JSON' leads to broken syntax and parsing errors. Structured extraction libraries guarantee schema validity.\n\n8 zero-shot structured extraction libraries \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Instructor \u2014 Pydantic schema validation.\n\n\u2022 Wraps client APIs with Pydantic type validation\n\u2022 Automatically retries with error feedback when schemas fail\n\nhttps://python.useinstructor.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_02_instructor.png",
+        "url": "https://python.useinstructor.com"
+      },
+      {
+        "text": "3/ Outlines \u2014 Guided generation engine.\n\n\u2022 Uses finite-state machines to mask invalid tokens\n\u2022 Guarantees 100% syntax compliance with JSON schemas and regex\n\nhttps://github.com/dottxt-ai/outlines",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_03_outlines.png",
+        "url": "https://github.com/dottxt-ai/outlines"
+      },
+      {
+        "text": "4/ BAML \u2014 Domain-specific language.\n\n\u2022 Type-safe language for defining LLM prompts and schemas\n\u2022 Generates native Python and TypeScript client SDKs\n\nhttps://www.boundaryml.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_04_baml.png",
+        "url": "https://www.boundaryml.com"
+      },
+      {
+        "text": "5/ Marvin \u2014 Self-healing AI primitives.\n\n\u2022 Built on Prefect for reliable data extraction pipelines\n\u2022 Extracts structured dataclasses from chaotic raw text\n\nhttps://www.askmarvin.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_05_marvin.png",
+        "url": "https://www.askmarvin.ai"
+      },
+      {
+        "text": "6/ Guidance \u2014 Interleaved generation engine.\n\n\u2022 Microsoft engine enforcing context-free grammar constraints\n\u2022 Blends generation and fixed text with zero syntax overhead\n\nhttps://github.com/guidance-ai/guidance",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_06_guidance.png",
+        "url": "https://github.com/guidance-ai/guidance"
+      },
+      {
+        "text": "7/ LMQL \u2014 Declarative query language.\n\n\u2022 Programming language combining Python logic with LLM prompts\n\u2022 Built-in token decoding constraints and validation\n\nhttps://lmql.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_07_lmql.png",
+        "url": "https://lmql.ai"
+      },
+      {
+        "text": "8/ Jsonformer \u2014 JSON schema parser.\n\n\u2022 Only samples tokens for data fields, locking static JSON syntax\n\u2022 Eliminates token waste on brackets and quotation marks\n\nhttps://github.com/1rgs/jsonformer",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_08_jsonformer.png",
+        "url": "https://github.com/1rgs/jsonformer"
+      },
+      {
+        "text": "9/ TypeChat \u2014 TypeScript schema bridge.\n\n\u2022 Translates natural language into type-checked TypeScript objects\n\u2022 Uses the TypeScript compiler to validate model outputs\n\nhttps://microsoft.github.io/TypeChat",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_09_typechat.png",
+        "url": "https://microsoft.github.io/TypeChat"
+      },
+      {
+        "text": "10/ Guided generation bridges neural fuzziness with deterministic software. Token masking and schema-level validation guarantee that agent outputs can be safely inserted into SQL tables.",
+        "image": null
+      },
+      {
+        "text": "11/ Web scrapers rely on structured extraction to convert raw DOM trees into markdown. Complete guide to scraping engines:",
+        "image": null
+      },
+      {
+        "text": "12/ Hybrid search engines index structured schemas alongside unstructured text. Full guide to search architectures:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "fhe-encrypted-computation-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Cloud AI services require decrypting your data before running inference. Fully Homomorphic Encryption (FHE) processes encrypted text.\n\n8 FHE libraries and privacy engines \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Concrete-ML (Zama) \u2014 FHE machine learning.\n\n\u2022 Compiles PyTorch models into encrypted TFHE circuits\n\u2022 Cloud servers evaluate inference without seeing raw user inputs\n\nhttps://github.com/zama-ai/concrete-ml",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_02_concrete.png",
+        "url": "https://github.com/zama-ai/concrete-ml"
+      },
+      {
+        "text": "3/ Microsoft SEAL \u2014 Open-source C++ FHE.\n\n\u2022 Foundational library implementing BFV and CKKS schemes\n\u2022 Enables encrypted vector arithmetic for medical and financial data\n\nhttps://github.com/microsoft/SEAL",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_03_seal.png",
+        "url": "https://github.com/microsoft/SEAL"
+      },
+      {
+        "text": "4/ OpenFHE \u2014 Community reference standard.\n\n\u2022 Multi-institution collaborative open-source FHE framework\n\u2022 Unified APIs for BGV, BFV, CKKS, and DM cryptosystems\n\nhttps://openfhe.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_04_openfhe.png",
+        "url": "https://openfhe.org"
+      },
+      {
+        "text": "5/ TFHE-rs \u2014 Rust Torus FHE engine.\n\n\u2022 Pure Rust implementation of Torus Fully Homomorphic Encryption\n\u2022 Sub-millisecond encrypted boolean evaluation and bootstrapping\n\nhttps://github.com/zama-ai/tfhe-rs",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_05_tfhers.png",
+        "url": "https://github.com/zama-ai/tfhe-rs"
+      },
+      {
+        "text": "6/ Fhenix \u2014 FHE blockchain execution.\n\n\u2022 Confidential smart contract execution on Ethereum L2\n\u2022 fhEVM allows developers to write private Solidity contracts\n\nhttps://www.fhenix.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_06_fhenix.png",
+        "url": "https://www.fhenix.io"
+      },
+      {
+        "text": "7/ Inco Network \u2014 Modular confidential L1.\n\n\u2022 Universal confidential computing layer for Web3\n\u2022 Enables private voting, sealed auctions, and encrypted gaming\n\nhttps://www.inco.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_07_inco.png",
+        "url": "https://www.inco.org"
+      },
+      {
+        "text": "8/ TenSEAL \u2014 Encrypted tensor ops.\n\n\u2022 Python binding for encrypted PyTorch tensor math\n\u2022 Computes convolutions and dot products directly on ciphertexts\n\nhttps://github.com/OpenMined/TenSEAL",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_08_tenseal.png",
+        "url": "https://github.com/OpenMined/TenSEAL"
+      },
+      {
+        "text": "9/ HElib \u2014 Foundational C++ library.\n\n\u2022 One of the earliest open-source homomorphic libraries\n\u2022 Highly optimized BGV implementation with ciphertext packing\n\nhttps://github.com/homenc/HElib",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/fhe_encrypted_computation/tweet_09_helib.png",
+        "url": "https://github.com/homenc/HElib"
+      },
+      {
+        "text": "10/ FHE is the holy grail of cryptographic privacy: computing on data without ever decrypting it. Hardware accelerators (ASICs and FPGAs) are closing the performance gap, making encrypted inference viable.",
+        "image": null
+      },
+      {
+        "text": "11/ Zero-knowledge machine learning provides verifiable proofs alongside FHE privacy. Complete guide to zkML systems:",
+        "image": null
+      },
+      {
+        "text": "12/ Hardware TEEs provide complementary confidential execution in microVMs. Full guide to enclave computing:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
   }
 ]
