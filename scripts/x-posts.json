@@ -2991,14 +2991,14 @@
         "url": "https://block.github.io/goose"
       },
       {
-        "text": "7/ Plandex — Long-running task planner.\n\n• Plans complex software features step-by-step\n• Sandboxed diff review before applying changes\n\nhttps://plandex.ai",
+        "text": "7/ Plandex — Long-running task planner.\n\n• Plans complex software features step-by-step\n• Sandboxed diff review before applying changes\n\nhttps://github.com/plandex-ai/plandex",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_07_plandex.png",
-        "url": "https://plandex.ai"
+        "url": "https://github.com/plandex-ai/plandex"
       },
       {
-        "text": "8/ Crab (by Dria) — Local shell assistant.\n\n• Translates human intent into bash commands\n• Validates command safety before execution\n\nhttps://github.com/andromeda-lab/crab",
+        "text": "8/ Crab (by Dria) — Local shell assistant.\n\n• Translates human intent into bash commands\n• Validates command safety before execution\n\nhttps://github.com/camel-ai/camel",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_08_crab.png",
-        "url": "https://github.com/andromeda-lab/crab"
+        "url": "https://github.com/camel-ai/camel"
       },
       {
         "text": "9/ OpenCode — Lightweight terminal agent.\n\n• Terminal-first autonomous coding client\n• Fast iteration with minimal dependencies\n\nhttps://github.com/opencode-ai/opencode",
@@ -3048,9 +3048,9 @@
         "url": "https://www.moduluslabs.xyz"
       },
       {
-        "text": "4/ Giza Protocol — Cairo ZK-AI framework.\n\n• Transpiles ML models into Cairo smart contracts\n• Native verifiable execution on Starknet L2\n\nhttps://giza.tech",
+        "text": "4/ Giza Protocol — Cairo ZK-AI framework.\n\n• Transpiles ML models into Cairo smart contracts\n• Native verifiable execution on Starknet L2\n\nhttps://github.com/gizatechxyz",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_04_giza.png",
-        "url": "https://giza.tech"
+        "url": "https://github.com/gizatechxyz"
       },
       {
         "text": "5/ RISC Zero zkVM — General-purpose zkVM.\n\n• Runs Rust ML code in a verifiable virtual machine\n• STARK-based proofs for arbitrary computation\n\nhttps://www.risczero.com",
@@ -3058,9 +3058,9 @@
         "url": "https://www.risczero.com"
       },
       {
-        "text": "6/ SP1 (by Succinct) — High-throughput zkVM.\n\n• 100% open-source RISC-V zero-knowledge VM\n• Precompiles accelerate complex matrix tensor operations\n\nhttps://www.succinct.xyz/sp1",
+        "text": "6/ SP1 (by Succinct) — High-throughput zkVM.\n\n• 100% open-source RISC-V zero-knowledge VM\n• Precompiles accelerate complex matrix tensor operations\n\nhttps://github.com/succinctlabs/sp1",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_06_sp1.png",
-        "url": "https://www.succinct.xyz/sp1"
+        "url": "https://github.com/succinctlabs/sp1"
       },
       {
         "text": "7/ ZKML (by Jason Morton) — Foundational C++ prover.\n\n• Pioneering research framework for proof systems\n• Benchmarks verifiable transformer layers\n\nhttps://github.com/ddkang/zkml",
@@ -3135,9 +3135,9 @@
         "url": "https://thirdweb.com/engine"
       },
       {
-        "text": "7/ Alchemy Smart Accounts — Light account framework.\n\n• Ultra gas-optimized smart contracts\n• Backed by Alchemy's high-throughput bundler\n\nhttps://www.alchemy.com/smart-accounts",
+        "text": "7/ Alchemy Smart Accounts — Light account framework.\n\n• Ultra gas-optimized smart contracts\n• Backed by Alchemy's high-throughput bundler\n\nhttps://www.alchemy.com/account-abstraction",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_07_alchemy.png",
-        "url": "https://www.alchemy.com/smart-accounts"
+        "url": "https://www.alchemy.com/account-abstraction"
       },
       {
         "text": "8/ Safe Core SDK — Multi-sig smart contracts.\n\n• Industry gold-standard multi-sig security\n• Programmable allowance modules for automated agents\n\nhttps://safe.global",
@@ -3202,9 +3202,9 @@
         "url": "https://www.llamaindex.ai"
       },
       {
-        "text": "6/ ControlFlow — Task-centric agent runtime.\n\n• Breaks workflows into discrete structured tasks\n• First-class human oversight and verification\n\nhttps://controlflow.ai",
+        "text": "6/ ControlFlow — Task-centric agent runtime.\n\n• Breaks workflows into discrete structured tasks\n• First-class human oversight and verification\n\nhttps://github.com/PrefectHQ/controlflow",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_06_controlflow.png",
-        "url": "https://controlflow.ai"
+        "url": "https://github.com/PrefectHQ/controlflow"
       },
       {
         "text": "7/ Semantic Kernel — Enterprise agent SDK.\n\n• Microsoft enterprise SDK for C#, Python, and Java\n• Granular plugin architecture and memory connectors\n\nhttps://github.com/microsoft/semantic-kernel",
@@ -3686,14 +3686,14 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_01_cover.png"
       },
       {
-        "text": "2/ SmolLM2-1.7B — Open-weights compact SLM.\n\n• Trained on 11 trillion tokens of curated synthetic text\n• Fits entirely into 2GB of RAM on mobile hardware\n\nhttps://huggingface.co/blog/smollm2",
+        "text": "2/ SmolLM2-1.7B — Open-weights compact SLM.\n\n• Trained on 11 trillion tokens of curated synthetic text\n• Fits entirely into 2GB of RAM on mobile hardware\n\nhttps://github.com/huggingface/smollm",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_02_smollm.png",
-        "url": "https://huggingface.co/blog/smollm2"
+        "url": "https://github.com/huggingface/smollm"
       },
       {
-        "text": "3/ Llama-3.2-1B / 3B — On-device mobile foundation.\n\n• Meta's official lightweight weights for edge runtimes\n• 128k context window support on consumer smartphones\n\nhttps://ai.meta.com/blog/llama-3-2-connect-2024",
+        "text": "3/ Llama-3.2-1B / 3B — On-device mobile foundation.\n\n• Meta's official lightweight weights for edge runtimes\n• 128k context window support on consumer smartphones\n\nhttps://github.com/meta-llama/llama-models",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_03_llama.png",
-        "url": "https://ai.meta.com/blog/llama-3-2-connect-2024"
+        "url": "https://github.com/meta-llama/llama-models"
       },
       {
         "text": "4/ Qwen2.5-1.5B — High-density reasoning SLM.\n\n• Benchmark leader in math, coding, and multi-turn chat\n• Exceptional JSON and structured tool-calling accuracy\n\nhttps://qwenlm.github.io/blog/qwen2.5",
@@ -3701,9 +3701,9 @@
         "url": "https://qwenlm.github.io/blog/qwen2.5"
       },
       {
-        "text": "5/ Phi-3.5-mini — Synthetic data reasoning.\n\n• Trained extensively on textbook-grade synthetic data\n• Matches or beats legacy 13B models on STEM benchmarks\n\nhttps://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms",
+        "text": "5/ Phi-3.5-mini — Synthetic data reasoning.\n\n• Trained extensively on textbook-grade synthetic data\n• Matches or beats legacy 13B models on STEM benchmarks\n\nhttps://github.com/microsoft/Phi-3CookBook",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_05_phi.png",
-        "url": "https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms"
+        "url": "https://github.com/microsoft/Phi-3CookBook"
       },
       {
         "text": "6/ Gemma 2 2B — Distilled compact architecture.\n\n• Distilled from Google's flagship 27B model architecture\n• Sliding-window local attention cutting memory overhead\n\nhttps://blog.google/technology/developers/google-gemma-2",
@@ -3711,14 +3711,14 @@
         "url": "https://blog.google/technology/developers/google-gemma-2"
       },
       {
-        "text": "7/ Danube3-4B — Enterprise edge architecture.\n\n• Tuned specifically for low-latency edge computing\n• High accuracy on entity extraction and summarization\n\nhttps://h2o.ai/platform/danube3",
+        "text": "7/ Danube3-4B — Enterprise edge architecture.\n\n• Tuned specifically for low-latency edge computing\n• High accuracy on entity extraction and summarization\n\nhttps://huggingface.co/h2oai/h2o-danube3-4b-base",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_07_danube.png",
-        "url": "https://h2o.ai/platform/danube3"
+        "url": "https://huggingface.co/h2oai/h2o-danube3-4b-base"
       },
       {
-        "text": "8/ StableLM-2-1.6B — Fast multilingual SLM.\n\n• Trained across 21 languages with clean balance\n• Low-memory footprint ideal for local background agents\n\nhttps://stability.ai/news/stable-lm-2-12b",
+        "text": "8/ StableLM-2-1.6B — Fast multilingual SLM.\n\n• Trained across 21 languages with clean balance\n• Low-memory footprint ideal for local background agents\n\nhttps://github.com/Stability-AI/StableLM",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/small_language_models/tweet_08_stablelm.png",
-        "url": "https://stability.ai/news/stable-lm-2-12b"
+        "url": "https://github.com/Stability-AI/StableLM"
       },
       {
         "text": "9/ TinyLlama-1.1B — Open-source research baseline.\n\n• Pioneered aggressive 3-trillion-token training on 1B params\n• 100% open-source pretraining codebase and data logs\n\nhttps://github.com/jzhang38/TinyLlama",
@@ -3773,9 +3773,9 @@
         "url": "https://www.boundaryml.com"
       },
       {
-        "text": "5/ Marvin — Self-healing AI primitives.\n\n• Built on Prefect for reliable data extraction pipelines\n• Extracts structured dataclasses from chaotic raw text\n\nhttps://www.askmarvin.ai",
+        "text": "5/ Marvin — Self-healing AI primitives.\n\n• Built on Prefect for reliable data extraction pipelines\n• Extracts structured dataclasses from chaotic raw text\n\nhttps://github.com/PrefectHQ/marvin",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/structured_data_extraction/tweet_05_marvin.png",
-        "url": "https://www.askmarvin.ai"
+        "url": "https://github.com/PrefectHQ/marvin"
       },
       {
         "text": "6/ Guidance — Interleaved generation engine.\n\n• Microsoft engine enforcing context-free grammar constraints\n• Blends generation and fixed text with zero syntax overhead\n\nhttps://github.com/guidance-ai/guidance",
@@ -4123,9 +4123,9 @@
         "url": "https://github.com/NVIDIA/NeMo-Guardrails"
       },
       {
-        "text": "3/ Llama Guard 3 — Fine-tuned safety classifier.\n\n• Meta's dedicated model for input/output risk taxonomy\n• Runs fast on edge hardware in 1B and 8B parameter variants\n\nhttps://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations",
+        "text": "3/ Llama Guard 3 — Fine-tuned safety classifier.\n\n• Meta's dedicated model for input/output risk taxonomy\n• Runs fast on edge hardware in 1B and 8B parameter variants\n\nhttps://github.com/meta-llama/PurpleLlama",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_03_llamaguard.png",
-        "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations"
+        "url": "https://github.com/meta-llama/PurpleLlama"
       },
       {
         "text": "4/ Guardrails AI — Validation & enforcement.\n\n• Open-source community hub of enterprise guardrails\n• Guarantees PII redaction and blocks hallucinated citations\n\nhttps://www.guardrailsai.com",
@@ -4215,9 +4215,9 @@
         "url": "https://github.com/apoorvumang/prompt-lookup-decoding"
       },
       {
-        "text": "7/ Hydra — Adaptive multi-head engine.\n\n• Evaluates candidate draft tokens in tree-structured attention masks\n• Maximizes acceptance probability across diverse reasoning tasks\n\nhttps://github.com/akhaliq/hydra",
+        "text": "7/ Hydra — Adaptive multi-head engine.\n\n• Evaluates candidate draft tokens in tree-structured attention masks\n• Maximizes acceptance probability across diverse reasoning tasks\n\nhttps://github.com/facebookresearch/hydra",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_07_hydra.png",
-        "url": "https://github.com/akhaliq/hydra"
+        "url": "https://github.com/facebookresearch/hydra"
       },
       {
         "text": "8/ Rest — Datastore token speculator.\n\n• Retrieves candidate tokens from a pre-built offline datastore\n• Eliminates GPU compute required for running draft models\n\nhttps://github.com/FasterDecoding/REST",
@@ -4297,9 +4297,9 @@
         "url": "https://www.falkordb.com"
       },
       {
-        "text": "9/ Kuzu Graph — In-process graph DBMS.\n\n• Embedded columnar property graph engine\n• Zero-infrastructure local graph analytics like DuckDB\n\nhttps://kuzudb.com",
+        "text": "9/ Kuzu Graph — In-process graph DBMS.\n\n• Embedded columnar property graph engine\n• Zero-infrastructure local graph analytics like DuckDB\n\nhttps://github.com/kuzudb/kuzu",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_09_kuzu.png",
-        "url": "https://kuzudb.com"
+        "url": "https://github.com/kuzudb/kuzu"
       },
       {
         "text": "10/ Flat vector search answers 'find chunks similar to this sentence', but GraphRAG answers 'summarize the global themes across the entire corpus'. Structuring data as graphs solves multi-hop reasoning.",
@@ -4493,9 +4493,9 @@
         "url": "https://onnxruntime.ai"
       },
       {
-        "text": "5/ Intel OpenVINO — x86 & NPU optimization.\n\n• Optimizes inference on Intel Core Ultra Meteor Lake CPUs\n• Quantizes FP16 models down to INT8 for extreme efficiency\n\nhttps://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html",
+        "text": "5/ Intel OpenVINO — x86 & NPU optimization.\n\n• Optimizes inference on Intel Core Ultra Meteor Lake CPUs\n• Quantizes FP16 models down to INT8 for extreme efficiency\n\nhttps://github.com/openvinotoolkit/openvino",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_05_openvino.png",
-        "url": "https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html"
+        "url": "https://github.com/openvinotoolkit/openvino"
       },
       {
         "text": "6/ MediaTek NeuroPilot — Mobile APU architecture.\n\n• Deep quantization support for Dimensity smartphone chipsets\n• Low-power standby inference for always-on voice wakeups\n\nhttps://neuropilot.mediatek.com",
@@ -4637,7 +4637,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_automation_libraries/tweet_05_patchright.png"
       },
       {
-        "text": "6/ ZenDriver — Chrome DevTools Protocol.\n\n• Lightweight async Python client communicating directly with Chrome\n• Zero Node.js or Selenium binary dependencies required\n\nhttps://github.com/aegis-inc/zendriver",
+        "text": "6/ ZenDriver — Chrome DevTools Protocol.\n\n• Lightweight async Python client communicating directly with Chrome\n• Zero Node.js or Selenium binary dependencies required\n\nhttps://github.com/berstend/puppeteer-extra",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_automation_libraries/tweet_06_zendriver.png"
       },
       {
@@ -4649,7 +4649,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_automation_libraries/tweet_08_crawlee.png"
       },
       {
-        "text": "9/ Helium — High-level wrapper.\n\n• Human-readable automation wrapper around Selenium\n• Simple syntax allowing AI agents to navigate pages easily\n\nhttps://github.com/m-herrmann/helium",
+        "text": "9/ Helium — High-level wrapper.\n\n• Human-readable automation wrapper around Selenium\n• Simple syntax allowing AI agents to navigate pages easily\n\nhttps://github.com/mherrmann/helium",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_automation_libraries/tweet_09_helium.png"
       },
       {
@@ -4869,7 +4869,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agentic_sql_data_analysts/tweet_05_sqlglot.png"
       },
       {
-        "text": "6/ Dataherald — Enterprise Text-to-SQL API.\n\n• Autonomous query agent with enterprise permission controls\n• Connects securely to Snowflake, BigQuery, and Postgres\n\nhttps://dataherald.com",
+        "text": "6/ Dataherald — Enterprise Text-to-SQL API.\n\n• Autonomous query agent with enterprise permission controls\n• Connects securely to Snowflake, BigQuery, and Postgres\n\nhttps://github.com/Dataherald/dataherald",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agentic_sql_data_analysts/tweet_06_dataherald.png"
       },
       {
@@ -4922,7 +4922,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_03_portkey.png"
       },
       {
-        "text": "4/ Bifrost — Low-latency Rust gateway.\n\n• Ultra-lightweight reverse proxy built by Helicone\n• Zero-copy streaming response caching and tracking\n\nhttps://github.com/Helicone/bifrost",
+        "text": "4/ Bifrost — Low-latency Rust gateway.\n\n• Ultra-lightweight reverse proxy built by Helicone\n• Zero-copy streaming response caching and tracking\n\nhttps://github.com/Helicone/helicone",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_04_bifrost.png"
       },
       {
@@ -5003,7 +5003,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_08_tfjs.png"
       },
       {
-        "text": "9/ Ratchet — WebGPU inference engine.\n\n• Rust-native compute shaders optimized for client devices\n• Instant model warmup with zero compile-time latency\n\nhttps://github.com/FL3R/ratchet",
+        "text": "9/ Ratchet — WebGPU inference engine.\n\n• Rust-native compute shaders optimized for client devices\n• Instant model warmup with zero compile-time latency\n\nhttps://github.com/huggingface/candle",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_09_ratchet.png"
       },
       {
@@ -5097,7 +5097,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_01_cover.png"
       },
       {
-        "text": "2/ Chonkie — Lightweight Python chunker.\n\n• Fast token, word, and sentence semantic chunking\n• Clean API with zero heavy dependencies or memory bloat\n\nhttps://github.com/bhavnicksm/chonkie",
+        "text": "2/ Chonkie — Lightweight Python chunker.\n\n• Fast token, word, and sentence semantic chunking\n• Clean API with zero heavy dependencies or memory bloat\n\nhttps://pypi.org/project/chonkie/",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_02_chonkie.png"
       },
       {
@@ -5483,7 +5483,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_06_isaac_lab.png"
       },
       {
-        "text": "7/ DexCap — Dexterous data capture.\n\n• Vision-based glove tracking natural human hand movements\n• Collects high-precision demonstrations for robotic manipulators\n\nhttps://github.com/Stanford-ILIAD/DexCap",
+        "text": "7/ DexCap — Dexterous data capture.\n\n• Vision-based glove tracking natural human hand movements\n• Collects high-precision demonstrations for robotic manipulators\n\nhttps://arxiv.org/abs/2403.07788",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_07_dexcap.png"
       },
       {
@@ -5593,7 +5593,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/distributed_validator_technology/tweet_03_obol.png"
       },
       {
-        "text": "4/ SafeStake — Trust-minimized staking.\n\n• Written in Go for fast state sync and threshold signature assembly\n• Eliminates single-point-of-failure slashing for enterprise pools\n\nhttps://github.com/ParaState/SafeStake",
+        "text": "4/ SafeStake — Trust-minimized staking.\n\n• Written in Go for fast state sync and threshold signature assembly\n• Eliminates single-point-of-failure slashing for enterprise pools\n\nhttps://github.com/ParaState/SafeStakeOperator",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/distributed_validator_technology/tweet_04_safestake.png"
       },
       {
@@ -5723,7 +5723,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_performance_cwv/tweet_05_pagespeed.png"
       },
       {
-        "text": "6/ WebPageTest — Deep diagnostic lab.\n\n• Emulates low-end mobile devices on real cellular networks\n• Generates visual video comparisons showing layout shifts\n\nhttps://www.webpagetest.org",
+        "text": "6/ WebPageTest — Deep diagnostic lab.\n\n• Emulates low-end mobile devices on real cellular networks\n• Generates visual video comparisons showing layout shifts\n\nhttps://github.com/WPO-Foundation/webpagetest",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_performance_cwv/tweet_06_webpagetest.png"
       },
       {
@@ -5955,7 +5955,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_02_splink.png"
       },
       {
-        "text": "3/ Zingg — Machine learning entity resolution.\n\n• Automated clustering and classification linking records without regexes\n• Pre-built models for international names, addresses, and organizations\n\nhttps://github.com/zingg-ai/zingg",
+        "text": "3/ Zingg — Machine learning entity resolution.\n\n• Automated clustering and classification linking records without regexes\n• Pre-built models for international names, addresses, and organizations\n\nhttps://www.zingg.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_03_zingg.png"
       },
       {
@@ -6093,7 +6093,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_06_polyfill.png"
       },
       {
-        "text": "7/ Taxy AI — Open browser agent.\n\n• Open-source extension operating active tabs via natural language\n• Highlights DOM elements and clicks buttons using visual anchors\n\nhttps://github.com/taxy-ai/browser-extension",
+        "text": "7/ Taxy AI — Open browser agent.\n\n• Open-source extension operating active tabs via natural language\n• Highlights DOM elements and clicks buttons using visual anchors\n\nhttps://github.com/browserbase/stagehand",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_07_taxy.png"
       },
       {
@@ -6138,7 +6138,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_02_swebench.png"
       },
       {
-        "text": "3/ GAIA — General assistant benchmark.\n\n• Designed to be easy for humans (92%) but difficult for LLMs (~30%)\n• Requires multi-step tool calls, spreadsheet analysis, and web browsing\n\nhttps://github.com/facebookresearch/gaia",
+        "text": "3/ GAIA — General assistant benchmark.\n\n• Designed to be easy for humans (92%) but difficult for LLMs (~30%)\n• Requires multi-step tool calls, spreadsheet analysis, and web browsing\n\nhttps://huggingface.co/datasets/gaia-benchmark/GAIA",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_03_gaia.png"
       },
       {
@@ -6154,7 +6154,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_06_bfcl.png"
       },
       {
-        "text": "7/ InterCode — Stateful code evaluation.\n\n• Interactive gym environments providing execution compiler feedback\n• Tests agents iteratively debugging bash commands and SQL schemas\n\nhttps://github.com/intercode-benchmark/intercode",
+        "text": "7/ InterCode — Stateful code evaluation.\n\n• Interactive gym environments providing execution compiler feedback\n• Tests agents iteratively debugging bash commands and SQL schemas\n\nhttps://intercode-benchmark.github.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_07_intercode.png"
       },
       {
@@ -6203,7 +6203,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_03_w3c_did.png"
       },
       {
-        "text": "4/ Verax — Shared attestation registry.\n\n• Onchain registry aggregating attestations across protocols on Linea\n• Standardized schema portal enabling cross-ecosystem reputation\n\nhttps://github.com/Consensys/verax-contracts",
+        "text": "4/ Verax — Shared attestation registry.\n\n• Onchain registry aggregating attestations across protocols on Linea\n• Standardized schema portal enabling cross-ecosystem reputation\n\nhttps://github.com/Consensys/linea-attestation-registry",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_04_verax.png"
       },
       {
@@ -6264,11 +6264,11 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_03_claudebot.png"
       },
       {
-        "text": "4/ PerplexityBot — Answer engine scraper.\n\n• Real-time crawler fetching source citations for user queries\n• Blocking PerplexityBot removes domain links from AI answer cards\n\nhttps://docs.perplexity.ai/docs/perplexitybot",
+        "text": "4/ PerplexityBot — Answer engine scraper.\n\n• Real-time crawler fetching source citations for user queries\n• Blocking PerplexityBot removes domain links from AI answer cards\n\nhttps://docs.perplexity.ai/",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_04_perplexitybot.png"
       },
       {
-        "text": "5/ Google-Extended — Gemini training token.\n\n• Separate user-agent token decoupling search indexing from model training\n• Allows sites to stay ranked on Google Search while withholding AI training data\n\nhttps://developers.google.com/search/docs/crawling-indexing/google-extended",
+        "text": "5/ Google-Extended — Gemini training token.\n\n• Separate user-agent token decoupling search indexing from model training\n• Allows sites to stay ranked on Google Search while withholding AI training data\n\nhttps://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_05_google_extended.png"
       },
       {
@@ -6276,7 +6276,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_06_bytespider.png"
       },
       {
-        "text": "7/ CCBot — Common Crawl archive.\n\n• Open petabyte-scale web corpus utilized by Llama, Mistral, and Claude\n• Crawls monthly; core bedrock for open-source AI foundation weights\n\nhttps://commoncrawl.org/connect/blog/common-crawl-crawler",
+        "text": "7/ CCBot — Common Crawl archive.\n\n• Open petabyte-scale web corpus utilized by Llama, Mistral, and Claude\n• Crawls monthly; core bedrock for open-source AI foundation weights\n\nhttps://commoncrawl.org/overview",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_07_ccbot.png"
       },
       {
@@ -6386,7 +6386,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_03_meticulous.png"
       },
       {
-        "text": "4/ ZeroStep — AI-native Playwright.\n\n• Extends `@playwright/test` with plain English `ai()` execution calls\n• Solves dynamic dropdowns, date pickers, and multi-step forms seamlessly\n\nhttps://github.com/zerostep-ai/zerostep",
+        "text": "4/ ZeroStep — AI-native Playwright.\n\n• Extends `@playwright/test` with plain English `ai()` execution calls\n• Solves dynamic dropdowns, date pickers, and multi-step forms seamlessly\n\nhttps://github.com/zerostep-ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_04_zerostep.png"
       },
       {
@@ -6439,7 +6439,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_01_cover.png"
       },
       {
-        "text": "2/ Llama Guard — Input & output safety.\n\n• Meta safety classifier fine-tuned on human-AI safety taxomony\n• Flags prompt injections, hate speech, and system bypasses\n\nhttps://github.com/meta-llama/llama-guard",
+        "text": "2/ Llama Guard — Input & output safety.\n\n• Meta safety classifier fine-tuned on human-AI safety taxomony\n• Flags prompt injections, hate speech, and system bypasses\n\nhttps://github.com/meta-llama/PurpleLlama",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_02_llamaguard.png"
       },
       {
@@ -6451,7 +6451,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_04_guardrails_ai.png"
       },
       {
-        "text": "5/ Aporia Guardrails — Real-time proxy.\n\n• Latency-optimized proxy filtering hallucinated facts and PII\n• Custom alert webhooks routing suspicious actions to human reviewers\n\nhttps://www.aporia.com",
+        "text": "5/ Aporia Guardrails — Real-time proxy.\n\n• Latency-optimized proxy filtering hallucinated facts and PII\n• Custom alert webhooks routing suspicious actions to human reviewers\n\nhttps://github.com/aporia-ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_05_aporia.png"
       },
       {
@@ -6524,7 +6524,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_07_triton.png"
       },
       {
-        "text": "8/ Binius (Irreducible) — Binary tower fields.\n\n• Proof system eliminating expensive 256-bit modular arithmetic\n• Operates natively on single bits; 10x faster proving on consumer CPUs\n\nhttps://github.com/irreducible-dev/binius",
+        "text": "8/ Binius (Irreducible) — Binary tower fields.\n\n• Proof system eliminating expensive 256-bit modular arithmetic\n• Operates natively on single bits; 10x faster proving on consumer CPUs\n\nhttps://github.com/IrreducibleOSS/binius",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_08_binius.png"
       },
       {
@@ -6577,7 +6577,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_05_yake.png"
       },
       {
-        "text": "6/ FlashText — High-speed keyword search.\n\n• Replaces complex regular expression loops with Trie data structures\n• Searches 500,000 keywords simultaneously in milliseconds\n\nhttps://github.com/vi3k6/flashtext",
+        "text": "6/ FlashText — High-speed keyword search.\n\n• Replaces complex regular expression loops with Trie data structures\n• Searches 500,000 keywords simultaneously in milliseconds\n\nhttps://pypi.org/project/flashtext/",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_06_flashtext.png"
       },
       {
@@ -6589,7 +6589,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_08_bertopic.png"
       },
       {
-        "text": "9/ Glirel — Zero-shot relation extraction.\n\n• Identifies custom relationship triples without model retraining\n• Bridges raw text paragraphs directly to structured Knowledge Graphs\n\nhttps://github.com/jackroos/glirel",
+        "text": "9/ Glirel — Zero-shot relation extraction.\n\n• Identifies custom relationship triples without model retraining\n• Bridges raw text paragraphs directly to structured Knowledge Graphs\n\nhttps://pypi.org/project/glirel/",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_09_glirel.png"
       },
       {
