@@ -3874,8 +3874,8 @@
     "id": "explainer-linkedin-derivative_tangent",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/derivative_tangent_4x5.mp4",
     "text": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "09:00",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "17:00",
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png",
     "batchId": "explainer-v1"
@@ -3884,8 +3884,8 @@
     "id": "explainer-linkedin-product_rule",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/product_rule_4x5.mp4",
     "text": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "17:00",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "01:00",
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png",
     "batchId": "explainer-v1"
@@ -3894,8 +3894,8 @@
     "id": "explainer-linkedin-sin_derivative",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/sin_derivative_4x5.mp4",
     "text": "Why the derivative of sine is cosine.\n\nMove around a circle.\n\nHeight is sine.\n\nHow fast height changes matches the cosine distance.",
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "01:00",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "09:00",
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_1x1.png",
     "batchId": "explainer-v1"
@@ -3904,8 +3904,8 @@
     "id": "explainer-linkedin-central_limit_theorem",
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/central_limit_theorem_4x5.mp4",
     "text": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "01:00",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "17:00",
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png",
     "batchId": "explainer-v1"
