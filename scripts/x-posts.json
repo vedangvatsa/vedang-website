@@ -2751,32 +2751,32 @@
         "posted": false
       },
       {
-        "text": "2/ Prompt Injection (LLM01)\n\nUntrusted text hijacking model execution.\n\n• Direct: user prompt overrides safety limits\n• Indirect: poisoned web pages trigger tool calls\n• Fix: treat all retrieved data as untrusted\n\nhttps://genai.owasp.org/llm01-prompt-injection/",
+        "text": "2/ Prompt Injection (LLM01)\n\nUntrusted text hijacking model execution.\n\n• Direct: user prompt overrides safety limits\n• Indirect: poisoned web pages trigger tool calls\n• Fix: treat all retrieved data as untrusted\n\nhttps://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/main/2025/LLM01_PromptInjection.md",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_02_prompt_injection.png",
         "posted": false
       },
       {
-        "text": "3/ Insecure Output Handling (LLM02)\n\nExecuting model output without checks.\n\n• Raw SQL or shell commands run blindly\n• Can lead to remote code execution\n• Fix: strict schema validation and parameter binding\n\nhttps://genai.owasp.org/llm02-insecure-output-handling/",
+        "text": "3/ Insecure Output Handling (LLM02)\n\nExecuting model output without checks.\n\n• Raw SQL or shell commands run blindly\n• Can lead to remote code execution\n• Fix: strict schema validation and parameter binding\n\nhttps://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/main/2025/LLM05_ImproperOutputHandling.md",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_03_insecure_output.png",
         "posted": false
       },
       {
-        "text": "4/ Training Data Poisoning (LLM03)\n\nCorrupting model training data.\n\n• Adversaries insert backdoors into web datasets\n• Creates blindspots and exploit triggers\n• Fix: verify data provenance and hash integrity\n\nhttps://genai.owasp.org/llm03-training-data-poisoning/",
+        "text": "4/ Training Data Poisoning (LLM03)\n\nCorrupting model training data.\n\n• Adversaries insert backdoors into web datasets\n• Creates blindspots and exploit triggers\n• Fix: verify data provenance and hash integrity\n\nhttps://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/main/2025/LLM04_DataModelPoisoning.md",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_04_training_poisoning.png",
         "posted": false
       },
       {
-        "text": "5/ Model Denial of Service (LLM04)\n\nResource exhaustion via heavy prompts.\n\n• Attackers force long reasoning loops\n• Blows token budgets and API rate limits\n• Fix: strict token limits and timeout breakers\n\nhttps://genai.owasp.org/llm04-model-denial-of-service/",
+        "text": "5/ Model Denial of Service (LLM04)\n\nResource exhaustion via heavy prompts.\n\n• Attackers force long reasoning loops\n• Blows token budgets and API rate limits\n• Fix: strict token limits and timeout breakers\n\nhttps://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/main/2025/LLM10_UnboundedConsumption.md",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_05_model_dos.png",
         "posted": false
       },
       {
-        "text": "6/ Insecure Plugin Design (LLM07)\n\nGiving agents destructive API access.\n\n• Agents execute deletes without approval\n• Leaks data between users\n• Fix: require human confirmation for updates\n\nhttps://genai.owasp.org/llm07-insecure-plugin-design/",
+        "text": "6/ Insecure Plugin Design (LLM07)\n\nGiving agents destructive API access.\n\n• Agents execute deletes without approval\n• Leaks data between users\n• Fix: require human confirmation for updates\n\nhttps://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/main/2025/LLM03_SupplyChain.md",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_06_insecure_plugins.png",
         "posted": false
       },
       {
-        "text": "7/ Excessive Agency (LLM08)\n\nGranting agents too much autonomy.\n\n• Giving bots shell access or email privileges\n• Hallucinations cause irreversible damage\n• Fix: principle of least privilege\n\nhttps://genai.owasp.org/llm08-excessive-agency/",
+        "text": "7/ Excessive Agency (LLM08)\n\nGranting agents too much autonomy.\n\n• Giving bots shell access or email privileges\n• Hallucinations cause irreversible damage\n• Fix: principle of least privilege\n\nhttps://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/main/2025/LLM06_ExcessiveAgency.md",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_07_excessive_agency.png",
         "posted": false
       },
