@@ -3822,5 +3822,45 @@
     "title": "Sum of Consecutive Cubes",
     "text": "Geometric proof that 1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)².\n\nA square of side (1 + 2 + ⋯ + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k³.\n\nSumming all bands yields Nicomachus theorem.",
     "altText": "Sum of Consecutive Cubes"
+  },
+  {
+    "id": "explainer-x-inscribed_angle_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/inscribed_angle_theorem_1x1.mp4",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_1x1.png",
+    "batchId": "explainer-v1",
+    "text": "Inscribed Angle Theorem - An inscribed angle is exactly half the central angle that subtends the same circular arc.\n\n#math #geometry"
+  },
+  {
+    "id": "explainer-x-cross_product_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/cross_product_area_1x1.mp4",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_1x1.png",
+    "batchId": "explainer-v1",
+    "text": "Cross Product Magnitude - Why |u x v| = |u||v|sin(theta) equals the exact area of the parallelogram formed by two vectors.\n\n#linearalgebra #geometry"
+  },
+  {
+    "id": "explainer-x-triangle_incircle_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/triangle_incircle_area_1x1.mp4",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangle_incircle_area_1x1.png",
+    "batchId": "explainer-v1",
+    "text": "Triangle Area via Inradius - Why Area = r * s. Partitioning into 3 sub-triangles with altitude r gives an elegant geometric proof.\n\n#geometry #math"
+  },
+  {
+    "id": "explainer-x-chord_intersection_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/chord_intersection_theorem_1x1.mp4",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_1x1.png",
+    "batchId": "explainer-v1",
+    "text": "Intersecting Chords Theorem - When two chords intersect inside a circle, AE * EB = CE * ED. Elegant proof via similar triangles.\n\n#geometry #math"
   }
 ]

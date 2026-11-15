@@ -4527,5 +4527,81 @@
       "education",
       "visualization"
     ]
+  },
+  {
+    "id": "explainer-yt-inscribed_angle_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/inscribed_angle_theorem_9x16.mp4",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Inscribed Angle Theorem",
+    "description": "Inscribed Angle Theorem visual proof - The angle subtended by an arc at the center of a circle is twice the angle subtended by it at any point on the circumference.\n\n#math #geometry",
+    "tags": [
+      "math",
+      "geometry",
+      "visualmath",
+      "circles",
+      "proof",
+      "education"
+    ]
+  },
+  {
+    "id": "explainer-yt-cross_product_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/cross_product_area_9x16.mp4",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Cross Product Magnitude and Parallelogram Area",
+    "description": "Geometric proof and visualization of vector cross product magnitude |u x v| = |u||v|sin(theta) equaling the area of the parallelogram spanned by the two vectors.\n\n#linearalgebra #geometry",
+    "tags": [
+      "linearalgebra",
+      "geometry",
+      "vectors",
+      "crossproduct",
+      "physics",
+      "math"
+    ]
+  },
+  {
+    "id": "explainer-yt-triangle_incircle_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/triangle_incircle_area_9x16.mp4",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangle_incircle_area_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Triangle Area via Inradius (A = r · s)",
+    "description": "Visual proof of the formula Area = r * s for any triangle with inradius r and semiperimeter s, derived by partitioning the triangle from its incenter.\n\n#geometry #math",
+    "tags": [
+      "geometry",
+      "math",
+      "triangles",
+      "inradius",
+      "visualproof",
+      "stem"
+    ]
+  },
+  {
+    "id": "explainer-yt-chord_intersection_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/chord_intersection_theorem_9x16.mp4",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Intersecting Chords Theorem (AE · EB = CE · ED)",
+    "description": "Visual proof of the Intersecting Chords Theorem (AE * EB = CE * ED) using inscribed angles that subtend identical arcs to establish similar triangles.\n\n#geometry #math",
+    "tags": [
+      "geometry",
+      "math",
+      "circles",
+      "theorems",
+      "similar-triangles",
+      "proof"
+    ]
   }
 ]

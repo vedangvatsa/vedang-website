@@ -4367,5 +4367,45 @@
     "batchId": "explainer-v1",
     "title": "Sum of Consecutive Cubes",
     "text": "Geometric proof that 1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)².\n\nA square of side (1 + 2 + ⋯ + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k³.\n\nSumming all bands yields Nicomachus theorem."
+  },
+  {
+    "id": "explainer-tiktok-inscribed_angle_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/inscribed_angle_theorem_9x16.mp4",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_9x16.png",
+    "batchId": "explainer-v1",
+    "text": "Inscribed Angle Theorem - The measure of an angle inscribed in a circle is exactly half the measure of the central angle subtending the same arc. Visual proof by radial triangle decomposition.\n\n#math #geometry"
+  },
+  {
+    "id": "explainer-tiktok-cross_product_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/cross_product_area_9x16.mp4",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_9x16.png",
+    "batchId": "explainer-v1",
+    "text": "Cross Product Magnitude - Why |u x v| = |u||v|sin(theta). Geometric visualization showing how the magnitude of the vector cross product equals the exact area of the spanned parallelogram.\n\n#linearalgebra #geometry"
+  },
+  {
+    "id": "explainer-tiktok-triangle_incircle_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/triangle_incircle_area_9x16.mp4",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangle_incircle_area_9x16.png",
+    "batchId": "explainer-v1",
+    "text": "Triangle Area via Inradius - Why Area = r * s. Connecting the incenter to vertices partitions any triangle into three sub-triangles each with altitude r, summing directly to inradius times semiperimeter.\n\n#geometry #math"
+  },
+  {
+    "id": "explainer-tiktok-chord_intersection_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/chord_intersection_theorem_9x16.mp4",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_9x16.png",
+    "batchId": "explainer-v1",
+    "text": "Intersecting Chords Theorem - When two chords intersect inside a circle, AE * EB = CE * ED. Beautiful visual proof utilizing inscribed angles and similar triangles.\n\n#geometry #math"
   }
 ]
