@@ -4167,5 +4167,25 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_4x5.png",
     "batchId": "explainer-v1",
     "text": "Intersecting Chords Theorem - When two chords intersect inside a circle, AE * EB = CE * ED. Beautiful visual proof utilizing inscribed angles and similar triangles.\n\n#geometry #math"
+  },
+  {
+    "id": "explainer-linkedin-tangent_half_angle",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/tangent_half_angle_4x5.mp4",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_half_angle_4x5.png",
+    "batchId": "explainer-v1",
+    "text": "Tangent Half-Angle Formula - Why tan(theta/2) = sin(theta) / (1 + cos(theta)). Inscribing theta/2 into a unit circle generates a right triangle with altitude sin(theta) and base 1 + cos(theta).\n\n#trigonometry #geometry"
+  },
+  {
+    "id": "explainer-linkedin-shoelace_formula",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/shoelace_formula_4x5.mp4",
+    "scheduleDate": "2026-11-28",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/shoelace_formula_4x5.png",
+    "batchId": "explainer-v1",
+    "text": "The Shoelace Formula - How to calculate the area of any polygon from coordinates. Summing signed trapezoid areas under directed edges cancels outer regions, leaving the exact polygon area.\n\n#geometry #math"
   }
 ]

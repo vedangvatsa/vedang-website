@@ -4603,5 +4603,43 @@
       "similar-triangles",
       "proof"
     ]
+  },
+  {
+    "id": "explainer-yt-tangent_half_angle",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/tangent_half_angle_9x16.mp4",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_half_angle_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Tangent Half-Angle Formula (tan(θ/2) = sinθ / (1 + cosθ))",
+    "description": "Visual geometric proof of the Tangent Half-Angle formula tan(theta/2) = sin(theta) / (1 + cos(theta)) using the unit circle and inscribed angle theorem.\n\n#trigonometry #geometry",
+    "tags": [
+      "trigonometry",
+      "geometry",
+      "visualmath",
+      "calculus",
+      "proof",
+      "education"
+    ]
+  },
+  {
+    "id": "explainer-yt-shoelace_formula",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/shoelace_formula_9x16.mp4",
+    "scheduleDate": "2026-11-28",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/shoelace_formula_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Shoelace Formula for Polygon Area",
+    "description": "Visual derivation of the Gauss Shoelace Formula for polygon area via signed trapezoid sums under cyclic polygon edges.\n\n#geometry #math",
+    "tags": [
+      "geometry",
+      "math",
+      "polygons",
+      "shoelace",
+      "visualmath",
+      "stem"
+    ]
   }
 ]
