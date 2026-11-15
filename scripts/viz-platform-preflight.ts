@@ -11,7 +11,7 @@ dotenv.config({ path: path.join(ROOT, '.env.local'), quiet: true });
 
 export const REQUIRED: Record<string, string[]> = {
   linkedin: ['LINKEDIN_ACCESS_TOKEN', 'LINKEDIN_PERSON_URN'],
-  x: ['X_API_KEY', 'X_API_KEY_SECRET', 'X_ACCESS_TOKEN', 'X_ACCESS_TOKEN_SECRET'],
+  x: ['BUFFER_API_KEY', 'BUFFER_TWITTER_CHANNEL_ID'],
   bluesky: ['BLUESKY_HANDLE', 'BLUESKY_APP_PASSWORD'],
   facebook: ['FACEBOOK_PAGE_ID', 'FACEBOOK_PAGE_TOKEN'],
   threads: ['THREADS_USER_ID', 'THREADS_ACCESS_TOKEN'],
@@ -49,9 +49,20 @@ export async function checkNative(platform: string) {
     return 'identity authorized; video/write permission still needs a publish test';
   }
   if (platform === 'x') {
-    const client = new TwitterApi({ appKey: e.X_API_KEY!, appSecret: e.X_API_KEY_SECRET!, accessToken: e.X_ACCESS_TOKEN!, accessSecret: e.X_ACCESS_TOKEN_SECRET! });
-    await client.v2.me();
-    return 'identity authorized; media and write tier not tested';
+    const res = await json('https://api.buffer.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${e.BUFFER_API_KEY!}`,
+      },
+      body: JSON.stringify({
+        query: `query { channel(input: { id: "${e.BUFFER_TWITTER_CHANNEL_ID || '6ae459612f1f5ed6481d5b6b'}" }) { id name service } }`,
+      }),
+    });
+    if ((res as any)?.data?.channel?.service !== 'twitter') {
+      throw new Error(`Buffer channel is not a Twitter/X channel: ${JSON.stringify(res)}`);
+    }
+    return `Buffer Twitter channel verified: ${(res as any)?.data?.channel?.name}`;
   }
   if (platform === 'bluesky') {
     const session = await json('https://bsky.social/xrpc/com.atproto.server.createSession', {
