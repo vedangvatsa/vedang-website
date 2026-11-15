@@ -4251,5 +4251,365 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
+  },
+  {
+    "id": "graph-rag-knowledge-bases-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Vector search retrieves isolated text fragments, missing global relationships. GraphRAG connects facts into structured knowledge graphs.\n\n8 GraphRAG frameworks and graph databases \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Microsoft GraphRAG \u2014 Hierarchical Leiden communities.\n\n\u2022 Extracts entities and relationships into hierarchical graphs\n\u2022 Generates community summaries answering global dataset queries\n\nhttps://github.com/microsoft/graphrag",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_02_graphrag.png",
+        "url": "https://github.com/microsoft/graphrag"
+      },
+      {
+        "text": "3/ Neo4j GenAI Stack \u2014 Enterprise graph database.\n\n\u2022 Native Cypher query generation for relational data traversal\n\u2022 Blends HNSW vector search with multi-hop graph paths\n\nhttps://neo4j.com/generative-ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_03_neo4j.png",
+        "url": "https://neo4j.com/generative-ai"
+      },
+      {
+        "text": "4/ LlamaIndex Property Graphs \u2014 Property graph store.\n\n\u2022 First-class abstraction for labeled property graphs\n\u2022 Resolves complex multi-document entity relationships\n\nhttps://www.llamaindex.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_04_llamagraph.png",
+        "url": "https://www.llamaindex.ai"
+      },
+      {
+        "text": "5/ Memgraph MAGE \u2014 In-memory graph engine.\n\n\u2022 High-throughput in-memory graph processing in C++\n\u2022 Streams live graph algorithm updates for dynamic datasets\n\nhttps://memgraph.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_05_memgraph.png",
+        "url": "https://memgraph.com"
+      },
+      {
+        "text": "6/ LangChain Graph QA \u2014 Graph query chains.\n\n\u2022 Translates human questions into verifiable Cypher syntax\n\u2022 Eliminates hallucinations on structured corporate entities\n\nhttps://python.langchain.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_06_langchaingraph.png",
+        "url": "https://python.langchain.com"
+      },
+      {
+        "text": "7/ Ontotext GraphDB \u2014 RDF semantic knowledge.\n\n\u2022 W3C semantic web standard with SPARQL endpoint\n\u2022 Performs deterministic logical inference across ontologies\n\nhttps://www.ontotext.com/products/graphdb",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_07_ontotext.png",
+        "url": "https://www.ontotext.com/products/graphdb"
+      },
+      {
+        "text": "8/ FalkorDB \u2014 Low-latency graph DB.\n\n\u2022 Uses GraphBLAS sparse matrix operations for speed\n\u2022 Designed for real-time agent memory and knowledge recall\n\nhttps://www.falkordb.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_08_falkordb.png",
+        "url": "https://www.falkordb.com"
+      },
+      {
+        "text": "9/ Kuzu Graph \u2014 In-process graph DBMS.\n\n\u2022 Embedded columnar property graph engine\n\u2022 Zero-infrastructure local graph analytics like DuckDB\n\nhttps://kuzudb.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/graph_rag_knowledge_bases/tweet_09_kuzu.png",
+        "url": "https://kuzudb.com"
+      },
+      {
+        "text": "10/ Flat vector search answers 'find chunks similar to this sentence', but GraphRAG answers 'summarize the global themes across the entire corpus'. Structuring data as graphs solves multi-hop reasoning.",
+        "image": null
+      },
+      {
+        "text": "11/ Hybrid search fuses lexical keywords and vectors before graph traversal. Complete guide to hybrid retrieval:",
+        "image": null
+      },
+      {
+        "text": "12/ Cross-encoder rerankers verify relevance order after graph node extraction. Full guide to reranking models:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "web-scraping-proxy-networks-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Training frontier models and grounding AI agents requires harvesting web data. Modern anti-bot firewalls make residential routing mandatory.\n\n8 proxy architectures and unblocker engines \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Bright Data \u2014 Enterprise residential network.\n\n\u2022 Over 72M+ rotating peer residential IP addresses globally\n\u2022 Built-in Web Unlocker emulates human TLS and browser headers\n\nhttps://brightdata.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_02_brightdata.png",
+        "url": "https://brightdata.com"
+      },
+      {
+        "text": "3/ Oxylabs \u2014 Dedicated scraper infrastructure.\n\n\u2022 AI-powered unblocker handling dynamic JavaScript rendering\n\u2022 100M+ real device IPs bypassing complex geo-blocks\n\nhttps://oxylabs.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_03_oxylabs.png",
+        "url": "https://oxylabs.io"
+      },
+      {
+        "text": "4/ Smartproxy \u2014 Self-service proxy fleet.\n\n\u2022 Sub-second response latency across rotating residential pools\n\u2022 Sticky sessions for multi-step ecommerce checkout flows\n\nhttps://smartproxy.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_04_smartproxy.png",
+        "url": "https://smartproxy.com"
+      },
+      {
+        "text": "5/ Zyte \u2014 Automated anti-ban API.\n\n\u2022 Smart Proxy Manager automatically retries blocked requests\n\u2022 Patented AI heuristic rotation avoids bot honeypots\n\nhttps://www.zyte.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_05_zyte.png",
+        "url": "https://www.zyte.com"
+      },
+      {
+        "text": "6/ ScraperAPI \u2014 Single-endpoint unblocker.\n\n\u2022 Single GET endpoint managing proxies, browsers, and captchas\n\u2022 Automatically handles IP rotation with 99.9% success SLA\n\nhttps://www.scraperapi.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_06_scraperapi.png",
+        "url": "https://www.scraperapi.com"
+      },
+      {
+        "text": "7/ ZenRows \u2014 Anti-bypass API.\n\n\u2022 Specialized engine defeating Datadome, Akamai, and Cloudflare\n\u2022 Clean CSS selector parsing and headless screenshot captures\n\nhttps://www.zenrows.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_07_zenrows.png",
+        "url": "https://www.zenrows.com"
+      },
+      {
+        "text": "8/ NetNut \u2014 Direct ISP proxy network.\n\n\u2022 Direct connectivity to tier-1 ISPs without P2P middle hops\n\u2022 High bandwidth throughput for heavy video and PDF pipelines\n\nhttps://netnut.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_08_netnut.png",
+        "url": "https://netnut.io"
+      },
+      {
+        "text": "9/ Webshare \u2014 High-throughput datacenter.\n\n\u2022 Cost-effective private proxy pools for bulk web harvesting\n\u2022 Fully programmable REST API for granular configuration\n\nhttps://www.webshare.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_09_webshare.png",
+        "url": "https://www.webshare.io"
+      },
+      {
+        "text": "10/ Modern anti-bot firewalls inspect TCP/IP fingerprints, TLS ciphers, and behavioral mouse movements. Residential proxy unblockers abstract away network-level defenses so scrapers retrieve clean text.",
+        "image": null
+      },
+      {
+        "text": "11/ Scraped web data is formatted by AI markdown engines. Complete guide to open-source web scrapers and crawlers:",
+        "image": null
+      },
+      {
+        "text": "12/ Structured extraction libraries convert raw HTML into type-safe JSON. Full guide to schema generation engines:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "cross-chain-intent-solvers-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Manual bridging across blockchains is slow, risky, and fragmenting. Intent architectures let autonomous solvers execute outcomes.\n\n8 cross-chain intent protocols and solver networks \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Across Protocol \u2014 Intent-based bridge.\n\n\u2022 Solvers front capital instantly on destination chains\n\u2022 Settle asynchronously via optimistic verification on Ethereum\n\nhttps://across.to",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_02_across.png",
+        "url": "https://across.to"
+      },
+      {
+        "text": "3/ UniswapX \u2014 Dutch auction intent routing.\n\n\u2022 Dutch auction mechanisms search for best execution prices\n\u2022 Fillers pay gas on behalf of users, enabling gasless trading\n\nhttps://uniswap.org/whitepaper-uniswapx.pdf",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_03_uniswapx.png",
+        "url": "https://uniswap.org/whitepaper-uniswapx.pdf"
+      },
+      {
+        "text": "4/ CoW Protocol \u2014 Batch auction MEV protection.\n\n\u2022 Solvers compete to find Coincidence of Wants off-chain\n\u2022 Protects autonomous trading bots from sandwich attacks\n\nhttps://cow.fi",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_04_cow.png",
+        "url": "https://cow.fi"
+      },
+      {
+        "text": "5/ LI.FI \u2014 Multi-chain routing engine.\n\n\u2022 Unified API connecting DEX aggregators and solver networks\n\u2022 Automated fallback routing when specific bridges suffer downtime\n\nhttps://li.fi",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_05_lifi.png",
+        "url": "https://li.fi"
+      },
+      {
+        "text": "6/ Socket (Bungee) \u2014 Modular intent orchestrator.\n\n\u2022 RFQ liquidity network quoting sub-second cross-chain swaps\n\u2022 Powers frictionless asset transfers across EVM rollups\n\nhttps://www.socket.tech",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_06_socket.png",
+        "url": "https://www.socket.tech"
+      },
+      {
+        "text": "7/ deBridge DLN \u2014 0-TVL cross-chain orders.\n\n\u2022 Cross-chain limit orders with zero liquidity pool risk\n\u2022 Private fillers fulfill orders directly with their own capital\n\nhttps://debridge.finance",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_07_debridge.png",
+        "url": "https://debridge.finance"
+      },
+      {
+        "text": "8/ Anoma \u2014 Generalized intent architecture.\n\n\u2022 Architecture where users declare state changes, not transactions\n\u2022 Multi-agent solver network settles complex counterparty swaps\n\nhttps://anoma.net",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_08_anoma.png",
+        "url": "https://anoma.net"
+      },
+      {
+        "text": "9/ OneBalance \u2014 Credible account abstraction.\n\n\u2022 Abstracts fragmented balances across 20+ chains into one\n\u2022 Allows AI agents to spend assets without worrying about networks\n\nhttps://onebalance.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/cross_chain_intent_solvers/tweet_09_onebalance.png",
+        "url": "https://onebalance.io"
+      },
+      {
+        "text": "10/ Imperative transactions tell the blockchain HOW to execute. Declarative intents tell the network WHAT outcome is desired, outsourcing the execution complexity, gas, and risk to competing solvers.",
+        "image": null
+      },
+      {
+        "text": "11/ Account abstraction gives software agents programmatic signing rights. Full guide to ERC-4337 smart account SDKs:",
+        "image": null
+      },
+      {
+        "text": "12/ Smart contract security is vital when interacting with solver settlement. Complete breakdown of security audits:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "on-device-npu-runtimes-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Offloading all AI computation to cloud GPUs is expensive and battery-draining. Dedicated Neural Processing Units (NPUs) run models locally.\n\n8 on-device NPU runtimes \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Apple CoreML \u2014 Apple Silicon NPU engine.\n\n\u2022 Direct compilation to the Apple Neural Engine (ANE)\n\u2022 Unified memory architecture eliminates CPU-GPU copy latency\n\nhttps://developer.apple.com/machine-learning/core-ml",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_02_coreml.png",
+        "url": "https://developer.apple.com/machine-learning/core-ml"
+      },
+      {
+        "text": "3/ Qualcomm AI Hub \u2014 Snapdragon NPU acceleration.\n\n\u2022 Over 100+ pre-optimized model checkpoints for Snapdragon chips\n\u2022 45 TOPS of on-device neural acceleration on Windows PCs\n\nhttps://aihub.qualcomm.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_03_qualcomm.png",
+        "url": "https://aihub.qualcomm.com"
+      },
+      {
+        "text": "4/ ONNX Runtime (DirectML) \u2014 Cross-platform NPU API.\n\n\u2022 Unified execution across Intel, AMD, and Qualcomm silicon\n\u2022 Hardware acceleration via Windows DirectML neural drivers\n\nhttps://onnxruntime.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_04_onnx.png",
+        "url": "https://onnxruntime.ai"
+      },
+      {
+        "text": "5/ Intel OpenVINO \u2014 x86 & NPU optimization.\n\n\u2022 Optimizes inference on Intel Core Ultra Meteor Lake CPUs\n\u2022 Quantizes FP16 models down to INT8 for extreme efficiency\n\nhttps://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_05_openvino.png",
+        "url": "https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html"
+      },
+      {
+        "text": "6/ MediaTek NeuroPilot \u2014 Mobile APU architecture.\n\n\u2022 Deep quantization support for Dimensity smartphone chipsets\n\u2022 Low-power standby inference for always-on voice wakeups\n\nhttps://neuropilot.mediatek.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_06_neuropilot.png",
+        "url": "https://neuropilot.mediatek.com"
+      },
+      {
+        "text": "7/ ExecuTorch (PyTorch) \u2014 Edge-first PyTorch runtime.\n\n\u2022 Official PyTorch runtime for on-device mobile inference\n\u2022 Direct backend delegates for Apple, Qualcomm, and Arm silicon\n\nhttps://pytorch.org/executorch",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_07_executorch.png",
+        "url": "https://pytorch.org/executorch"
+      },
+      {
+        "text": "8/ WebNN \u2014 In-browser NPU hardware API.\n\n\u2022 W3C standard exposing native NPU accelerators to web apps\n\u2022 Enables client-side AI inference without installing drivers\n\nhttps://www.w3.org/TR/webnn",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_08_webnn.png",
+        "url": "https://www.w3.org/TR/webnn"
+      },
+      {
+        "text": "9/ LiteRT (TF Lite) \u2014 Mobile edge runtime.\n\n\u2022 High-performance framework powering Google Android AI features\n\u2022 Hardware acceleration across mobile GPUs and neural DSPs\n\nhttps://ai.google.dev/edge/litert",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/on_device_npu_runtimes/tweet_09_litert.png",
+        "url": "https://ai.google.dev/edge/litert"
+      },
+      {
+        "text": "10/ NPUs consume a fraction of the wattage of discrete GPUs. Running local SLMs and embeddings on dedicated silicon is what makes all-day battery life possible for AI-first devices.",
+        "image": null
+      },
+      {
+        "text": "11/ Small language models run at hundreds of tokens/sec on mobile NPUs. Complete breakdown of sub-3B parameter SLMs:",
+        "image": null
+      },
+      {
+        "text": "12/ Quantization techniques reduce model footprints down to 4-bit weights. Full technical guide:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "ai-synthetic-voice-cloning-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Robotic text-to-speech is dead. Modern zero-shot voice synthesis clones human timbre and emotion from a 3-second audio sample.\n\n8 open-source voice synthesis and cloning models \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Kokoro-82M \u2014 Open-weights compact TTS.\n\n\u2022 Apache 2.0 licensed model with only 82M parameters\n\u2022 Runs real-time audio streaming on basic consumer laptop CPUs\n\nhttps://huggingface.co/hexgrad/Kokoro-82M",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_02_kokoro.png",
+        "url": "https://huggingface.co/hexgrad/Kokoro-82M"
+      },
+      {
+        "text": "3/ ChatTTS \u2014 Conversational speech synthesis.\n\n\u2022 Trained specifically for conversational agent dialogue\n\u2022 Generates natural human laughter, interjections, and breath pauses\n\nhttps://github.com/2noise/ChatTTS",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_03_chattts.png",
+        "url": "https://github.com/2noise/ChatTTS"
+      },
+      {
+        "text": "4/ F5-TTS \u2014 Flow matching voice cloner.\n\n\u2022 Non-autoregressive flow matching architecture\n\u2022 High-fidelity zero-shot voice cloning from a 3-second clip\n\nhttps://github.com/SWivid/F5-TTS",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_04_f5tts.png",
+        "url": "https://github.com/SWivid/F5-TTS"
+      },
+      {
+        "text": "5/ XTTS-v2 \u2014 Cross-lingual voice cloner.\n\n\u2022 Clones target voices into 17 different languages\n\u2022 Preserves emotional inflection and vocal texture across speech\n\nhttps://github.com/coqui-ai/TTS",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_05_xtts.png",
+        "url": "https://github.com/coqui-ai/TTS"
+      },
+      {
+        "text": "6/ Fish-Speech \u2014 Dual-autoregressive audio.\n\n\u2022 High-throughput audio token generation\n\u2022 Low-latency streaming support for interactive voice agents\n\nhttps://github.com/fishaudio/fish-speech",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_06_fishspeech.png",
+        "url": "https://github.com/fishaudio/fish-speech"
+      },
+      {
+        "text": "7/ Bark (Suno) \u2014 Transformer audio generation.\n\n\u2022 Fully generative transformer predicting audio codec tokens\n\u2022 Expresses laughter, sighs, crying, and music chords\n\nhttps://github.com/suno-ai/bark",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_07_bark.png",
+        "url": "https://github.com/suno-ai/bark"
+      },
+      {
+        "text": "8/ StyleTTS 2 \u2014 Diffusion pitch style matching.\n\n\u2022 Combines style diffusion with adversarial training\n\u2022 Matches native human prosody without robotic monotone artifacts\n\nhttps://github.com/yl4579/StyleTTS2",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_08_styletts.png",
+        "url": "https://github.com/yl4579/StyleTTS2"
+      },
+      {
+        "text": "9/ VALL-E X \u2014 Cross-lingual neural codec.\n\n\u2022 Synthesizes target voices speaking entirely new languages\n\u2022 Preserves speaker acoustic identity across language barriers\n\nhttps://github.com/Plachtaa/VALL-E-X",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_synthetic_voice_cloning/tweet_09_vallex.png",
+        "url": "https://github.com/Plachtaa/VALL-E-X"
+      },
+      {
+        "text": "10/ Voice cloning has transitioned from bulky acoustic models to lightweight neural audio codecs. Sub-100M parameter models running locally make real-time conversational agents accessible.",
+        "image": null
+      },
+      {
+        "text": "11/ Voice agents rely on low-latency WebRTC infrastructure for natural turn-taking. Complete guide to real-time audio stacks:",
+        "image": null
+      },
+      {
+        "text": "12/ Continuous batching engines serve language models behind voice pipelines. Full architectural breakdown:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
   }
 ]
