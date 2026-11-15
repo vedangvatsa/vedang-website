@@ -32,7 +32,7 @@ const TIMEZONE_OFFSET_HOURS = 5.5; // IST
 const POSTS_FILE = path.resolve(__dirname, process.env.X_POSTS_FILE || 'x-posts.json');
 const QUOTE_POSTS_FILE = path.resolve(__dirname, 'x-quote-posts.json');
 const REPLY_POSTS_FILE = path.resolve(__dirname, 'x-reply-posts.json');
-const COOLDOWN_HOURS = Number(process.env.X_COOLDOWN_HOURS || '3');
+const COOLDOWN_HOURS = Number(process.env.X_COOLDOWN_HOURS || '0');
 
 interface TweetItem {
   text: string;
@@ -359,14 +359,16 @@ async function main() {
 
   let modified = false;
 
-  // COOLDOWN: max 3 posts/day with 8h gap between each (env-overridable).
-  const recentlyPosted = posts.some(p => {
-    if (!p.posted || !p.postedAt) return false;
-    return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
-  });
-  if (recentlyPosted) {
-    console.log('⏸️ Posted within last 7-8h — skipping (max 3 posts/day)');
-    return;
+  // COOLDOWN: Disabled (COOLDOWN_HOURS = 0) so other scheduled content and threads post without blocking
+  if (COOLDOWN_HOURS > 0) {
+    const recentlyPosted = posts.some(p => {
+      if (!p.posted || !p.postedAt) return false;
+      return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
+    });
+    if (recentlyPosted) {
+      console.log(`[Cooldown] Skipping because COOLDOWN_HOURS is ${COOLDOWN_HOURS}`);
+      return;
+    }
   }
 
   for (const post of posts) {
