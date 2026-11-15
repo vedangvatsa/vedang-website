@@ -4744,5 +4744,61 @@
     "postedAt": null,
     "description": "Visualizing the dot product as a geometric shadow projection. The scalar product u . v measures the length of the orthogonal shadow cast by vector u onto base vector v multiplied by the length of v.",
     "tags": []
+  },
+  {
+    "id": "explainer-yt-complex_multiplication",
+    "batchId": "explainer-v1",
+    "slug": "complex_multiplication",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/complex_multiplication_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/complex_multiplication_9x16.png",
+    "title": "Complex Multiplication | Math Explained",
+    "scheduleDate": "2026-12-06",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visualizing multiplication of complex numbers in the complex plane. Multiplying two numbers adds their polar angles and multiplies their lengths, turning multiplication into simultaneous rotation and scaling.",
+    "tags": []
+  },
+  {
+    "id": "explainer-yt-roots_of_unity",
+    "batchId": "explainer-v1",
+    "slug": "roots_of_unity",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/roots_of_unity_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/roots_of_unity_9x16.png",
+    "title": "Roots of Unity and Symmetry | Math Explained",
+    "scheduleDate": "2026-12-07",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visualizing the nth roots of unity z^n = 1 in the complex plane. The solutions form perfectly symmetric regular polygons inscribed inside the unit circle, naturally summing to zero at the origin.",
+    "tags": []
+  },
+  {
+    "id": "explainer-yt-snells_law",
+    "batchId": "explainer-v1",
+    "slug": "snells_law",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/snells_law_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/snells_law_9x16.png",
+    "title": "Snell Law of Refraction | Math Explained",
+    "scheduleDate": "2026-12-07",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visualizing Snell law of refraction derived from Fermat principle of least time. Light travelling between different media bends at the boundary to minimize total travel time rather than distance.",
+    "tags": []
+  },
+  {
+    "id": "explainer-yt-simple_harmonic_motion",
+    "batchId": "explainer-v1",
+    "slug": "simple_harmonic_motion",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/simple_harmonic_motion_9x16.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/simple_harmonic_motion_9x16.png",
+    "title": "Simple Harmonic Motion and Circular Motion | Math Explained",
+    "scheduleDate": "2026-12-08",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "postedAt": null,
+    "description": "Visualizing simple harmonic motion as the one-dimensional projection of uniform circular motion. The oscillating position of a mass on a spring matches the horizontal cosine projection of an object rotating at constant angular frequency.",
+    "tags": []
   }
 ]
