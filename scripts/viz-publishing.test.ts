@@ -38,18 +38,28 @@ test('catch-up gate waits for the slot, recovers a missed trigger and skips comp
   assert.equal(needsBufferWork(posts, new Date('2026-09-25T08:30:00Z')), true);
 });
 
-test('cooldown enforces minimum 7-8h gap between consecutive publications', () => {
-  const posts = [
-    { ...entry('one'), posted: true, attemptedSlot: '2026-09-25T09:00', attemptedAt: '2026-09-25T03:30:00Z' },
-    entry('two', '17:00'),
-  ];
-  // 3 hours after first post (06:30Z = 12:00 IST): in cooldown, must return false / no post
-  assert.equal(needsBufferWork(posts, new Date('2026-09-25T06:30:00Z')), false);
-  // 6 hours after first post (09:30Z = 15:00 IST): still in 7h cooldown, must return false
-  assert.equal(needsBufferWork(posts, new Date('2026-09-25T09:30:00Z')), false);
-  // 8 hours after first post (11:30Z = 17:00 IST): slot 17:00 active, cooldown expired, post is due!
-  assert.equal(needsBufferWork(posts, new Date('2026-09-25T11:30:00Z')), true);
-  assert.equal(selectDue(posts, new Date('2026-09-25T11:30:00Z')).post?.id, 'two');
+test('cooldown enforces minimum 7-8h gap between consecutive publications when configured', () => {
+  const prevCooldown = process.env.VIZ_COOLDOWN_HOURS;
+  process.env.VIZ_COOLDOWN_HOURS = '7';
+  try {
+    const posts = [
+      { ...entry('one'), posted: true, attemptedSlot: '2026-09-25T09:00', attemptedAt: '2026-09-25T03:30:00Z' },
+      entry('two', '17:00'),
+    ];
+    // 3 hours after first post (06:30Z = 12:00 IST): in cooldown, must return false / no post
+    assert.equal(needsBufferWork(posts, new Date('2026-09-25T06:30:00Z')), false);
+    // 6 hours after first post (09:30Z = 15:00 IST): still in 7h cooldown, must return false
+    assert.equal(needsBufferWork(posts, new Date('2026-09-25T09:30:00Z')), false);
+    // 8 hours after first post (11:30Z = 17:00 IST): slot 17:00 active, cooldown expired, post is due!
+    assert.equal(needsBufferWork(posts, new Date('2026-09-25T11:30:00Z')), true);
+    assert.equal(selectDue(posts, new Date('2026-09-25T11:30:00Z')).post?.id, 'two');
+  } finally {
+    if (prevCooldown === undefined) {
+      delete process.env.VIZ_COOLDOWN_HOURS;
+    } else {
+      process.env.VIZ_COOLDOWN_HOURS = prevCooldown;
+    }
+  }
 });
 
 test('catch-up gate reconciles submitted posts without creating a second post', () => {
