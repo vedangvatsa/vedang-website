@@ -4523,5 +4523,18 @@
     "posted": false,
     "postedAt": null,
     "text": "Visualizing projectile motion as decoupled orthogonal motion. Horizontal movement maintains constant uniform velocity while vertical movement undergoes uniform gravitational acceleration. Eliminating time reveals that any projectile traces a true downward parabola."
+  },
+  {
+    "id": "explainer-fb-geometric_distribution",
+    "batchId": "explainer-v1",
+    "slug": "geometric_distribution",
+    "video": "scripts/viz-assets/videos/explainer_videos/4x5/geometric_distribution_4x5.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_distribution_4x5.png",
+    "title": "Geometric Distribution Expected Value (E = 1/p)",
+    "scheduleDate": "2026-12-09",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "text": "Visual proof of why the expected wait time of a geometric distribution equals 1/p via memoryless recursion. A single trial either succeeds with probability p in 1 step or resets with probability 1-p, proving that expected trials always equal 1/p."
   }
 ]
