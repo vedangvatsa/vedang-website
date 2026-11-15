@@ -4178,5 +4178,31 @@
     "posted": false,
     "postedAt": null,
     "text": "Visualizing simple harmonic motion as the one-dimensional projection of uniform circular motion. The oscillating position of a mass on a spring matches the horizontal cosine projection of an object rotating at constant angular frequency."
+  },
+  {
+    "id": "explainer-x-doppler_effect",
+    "batchId": "explainer-v1",
+    "slug": "doppler_effect",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/doppler_effect_1x1.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/doppler_effect_1x1.png",
+    "title": "The Doppler Effect and Wavefronts",
+    "scheduleDate": "2026-12-08",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "postedAt": null,
+    "text": "Visualizing the Doppler effect through moving wavefront geometry. When a wave source travels at steady velocity, emitted spherical wavefronts bunch together ahead to shorten wavelength and increase frequency, while stretching apart behind."
+  },
+  {
+    "id": "explainer-x-projectile_parabola",
+    "batchId": "explainer-v1",
+    "slug": "projectile_parabola",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/projectile_parabola_1x1.mp4",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/projectile_parabola_1x1.png",
+    "title": "Projectile Motion and Parabolic Flight",
+    "scheduleDate": "2026-12-09",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "postedAt": null,
+    "text": "Visualizing projectile motion as decoupled orthogonal motion. Horizontal movement maintains constant uniform velocity while vertical movement undergoes uniform gravitational acceleration. Eliminating time reveals that any projectile traces a true downward parabola."
   }
 ]
