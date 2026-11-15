@@ -3435,7 +3435,12 @@
     "posted": false,
     "altText": "Why Circle Area is Pi Times Radius Squared",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/circle_area_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "uncertain",
+    "attemptedAt": "2026-11-15T12:15:00.854Z",
+    "attemptedSlot": "2026-11-15T17:00",
+    "publishedText": "Why the area of a circle equals pi times radius squared.\n\nCut a circle into thin rings and unroll them.\n\nThey form a triangle.\n\nThe bottom line is the circumference. The height is the radius.",
+    "error": "Account is not allowed to perform this action"
   },
   {
     "id": "explainer-x-pythagorean_theorem",
