@@ -3393,8 +3393,8 @@
     "text": "How the largest dry broad bean and horse bean producers changed.\n\n2000-2024. Dry broad bean and horse bean production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-07",
     "scheduleTime": "01:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-15T06:15:32.487Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/121-r2.txt",
     "captionStyle": "concise-v2",
@@ -3409,7 +3409,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-15T06:15:28.993Z",
+    "attemptedSlot": "2026-11-15T09:00",
+    "publishedText": "How the largest dry broad bean and horse bean producers changed.\n\n2000-2024. Dry broad bean and horse bean production by country, measured in millions of tonnes.",
+    "platformPostId": "833327813010620416",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833327813010620416"
   },
   {
     "id": "viz-b2-tumblr-122",
