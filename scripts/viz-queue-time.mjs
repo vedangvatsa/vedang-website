@@ -19,9 +19,9 @@ export function selectDuePost(posts, now = new Date()) {
   if (blocked) throw new Error(`${blocked.id} is ${blocked.state}; reconcile it before sending another video`);
   if (posts.some(p => p.attemptedSlot === slot)) return { slot };
 
-  // COOLDOWN: enforce an 8-hour gap between posts (with a 7-hour minimum buffer for cron jitter).
-  // Overridable via VIZ_COOLDOWN_HOURS env var (e.g. set to '0' in tests).
-  const cooldownHours = Number(process.env.VIZ_COOLDOWN_HOURS ?? '7');
+  // Cooldown removed: posts fire whenever a slot is due.
+  // Can still be enforced optionally if VIZ_COOLDOWN_HOURS is explicitly set > 0.
+  const cooldownHours = Number(process.env.VIZ_COOLDOWN_HOURS ?? '0');
   if (cooldownHours > 0) {
     const minGapMs = cooldownHours * 3600000;
     const recentlyAttempted = posts.some(p => {
