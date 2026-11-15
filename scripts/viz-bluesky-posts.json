@@ -2680,10 +2680,12 @@
     "audioLicense": "Mixkit Stock Music Free License",
     "audioRevision": "no-attribution-v1",
     "publishedText": "How the largest raw ginger producers changed.\n\n2000-2024. Raw ginger production by country, measured in millions of tonnes.",
-    "state": "uncertain",
+    "state": "failed",
     "attemptedAt": "2026-11-14T20:20:06.119Z",
     "attemptedSlot": "2026-11-15T01:00",
-    "error": "Bluesky video processing failed"
+    "error": "Bluesky video processing failed",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-108",
@@ -2708,7 +2710,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-109",
@@ -2733,7 +2737,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-110",
@@ -2758,7 +2764,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-62",
@@ -2783,7 +2791,9 @@
     "sourceCredit": "ITU",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-111",
@@ -2808,7 +2818,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-112",
@@ -2833,7 +2845,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-113",
@@ -2858,7 +2872,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-114",
@@ -2883,7 +2899,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-63",
@@ -2908,7 +2926,9 @@
     "sourceCredit": "World Bank, national statistics and central banks",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-115",
@@ -2933,7 +2953,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-116",
@@ -2958,7 +2980,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-117",
@@ -2983,7 +3007,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-118",
@@ -3008,7 +3034,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-64",
@@ -3033,7 +3061,9 @@
     "sourceCredit": "World Bank, national statistics and central banks",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-119",
@@ -3058,7 +3088,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-120",
@@ -3083,7 +3115,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-121",
@@ -3108,7 +3142,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-122",
@@ -3133,7 +3169,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-65",
@@ -3158,7 +3196,9 @@
     "sourceCredit": "WHO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-123",
@@ -3183,7 +3223,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-124",
@@ -3208,7 +3250,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-125",
@@ -3233,7 +3277,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-126",
@@ -3258,7 +3304,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-66",
@@ -3283,7 +3331,9 @@
     "sourceCredit": "WHO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-127",
@@ -3308,7 +3358,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-128",
@@ -3333,7 +3385,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-129",
@@ -3358,7 +3412,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-130",
@@ -3383,7 +3439,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-67",
@@ -3408,7 +3466,9 @@
     "sourceCredit": "UNAIDS",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-131",
@@ -3433,7 +3493,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-132",
@@ -3458,7 +3520,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-133",
@@ -3483,7 +3547,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-134",
@@ -3508,7 +3574,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-68",
@@ -3533,7 +3601,9 @@
     "sourceCredit": "IMF",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-135",
@@ -3558,7 +3628,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-136",
@@ -3583,7 +3655,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-137",
@@ -3608,7 +3682,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-138",
@@ -3633,7 +3709,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-139",
@@ -3658,7 +3736,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "viz-b2-bluesky-140",
@@ -3683,7 +3763,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused older batch2 data-viz backlog to prioritize Mathsy explainer campaign"
   },
   {
     "id": "explainer-bsky-circle_area",
@@ -3692,10 +3774,12 @@
     "text": "Why the area of a circle equals pi times radius squared.\n\nCut a circle into thin rings and unroll them.\n\nThey form a triangle.\n\nThe bottom line is the circumference. The height is the radius.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why Circle Area is Pi Times Radius Squared",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/circle_area_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "postedAt": "2026-11-15T09:00:00.000Z"
   },
   {
     "id": "explainer-bsky-pythagorean_theorem",
@@ -3704,10 +3788,12 @@
     "text": "Four matching right triangles placed inside a square.\n\nMoving them around shows the leftover space stays the same.\n\nThe two smaller squares equal the big square on the longest side.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "The Pythagorean Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "postedAt": "2026-11-15T17:00:00.000Z"
   },
   {
     "id": "explainer-bsky-sum_of_odds",
