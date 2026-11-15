@@ -3171,5 +3171,365 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
+  },
+  {
+    "id": "agent-orchestration-frameworks-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Single AI prompts are hitting capability ceilings. Production systems coordinate specialized multi-agent swarms.\n\n8 multi-agent orchestration frameworks \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ LangGraph \u2014 Cyclic graph orchestrator.\n\n\u2022 Defines agents as stateful graphs with cycles\n\u2022 Time-travel debugging with state rollbacks\n\nhttps://github.com/langchain-ai/langgraph",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_02_langgraph.png",
+        "url": "https://github.com/langchain-ai/langgraph"
+      },
+      {
+        "text": "3/ CrewAI \u2014 Role-playing agent swarms.\n\n\u2022 Assigns distinct personas, goals, and tools\n\u2022 Hierarchical task delegation and execution\n\nhttps://www.crewai.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_03_crewai.png",
+        "url": "https://www.crewai.com"
+      },
+      {
+        "text": "4/ AutoGen \u2014 Conversational multi-agent.\n\n\u2022 Asynchronous event-driven agent actor model\n\u2022 Coordinates complex multi-party conversations\n\nhttps://microsoft.github.io/autogen",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_04_autogen.png",
+        "url": "https://microsoft.github.io/autogen"
+      },
+      {
+        "text": "5/ LlamaIndex Workflows \u2014 Event-driven orchestrator.\n\n\u2022 Type-safe event streaming between agents\n\u2022 Native integration with deep RAG indexing\n\nhttps://www.llamaindex.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_05_llamaindex.png",
+        "url": "https://www.llamaindex.ai"
+      },
+      {
+        "text": "6/ ControlFlow \u2014 Task-centric agent runtime.\n\n\u2022 Breaks workflows into discrete structured tasks\n\u2022 First-class human oversight and verification\n\nhttps://controlflow.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_06_controlflow.png",
+        "url": "https://controlflow.ai"
+      },
+      {
+        "text": "7/ Semantic Kernel \u2014 Enterprise agent SDK.\n\n\u2022 Microsoft enterprise SDK for C#, Python, and Java\n\u2022 Granular plugin architecture and memory connectors\n\nhttps://github.com/microsoft/semantic-kernel",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_07_semantickernel.png",
+        "url": "https://github.com/microsoft/semantic-kernel"
+      },
+      {
+        "text": "8/ Dify.AI Orchestrator \u2014 Visual workflow engine.\n\n\u2022 Visual canvas for multi-model agent pipelines\n\u2022 Built-in prompt engineering and RAG testing\n\nhttps://dify.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_08_dify.png",
+        "url": "https://dify.ai"
+      },
+      {
+        "text": "9/ Swarm (OpenAI) \u2014 Ergonomic handoff protocol.\n\n\u2022 Lightweight pattern for stateless agent handoffs\n\u2022 Transparent execution without complex abstractions\n\nhttps://github.com/openai/swarm",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_orchestration_frameworks/tweet_09_swarm.png",
+        "url": "https://github.com/openai/swarm"
+      },
+      {
+        "text": "10/ Orchestration frameworks decouple reasoning from execution. Breaking problems into specialized agents drastically reduces token consumption and eliminates single-prompt hallucination cascades.",
+        "image": null
+      },
+      {
+        "text": "11/ Multi-agent swarms rely on persistent memory across workflows. Detailed guide to agent context and episodic memory engines:",
+        "image": null
+      },
+      {
+        "text": "12/ Terminal-first coding agents execute multi-file refactors autonomously. Full architectural breakdown:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "agent-browser-environments-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Local web browsers leak credentials and get IP-banned. Sandboxed cloud environments give AI agents safe web execution.\n\n8 sandboxed cloud environments for web agents \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Browserbase \u2014 Headless cloud fleet.\n\n\u2022 High-scale serverless browser infrastructure\n\u2022 Automated captcha solving and fingerprint rotation\n\nhttps://www.browserbase.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_02_browserbase.png",
+        "url": "https://www.browserbase.com"
+      },
+      {
+        "text": "3/ Steel.dev \u2014 Open-source browser API.\n\n\u2022 Dedicated browser sessions for autonomous agents\n\u2022 Full Playwright, Puppeteer, and Selenium support\n\nhttps://steel.dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_03_steel.png",
+        "url": "https://steel.dev"
+      },
+      {
+        "text": "4/ Hyperbrowser \u2014 High-throughput scraper.\n\n\u2022 Sub-second browser session spin-up\n\u2022 Built-in stealth patches bypassing bot barriers\n\nhttps://hyperbrowser.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_04_hyperbrowser.png",
+        "url": "https://hyperbrowser.ai"
+      },
+      {
+        "text": "5/ E2B Sandboxes \u2014 Secure cloud microVMs.\n\n\u2022 Isolated Linux microVM sandboxes for agents\n\u2022 Executes arbitrary Python, bash, and browser code\n\nhttps://e2b.dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_05_e2b.png",
+        "url": "https://e2b.dev"
+      },
+      {
+        "text": "6/ Daytona \u2014 Standardized workspaces.\n\n\u2022 Automated cloud development environments\n\u2022 Git provider integration with instant spin-up\n\nhttps://www.daytona.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_06_daytona.png",
+        "url": "https://www.daytona.io"
+      },
+      {
+        "text": "7/ Anchor Browser \u2014 Browser context isolation.\n\n\u2022 Managed browser sessions designed for AI agents\n\u2022 Real-time screen streaming and action inspection\n\nhttps://anchorbrowser.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_07_anchor.png",
+        "url": "https://anchorbrowser.io"
+      },
+      {
+        "text": "8/ Stagehand \u2014 AI automation framework.\n\n\u2022 Playwright wrapper using DOM and vision reasoning\n\u2022 Natural language actions replacing CSS selectors\n\nhttps://github.com/browserbase/stagehand",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_08_stagehand.png",
+        "url": "https://github.com/browserbase/stagehand"
+      },
+      {
+        "text": "9/ Browser-Use Cloud \u2014 Agentic navigation fleet.\n\n\u2022 Scalable cloud runners for web agents\n\u2022 Handles authentication, multi-tabs, and downloads\n\nhttps://browser-use.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_browser_environments/tweet_09_browseruse.png",
+        "url": "https://browser-use.com"
+      },
+      {
+        "text": "10/ Cloud sandboxes solve the isolation problem for web agents. By executing headless sessions in ephemeral microVMs, developers prevent credential theft and avoid local system poisoning.",
+        "image": null
+      },
+      {
+        "text": "11/ Web scrapers feed real-time clean markdown into agent environments. Detailed comparison of modern extraction engines:",
+        "image": null
+      },
+      {
+        "text": "12/ AI search engines index live internet data for RAG pipelines. Full technical breakdown of answer engine optimization:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "depin-hardware-sensor-networks-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Centralized cloud infrastructure is hitting cost and capacity walls. DePIN networks tokenize physical hardware globally.\n\n8 DePIN protocols transforming physical hardware \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Helium Network \u2014 Decentralized wireless.\n\n\u2022 Global community-deployed IoT and 5G mobile coverage\n\u2022 Proof of Coverage verifies physical antenna deployments\n\nhttps://www.helium.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_02_helium.png",
+        "url": "https://www.helium.com"
+      },
+      {
+        "text": "3/ Render Network \u2014 Distributed GPU compute.\n\n\u2022 Decentralized GPU rendering and AI inference network\n\u2022 OctaneRender integration for studio-grade workloads\n\nhttps://render.x.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_03_render.png",
+        "url": "https://render.x.io"
+      },
+      {
+        "text": "4/ Hivemapper \u2014 Street-level mapping.\n\n\u2022 4K dashcam network crowdsourcing street-level imagery\n\u2022 Over 300M+ road kilometers mapped permissionlessly\n\nhttps://hivemapper.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_04_hivemapper.png",
+        "url": "https://hivemapper.com"
+      },
+      {
+        "text": "5/ Akash Network \u2014 Cloud compute marketplace.\n\n\u2022 Decentralized serverless compute marketplace\n\u2022 70% cheaper than traditional centralized cloud providers\n\nhttps://akash.network",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_05_akash.png",
+        "url": "https://akash.network"
+      },
+      {
+        "text": "6/ io.net \u2014 Decentralized GPU clusters.\n\n\u2022 Clusters thousands of GPUs for scalable ML workloads\n\u2022 Sub-minute cluster deployment with Ray framework support\n\nhttps://io.net",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_06_ionet.png",
+        "url": "https://io.net"
+      },
+      {
+        "text": "7/ Filecoin \u2014 Decentralized storage network.\n\n\u2022 Cryptographic Proof of Replication (PoRep) protocol\n\u2022 Preserves humanity's most critical open-source datasets\n\nhttps://filecoin.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_07_filecoin.png",
+        "url": "https://filecoin.io"
+      },
+      {
+        "text": "8/ DIMO Network \u2014 Connected vehicle hardware.\n\n\u2022 Open IoT hardware reading CAN-bus telemetry data\n\u2022 Users retain sovereign ownership over vehicle diagnostics\n\nhttps://dimo.zone",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_08_dimo.png",
+        "url": "https://dimo.zone"
+      },
+      {
+        "text": "9/ Grass (Wynd Network) \u2014 Decentralized web scraping.\n\n\u2022 Crowdsourced residential node web crawling\n\u2022 Transparent data provenance verifying AI training feeds\n\nhttps://www.getgrass.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/depin_hardware_sensor_networks/tweet_09_grass.png",
+        "url": "https://www.getgrass.io"
+      },
+      {
+        "text": "10/ DePIN bridges cryptographic tokens with physical world infrastructure. Hardware incentives solve the zero-to-one supply bottleneck for capital-intensive telecommunications and GPU compute.",
+        "image": null
+      },
+      {
+        "text": "11/ DePIN networks require verifiable zero-knowledge proofs to audit compute. Complete guide to zkML proof systems:",
+        "image": null
+      },
+      {
+        "text": "12/ Smart contracts automate payout incentives for node operators. Full guide to account abstraction and smart accounts:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "hybrid-search-sparse-dense-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Dense vector embeddings fail on exact keywords, product codes, and acronyms. Hybrid search fixes this by combining BM25 and neural vectors.\n\n8 hybrid search engines and algorithms \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Reciprocal Rank Fusion (RRF) \u2014 Rank aggregation.\n\n\u2022 Fuses ranked lists without normalizing raw scores\n\u2022 60/(60+rank) formula consistently beats raw cosine math\n\nhttps://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_02_rrf.png",
+        "url": "https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf"
+      },
+      {
+        "text": "3/ Qdrant \u2014 Payload-based vector DB.\n\n\u2022 Combines dense neural vectors with sparse SPLADE weights\n\u2022 Native Rust engine delivering sub-millisecond query latency\n\nhttps://qdrant.tech",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_03_qdrant.png",
+        "url": "https://qdrant.tech"
+      },
+      {
+        "text": "4/ Weaviate \u2014 Modular vector engine.\n\n\u2022 Tunable alpha parameter balances BM25 and vectors\n\u2022 Integrated vectorization modules and reranking models\n\nhttps://weaviate.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_04_weaviate.png",
+        "url": "https://weaviate.io"
+      },
+      {
+        "text": "5/ Pinecone \u2014 Managed vector service.\n\n\u2022 High-scale sparse-dense index architecture\n\u2022 Serverless storage separating compute from index storage\n\nhttps://www.pinecone.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_05_pinecone.png",
+        "url": "https://www.pinecone.io"
+      },
+      {
+        "text": "6/ Milvus 2.4 \u2014 Distributed vector DB.\n\n\u2022 Inverted index acceleration for multi-vector queries\n\u2022 Designed for enterprise clusters exceeding billions of vectors\n\nhttps://milvus.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_06_milvus.png",
+        "url": "https://milvus.io"
+      },
+      {
+        "text": "7/ Vespa.ai \u2014 Enterprise search engine.\n\n\u2022 Combines lexical BM25, neural models, and tensor evaluation\n\u2022 Evaluates complex machine learning ranking models at scale\n\nhttps://vespa.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_07_vespa.png",
+        "url": "https://vespa.ai"
+      },
+      {
+        "text": "8/ Chroma DB \u2014 Developer-first embeddings.\n\n\u2022 Open-source lightweight embedding store\n\u2022 Native integration with LangChain and LlamaIndex agents\n\nhttps://www.trychroma.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_08_chroma.png",
+        "url": "https://www.trychroma.com"
+      },
+      {
+        "text": "9/ BM25S \u2014 Ultra-fast BM25 engine.\n\n\u2022 Blazing fast BM25 implementation running in pure NumPy\n\u2022 500x faster than legacy Python rank_bm25 packages\n\nhttps://github.com/xhluca/bm25s",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hybrid_search_sparse_dense/tweet_09_bm25s.png",
+        "url": "https://github.com/xhluca/bm25s"
+      },
+      {
+        "text": "10/ Pure vector search suffers from semantic drift on domain-specific queries. Hybrid search (BM25 for lexical precision + dense vectors for contextual recall) is the foundational architecture of production RAG.",
+        "image": null
+      },
+      {
+        "text": "11/ Retrieved chunks need cross-encoder reranking to ensure top-1 precision. Full technical guide to reranker architectures:",
+        "image": null
+      },
+      {
+        "text": "12/ Unstructured web documents must be chunked and parsed before indexing. Complete breakdown of document parsers:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "continuous-batching-inference-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Naive LLM inference wastes up to 80% of GPU memory on KV cache fragmentation. Continuous batching engines fix this.\n\n8 high-throughput LLM serving engines \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ vLLM Engine \u2014 PagedAttention runtime.\n\n\u2022 PagedAttention manages KV cache like OS virtual memory\n\u2022 Increases serving throughput by 2x to 4x out of the box\n\nhttps://github.com/vllm-project/vllm",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_02_vllm.png",
+        "url": "https://github.com/vllm-project/vllm"
+      },
+      {
+        "text": "3/ SGLang \u2014 Structured decoding engine.\n\n\u2022 RadixAttention enables automatic KV cache sharing\n\u2022 5x faster for multi-turn chat and structured JSON output\n\nhttps://github.com/sgl-project/sglang",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_03_sglang.png",
+        "url": "https://github.com/sgl-project/sglang"
+      },
+      {
+        "text": "4/ TensorRT-LLM \u2014 Hardware-optimized serving.\n\n\u2022 NVIDIA's flagship compiler for frontier inference\n\u2022 In-flight batching and FP8 quantization for Hopper GPUs\n\nhttps://github.com/NVIDIA/TensorRT-LLM",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_04_tensorrt.png",
+        "url": "https://github.com/NVIDIA/TensorRT-LLM"
+      },
+      {
+        "text": "5/ TGI (Hugging Face) \u2014 Production inference.\n\n\u2022 Text Generation Inference powers Hugging Face Pro APIs\n\u2022 Native FlashAttention-2 and speculative decoding support\n\nhttps://github.com/huggingface/text-generation-inference",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_05_tgi.png",
+        "url": "https://github.com/huggingface/text-generation-inference"
+      },
+      {
+        "text": "6/ Ollama \u2014 Local inference runtime.\n\n\u2022 Runs GGUF models locally with single-command setup\n\u2022 Compatible with OpenAI SDKs and local agent frameworks\n\nhttps://ollama.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_06_ollama.png",
+        "url": "https://ollama.com"
+      },
+      {
+        "text": "7/ Aphrodite Engine \u2014 High-throughput serving.\n\n\u2022 Built on vLLM with support for wider quantization schemes\n\u2022 Optimized for multi-user high-concurrency clusters\n\nhttps://github.com/PygmalionAI/aphrodite-engine",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_07_aphrodite.png",
+        "url": "https://github.com/PygmalionAI/aphrodite-engine"
+      },
+      {
+        "text": "8/ llama.cpp \u2014 C/C++ inference engine.\n\n\u2022 Pure C/C++ implementation running on Apple Silicon & CPUs\n\u2022 Revolutionized accessible open-weight model deployment\n\nhttps://github.com/ggerganov/llama.cpp",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_08_llamacpp.png",
+        "url": "https://github.com/ggerganov/llama.cpp"
+      },
+      {
+        "text": "9/ ExLlamaV2 \u2014 EXL2 quantized inference.\n\n\u2022 Custom CUDA kernels tuned for consumer GPU memory\n\u2022 Extremely fast generation speeds for local 4-bit models\n\nhttps://github.com/turboderp/exllamav2",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/continuous_batching_inference/tweet_09_exllama.png",
+        "url": "https://github.com/turboderp/exllamav2"
+      },
+      {
+        "text": "10/ Inference economics dictate AI product viability. PagedAttention and in-flight continuous batching have dropped token serving costs by an order of magnitude over the last 18 months.",
+        "image": null
+      },
+      {
+        "text": "11/ Fast inference powers autonomous coding and terminal agents. Complete guide to CLI-first developer tools:",
+        "image": null
+      },
+      {
+        "text": "12/ Serving SLMs locally reduces latency and guarantees data privacy. Full architectural breakdown of small language models:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
   }
 ]
