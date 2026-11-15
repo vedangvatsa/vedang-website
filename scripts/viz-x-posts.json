@@ -3839,7 +3839,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Inscribed Angle Theorem - An inscribed angle is exactly half the central angle that subtends the same circular arc."
+    "text": "Inscribed Angle Theorem - An inscribed angle is exactly half the central angle that subtends the same circular arc.",
+    "title": "Inscribed Angle Theorem"
   },
   {
     "id": "explainer-x-cross_product_area",
@@ -3849,7 +3850,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Cross Product Magnitude - Why |u x v| = |u||v|sin(theta) equals the exact area of the parallelogram formed by two vectors."
+    "text": "Cross Product Magnitude - Why |u x v| = |u||v|sin(theta) equals the exact area of the parallelogram formed by two vectors.",
+    "title": "Cross Product and Parallelogram Area"
   },
   {
     "id": "explainer-x-triangle_incircle_area",
@@ -3859,7 +3861,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangle_incircle_area_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Triangle Area via Inradius - Why Area = r * s. Partitioning into 3 sub-triangles with altitude r gives an elegant geometric proof."
+    "text": "Triangle Area via Inradius - Why Area = r * s. Partitioning into 3 sub-triangles with altitude r gives an elegant geometric proof.",
+    "title": "Triangle Area via Inradius"
   },
   {
     "id": "explainer-x-chord_intersection_theorem",
@@ -3869,7 +3872,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Intersecting Chords Theorem - When two chords intersect inside a circle, AE * EB = CE * ED. Elegant proof via similar triangles."
+    "text": "Intersecting Chords Theorem - When two chords intersect inside a circle, AE * EB = CE * ED. Elegant proof via similar triangles.",
+    "title": "Intersecting Chords Theorem"
   },
   {
     "id": "explainer-x-tangent_half_angle",
@@ -3879,7 +3883,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_half_angle_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Tangent Half-Angle Formula - Why tan(theta/2) = sin(theta) / (1 + cos(theta)). Elegant unit circle inscribed angle proof."
+    "text": "Tangent Half-Angle Formula - Why tan(theta/2) = sin(theta) / (1 + cos(theta)). Elegant unit circle inscribed angle proof.",
+    "title": "Tangent Half-Angle Formula"
   },
   {
     "id": "explainer-x-shoelace_formula",
@@ -3889,7 +3894,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/shoelace_formula_1x1.png",
     "batchId": "explainer-v1",
-    "text": "The Shoelace Formula - Calculating polygon area directly from coordinates using signed trapezoid edge dissections."
+    "text": "The Shoelace Formula - Calculating polygon area directly from coordinates using signed trapezoid edge dissections.",
+    "title": "The Shoelace Formula for Area"
   },
   {
     "id": "explainer-x-quotient_rule",
@@ -3899,7 +3905,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/quotient_rule_1x1.png",
     "batchId": "explainer-v1",
-    "text": "The Quotient Rule - Why d/dx(u/v) = (u'v - uv') / v^2. Elegant visual proof by area substitution u = q * v."
+    "text": "The Quotient Rule - Why d/dx(u/v) = (u'v - uv') / v^2. Elegant visual proof by area substitution u = q * v.",
+    "title": "The Quotient Rule in Calculus"
   },
   {
     "id": "explainer-x-derivative_of_cosx",
@@ -3909,7 +3916,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_of_cosx_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Derivative of Cosine - Why d/dx[cos(x)] = -sin(x). Unit circle tangent triangle shows the horizontal component decreases."
+    "text": "Derivative of Cosine - Why d/dx[cos(x)] = -sin(x). Unit circle tangent triangle shows the horizontal component decreases.",
+    "title": "Derivative of Cosine is Negative Sine"
   },
   {
     "id": "explainer-x-surface_area_sphere",
@@ -3919,7 +3927,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/surface_area_sphere_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Surface Area of a Sphere - Why Area = 4 * pi * r^2. Shell differentiation shows surface area is dV/dr of sphere volume."
+    "text": "Surface Area of a Sphere - Why Area = 4 * pi * r^2. Shell differentiation shows surface area is dV/dr of sphere volume.",
+    "title": "Surface Area of a Sphere"
   },
   {
     "id": "explainer-x-cone_volume",
@@ -3929,7 +3938,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cone_volume_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Volume of a Cone - Why V = 1/3 * pi * r^2 * h. Disc integration proves cone volume is exactly one-third cylinder volume."
+    "text": "Volume of a Cone - Why V = 1/3 * pi * r^2 * h. Disc integration proves cone volume is exactly one-third cylinder volume.",
+    "title": "Volume of a Cone"
   },
   {
     "id": "explainer-x-pyramid_volume",
@@ -3939,7 +3949,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pyramid_volume_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Volume of a Pyramid - Why V = 1/3 * Base * Height. Three congruent pyramids pack a cube completely."
+    "text": "Volume of a Pyramid - Why V = 1/3 * Base * Height. Three congruent pyramids pack a cube completely.",
+    "title": "Volume of a Pyramid"
   },
   {
     "id": "explainer-x-fibonacci_spiral",
@@ -3949,7 +3960,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/fibonacci_spiral_1x1.png",
     "batchId": "explainer-v1",
-    "text": "The Fibonacci Spiral - Tiling Fibonacci squares converges to the golden ratio phi = 1.618."
+    "text": "The Fibonacci Spiral - Tiling Fibonacci squares converges to the golden ratio phi = 1.618.",
+    "title": "The Fibonacci Spiral and Golden Ratio"
   },
   {
     "id": "explainer-x-pascals_triangle_sum",
@@ -3959,7 +3971,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pascals_triangle_sum_1x1.png",
     "batchId": "explainer-v1",
-    "text": "Pascal's Triangle Row Sums - Why each row sums to 2^n via Binomial Theorem on (1 + 1)^n."
+    "text": "Pascal's Triangle Row Sums - Why each row sums to 2^n via Binomial Theorem on (1 + 1)^n.",
+    "title": "Row Sums of Pascal Triangle"
   },
   {
     "id": "explainer-x-hockey_stick_identity",
@@ -3969,7 +3982,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/hockey_stick_identity_1x1.png",
     "batchId": "explainer-v1",
-    "text": "The Hockey-Stick Identity - Diagonal sums in Pascal's triangle turn sharply into the next row."
+    "text": "The Hockey-Stick Identity - Diagonal sums in Pascal's triangle turn sharply into the next row.",
+    "title": "The Hockey-Stick Identity"
   },
   {
     "id": "explainer-x-euclidean_algorithm",
