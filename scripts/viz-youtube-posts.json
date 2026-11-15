@@ -4060,9 +4060,18 @@
     ],
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Each odd number wraps around the previous ones as an L shape, building successive square numbers.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-16T01:00",
+    "attemptedAt": "2026-11-15T20:36:16.557Z",
+    "bufferPostId": "6afa17c0a869c35e5b94e176",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=RooVACa23OM",
+    "postedAt": "2026-11-15T20:36:18.145Z",
+    "error": null
   },
   {
     "id": "explainer-yt-sum_of_integers",

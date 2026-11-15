@@ -4045,9 +4045,18 @@
     "title": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-16T01:00",
+    "attemptedAt": "2026-11-15T20:36:16.554Z",
+    "bufferPostId": "6afa17c006e1675856a3e443",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7708499781143858450",
+    "postedAt": "2026-11-15T20:36:59.793Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-sum_of_integers",

@@ -3986,9 +3986,18 @@
     "text": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-16T01:00",
+    "attemptedAt": "2026-11-15T20:36:16.549Z",
+    "bufferPostId": "6afa17c060a910801c479fde",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dfxp15KAc0N/",
+    "postedAt": "2026-11-15T20:37:12.894Z",
+    "error": null
   },
   {
     "id": "explainer-ig-sum_of_integers",

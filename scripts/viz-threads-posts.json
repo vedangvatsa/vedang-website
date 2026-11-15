@@ -3608,7 +3608,12 @@
     "posted": false,
     "altText": "The Pythagorean Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "uncertain",
+    "attemptedAt": "2026-11-15T20:37:54.526Z",
+    "attemptedSlot": "2026-11-16T01:00",
+    "publishedText": "Four matching right triangles placed inside a square.\n\nMoving them around shows the leftover space stays the same.\n\nThe two smaller squares equal the big square on the longest side.",
+    "error": "Video container failed: 400 {\"error\":{\"message\":\"Error validating access token: Session has expired on Wednesday, 14-Oct-26 23:29:28 PDT. The current time is Sunday, 15-Nov-26 12:37:54 PST.\",\"code\":190,\"type\":\"OAuthException\",\"error_subcode\":0,\"fbtrace_id\":\"A-w6U7bLGZDUia5XEL4E0Zj\"}}"
   },
   {
     "id": "explainer-threads-sum_of_odds",

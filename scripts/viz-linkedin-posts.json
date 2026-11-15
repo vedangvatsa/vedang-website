@@ -3826,9 +3826,17 @@
     "text": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-15T20:37:24.167Z",
+    "attemptedSlot": "2026-11-16T01:00",
+    "publishedText": "Adding odd numbers makes square numbers.\n\n1 is a 1 by 1 square.\n\nAdd 3, you get 2 by 2.\n\nAdd 5, you get 3 by 3.",
+    "platformPostId": "urn:li:ugcPost:7527832173903753217",
+    "postedAt": "2026-11-15T20:37:31.267Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7527832173903753217/"
   },
   {
     "id": "explainer-linkedin-sum_of_integers",

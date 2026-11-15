@@ -3473,7 +3473,12 @@
     "posted": false,
     "altText": "Why Adding Odd Numbers Makes Square Numbers",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "uncertain",
+    "attemptedAt": "2026-11-15T20:37:31.271Z",
+    "attemptedSlot": "2026-11-16T01:00",
+    "publishedText": "Adding odd numbers in order always makes a square number.\n\n1 makes a 1 by 1 square.\n\nAdd 3, you get a 2 by 2 square.\n\nAdd 5, you get a 3 by 3 square.",
+    "error": "Account is not allowed to perform this action"
   },
   {
     "id": "explainer-x-sum_of_integers",

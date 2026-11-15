@@ -3255,8 +3255,8 @@
     "text": "Where households pay more of the healthcare bill.\n\n2000-2023. Direct household payments as a share of current health expenditure.",
     "scheduleDate": "2026-11-07",
     "scheduleTime": "17:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-15T20:38:07.038Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/65-r2.txt",
     "captionStyle": "concise-v2",
@@ -3268,7 +3268,13 @@
     "sourceCredit": "WHO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-15T20:37:59.318Z",
+    "attemptedSlot": "2026-11-16T01:00",
+    "publishedText": "Where households pay more of the healthcare bill.\n\n2000-2023. Direct household payments as a share of current health expenditure.",
+    "postUrl": "https://hachyderm.io/@vedang/117622380097175286",
+    "platformPostId": "117622380097175286"
   },
   {
     "id": "viz-b2-mastodon-123",
