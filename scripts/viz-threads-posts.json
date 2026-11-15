@@ -863,7 +863,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "state": "sent",
     "attemptedAt": "2026-10-10T18:07:05.788Z",
     "attemptedSlot": "2026-10-10T20:00",
@@ -959,7 +959,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "state": "sent",
     "attemptedAt": "2026-10-12T07:32:03.662Z",
     "attemptedSlot": "2026-10-12T09:00",
@@ -3579,5 +3579,115 @@
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
     "audioRevision": "no-attribution-v1"
+  },
+  {
+    "id": "explainer-threads-circle_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/circle_area_9x16.mp4",
+    "title": "Why Circle Area is Pi Times Radius Squared",
+    "text": "Why the area of a circle equals pi times radius squared.\n\nCut a circle into thin rings and unroll them.\n\nThey form a triangle.\n\nThe bottom line is the circumference. The height is the radius.",
+    "scheduleDate": "2026-11-15",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Why Circle Area is Pi Times Radius Squared"
+  },
+  {
+    "id": "explainer-threads-pythagorean_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/pythagorean_theorem_9x16.mp4",
+    "title": "A Visual Proof of the Pythagorean Theorem",
+    "text": "Four matching right triangles placed inside a square.\n\nMoving them around shows the leftover space stays the same.\n\nThe two smaller squares equal the big square on the longest side.",
+    "scheduleDate": "2026-11-15",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "A Visual Proof of the Pythagorean Theorem"
+  },
+  {
+    "id": "explainer-threads-sum_of_odds",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sum_of_odds_9x16.mp4",
+    "title": "Why Adding Odd Numbers Makes Square Numbers",
+    "text": "Adding odd numbers in order always makes a square number.\n\n1 makes a 1 by 1 square.\n\nAdd 3, you get a 2 by 2 square.\n\nAdd 5, you get a 3 by 3 square.",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Why Adding Odd Numbers Makes Square Numbers"
+  },
+  {
+    "id": "explainer-threads-sum_of_integers",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sum_of_integers_9x16.mp4",
+    "title": "How to Add Numbers from 1 to n",
+    "text": "How to add the numbers from 1 to n without adding each one.\n\nBuild a staircase of blocks from 1 to n.\n\nMake a second copy, flip it upside down, and fit them together.\n\nThey make a rectangle. Cut the total area in half.",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "How to Add Numbers from 1 to n"
+  },
+  {
+    "id": "explainer-threads-geometric_series",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/geometric_series_9x16.mp4",
+    "title": "Why Halves Add Up to One",
+    "text": "Take a square with an area of 1.\n\nCut it in half. That is 1/2.\n\nCut the leftover space in half. That is 1/4.\n\nKeep cutting halves forever. Together they fill the square.",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Why Halves Add Up to One"
+  },
+  {
+    "id": "explainer-threads-difference_of_squares",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/difference_of_squares_9x16.mp4",
+    "title": "Visualizing the Difference of Squares",
+    "text": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Visualizing the Difference of Squares"
+  },
+  {
+    "id": "explainer-threads-sphere_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sphere_volume_9x16.mp4",
+    "title": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
+    "text": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Why the Volume of a Sphere is 4/3 Pi r Cubed"
+  },
+  {
+    "id": "explainer-threads-derivative_tangent",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/derivative_tangent_9x16.mp4",
+    "title": "What a Derivative Actually Is",
+    "text": "What a derivative means in geometry.\n\nDraw a line through two points on a curve.\n\nMove the two points closer together.\n\nThe line turns into a tangent touching at just one point.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "What a Derivative Actually Is"
+  },
+  {
+    "id": "explainer-threads-product_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/product_rule_9x16.mp4",
+    "title": "The Product Rule Made Simple",
+    "text": "Why the derivative of u times v is u dv plus v du.\n\nPicture a rectangle of width u and height v.\n\nIf both sides grow slightly, the new area is two thin strips plus a tiny corner.\n\nThe corner is too small to matter.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "The Product Rule Made Simple"
+  },
+  {
+    "id": "explainer-threads-sin_derivative",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/sin_derivative_9x16.mp4",
+    "title": "Why the Derivative of Sine is Cosine",
+    "text": "Why the rate of change of sine equals cosine.\n\nMove a point around a circle.\n\nSine is how high the point is.\n\nAs you move along the circle, how fast height changes matches horizontal distance.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Why the Derivative of Sine is Cosine"
+  },
+  {
+    "id": "explainer-threads-central_limit_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/central_limit_theorem_9x16.mp4",
+    "title": "Why the Bell Curve Shows Up Everywhere",
+    "text": "Drop balls through rows of pins.\n\nEach ball bounces randomly left or right.\n\nMost balls end up near the center.\n\nThe pile naturally forms a bell shape.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Why the Bell Curve Shows Up Everywhere"
   }
 ]
