@@ -2602,7 +2602,7 @@
         "posted": false
       },
       {
-        "text": "2/ Coinbase AgentKit\n\nTurn any AI agent into an on-chain actor.\n\n• Works with LangChain, CrewAI, and custom agents\n• Gives agents on-chain wallets on Base and Solana\n• Built-in actions for transfers and token swaps\n\nhttps://coinbase.com/agentkit",
+        "text": "2/ Coinbase AgentKit\n\nTurn any AI agent into an on-chain actor.\n\n• Works with LangChain, CrewAI, and custom agents\n• Gives agents on-chain wallets on Base and Solana\n• Built-in actions for transfers and token swaps\n\nhttps://github.com/coinbase/agentkit",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_02_agentkit.png",
         "posted": false
       },
@@ -2824,7 +2824,7 @@
         "posted": false
       },
       {
-        "text": "2/ NIST Final PQC Standards (2024)\n\nThe definitive post-quantum encryption standards.\n\n• ML-KEM (FIPS 203): Lattice key exchange for TLS\n• ML-DSA (FIPS 204): Primary digital signature standard\n• SLH-DSA (FIPS 205): Stateless hash backup signatures\n\nhttps://csrc.nist.gov/pqc",
+        "text": "2/ NIST Final PQC Standards (2024)\n\nThe definitive post-quantum encryption standards.\n\n• ML-KEM (FIPS 203): Lattice key exchange for TLS\n• ML-DSA (FIPS 204): Primary digital signature standard\n• SLH-DSA (FIPS 205): Stateless hash backup signatures\n\nhttps://csrc.nist.gov/projects/post-quantum-cryptography",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_02_nist_standards.png",
         "posted": false
       },
