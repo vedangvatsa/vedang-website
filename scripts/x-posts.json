@@ -5206,5 +5206,310 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
+  },
+  {
+    "id": "autonomous-coding-sandboxes-thread",
+    "topic": "ai-agents",
+    "date": "2026-04-01",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Coding agents require arbitrary bash and Python execution. Running untrusted code on production servers demands hardened isolation.\n\n8 secure sandbox environments for agents 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ E2B — Cloud code interpreter.\n\n• MicroVM sandboxes boot in under 200 milliseconds\n• Native support for Jupyter cells, matplotlib, and shell\n\nhttps://github.com/e2b-dev/E2B",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_02_e2b.png"
+      },
+      {
+        "text": "3/ Fly Machines — Fast microVM APIs.\n\n• Boots hardware-isolated KVM instances globally in 300ms\n• Pause and resume state memory snapshots instantly\n\nhttps://fly.io/docs/machines",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_03_fly_machines.png"
+      },
+      {
+        "text": "4/ Modal Sandboxes — Serverless execution.\n\n• Ephemeral sandboxes with instant GPU and storage mounts\n• Native Python SDK running complex batch compute\n\nhttps://modal.com/docs/guide/sandboxes",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_04_modal.png"
+      },
+      {
+        "text": "5/ Daytona — Autonomous workspace engine.\n\n• Standardizes reproducible development environments\n• Automates Git branch setups and tool dependencies\n\nhttps://github.com/daytonaio/daytona",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_05_daytona.png"
+      },
+      {
+        "text": "6/ Firecracker — KVM hypervisor.\n\n• Open-source Rust hypervisor developed by Amazon\n• Powers AWS Lambda; isolates microVMs with <5MB memory\n\nhttps://github.com/firecracker-microvm/firecracker",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_06_firecracker.png"
+      },
+      {
+        "text": "7/ gVisor — User-space kernel.\n\n• Intercepts application syscalls to prevent root escalation\n• Compatible with standard OCI Docker container runtimes\n\nhttps://github.com/google/gvisor",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_07_gvisor.png"
+      },
+      {
+        "text": "8/ Docker Desktop Sandboxes — Local runtimes.\n\n• Restricts filesystem access and outbound network traffic\n• Ideal for local CLI agent testing and regression runs\n\nhttps://www.docker.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_08_docker.png"
+      },
+      {
+        "text": "9/ WebVM — Browser Linux virtualization.\n\n• Executes unmodified x86 binaries in Wasm client threads\n• 100% client isolation with zero server backend risk\n\nhttps://github.com/leaningtech/webvm",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_09_webvm.png"
+      },
+      {
+        "text": "10/ Sandbox security engineering:\n\n• MicroVMs enforce hardware-level hypervisor isolation, eliminating container escape vulnerabilities when running untrusted agent code."
+      },
+      {
+        "text": "11/ Check our guide on CLI terminal coding agents and development workflows:\n\nhttps://x.com/vedangvatsa/status/1987654321098765442"
+      },
+      {
+        "text": "12/ For sandboxed cloud browser environments and WebRTC grids, visit:\n\nhttps://x.com/vedangvatsa/status/1987654321098765443"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "smart-contract-formal-verification-thread",
+    "topic": "web3",
+    "date": "2026-04-02",
+    "category": "Web3",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Unit tests check expected paths, but formal verification mathematically proves that bugs cannot exist under any sequence of transactions.\n\n8 smart contract formal verification tools 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Certora Prover — Invariant verification.\n\n• Compiles EVM bytecode into formal logical constraints\n• Proves critical protocol invariants via CVL specifications\n\nhttps://github.com/Certora/CertoraProver",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_02_certora.png"
+      },
+      {
+        "text": "3/ Foundry Invariant Fuzzing — Stateful testing.\n\n• Generates millions of pseudorandom contract calls\n• Shrinks counterexamples into concise reproduction traces\n\nhttps://github.com/foundry-rs/foundry",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_03_foundry.png"
+      },
+      {
+        "text": "4/ Slither — Static EVM analyzer.\n\n• Trail of Bits framework analyzing AST and control flow\n• Fast CI/CD security scanner detecting 80+ flaw classes\n\nhttps://github.com/crytic/slither",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_04_slither.png"
+      },
+      {
+        "text": "5/ Halmos — Symbolic execution.\n\n• Direct drop-in formal verification for Foundry test suites\n• Uses Z3 SMT solver to prove properties across all inputs\n\nhttps://github.com/a16z/halmos",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_05_halmos.png"
+      },
+      {
+        "text": "6/ Echidna — Smart contract fuzzer.\n\n• High-throughput property fuzzer written in Haskell\n• Generates complex multi-transaction sequences to break state\n\nhttps://github.com/crytic/echidna",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_06_echidna.png"
+      },
+      {
+        "text": "7/ Manticore — Symbolic analysis tool.\n\n• Models symbolic memory, stack, and cryptographic hashes\n• Automatically synthesizes transaction inputs that trigger reverts\n\nhttps://github.com/trailofbits/manticore",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_07_manticore.png"
+      },
+      {
+        "text": "8/ Mythril — Bytecode security scanner.\n\n• Detects reentrancy, unprotected selfdestructs, and overflows\n• Taint analysis pinpoints vulnerable storage mutations\n\nhttps://github.com/ConsenSys/mythril",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_08_mythril.png"
+      },
+      {
+        "text": "9/ Kontrol — Formal verification stack.\n\n• Formally executes EVM bytecode against KEVM semantics\n• Proves end-to-end mathematical correctness for major DeFi vaults\n\nhttps://github.com/runtimeverification/kontrol",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_09_kontrol.png"
+      },
+      {
+        "text": "10/ Smart contract verification:\n\n• Stateful fuzzing catches edge cases quickly, but formal verification mathematically proves critical invariant rules hold across all states."
+      },
+      {
+        "text": "11/ Read our architecture breakdown on Zero-Knowledge ML and cryptographic proofs:\n\nhttps://x.com/vedangvatsa/status/1987654321098765444"
+      },
+      {
+        "text": "12/ For TEE confidential compute enclaves and hardware attestation, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765445"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "semantic-cache-engines-thread",
+    "topic": "ai-infra",
+    "date": "2026-04-03",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Exact-string caching fails for LLMs because natural language queries vary in phrasing. Semantic caching maps queries by meaning.\n\n8 semantic cache & vector caching engines 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ GPTCache — Modular semantic cache.\n\n• Open-source framework dedicated to semantic caching\n• Pluggable vector databases, embedding models, and eviction\n\nhttps://github.com/zilliztech/GPTCache",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_02_gptcache.png"
+      },
+      {
+        "text": "3/ Redis Semantic Cache — In-memory vector DB.\n\n• Sub-millisecond similarity lookups with RediSearch\n• Native integration with LangChain and LlamaIndex caches\n\nhttps://github.com/redis/redis",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_03_redis.png"
+      },
+      {
+        "text": "4/ Qdrant Semantic Cache — Vector search engine.\n\n• High-performance Rust engine with exact payload filtering\n• Quantized vector indices minimize memory usage on servers\n\nhttps://github.com/qdrant/qdrant",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_04_qdrant.png"
+      },
+      {
+        "text": "5/ Milvus Cache — Distributed vector cache.\n\n• Enterprise-scale vector infrastructure for large clusters\n• Handles millions of concurrent cached vector similarity checks\n\nhttps://github.com/milvus-io/milvus",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_05_milvus.png"
+      },
+      {
+        "text": "6/ Cloudflare AI Cache — Global edge cache.\n\n• Caches model inferences across 300+ edge data centers\n• Near-zero latency response times for recurring user questions\n\nhttps://developers.cloudflare.com/workers-ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_06_cloudflare_ai.png"
+      },
+      {
+        "text": "7/ Upstash Vector Cache — Serverless vector DB.\n\n• Simple HTTP API with per-request pricing model\n• Built-in namespace isolation and automatic TTL expiration\n\nhttps://upstash.com/docs/vector",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_07_upstash.png"
+      },
+      {
+        "text": "8/ Momento Semantic Cache — Low-latency cache.\n\n• Serverless caching fabric with instant connection pooling\n• Native streaming response replay for interactive chatbots\n\nhttps://www.gomomento.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_08_momento.png"
+      },
+      {
+        "text": "9/ Chroma Semantic Cache — Embedded vector store.\n\n• Lightweight in-process vector database with Python and JS SDKs\n• Zero infrastructure overhead for local agent workflows\n\nhttps://github.com/chroma-core/chroma",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_09_chroma.png"
+      },
+      {
+        "text": "10/ Semantic caching trade-offs:\n\n• Sub-millisecond vector indexing slashes LLM API costs by 60%, but requires threshold tuning to avoid stale or out-of-context answers."
+      },
+      {
+        "text": "11/ Explore our guide on AI proxy gateways and rate limiting architectures:\n\nhttps://x.com/vedangvatsa/status/1987654321098765446"
+      },
+      {
+        "text": "12/ For hybrid search combining BM25 and dense vector search, check:\n\nhttps://x.com/vedangvatsa/status/1987654321098765447"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "event-driven-agent-orchestrators-thread",
+    "topic": "agent-infra",
+    "date": "2026-04-04",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Autonomous agents execute multi-step plans over hours. When servers restart, naive scripts lose state. Durable execution solves this.\n\n8 event-driven & durable execution frameworks 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Temporal — Durable execution engine.\n\n• Replays event history to restore in-memory state on failure\n• Manages complex long-running agent compensation transactions\n\nhttps://github.com/temporalio/temporal",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_02_temporal.png"
+      },
+      {
+        "text": "3/ Inngest — Serverless event workflows.\n\n• Step-based code execution without managing persistent worker pods\n• Built-in debounce, throttling, and automated exponential backoff\n\nhttps://github.com/inngest/inngest",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_03_inngest.png"
+      },
+      {
+        "text": "4/ Trigger.dev — Background job engine.\n\n• Eliminates serverless execution timeouts for heavy agent loops\n• Real-time console streaming for every token and sub-step\n\nhttps://github.com/triggerdotdev/trigger.dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_04_trigger_dev.png"
+      },
+      {
+        "text": "5/ Hatchet — Distributed task orchestrator.\n\n• Written in Go for ultra-low overhead task scheduling\n• Native DAG workflow engine with dynamic multi-worker queues\n\nhttps://github.com/hatchet-dev/hatchet",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_05_hatchet.png"
+      },
+      {
+        "text": "6/ Restate — Durable RPC runtime.\n\n• Turns ordinary asynchronous handlers into resilient execution\n• Guarantees exactly-once semantics across external service calls\n\nhttps://github.com/restatedev/restate",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_06_restate.png"
+      },
+      {
+        "text": "7/ Dapr — Cloud-native sidecar.\n\n• Implements virtual actors and resilient pub/sub out of the box\n• Decouples application agent code from underlying cloud storage\n\nhttps://github.com/dapr/dapr",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_07_dapr.png"
+      },
+      {
+        "text": "8/ Apache Kafka — Distributed event log.\n\n• High-throughput partition logs buffering agent tool events\n• Immutable audit trail replayable for regression evaluation\n\nhttps://github.com/apache/kafka",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_08_kafka.png"
+      },
+      {
+        "text": "9/ NATS.io — Cloud messaging system.\n\n• Ultra-lightweight pub/sub and JetStream persistence\n• Powers real-time agent fleet communication across multi-region edge\n\nhttps://github.com/nats-io/nats-server",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_09_nats.png"
+      },
+      {
+        "text": "10/ Durable execution trade-offs:\n\n• Event sourcing records every tool execution step, enabling failed multi-hour agent workflows to resume instantly without repeating API calls."
+      },
+      {
+        "text": "11/ Read our architectural deep dive on multi-agent swarm orchestration frameworks:\n\nhttps://x.com/vedangvatsa/status/1987654321098765448"
+      },
+      {
+        "text": "12/ For agent observability and distributed tracing tools, visit:\n\nhttps://x.com/vedangvatsa/status/1987654321098765449"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "open-source-robotics-ai-thread",
+    "topic": "robotics-ai",
+    "date": "2026-04-05",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Artificial intelligence is breaking out of digital screens into physical hardware. Open-weight VLA models and physics engines power this shift.\n\n8 open embodied AI & robotics frameworks 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ LeRobot — Hugging Face robotics.\n\n• Modular PyTorch library democratizing physical AI\n• Pretrained policies, imitation learning, and simulation bridges\n\nhttps://github.com/huggingface/lerobot",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_02_lerobot.png"
+      },
+      {
+        "text": "3/ OpenVLA — Generalist robotics model.\n\n• 7B parameter Vision-Language-Action foundation model\n• Controls multi-arm setups directly from camera pixels and text\n\nhttps://github.com/openvla/openvla",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_03_openvla.png"
+      },
+      {
+        "text": "4/ MuJoCo — Fast physics simulation.\n\n• High-performance multi-joint contact dynamics engine\n• Open-source standard for robot locomotion and RL research\n\nhttps://github.com/google-deepmind/mujoco",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_04_mujoco.png"
+      },
+      {
+        "text": "5/ ROS 2 — Standard robotics middleware.\n\n• Industrial DDS pub/sub messaging across embedded hardware nodes\n• Deterministic execution lifecycle for real-time safety actuators\n\nhttps://github.com/ros2/ros2",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_05_ros2.png"
+      },
+      {
+        "text": "6/ Isaac Lab — GPU robot learning.\n\n• Massively parallel reinforcement learning built on Omniverse\n• Simulates thousands of robots simultaneously on single GPU cards\n\nhttps://github.com/isaac-sim/IsaacLab",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_06_isaac_lab.png"
+      },
+      {
+        "text": "7/ DexCap — Dexterous data capture.\n\n• Vision-based glove tracking natural human hand movements\n• Collects high-precision demonstrations for robotic manipulators\n\nhttps://github.com/Stanford-ILIAD/DexCap",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_07_dexcap.png"
+      },
+      {
+        "text": "8/ Mobile ALOHA — Bimanual robotics kit.\n\n• Low-cost hardware setup capable of autonomous cooking and cleaning\n• Whole-body teleoperation with cooperative policy learning\n\nhttps://github.com/MarkFzp/mobile-aloha",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_08_aloha.png"
+      },
+      {
+        "text": "9/ Habitat — Photorealistic 3D sim.\n\n• High-efficiency simulation for indoor navigation agents\n• Renders realistic scanned home environments at thousands of FPS\n\nhttps://github.com/facebookresearch/habitat-sim",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_09_habitat.png"
+      },
+      {
+        "text": "10/ Embodied AI engineering:\n\n• GPU simulation trains policies at 10,000x speed, while low-cost teleoperation captures fine tactile demonstration tokens to cross the sim-to-real gap."
+      },
+      {
+        "text": "11/ Check our technical breakdown on physical DePIN hardware and sensor networks:\n\nhttps://x.com/vedangvatsa/status/1987654321098765450"
+      },
+      {
+        "text": "12/ For on-device NPU runtimes and embedded neural inference, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765451"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
   }
 ]
