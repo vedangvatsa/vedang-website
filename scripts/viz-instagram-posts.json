@@ -3967,10 +3967,18 @@
     "text": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_9x16.png",
     "batchId": "explainer-v1",
-    "publishedText": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square."
+    "publishedText": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-15T17:00",
+    "attemptedAt": "2026-11-15T12:52:33.031Z",
+    "bufferPostId": "6af9ab11e5a113497ae9ab11",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Dfw0xa_DDrB/",
+    "postedAt": "2026-11-15T12:53:31.963Z",
+    "error": null
   },
   {
     "id": "explainer-ig-sum_of_odds",
