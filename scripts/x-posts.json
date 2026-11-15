@@ -4946,7 +4946,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_09_openresty.png"
       },
       {
-        "text": "10/ Gateway architecture trade-offs:\n\n• Central proxy adds ~1ms network hop but guarantees team-wide rate limits, observability, and failover without redeploying code."
+        "text": "10/ Gateway architecture trade-offs:\n\nCentral proxy adds ~1ms network hop but guarantees team-wide rate limits, observability, and failover without redeploying code."
       },
       {
         "text": "11/ Dive into our breakdown on continuous batching engines for high-throughput LLM serving:\n\nhttps://x.com/vedangvatsa/status/1987654321098765432"
@@ -5007,7 +5007,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_09_ratchet.png"
       },
       {
-        "text": "10/ Edge Wasm trade-offs:\n\n• Client inference eliminates server GPU bills and preserves user privacy, but requires streaming quantized weights via Cache API and WebGPU."
+        "text": "10/ Edge Wasm trade-offs:\n\nClient inference eliminates server GPU bills and preserves user privacy, but requires streaming quantized weights via Cache API and WebGPU."
       },
       {
         "text": "11/ Check our full technical breakdown on on-device NPU runtimes across iOS and Android:\n\nhttps://x.com/vedangvatsa/status/1987654321098765434"
@@ -5068,7 +5068,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/stablecoin_payment_rails/tweet_09_zerohash.png"
       },
       {
-        "text": "10/ Agent payments architecture:\n\n• Account Abstraction (ERC-4337) allows operators to assign autonomous spending caps, while L2 rollups keep fees below a fraction of a cent."
+        "text": "10/ Agent payments architecture:\n\nAccount Abstraction (ERC-4337) allows operators to assign autonomous spending caps, while L2 rollups keep fees below a fraction of a cent."
       },
       {
         "text": "11/ Read our architecture guide on smart contract account abstraction and ERC-4337:\n\nhttps://x.com/vedangvatsa/status/1987654321098765436"
@@ -5129,7 +5129,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_09_semantic_router.png"
       },
       {
-        "text": "10/ Chunking trade-offs:\n\n• Fixed character cuts split sentences mid-thought. Hierarchical chunking indexes small sentences for retrieval while passing full parent sections."
+        "text": "10/ Chunking trade-offs:\n\nFixed character cuts split sentences mid-thought. Hierarchical chunking indexes small sentences for retrieval while passing full parent sections."
       },
       {
         "text": "11/ Explore our guide on cross-encoder rerankers to boost precision after retrieval:\n\nhttps://x.com/vedangvatsa/status/1987654321098765438"
@@ -5190,7 +5190,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/diffusion_video_models/tweet_09_wan21.png"
       },
       {
-        "text": "10/ Video generation engineering:\n\n• 3D attention matrices scale quadratically with frame count. FP8 quantization and temporal block tiling fit 10B DiT models on consumer GPUs."
+        "text": "10/ Video generation engineering:\n\n3D attention matrices scale quadratically with frame count. FP8 quantization and temporal block tiling fit 10B DiT models on consumer GPUs."
       },
       {
         "text": "11/ Check our technical review on open-source synthetic voice and TTS models:\n\nhttps://x.com/vedangvatsa/status/1987654321098765440"
@@ -5251,7 +5251,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_coding_sandboxes/tweet_09_webvm.png"
       },
       {
-        "text": "10/ Sandbox security engineering:\n\n• MicroVMs enforce hardware-level hypervisor isolation, eliminating container escape vulnerabilities when running untrusted agent code."
+        "text": "10/ Sandbox security engineering:\n\nMicroVMs enforce hardware-level hypervisor isolation, eliminating container escape vulnerabilities when running untrusted agent code."
       },
       {
         "text": "11/ Check our guide on CLI terminal coding agents and development workflows:\n\nhttps://x.com/vedangvatsa/status/1987654321098765442"
@@ -5312,7 +5312,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_formal_verification/tweet_09_kontrol.png"
       },
       {
-        "text": "10/ Smart contract verification:\n\n• Stateful fuzzing catches edge cases quickly, but formal verification mathematically proves critical invariant rules hold across all states."
+        "text": "10/ Smart contract verification:\n\nStateful fuzzing catches edge cases quickly, but formal verification mathematically proves critical invariant rules hold across all states."
       },
       {
         "text": "11/ Read our architecture breakdown on Zero-Knowledge ML and cryptographic proofs:\n\nhttps://x.com/vedangvatsa/status/1987654321098765444"
@@ -5373,7 +5373,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/semantic_cache_engines/tweet_09_chroma.png"
       },
       {
-        "text": "10/ Semantic caching trade-offs:\n\n• Sub-millisecond vector indexing slashes LLM API costs by 60%, but requires threshold tuning to avoid stale or out-of-context answers."
+        "text": "10/ Semantic caching trade-offs:\n\nSub-millisecond vector indexing slashes LLM API costs by 60%, but requires threshold tuning to avoid stale or out-of-context answers."
       },
       {
         "text": "11/ Explore our guide on AI proxy gateways and rate limiting architectures:\n\nhttps://x.com/vedangvatsa/status/1987654321098765446"
@@ -5434,7 +5434,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/event_driven_agent_orchestrators/tweet_09_nats.png"
       },
       {
-        "text": "10/ Durable execution trade-offs:\n\n• Event sourcing records every tool execution step, enabling failed multi-hour agent workflows to resume instantly without repeating API calls."
+        "text": "10/ Durable execution trade-offs:\n\nEvent sourcing records every tool execution step, enabling failed multi-hour agent workflows to resume instantly without repeating API calls."
       },
       {
         "text": "11/ Read our architectural deep dive on multi-agent swarm orchestration frameworks:\n\nhttps://x.com/vedangvatsa/status/1987654321098765448"
@@ -5495,7 +5495,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/open_source_robotics_ai/tweet_09_habitat.png"
       },
       {
-        "text": "10/ Embodied AI engineering:\n\n• GPU simulation trains policies at 10,000x speed, while low-cost teleoperation captures fine tactile demonstration tokens to cross the sim-to-real gap."
+        "text": "10/ Embodied AI engineering:\n\nGPU simulation trains policies at 10,000x speed, while low-cost teleoperation captures fine tactile demonstration tokens to cross the sim-to-real gap."
       },
       {
         "text": "11/ Check our technical breakdown on physical DePIN hardware and sensor networks:\n\nhttps://x.com/vedangvatsa/status/1987654321098765450"
@@ -5556,7 +5556,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_tool_calling_protocols/tweet_09_semantic_kernel.png"
       },
       {
-        "text": "10/ Tool protocol design trade-offs:\n\n• Schema Bloat: Injecting 100+ OpenAPI specs degrades LLM reasoning. Dynamic semantic search injects only the 3-5 tools matching the current user goal."
+        "text": "10/ Tool protocol design trade-offs:\n\nSchema Bloat: Injecting 100+ OpenAPI specs degrades LLM reasoning. Dynamic semantic search injects only the 3-5 tools matching the current user goal."
       },
       {
         "text": "11/ Dive into our guide on agent memory architectures and context management:\n\nhttps://x.com/vedangvatsa/status/1987654321098765452"
@@ -5617,7 +5617,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/distributed_validator_technology/tweet_09_prysm.png"
       },
       {
-        "text": "10/ DVT cryptographic foundations:\n\n• Shamir Secret Sharing splits the BLS validator key into shares. Any K-of-N operators sign the beacon block, keeping the split invisible to Ethereum consensus."
+        "text": "10/ DVT cryptographic foundations:\n\nShamir Secret Sharing splits the BLS validator key into shares. Any K-of-N operators sign the beacon block, keeping the split invisible to Ethereum consensus."
       },
       {
         "text": "11/ Read our architecture breakdown on blockchain RPC indexing and subgraph pipelines:\n\nhttps://x.com/vedangvatsa/status/1987654321098765454"
@@ -5678,7 +5678,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/document_layout_parsing/tweet_09_paddleocr.png"
       },
       {
-        "text": "10/ Document parsing architecture:\n\n• Digital-native PDFs should extract font character streams first, reserving heavy vision transformers for scanned pages and complex nested tables."
+        "text": "10/ Document parsing architecture:\n\nDigital-native PDFs should extract font character streams first, reserving heavy vision transformers for scanned pages and complex nested tables."
       },
       {
         "text": "11/ Explore our technical breakdown on document chunking and tokenization engines:\n\nhttps://x.com/vedangvatsa/status/1987654321098765456"
@@ -5739,7 +5739,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_performance_cwv/tweet_09_bundlephobia.png"
       },
       {
-        "text": "10/ Web performance engineering:\n\n• Long JavaScript event handlers block the main thread. Yielding execution with `scheduler.yield()` guarantees sub-200ms INP responsiveness."
+        "text": "10/ Web performance engineering:\n\nLong JavaScript event handlers block the main thread. Yielding execution with `scheduler.yield()` guarantees sub-200ms INP responsiveness."
       },
       {
         "text": "11/ Read our guide on AI search engines and Answer Engine Optimization (AEO):\n\nhttps://x.com/vedangvatsa/status/1987654321098765458"
@@ -5800,7 +5800,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/synthetic_dataset_generation/tweet_09_snorkel.png"
       },
       {
-        "text": "10/ Synthetic data guardrails:\n\n• Training models on raw, uncurated synthetic text risks model collapse. Rigorous reward-model filtering and rejection sampling are mandatory."
+        "text": "10/ Synthetic data guardrails:\n\nTraining models on raw, uncurated synthetic text risks model collapse. Rigorous reward-model filtering and rejection sampling are mandatory."
       },
       {
         "text": "11/ Check our technical breakdown on synthetic evaluation frameworks for RAG:\n\nhttps://x.com/vedangvatsa/status/1987654321098765460"
@@ -5861,7 +5861,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_09_autogpt.png"
       },
       {
-        "text": "10/ Multi-agent engineering trade-offs:\n\n• Without structured communication protocols, N agents produce explosive token overhead. Hierarchical lead planners prune discussion branches effectively."
+        "text": "10/ Multi-agent engineering trade-offs:\n\nWithout structured communication protocols, N agents produce explosive token overhead. Hierarchical lead planners prune discussion branches effectively."
       },
       {
         "text": "11/ Explore our architecture breakdown on agent orchestration frameworks:\n\nhttps://x.com/vedangvatsa/status/1987654321098765462"
@@ -5922,7 +5922,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_09_nosana.png"
       },
       {
-        "text": "10/ Decentralized compute physics:\n\n• Splitting model layers across consumer internet connections introduces 200ms round trips. High intra-cluster bandwidth and INT4 weights minimize pipeline stalls."
+        "text": "10/ Decentralized compute physics:\n\nSplitting model layers across consumer internet connections introduces 200ms round trips. High intra-cluster bandwidth and INT4 weights minimize pipeline stalls."
       },
       {
         "text": "11/ Read our deep-dive on physical hardware DePIN networks and sensor grids:\n\nhttps://x.com/vedangvatsa/status/1987654321098765464"
@@ -5983,7 +5983,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_09_duckdb_fuzzy.png"
       },
       {
-        "text": "10/ Entity resolution math:\n\n• Comparing N records pairwise is quadratic. Smart blocking rules (e.g. matching postal codes first) cut comparison pairs by 99% before fuzzy scoring."
+        "text": "10/ Entity resolution math:\n\nComparing N records pairwise is quadratic. Smart blocking rules (e.g. matching postal codes first) cut comparison pairs by 99% before fuzzy scoring."
       },
       {
         "text": "11/ Dive into our guide on GraphRAG knowledge bases and graph database engines:\n\nhttps://x.com/vedangvatsa/status/1987654321098765466"
@@ -6044,7 +6044,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_09_spin.png"
       },
       {
-        "text": "10/ Edge runtime trade-offs:\n\n• V8 isolates boot in under 5ms with zero cold start lag, but lack raw Linux syscall support. Use edge isolates for streaming and MicroVMs for heavyweight compute."
+        "text": "10/ Edge runtime trade-offs:\n\nV8 isolates boot in under 5ms with zero cold start lag, but lack raw Linux syscall support. Use edge isolates for streaming and MicroVMs for heavyweight compute."
       },
       {
         "text": "11/ Check our guide on in-browser WebAssembly AI runtimes and WebGPU engines:\n\nhttps://x.com/vedangvatsa/status/1987654321098765468"
@@ -6105,7 +6105,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_09_readability.png"
       },
       {
-        "text": "10/ Extension agent engineering:\n\n• Manifest V3 background workers terminate after 30 seconds of inactivity. Chrome Alarm APIs and native messaging bridges maintain long-running agent state."
+        "text": "10/ Extension agent engineering:\n\nManifest V3 background workers terminate after 30 seconds of inactivity. Chrome Alarm APIs and native messaging bridges maintain long-running agent state."
       },
       {
         "text": "11/ Read our architecture review on headless browser automation libraries:\n\nhttps://x.com/vedangvatsa/status/1987654321098765470"
@@ -6166,7 +6166,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_09_machiavelli.png"
       },
       {
-        "text": "10/ Agent benchmarking insights:\n\n• Output string-matching fails on agents. Only executing generated code against unit tests in isolated Docker containers accurately verifies reasoning correctness."
+        "text": "10/ Agent benchmarking insights:\n\nOutput string-matching fails on agents. Only executing generated code against unit tests in isolated Docker containers accurately verifies reasoning correctness."
       },
       {
         "text": "11/ Read our guide on synthetic evaluation pipelines and RAG testing suites:\n\nhttps://x.com/vedangvatsa/status/1987654321098765472"
@@ -6227,7 +6227,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_09_lit.png"
       },
       {
-        "text": "10/ Agent identity architecture:\n\n• Agents should authenticate via ephemeral session keys delegated by smart accounts, while signed EAS attestations build an immutable onchain track record."
+        "text": "10/ Agent identity architecture:\n\nAgents should authenticate via ephemeral session keys delegated by smart accounts, while signed EAS attestations build an immutable onchain track record."
       },
       {
         "text": "11/ Read our architecture review on smart contract account abstraction and ERC-4337:\n\nhttps://x.com/vedangvatsa/status/1987654321098765474"
@@ -6288,7 +6288,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_09_diffbot.png"
       },
       {
-        "text": "10/ AI crawler strategy:\n\n• Distinguish live search bots (PerplexityBot, SearchGPT) from pretraining scrapers. Blocking live search destroys referral visibility, while /llms.txt reduces crawl load by 80%."
+        "text": "10/ AI crawler strategy:\n\nDistinguish live search bots (PerplexityBot, SearchGPT) from pretraining scrapers. Blocking live search destroys referral visibility, while /llms.txt reduces crawl load by 80%."
       },
       {
         "text": "11/ Check our technical breakdown on AI search engines and Answer Engine Optimization:\n\nhttps://x.com/vedangvatsa/status/1987654321098765476"
@@ -6349,7 +6349,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_09_defusedxml.png"
       },
       {
-        "text": "10/ Content negotiation benefits:\n\n• Returning clean markdown instead of HTML cuts input tokens by 80% and eliminates layout div confusion, slashing latency and LLM inference bills."
+        "text": "10/ Content negotiation benefits:\n\nReturning clean markdown instead of HTML cuts input tokens by 80% and eliminates layout div confusion, slashing latency and LLM inference bills."
       },
       {
         "text": "11/ Read our guide on AI search crawlers and user-agent standards:\n\nhttps://x.com/vedangvatsa/status/1987654321098765478"
@@ -6410,7 +6410,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_09_diffblue.png"
       },
       {
-        "text": "10/ Automated testing architecture:\n\n• Fragile CSS selectors break on every redesign. Grounding tests on semantic ARIA roles and visual snapshots creates resilient test suites that self-heal across deploys."
+        "text": "10/ Automated testing architecture:\n\nFragile CSS selectors break on every redesign. Grounding tests on semantic ARIA roles and visual snapshots creates resilient test suites that self-heal across deploys."
       },
       {
         "text": "11/ Dive into our guide on AI agent benchmarking and evaluation suites:\n\nhttps://x.com/vedangvatsa/status/1987654321098765480"
@@ -6471,7 +6471,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_09_arcjet.png"
       },
       {
-        "text": "10/ Agent permissioning principles:\n\n• High-stakes actions require asynchronous multi-factor signoff by human operators, while read-only database replicas shield production from hallucinated queries."
+        "text": "10/ Agent permissioning principles:\n\nHigh-stakes actions require asynchronous multi-factor signoff by human operators, while read-only database replicas shield production from hallucinated queries."
       },
       {
         "text": "11/ Check our technical breakdown on secure microVM sandboxes for coding agents:\n\nhttps://x.com/vedangvatsa/status/1987654321098765482"
@@ -6532,7 +6532,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_09_circom.png"
       },
       {
-        "text": "10/ ZK hardware acceleration math:\n\n• Multi-Scalar Multiplications (MSM) and NTTs consume 85% of proof latency. Offloading these bottlenecks to GPU tensor cores reduces prover times from minutes to seconds."
+        "text": "10/ ZK hardware acceleration math:\n\nMulti-Scalar Multiplications (MSM) and NTTs consume 85% of proof latency. Offloading these bottlenecks to GPU tensor cores reduces prover times from minutes to seconds."
       },
       {
         "text": "11/ Read our architecture guide on Zero-Knowledge Machine Learning (zkML):\n\nhttps://x.com/vedangvatsa/status/1987654321098765484"
@@ -6593,7 +6593,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_09_glirel.png"
       },
       {
-        "text": "10/ Metadata-driven retrieval benefits:\n\n• Pre-filtering vector search spaces by metadata facets cuts candidate pools by 95%, accelerating cosine similarity and preventing cross-tenant data leaks."
+        "text": "10/ Metadata-driven retrieval benefits:\n\nPre-filtering vector search spaces by metadata facets cuts candidate pools by 95%, accelerating cosine similarity and preventing cross-tenant data leaks."
       },
       {
         "text": "11/ Read our guide on hybrid search combining BM25 and dense vectors:\n\nhttps://x.com/vedangvatsa/status/1987654321098765486"
@@ -6654,7 +6654,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_09_fakerest.png"
       },
       {
-        "text": "10/ Agent sandbox testing strategy:\n\n• Autonomous agents frequently loop when external APIs timeout. Injecting network chaos and latency spikes verifies exponential backoff and graceful error handling."
+        "text": "10/ Agent sandbox testing strategy:\n\nAutonomous agents frequently loop when external APIs timeout. Injecting network chaos and latency spikes verifies exponential backoff and graceful error handling."
       },
       {
         "text": "11/ Explore our guide on autonomous QA and E2E test generators:\n\nhttps://x.com/vedangvatsa/status/1987654321098765488"
@@ -6715,7 +6715,7 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_09_presidio.png"
       },
       {
-        "text": "10/ Differential privacy engineering math:\n\n• The privacy budget epsilon governs the tradeoff: lower epsilon guarantees mathematical privacy against reconstruction attacks, while calibrated noise maintains accuracy."
+        "text": "10/ Differential privacy engineering math:\n\nThe privacy budget epsilon governs the tradeoff: lower epsilon guarantees mathematical privacy against reconstruction attacks, while calibrated noise maintains accuracy."
       },
       {
         "text": "11/ Read our architecture guide on Fully Homomorphic Encryption (FHE):\n\nhttps://x.com/vedangvatsa/status/1987654321098765490"
