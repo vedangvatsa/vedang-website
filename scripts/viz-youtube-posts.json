@@ -4717,5 +4717,81 @@
       "visualproof",
       "stem"
     ]
+  },
+  {
+    "id": "explainer-yt-pyramid_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/pyramid_volume_9x16.mp4",
+    "scheduleDate": "2026-11-29",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pyramid_volume_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Volume of a Pyramid (V = ⅓ · Base · Height)",
+    "description": "Geometric dissection proof that the volume of a pyramid equals 1/3 Base * Height by showing that 3 congruent square pyramids assemble into a cube.\n\n#geometry #math",
+    "tags": [
+      "geometry",
+      "math",
+      "pyramid",
+      "volume",
+      "dissection",
+      "visualmath"
+    ]
+  },
+  {
+    "id": "explainer-yt-fibonacci_spiral",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/fibonacci_spiral_9x16.mp4",
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/fibonacci_spiral_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Fibonacci Spiral and the Golden Ratio",
+    "description": "Visual animation of Fibonacci tiling and logarithmic spiral construction, demonstrating convergence to the golden ratio phi = 1.6180339887...\n\n#math #geometry",
+    "tags": [
+      "math",
+      "fibonacci",
+      "goldenratio",
+      "geometry",
+      "visualmath",
+      "nature"
+    ]
+  },
+  {
+    "id": "explainer-yt-pascals_triangle_sum",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/pascals_triangle_sum_9x16.mp4",
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pascals_triangle_sum_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "Pascal's Triangle Row Sums (∑ (n k) = 2ⁿ)",
+    "description": "Visual derivation proving that the sum of the n-th row of Pascal's Triangle equals 2^n using the binomial expansion of (1 + 1)^n.\n\n#combinatorics #math",
+    "tags": [
+      "combinatorics",
+      "math",
+      "pascalstriangle",
+      "binomialtheorem",
+      "algebra",
+      "education"
+    ]
+  },
+  {
+    "id": "explainer-yt-hockey_stick_identity",
+    "video": "scripts/viz-assets/videos/explainer_videos/9x16/hockey_stick_identity_9x16.mp4",
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/hockey_stick_identity_9x16.png",
+    "batchId": "explainer-v1",
+    "title": "The Hockey-Stick Identity in Pascal's Triangle",
+    "description": "Visual proof of the Hockey-Stick Identity in Pascal's triangle showing how summing diagonal combinations telescopes directly into the blade element.\n\n#combinatorics #math",
+    "tags": [
+      "combinatorics",
+      "math",
+      "pascalstriangle",
+      "identities",
+      "visualmath",
+      "proof"
+    ]
   }
 ]
