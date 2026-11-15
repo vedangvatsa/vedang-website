@@ -2588,5 +2588,301 @@
         "posted": false
       }
     ]
+  },
+  {
+    "id": "ai-agents-wallets-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "01:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Software agents cannot pass KYC or open bank accounts.\n\nCrypto rails give autonomous agents programmatic balance sheets and execution authority.\n\n8 tools powering AI agents with wallets 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_01_cover.png",
+        "posted": false
+      },
+      {
+        "text": "2/ Coinbase AgentKit\n\nTurn any AI agent into an on-chain actor.\n\n• Works with LangChain, CrewAI, and custom agents\n• Gives agents on-chain wallets on Base and Solana\n• Built-in actions for transfers and token swaps\n\nhttps://coinbase.com/agentkit",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_02_agentkit.png",
+        "posted": false
+      },
+      {
+        "text": "3/ Privy Server Wallets\n\nProgrammatic wallet infrastructure for AI bots.\n\n• Create isolated wallets per autonomous agent\n• Server-side signing via secure key management\n• Granular spending limits and automated policies\n\nhttps://privy.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_03_privy.png",
+        "posted": false
+      },
+      {
+        "text": "4/ ERC-4337 Account Abstraction\n\nSmart contract accounts built for automation.\n\n• Session keys let bots run without master seed phrases\n• Automated gas sponsorship through paymasters\n• Batch execution: approve and swap in one transaction\n\nhttps://erc4337.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_04_erc4337.png",
+        "posted": false
+      },
+      {
+        "text": "5/ x402 Open Protocol\n\nReviving HTTP 402 Payment Required for AI agents.\n\n• APIs return a 402 challenge with exact price\n• Agents parse headers and pay autonomously per call\n• Replaces monthly API keys with programmatic micropayments\n\nhttps://x402.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_05_x402.png",
+        "posted": false
+      },
+      {
+        "text": "6/ Biconomy MEE\n\nModular execution environment for cross-chain agents.\n\n• Delegated transaction authorization for agent swarms\n• Intent-based execution across multiple EVM chains\n• Cross-chain gas abstraction and session management\n\nhttps://biconomy.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_06_biconomy.png",
+        "posted": false
+      },
+      {
+        "text": "7/ Safe Smart Accounts\n\nBattle-tested multisig and agent guardrails.\n\n• Guard modules restrict contracts an agent can touch\n• Allowance modules enforce daily spending caps\n• Secures over $100B in treasury assets\n\nhttps://safe.global",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_07_safe.png",
+        "posted": false
+      },
+      {
+        "text": "8/ Turnkey\n\nNon-custodial wallet infrastructure for automated workloads.\n\n• Sub-second signature generation inside secure enclaves\n• Policy engine defines strict transaction boundaries\n• Built for autonomous signers and fintech agents\n\nhttps://turnkey.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_08_turnkey.png",
+        "posted": false
+      },
+      {
+        "text": "9/ Hyperbolic\n\nDecentralized AI inference settled on-chain.\n\n• Agents pay directly for open model inference via crypto\n• Verifiable compute proofs verify authentic outputs\n• No credit card contracts or recurring subscriptions\n\nhttps://hyperbolic.xyz",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_09_hyperbolic.png",
+        "posted": false
+      },
+      {
+        "text": "10/ How autonomous agents will transact natively across e-commerce without checkout forms:\n\nhttps://x.com/vedangvatsa/status/2036831607038877820",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "11/ Decentralized compute, bandwidth, and inference networks challenging centralized cloud monopolies:\n\nhttps://x.com/vedangvatsa/status/2121860727015084259",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "12/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png",
+        "posted": false
+      },
+      {
+        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
+        "posted": false
+      }
+    ]
+  },
+  {
+    "id": "ai-second-brain-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "09:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Note apps used to be passive digital filing cabinets.\n\nLocal embeddings and grounded search turn personal notes into an active reasoning engine.\n\n8 tools to build an AI second brain in 2026 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_01_cover.png",
+        "posted": false
+      },
+      {
+        "text": "2/ Obsidian + Local LLM\n\nPrivate, offline Markdown knowledge graph.\n\n• Plain text files stored locally with zero lock-in\n• Smart Connections queries notes via local embeddings\n• Never leaks private notes to cloud APIs\n\nhttps://obsidian.md",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_02_obsidian.png",
+        "posted": false
+      },
+      {
+        "text": "3/ Readwise Reader\n\nCentral inbox for web articles, newsletters, and PDFs.\n\n• Auto-extracts highlights across Kindle and web feeds\n• Built-in Ghostreader summarizes arguments inline\n• Bi-directional sync into Obsidian and Notion\n\nhttps://readwise.io/read",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_03_readwise.png",
+        "posted": false
+      },
+      {
+        "text": "4/ Google NotebookLM\n\nNotebook assistant grounded strictly in your sources.\n\n• Generates citations linked to exact source quotes\n• Creates dual-host Audio Overviews of dense material\n• Handles 50+ complex PDFs and notes at once\n\nhttps://notebooklm.google",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_04_notebooklm.png",
+        "posted": false
+      },
+      {
+        "text": "5/ Elicit\n\nAutomated research assistant for scientific literature.\n\n• Searches 200M+ research papers across disciplines\n• Extracts methodologies and empirical findings into tables\n• Synthesizes consensus answers across papers automatically\n\nhttps://elicit.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_05_elicit.png",
+        "posted": false
+      },
+      {
+        "text": "6/ Khoj\n\nOpen-source personal AI for private files.\n\n• Self-hosted search across markdown, PDF, and repos\n• Works with local Ollama models or hosted APIs\n• Desktop client with Obsidian and Emacs integrations\n\nhttps://khoj.dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_06_khoj.png",
+        "posted": false
+      },
+      {
+        "text": "7/ Mem.ai\n\nSelf-organizing workspace powered by AI.\n\n• Eliminates manual folder trees and tag management\n• Surfaces past relevant notes as you draft new ideas\n• Smart chat synthesizes across your entire note history\n\nhttps://mem.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_07_mem.png",
+        "posted": false
+      },
+      {
+        "text": "8/ Perplexity Pro\n\nConversational research engine with live citations.\n\n• Replaces standard search with answers and footnotes\n• Pro Search uses multi-step reasoning before answering\n• Collections organize research threads by project\n\nhttps://perplexity.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_08_perplexity.png",
+        "posted": false
+      },
+      {
+        "text": "9/ Fabric (by Daniel Miessler)\n\nOpen-source framework for augmenting humans with AI.\n\n• Library of community patterns for extracting insights\n• Command-line piping: curl articles into prompt patterns\n• Standardizes summaries and counterargument extraction\n\nhttps://github.com/danielmiessler/fabric",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_09_fabric.png",
+        "posted": false
+      },
+      {
+        "text": "10/ Open-weights models now run completely offline on consumer hardware with zero API fees. Full local AI setup guide:\n\nhttps://x.com/vedangvatsa/status/2121399894938108256",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "11/ Moving beyond naive vector search with hybrid retrieval, chunking strategies, and evaluation:\n\nhttps://x.com/vedangvatsa/status/2121654252732825728",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "12/ Join one of the largest AI News and Updates groups on Telegram:\n\nhttps://t.me/hashtag_ai",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
+        "posted": false
+      }
+    ]
+  },
+  {
+    "id": "owasp-ai-security-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "17:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Classical web application firewalls cannot protect probabilistic agent workflows.\n\nPrompt injection, insecure tool calls, and model DoS require new defensive patterns.\n\n8 critical vulnerabilities from the OWASP Top 10 for LLMs 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_01_cover.png",
+        "posted": false
+      },
+      {
+        "text": "2/ Prompt Injection (LLM01)\n\nManipulating model execution via untrusted text inputs.\n\n• Direct: user inputs override system prompt boundaries\n• Indirect: poisoned web pages or emails hijack agent tools\n• Fix: treat all retrieved data as untrusted text\n\nhttps://owasp.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_02_prompt_injection.png",
+        "posted": false
+      },
+      {
+        "text": "3/ Insecure Output Handling (LLM02)\n\nExecuting unvalidated LLM output on downstream systems.\n\n• Models generate raw SQL, JS, or shell commands\n• Unsanitized execution triggers XSS or remote execution\n• Fix: strict schema validation and parameter binding\n\nhttps://owasp.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_03_insecure_output.png",
+        "posted": false
+      },
+      {
+        "text": "4/ Training Data Poisoning (LLM03)\n\nCorrupting model weights or fine-tuning datasets.\n\n• Adversaries inject backdoored records into crawl corpora\n• Creates silent blindspots or triggered exploit vectors\n• Fix: cryptographic data hashing and provenance checks\n\nhttps://owasp.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_04_training_poisoning.png",
+        "posted": false
+      },
+      {
+        "text": "5/ Model Denial of Service (LLM04)\n\nResource exhaustion through expensive prompts.\n\n• Attackers force models into infinite reasoning loops\n• Blows token budgets and exhausts API rate limits\n• Fix: strict per-request token caps and timeout breakers\n\nhttps://owasp.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_05_model_dos.png",
+        "posted": false
+      },
+      {
+        "text": "6/ Insecure Plugin & Tool Design (LLM07)\n\nExposing destructive backend APIs to autonomous agents.\n\n• Agents given write/delete access without confirmations\n• Weak authorization leaks cross-tenant user data\n• Fix: require human-in-the-loop approvals for updates\n\nhttps://owasp.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_06_insecure_plugins.png",
+        "posted": false
+      },
+      {
+        "text": "7/ Excessive Agency (LLM08)\n\nGranting autonomous agents uncontrolled operational reach.\n\n• Giving bots root shell access or open email routing\n• Model hallucinations cause irreversible real-world harm\n• Fix: principle of least privilege and strict scopes\n\nhttps://owasp.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_07_excessive_agency.png",
+        "posted": false
+      },
+      {
+        "text": "8/ Promptfoo Red Teaming\n\nAutomated vulnerability scanning for LLM apps.\n\n• Simulates jailbreaks, injections, and leaks in CI/CD\n• Scores guardrails against OWASP categories\n• Catches security regressions before shipping code\n\nhttps://promptfoo.dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_08_promptfoo_sec.png",
+        "posted": false
+      },
+      {
+        "text": "9/ E2B Sandboxed Execution\n\nIsolating agent code execution in micro-VMs.\n\n• Spins up isolated Linux sandboxes in under 200ms\n• Arbitrary code from agents cannot touch host servers\n• Ephemeral environments auto-destroy after tasks\n\nhttps://e2b.dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/owasp_ai_security/tweet_09_e2b_sandbox.png",
+        "posted": false
+      },
+      {
+        "text": "10/ Protocols turn tool integration from custom glue into verified specs. Breakdown of Anthropic's Model Context Protocol (MCP):\n\nhttps://x.com/vedangvatsa/status/2119408026939457704",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "11/ Defending on-chain protocols against exploits requires invariant fuzzing, static analysis, and verification:\n\nhttps://x.com/vedangvatsa/status/2121860727015084259",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "12/ Join one of the largest AI News and Updates groups on Telegram:\n\nhttps://t.me/hashtag_ai",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
+        "posted": false
+      }
+    ]
+  },
+  {
+    "id": "quantum-pqc-security-thread",
+    "type": "thread",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "01:05",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Quantum computers will break RSA and elliptic-curve cryptography.\n\nAdversaries are harvesting encrypted traffic now to decrypt it once quantum machines scale.\n\n8 standards and tools defining post-quantum cryptography (PQC) 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_01_cover.png",
+        "posted": false
+      },
+      {
+        "text": "2/ NIST Final PQC Standards (2024)\n\nThe definitive post-quantum encryption standards.\n\n• ML-KEM (FIPS 203): Lattice key exchange for TLS\n• ML-DSA (FIPS 204): Primary digital signature standard\n• SLH-DSA (FIPS 205): Stateless hash backup signatures\n\nhttps://csrc.nist.gov/pqc",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_02_nist_standards.png",
+        "posted": false
+      },
+      {
+        "text": "3/ Harvest Now, Decrypt Later (HNDL)\n\nThe immediate threat to encrypted data.\n\n• Adversaries intercept and store sensitive traffic today\n• Stored data will be decrypted once CRQC machines exist\n• Requires migrating critical financial systems immediately\n\nhttps://cisa.gov/quantum",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_03_harvest_threat.png",
+        "posted": false
+      },
+      {
+        "text": "4/ Qiskit (by IBM)\n\nOpen-source quantum software development kit.\n\n• Write quantum circuits and simulate them in Python\n• Run algorithms on IBM superconducting quantum hardware\n• The leading open-source library for quantum algorithms\n\nhttps://qiskit.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_04_qiskit.png",
+        "posted": false
+      },
+      {
+        "text": "5/ Cirq (by Google Quantum AI)\n\nPython library for noisy intermediate-scale quantum circuits.\n\n• Built for NISQ experiments and error correction tests\n• Maps circuits directly to Google Sycamore processors\n• Simulates physical qubit noise and topologies\n\nhttps://quantumai.google/cirq",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_05_cirq.png",
+        "posted": false
+      },
+      {
+        "text": "6/ Open Quantum Safe (liboqs)\n\nOpen-source C library for quantum-resistant algorithms.\n\n• Drop-in implementations of all finalized NIST PQC standards\n• OQS-OpenSSL integration for testing post-quantum TLS\n• Used by browsers and cloud providers for testing\n\nhttps://openquantumsafe.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_06_open_quantum_safe.png",
+        "posted": false
+      },
+      {
+        "text": "7/ Cloudflare Post-Quantum TLS\n\nProtecting production web traffic with hybrid encryption.\n\n• Combines classical X25519 with post-quantum ML-KEM\n• Secures over 20% of public web traffic automatically\n• Near-zero latency overhead on modern hardware\n\nhttps://cloudflare.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_07_cloudflare_pqc.png",
+        "posted": false
+      },
+      {
+        "text": "8/ PennyLane (by Xanadu)\n\nDifferentiable programming for quantum computers.\n\n• Connects PyTorch, TensorFlow, and JAX with quantum circuits\n• Train hybrid quantum-classical neural networks\n• Executes across IBM, Rigetti, and photonic backends\n\nhttps://pennylane.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_08_pennylane.png",
+        "posted": false
+      },
+      {
+        "text": "9/ Signal PQXDH Protocol\n\nPost-quantum messaging at consumer scale.\n\n• Upgraded Double Ratchet protocol with Kyber / ML-KEM\n• Prevents encrypted messages from future decryption\n• First global consumer app deploying PQC in production\n\nhttps://signal.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_09_signal_pqxdh.png",
+        "posted": false
+      },
+      {
+        "text": "10/ Software agents and on-chain rails bring automated cryptographic validation. Complete breakdown of Web3 AI and DePIN:\n\nhttps://x.com/vedangvatsa/status/2121860727015084259",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "11/ I mapped the entire AI agent infrastructure stack across 75+ companies and 8 layers:\n\nhttps://x.com/vedangvatsa/status/2118991434472649165",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "12/ Join one of the largest AI News and Updates groups on Telegram:\n\nhttps://t.me/hashtag_ai",
+        "image": null,
+        "posted": false
+      },
+      {
+        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
+        "posted": false
+      }
+    ]
   }
 ]
