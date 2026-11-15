@@ -4027,7 +4027,14 @@
     "scheduleTime": "17:00",
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
+    "state": "failed",
+    "attemptedSlot": "2026-11-15T17:00",
+    "attemptedAt": "2026-11-15T12:29:12.779Z",
+    "bufferPostId": "6af9a599918fe79d2ee0f61a",
+    "bufferStatus": "error",
+    "error": "Buffer status error; inspect post 6af9a599918fe79d2ee0f61a"
   },
   {
     "id": "explainer-tiktok-sum_of_odds",

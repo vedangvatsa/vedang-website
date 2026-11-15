@@ -3808,9 +3808,17 @@
     "text": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-15T12:29:28.797Z",
+    "attemptedSlot": "2026-11-15T17:00",
+    "publishedText": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
+    "platformPostId": "urn:li:ugcPost:7527709384198512640",
+    "postedAt": "2026-11-15T12:29:35.862Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7527709384198512640/"
   },
   {
     "id": "explainer-linkedin-sum_of_odds",

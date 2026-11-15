@@ -4035,9 +4035,18 @@
     ],
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Rearranging four right triangles inside a square to show why a squared plus b squared equals c squared.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-15T17:00",
+    "attemptedAt": "2026-11-15T12:29:12.785Z",
+    "bufferPostId": "6af9a599c5b364e062551a35",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=nRvNsdABsg4",
+    "postedAt": "2026-11-15T12:29:14.852Z",
+    "error": null
   },
   {
     "id": "explainer-yt-sum_of_odds",

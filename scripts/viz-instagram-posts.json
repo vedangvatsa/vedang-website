@@ -3969,7 +3969,12 @@
     "scheduleTime": "17:00",
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Visual proof of the Pythagorean theorem.\n\nFour right triangles in a square.\n\nMove them around.\n\nThe two small squares match the big square.",
+    "state": "failed",
+    "attemptedSlot": "2026-11-15T17:00",
+    "attemptedAt": "2026-11-15T12:29:12.782Z",
+    "error": "Invalid post: Video frame rate must be at least 23 fps for Instagram Reels."
   },
   {
     "id": "explainer-ig-sum_of_odds",

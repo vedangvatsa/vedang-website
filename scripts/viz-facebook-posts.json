@@ -3168,8 +3168,8 @@
     "text": "How the largest taro producers changed.\n\n2000-2024. Taro production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-07",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-15T12:30:12.620Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/122-r2.txt",
     "captionStyle": "concise-v2",
@@ -3180,7 +3180,13 @@
     "altText": "Taro, 2000-2024. Highest reported values each year.",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-15T12:29:35.868Z",
+    "attemptedSlot": "2026-11-15T17:00",
+    "publishedText": "How the largest taro producers changed.\n\n2000-2024. Taro production by country, measured in millions of tonnes.",
+    "platformPostId": "1118830341023731",
+    "postUrl": "https://www.facebook.com/watch/?v=1118830341023731"
   },
   {
     "id": "viz-b2-facebook-65",
