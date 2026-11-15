@@ -3750,5 +3750,29 @@
     "title": "The Geometric Mean",
     "text": "Geometric proof of the geometric mean theorem.\n\nDraw a semicircle over diameter a plus b.\n\nAn altitude h to the circle forms similar right triangles.\n\nCross-multiplying gives h² = a·b, proving h is the square root of a times b.",
     "altText": "The Geometric Mean"
+  },
+  {
+    "id": "explainer-x-tangent_secant",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/tangent_secant_1x1.mp4",
+    "scheduleDate": "2026-11-24",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_secant_1x1.png",
+    "batchId": "explainer-v1",
+    "title": "Tangent-Secant Theorem",
+    "text": "Geometric proof of the tangent-secant theorem.\n\nFrom point P, draw tangent PT and secant PAB.\n\nAlternate segment theorem gives angle PTA = angle PBT, making triangles PTA and PBT similar.\n\nCross-multiplying PT / PB = PA / PT proves PT² = PA · PB.",
+    "altText": "Tangent-Secant Theorem"
+  },
+  {
+    "id": "explainer-x-euler_formula",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/euler_formula_1x1.mp4",
+    "scheduleDate": "2026-11-24",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/euler_formula_1x1.png",
+    "batchId": "explainer-v1",
+    "title": "Euler Identity",
+    "text": "Geometric intuition behind Euler identity.\n\nIn the complex plane, e^(iθ) rotates by angle θ.\n\nSetting θ = π produces a 180° rotation around the origin, landing directly at -1.\n\nAdding 1 to both sides establishes e^(iπ) + 1 = 0.",
+    "altText": "Euler Identity"
   }
 ]
