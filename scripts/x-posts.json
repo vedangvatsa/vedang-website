@@ -3891,5 +3891,365 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
+  },
+  {
+    "id": "model-quantization-techniques-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Running 70B parameter models at FP16 requires $50,000 in GPUs. Modern quantization compresses weights by 75% with near-zero accuracy loss.\n\n8 quantization formats and engines \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ AWQ (Activation-Aware) \u2014 Salient weight quantization.\n\n\u2022 Protects the most important 1% of weights from truncation\n\u2022 Supported natively in vLLM and Hugging Face pipelines\n\nhttps://github.com/mit-han-lab/llm-awq",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_02_awq.png",
+        "url": "https://github.com/mit-han-lab/llm-awq"
+      },
+      {
+        "text": "3/ GPTQ \u2014 Post-training quantizer.\n\n\u2022 Uses second-order Taylor approximations to minimize error\n\u2022 Standard 4-bit format for high-throughput GPU inference\n\nhttps://github.com/PanQiWei/AutoGPTQ",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_03_gptq.png",
+        "url": "https://github.com/PanQiWei/AutoGPTQ"
+      },
+      {
+        "text": "4/ GGUF (llama.cpp) \u2014 Universal binary format.\n\n\u2022 Replaced legacy GGML with extensible metadata headers\n\u2022 Enables fast CPU and Apple Silicon offloading worldwide\n\nhttps://github.com/ggerganov/ggml/blob/master/docs/gguf.md",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_04_gguf.png",
+        "url": "https://github.com/ggerganov/ggml/blob/master/docs/gguf.md"
+      },
+      {
+        "text": "5/ EXL2 \u2014 Variable bitrate quantization.\n\n\u2022 Assigns fractional bitrates (e.g. 3.5 bpw, 4.2 bpw) across layers\n\u2022 Fastest inference speeds on consumer RTX GPUs\n\nhttps://github.com/turboderp/exllamav2",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_05_exl2.png",
+        "url": "https://github.com/turboderp/exllamav2"
+      },
+      {
+        "text": "6/ BitsAndBytes (NF4) \u2014 QLoRA fine-tuning standard.\n\n\u2022 NormalFloat4 is theoretically optimal for normal distributions\n\u2022 Made fine-tuning 70B models possible on a single GPU\n\nhttps://github.com/bitsandbytes-foundation/bitsandbytes",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_06_bnb.png",
+        "url": "https://github.com/bitsandbytes-foundation/bitsandbytes"
+      },
+      {
+        "text": "7/ HQQ \u2014 Calibration-free quantizer.\n\n\u2022 Quantizes models in seconds with zero dataset calibration\n\u2022 Supports ultra-low bitrates down to 2-bit and 1-bit\n\nhttps://github.com/mobiusml/hqq",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_07_hqq.png",
+        "url": "https://github.com/mobiusml/hqq"
+      },
+      {
+        "text": "8/ AutoRound \u2014 Signed gradient descent.\n\n\u2022 Optimizes rounding using signed gradient descent\n\u2022 Delivers best-in-class perplexity on extreme low-bit models\n\nhttps://github.com/intel/auto-round",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_08_autoround.png",
+        "url": "https://github.com/intel/auto-round"
+      },
+      {
+        "text": "9/ SpQR \u2014 Sparse-quantized representation.\n\n\u2022 Retains 1% critical outlier weights in uncompressed 16-bit\n\u2022 Enables 3-bit model deployment with near-FP16 perplexity\n\nhttps://github.com/Vahe1994/SpQR",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/model_quantization_techniques/tweet_09_spqr.png",
+        "url": "https://github.com/Vahe1994/SpQR"
+      },
+      {
+        "text": "10/ Quantization is the great democratizer of AI hardware. By preserving critical outlier activations while compressing the bulk of weights to 4 bits, developers run frontier open models locally.",
+        "image": null
+      },
+      {
+        "text": "11/ Continuous batching engines serve quantized models with maximum throughput. Full guide to vLLM and SGLang runtimes:",
+        "image": null
+      },
+      {
+        "text": "12/ Sub-3B parameter models run locally with zero quantization degradation. Complete breakdown of small language models:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "agent-observability-tracing-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ You cannot improve what you cannot measure. Debugging autonomous multi-agent loops requires specialized observability tooling.\n\n8 observability & tracing platforms for AI agents \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Langfuse \u2014 Open-source tracing.\n\n\u2022 Detailed nested execution traces for multi-step agents\n\u2022 Tracks token costs, latency, and human evaluation scores\n\nhttps://langfuse.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_02_langfuse.png",
+        "url": "https://langfuse.com"
+      },
+      {
+        "text": "3/ Arize Phoenix \u2014 AI evaluation platform.\n\n\u2022 Open-source observability with automated evals\n\u2022 Visualizes embedding clusters and RAG drift\n\nhttps://phoenix.arize.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_03_phoenix.png",
+        "url": "https://phoenix.arize.com"
+      },
+      {
+        "text": "4/ Braintrust \u2014 Enterprise evaluation engine.\n\n\u2022 Real-time logging with automated CI/CD eval checks\n\u2022 Catches quality regressions before deploying prompt changes\n\nhttps://www.braintrust.dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_04_braintrust.png",
+        "url": "https://www.braintrust.dev"
+      },
+      {
+        "text": "5/ LangSmith \u2014 Agent debugging harness.\n\n\u2022 First-class visibility into LangGraph cyclic loops\n\u2022 Easy replay and editing of failed agent runs\n\nhttps://www.langchain.com/langsmith",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_05_langsmith.png",
+        "url": "https://www.langchain.com/langsmith"
+      },
+      {
+        "text": "6/ W&B Weave \u2014 Lightweight agent logging.\n\n\u2022 Two-line decorator logging for Python functions\n\u2022 Clean UI comparing prompt iterations and tool calls\n\nhttps://wandb.ai/site/weave",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_06_weave.png",
+        "url": "https://wandb.ai/site/weave"
+      },
+      {
+        "text": "7/ OpenInference \u2014 Telemetry standard.\n\n\u2022 Extends OpenTelemetry standards to generative AI\n\u2022 Prevents vendor lock-in across monitoring providers\n\nhttps://github.com/Arize-ai/openinference",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_07_openinference.png",
+        "url": "https://github.com/Arize-ai/openinference"
+      },
+      {
+        "text": "8/ Helicone \u2014 Proxy-based tracing.\n\n\u2022 Zero-dependency logging via simple base URL swap\n\u2022 Built-in caching, rate limiting, and spend alerts\n\nhttps://www.helicone.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_08_helicone.png",
+        "url": "https://www.helicone.ai"
+      },
+      {
+        "text": "9/ Traceloop (OpenLLMetry) \u2014 OpenTelemetry instrumentation.\n\n\u2022 Automatically instruments LangChain, LlamaIndex, and OpenAI\n\u2022 Exports traces cleanly to Datadog, Dynatrace, or New Relic\n\nhttps://www.traceloop.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_observability_tracing/tweet_09_traceloop.png",
+        "url": "https://www.traceloop.com"
+      },
+      {
+        "text": "10/ Agent failures rarely occur in single LLM completions; they occur in coordination deadlocks and bad tool outputs. Distributed tracing is essential to diagnosing cascading agent failures.",
+        "image": null
+      },
+      {
+        "text": "11/ Multi-agent frameworks coordinate complex swarms that require tracing. Complete guide to LangGraph and CrewAI:",
+        "image": null
+      },
+      {
+        "text": "12/ Structured extraction libraries prevent malformed tool inputs before errors occur. Full technical guide:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "llms-txt-standard-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ AI agents waste millions of tokens scraping heavy web HTML and navigation menus. The /llms.txt standard solves this.\n\n8 tools and frameworks supporting llms.txt \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ llms.txt Specification \u2014 Proposed web standard.\n\n\u2022 Proposed by Jeremy Howard for AI-friendly website indexing\n\u2022 Standardizes a root markdown directory of key documentation\n\nhttps://llmstxt.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_02_spec.png",
+        "url": "https://llmstxt.org"
+      },
+      {
+        "text": "3/ Mintlify llms.txt \u2014 Documentation platform.\n\n\u2022 Generates /llms.txt and /llms-full.txt automatically\n\u2022 Powers AI documentation for modern developer companies\n\nhttps://mintlify.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_03_mintlify.png",
+        "url": "https://mintlify.com"
+      },
+      {
+        "text": "4/ Docs.page \u2014 GitHub markdown publisher.\n\n\u2022 Transforms GitHub markdown repos into websites\n\u2022 Serves clean agent endpoints with zero build configuration\n\nhttps://docs.page",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_04_docspage.png",
+        "url": "https://docs.page"
+      },
+      {
+        "text": "5/ Starlight (Astro) \u2014 Static documentation plugin.\n\n\u2022 High-performance docs theme for the Astro web framework\n\u2022 Community plugins export structured llms.txt files on build\n\nhttps://starlight.astro.build",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_05_starlight.png",
+        "url": "https://starlight.astro.build"
+      },
+      {
+        "text": "6/ Jina llms.txt Generator \u2014 Automated site crawler.\n\n\u2022 Scrapes any legacy domain and outputs a clean llms.txt file\n\u2022 Automatically formats internal documentation links\n\nhttps://jina.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_06_jina.png",
+        "url": "https://jina.ai"
+      },
+      {
+        "text": "7/ FastAPI Route Handler \u2014 Backend API exposure.\n\n\u2022 Exposes backend routes as clean markdown documentation\n\u2022 Allows AI coding agents to inspect APIs without parsing complex schemas\n\nhttps://fastapi.tiangolo.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_07_fastapi.png",
+        "url": "https://fastapi.tiangolo.com"
+      },
+      {
+        "text": "8/ Docusaurus Plugin \u2014 Documentation ecosystem.\n\n\u2022 Open-source plugin for the popular Docusaurus framework\n\u2022 Compiles thousands of docs pages into optimized AI files\n\nhttps://docusaurus.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_08_docusaurus.png",
+        "url": "https://docusaurus.io"
+      },
+      {
+        "text": "9/ Next.js llms.txt Pattern \u2014 Full-stack web route.\n\n\u2022 Uses Next.js App Router route handlers to serve dynamic markdown\n\u2022 Keeps agent-facing documentation synced with site releases\n\nhttps://nextjs.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/llms_txt_standard/tweet_09_nextjs.png",
+        "url": "https://nextjs.org"
+      },
+      {
+        "text": "10/ robots.txt told search crawlers what NOT to scrape. llms.txt tells AI agents what to read first. It is the defining content architecture for Answer Engine Optimization (AEO).",
+        "image": null
+      },
+      {
+        "text": "11/ AI search engines prioritize websites that serve clean markdown feeds. Complete breakdown of AEO search engines:",
+        "image": null
+      },
+      {
+        "text": "12/ Modern web scrapers extract structured schemas when llms.txt is absent. Full guide to scraping architectures:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "prompt-injection-defenses-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Indirect prompt injections can trick AI agents into deleting databases and leaking private user credentials.\n\n8 runtime guardrails and security scanners for LLMs \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ NeMo Guardrails (NVIDIA) \u2014 Programmable rails engine.\n\n\u2022 Defines conversational boundaries using Colang syntax\n\u2022 Enforces topic restrictions, facts, and security checks\n\nhttps://github.com/NVIDIA/NeMo-Guardrails",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_02_nemo.png",
+        "url": "https://github.com/NVIDIA/NeMo-Guardrails"
+      },
+      {
+        "text": "3/ Llama Guard 3 \u2014 Fine-tuned safety classifier.\n\n\u2022 Meta's dedicated model for input/output risk taxonomy\n\u2022 Runs fast on edge hardware in 1B and 8B parameter variants\n\nhttps://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_03_llamaguard.png",
+        "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations"
+      },
+      {
+        "text": "4/ Guardrails AI \u2014 Validation & enforcement.\n\n\u2022 Open-source community hub of enterprise guardrails\n\u2022 Guarantees PII redaction and blocks hallucinated citations\n\nhttps://www.guardrailsai.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_04_guardrailsai.png",
+        "url": "https://www.guardrailsai.com"
+      },
+      {
+        "text": "5/ Lakera Guard \u2014 Security API endpoint.\n\n\u2022 Real-time defense against system prompt leaks and jailbreaks\n\u2022 Evaluates prompts in under 25ms with zero model latency hit\n\nhttps://www.lakera.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_05_lakera.png",
+        "url": "https://www.lakera.ai"
+      },
+      {
+        "text": "6/ Rebuff.ai \u2014 Multi-layered defense.\n\n\u2022 Injects canary tokens into context to detect unauthorized exfiltration\n\u2022 Combines vector similarity with prompt injection heuristics\n\nhttps://github.com/woop/rebuff",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_06_rebuff.png",
+        "url": "https://github.com/woop/rebuff"
+      },
+      {
+        "text": "7/ Vigil \u2014 Open-source LLM scanner.\n\n\u2022 Scans incoming requests using YARA signatures and vector lookups\n\u2022 Blocks known adversarial jailbreak patterns before model execution\n\nhttps://github.com/deadbits/vigil-llm",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_07_vigil.png",
+        "url": "https://github.com/deadbits/vigil-llm"
+      },
+      {
+        "text": "8/ Promptfoo \u2014 Red-teaming CLI.\n\n\u2022 Automated CLI testing models against OWASP Top 10 vulnerabilities\n\u2022 Integrates into GitHub Actions CI pipelines before code deploys\n\nhttps://www.promptfoo.dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_08_promptfoo.png",
+        "url": "https://www.promptfoo.dev"
+      },
+      {
+        "text": "9/ Garak \u2014 LLM vulnerability scanner.\n\n\u2022 The 'Nmap for LLMs' testing probe susceptibility to jailbreaks\n\u2022 Discovers hidden hallucination vulnerabilities and data leaks\n\nhttps://github.com/leondz/garak",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_injection_defenses/tweet_09_garak.png",
+        "url": "https://github.com/leondz/garak"
+      },
+      {
+        "text": "10/ Security cannot rely on system prompt instructions like 'ignore previous instructions'. Robust defense requires layered runtime guardrails: input filtering, canary tokens, and output validation.",
+        "image": null
+      },
+      {
+        "text": "11/ AI agent observability platforms monitor runtime security events. Complete guide to tracing and evaluation:",
+        "image": null
+      },
+      {
+        "text": "12/ Structured extraction libraries prevent malformed tool commands from executing. Full guide to schema engines:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "speculative-decoding-engines-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Generating tokens one-by-one is memory-bandwidth bound. Speculative decoding generates multiple tokens per forward pass.\n\n8 speculative decoding & acceleration engines \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Medusa \u2014 Multi-head draft architecture.\n\n\u2022 Adds extra decoding heads to predict multiple tokens concurrently\n\u2022 Achieves 2x speedup without needing a separate draft model\n\nhttps://github.com/FasterDecoding/Medusa",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_02_medusa.png",
+        "url": "https://github.com/FasterDecoding/Medusa"
+      },
+      {
+        "text": "3/ EAGLE-2 \u2014 Context-aware speculative engine.\n\n\u2022 Uses feature vectors to predict draft tokens with high accuracy\n\u2022 Delivers 3x generation speedup on Llama-3 models\n\nhttps://github.com/SafeAILab/EAGLE",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_03_eagle.png",
+        "url": "https://github.com/SafeAILab/EAGLE"
+      },
+      {
+        "text": "4/ Lookahead Decoding \u2014 Exact parallel sampling.\n\n\u2022 Generates n-gram branches in parallel with zero extra weights\n\u2022 Math-equivalent output to standard autoregressive sampling\n\nhttps://github.com/hao-ai-lab/LookaheadDecoding",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_04_lookahead.png",
+        "url": "https://github.com/hao-ai-lab/LookaheadDecoding"
+      },
+      {
+        "text": "5/ Draft-Model Speculative \u2014 vLLM implementation.\n\n\u2022 Pairs a 1B parameter model with a 70B target model\n\u2022 Target model verifies draft tokens in a single forward pass\n\nhttps://docs.vllm.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_05_vllmdraft.png",
+        "url": "https://docs.vllm.ai"
+      },
+      {
+        "text": "6/ Prompt Lookup Decoding \u2014 String-matching acceleration.\n\n\u2022 Searches input prompt for recurring phrases and token sequences\n\u2022 Massive speedup for code editing and document summarization\n\nhttps://github.com/apoorvumang/prompt-lookup-decoding",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_06_promptlookup.png",
+        "url": "https://github.com/apoorvumang/prompt-lookup-decoding"
+      },
+      {
+        "text": "7/ Hydra \u2014 Adaptive multi-head engine.\n\n\u2022 Evaluates candidate draft tokens in tree-structured attention masks\n\u2022 Maximizes acceptance probability across diverse reasoning tasks\n\nhttps://github.com/akhaliq/hydra",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_07_hydra.png",
+        "url": "https://github.com/akhaliq/hydra"
+      },
+      {
+        "text": "8/ Rest \u2014 Datastore token speculator.\n\n\u2022 Retrieves candidate tokens from a pre-built offline datastore\n\u2022 Eliminates GPU compute required for running draft models\n\nhttps://github.com/FasterDecoding/REST",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_08_rest.png",
+        "url": "https://github.com/FasterDecoding/REST"
+      },
+      {
+        "text": "9/ TensorRT-LLM Speculative \u2014 Enterprise GPU optimization.\n\n\u2022 Highly tuned CUDA kernels running speculative checks at line rate\n\u2022 Production deployment standard for low-latency inference clouds\n\nhttps://github.com/NVIDIA/TensorRT-LLM",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_09_tensorrtspec.png",
+        "url": "https://github.com/NVIDIA/TensorRT-LLM"
+      },
+      {
+        "text": "10/ Autoregressive generation is bottlenecked by GPU memory bandwidth, not compute. Speculative decoding uses spare compute capacity to verify multiple tokens simultaneously, doubling generation speeds.",
+        "image": null
+      },
+      {
+        "text": "11/ High-throughput serving engines integrate speculative decoding natively. Complete guide to vLLM and TensorRT-LLM:",
+        "image": null
+      },
+      {
+        "text": "12/ Quantized model formats provide complementary speedups on edge hardware. Full technical breakdown:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
   }
 ]
