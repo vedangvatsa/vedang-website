@@ -5816,5 +5816,310 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
+  },
+  {
+    "id": "hierarchical-agent-architectures-thread",
+    "topic": "ai-agents",
+    "date": "2026-04-11",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Flat agent loops stall when tasks exceed 10 steps. Hierarchical multi-agent networks split planning, execution, and verification.\n\n8 hierarchical multi-agent & planning frameworks 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ MetaGPT — SOP-driven role hierarchy.\n\n• Encodes standard operating procedures into agent role prompts\n• Engineers generate pull requests; QA agents verify unit tests\n\nhttps://github.com/geekan/MetaGPT",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_02_metagpt.png"
+      },
+      {
+        "text": "3/ ChatDev — Communicative software org.\n\n• Simulates entire engineering teams across multiple chat phases\n• Eliminates hallucinations through structured inter-agent peer review\n\nhttps://github.com/OpenBMB/ChatDev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_03_chatdev.png"
+      },
+      {
+        "text": "4/ Camel-AI — Cooperative role-playing.\n\n• Inception prompting aligns two agents to solve open-ended goals\n• Open-source infrastructure for autonomous multi-agent exploration\n\nhttps://github.com/camel-ai/camel",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_04_camel.png"
+      },
+      {
+        "text": "5/ Hierarchical Sub-Agents — Tree decomposition.\n\n• Parent planner divides broad mission into isolated leaf tasks\n• Workers execute in sandboxes and return clean structured diffs\n\nhttps://cognition.ai/blog",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_05_subagents.png"
+      },
+      {
+        "text": "6/ AgentVerse — Group problem solving.\n\n• Dynamic assembly of specialist agent teams based on task prompts\n• Flexible communication topologies (horizontal, vertical, or broadcast)\n\nhttps://github.com/OpenBMB/AgentVerse",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_06_agentverse.png"
+      },
+      {
+        "text": "7/ BabyAGI — Priority task planning.\n\n• Three-agent architecture: task creation, prioritization & execution\n• Lightweight reference pattern for autonomous goal tracking\n\nhttps://github.com/yoheinakajima/babyagi",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_07_babyagi.png"
+      },
+      {
+        "text": "8/ Voyager — Lifelong learning agent.\n\n• Self-directed exploration agent building an incremental skill library\n• Uses execution errors to rewrite JavaScript action code\n\nhttps://github.com/MineDojo/Voyager",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_08_voyager.png"
+      },
+      {
+        "text": "9/ AutoGPT Forge — Agent benchmarking.\n\n• Standardized test harness measuring agent task completion rates\n• Protocol-driven interface for building modular autonomous bots\n\nhttps://github.com/Significant-Gravitas/AutoGPT",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hierarchical_agent_architectures/tweet_09_autogpt.png"
+      },
+      {
+        "text": "10/ Multi-agent engineering trade-offs:\n\n• Without structured communication protocols, N agents produce explosive token overhead. Hierarchical lead planners prune discussion branches effectively."
+      },
+      {
+        "text": "11/ Explore our architecture breakdown on agent orchestration frameworks:\n\nhttps://x.com/vedangvatsa/status/1987654321098765462"
+      },
+      {
+        "text": "12/ For durable execution and event-driven agent workflows, check:\n\nhttps://x.com/vedangvatsa/status/1987654321098765463"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "decentralized-inference-networks-thread",
+    "topic": "web3",
+    "date": "2026-04-12",
+    "category": "Web3",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Centralized cloud GPU clusters are expensive and supply-constrained. Decentralized compute networks aggregate idle chips worldwide.\n\n8 decentralized GPU compute & inference networks 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Petals — BitTorrent for language models.\n\n• Shards massive LLM layers across consumer RTX GPUs worldwide\n• Generates tokens collaboratively with dynamic fault tolerance\n\nhttps://github.com/bigscience-workshop/petals",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_02_petals.png"
+      },
+      {
+        "text": "3/ Bittensor — Open intelligence marketplace.\n\n• Tokenized subnets ranking models by output quality and latency\n• Miners compete continuously; validators verify reasoning depth\n\nhttps://github.com/opentensor/bittensor",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_03_bittensor.png"
+      },
+      {
+        "text": "4/ io.net — Clustered DePIN cloud.\n\n• Clusters thousands of heterogeneous GPUs into unified Ray nodes\n• Up to 80% cheaper than traditional hyperscaler cloud instances\n\nhttps://io.net",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_04_ionet.png"
+      },
+      {
+        "text": "5/ Akash Network — Open compute marketplace.\n\n• Reverse auction engine where developers bid for GPU container hosts\n• Deploy Docker containers permissionlessly via Cosmos IBC transactions\n\nhttps://github.com/akash-network/node",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_05_akash.png"
+      },
+      {
+        "text": "6/ Render Network — Distributed GPU rendering.\n\n• Solana-based compute protocol executing 3D NeRFs and diffusion models\n• High-concurrency job dispatch across consumer and enterprise rigs\n\nhttps://render.x.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_06_render.png"
+      },
+      {
+        "text": "7/ Aethir — Enterprise compute DePIN.\n\n• Global GPU aggregation delivering sub-100ms streaming inference\n• Tailored for interactive voice agents, cloud gaming, and LLMs\n\nhttps://aethir.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_07_aethir.png"
+      },
+      {
+        "text": "8/ Gensyn — Verifiable ML compute.\n\n• Cryptographic verification protocol proving deep learning computation\n• Probabilistic proof checks prevent malicious worker poisoning\n\nhttps://gensyn.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_08_gensyn.png"
+      },
+      {
+        "text": "9/ Nosana — Solana compute grid.\n\n• CI/CD and inference engine matching requests to consumer GPU hosts\n• Instant token payouts for completed PyTorch and Ollama runs\n\nhttps://github.com/nosana-ci",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_inference_networks/tweet_09_nosana.png"
+      },
+      {
+        "text": "10/ Decentralized compute physics:\n\n• Splitting model layers across consumer internet connections introduces 200ms round trips. High intra-cluster bandwidth and INT4 weights minimize pipeline stalls."
+      },
+      {
+        "text": "11/ Read our deep-dive on physical hardware DePIN networks and sensor grids:\n\nhttps://x.com/vedangvatsa/status/1987654321098765464"
+      },
+      {
+        "text": "12/ For zero-knowledge verifiable machine learning (zkML) architectures, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765465"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "entity-resolution-knowledge-thread",
+    "topic": "rag",
+    "date": "2026-04-13",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ RAG systems retrieve garbage when names and accounts are fractured across silos. Entity resolution unifies disparate records into clean graphs.\n\n8 entity resolution & knowledge graph engines 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Splink — Probabilistic record linkage.\n\n• Fellegi-Sunter mathematical methodology running on DuckDB and Spark\n• Resolves duplicate customer profiles across 100M+ rows in seconds\n\nhttps://github.com/moj-analytical-services/splink",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_02_splink.png"
+      },
+      {
+        "text": "3/ Zingg — Machine learning entity resolution.\n\n• Automated clustering and classification linking records without regexes\n• Pre-built models for international names, addresses, and organizations\n\nhttps://github.com/zingg-ai/zingg",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_03_zingg.png"
+      },
+      {
+        "text": "4/ Dedupe — Active learning deduplication.\n\n• Prompts human operators with edge cases to rapidly tune classifiers\n• Finds identical entities across different schemas and spelling errors\n\nhttps://github.com/dedupeio/dedupe",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_04_dedupe.png"
+      },
+      {
+        "text": "5/ Relik — Fast entity & relation linker.\n\n• Bi-encoder neural architecture outperforming heavy autoregressive models\n• Links text entities to Knowledge Graph nodes in under 5 milliseconds\n\nhttps://github.com/sapienzanlp/relik",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_05_relik.png"
+      },
+      {
+        "text": "6/ RecordLinkage — Python dedupe toolkit.\n\n• Classical blocking algorithms (canopy, phonetic) prune comparisons\n• Jaro-Winkler, Levenshtein, and Cosine similarity scoring matrices\n\nhttps://github.com/J535D165/recordlinkage",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_06_recordlinkage.png"
+      },
+      {
+        "text": "7/ SpaCy Entity Linker — Pipeline component.\n\n• Disambiguates named entities directly against the global Wikidata graph\n• Assigns permanent QID identifiers to companies, people, and locations\n\nhttps://github.com/egerber/spaCy-entity-linker",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_07_spacy_linker.png"
+      },
+      {
+        "text": "8/ GraphRAG Pipeline — LLM graph builder.\n\n• Microsoft engine extracting entities, claims, and relations from text\n• Creates hierarchical community summaries for high-level question answering\n\nhttps://github.com/microsoft/graphrag",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_08_graphrag.png"
+      },
+      {
+        "text": "9/ DuckDB String Distance — In-process fuzzy matcher.\n\n• Vectorized Levenshtein, Damerau-Levenshtein, and Jaro-Winkler SQL functions\n• Eliminates external services for clean local database deduplication\n\nhttps://github.com/duckdb/duckdb",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/entity_resolution_knowledge/tweet_09_duckdb_fuzzy.png"
+      },
+      {
+        "text": "10/ Entity resolution math:\n\n• Comparing N records pairwise is quadratic. Smart blocking rules (e.g. matching postal codes first) cut comparison pairs by 99% before fuzzy scoring."
+      },
+      {
+        "text": "11/ Dive into our guide on GraphRAG knowledge bases and graph database engines:\n\nhttps://x.com/vedangvatsa/status/1987654321098765466"
+      },
+      {
+        "text": "12/ For structured zero-shot data extraction tools, revisit our breakdown:\n\nhttps://x.com/vedangvatsa/status/1987654321098765467"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "edge-compute-runtimes-thread",
+    "topic": "web-infra",
+    "date": "2026-04-14",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Traditional Node.js containers take seconds to cold-start. Edge compute runtimes leverage V8 isolates and Wasm to boot in sub-milliseconds.\n\n8 edge compute & serverless JS runtimes 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ workerd (Cloudflare) — Open V8 isolate core.\n\n• Powers Cloudflare Workers; runs multiple tenants in one process\n• Zero container spin-up lag; instant global code updates\n\nhttps://github.com/cloudflare/workerd",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_02_workerd.png"
+      },
+      {
+        "text": "3/ Deno Deploy — Distributed TypeScript edge.\n\n• Secure runtime with granular file and network permissions\n• Zero compile step; runs modern TypeScript directly out of the box\n\nhttps://github.com/denoland/deno",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_03_deno.png"
+      },
+      {
+        "text": "4/ Fastly Viceroy — WebAssembly edge engine.\n\n• Local development CLI simulating Fastly Compute@Edge environments\n• Instantiates Wasm modules in under 35 microseconds\n\nhttps://github.com/fastly/viceroy",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_04_viceroy.png"
+      },
+      {
+        "text": "5/ Bun — High-performance Zig runtime.\n\n• Built on Apple WebKit JavaScriptCore instead of Google V8\n• 3-5x faster startup and file I/O than standard Node.js\n\nhttps://github.com/oven-sh/bun",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_05_bun.png"
+      },
+      {
+        "text": "6/ WinterCG — Universal runtime standard.\n\n• Unifies Web APIs across Cloudflare, Deno, Node, and Vercel\n• Eliminates vendor lock-in for fetch, streams, and web crypto\n\nhttps://wintercg.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_06_wintercg.png"
+      },
+      {
+        "text": "7/ Vercel Edge Runtime — Framework edge layer.\n\n• Optimized for streaming dynamic HTML and AI completions\n• Zero Node.js overhead for low-latency middleware checks\n\nhttps://github.com/vercel/edge-runtime",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_07_vercel_edge.png"
+      },
+      {
+        "text": "8/ Netlify Edge — Global worker network.\n\n• Built directly on top of Deno for fast edge transformation\n• Rewrites headers, cookies, and localized content at the boundary\n\nhttps://github.com/netlify/edge-functions",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_08_netlify.png"
+      },
+      {
+        "text": "9/ Spin (Fermyon) — Serverless WebAssembly.\n\n• Lightweight microservice framework built with WebAssembly Components\n• Instant cold starts and multi-language support (Rust, Go, JS, Python)\n\nhttps://github.com/fermyon/spin",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/edge_compute_runtimes/tweet_09_spin.png"
+      },
+      {
+        "text": "10/ Edge runtime trade-offs:\n\n• V8 isolates boot in under 5ms with zero cold start lag, but lack raw Linux syscall support. Use edge isolates for streaming and MicroVMs for heavyweight compute."
+      },
+      {
+        "text": "11/ Check our guide on in-browser WebAssembly AI runtimes and WebGPU engines:\n\nhttps://x.com/vedangvatsa/status/1987654321098765468"
+      },
+      {
+        "text": "12/ For Core Web Vitals optimization and low-latency frontend delivery, visit:\n\nhttps://x.com/vedangvatsa/status/1987654321098765469"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "browser-extension-agent-bridges-thread",
+    "topic": "browser-ai",
+    "date": "2026-04-15",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Web agents that run in headless cloud browsers miss authenticated user cookies. Extension bridges let agents act directly in user sessions.\n\n8 browser extension & in-page agent bridges 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ WXT — Next-gen extension framework.\n\n• Modern Vite-powered development with automatic entrypoint routing\n• Supports Manifest V3 across Chrome, Safari, Firefox, and Edge\n\nhttps://github.com/wxt-dev/wxt",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_02_wxt.png"
+      },
+      {
+        "text": "3/ Plasmo — Modular extension SDK.\n\n• React, Vue, and Svelte support with instant hot-reloading\n• Automated packaging and deployment for Chrome Web Store\n\nhttps://github.com/PlasmoHQ/plasmo",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_03_plasmo.png"
+      },
+      {
+        "text": "4/ CRXJS — Vite extension plugin.\n\n• Integrates directly into existing Vite build configurations\n• Lightning-fast HMR for content scripts and background service workers\n\nhttps://github.com/crxjs/chrome-extension-tools",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_04_crxjs.png"
+      },
+      {
+        "text": "5/ Chrome Side Panel API — Persistent agent UI.\n\n• Side-by-side companion UI that persists across tab navigation\n• Intercepts active tab DOM without obstructing page content\n\nhttps://developer.chrome.com/docs/extensions/reference/api/sidePanel",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_05_sidepanel.png"
+      },
+      {
+        "text": "6/ Mozilla WebExtension Polyfill — Cross-browser.\n\n• Standardizes Promise-based browser APIs across browsers\n• Eliminates callback hell in background service worker scripts\n\nhttps://github.com/mozilla/webextension-polyfill",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_06_polyfill.png"
+      },
+      {
+        "text": "7/ Taxy AI — Open browser agent.\n\n• Open-source extension operating active tabs via natural language\n• Highlights DOM elements and clicks buttons using visual anchors\n\nhttps://github.com/taxy-ai/browser-extension",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_07_taxy.png"
+      },
+      {
+        "text": "8/ Built-in Gemini Nano API — Local browser AI.\n\n• Native `window.ai` language model running entirely on local NPU\n• Zero network latency and zero privacy leak for page summarization\n\nhttps://developer.chrome.com/docs/ai/built-in",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_08_gemini_nano.png"
+      },
+      {
+        "text": "9/ Readability Content Script — Clean DOM.\n\n• Mozilla Readability ported to content script parsers\n• Strips ads, navigation, and clutter before passing text to LLMs\n\nhttps://github.com/mozilla/readability",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_09_readability.png"
+      },
+      {
+        "text": "10/ Extension agent engineering:\n\n• Manifest V3 background workers terminate after 30 seconds of inactivity. Chrome Alarm APIs and native messaging bridges maintain long-running agent state."
+      },
+      {
+        "text": "11/ Read our architecture review on headless browser automation libraries:\n\nhttps://x.com/vedangvatsa/status/1987654321098765470"
+      },
+      {
+        "text": "12/ For open tool calling protocols (MCP and function calling), review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765471"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
   }
 ]
