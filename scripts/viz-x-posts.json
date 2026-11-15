@@ -3438,7 +3438,7 @@
     "batchId": "explainer-v1",
     "state": "uncertain",
     "attemptedAt": "2026-11-15T12:15:00.854Z",
-    "attemptedSlot": "2026-11-15T17:00",
+    "attemptedSlot": "2026-11-15T09:00",
     "publishedText": "Why the area of a circle equals pi times radius squared.\n\nCut a circle into thin rings and unroll them.\n\nThey form a triangle.\n\nThe bottom line is the circumference. The height is the radius.",
     "error": "Account is not allowed to perform this action",
     "paused": true
@@ -3450,10 +3450,18 @@
     "text": "Four matching right triangles placed inside a square.\n\nMoving them around shows the leftover space stays the same.\n\nThe two smaller squares equal the big square on the longest side.",
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "A Visual Proof of the Pythagorean Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "postedAt": "2026-11-15T12:38:38.884Z",
+    "attemptedSlot": "2026-11-15T17:00",
+    "attemptedAt": "2026-11-15T12:38:34.000Z",
+    "state": "sent",
+    "bufferPostId": "6af9a7cbe86a5789a60d8aac",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2121945973328851064",
+    "error": null
   },
   {
     "id": "explainer-x-sum_of_odds",
