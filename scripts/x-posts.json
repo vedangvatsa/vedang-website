@@ -6121,5 +6121,615 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
+  },
+  {
+    "id": "ai-agent-testing-benchmarks-thread",
+    "topic": "ai-eval",
+    "date": "2026-04-16",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Generic LLM benchmarks like MMLU do not measure agent competence. Dedicated agent benchmarks test real tool usage, coding, and loops.\n\n8 AI agent benchmarking & evaluation suites 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ SWE-bench — Real-world software engineering.\n\n• Tests agents against thousands of real closed GitHub pull requests\n• Verifies solutions against gold standard unit test assertions\n\nhttps://github.com/princeton-nlp/SWE-bench",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_02_swebench.png"
+      },
+      {
+        "text": "3/ GAIA — General assistant benchmark.\n\n• Designed to be easy for humans (92%) but difficult for LLMs (~30%)\n• Requires multi-step tool calls, spreadsheet analysis, and web browsing\n\nhttps://github.com/facebookresearch/gaia",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_03_gaia.png"
+      },
+      {
+        "text": "4/ AgentBench — Multi-domain evaluation.\n\n• Evaluates agents across operating systems, databases, and games\n• Standardized harness measuring decision-making across varied domains\n\nhttps://github.com/THUDM/AgentBench",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_04_agentbench.png"
+      },
+      {
+        "text": "5/ WebArena — Dynamic web environment.\n\n• Fully simulated realistic web stack (e-commerce, GitLab, maps)\n• Measures agents navigating real HTML pages and dynamic forms\n\nhttps://github.com/web-arena-x/webarena",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_05_webarena.png"
+      },
+      {
+        "text": "6/ Berkeley Function Calling (BFCL) — Tool accuracy.\n\n• Strict AST syntax validation on generated JSON arguments\n• Tests multi-turn, parallel, and invalid function calling edge cases\n\nhttps://github.com/ShishirPatil/gorilla",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_06_bfcl.png"
+      },
+      {
+        "text": "7/ InterCode — Stateful code evaluation.\n\n• Interactive gym environments providing execution compiler feedback\n• Tests agents iteratively debugging bash commands and SQL schemas\n\nhttps://github.com/intercode-benchmark/intercode",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_07_intercode.png"
+      },
+      {
+        "text": "8/ OSWorld — Desktop environment benchmark.\n\n• Evaluates multimodal agents operating Ubuntu GUI with mouse and keys\n• Completes realistic enterprise workflows across native apps\n\nhttps://github.com/xlang-ai/OSWorld",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_08_osworld.png"
+      },
+      {
+        "text": "9/ Machiavelli — Ethical alignment benchmark.\n\n• Tests reinforcement learning agents in text-based ethical dilemmas\n• Measures trade-offs between goal achievement and ethical violations\n\nhttps://github.com/aypan17/machiavelli",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agent_testing_benchmarks/tweet_09_machiavelli.png"
+      },
+      {
+        "text": "10/ Agent benchmarking insights:\n\n• Output string-matching fails on agents. Only executing generated code against unit tests in isolated Docker containers accurately verifies reasoning correctness."
+      },
+      {
+        "text": "11/ Read our guide on synthetic evaluation pipelines and RAG testing suites:\n\nhttps://x.com/vedangvatsa/status/1987654321098765472"
+      },
+      {
+        "text": "12/ For terminal coding agents and autonomous developer tools, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765473"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "decentralized-identity-attestation-thread",
+    "topic": "web3",
+    "date": "2026-04-17",
+    "category": "Web3",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Autonomous agents interact with financial rails and APIs. To prevent Sybil attacks, agents need cryptographically verifiable identities.\n\n8 decentralized identity & attestation protocols 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ EAS — Ethereum Attestation Service.\n\n• Universal open standard for structured onchain & offchain claims\n• EIP-712 cryptographic signatures ensure tamper-proof attestations\n\nhttps://github.com/ethereum-attestation-service/eas-contracts",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_02_eas.png"
+      },
+      {
+        "text": "3/ W3C DID Standard — Universal identifiers.\n\n• Globally unique decentralized URI strings resolving to DID documents\n• Removes reliance on centralized identity providers like Google or Okta\n\nhttps://www.w3.org/TR/did-core",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_03_w3c_did.png"
+      },
+      {
+        "text": "4/ Verax — Shared attestation registry.\n\n• Onchain registry aggregating attestations across protocols on Linea\n• Standardized schema portal enabling cross-ecosystem reputation\n\nhttps://github.com/Consensys/verax-contracts",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_04_verax.png"
+      },
+      {
+        "text": "5/ SpruceID (DIDKit) — Cross-platform library.\n\n• Core Rust engine compiling to Wasm, Python, Android, and iOS\n• Issues and verifies W3C Verifiable Credentials with local keys\n\nhttps://github.com/spruceid/didkit",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_05_spruceid.png"
+      },
+      {
+        "text": "6/ Privado ID — Zero-knowledge credentials.\n\n• Uses Iden3 cryptographic protocol and Circom zk-SNARK circuits\n• Proves authorization (e.g. over 18, KYC cleared) with zero data leaks\n\nhttps://github.com/0xPolygonID",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_06_privadoid.png"
+      },
+      {
+        "text": "7/ Privy — Embedded authentication.\n\n• Turnkey authentication connecting social accounts, passkeys, and DIDs\n• Invisible embedded smart wallets for seamless non-custodial onboarding\n\nhttps://github.com/privy-io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_07_privy.png"
+      },
+      {
+        "text": "8/ Disco.xyz — Backpack for credentials.\n\n• Manages verifiable credentials tied to decentralized identifiers\n• Integrates portable reputation directly into consumer web3 apps\n\nhttps://disco.xyz",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_08_disco.png"
+      },
+      {
+        "text": "9/ Lit Actions — Programmable key pairs.\n\n• Threshold cryptography network generating agent execution keys\n• Enforces conditional transaction execution based on signed data proofs\n\nhttps://github.com/LIT-Protocol",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/decentralized_identity_attestation/tweet_09_lit.png"
+      },
+      {
+        "text": "10/ Agent identity architecture:\n\n• Agents should authenticate via ephemeral session keys delegated by smart accounts, while signed EAS attestations build an immutable onchain track record."
+      },
+      {
+        "text": "11/ Read our architecture review on smart contract account abstraction and ERC-4337:\n\nhttps://x.com/vedangvatsa/status/1987654321098765474"
+      },
+      {
+        "text": "12/ For programmable stablecoin rails for autonomous agents, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765475"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "geo-ai-search-crawlers-thread",
+    "topic": "seo",
+    "date": "2026-04-18",
+    "category": "SEO",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Traditional SEO targeted Googlebot. In 2026, AI search engines deploy dedicated crawlers to power live citations and model training.\n\n8 AI search crawlers & user-agent standards 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ GPTBot — OpenAI web crawler.\n\n• Fetches web data for model training and real-time SearchGPT answers\n• Disallowed in robots.txt using `User-agent: GPTBot`\n\nhttps://platform.openai.com/docs/gptbot",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_02_gptbot.png"
+      },
+      {
+        "text": "3/ ClaudeBot — Anthropic training crawler.\n\n• Respects standard robots.txt directives and crawl-delay tags\n• Gathers high-signal academic and technical documentation\n\nhttps://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_03_claudebot.png"
+      },
+      {
+        "text": "4/ PerplexityBot — Answer engine scraper.\n\n• Real-time crawler fetching source citations for user queries\n• Blocking PerplexityBot removes domain links from AI answer cards\n\nhttps://docs.perplexity.ai/docs/perplexitybot",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_04_perplexitybot.png"
+      },
+      {
+        "text": "5/ Google-Extended — Gemini training token.\n\n• Separate user-agent token decoupling search indexing from model training\n• Allows sites to stay ranked on Google Search while withholding AI training data\n\nhttps://developers.google.com/search/docs/crawling-indexing/google-extended",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_05_google_extended.png"
+      },
+      {
+        "text": "6/ Bytespider — ByteDance crawler.\n\n• High-throughput crawler indexing text and multimodal video descriptions\n• Can generate significant server load if not rate-limited properly\n\nhttps://www.bytedance.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_06_bytespider.png"
+      },
+      {
+        "text": "7/ CCBot — Common Crawl archive.\n\n• Open petabyte-scale web corpus utilized by Llama, Mistral, and Claude\n• Crawls monthly; core bedrock for open-source AI foundation weights\n\nhttps://commoncrawl.org/connect/blog/common-crawl-crawler",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_07_ccbot.png"
+      },
+      {
+        "text": "8/ Applebot-Extended — Apple Intelligence.\n\n• Controls web usage for Siri and Apple foundation models\n• Separates web search indexation from generative model datasets\n\nhttps://support.apple.com/en-us/119829",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_08_applebot.png"
+      },
+      {
+        "text": "9/ Diffbot — Structured knowledge crawler.\n\n• Computer vision parser reading web pages as visual documents\n• Automatically synthesizes facts into the Knowledge Graph API\n\nhttps://www.diffbot.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_09_diffbot.png"
+      },
+      {
+        "text": "10/ AI crawler strategy:\n\n• Distinguish live search bots (PerplexityBot, SearchGPT) from pretraining scrapers. Blocking live search destroys referral visibility, while /llms.txt reduces crawl load by 80%."
+      },
+      {
+        "text": "11/ Check our technical breakdown on AI search engines and Answer Engine Optimization:\n\nhttps://x.com/vedangvatsa/status/1987654321098765476"
+      },
+      {
+        "text": "12/ For llms.txt protocol implementations and markdown generation, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765477"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "content-negotiation-ai-thread",
+    "topic": "web-infra",
+    "date": "2026-04-19",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Web servers send megabytes of CSS and JS bundles to AI bots that only want text. Content negotiation lets servers stream clean markdown directly.\n\n8 content negotiation & markdown protocols 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Accept: text/markdown — Modern HTTP header.\n\n• Standardized content negotiation for autonomous user-agents\n• Servers return raw markdown docs; zero HTML boilerplate\n\nhttps://www.rfc-editor.org/rfc/rfc7763",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_02_accept_header.png"
+      },
+      {
+        "text": "3/ Cloudflare Markdown Transform — Edge rewrite.\n\n• Edge Workers detect AI crawler user-agents automatically\n• Converts HTML to structured markdown before egress bandwidth is spent\n\nhttps://developers.cloudflare.com/workers",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_03_cloudflare_md.png"
+      },
+      {
+        "text": "4/ Jina Reader API — Universal LLM gateway.\n\n• Prefix `r.jina.ai/` to any URL for instant markdown extraction\n• Handles dynamic JavaScript rendering and removes cookie modals\n\nhttps://github.com/jina-ai/reader",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_04_jina_reader.png"
+      },
+      {
+        "text": "5/ Turndown — HTML to Markdown compiler.\n\n• JavaScript library supporting custom conversion rules and tables\n• Preserves links, code blocks, and list hierarchies accurately\n\nhttps://github.com/mixmark-io/turndown",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_05_turndown.png"
+      },
+      {
+        "text": "6/ Markdownify — Python markup converter.\n\n• Converts arbitrary HTML strings into clean GitHub-flavored markdown\n• Configurable tag filters to strip unwanted scripts and styles\n\nhttps://github.com/matthewwithanm/python-markdownify",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_06_markdownify.png"
+      },
+      {
+        "text": "7/ Mozilla Readability — Standalone article parser.\n\n• Gold standard heuristic engine identifying primary article body\n• Strips sidebars, headers, comments, and banner advertisements\n\nhttps://github.com/mozilla/readability",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_07_readability.png"
+      },
+      {
+        "text": "8/ Hono Content Negotiator — Fast edge router.\n\n• Ultra-lightweight TypeScript framework running on edge workers\n• Inspects `Accept` and `User-Agent` headers in under 10 microseconds\n\nhttps://github.com/honojs/hono",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_08_hono.png"
+      },
+      {
+        "text": "9/ DefusedXML — Secure markup parsing.\n\n• Protects Python backend pipelines from billion-laughs XML bombs\n• Sanitizes malicious external entity expansions before parsing\n\nhttps://github.com/tiran/defusedxml",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/content_negotiation_ai/tweet_09_defusedxml.png"
+      },
+      {
+        "text": "10/ Content negotiation benefits:\n\n• Returning clean markdown instead of HTML cuts input tokens by 80% and eliminates layout div confusion, slashing latency and LLM inference bills."
+      },
+      {
+        "text": "11/ Read our guide on AI search crawlers and user-agent standards:\n\nhttps://x.com/vedangvatsa/status/1987654321098765478"
+      },
+      {
+        "text": "12/ For modern web scrapers and extraction engines, explore:\n\nhttps://x.com/vedangvatsa/status/1987654321098765479"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "autonomous-qa-test-generators-thread",
+    "topic": "ai-testing",
+    "date": "2026-04-20",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Traditional UI tests break whenever a CSS selector changes. AI-powered testing engines use vision and semantics to self-heal and generate specs.\n\n8 autonomous QA & E2E test generators 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Octomind — Self-healing Playwright.\n\n• Generates real Playwright code that lives directly in your git repository\n• Automatically updates selectors when UI layouts change in pull requests\n\nhttps://github.com/OctoMind-dev",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_02_octomind.png"
+      },
+      {
+        "text": "3/ Meticulous — Session replay testing.\n\n• Captures real user traffic and replays deterministic user sessions\n• Detects visual and behavioral regressions without writing test scripts\n\nhttps://www.meticulous.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_03_meticulous.png"
+      },
+      {
+        "text": "4/ ZeroStep — AI-native Playwright.\n\n• Extends `@playwright/test` with plain English `ai()` execution calls\n• Solves dynamic dropdowns, date pickers, and multi-step forms seamlessly\n\nhttps://github.com/zerostep-ai/zerostep",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_04_zerostep.png"
+      },
+      {
+        "text": "5/ QA Wolf — Enterprise test pipeline.\n\n• Builds full end-to-end test suites running on parallel cloud clusters\n• Human-in-the-loop triage eliminates false-positive CI/CD build breaks\n\nhttps://www.qawolf.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_05_qawolf.png"
+      },
+      {
+        "text": "6/ Midscene.js — Vision-based web testing.\n\n• Multimodal agent operating UI by inspecting real rendered screenshots\n• Writes declarative tests using plain natural language descriptions\n\nhttps://github.com/web-infra-dev/midscene",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_06_midscene.png"
+      },
+      {
+        "text": "7/ Applitools Eyes — Visual AI regression.\n\n• Machine learning engine trained on millions of UI layouts\n• Distinguishes true cosmetic bugs from harmless pixel rendering shifts\n\nhttps://applitools.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_07_applitools.png"
+      },
+      {
+        "text": "8/ Autify — No-code AI test platform.\n\n• AI tracks DOM changes across releases and heals broken test selectors\n• Cross-platform testing across modern web and native mobile apps\n\nhttps://autify.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_08_autify.png"
+      },
+      {
+        "text": "9/ Diffblue Cover — Automated unit test author.\n\n• Uses reinforcement learning to write complete Java unit test suites\n• Generates 100% human-readable Mockito assertions with full coverage\n\nhttps://www.diffblue.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/autonomous_qa_test_generators/tweet_09_diffblue.png"
+      },
+      {
+        "text": "10/ Automated testing architecture:\n\n• Fragile CSS selectors break on every redesign. Grounding tests on semantic ARIA roles and visual snapshots creates resilient test suites that self-heal across deploys."
+      },
+      {
+        "text": "11/ Dive into our guide on AI agent benchmarking and evaluation suites:\n\nhttps://x.com/vedangvatsa/status/1987654321098765480"
+      },
+      {
+        "text": "12/ For headless browser automation libraries and execution engines, visit:\n\nhttps://x.com/vedangvatsa/status/1987654321098765481"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "agent-permissioning-guardrails-thread",
+    "topic": "ai-safety",
+    "date": "2026-04-21",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Granting agents unrestricted bash and database access invites disastrous accidents. Fine-grained guardrails enforce least privilege.\n\n8 agent permissioning & sandbox guardrails 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Llama Guard — Input & output safety.\n\n• Meta safety classifier fine-tuned on human-AI safety taxomony\n• Flags prompt injections, hate speech, and system bypasses\n\nhttps://github.com/meta-llama/llama-guard",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_02_llamaguard.png"
+      },
+      {
+        "text": "3/ NeMo Guardrails — Programmable safety rails.\n\n• Colang scripting language defining explicit conversational bounds\n• Prevents agents from drifting off-topic or executing banned commands\n\nhttps://github.com/NVIDIA/NeMo-Guardrails",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_03_nemoguardrails.png"
+      },
+      {
+        "text": "4/ Guardrails AI — Output validation.\n\n• Enforces strict RAIL schemas for Pydantic data and JSON arrays\n• Automatically retries model generation when regex bounds fail\n\nhttps://github.com/guardrails-ai/guardrails",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_04_guardrails_ai.png"
+      },
+      {
+        "text": "5/ Aporia Guardrails — Real-time proxy.\n\n• Latency-optimized proxy filtering hallucinated facts and PII\n• Custom alert webhooks routing suspicious actions to human reviewers\n\nhttps://www.aporia.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_05_aporia.png"
+      },
+      {
+        "text": "6/ OpenFGA — Google Zanzibar auth.\n\n• Open-source relationship-based access control engine\n• Proves whether an agent has explicit permission to read specific docs\n\nhttps://github.com/openfga/openfga",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_06_openfga.png"
+      },
+      {
+        "text": "7/ OPA (Open Policy Agent) — Cloud policy.\n\n• Evaluates Rego declarative rules before any agent executes a tool\n• Enforces spending budget limits and IP whitelist constraints\n\nhttps://github.com/open-policy-agent/opa",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_07_opa.png"
+      },
+      {
+        "text": "8/ HashiCorp Boundary — Identity access.\n\n• Issues short-lived, dynamic credentials for databases and SSH hosts\n• Eliminates permanent API keys stored inside agent scratchpads\n\nhttps://github.com/hashicorp/boundary",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_08_boundary.png"
+      },
+      {
+        "text": "9/ Arcjet — Developer security SDK.\n\n• Integrates bot protection, rate limiting, and email verification\n• Fast JS and WebAssembly checks running locally in serverless code\n\nhttps://github.com/arcjet/arcjet-js",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_permissioning_guardrails/tweet_09_arcjet.png"
+      },
+      {
+        "text": "10/ Agent permissioning principles:\n\n• High-stakes actions require asynchronous multi-factor signoff by human operators, while read-only database replicas shield production from hallucinated queries."
+      },
+      {
+        "text": "11/ Check our technical breakdown on secure microVM sandboxes for coding agents:\n\nhttps://x.com/vedangvatsa/status/1987654321098765482"
+      },
+      {
+        "text": "12/ For prompt injection defense engines and semantic guardrails, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765483"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "hardware-accelerated-crypto-thread",
+    "topic": "web3",
+    "date": "2026-04-22",
+    "category": "Web3",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Generating zero-knowledge proofs on standard CPUs takes minutes. Hardware acceleration with GPUs and FPGAs makes real-time proving viable.\n\n8 hardware acceleration toolkits for ZK 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ ICICLE — GPU ZK acceleration.\n\n• Open-source CUDA/C++ library developed by Ingonyama\n• Accelerates NTT and MSM bottlenecks by 20x over CPUs\n\nhttps://github.com/ingonyama-zk/icicle",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_02_icicle.png"
+      },
+      {
+        "text": "3/ PipeMSM — Pipelined FPGA MSM.\n\n• Hardware architecture optimizing multi-scalar multiplication\n• Eliminates memory bandwidth stalls in high-throughput rollup provers\n\nhttps://eprint.iacr.org/2022/1396",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_03_pipemsm.png"
+      },
+      {
+        "text": "4/ blst — High-performance BLS.\n\n• Hand-tuned x86 and ARM assembly by Supranational\n• Industry standard for Ethereum proof-of-stake signature aggregation\n\nhttps://github.com/supranational/blst",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_04_blst.png"
+      },
+      {
+        "text": "5/ GpuTree — CUDA Merkle generator.\n\n• Computes Poseidon hashes across millions of leaves in milliseconds\n• Key building block for recursive zero-knowledge proving systems\n\nhttps://github.com/0xPolygonZero",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_05_gputree.png"
+      },
+      {
+        "text": "6/ o1js (SnarkyJS) — TypeScript ZK.\n\n• Compiles mathematical circuits directly in TypeScript\n• Runs client-side proving inside browser tabs with WebAssembly SIMD\n\nhttps://github.com/o1-labs/o1js",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_06_o1js.png"
+      },
+      {
+        "text": "7/ Triton VM — ZK-STARK virtual machine.\n\n• Fast recursive STARK proofs designed for hardware parallelization\n• Executes arbitrary assembly code while producing mathematical proofs\n\nhttps://github.com/TritonVM/triton-vm",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_07_triton.png"
+      },
+      {
+        "text": "8/ Binius (Irreducible) — Binary tower fields.\n\n• Proof system eliminating expensive 256-bit modular arithmetic\n• Operates natively on single bits; 10x faster proving on consumer CPUs\n\nhttps://github.com/irreducible-dev/binius",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_08_binius.png"
+      },
+      {
+        "text": "9/ Circom — Circuit compiler.\n\n• Declarative domain-specific language compiling R1CS constraints\n• Generates optimized C++ and Wasm provers for SnarkJS integration\n\nhttps://github.com/iden3/circom",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/hardware_accelerated_crypto/tweet_09_circom.png"
+      },
+      {
+        "text": "10/ ZK hardware acceleration math:\n\n• Multi-Scalar Multiplications (MSM) and NTTs consume 85% of proof latency. Offloading these bottlenecks to GPU tensor cores reduces prover times from minutes to seconds."
+      },
+      {
+        "text": "11/ Read our architecture guide on Zero-Knowledge Machine Learning (zkML):\n\nhttps://x.com/vedangvatsa/status/1987654321098765484"
+      },
+      {
+        "text": "12/ For TEE confidential compute enclaves and remote attestation, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765485"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "metadata-enrichment-pipelines-thread",
+    "topic": "rag",
+    "date": "2026-04-23",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Vector search alone fails when filtering by date, author, or department. Metadata enrichment adds structured facets to vector stores.\n\n8 automated metadata tagging & enrichment tools 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Unstructured.io — Document preprocessing.\n\n• Ingests PDFs, PowerPoints, and Word docs into clean JSON\n• Attaches page numbers, bounding boxes, and hierarchy tags\n\nhttps://github.com/Unstructured-IO/unstructured",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_02_unstructured.png"
+      },
+      {
+        "text": "3/ Haystack Extractors — Modular pipelines.\n\n• Automatically annotates chunks with entities, sentiment, and topics\n• Enhances vector databases with structured filtering payload fields\n\nhttps://github.com/deepset-ai/haystack",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_03_haystack.png"
+      },
+      {
+        "text": "4/ KeyBERT — Semantic keyword extraction.\n\n• Computes cosine similarity between document and n-gram embeddings\n• Generates concise keywords reflecting true document concepts\n\nhttps://github.com/MaartenGr/KeyBERT",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_04_keybert.png"
+      },
+      {
+        "text": "5/ YAKE! — Lightweight statistical keyword tool.\n\n• Zero neural network dependencies; runs purely on statistical heuristics\n• Processes thousands of documents per second on CPU cores\n\nhttps://github.com/LIAAD/yake",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_05_yake.png"
+      },
+      {
+        "text": "6/ FlashText — High-speed keyword search.\n\n• Replaces complex regular expression loops with Trie data structures\n• Searches 500,000 keywords simultaneously in milliseconds\n\nhttps://github.com/vi3k6/flashtext",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_06_flashtext.png"
+      },
+      {
+        "text": "7/ Instructor — Structured metadata tags.\n\n• Enforces Pydantic data schemas on LLM outputs\n• Extracts verified timestamps, authors, and classification labels\n\nhttps://github.com/jxnl/instructor",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_07_instructor.png"
+      },
+      {
+        "text": "8/ BERTopic — Neural topic modeling.\n\n• Leverages HDBSCAN clustering and c-TF-IDF keyword extraction\n• Discovers organic topic hierarchies across massive corpora\n\nhttps://github.com/MaartenGr/BERTopic",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_08_bertopic.png"
+      },
+      {
+        "text": "9/ Glirel — Zero-shot relation extraction.\n\n• Identifies custom relationship triples without model retraining\n• Bridges raw text paragraphs directly to structured Knowledge Graphs\n\nhttps://github.com/jackroos/glirel",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/metadata_enrichment_pipelines/tweet_09_glirel.png"
+      },
+      {
+        "text": "10/ Metadata-driven retrieval benefits:\n\n• Pre-filtering vector search spaces by metadata facets cuts candidate pools by 95%, accelerating cosine similarity and preventing cross-tenant data leaks."
+      },
+      {
+        "text": "11/ Read our guide on hybrid search combining BM25 and dense vectors:\n\nhttps://x.com/vedangvatsa/status/1987654321098765486"
+      },
+      {
+        "text": "12/ For GraphRAG knowledge bases and graph database engines, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765487"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "api-mocking-synthetic-data-thread",
+    "topic": "devops",
+    "date": "2026-04-24",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ Testing autonomous agents against real third-party APIs burns quota and risks destructive state changes. Mocking engines provide deterministic testbeds.\n\n8 API mocking & sandbox engines 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ MSW — Mock Service Worker.\n\n• Intercepts HTTP traffic at the network level via Service Workers\n• Identical mock handlers shareable between unit tests and browser tabs\n\nhttps://github.com/mswjs/msw",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_02_msw.png"
+      },
+      {
+        "text": "3/ WireMock — Enterprise API simulator.\n\n• Stateful scenario simulation mimicking complex API lifecycles\n• Injects network jitter and chaos faults to test agent retry policies\n\nhttps://github.com/wiremock/wiremock",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_03_wiremock.png"
+      },
+      {
+        "text": "4/ Prism — OpenAPI mock server.\n\n• Instantly spins up realistic mock servers from OpenAPI YAML schemas\n• Validates that agent HTTP payloads comply strictly with contract specs\n\nhttps://github.com/stoplightio/prism",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_04_prism.png"
+      },
+      {
+        "text": "5/ Mirage JS — Client-side backend mock.\n\n• In-memory ORM managing relational mock models and associations\n• Intercepts fetch calls without running an external server process\n\nhttps://github.com/miragejs/miragejs",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_05_miragejs.png"
+      },
+      {
+        "text": "6/ LocalStack — Local cloud emulator.\n\n• Complete offline emulation of AWS S3, DynamoDB, and Bedrock\n• Lets agents test multi-cloud infrastructure tools safely on localhost\n\nhttps://github.com/localstack/localstack",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_06_localstack.png"
+      },
+      {
+        "text": "7/ Hoverfly — Service virtualization proxy.\n\n• Capture mode records real external API conversations into JSON\n• Simulate mode replays traffic offline during CI/CD test runs\n\nhttps://github.com/SpectoLabs/hoverfly",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_07_hoverfly.png"
+      },
+      {
+        "text": "8/ Toxiproxy — Network chaos simulator.\n\n• Shopify TCP proxy designed for testing network resilience\n• Injects packet loss, connection resets, and latency spikes\n\nhttps://github.com/Shopify/toxiproxy",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_08_toxiproxy.png"
+      },
+      {
+        "text": "9/ FakeRest — In-memory REST provider.\n\n• Maps plain JavaScript objects to RESTful endpoints with search & filter\n• Zero boilerplate tool for building agent integration sandboxes\n\nhttps://github.com/marmelab/FakeRest",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/api_mocking_synthetic_data/tweet_09_fakerest.png"
+      },
+      {
+        "text": "10/ Agent sandbox testing strategy:\n\n• Autonomous agents frequently loop when external APIs timeout. Injecting network chaos and latency spikes verifies exponential backoff and graceful error handling."
+      },
+      {
+        "text": "11/ Explore our guide on autonomous QA and E2E test generators:\n\nhttps://x.com/vedangvatsa/status/1987654321098765488"
+      },
+      {
+        "text": "12/ For open tool calling protocols (MCP and function calling), review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765489"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "differential-privacy-ml-thread",
+    "topic": "ai-privacy",
+    "date": "2026-04-25",
+    "category": "AI",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "1/ LLMs trained on private data can accidentally memorize and leak sensitive PII. Differential privacy injects calibrated noise to mathematically guarantee privacy.\n\n8 differential privacy & secure ML tools 🧵👇",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Opacus — Differential privacy for PyTorch.\n\n• High-throughput DP-SGD optimizer developed by Meta AI\n• Tracks privacy budget epsilon $(\\epsilon)$ expenditure per epoch\n\nhttps://github.com/pytorch/opacus",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_02_opacus.png"
+      },
+      {
+        "text": "3/ TensorFlow Privacy — TF DP optimizers.\n\n• Implements DP-Adam and DP-SGD optimizers with per-sample clipping\n• Evaluates model vulnerability to membership inference attacks\n\nhttps://github.com/tensorflow/privacy",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_03_tf_privacy.png"
+      },
+      {
+        "text": "4/ Diffprivlib — Scikit-learn DP toolkit.\n\n• IBM library enabling private logistic regression, PCA, and Naive Bayes\n• Works with standard NumPy arrays without GPU acceleration requirements\n\nhttps://github.com/IBM/differential-privacy-library",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_04_diffprivlib.png"
+      },
+      {
+        "text": "5/ Google Differential Privacy — Industrial DP.\n\n• Core C++, Go, and Java algorithms backing Google production services\n• Robust mechanisms for private count, sum, and quantile statistics\n\nhttps://github.com/google/differential-privacy",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_05_google_dp.png"
+      },
+      {
+        "text": "6/ OpenDP — Mathematical privacy framework.\n\n• Rust core engineered with formal verification of privacy proofs\n• Modular measurement combinators calculating tight analytical bounds\n\nhttps://github.com/opendp/opendp",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_06_opendp.png"
+      },
+      {
+        "text": "7/ CrypTen — Secure multiparty ML.\n\n• Meta AI framework executing encrypted tensor operations\n• Enables multiple institutions to train models without sharing raw weights\n\nhttps://github.com/facebookresearch/CrypTen",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_07_crypten.png"
+      },
+      {
+        "text": "8/ PySyft — Federated learning platform.\n\n• Coordinates model training across distributed edge data silos\n• Data owners retain physical possession of private medical or financial records\n\nhttps://github.com/OpenMined/PySyft",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_08_pysyft.png"
+      },
+      {
+        "text": "9/ Presidio — Microsoft PII anonymizer.\n\n• Detects names, phone numbers, and SSNs in unstructured text\n• Redacts or replaces entities with synthetic pseudonyms before indexing\n\nhttps://github.com/microsoft/presidio",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_09_presidio.png"
+      },
+      {
+        "text": "10/ Differential privacy engineering math:\n\n• The privacy budget epsilon governs the tradeoff: lower epsilon guarantees mathematical privacy against reconstruction attacks, while calibrated noise maintains accuracy."
+      },
+      {
+        "text": "11/ Read our architecture guide on Fully Homomorphic Encryption (FHE):\n\nhttps://x.com/vedangvatsa/status/1987654321098765490"
+      },
+      {
+        "text": "12/ For TEE confidential compute enclaves and hardware attestation, review:\n\nhttps://x.com/vedangvatsa/status/1987654321098765491"
+      },
+      {
+        "text": "13/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/proai"
+      },
+      {
+        "text": "14/ Grab free production engineering guides, system design templates, and architecture breakdowns here:",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
   }
 ]
