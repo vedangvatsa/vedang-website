@@ -857,7 +857,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "state": "sent",
     "attemptedAt": "2026-10-10T10:09:27.287Z",
     "attemptedSlot": "2026-10-10T14:00",
@@ -953,7 +953,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "state": "sent",
     "attemptedAt": "2026-10-11T18:15:27.871Z",
     "attemptedSlot": "2026-10-11T20:00",
@@ -3799,7 +3799,8 @@
     "postedAt": "2026-11-15T06:15:07.542Z",
     "error": null,
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7527615145305608192/",
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/circle_area_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/circle_area_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-pythagorean_theorem",
@@ -3808,7 +3809,8 @@
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-sum_of_odds",
@@ -3817,7 +3819,8 @@
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-sum_of_integers",
@@ -3826,7 +3829,8 @@
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-geometric_series",
@@ -3835,7 +3839,8 @@
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-difference_of_squares",
@@ -3844,7 +3849,8 @@
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-sphere_volume",
@@ -3853,52 +3859,8 @@
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-binary_search",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/binary_search_4x5.mp4",
-    "text": "How binary search works.\n\nDo not check items one by one.\n\nCheck the middle.\n\nThrow away half the list every time.",
-    "scheduleDate": "2026-11-17",
-    "scheduleTime": "17:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/binary_search_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-bubble_vs_quicksort",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/bubble_vs_quicksort_4x5.mp4",
-    "text": "Bubble sort vs Quick sort.\n\nBubble sort swaps neighbors slowly.\n\nQuick sort splits around a pivot.\n\nQuick sort finishes much faster.",
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "01:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bubble_vs_quicksort_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-bfs_vs_dfs",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/bfs_vs_dfs_4x5.mp4",
-    "text": "Two ways to search a network.\n\nBreadth-first search expands in waves.\n\nDepth-first search goes deep down one path first.",
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "09:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bfs_vs_dfs_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-hash_tables",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/hash_tables_4x5.mp4",
-    "text": "Why hash tables are fast.\n\nNo searching through lists.\n\nA math function turns the name into an address.\n\nJumps directly there.",
-    "scheduleDate": "2026-11-18",
-    "scheduleTime": "17:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/hash_tables_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-dijkstra",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/dijkstra_4x5.mp4",
-    "text": "Finding the shortest route.\n\nDijkstra tracks the shortest path so far.\n\nAlways picks the closest point next.\n\nGuarantees the shortest route.",
-    "scheduleDate": "2026-11-19",
-    "scheduleTime": "01:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/dijkstra_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-derivative_tangent",
@@ -3907,7 +3869,8 @@
     "scheduleDate": "2026-11-19",
     "scheduleTime": "09:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-product_rule",
@@ -3916,7 +3879,8 @@
     "scheduleDate": "2026-11-19",
     "scheduleTime": "17:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-sin_derivative",
@@ -3925,25 +3889,8 @@
     "scheduleDate": "2026-11-20",
     "scheduleTime": "01:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-riemann_sums",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/riemann_sums_4x5.mp4",
-    "text": "Finding area under a curve.\n\nDraw rectangles under the curve.\n\nMake the rectangles thinner.\n\nThey turn into the smooth area.",
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "09:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_sums_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-monty_hall",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/monty_hall_4x5.mp4",
-    "text": "Why you should switch doors.\n\nYour first pick is only 1 in 3.\n\nThe other doors hold 2 in 3.\n\nWhen one wrong door is opened, switch.",
-    "scheduleDate": "2026-11-20",
-    "scheduleTime": "17:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/monty_hall_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_1x1.png",
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-linkedin-central_limit_theorem",
@@ -3952,51 +3899,7 @@
     "scheduleDate": "2026-11-21",
     "scheduleTime": "01:00",
     "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-bayes_theorem",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/bayes_theorem_4x5.mp4",
-    "text": "Why 99 percent test accuracy is tricky.\n\nIf a disease is rare, false alarms on healthy people can add up.\n\nAlways compare real cases to false alarms.",
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "09:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/bayes_theorem_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-simpsons_paradox",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/simpsons_paradox_4x5.mp4",
-    "text": "Simpson's paradox.\n\nBetter in group 1.\n\nBetter in group 2.\n\nCombine them, and it looks worse. Uneven sizes flip the total.",
-    "scheduleDate": "2026-11-21",
-    "scheduleTime": "17:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/simpsons_paradox_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-stack_vs_queue",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/stack_vs_queue_4x5.mp4",
-    "text": "Stack vs Queue.\n\nStack last one in, first one out.\n\nQueue first one in, first one out.",
-    "scheduleDate": "2026-11-22",
-    "scheduleTime": "01:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/stack_vs_queue_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-dynamic_array",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/dynamic_array_4x5.mp4",
-    "text": "How dynamic arrays grow.\n\nWhen the list is full, it doubles the memory size.\n\nCopies all items over.\n\nFrees up the old space.",
-    "scheduleDate": "2026-11-22",
-    "scheduleTime": "09:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/dynamic_array_1x1.png"
-  },
-  {
-    "id": "explainer-linkedin-binary_heap",
-    "video": "scripts/viz-assets/videos/explainer_videos/4x5/binary_heap_4x5.mp4",
-    "text": "Binary heap in an array.\n\nLooks like a tree, stored as a flat list.\n\nSmallest item stays on top.\n\nUses math on the index to find branches.",
-    "scheduleDate": "2026-11-22",
-    "scheduleTime": "17:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/binary_heap_1x1.png"
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png",
+    "batchId": "explainer-v1"
   }
 ]
