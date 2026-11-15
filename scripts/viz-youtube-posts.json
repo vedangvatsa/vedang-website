@@ -1037,7 +1037,7 @@
     "notesUrl": "https://veda.ng/viz-notes/36.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "publishedText": "The share of people mainly using clean cooking fuels.\n\n2000-2023. The share of residents mainly using clean cooking fuels and technologies. Data source: Tracking SDG 7.",
     "state": "sent",
     "attemptedSlot": "2026-10-09T14:00",
@@ -1153,7 +1153,7 @@
     "notesUrl": "https://veda.ng/viz-notes/40.txt",
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "publishedText": "How much primary energy each unit of output requires.\n\n2000-2021. Primary energy use per unit of GDP, adjusted for purchasing power. Data source: Tracking SDG 7.",
     "state": "sent",
     "attemptedSlot": "2026-10-10T20:00",
@@ -4003,11 +4003,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/circle_area_9x16.mp4",
     "title": "Why Circle Area is Pi Times Radius Squared",
     "description": "Unrolling the rings of a circle to make a triangle.\n\nThe base is the circumference, and the height is the radius.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-15",
     "scheduleTime": "09:00",
     "posted": true,
@@ -4028,11 +4024,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/pythagorean_theorem_9x16.mp4",
     "title": "The Pythagorean Theorem",
     "description": "Rearranging four right triangles inside a square to show why a squared plus b squared equals c squared.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-15",
     "scheduleTime": "17:00",
     "posted": true,
@@ -4053,11 +4045,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/sum_of_odds_9x16.mp4",
     "title": "Why Adding Odd Numbers Makes Square Numbers",
     "description": "Each odd number wraps around the previous ones as an L shape, building successive square numbers.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
     "posted": true,
@@ -4078,11 +4066,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/sum_of_integers_9x16.mp4",
     "title": "How to Add Numbers from 1 to n",
     "description": "Two identical staircases lock together into a rectangle, proving the formula for the sum of the first n integers.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
     "posted": false,
@@ -4094,11 +4078,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/geometric_series_9x16.mp4",
     "title": "Why 1/2 + 1/4 + 1/8 Adds Up to 1",
     "description": "Dividing a unit square repeatedly into halves to show how an infinite geometric series equals 1.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
     "posted": false,
@@ -4110,11 +4090,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/difference_of_squares_9x16.mp4",
     "title": "The Difference of Squares",
     "description": "Cutting a corner square out and rearranging the remaining parts into a rectangle.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
     "posted": false,
@@ -4126,11 +4102,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/sphere_volume_9x16.mp4",
     "title": "Why Sphere Volume is 4/3 Pi r Cubed",
     "description": "Showing how a sphere can be broken into tiny pyramids to find its total volume.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
     "posted": false,
@@ -4142,11 +4114,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/derivative_tangent_9x16.mp4",
     "title": "The Derivative as a Tangent Line",
     "description": "Moving two points closer on a curve until the line becomes the tangent line.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
     "posted": false,
@@ -4158,11 +4126,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/product_rule_9x16.mp4",
     "title": "The Product Rule in Calculus",
     "description": "Showing how a growing rectangle explains the product rule in calculus.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
     "posted": false,
@@ -4174,11 +4138,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/sin_derivative_9x16.mp4",
     "title": "Why the Derivative of Sine is Cosine",
     "description": "Tracking vertical and horizontal movement around a unit circle.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
     "posted": false,
@@ -4190,11 +4150,7 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/central_limit_theorem_9x16.mp4",
     "title": "The Central Limit Theorem and the Bell Curve",
     "description": "Watching random left and right bounces stack into a bell curve.",
-    "tags": [
-      "math",
-      "computer science",
-      "education"
-    ],
+    "tags": [],
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
     "posted": false,
@@ -4211,11 +4167,7 @@
     "batchId": "explainer-v1",
     "title": "Square of a Sum",
     "description": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-riemann_integral",
@@ -4227,11 +4179,7 @@
     "batchId": "explainer-v1",
     "title": "The Riemann Integral",
     "description": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-chain_rule",
@@ -4243,11 +4191,7 @@
     "batchId": "explainer-v1",
     "title": "The Chain Rule",
     "description": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-birthday_paradox",
@@ -4259,11 +4203,7 @@
     "batchId": "explainer-v1",
     "title": "The Birthday Paradox",
     "description": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-irrationality_sqrt2",
@@ -4273,13 +4213,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Irrationality of \u221a2",
+    "title": "Irrationality of √2",
     "description": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-ln_derivative",
@@ -4291,11 +4227,7 @@
     "batchId": "explainer-v1",
     "title": "Derivative of ln(x)",
     "description": "Why the derivative of ln(x) equals 1/x.\n\nThe natural logarithm is defined as the area under the hyperbola 1/t.\n\nScaling the area horizontally by x scales the height by 1/x, proving the derivative is exactly 1/x.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-matrix_transform",
@@ -4307,11 +4239,7 @@
     "batchId": "explainer-v1",
     "title": "What is a Matrix?",
     "description": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-graph_shift",
@@ -4323,11 +4251,7 @@
     "batchId": "explainer-v1",
     "title": "Function Transformations",
     "description": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-curve_arclength",
@@ -4339,11 +4263,7 @@
     "batchId": "explainer-v1",
     "title": "Arc Length of a Curve",
     "description": "How to calculate the length of a curved line.\n\nZoom into an infinitesimal segment.\n\nPythagoras on differentials gives dL squared equals dx squared plus dy squared, leading directly to the arc length integral.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-integration_by_parts",
@@ -4355,11 +4275,7 @@
     "batchId": "explainer-v1",
     "title": "Integration by Parts",
     "description": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-normal_distribution",
@@ -4371,11 +4287,7 @@
     "batchId": "explainer-v1",
     "title": "The Normal Distribution",
     "description": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-inclined_plane",
@@ -4387,11 +4299,7 @@
     "batchId": "explainer-v1",
     "title": "Forces on a Ramp",
     "description": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-rubiks_permutations",
@@ -4403,11 +4311,7 @@
     "batchId": "explainer-v1",
     "title": "Permutations of Rubik's Cube",
     "description": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-power_rule",
@@ -4419,11 +4323,7 @@
     "batchId": "explainer-v1",
     "title": "The Power Rule",
     "description": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-geometric_mean",
@@ -4435,11 +4335,7 @@
     "batchId": "explainer-v1",
     "title": "The Geometric Mean",
     "description": "Geometric proof of the geometric mean theorem.\n\nConstruct a semicircle over a diameter of length a plus b.\n\nErecting an altitude h from the split point to the circle forms similar right triangles.\n\nCross-multiplying gives h squared equals a times b, proving h is the square root of a times b.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-tangent_secant",
@@ -4451,11 +4347,7 @@
     "batchId": "explainer-v1",
     "title": "Tangent-Secant Theorem",
     "description": "Geometric proof of the tangent-secant theorem in geometry.\n\nFrom external point P, draw tangent PT and secant line PAB.\n\nBy the alternate segment theorem, angle PTA equals angle PBT.\n\nSharing angle P makes triangles PTA and PBT similar.\n\nCross-multiplying PT / PB = PA / PT proves PT squared equals PA times PB.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-euler_formula",
@@ -4467,11 +4359,7 @@
     "batchId": "explainer-v1",
     "title": "Euler Identity",
     "description": "Geometric proof of Euler identity in mathematics.\n\nIn the complex plane, e to the i theta rotates by angle theta.\n\nSetting theta to pi produces a 180-degree rotation around the origin.\n\nThe rotation lands precisely at real coordinate minus 1.\n\nAdding 1 to both sides establishes e to the i pi plus 1 equals 0.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-am_gm_inequality",
@@ -4483,11 +4371,7 @@
     "batchId": "explainer-v1",
     "title": "AM-GM Inequality",
     "description": "Geometric proof of the AM-GM inequality in mathematics.\n\nConstruct a semicircle over a diameter with segments a and b.\n\nThe radius is the arithmetic mean R = (a + b) / 2.\n\nThe perpendicular altitude to the semicircle is the geometric mean h = sqrt(a times b).\n\nSince no altitude can exceed the radius, (a + b) / 2 is greater than or equal to sqrt(a times b).",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-sine_addition",
@@ -4499,11 +4383,7 @@
     "batchId": "explainer-v1",
     "title": "Sine Addition Formula",
     "description": "Geometric proof of the sine addition formula in trigonometry.\n\nStack two right triangles with angles alpha and beta.\n\nThe total vertical height represents sin(alpha + beta).\n\nDecomposing this height into two projections yields sin(alpha) times cos(beta) plus cos(alpha) times sin(beta).\n\nSumming both pieces proves sin(alpha + beta) = sin(alpha)cos(beta) + cos(alpha)sin(beta).",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-cosine_addition",
@@ -4515,11 +4395,7 @@
     "batchId": "explainer-v1",
     "title": "Cosine Addition Formula",
     "description": "Geometric proof of the cosine addition formula in trigonometry.\n\nUsing stacked right triangles with angles alpha and beta, the horizontal base represents cos(alpha + beta).\n\nThe full base projection is cos(alpha) times cos(beta).\n\nSubtracting the pullback segment sin(alpha) times sin(beta) proves cos(alpha + beta) = cos(alpha)cos(beta) minus sin(alpha)sin(beta).",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-sum_of_cubes",
@@ -4531,11 +4407,7 @@
     "batchId": "explainer-v1",
     "title": "Sum of Consecutive Cubes",
     "description": "Geometric proof of Nicomachus theorem for the sum of consecutive cubes.\n\nTake a square of side 1 + 2 + 3 + ... + n.\n\nPartition the square into successive expanding L-shaped bands.\n\nThe area of each k-th L-band equals exactly k cubed.\n\nSumming all bands establishes that 1 cubed plus 2 cubed up to n cubed equals (1 + 2 + ... + n) squared.",
-    "tags": [
-      "math",
-      "education",
-      "visualization"
-    ]
+    "tags": []
   },
   {
     "id": "explainer-yt-inscribed_angle_theorem",
@@ -4546,15 +4418,8 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_9x16.png",
     "batchId": "explainer-v1",
     "title": "Inscribed Angle Theorem",
-    "description": "Inscribed Angle Theorem visual proof - The angle subtended by an arc at the center of a circle is twice the angle subtended by it at any point on the circumference.\n\n#math #geometry",
-    "tags": [
-      "math",
-      "geometry",
-      "visualmath",
-      "circles",
-      "proof",
-      "education"
-    ]
+    "description": "Inscribed Angle Theorem visual proof - The angle subtended by an arc at the center of a circle is twice the angle subtended by it at any point on the circumference.",
+    "tags": []
   },
   {
     "id": "explainer-yt-cross_product_area",
@@ -4565,15 +4430,8 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_9x16.png",
     "batchId": "explainer-v1",
     "title": "Cross Product Magnitude and Parallelogram Area",
-    "description": "Geometric proof and visualization of vector cross product magnitude |u x v| = |u||v|sin(theta) equaling the area of the parallelogram spanned by the two vectors.\n\n#linearalgebra #geometry",
-    "tags": [
-      "linearalgebra",
-      "geometry",
-      "vectors",
-      "crossproduct",
-      "physics",
-      "math"
-    ]
+    "description": "Geometric proof and visualization of vector cross product magnitude |u x v| = |u||v|sin(theta) equaling the area of the parallelogram spanned by the two vectors.",
+    "tags": []
   },
   {
     "id": "explainer-yt-triangle_incircle_area",
@@ -4583,16 +4441,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangle_incircle_area_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Triangle Area via Inradius (A = r \u00b7 s)",
-    "description": "Visual proof of the formula Area = r * s for any triangle with inradius r and semiperimeter s, derived by partitioning the triangle from its incenter.\n\n#geometry #math",
-    "tags": [
-      "geometry",
-      "math",
-      "triangles",
-      "inradius",
-      "visualproof",
-      "stem"
-    ]
+    "title": "Triangle Area via Inradius (A = r · s)",
+    "description": "Visual proof of the formula Area = r * s for any triangle with inradius r and semiperimeter s, derived by partitioning the triangle from its incenter.",
+    "tags": []
   },
   {
     "id": "explainer-yt-chord_intersection_theorem",
@@ -4602,16 +4453,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Intersecting Chords Theorem (AE \u00b7 EB = CE \u00b7 ED)",
-    "description": "Visual proof of the Intersecting Chords Theorem (AE * EB = CE * ED) using inscribed angles that subtend identical arcs to establish similar triangles.\n\n#geometry #math",
-    "tags": [
-      "geometry",
-      "math",
-      "circles",
-      "theorems",
-      "similar-triangles",
-      "proof"
-    ]
+    "title": "Intersecting Chords Theorem (AE · EB = CE · ED)",
+    "description": "Visual proof of the Intersecting Chords Theorem (AE * EB = CE * ED) using inscribed angles that subtend identical arcs to establish similar triangles.",
+    "tags": []
   },
   {
     "id": "explainer-yt-tangent_half_angle",
@@ -4621,16 +4465,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_half_angle_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Tangent Half-Angle Formula (tan(\u03b8/2) = sin\u03b8 / (1 + cos\u03b8))",
-    "description": "Visual geometric proof of the Tangent Half-Angle formula tan(theta/2) = sin(theta) / (1 + cos(theta)) using the unit circle and inscribed angle theorem.\n\n#trigonometry #geometry",
-    "tags": [
-      "trigonometry",
-      "geometry",
-      "visualmath",
-      "calculus",
-      "proof",
-      "education"
-    ]
+    "title": "Tangent Half-Angle Formula (tan(θ/2) = sinθ / (1 + cosθ))",
+    "description": "Visual geometric proof of the Tangent Half-Angle formula tan(theta/2) = sin(theta) / (1 + cos(theta)) using the unit circle and inscribed angle theorem.",
+    "tags": []
   },
   {
     "id": "explainer-yt-shoelace_formula",
@@ -4641,15 +4478,8 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/shoelace_formula_9x16.png",
     "batchId": "explainer-v1",
     "title": "The Shoelace Formula for Polygon Area",
-    "description": "Visual derivation of the Gauss Shoelace Formula for polygon area via signed trapezoid sums under cyclic polygon edges.\n\n#geometry #math",
-    "tags": [
-      "geometry",
-      "math",
-      "polygons",
-      "shoelace",
-      "visualmath",
-      "stem"
-    ]
+    "description": "Visual derivation of the Gauss Shoelace Formula for polygon area via signed trapezoid sums under cyclic polygon edges.",
+    "tags": []
   },
   {
     "id": "explainer-yt-quotient_rule",
@@ -4659,16 +4489,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/quotient_rule_9x16.png",
     "batchId": "explainer-v1",
-    "title": "The Quotient Rule (d/dx [u/v] = (u'v \u2212 uv') / v\u00b2)",
-    "description": "Geometric and algebraic derivation of the calculus quotient rule d/dx(u/v) = (u'v - uv') / v^2 by viewing numerator u as area q * v.\n\n#calculus #math",
-    "tags": [
-      "calculus",
-      "math",
-      "derivatives",
-      "quotientrule",
-      "visualmath",
-      "stem"
-    ]
+    "title": "The Quotient Rule (d/dx [u/v] = (u'v − uv') / v²)",
+    "description": "Geometric and algebraic derivation of the calculus quotient rule d/dx(u/v) = (u'v - uv') / v^2 by viewing numerator u as area q * v.",
+    "tags": []
   },
   {
     "id": "explainer-yt-derivative_of_cosx",
@@ -4678,16 +4501,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_of_cosx_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Derivative of Cosine (d/dx [cos(x)] = \u2212sin(x))",
-    "description": "Visual proof on the unit circle showing why the derivative of cos(x) is -sin(x), explaining the geometric origin of the negative sign.\n\n#calculus #trigonometry",
-    "tags": [
-      "calculus",
-      "trigonometry",
-      "derivatives",
-      "unitcircle",
-      "visualmath",
-      "education"
-    ]
+    "title": "Derivative of Cosine (d/dx [cos(x)] = −sin(x))",
+    "description": "Visual proof on the unit circle showing why the derivative of cos(x) is -sin(x), explaining the geometric origin of the negative sign.",
+    "tags": []
   },
   {
     "id": "explainer-yt-surface_area_sphere",
@@ -4697,16 +4513,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/surface_area_sphere_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Surface Area of a Sphere (Area = 4\u03c0r\u00b2)",
-    "description": "Visual derivation of sphere surface area 4*pi*r^2 as the radial derivative of sphere volume (4/3)*pi*r^3 via spherical shell expansion.\n\n#geometry #calculus",
-    "tags": [
-      "geometry",
-      "calculus",
-      "spheres",
-      "surfacearea",
-      "visualmath",
-      "stem"
-    ]
+    "title": "Surface Area of a Sphere (Area = 4πr²)",
+    "description": "Visual derivation of sphere surface area 4*pi*r^2 as the radial derivative of sphere volume (4/3)*pi*r^3 via spherical shell expansion.",
+    "tags": []
   },
   {
     "id": "explainer-yt-cone_volume",
@@ -4716,16 +4525,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cone_volume_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Volume of a Cone (V = \u2153\u03c0r\u00b2h)",
-    "description": "Visual integration proof for the volume of a cone V = (1/3)*pi*r^2*h by summing infinitesimally thin circular cross-sections.\n\n#geometry #calculus",
-    "tags": [
-      "geometry",
-      "calculus",
-      "cones",
-      "volume",
-      "visualproof",
-      "stem"
-    ]
+    "title": "Volume of a Cone (V = ⅓πr²h)",
+    "description": "Visual integration proof for the volume of a cone V = (1/3)*pi*r^2*h by summing infinitesimally thin circular cross-sections.",
+    "tags": []
   },
   {
     "id": "explainer-yt-pyramid_volume",
@@ -4735,16 +4537,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pyramid_volume_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Volume of a Pyramid (V = \u2153 \u00b7 Base \u00b7 Height)",
-    "description": "Geometric dissection proof that the volume of a pyramid equals 1/3 Base * Height by showing that 3 congruent square pyramids assemble into a cube.\n\n#geometry #math",
-    "tags": [
-      "geometry",
-      "math",
-      "pyramid",
-      "volume",
-      "dissection",
-      "visualmath"
-    ]
+    "title": "Volume of a Pyramid (V = ⅓ · Base · Height)",
+    "description": "Geometric dissection proof that the volume of a pyramid equals 1/3 Base * Height by showing that 3 congruent square pyramids assemble into a cube.",
+    "tags": []
   },
   {
     "id": "explainer-yt-fibonacci_spiral",
@@ -4755,15 +4550,8 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/fibonacci_spiral_9x16.png",
     "batchId": "explainer-v1",
     "title": "The Fibonacci Spiral and the Golden Ratio",
-    "description": "Visual animation of Fibonacci tiling and logarithmic spiral construction, demonstrating convergence to the golden ratio phi = 1.6180339887...\n\n#math #geometry",
-    "tags": [
-      "math",
-      "fibonacci",
-      "goldenratio",
-      "geometry",
-      "visualmath",
-      "nature"
-    ]
+    "description": "Visual animation of Fibonacci tiling and logarithmic spiral construction, demonstrating convergence to the golden ratio phi = 1.6180339887...",
+    "tags": []
   },
   {
     "id": "explainer-yt-pascals_triangle_sum",
@@ -4773,16 +4561,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pascals_triangle_sum_9x16.png",
     "batchId": "explainer-v1",
-    "title": "Pascal's Triangle Row Sums (\u2211 (n k) = 2\u207f)",
-    "description": "Visual derivation proving that the sum of the n-th row of Pascal's Triangle equals 2^n using the binomial expansion of (1 + 1)^n.\n\n#combinatorics #math",
-    "tags": [
-      "combinatorics",
-      "math",
-      "pascalstriangle",
-      "binomialtheorem",
-      "algebra",
-      "education"
-    ]
+    "title": "Pascal's Triangle Row Sums (∑ (n k) = 2ⁿ)",
+    "description": "Visual derivation proving that the sum of the n-th row of Pascal's Triangle equals 2^n using the binomial expansion of (1 + 1)^n.",
+    "tags": []
   },
   {
     "id": "explainer-yt-hockey_stick_identity",
@@ -4793,15 +4574,8 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/hockey_stick_identity_9x16.png",
     "batchId": "explainer-v1",
     "title": "The Hockey-Stick Identity in Pascal's Triangle",
-    "description": "Visual proof of the Hockey-Stick Identity in Pascal's triangle showing how summing diagonal combinations telescopes directly into the blade element.\n\n#combinatorics #math",
-    "tags": [
-      "combinatorics",
-      "math",
-      "pascalstriangle",
-      "identities",
-      "visualmath",
-      "proof"
-    ]
+    "description": "Visual proof of the Hockey-Stick Identity in Pascal's triangle showing how summing diagonal combinations telescopes directly into the blade element.",
+    "tags": []
   },
   {
     "id": "explainer-yt-euclidean_algorithm",
@@ -4814,14 +4588,8 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "description": "Visual geometric explanation of the Euclidean Algorithm showing how greatest common divisors gcd(a, b) are computed through recursive square tiling.\n\n#math #geometry",
-    "tags": [
-      "math",
-      "geometry",
-      "euclid",
-      "gcd",
-      "algorithm"
-    ]
+    "description": "Visual geometric explanation of the Euclidean Algorithm showing how greatest common divisors gcd(a, b) are computed through recursive square tiling.",
+    "tags": []
   },
   {
     "id": "explainer-yt-determinant_2x2",
@@ -4834,13 +4602,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "postedAt": null,
-    "description": "Visual geometric explanation of the 2x2 determinant showing how det(A) = ad - bc measures the exact area scaling factor of transformed basis vectors.\n\n#linearalgebra #math",
-    "tags": [
-      "linearalgebra",
-      "determinant",
-      "matrix",
-      "geometry",
-      "math"
-    ]
+    "description": "Visual geometric explanation of the 2x2 determinant showing how det(A) = ad - bc measures the exact area scaling factor of transformed basis vectors.",
+    "tags": []
   }
 ]
