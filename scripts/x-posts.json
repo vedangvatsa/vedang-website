@@ -5,7 +5,7 @@
     "scheduleTime": "00:00",
     "tweets": [
       {
-        "text": "Everyone talks about AI agents taking over the web.\n\nI audited 100,000 top domains to measure how ready the internet actually is for autonomous agents 🧵👇",
+        "text": "Everyone talks about AI agents taking over the web.\n\nI audited 100,000 top domains to measure how ready the internet actually is for autonomous agents \ud83e\uddf5\ud83d\udc47",
         "images": [
           "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_readiness_100k/01_paper_header.png"
         ],
@@ -98,7 +98,7 @@
     "posted": true,
     "tweets": [
       {
-        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
+        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. \ud83e\uddf5\n\nveda.ng/lit",
         "image": "scripts/thread-assets/lit_1.png",
         "posted": false
       },
@@ -134,7 +134,7 @@
     "posted": true,
     "tweets": [
       {
-        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. 🧵",
+        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. \ud83e\uddf5",
         "image": "scripts/thread-assets/agentic_1.png"
       },
       {
@@ -693,7 +693,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_commerce.png",
-    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
+    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too \u2014 dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
     "postedAt": "2026-04-17T20:24:13.945Z",
     "tweetId": "2045236914379219034"
   },
@@ -773,7 +773,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem \u2014 nuanced human interactions \u2014 instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T11:58:35.392Z",
     "tweetId": "2043297725995696570"
   },
@@ -783,7 +783,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/textui",
+    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM \u2014 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T11:58:38.244Z",
     "tweetId": "2043297738083663890"
   },
@@ -813,7 +813,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n€125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n\u20ac125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:15.613Z",
     "tweetId": "2043570692382499240"
   },
@@ -833,7 +833,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 → 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise",
+    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 \u2192 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-22T05:40:34.642Z",
     "tweetId": "2046826474343223446"
   },
@@ -853,7 +853,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered → population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/stateagents",
+    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered \u2192 population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T11:58:46.671Z",
     "tweetId": "2043297772955205807"
   },
@@ -863,7 +863,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "CLI → GUI → NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/textui",
+    "text": "CLI \u2192 GUI \u2192 NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/textui",
     "postedAt": "2026-04-23T05:52:57.159Z",
     "tweetId": "2047191977041834057"
   },
@@ -1488,7 +1488,7 @@
         "image": "scripts/thread-assets/figure_1_market_map.png"
       },
       {
-        "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute → Memory → Sandboxed Execution → Perception → Orchestration → Evaluation → Security → Agents as Products",
+        "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products",
         "image": "scripts/thread-assets/table_1_taxonomy.png"
       },
       {
@@ -1544,39 +1544,39 @@
     "tweetId": "2119408026939457704",
     "tweets": [
       {
-        "text": "1/ Anthropic's Model Context Protocol (MCP) is the open standard for AI tools.\n\nInstead of custom API glue for every app, MCP gives models a universal plug for data and tools.\n\n8 free resources to learn MCP 🧵👇",
+        "text": "1/ Anthropic's Model Context Protocol (MCP) is the open standard for AI tools.\n\nInstead of custom API glue for every app, MCP gives models a universal plug for data and tools.\n\n8 free resources to learn MCP \ud83e\uddf5\ud83d\udc47",
         "image": "https://iili.io/nbdMZJI.png"
       },
       {
-        "text": "2/ Official MCP Documentation\n\nThe core protocol specification.\n\n• Architecture: Host, Client, Server\n• JSON-RPC message formats\n• Standard tools and prompt templates\n\nhttps://modelcontextprotocol.io",
+        "text": "2/ Official MCP Documentation\n\nThe core protocol specification.\n\n\u2022 Architecture: Host, Client, Server\n\u2022 JSON-RPC message formats\n\u2022 Standard tools and prompt templates\n\nhttps://modelcontextprotocol.io",
         "image": "https://iili.io/nbdNOQ9.png"
       },
       {
-        "text": "3/ MCP Development Course\n\nA practical guide on veda.ng.\n\n• Core protocol mechanics\n• Building custom server connectors\n• Connecting Cursor & Claude Desktop\n\nhttps://veda.ng/mcp",
+        "text": "3/ MCP Development Course\n\nA practical guide on veda.ng.\n\n\u2022 Core protocol mechanics\n\u2022 Building custom server connectors\n\u2022 Connecting Cursor & Claude Desktop\n\nhttps://veda.ng/mcp",
         "image": "https://iili.io/nbdNZEg.png"
       },
       {
-        "text": "4/ Cursor MCP Documentation\n\nTurn your code editor into an MCP client.\n\n• Connect databases, APIs, GitHub repos\n• Multi-server setup guides\n• Practical workflow tutorials\n\nhttps://docs.cursor.com/context/model-context-protocol",
+        "text": "4/ Cursor MCP Documentation\n\nTurn your code editor into an MCP client.\n\n\u2022 Connect databases, APIs, GitHub repos\n\u2022 Multi-server setup guides\n\u2022 Practical workflow tutorials\n\nhttps://docs.cursor.com/context/model-context-protocol",
         "image": "https://iili.io/nb2Mvpt.png"
       },
       {
-        "text": "5/ FastMCP (by Prefect)\n\nThe fastest way to build MCP servers in Python.\n\n• Pythonic decorators: @mcp.tool()\n• Built-in CLI for server testing\n• Production deployment guides\n\nhttps://github.com/jlowin/fastmcp",
+        "text": "5/ FastMCP (by Prefect)\n\nThe fastest way to build MCP servers in Python.\n\n\u2022 Pythonic decorators: @mcp.tool()\n\u2022 Built-in CLI for server testing\n\u2022 Production deployment guides\n\nhttps://github.com/jlowin/fastmcp",
         "image": "https://iili.io/nb2jQII.png"
       },
       {
-        "text": "6/ Official Reference Servers\n\nAnthropic's open-source reference implementations.\n\n• Postgres, SQLite, Slack, GitHub, Fetch\n• Clean TypeScript and Python templates\n• Best practices for tool design\n\nhttps://github.com/modelcontextprotocol/servers",
+        "text": "6/ Official Reference Servers\n\nAnthropic's open-source reference implementations.\n\n\u2022 Postgres, SQLite, Slack, GitHub, Fetch\n\u2022 Clean TypeScript and Python templates\n\u2022 Best practices for tool design\n\nhttps://github.com/modelcontextprotocol/servers",
         "image": "https://iili.io/nb2wxYx.png"
       },
       {
-        "text": "7/ Smithery.ai\n\nThe registry for discovering and installing MCP servers.\n\n• 1-click install into Cursor and Claude Desktop\n• Browse 1,000+ community servers\n• Search by integration (DB, Notion, GitHub)\n\nhttps://smithery.ai",
+        "text": "7/ Smithery.ai\n\nThe registry for discovering and installing MCP servers.\n\n\u2022 1-click install into Cursor and Claude Desktop\n\u2022 Browse 1,000+ community servers\n\u2022 Search by integration (DB, Notion, GitHub)\n\nhttps://smithery.ai",
         "image": "https://iili.io/nb2wEpp.png"
       },
       {
-        "text": "8/ MCP Inspector\n\nInteractive developer tool for testing and debugging MCP servers.\n\n• Inspect server capabilities and prompts\n• Test tool execution in real-time\n• Official debugging suite by Anthropic\n\nhttps://github.com/modelcontextprotocol/inspector",
+        "text": "8/ MCP Inspector\n\nInteractive developer tool for testing and debugging MCP servers.\n\n\u2022 Inspect server capabilities and prompts\n\u2022 Test tool execution in real-time\n\u2022 Official debugging suite by Anthropic\n\nhttps://github.com/modelcontextprotocol/inspector",
         "image": "https://iili.io/nb2weaf.png"
       },
       {
-        "text": "9/ Awesome MCP Servers\n\nCurated community collection of MCP servers and tools.\n\n• Categorized directory: Enterprise, Dev, Cloud\n• Clients, libraries, and frameworks\n• Maintained by punkpeye\n\nhttps://github.com/punkpeye/awesome-mcp-servers",
+        "text": "9/ Awesome MCP Servers\n\nCurated community collection of MCP servers and tools.\n\n\u2022 Categorized directory: Enterprise, Dev, Cloud\n\u2022 Clients, libraries, and frameworks\n\u2022 Maintained by punkpeye\n\nhttps://github.com/punkpeye/awesome-mcp-servers",
         "image": "https://iili.io/nb2wDuV.png"
       },
       {
@@ -1586,7 +1586,7 @@
         "text": "11/ Out of $13B in AI agents, 88% went to compute and finished apps while middleware tools get acquired in under 18 months:\nhttps://x.com/vedangvatsa/status/2118991434472649165"
       },
       {
-        "text": "12/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "12/ My courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://iili.io/nbTjh0J.png"
       }
     ]
@@ -1599,47 +1599,47 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ Over 300 AI agent frameworks launched this year. Most were brittle demos that fail in production.\n\nIf you are building autonomous agents, here are the top 10 open-source frameworks worth using 🧵👇",
+        "text": "1/ Over 300 AI agent frameworks launched this year. Most were brittle demos that fail in production.\n\nIf you are building autonomous agents, here are the top 10 open-source frameworks worth using \ud83e\uddf5\ud83d\udc47",
         "image": "https://iili.io/nb2gYGV.png"
       },
       {
-        "text": "2/ LangGraph (by LangChain)\n\nCyclic graph runtime for complex agents.\n\n• State persistence across multi-turn loops\n• Human-in-the-loop approvals\n• Streaming tokens & debugging\n\nhttps://github.com/langchain-ai/langgraph",
+        "text": "2/ LangGraph (by LangChain)\n\nCyclic graph runtime for complex agents.\n\n\u2022 State persistence across multi-turn loops\n\u2022 Human-in-the-loop approvals\n\u2022 Streaming tokens & debugging\n\nhttps://github.com/langchain-ai/langgraph",
         "image": "https://iili.io/nb2g4n4.png"
       },
       {
-        "text": "3/ CrewAI\n\nMulti-agent role-playing workflows.\n\n• Role-based teams (Researcher, Writer)\n• Hierarchical task execution\n• Clean Python API with native tools\n\nhttps://github.com/crewAIInc/crewAI",
+        "text": "3/ CrewAI\n\nMulti-agent role-playing workflows.\n\n\u2022 Role-based teams (Researcher, Writer)\n\u2022 Hierarchical task execution\n\u2022 Clean Python API with native tools\n\nhttps://github.com/crewAIInc/crewAI",
         "image": "https://iili.io/nb2rfAg.png"
       },
       {
-        "text": "4/ PydanticAI\n\nType-safe agent framework by the Pydantic team.\n\n• Built on Pydantic v2 validation\n• Type-safe structured outputs\n• Model-agnostic with automatic retries\n\nhttps://github.com/pydantic/pydantic-ai",
+        "text": "4/ PydanticAI\n\nType-safe agent framework by the Pydantic team.\n\n\u2022 Built on Pydantic v2 validation\n\u2022 Type-safe structured outputs\n\u2022 Model-agnostic with automatic retries\n\nhttps://github.com/pydantic/pydantic-ai",
         "image": "https://iili.io/nb2rjDb.png"
       },
       {
-        "text": "5/ Browser-Use\n\nAutonomous web navigation for AI agents.\n\n• Interacts with buttons, forms, and logins\n• Vision-driven DOM element tree parsing\n• Full Playwright integration\n\nhttps://github.com/browser-use/browser-use",
+        "text": "5/ Browser-Use\n\nAutonomous web navigation for AI agents.\n\n\u2022 Interacts with buttons, forms, and logins\n\u2022 Vision-driven DOM element tree parsing\n\u2022 Full Playwright integration\n\nhttps://github.com/browser-use/browser-use",
         "image": "https://iili.io/nb24Fql.png"
       },
       {
-        "text": "6/ Microsoft AutoGen\n\nConversational multi-agent framework.\n\n• Multi-agent conversation patterns\n• Code generation, execution, and debugging\n• AutoGen Studio for visual prototyping\n\nhttps://github.com/microsoft/autogen",
+        "text": "6/ Microsoft AutoGen\n\nConversational multi-agent framework.\n\n\u2022 Multi-agent conversation patterns\n\u2022 Code generation, execution, and debugging\n\u2022 AutoGen Studio for visual prototyping\n\nhttps://github.com/microsoft/autogen",
         "image": "https://iili.io/nb2462S.png"
       },
       {
-        "text": "7/ Hugging Face smolagents\n\nMinimalist code-first agent library.\n\n• Code agents write Python instead of JSON\n• Tiny core logic (~1,000 lines)\n• Sandboxed execution runtimes\n\nhttps://github.com/huggingface/smolagents",
+        "text": "7/ Hugging Face smolagents\n\nMinimalist code-first agent library.\n\n\u2022 Code agents write Python instead of JSON\n\u2022 Tiny core logic (~1,000 lines)\n\u2022 Sandboxed execution runtimes\n\nhttps://github.com/huggingface/smolagents",
         "image": "https://iili.io/nb26qCv.png"
       },
       {
-        "text": "8/ OpenHands\n\nOpen-source autonomous software engineer.\n\n• Edits code, executes commands, browses web\n• Sandboxed Docker execution\n• Resolves real GitHub issues autonomously\n\nhttps://github.com/All-Hands-AI/OpenHands",
+        "text": "8/ OpenHands\n\nOpen-source autonomous software engineer.\n\n\u2022 Edits code, executes commands, browses web\n\u2022 Sandboxed Docker execution\n\u2022 Resolves real GitHub issues autonomously\n\nhttps://github.com/All-Hands-AI/OpenHands",
         "image": "https://iili.io/nb26xaI.png"
       },
       {
-        "text": "9/ ElizaOS (by ai16z)\n\nAutonomous agent platform for social & web3.\n\n• Discord, X, and Telegram connectors\n• Multi-agent simulation environments\n• Long-term memory with document chunking\n\nhttps://github.com/elizaOS/eliza",
+        "text": "9/ ElizaOS (by ai16z)\n\nAutonomous agent platform for social & web3.\n\n\u2022 Discord, X, and Telegram connectors\n\u2022 Multi-agent simulation environments\n\u2022 Long-term memory with document chunking\n\nhttps://github.com/elizaOS/eliza",
         "image": "https://iili.io/nb267nf.png"
       },
       {
-        "text": "10/ DSPy (Stanford NLP)\n\nProgramming foundation models with code, not prompts.\n\n• Compiles prompts into optimized instructions\n• Automatic few-shot example selection\n• Algorithmic prompt tuning on benchmarks\n\nhttps://github.com/stanfordnlp/dspy",
+        "text": "10/ DSPy (Stanford NLP)\n\nProgramming foundation models with code, not prompts.\n\n\u2022 Compiles prompts into optimized instructions\n\u2022 Automatic few-shot example selection\n\u2022 Algorithmic prompt tuning on benchmarks\n\nhttps://github.com/stanfordnlp/dspy",
         "image": "https://iili.io/nb26jMx.png"
       },
       {
-        "text": "11/ LlamaIndex Workflows\n\nEvent-driven agent orchestration.\n\n• Async event-driven pipelines\n• Step-by-step state handling and branching\n• Deep RAG and data ingestion connectors\n\nhttps://github.com/run-llama/llama_index",
+        "text": "11/ LlamaIndex Workflows\n\nEvent-driven agent orchestration.\n\n\u2022 Async event-driven pipelines\n\u2022 Step-by-step state handling and branching\n\u2022 Deep RAG and data ingestion connectors\n\nhttps://github.com/run-llama/llama_index",
         "image": "https://iili.io/nb26gta.png"
       },
       {
@@ -1652,7 +1652,7 @@
         "text": "14/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
       },
       {
-        "text": "15/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "15/ My courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://iili.io/nbTjh0J.png"
       }
     ],
@@ -1668,35 +1668,35 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ Coding shifted from typing boilerplate syntax to architecture, context hygiene, and reviewing code.\n\n8 essential tools, frameworks, and engineering rules to build reliable software with AI 🧵👇",
+        "text": "1/ Coding shifted from typing boilerplate syntax to architecture, context hygiene, and reviewing code.\n\n8 essential tools, frameworks, and engineering rules to build reliable software with AI \ud83e\uddf5\ud83d\udc47",
         "image": "https://iili.io/nb26yoG.png"
       },
       {
-        "text": "2/ Vibe Coding Bootcamp\n\nA structured engineering course on veda.ng.\n\n• Context window management (.cursorrules)\n• Multi-file refactoring workflows\n• Verification loops: tests, linters, pre-commit\n\nhttps://veda.ng/vibecoding",
+        "text": "2/ Vibe Coding Bootcamp\n\nA structured engineering course on veda.ng.\n\n\u2022 Context window management (.cursorrules)\n\u2022 Multi-file refactoring workflows\n\u2022 Verification loops: tests, linters, pre-commit\n\nhttps://veda.ng/vibecoding",
         "image": "https://iili.io/nb2PqNe.png"
       },
       {
-        "text": "3/ Cursor: Rules & Composer\n\nThe standard for AI-assisted coding.\n\n• .cursorrules: Repo-specific constraints\n• Composer (Cmd+I): Multi-file edits in real time\n• MCP integration for live DB & docs context\n\nhttps://cursor.com",
+        "text": "3/ Cursor: Rules & Composer\n\nThe standard for AI-assisted coding.\n\n\u2022 .cursorrules: Repo-specific constraints\n\u2022 Composer (Cmd+I): Multi-file edits in real time\n\u2022 MCP integration for live DB & docs context\n\nhttps://cursor.com",
         "image": "https://iili.io/nb2Mvpt.png"
       },
       {
-        "text": "4/ Windsurf: The Cascade Flow\n\nDeep contextual codebase understanding.\n\n• Cascade: Agent tracking multi-step edits\n• Real-time terminal execution & error fixes\n• Native indexing for massive codebases\n\nhttps://codeium.com/windsurf",
+        "text": "4/ Windsurf: The Cascade Flow\n\nDeep contextual codebase understanding.\n\n\u2022 Cascade: Agent tracking multi-step edits\n\u2022 Real-time terminal execution & error fixes\n\u2022 Native indexing for massive codebases\n\nhttps://codeium.com/windsurf",
         "image": "https://iili.io/nb2PDgV.png"
       },
       {
-        "text": "5/ Terminal Agents: Claude Code & OpenCode\n\nAutonomous coding in your CLI.\n\n• Git-aware: creates branches, commits, PRs\n• Runs tests, lints, and builds autonomously\n• Self-corrects errors in agent loops\n\nhttps://github.com/anthropics/claude-code",
+        "text": "5/ Terminal Agents: Claude Code & OpenCode\n\nAutonomous coding in your CLI.\n\n\u2022 Git-aware: creates branches, commits, PRs\n\u2022 Runs tests, lints, and builds autonomously\n\u2022 Self-corrects errors in agent loops\n\nhttps://github.com/anthropics/claude-code",
         "image": "https://iili.io/nb2iK1R.png"
       },
       {
-        "text": "6/ v0 by Vercel: Rapid UI Generation\n\nGenerative UI for modern frontend stacks.\n\n• Produces clean React & Tailwind components\n• Iterative visual edits through chat\n• Direct copy-paste into codebases\n\nhttps://v0.dev",
+        "text": "6/ v0 by Vercel: Rapid UI Generation\n\nGenerative UI for modern frontend stacks.\n\n\u2022 Produces clean React & Tailwind components\n\u2022 Iterative visual edits through chat\n\u2022 Direct copy-paste into codebases\n\nhttps://v0.dev",
         "image": "https://iili.io/nb2i5rl.png"
       },
       {
-        "text": "7/ Bolt.new: Full-Stack in Browser\n\nIn-browser full-stack development.\n\n• Runs Node.js & Vite via WebContainers\n• Instant live preview with zero setup\n• Direct GitHub export & 1-click deploy\n\nhttps://bolt.new",
+        "text": "7/ Bolt.new: Full-Stack in Browser\n\nIn-browser full-stack development.\n\n\u2022 Runs Node.js & Vite via WebContainers\n\u2022 Instant live preview with zero setup\n\u2022 Direct GitHub export & 1-click deploy\n\nhttps://bolt.new",
         "image": "https://iili.io/nb2sz8B.png"
       },
       {
-        "text": "8/ Verification Loops: Prevent Code Rot\n\nFast AI output without tests creates broken code.\n\n• Run tests after every edit (Vitest, PyTest)\n• Regression checks with Playwright\n• Treat AI as a junior dev: always verify",
+        "text": "8/ Verification Loops: Prevent Code Rot\n\nFast AI output without tests creates broken code.\n\n\u2022 Run tests after every edit (Vitest, PyTest)\n\u2022 Regression checks with Playwright\n\u2022 Treat AI as a junior dev: always verify",
         "image": "https://iili.io/nb2s89S.png"
       },
       {
@@ -1710,7 +1710,7 @@
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
       },
       {
-        "text": "12/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "12/ My courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://iili.io/nbTjh0J.png"
       }
     ],
@@ -1725,35 +1725,35 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ You do not need a computer science degree to automate 80% of repetitive business operations.\n\n8 free courses, open-source frameworks, and architecture rules to build reliable AI automations 🧵👇",
+        "text": "1/ You do not need a computer science degree to automate 80% of repetitive business operations.\n\n8 free courses, open-source frameworks, and architecture rules to build reliable AI automations \ud83e\uddf5\ud83d\udc47",
         "image": "https://iili.io/nb2smDF.png"
       },
       {
-        "text": "2/ AI Automation Course\n\nPractical guide on veda.ng.\n\n• Replace manual work with agent pipelines\n• Build reliable integrations without vendor lock-in\n• Case studies across ops, finance, marketing\n\nhttps://veda.ng/automation",
+        "text": "2/ AI Automation Course\n\nPractical guide on veda.ng.\n\n\u2022 Replace manual work with agent pipelines\n\u2022 Build reliable integrations without vendor lock-in\n\u2022 Case studies across ops, finance, marketing\n\nhttps://veda.ng/automation",
         "image": "https://iili.io/nb2L2lR.png"
       },
       {
-        "text": "3/ n8n Academy: AI Workflows\n\nSelf-hosted automation with native AI nodes.\n\n• Visual graphs connecting LLM nodes\n• Multi-step data pipelines with webhooks\n• Docker self-hosting for full privacy\n\nhttps://learn.n8n.io",
+        "text": "3/ n8n Academy: AI Workflows\n\nSelf-hosted automation with native AI nodes.\n\n\u2022 Visual graphs connecting LLM nodes\n\u2022 Multi-step data pipelines with webhooks\n\u2022 Docker self-hosting for full privacy\n\nhttps://learn.n8n.io",
         "image": "https://iili.io/nb2p54n.png"
       },
       {
-        "text": "4/ Make.com: AI Automation Blueprints\n\nVisual automation platform for business ops.\n\n• Routes prompts to LLM APIs\n• Data transformation & webhook routing\n• Error handling & lead scoring\n\nhttps://www.make.com",
+        "text": "4/ Make.com: AI Automation Blueprints\n\nVisual automation platform for business ops.\n\n\u2022 Routes prompts to LLM APIs\n\u2022 Data transformation & webhook routing\n\u2022 Error handling & lead scoring\n\nhttps://www.make.com",
         "image": "https://iili.io/nb2pX4e.png"
       },
       {
-        "text": "5/ LlamaParse: Document Intelligence\n\nDocument parsing engine for complex files.\n\n• Extracts structured tables from PDFs\n• Handles financial statements & legal filings\n• Clean markdown output for LLMs\n\nhttps://www.llamaindex.ai",
+        "text": "5/ LlamaParse: Document Intelligence\n\nDocument parsing engine for complex files.\n\n\u2022 Extracts structured tables from PDFs\n\u2022 Handles financial statements & legal filings\n\u2022 Clean markdown output for LLMs\n\nhttps://www.llamaindex.ai",
         "image": "https://iili.io/nb2LuUl.png"
       },
       {
-        "text": "6/ Web Automation with Browser-Use\n\nAutomate repetitive web-based tasks.\n\n• Scrapes data behind logins & portals\n• Fills complex web forms autonomously\n• Vision-driven navigation with Playwright\n\nhttps://github.com/browser-use/browser-use",
+        "text": "6/ Web Automation with Browser-Use\n\nAutomate repetitive web-based tasks.\n\n\u2022 Scrapes data behind logins & portals\n\u2022 Fills complex web forms autonomously\n\u2022 Vision-driven navigation with Playwright\n\nhttps://github.com/browser-use/browser-use",
         "image": "https://iili.io/nb24Fql.png"
       },
       {
-        "text": "7/ LangChain Academy\n\nCourses on agent architectures.\n\n• Building LangGraph workflows\n• State management & checkpoints\n• Handling retries & human approvals\n\nhttps://academy.langchain.com",
+        "text": "7/ LangChain Academy\n\nCourses on agent architectures.\n\n\u2022 Building LangGraph workflows\n\u2022 State management & checkpoints\n\u2022 Handling retries & human approvals\n\nhttps://academy.langchain.com",
         "image": "https://iili.io/nb2LNzF.png"
       },
       {
-        "text": "8/ Activepieces: Open-Source Automation\n\nSelf-hosted automation engine.\n\n• Open-source Zapier alternative\n• Built-in AI tools (OpenAI, Anthropic)\n• Custom piece builder in TypeScript\n\nhttps://github.com/activepieces/activepieces",
+        "text": "8/ Activepieces: Open-Source Automation\n\nSelf-hosted automation engine.\n\n\u2022 Open-source Zapier alternative\n\u2022 Built-in AI tools (OpenAI, Anthropic)\n\u2022 Custom piece builder in TypeScript\n\nhttps://github.com/activepieces/activepieces",
         "image": "https://iili.io/nb2L4eI.png"
       },
       {
@@ -1770,7 +1770,7 @@
         "text": "12/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
       },
       {
-        "text": "13/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "13/ My courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://iili.io/nbTjh0J.png"
       }
     ],
@@ -1785,57 +1785,57 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ You do not need a $60,000 tuition bill to learn AI. Some of the best universities publish full lectures for free.\n\n10 free university courses for AI 🧵👇",
+        "text": "1/ You do not need a $60,000 tuition bill to learn AI. Some of the best universities publish full lectures for free.\n\n10 free university courses for AI \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_01_cover.png?v=20261113",
         "posted": false
       },
       {
-        "text": "2/ UC Berkeley CS294: LLM Agents\n\nGraduate course on autonomous agents.\n\n• Agent architectures & tool-use foundations\n• Multi-agent debate and collaboration\n• Memory, reasoning, and reflection loops\n\nhttps://llmagents-learning.org",
+        "text": "2/ UC Berkeley CS294: LLM Agents\n\nGraduate course on autonomous agents.\n\n\u2022 Agent architectures & tool-use foundations\n\u2022 Multi-agent debate and collaboration\n\u2022 Memory, reasoning, and reflection loops\n\nhttps://llmagents-learning.org",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_02_berkeley.png?v=20261113",
         "posted": false
       },
       {
-        "text": "3/ Stanford CS229: Machine Learning (Andrew Ng)\n\nThe definitive machine learning foundation.\n\n• Supervised learning & linear models\n• Deep learning & neural architectures\n• Free lecture videos & assignments\n\nhttps://cs229.stanford.edu",
+        "text": "3/ Stanford CS229: Machine Learning (Andrew Ng)\n\nThe definitive machine learning foundation.\n\n\u2022 Supervised learning & linear models\n\u2022 Deep learning & neural architectures\n\u2022 Free lecture videos & assignments\n\nhttps://cs229.stanford.edu",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_03_stanford_cs229.png?v=20261113",
         "posted": false
       },
       {
-        "text": "4/ Stanford CS25: Transformers United\n\nSeminar on transformer architectures.\n\n• Attention mechanisms & innovations\n• Vision transformers, diffusion, audio\n• Free YouTube lecture recordings\n\nhttps://web.stanford.edu/class/cs25/",
+        "text": "4/ Stanford CS25: Transformers United\n\nSeminar on transformer architectures.\n\n\u2022 Attention mechanisms & innovations\n\u2022 Vision transformers, diffusion, audio\n\u2022 Free YouTube lecture recordings\n\nhttps://web.stanford.edu/class/cs25/",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_04_stanford_cs25.png?v=20261113",
         "posted": false
       },
       {
-        "text": "5/ MIT 6.S191: Intro to Deep Learning\n\nMIT's foundational deep learning course.\n\n• Neural networks, CNNs, transformers\n• Generative models & RL\n• Free code labs & lectures online\n\nhttps://introtodeeplearning.com",
+        "text": "5/ MIT 6.S191: Intro to Deep Learning\n\nMIT's foundational deep learning course.\n\n\u2022 Neural networks, CNNs, transformers\n\u2022 Generative models & RL\n\u2022 Free code labs & lectures online\n\nhttps://introtodeeplearning.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_05_mit_6s191.png?v=20261113",
         "posted": false
       },
       {
-        "text": "6/ Fast.ai: Deep Learning for Coders\n\nTop-down, code-first deep learning course.\n\n• Build models from day one in PyTorch\n• Computer vision, NLP, & tabular data\n• 100% free, pragmatic engineering focus\n\nhttps://course.fast.ai",
+        "text": "6/ Fast.ai: Deep Learning for Coders\n\nTop-down, code-first deep learning course.\n\n\u2022 Build models from day one in PyTorch\n\u2022 Computer vision, NLP, & tabular data\n\u2022 100% free, pragmatic engineering focus\n\nhttps://course.fast.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_06_fastai.png?v=20261113",
         "posted": false
       },
       {
-        "text": "7/ Harvard CS50 AI: Artificial Intelligence\n\nFoundations of modern AI using Python.\n\n• Graph search, optimization, game theory\n• Probability, Markov models, neural networks\n• Hands-on programming projects\n\nhttps://cs50.harvard.edu/ai",
+        "text": "7/ Harvard CS50 AI: Artificial Intelligence\n\nFoundations of modern AI using Python.\n\n\u2022 Graph search, optimization, game theory\n\u2022 Probability, Markov models, neural networks\n\u2022 Hands-on programming projects\n\nhttps://cs50.harvard.edu/ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_07_harvard_cs50.png?v=20261113",
         "posted": false
       },
       {
-        "text": "8/ Stanford CS224N: NLP with Deep Learning\n\nThe gold standard for language models.\n\n• Word vectors, attention, transformers\n• Pre-training & fine-tuning (PEFT)\n• PyTorch assignments on Colab\n\nhttps://web.stanford.edu/class/cs224n",
+        "text": "8/ Stanford CS224N: NLP with Deep Learning\n\nThe gold standard for language models.\n\n\u2022 Word vectors, attention, transformers\n\u2022 Pre-training & fine-tuning (PEFT)\n\u2022 PyTorch assignments on Colab\n\nhttps://web.stanford.edu/class/cs224n",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_08_stanford_cs224n.png?v=20261113",
         "posted": false
       },
       {
-        "text": "9/ Carnegie Mellon 11-711: Advanced NLP\n\nDeep dive into modern NLP architectures.\n\n• Prompting, fine-tuning, and PEFT\n• Pre-training objectives and tokenization\n• Scaling laws and compute-optimal models\n\nhttps://phontron.com/class/anlp2024",
+        "text": "9/ Carnegie Mellon 11-711: Advanced NLP\n\nDeep dive into modern NLP architectures.\n\n\u2022 Prompting, fine-tuning, and PEFT\n\u2022 Pre-training objectives and tokenization\n\u2022 Scaling laws and compute-optimal models\n\nhttps://phontron.com/class/anlp2024",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_09_cmu_11711.png?v=20261113",
         "posted": false
       },
       {
-        "text": "10/ Stanford CS330: Deep Multi-Task Learning\n\nChelsea Finn's course on adaptive AI.\n\n• Multi-task & transfer learning\n• Meta-learning (MAML) & few-shot adaptation\n• In-context learning mechanics in LLMs\n\nhttps://cs330.stanford.edu",
+        "text": "10/ Stanford CS330: Deep Multi-Task Learning\n\nChelsea Finn's course on adaptive AI.\n\n\u2022 Multi-task & transfer learning\n\u2022 Meta-learning (MAML) & few-shot adaptation\n\u2022 In-context learning mechanics in LLMs\n\nhttps://cs330.stanford.edu",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_10_stanford_cs330.png?v=20261113",
         "posted": false
       },
       {
-        "text": "11/ UC Berkeley CS188: Intro to AI\n\nClassic foundational artificial intelligence.\n\n• Informed search algorithms (A*, heuristics)\n• Markov Decision Processes & RL\n• The famous Berkeley Pacman projects\n\nhttps://inst.eecs.berkeley.edu/~cs188/fa26/",
+        "text": "11/ UC Berkeley CS188: Intro to AI\n\nClassic foundational artificial intelligence.\n\n\u2022 Informed search algorithms (A*, heuristics)\n\u2022 Markov Decision Processes & RL\n\u2022 The famous Berkeley Pacman projects\n\nhttps://inst.eecs.berkeley.edu/~cs188/fa26/",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/university_ai_courses/tweet_11_berkeley_cs188.png?v=20261113",
         "posted": false
       },
@@ -1852,7 +1852,7 @@
         "posted": false
       },
       {
-        "text": "15/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "15/ My courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -1868,39 +1868,39 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ Prompt engineering is no longer \"act as a marketer.\"\n\nWith frontier reasoning models, prompting is structured specification, test-driven validation, and system framing.\n\n8 guides, curricula, & production rules 🧵👇",
+        "text": "1/ Prompt engineering is no longer \"act as a marketer.\"\n\nWith frontier reasoning models, prompting is structured specification, test-driven validation, and system framing.\n\n8 guides, curricula, & production rules \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_01_cover.png"
       },
       {
-        "text": "2/ Prompt Engineering Course\n\nA rigorous guide on veda.ng.\n\n• Chain-of-thought & structured reasoning\n• Enforcing strict JSON schemas & types\n• Defending against prompt injection attacks\n\nhttps://veda.ng/prompt",
+        "text": "2/ Prompt Engineering Course\n\nA rigorous guide on veda.ng.\n\n\u2022 Chain-of-thought & structured reasoning\n\u2022 Enforcing strict JSON schemas & types\n\u2022 Defending against prompt injection attacks\n\nhttps://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_02_prompt_course.png"
       },
       {
-        "text": "3/ Anthropic: Prompting Tutorial\n\nOfficial guide from Anthropic.\n\n• Clear vs. vague prompt structure\n• Using XML tags (<context>, <instructions>)\n• Chain-of-thought prompting for reasoning\n\nhttps://docs.anthropic.com",
+        "text": "3/ Anthropic: Prompting Tutorial\n\nOfficial guide from Anthropic.\n\n\u2022 Clear vs. vague prompt structure\n\u2022 Using XML tags (<context>, <instructions>)\n\u2022 Chain-of-thought prompting for reasoning\n\nhttps://docs.anthropic.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_03_anthropic_prompting.png"
       },
       {
-        "text": "4/ OpenAI: Prompting & Reasoning Guide\n\nOfficial prompt strategies for frontier LLMs.\n\n• Clear delimiters & instructions\n• Reference text to stop hallucination\n• Strict JSON schemas for outputs\n\nhttps://platform.openai.com/docs/guides/prompt-engineering",
+        "text": "4/ OpenAI: Prompting & Reasoning Guide\n\nOfficial prompt strategies for frontier LLMs.\n\n\u2022 Clear delimiters & instructions\n\u2022 Reference text to stop hallucination\n\u2022 Strict JSON schemas for outputs\n\nhttps://platform.openai.com/docs/guides/prompt-engineering",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_04_openai_prompting.png"
       },
       {
-        "text": "5/ LearnPrompting.org\n\nOpen-source prompting curriculum.\n\n• From zero-shot to Directional Stimulus\n• ReAct prompting & tool-augmented reasoning\n• Adversarial defense & red-teaming\n\nhttps://learnprompting.org",
+        "text": "5/ LearnPrompting.org\n\nOpen-source prompting curriculum.\n\n\u2022 From zero-shot to Directional Stimulus\n\u2022 ReAct prompting & tool-augmented reasoning\n\u2022 Adversarial defense & red-teaming\n\nhttps://learnprompting.org",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_05_learnprompting.png"
       },
       {
-        "text": "6/ DSPy (Stanford NLP)\n\nProgramming foundation models with code.\n\n• Modules replace brittle prompt strings\n• Optimizes few-shot examples automatically\n• Compiles pipelines against quality metrics\n\nhttps://github.com/stanfordnlp/dspy",
+        "text": "6/ DSPy (Stanford NLP)\n\nProgramming foundation models with code.\n\n\u2022 Modules replace brittle prompt strings\n\u2022 Optimizes few-shot examples automatically\n\u2022 Compiles pipelines against quality metrics\n\nhttps://github.com/stanfordnlp/dspy",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_06_dspy.png"
       },
       {
-        "text": "7/ DeepLearning.AI: Prompt Engineering\n\nAndrew Ng & Isa Fulford's course.\n\n• Clear vs. specific prompt instructions\n• Iterative prompt development workflows\n• Summarizing, inferring, and transforming data\n\nhttps://www.deeplearning.ai",
+        "text": "7/ DeepLearning.AI: Prompt Engineering\n\nAndrew Ng & Isa Fulford's course.\n\n\u2022 Clear vs. specific prompt instructions\n\u2022 Iterative prompt development workflows\n\u2022 Summarizing, inferring, and transforming data\n\nhttps://www.deeplearning.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_07_deeplearning_ai.png"
       },
       {
-        "text": "8/ Brex: Production Prompt Engineering\n\nBattle-tested guidelines for production LLMs.\n\n• Defend against prompt injection\n• Reliable JSON outputs in production\n• Automated evals & regression tests\n\nhttps://github.com/brexhq/prompt-engineering",
+        "text": "8/ Brex: Production Prompt Engineering\n\nBattle-tested guidelines for production LLMs.\n\n\u2022 Defend against prompt injection\n\u2022 Reliable JSON outputs in production\n\u2022 Automated evals & regression tests\n\nhttps://github.com/brexhq/prompt-engineering",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_08_brex_guide.png"
       },
       {
-        "text": "9/ Microsoft: Prompt Engineering Guide\n\nEnterprise prompt engineering principles.\n\n• System message design & role framing\n• Few-shot examples and output constraints\n• Grounding prompts on retrieved context\n\nhttps://learn.microsoft.com",
+        "text": "9/ Microsoft: Prompt Engineering Guide\n\nEnterprise prompt engineering principles.\n\n\u2022 System message design & role framing\n\u2022 Few-shot examples and output constraints\n\u2022 Grounding prompts on retrieved context\n\nhttps://learn.microsoft.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/prompt_engineering/tweet_09_microsoft_guide.png"
       },
       {
@@ -1910,7 +1910,7 @@
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
       },
       {
-        "text": "12/ My courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "12/ My courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ],
@@ -1925,39 +1925,39 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ Open-weights models now run completely offline on consumer hardware with zero API fees.\n\n8 essential tools & runtimes to run local AI 🧵👇",
+        "text": "1/ Open-weights models now run completely offline on consumer hardware with zero API fees.\n\n8 essential tools & runtimes to run local AI \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_01_cover.png"
       },
       {
-        "text": "2/ Ollama\n\nThe simplest way to run open LLMs locally.\n\n• 1-command install for macOS, Linux, Windows\n• Pulls and runs Llama, Mistral, Qwen models\n• Native OpenAI-compatible REST API\n\nhttps://ollama.com",
+        "text": "2/ Ollama\n\nThe simplest way to run open LLMs locally.\n\n\u2022 1-command install for macOS, Linux, Windows\n\u2022 Pulls and runs Llama, Mistral, Qwen models\n\u2022 Native OpenAI-compatible REST API\n\nhttps://ollama.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_02_ollama.png"
       },
       {
-        "text": "3/ LM Studio\n\nDesktop GUI for running open LLMs locally.\n\n• Discover and run Hugging Face models\n• GPU acceleration for Apple Silicon and CUDA\n• Local server with OpenAI endpoint format\n\nhttps://lmstudio.ai",
+        "text": "3/ LM Studio\n\nDesktop GUI for running open LLMs locally.\n\n\u2022 Discover and run Hugging Face models\n\u2022 GPU acceleration for Apple Silicon and CUDA\n\u2022 Local server with OpenAI endpoint format\n\nhttps://lmstudio.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_03_lmstudio.png"
       },
       {
-        "text": "4/ vLLM\n\nHigh-throughput, low-latency LLM serving engine.\n\n• PagedAttention manages KV cache memory\n• Continuous batching for high concurrency\n• The industry standard for self-hosted LLM clusters\n\nhttps://github.com/vllm-project/vllm",
+        "text": "4/ vLLM\n\nHigh-throughput, low-latency LLM serving engine.\n\n\u2022 PagedAttention manages KV cache memory\n\u2022 Continuous batching for high concurrency\n\u2022 The industry standard for self-hosted LLM clusters\n\nhttps://github.com/vllm-project/vllm",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_04_vllm.png"
       },
       {
-        "text": "5/ llama.cpp\n\nPure C/C++ inference engine for local hardware.\n\n• Minimal footprint with zero dependencies\n• Optimized GGUF quantization (4-bit, 8-bit)\n• Blazing CPU and GPU inference across devices\n\nhttps://github.com/ggerganov/llama.cpp",
+        "text": "5/ llama.cpp\n\nPure C/C++ inference engine for local hardware.\n\n\u2022 Minimal footprint with zero dependencies\n\u2022 Optimized GGUF quantization (4-bit, 8-bit)\n\u2022 Blazing CPU and GPU inference across devices\n\nhttps://github.com/ggerganov/llama.cpp",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_05_llamacpp.png"
       },
       {
-        "text": "6/ Open WebUI\n\nSelf-hosted, user-friendly chat interface for LLMs.\n\n• Full-featured ChatGPT clone running locally\n• Built-in RAG and document upload support\n• Connects directly to Ollama and OpenAI APIs\n\nhttps://github.com/open-webui/open-webui",
+        "text": "6/ Open WebUI\n\nSelf-hosted, user-friendly chat interface for LLMs.\n\n\u2022 Full-featured ChatGPT clone running locally\n\u2022 Built-in RAG and document upload support\n\u2022 Connects directly to Ollama and OpenAI APIs\n\nhttps://github.com/open-webui/open-webui",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_06_openwebui.png"
       },
       {
-        "text": "7/ Jan\n\nOpen-source desktop AI client running 100% offline.\n\n• Clean native desktop client for macOS & Windows\n• 100% offline privacy with zero telemetry\n• Built-in model hub and hardware monitoring\n\nhttps://jan.ai",
+        "text": "7/ Jan\n\nOpen-source desktop AI client running 100% offline.\n\n\u2022 Clean native desktop client for macOS & Windows\n\u2022 100% offline privacy with zero telemetry\n\u2022 Built-in model hub and hardware monitoring\n\nhttps://jan.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_07_jan.png"
       },
       {
-        "text": "8/ Hugging Face TGI\n\nProduction engine for deploying open LLMs.\n\n• Tensor parallelism for multi-GPU serving\n• Token streaming via Server-Sent Events\n• Production metrics and health checks\n\nhttps://github.com/huggingface/text-generation-inference",
+        "text": "8/ Hugging Face TGI\n\nProduction engine for deploying open LLMs.\n\n\u2022 Tensor parallelism for multi-GPU serving\n\u2022 Token streaming via Server-Sent Events\n\u2022 Production metrics and health checks\n\nhttps://github.com/huggingface/text-generation-inference",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_08_tgi.png"
       },
       {
-        "text": "9/ LocalAI\n\nFree, open-source alternative to OpenAI APIs.\n\n• Drop-in replacement for OpenAI endpoints\n• Runs text, audio, image generation, and embeddings\n• Zero GPU required: fast CPU inference support\n\nhttps://github.com/mudler/LocalAI",
+        "text": "9/ LocalAI\n\nFree, open-source alternative to OpenAI APIs.\n\n\u2022 Drop-in replacement for OpenAI endpoints\n\u2022 Runs text, audio, image generation, and embeddings\n\u2022 Zero GPU required: fast CPU inference support\n\nhttps://github.com/mudler/LocalAI",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/local_ai_models/tweet_09_localai.png"
       },
       {
@@ -1967,7 +1967,7 @@
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
       },
       {
-        "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "12/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ],
@@ -1982,39 +1982,39 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ AI coding tools evolved from tab-autocomplete into full autonomous engineering agents.\n\n8 modern AI code editors & developer tools 🧵👇",
+        "text": "1/ AI coding tools evolved from tab-autocomplete into full autonomous engineering agents.\n\n8 modern AI code editors & developer tools \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_01_cover.png"
       },
       {
-        "text": "2/ Cursor\n\nThe standard for AI-assisted software engineering.\n\n• .cursorrules: repo-specific coding rules\n• Composer: multi-file generation & edits\n• MCP integration for live DB & terminal context\n\nhttps://cursor.com",
+        "text": "2/ Cursor\n\nThe standard for AI-assisted software engineering.\n\n\u2022 .cursorrules: repo-specific coding rules\n\u2022 Composer: multi-file generation & edits\n\u2022 MCP integration for live DB & terminal context\n\nhttps://cursor.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_02_cursor.png"
       },
       {
-        "text": "3/ Windsurf\n\nContext-driven IDE by Codeium.\n\n• Cascade: agent tracking multi-turn edits\n• Supercomplete: multi-line predictive changes\n• Real-time terminal execution & error fixes\n\nhttps://codeium.com/windsurf",
+        "text": "3/ Windsurf\n\nContext-driven IDE by Codeium.\n\n\u2022 Cascade: agent tracking multi-turn edits\n\u2022 Supercomplete: multi-line predictive changes\n\u2022 Real-time terminal execution & error fixes\n\nhttps://codeium.com/windsurf",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_03_windsurf.png"
       },
       {
-        "text": "4/ Claude Code\n\nAutonomous command-line coding agent from Anthropic.\n\n• Direct CLI access to git, linter, tests\n• Multi-file codebase refactoring loops\n• Self-corrects errors in agent cycles\n\nhttps://github.com/anthropics/claude-code",
+        "text": "4/ Claude Code\n\nAutonomous command-line coding agent from Anthropic.\n\n\u2022 Direct CLI access to git, linter, tests\n\u2022 Multi-file codebase refactoring loops\n\u2022 Self-corrects errors in agent cycles\n\nhttps://github.com/anthropics/claude-code",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_04_claude_code.png"
       },
       {
-        "text": "5/ Aider\n\nTerminal-based AI pair programming tool.\n\n• Auto-commits changes with clean git messages\n• Uses repository map for deep contextual awareness\n• Works with any LLM via API or local models\n\nhttps://github.com/paul-gauthier/aider",
+        "text": "5/ Aider\n\nTerminal-based AI pair programming tool.\n\n\u2022 Auto-commits changes with clean git messages\n\u2022 Uses repository map for deep contextual awareness\n\u2022 Works with any LLM via API or local models\n\nhttps://github.com/paul-gauthier/aider",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_05_aider.png"
       },
       {
-        "text": "6/ Continue.dev\n\nOpen-source AI assistant for VS Code & JetBrains.\n\n• Autocomplete and chat in your editor\n• Connects to local models or cloud APIs\n• Zero vendor lock-in and full privacy\n\nhttps://continue.dev",
+        "text": "6/ Continue.dev\n\nOpen-source AI assistant for VS Code & JetBrains.\n\n\u2022 Autocomplete and chat in your editor\n\u2022 Connects to local models or cloud APIs\n\u2022 Zero vendor lock-in and full privacy\n\nhttps://continue.dev",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_06_continue.png"
       },
       {
-        "text": "7/ OpenCode\n\nOpen-source terminal-based AI coding assistant.\n\n• Interactive terminal interface for development\n• Multi-file editing and code generation\n• Works with both local runtimes and frontier APIs\n\nhttps://github.com/opencode-ai/opencode",
+        "text": "7/ OpenCode\n\nOpen-source terminal-based AI coding assistant.\n\n\u2022 Interactive terminal interface for development\n\u2022 Multi-file editing and code generation\n\u2022 Works with both local runtimes and frontier APIs\n\nhttps://github.com/opencode-ai/opencode",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_07_opencode.png"
       },
       {
-        "text": "8/ Zed AI\n\nHigh-performance, GPU-accelerated code editor.\n\n• Built in Rust for instant load times & typing\n• Native assistant panel with model routing\n• Inline transformations and completions\n\nhttps://zed.dev",
+        "text": "8/ Zed AI\n\nHigh-performance, GPU-accelerated code editor.\n\n\u2022 Built in Rust for instant load times & typing\n\u2022 Native assistant panel with model routing\n\u2022 Inline transformations and completions\n\nhttps://zed.dev",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_08_zed.png"
       },
       {
-        "text": "9/ Void Editor\n\nOpen-source, privacy-first Cursor alternative.\n\n• Fork of VS Code with native AI integration\n• Full control over model providers & hosting\n• Complete local data privacy and custom endpoints\n\nhttps://github.com/voideditor/void",
+        "text": "9/ Void Editor\n\nOpen-source, privacy-first Cursor alternative.\n\n\u2022 Fork of VS Code with native AI integration\n\u2022 Full control over model providers & hosting\n\u2022 Complete local data privacy and custom endpoints\n\nhttps://github.com/voideditor/void",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_code_editors/tweet_09_void.png"
       },
       {
@@ -2024,7 +2024,7 @@
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
       },
       {
-        "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "12/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ],
@@ -2039,39 +2039,39 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ Naive vector search fails in production without proper chunking, reranking, and evaluation.\n\n8 essential tools for production RAG pipelines 🧵👇",
+        "text": "1/ Naive vector search fails in production without proper chunking, reranking, and evaluation.\n\n8 essential tools for production RAG pipelines \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_01_cover.png"
       },
       {
-        "text": "2/ LlamaIndex\n\nThe data framework for connecting LLMs to your data.\n\n• 300+ data loaders for docs, DBs, and APIs\n• Advanced query engines & routing logic\n• Production RAG evaluation and monitoring\n\nhttps://www.llamaindex.ai",
+        "text": "2/ LlamaIndex\n\nThe data framework for connecting LLMs to your data.\n\n\u2022 300+ data loaders for docs, DBs, and APIs\n\u2022 Advanced query engines & routing logic\n\u2022 Production RAG evaluation and monitoring\n\nhttps://www.llamaindex.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_02_llamaindex.png"
       },
       {
-        "text": "3/ Qdrant\n\nVector search engine built in Rust for speed.\n\n• Native hybrid search: dense + sparse vectors\n• Fast payload filtering alongside vector queries\n• Production scale with disk-backed storage\n\nhttps://qdrant.tech",
+        "text": "3/ Qdrant\n\nVector search engine built in Rust for speed.\n\n\u2022 Native hybrid search: dense + sparse vectors\n\u2022 Fast payload filtering alongside vector queries\n\u2022 Production scale with disk-backed storage\n\nhttps://qdrant.tech",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_03_qdrant.png"
       },
       {
-        "text": "4/ pgvector\n\nOpen-source vector similarity search for PostgreSQL.\n\n• Store vector embeddings inside standard Postgres\n• HNSW & IVFFlat indexing for fast queries\n• Avoids dedicated vector database complexity\n\nhttps://github.com/pgvector/pgvector",
+        "text": "4/ pgvector\n\nOpen-source vector similarity search for PostgreSQL.\n\n\u2022 Store vector embeddings inside standard Postgres\n\u2022 HNSW & IVFFlat indexing for fast queries\n\u2022 Avoids dedicated vector database complexity\n\nhttps://github.com/pgvector/pgvector",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_04_pgvector.png"
       },
       {
-        "text": "5/ Cohere Rerank\n\nTwo-stage relevance booster for search pipelines.\n\n• Re-orders vector results by semantic match\n• Filters noisy context before model input\n• Measurably boosts retrieval accuracy\n\nhttps://cohere.com",
+        "text": "5/ Cohere Rerank\n\nTwo-stage relevance booster for search pipelines.\n\n\u2022 Re-orders vector results by semantic match\n\u2022 Filters noisy context before model input\n\u2022 Measurably boosts retrieval accuracy\n\nhttps://cohere.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_05_cohere_rerank.png"
       },
       {
-        "text": "6/ Ragas\n\nAutomated evaluation framework for RAG systems.\n\n• Evaluates context precision and recall\n• Measures faithfulness and hallucination rates\n• Continuous CI/CD testing for retrieval pipelines\n\nhttps://github.com/explodinggradients/ragas",
+        "text": "6/ Ragas\n\nAutomated evaluation framework for RAG systems.\n\n\u2022 Evaluates context precision and recall\n\u2022 Measures faithfulness and hallucination rates\n\u2022 Continuous CI/CD testing for retrieval pipelines\n\nhttps://github.com/explodinggradients/ragas",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_06_ragas.png"
       },
       {
-        "text": "7/ Unstructured.io\n\nData ingestion and parsing engine for LLMs.\n\n• Parses complex PDFs, Word, and slides\n• Extracts tables and clean text chunks\n• Prepares raw files for vector indexing\n\nhttps://unstructured.io",
+        "text": "7/ Unstructured.io\n\nData ingestion and parsing engine for LLMs.\n\n\u2022 Parses complex PDFs, Word, and slides\n\u2022 Extracts tables and clean text chunks\n\u2022 Prepares raw files for vector indexing\n\nhttps://unstructured.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_07_unstructured.png"
       },
       {
-        "text": "8/ Chonkie\n\nBlazingly fast, lightweight text chunking library.\n\n• Token, sentence, and semantic chunking methods\n• Zero heavy dependencies for maximum speed\n• Keeps prompt context clean and token-efficient\n\nhttps://github.com/feyninc/chonkie",
+        "text": "8/ Chonkie\n\nBlazingly fast, lightweight text chunking library.\n\n\u2022 Token, sentence, and semantic chunking methods\n\u2022 Zero heavy dependencies for maximum speed\n\u2022 Keeps prompt context clean and token-efficient\n\nhttps://github.com/feyninc/chonkie",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_08_chonkie.png"
       },
       {
-        "text": "9/ FastEmbed (by Qdrant)\n\nFast, lightweight Python library for embeddings.\n\n• Runs embeddings locally via ONNX Runtime\n• No PyTorch or GPU required\n• Supports dense, sparse, and multilingual models\n\nhttps://github.com/qdrant/fastembed",
+        "text": "9/ FastEmbed (by Qdrant)\n\nFast, lightweight Python library for embeddings.\n\n\u2022 Runs embeddings locally via ONNX Runtime\n\u2022 No PyTorch or GPU required\n\u2022 Supports dense, sparse, and multilingual models\n\nhttps://github.com/qdrant/fastembed",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/production_rag/tweet_09_fastembed.png"
       },
       {
@@ -2081,7 +2081,7 @@
         "text": "11/ Join one of the largest AI News and Updates groups on Telegram:\nhttps://t.me/hashtag_ai"
       },
       {
-        "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "12/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ],
@@ -2096,63 +2096,63 @@
     "posted": true,
     "tweets": [
       {
-        "text": "1/ Decentralized physical infrastructure networks (DePIN) offer an alternative to centralized GPU monopolies.\n\n8 Web3 projects powering decentralized AI compute 🧵👇",
+        "text": "1/ Decentralized physical infrastructure networks (DePIN) offer an alternative to centralized GPU monopolies.\n\n8 Web3 projects powering decentralized AI compute \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_01_cover.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "2/ Bittensor (TAO)\n\nDecentralized market for machine intelligence.\n\n• Subnets specialize in text, voice, and vision\n• Yuma Consensus rewards top models\n• Competitive peer-to-peer compute network\n\nhttps://bittensor.com",
+        "text": "2/ Bittensor (TAO)\n\nDecentralized market for machine intelligence.\n\n\u2022 Subnets specialize in text, voice, and vision\n\u2022 Yuma Consensus rewards top models\n\u2022 Competitive peer-to-peer compute network\n\nhttps://bittensor.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_02_bittensor.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "3/ Render Network (RENDER)\n\nDecentralized GPU compute network.\n\n• Connects node operators with AI workloads\n• Distributed GPU clusters for rendering and ML\n• Cost-efficient alternative to cloud providers\n\nhttps://rendernetwork.com",
+        "text": "3/ Render Network (RENDER)\n\nDecentralized GPU compute network.\n\n\u2022 Connects node operators with AI workloads\n\u2022 Distributed GPU clusters for rendering and ML\n\u2022 Cost-efficient alternative to cloud providers\n\nhttps://rendernetwork.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_03_render.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "4/ Akash Network (AKT)\n\nDecentralized marketplace for cloud compute.\n\n• Open bidding on idle data center capacity\n• Deploy containers and AI workloads\n• Access to NVIDIA H100 and A100 clusters\n\nhttps://akash.network",
+        "text": "4/ Akash Network (AKT)\n\nDecentralized marketplace for cloud compute.\n\n\u2022 Open bidding on idle data center capacity\n\u2022 Deploy containers and AI workloads\n\u2022 Access to NVIDIA H100 and A100 clusters\n\nhttps://akash.network",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_04_akash.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "5/ io.net\n\nDecentralized GPU network for AI compute.\n\n• Aggregates GPUs from independent data centers\n• Clusters distributed hardware for ML inference\n• Fast on-demand provisioning\n\nhttps://io.net",
+        "text": "5/ io.net\n\nDecentralized GPU network for AI compute.\n\n\u2022 Aggregates GPUs from independent data centers\n\u2022 Clusters distributed hardware for ML inference\n\u2022 Fast on-demand provisioning\n\nhttps://io.net",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_05_ionet.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "6/ Ritual\n\nDecentralized AI coprocessor network.\n\n• Connects smart contracts directly to AI models\n• Cryptographic verification of model execution\n• Sovereign execution layer for decentralized apps\n\nhttps://ritual.net",
+        "text": "6/ Ritual\n\nDecentralized AI coprocessor network.\n\n\u2022 Connects smart contracts directly to AI models\n\u2022 Cryptographic verification of model execution\n\u2022 Sovereign execution layer for decentralized apps\n\nhttps://ritual.net",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_06_ritual.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "7/ Grass\n\nDecentralized web data scraping network.\n\n• Users share unused bandwidth for rewards\n• Scrapes web data for open AI training\n• Community-owned dataset collection\n\nhttps://getgrass.io",
+        "text": "7/ Grass\n\nDecentralized web data scraping network.\n\n\u2022 Users share unused bandwidth for rewards\n\u2022 Scrapes web data for open AI training\n\u2022 Community-owned dataset collection\n\nhttps://getgrass.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_07_grass.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "8/ Gensyn\n\nDecentralized protocol for deep learning.\n\n• Verification system for ML training\n• Uses probabilistic proof-of-learning\n• Connects global compute hardware\n\nhttps://gensyn.ai",
+        "text": "8/ Gensyn\n\nDecentralized protocol for deep learning.\n\n\u2022 Verification system for ML training\n\u2022 Uses probabilistic proof-of-learning\n\u2022 Connects global compute hardware\n\nhttps://gensyn.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_08_gensyn.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "9/ Fetch.ai (ASI Alliance)\n\nAutonomous economic agent framework.\n\n• Agents transact on-chain independently\n• Connects web services to smart contracts\n• Member of Artificial Superintelligence Alliance\n\nhttps://fetch.ai",
+        "text": "9/ Fetch.ai (ASI Alliance)\n\nAutonomous economic agent framework.\n\n\u2022 Agents transact on-chain independently\n\u2022 Connects web services to smart contracts\n\u2022 Member of Artificial Superintelligence Alliance\n\nhttps://fetch.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web3_ai_depin/tweet_09_fetch.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
@@ -2165,14 +2165,14 @@
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "11/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
+        "text": "11/ Web3 telegram channels worth joining:\n\n\u2022 Events: https://t.me/eventsweb3\n\u2022 Jobs: https://t.me/jobsweb3\n\u2022 News: https://t.me/web3newsfeed\n\u2022 Discussions: https://t.me/hashtagweb3",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
         "tweetId": "6af95869b9a106584c916a85"
       },
       {
-        "text": "12/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "12/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": true,
         "postedAt": "2026-11-15T06:59:58.413Z",
@@ -2192,39 +2192,39 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ Conversational AI has moved from robotic turn delay to sub-500ms real-time voice streaming.\n\n8 tools powering real-time voice AI agents 🧵👇",
+        "text": "1/ Conversational AI has moved from robotic turn delay to sub-500ms real-time voice streaming.\n\n8 tools powering real-time voice AI agents \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_01_cover.png"
       },
       {
-        "text": "2/ ElevenLabs\n\nFrontier voice synthesis and audio platform.\n\n• Natural text-to-speech across 30+ languages\n• Real-time conversational agent platform\n• Low-latency streaming WebSocket endpoints\n\nhttps://elevenlabs.io",
+        "text": "2/ ElevenLabs\n\nFrontier voice synthesis and audio platform.\n\n\u2022 Natural text-to-speech across 30+ languages\n\u2022 Real-time conversational agent platform\n\u2022 Low-latency streaming WebSocket endpoints\n\nhttps://elevenlabs.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_02_elevenlabs.png"
       },
       {
-        "text": "3/ LiveKit\n\nOpen-source WebRTC stack for voice agents.\n\n• Sub-100ms audio and video transport\n• Python and Node.js agent frameworks\n• Built-in barge-in and audio buffering\n\nhttps://livekit.io",
+        "text": "3/ LiveKit\n\nOpen-source WebRTC stack for voice agents.\n\n\u2022 Sub-100ms audio and video transport\n\u2022 Python and Node.js agent frameworks\n\u2022 Built-in barge-in and audio buffering\n\nhttps://livekit.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_03_livekit.png"
       },
       {
-        "text": "4/ Cartesia\n\nUltra-low latency streaming voice generation.\n\n• Sonic model serves voice in under 100ms\n• Natural human cadence and pronunciation\n• Built specifically for real-time interactive agents\n\nhttps://cartesia.ai",
+        "text": "4/ Cartesia\n\nUltra-low latency streaming voice generation.\n\n\u2022 Sonic model serves voice in under 100ms\n\u2022 Natural human cadence and pronunciation\n\u2022 Built specifically for real-time interactive agents\n\nhttps://cartesia.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_04_cartesia.png"
       },
       {
-        "text": "5/ Deepgram\n\nReal-time speech-to-text API engine.\n\n• Nova-2 model delivers fast transcription\n• Word-level timestamps & speaker diarization\n• Streaming audio recognition with WebSocket endpoints\n\nhttps://deepgram.com",
+        "text": "5/ Deepgram\n\nReal-time speech-to-text API engine.\n\n\u2022 Nova-2 model delivers fast transcription\n\u2022 Word-level timestamps & speaker diarization\n\u2022 Streaming audio recognition with WebSocket endpoints\n\nhttps://deepgram.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_05_deepgram.png"
       },
       {
-        "text": "6/ Vapi\n\nVoice AI platform for developers.\n\n• Orchestrates STT, LLM, and TTS in one API\n• Built-in telephony and SIP trunking\n• Fast interruption handling and noise removal\n\nhttps://vapi.ai",
+        "text": "6/ Vapi\n\nVoice AI platform for developers.\n\n\u2022 Orchestrates STT, LLM, and TTS in one API\n\u2022 Built-in telephony and SIP trunking\n\u2022 Fast interruption handling and noise removal\n\nhttps://vapi.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_06_vapi.png"
       },
       {
-        "text": "7/ Pipecat\n\nOpen-source framework for voice agents.\n\n• Pipeline architecture for audio and LLMs\n• Native support for WebRTC and Daily\n• Swap STT, model, and TTS providers easily\n\nhttps://github.com/pipecat-ai/pipecat",
+        "text": "7/ Pipecat\n\nOpen-source framework for voice agents.\n\n\u2022 Pipeline architecture for audio and LLMs\n\u2022 Native support for WebRTC and Daily\n\u2022 Swap STT, model, and TTS providers easily\n\nhttps://github.com/pipecat-ai/pipecat",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_07_pipecat.png"
       },
       {
-        "text": "8/ Whisper (OpenAI)\n\nOpen-source speech recognition model.\n\n• Accurate multilingual transcription\n• Robust to background noise and accents\n• Runs locally on CPU or GPU via whisper.cpp\n\nhttps://github.com/openai/whisper",
+        "text": "8/ Whisper (OpenAI)\n\nOpen-source speech recognition model.\n\n\u2022 Accurate multilingual transcription\n\u2022 Robust to background noise and accents\n\u2022 Runs locally on CPU or GPU via whisper.cpp\n\nhttps://github.com/openai/whisper",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_08_whisper.png"
       },
       {
-        "text": "9/ Kokoro (by Hexgrad)\n\nOpen-weight text-to-speech model.\n\n• 82M parameters: runs fast on consumer CPU\n• Studio-quality audio with zero license fees\n• Open alternative to proprietary voice APIs\n\nhttps://huggingface.co/hexgrad/Kokoro-82M",
+        "text": "9/ Kokoro (by Hexgrad)\n\nOpen-weight text-to-speech model.\n\n\u2022 82M parameters: runs fast on consumer CPU\n\u2022 Studio-quality audio with zero license fees\n\u2022 Open alternative to proprietary voice APIs\n\nhttps://huggingface.co/hexgrad/Kokoro-82M",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/voice_multimodal_agents/tweet_09_kokoro.png"
       },
       {
@@ -2248,7 +2248,7 @@
         "posted": false
       },
       {
-        "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -2263,39 +2263,39 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ Defending on-chain protocols against exploits requires rigorous fuzzing, static analysis, and formal verification.\n\n8 essential tools to audit smart contracts 🧵👇",
+        "text": "1/ Defending on-chain protocols against exploits requires rigorous fuzzing, static analysis, and formal verification.\n\n8 essential tools to audit smart contracts \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_01_cover.png"
       },
       {
-        "text": "2/ Foundry\n\nFast Ethereum development toolkit in Rust.\n\n• Write unit and fuzz tests in Solidity\n• Built-in invariant and differential fuzzing\n• Blazing execution with Forge and Anvil\n\nhttps://getfoundry.sh",
+        "text": "2/ Foundry\n\nFast Ethereum development toolkit in Rust.\n\n\u2022 Write unit and fuzz tests in Solidity\n\u2022 Built-in invariant and differential fuzzing\n\u2022 Blazing execution with Forge and Anvil\n\nhttps://getfoundry.sh",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_02_foundry.png"
       },
       {
-        "text": "3/ Slither (by Trail of Bits)\n\nStatic analysis framework for Solidity.\n\n• Detects reentrancy and storage bugs\n• Visualizes call graphs and contract paths\n• CI/CD integration for automated checks\n\nhttps://github.com/crytic/slither",
+        "text": "3/ Slither (by Trail of Bits)\n\nStatic analysis framework for Solidity.\n\n\u2022 Detects reentrancy and storage bugs\n\u2022 Visualizes call graphs and contract paths\n\u2022 CI/CD integration for automated checks\n\nhttps://github.com/crytic/slither",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_03_slither.png"
       },
       {
-        "text": "4/ Echidna (by Trail of Bits)\n\nProperty-based fuzz tester for smart contracts.\n\n• Generates inputs to break protocol invariants\n• Catches edge cases unit tests miss\n• Standard for fuzz testing DeFi logic\n\nhttps://github.com/crytic/echidna",
+        "text": "4/ Echidna (by Trail of Bits)\n\nProperty-based fuzz tester for smart contracts.\n\n\u2022 Generates inputs to break protocol invariants\n\u2022 Catches edge cases unit tests miss\n\u2022 Standard for fuzz testing DeFi logic\n\nhttps://github.com/crytic/echidna",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_04_echidna.png"
       },
       {
-        "text": "5/ Solodit\n\nSearch engine for smart contract bugs.\n\n• Index of 15,000+ real audit reports\n• Search by protocol, bug type, and severity\n• Essential research tool for security auditors\n\nhttps://solodit.xyz",
+        "text": "5/ Solodit\n\nSearch engine for smart contract bugs.\n\n\u2022 Index of 15,000+ real audit reports\n\u2022 Search by protocol, bug type, and severity\n\u2022 Essential research tool for security auditors\n\nhttps://solodit.xyz",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_05_solodit.png"
       },
       {
-        "text": "6/ Damn Vulnerable DeFi\n\nHands-on wargame for offensive DeFi security.\n\n• Exploit broken flash loans and oracles\n• Solve real-world exploit challenges in Foundry\n• Practical training ground for auditors\n\nhttps://damnvulnerabledefi.xyz",
+        "text": "6/ Damn Vulnerable DeFi\n\nHands-on wargame for offensive DeFi security.\n\n\u2022 Exploit broken flash loans and oracles\n\u2022 Solve real-world exploit challenges in Foundry\n\u2022 Practical training ground for auditors\n\nhttps://damnvulnerabledefi.xyz",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_06_damnvulnerabledefi.png"
       },
       {
-        "text": "7/ Cyfrin Updraft\n\nSmart contract security learning platform.\n\n• Patrick Collins' curriculum from basics to audits\n• Invariant testing and formal verification\n• Free, practical developer education\n\nhttps://updraft.cyfrin.io",
+        "text": "7/ Cyfrin Updraft\n\nSmart contract security learning platform.\n\n\u2022 Patrick Collins' curriculum from basics to audits\n\u2022 Invariant testing and formal verification\n\u2022 Free, practical developer education\n\nhttps://updraft.cyfrin.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_07_cyfrin_updraft.png"
       },
       {
-        "text": "8/ Certora Prover\n\nFormal verification engine for smart contracts.\n\n• Mathematically proves contract specifications\n• Verifies invariants across every state\n• Trusted by top protocols like Aave & Maker\n\nhttps://certora.com",
+        "text": "8/ Certora Prover\n\nFormal verification engine for smart contracts.\n\n\u2022 Mathematically proves contract specifications\n\u2022 Verifies invariants across every state\n\u2022 Trusted by top protocols like Aave & Maker\n\nhttps://certora.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_08_certora.png"
       },
       {
-        "text": "9/ OpenZeppelin Contracts & Defender\n\nBattle-tested smart contract library.\n\n• Standard ERC-20, ERC-721, and access control\n• Defender: automated monitoring & operations\n• Foundational code for EVM protocols\n\nhttps://openzeppelin.com",
+        "text": "9/ OpenZeppelin Contracts & Defender\n\nBattle-tested smart contract library.\n\n\u2022 Standard ERC-20, ERC-721, and access control\n\u2022 Defender: automated monitoring & operations\n\u2022 Foundational code for EVM protocols\n\nhttps://openzeppelin.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/smart_contract_security/tweet_09_openzeppelin.png"
       },
       {
@@ -2309,12 +2309,12 @@
         "posted": false
       },
       {
-        "text": "12/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
+        "text": "12/ Web3 telegram channels worth joining:\n\n\u2022 Events: https://t.me/eventsweb3\n\u2022 Jobs: https://t.me/jobsweb3\n\u2022 News: https://t.me/web3newsfeed\n\u2022 Discussions: https://t.me/hashtagweb3",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png",
         "posted": false
       },
       {
-        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "13/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -2328,39 +2328,39 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ AI scrapers handle dynamic JavaScript rendering and extract clean markdown and structured schemas automatically.\n\n8 modern AI web scrapers & extraction engines 🧵👇",
+        "text": "1/ AI scrapers handle dynamic JavaScript rendering and extract clean markdown and structured schemas automatically.\n\n8 modern AI web scrapers & extraction engines \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_01_cover.png"
       },
       {
-        "text": "2/ Firecrawl (YC W24)\n\nTurn websites into clean, LLM-ready markdown.\n\n• Crawls entire domains with subpage recursion\n• Handles JS rendering and bot barriers\n• Clean markdown and JSON schema outputs\n\nhttps://www.firecrawl.dev",
+        "text": "2/ Firecrawl (YC W24)\n\nTurn websites into clean, LLM-ready markdown.\n\n\u2022 Crawls entire domains with subpage recursion\n\u2022 Handles JS rendering and bot barriers\n\u2022 Clean markdown and JSON schema outputs\n\nhttps://www.firecrawl.dev",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_02_firecrawl.png"
       },
       {
-        "text": "3/ Crawl4AI\n\nOpen-source web crawler optimized for LLMs.\n\n• Extracts structured data from dynamic apps\n• Semantic text chunking with CSS pruning\n• Free, fast, and self-hosted\n\nhttps://github.com/unclecode/crawl4ai",
+        "text": "3/ Crawl4AI\n\nOpen-source web crawler optimized for LLMs.\n\n\u2022 Extracts structured data from dynamic apps\n\u2022 Semantic text chunking with CSS pruning\n\u2022 Free, fast, and self-hosted\n\nhttps://github.com/unclecode/crawl4ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_03_crawl4ai.png"
       },
       {
-        "text": "4/ Jina Reader\n\nConvert any URL into clean markdown instantly.\n\n• Prefix any URL with r.jina.ai to read it\n• Strips ads, navigation, and cookie banners\n• Built-in web search via s.jina.ai\n\nhttps://jina.ai/reader",
+        "text": "4/ Jina Reader\n\nConvert any URL into clean markdown instantly.\n\n\u2022 Prefix any URL with r.jina.ai to read it\n\u2022 Strips ads, navigation, and cookie banners\n\u2022 Built-in web search via s.jina.ai\n\nhttps://jina.ai/reader",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_04_jina_reader.png"
       },
       {
-        "text": "5/ ScrapeGraphAI\n\nPython library using LLMs to scrape websites.\n\n• Specify target data in plain English\n• Automatically builds extraction logic\n• Resilient to CSS and page layout updates\n\nhttps://github.com/ScrapeGraphAI/Scrapegraph-ai",
+        "text": "5/ ScrapeGraphAI\n\nPython library using LLMs to scrape websites.\n\n\u2022 Specify target data in plain English\n\u2022 Automatically builds extraction logic\n\u2022 Resilient to CSS and page layout updates\n\nhttps://github.com/ScrapeGraphAI/Scrapegraph-ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_05_scrapegraph.png"
       },
       {
-        "text": "6/ Browser-Use\n\nAutonomous web navigation for AI agents.\n\n• Interacts with buttons, logins, and forms\n• Vision-driven DOM tree parsing\n• Automates multi-step workflows online\n\nhttps://github.com/browser-use/browser-use",
+        "text": "6/ Browser-Use\n\nAutonomous web navigation for AI agents.\n\n\u2022 Interacts with buttons, logins, and forms\n\u2022 Vision-driven DOM tree parsing\n\u2022 Automates multi-step workflows online\n\nhttps://github.com/browser-use/browser-use",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_06_browser_use.png"
       },
       {
-        "text": "7/ Apify\n\nCloud platform for web scraping and automation.\n\n• 1,500+ pre-built scrapers for top platforms\n• Handles proxy rotation and retries\n• Serverless actors for scheduled data jobs\n\nhttps://apify.com",
+        "text": "7/ Apify\n\nCloud platform for web scraping and automation.\n\n\u2022 1,500+ pre-built scrapers for top platforms\n\u2022 Handles proxy rotation and retries\n\u2022 Serverless actors for scheduled data jobs\n\nhttps://apify.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_07_apify.png"
       },
       {
-        "text": "8/ Browserless\n\nHeadless Chrome for scalable automation.\n\n• Run Playwright and Puppeteer in the cloud\n• Manages browser scaling and memory\n• Built-in proxy rotation and CAPTCHA handling\n\nhttps://www.browserless.io",
+        "text": "8/ Browserless\n\nHeadless Chrome for scalable automation.\n\n\u2022 Run Playwright and Puppeteer in the cloud\n\u2022 Manages browser scaling and memory\n\u2022 Built-in proxy rotation and CAPTCHA handling\n\nhttps://www.browserless.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_08_browserless.png"
       },
       {
-        "text": "9/ Trafilatura\n\nPython library for clean web text extraction.\n\n• Fast, lightweight main body parser\n• Strips headers, footers, and boilerplate\n• Standard tool for web dataset curation\n\nhttps://trafilatura.readthedocs.io",
+        "text": "9/ Trafilatura\n\nPython library for clean web text extraction.\n\n\u2022 Fast, lightweight main body parser\n\u2022 Strips headers, footers, and boilerplate\n\u2022 Standard tool for web dataset curation\n\nhttps://trafilatura.readthedocs.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_web_scrapers/tweet_09_trafilatura.png"
       },
       {
@@ -2384,7 +2384,7 @@
         "posted": false
       },
       {
-        "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -2398,39 +2398,39 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ Rigorous AI development requires automated benchmark suites, CI assertions, and regression testing beyond playground vibes.\n\n8 essential frameworks to test & evaluate AI 🧵👇",
+        "text": "1/ Rigorous AI development requires automated benchmark suites, CI assertions, and regression testing beyond playground vibes.\n\n8 essential frameworks to test & evaluate AI \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_01_cover.png"
       },
       {
-        "text": "2/ SWE-bench\n\nGold standard benchmark for software agents.\n\n• Evaluates models on real GitHub issues\n• Tests repo navigation, editing, and bug fixes\n• Industry benchmark for coding capabilities\n\nhttps://www.swebench.com",
+        "text": "2/ SWE-bench\n\nGold standard benchmark for software agents.\n\n\u2022 Evaluates models on real GitHub issues\n\u2022 Tests repo navigation, editing, and bug fixes\n\u2022 Industry benchmark for coding capabilities\n\nhttps://www.swebench.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_02_swebench.png"
       },
       {
-        "text": "3/ Promptfoo\n\nOpen-source CLI for testing prompts and outputs.\n\n• Automated regression testing for prompts\n• Red-teaming and injection vulnerability scans\n• CI/CD integration for production safety\n\nhttps://github.com/promptfoo/promptfoo",
+        "text": "3/ Promptfoo\n\nOpen-source CLI for testing prompts and outputs.\n\n\u2022 Automated regression testing for prompts\n\u2022 Red-teaming and injection vulnerability scans\n\u2022 CI/CD integration for production safety\n\nhttps://github.com/promptfoo/promptfoo",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_03_promptfoo.png"
       },
       {
-        "text": "4/ DeepEval\n\nUnit testing framework for LLM applications.\n\n• Evaluates hallucination and answer relevancy\n• Pytest-like syntax for custom eval assertions\n• Track eval metrics across model iterations\n\nhttps://github.com/confident-ai/deepeval",
+        "text": "4/ DeepEval\n\nUnit testing framework for LLM applications.\n\n\u2022 Evaluates hallucination and answer relevancy\n\u2022 Pytest-like syntax for custom eval assertions\n\u2022 Track eval metrics across model iterations\n\nhttps://github.com/confident-ai/deepeval",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_04_deepeval.png"
       },
       {
-        "text": "5/ LangSmith (by LangChain)\n\nObservability and evaluation for LLM apps.\n\n• Step-by-step tracing of agent loops\n• Curate test sets from production logs\n• Benchmark prompts on real user queries\n\nhttps://smith.langchain.com",
+        "text": "5/ LangSmith (by LangChain)\n\nObservability and evaluation for LLM apps.\n\n\u2022 Step-by-step tracing of agent loops\n\u2022 Curate test sets from production logs\n\u2022 Benchmark prompts on real user queries\n\nhttps://smith.langchain.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_05_langsmith.png"
       },
       {
-        "text": "6/ Braintrust\n\nEvaluation and experimentation platform.\n\n• Fast scoring against golden test datasets\n• Playground with side-by-side model diffs\n• Built for engineering and product teams\n\nhttps://www.braintrust.dev",
+        "text": "6/ Braintrust\n\nEvaluation and experimentation platform.\n\n\u2022 Fast scoring against golden test datasets\n\u2022 Playground with side-by-side model diffs\n\u2022 Built for engineering and product teams\n\nhttps://www.braintrust.dev",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_06_braintrust.png"
       },
       {
-        "text": "7/ GAIA Benchmark\n\nBenchmark for General AI Assistants.\n\n• Tests complex reasoning, multimodal, and web\n• Resistant to gaming: clear human questions\n• Measures autonomy on real-world tasks\n\nhttps://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "text": "7/ GAIA Benchmark\n\nBenchmark for General AI Assistants.\n\n\u2022 Tests complex reasoning, multimodal, and web\n\u2022 Resistant to gaming: clear human questions\n\u2022 Measures autonomy on real-world tasks\n\nhttps://huggingface.co/spaces/gaia-benchmark/leaderboard",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_07_gaia.png"
       },
       {
-        "text": "8/ Inspect AI\n\nModel evaluation framework from the UK AISI.\n\n• Framework for model capabilities & safety\n• Standardized evaluation of reasoning tasks\n• Extensible definitions for agent tests\n\nhttps://inspect.ai-safety-institute.org.uk",
+        "text": "8/ Inspect AI\n\nModel evaluation framework from the UK AISI.\n\n\u2022 Framework for model capabilities & safety\n\u2022 Standardized evaluation of reasoning tasks\n\u2022 Extensible definitions for agent tests\n\nhttps://inspect.ai-safety-institute.org.uk",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_08_inspect.png"
       },
       {
-        "text": "9/ LM Eval Suite (EleutherAI)\n\nThe standard evaluation suite for open LLMs.\n\n• 60+ benchmarks (MMLU, GSM8K, ARC)\n• Powers Hugging Face Open LLM Leaderboard\n• Unified interface for testing open weights\n\nhttps://github.com/EleutherAI/lm-evaluation-harness",
+        "text": "9/ LM Eval Suite (EleutherAI)\n\nThe standard evaluation suite for open LLMs.\n\n\u2022 60+ benchmarks (MMLU, GSM8K, ARC)\n\u2022 Powers Hugging Face Open LLM Leaderboard\n\u2022 Unified interface for testing open weights\n\nhttps://github.com/EleutherAI/lm-evaluation-harness",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_evaluation_testing/tweet_09_lmeval.png"
       },
       {
@@ -2454,7 +2454,7 @@
         "posted": false
       },
       {
-        "text": "14/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -2468,39 +2468,39 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ Modern DeFi protocols manage tens of billions across automated liquidity, lending, and cross-chain messaging.\n\n8 protocols that define modern DeFi architecture 🧵👇",
+        "text": "1/ Modern DeFi protocols manage tens of billions across automated liquidity, lending, and cross-chain messaging.\n\n8 protocols that define modern DeFi architecture \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_01_cover.png"
       },
       {
-        "text": "2/ Uniswap v4\n\nThe definitive automated market maker (AMM).\n\n• Singleton contract slashes multi-hop gas fees\n• Customizable pool hooks for dynamic fees\n• Flash accounting with transient storage\n\nhttps://uniswap.org",
+        "text": "2/ Uniswap v4\n\nThe definitive automated market maker (AMM).\n\n\u2022 Singleton contract slashes multi-hop gas fees\n\u2022 Customizable pool hooks for dynamic fees\n\u2022 Flash accounting with transient storage\n\nhttps://uniswap.org",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_02_uniswap.png"
       },
       {
-        "text": "3/ Aave v3\n\nNon-custodial liquidity market protocol.\n\n• Borrow and lend crypto assets programmatically\n• Isolation mode for safer new asset onboarding\n• High-efficiency mode (eMode) for correlated assets\n\nhttps://aave.com",
+        "text": "3/ Aave v3\n\nNon-custodial liquidity market protocol.\n\n\u2022 Borrow and lend crypto assets programmatically\n\u2022 Isolation mode for safer new asset onboarding\n\u2022 High-efficiency mode (eMode) for correlated assets\n\nhttps://aave.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_03_aave.png"
       },
       {
-        "text": "4/ Curve Finance\n\nAMM optimized for pegged assets and stablecoins.\n\n• StableSwap invariant minimizes slippage\n• veCRV governance and liquidity gauge voting\n• Core liquidity layer for on-chain dollars\n\nhttps://curve.fi",
+        "text": "4/ Curve Finance\n\nAMM optimized for pegged assets and stablecoins.\n\n\u2022 StableSwap invariant minimizes slippage\n\u2022 veCRV governance and liquidity gauge voting\n\u2022 Core liquidity layer for on-chain dollars\n\nhttps://curve.fi",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_04_curve.png"
       },
       {
-        "text": "5/ Chainlink CCIP\n\nCross-Chain Interoperability Protocol for DeFi.\n\n• Cross-chain token transfers and messages\n• Risk Management Network verifies transactions\n• Enables multi-chain lending and liquidity\n\nhttps://chain.link",
+        "text": "5/ Chainlink CCIP\n\nCross-Chain Interoperability Protocol for DeFi.\n\n\u2022 Cross-chain token transfers and messages\n\u2022 Risk Management Network verifies transactions\n\u2022 Enables multi-chain lending and liquidity\n\nhttps://chain.link",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_05_chainlink_ccip.png"
       },
       {
-        "text": "6/ EigenLayer\n\nRestaking primitive for Ethereum security.\n\n• Staked ETH secures external networks (AVSs)\n• Pooled validation for bridges and oracles\n• Programmatic rewards for node operators\n\nhttps://www.eigenlayer.xyz",
+        "text": "6/ EigenLayer\n\nRestaking primitive for Ethereum security.\n\n\u2022 Staked ETH secures external networks (AVSs)\n\u2022 Pooled validation for bridges and oracles\n\u2022 Programmatic rewards for node operators\n\nhttps://www.eigenlayer.xyz",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_06_eigenlayer.png"
       },
       {
-        "text": "7/ Morpho\n\nPermissionless lending primitive and optimizer.\n\n• Morpho Blue: isolated, immutable lending pairs\n• MetaMorpho: automated risk curation vaults\n• High capital efficiency for lenders\n\nhttps://morpho.org",
+        "text": "7/ Morpho\n\nPermissionless lending primitive and optimizer.\n\n\u2022 Morpho Blue: isolated, immutable lending pairs\n\u2022 MetaMorpho: automated risk curation vaults\n\u2022 High capital efficiency for lenders\n\nhttps://morpho.org",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_07_morpho.png"
       },
       {
-        "text": "8/ Sky (formerly MakerDAO)\n\nDecentralized collateralized debt engine.\n\n• Issues USDS backed by crypto and RWAs\n• Stability fees maintain peg resilience\n• The longest-running DeFi credit protocol\n\nhttps://sky.money",
+        "text": "8/ Sky (formerly MakerDAO)\n\nDecentralized collateralized debt engine.\n\n\u2022 Issues USDS backed by crypto and RWAs\n\u2022 Stability fees maintain peg resilience\n\u2022 The longest-running DeFi credit protocol\n\nhttps://sky.money",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_08_sky.png"
       },
       {
-        "text": "9/ Ethena Labs\n\nSynthetic dollar protocol (USDe).\n\n• Delta-neutral hedging with perpetual futures\n• Generates yield from staking and basis spread\n• Crypto-native synthetic dollar primitive\n\nhttps://ethena.fi",
+        "text": "9/ Ethena Labs\n\nSynthetic dollar protocol (USDe).\n\n\u2022 Delta-neutral hedging with perpetual futures\n\u2022 Generates yield from staking and basis spread\n\u2022 Crypto-native synthetic dollar primitive\n\nhttps://ethena.fi",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/defi_architecture/tweet_09_ethena.png"
       },
       {
@@ -2514,12 +2514,12 @@
         "posted": false
       },
       {
-        "text": "12/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
+        "text": "12/ Web3 telegram channels worth joining:\n\n\u2022 Events: https://t.me/eventsweb3\n\u2022 Jobs: https://t.me/jobsweb3\n\u2022 News: https://t.me/web3newsfeed\n\u2022 Discussions: https://t.me/hashtagweb3",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png",
         "posted": false
       },
       {
-        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "13/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -2533,39 +2533,39 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ Open vision models can now segment video, estimate 3D depth, and run document OCR completely offline.\n\n8 state-of-the-art open vision models you can run 🧵👇",
+        "text": "1/ Open vision models can now segment video, estimate 3D depth, and run document OCR completely offline.\n\n8 state-of-the-art open vision models you can run \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_01_cover.png"
       },
       {
-        "text": "2/ SAM 2 (by Meta)\n\nPromptable visual segmentation for images and video.\n\n• Zero-shot mask tracking for video objects\n• Real-time tracking through visual occlusion\n• Apache 2.0 open weights and codebase\n\nhttps://github.com/facebookresearch/segment-anything-2",
+        "text": "2/ SAM 2 (by Meta)\n\nPromptable visual segmentation for images and video.\n\n\u2022 Zero-shot mask tracking for video objects\n\u2022 Real-time tracking through visual occlusion\n\u2022 Apache 2.0 open weights and codebase\n\nhttps://github.com/facebookresearch/segment-anything-2",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_02_sam2.png"
       },
       {
-        "text": "3/ YOLOv11 (by Ultralytics)\n\nReal-time object detection and segmentation.\n\n• Fast detection, pose tracking, and masks\n• Lightweight architecture for edge devices\n• Low latency on CPU, mobile, and GPUs\n\nhttps://github.com/ultralytics/ultralytics",
+        "text": "3/ YOLOv11 (by Ultralytics)\n\nReal-time object detection and segmentation.\n\n\u2022 Fast detection, pose tracking, and masks\n\u2022 Lightweight architecture for edge devices\n\u2022 Low latency on CPU, mobile, and GPUs\n\nhttps://github.com/ultralytics/ultralytics",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_03_yolov11.png"
       },
       {
-        "text": "4/ Florence-2 (by Microsoft)\n\nLightweight vision model for visual grounding.\n\n• Unified model for captioning, detection, OCR\n• Detailed spatial region descriptions\n• Compact design runs fast on consumer GPUs\n\nhttps://huggingface.co/microsoft/Florence-2-large",
+        "text": "4/ Florence-2 (by Microsoft)\n\nLightweight vision model for visual grounding.\n\n\u2022 Unified model for captioning, detection, OCR\n\u2022 Detailed spatial region descriptions\n\u2022 Compact design runs fast on consumer GPUs\n\nhttps://huggingface.co/microsoft/Florence-2-large",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_04_florence2.png"
       },
       {
-        "text": "5/ Depth Anything v2\n\nMonocular depth estimation from 2D images.\n\n• Accurate 3D depth maps from regular photos\n• Fast inference with sharp boundary detail\n• Essential primitive for robotics and 3D\n\nhttps://github.com/DepthAnything/Depth-Anything-V2",
+        "text": "5/ Depth Anything v2\n\nMonocular depth estimation from 2D images.\n\n\u2022 Accurate 3D depth maps from regular photos\n\u2022 Fast inference with sharp boundary detail\n\u2022 Essential primitive for robotics and 3D\n\nhttps://github.com/DepthAnything/Depth-Anything-V2",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_05_depth_anything.png"
       },
       {
-        "text": "6/ Flux.1 (by Black Forest Labs)\n\nOpen-weights text-to-image foundation model.\n\n• 12B parameter rectified flow transformer\n• Accurate typography and high photorealism\n• Schnell & Dev weights for local GPUs\n\nhttps://github.com/black-forest-labs/flux",
+        "text": "6/ Flux.1 (by Black Forest Labs)\n\nOpen-weights text-to-image foundation model.\n\n\u2022 12B parameter rectified flow transformer\n\u2022 Accurate typography and high photorealism\n\u2022 Schnell & Dev weights for local GPUs\n\nhttps://github.com/black-forest-labs/flux",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_06_flux.png"
       },
       {
-        "text": "7/ Qwen2-VL (by Alibaba)\n\nOpen vision-language foundation model.\n\n• Processes high-res images and long video\n• Reads complex charts, diagrams, and tables\n• Operates mobile and desktop UIs directly\n\nhttps://github.com/QwenLM/Qwen2-VL",
+        "text": "7/ Qwen2-VL (by Alibaba)\n\nOpen vision-language foundation model.\n\n\u2022 Processes high-res images and long video\n\u2022 Reads complex charts, diagrams, and tables\n\u2022 Operates mobile and desktop UIs directly\n\nhttps://github.com/QwenLM/Qwen2-VL",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_07_qwen2_vl.png"
       },
       {
-        "text": "8/ Stable Diffusion 3.5\n\nMultimodal open image generation model.\n\n• Diffusion Transformer (MMDiT) design\n• Strong prompt adherence and visual quality\n• Permissive license for self-hosted use\n\nhttps://stability.ai",
+        "text": "8/ Stable Diffusion 3.5\n\nMultimodal open image generation model.\n\n\u2022 Diffusion Transformer (MMDiT) design\n\u2022 Strong prompt adherence and visual quality\n\u2022 Permissive license for self-hosted use\n\nhttps://stability.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_08_sd35.png"
       },
       {
-        "text": "9/ PaddleOCR\n\nLightweight optical character recognition toolkit.\n\n• Multilingual OCR supporting 80+ languages\n• Ultra-compact size (8.6 MB) runs fast on CPU\n• High accuracy on receipts, tables, and forms\n\nhttps://github.com/PaddlePaddle/PaddleOCR",
+        "text": "9/ PaddleOCR\n\nLightweight optical character recognition toolkit.\n\n\u2022 Multilingual OCR supporting 80+ languages\n\u2022 Ultra-compact size (8.6 MB) runs fast on CPU\n\u2022 High accuracy on receipts, tables, and forms\n\nhttps://github.com/PaddlePaddle/PaddleOCR",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/computer_vision_models/tweet_09_paddleocr.png"
       },
       {
@@ -2584,7 +2584,7 @@
         "posted": false
       },
       {
-        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "13/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -2598,47 +2598,47 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ Software agents cannot open bank accounts, so crypto rails give them balance sheets.\n\n8 tools powering AI agents with wallets 🧵👇",
+        "text": "1/ Software agents cannot open bank accounts, so crypto rails give them balance sheets.\n\n8 tools powering AI agents with wallets \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_01_cover.png",
         "posted": false
       },
       {
-        "text": "2/ Coinbase AgentKit\n\nTurn AI agents into on-chain actors.\n\n• Wallets on Base and Solana\n• Automated token transfers and swaps\n• Integrates with LangChain and CrewAI\n\nhttps://github.com/coinbase/agentkit",
+        "text": "2/ Coinbase AgentKit\n\nTurn AI agents into on-chain actors.\n\n\u2022 Wallets on Base and Solana\n\u2022 Automated token transfers and swaps\n\u2022 Integrates with LangChain and CrewAI\n\nhttps://github.com/coinbase/agentkit",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_02_agentkit.png",
         "posted": false
       },
       {
-        "text": "3/ Privy Server Wallets\n\nWallet infrastructure for autonomous bots.\n\n• Isolated programmatic wallets per agent\n• Secure key management without seed phrases\n• Enforce strict spending caps\n\nhttps://privy.io",
+        "text": "3/ Privy Server Wallets\n\nWallet infrastructure for autonomous bots.\n\n\u2022 Isolated programmatic wallets per agent\n\u2022 Secure key management without seed phrases\n\u2022 Enforce strict spending caps\n\nhttps://privy.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_03_privy.png",
         "posted": false
       },
       {
-        "text": "4/ ERC-4337 Account Abstraction\n\nSmart contract accounts for automation.\n\n• Session keys let bots sign transactions safely\n• Gas sponsorship via paymasters\n• Batch execution in one transaction\n\nhttps://erc4337.io",
+        "text": "4/ ERC-4337 Account Abstraction\n\nSmart contract accounts for automation.\n\n\u2022 Session keys let bots sign transactions safely\n\u2022 Gas sponsorship via paymasters\n\u2022 Batch execution in one transaction\n\nhttps://erc4337.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_04_erc4337.png",
         "posted": false
       },
       {
-        "text": "5/ x402 Open Protocol\n\nHTTP 402 Payment Required for AI agents.\n\n• APIs return price headers per call\n• Agents pay autonomously with stablecoins\n• Replaces monthly API subscriptions\n\nhttps://x402.org",
+        "text": "5/ x402 Open Protocol\n\nHTTP 402 Payment Required for AI agents.\n\n\u2022 APIs return price headers per call\n\u2022 Agents pay autonomously with stablecoins\n\u2022 Replaces monthly API subscriptions\n\nhttps://x402.org",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_05_x402.png",
         "posted": false
       },
       {
-        "text": "6/ Biconomy MEE\n\nCross-chain execution for agent swarms.\n\n• Delegated transaction authorization\n• Intent execution across EVM chains\n• Unified cross-chain gas abstraction\n\nhttps://biconomy.io",
+        "text": "6/ Biconomy MEE\n\nCross-chain execution for agent swarms.\n\n\u2022 Delegated transaction authorization\n\u2022 Intent execution across EVM chains\n\u2022 Unified cross-chain gas abstraction\n\nhttps://biconomy.io",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_06_biconomy.png",
         "posted": false
       },
       {
-        "text": "7/ Safe Smart Accounts\n\nBattle-tested multisig and agent guardrails.\n\n• Restrict contracts an agent can touch\n• Enforce daily balance withdrawal limits\n• Protects on-chain treasury funds\n\nhttps://safe.global",
+        "text": "7/ Safe Smart Accounts\n\nBattle-tested multisig and agent guardrails.\n\n\u2022 Restrict contracts an agent can touch\n\u2022 Enforce daily balance withdrawal limits\n\u2022 Protects on-chain treasury funds\n\nhttps://safe.global",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_07_safe.png",
         "posted": false
       },
       {
-        "text": "8/ Turnkey\n\nFast non-custodial wallet infrastructure.\n\n• Sub-second signing in secure enclaves\n• Strict automated policy engine\n• Built for autonomous fintech agents\n\nhttps://turnkey.com",
+        "text": "8/ Turnkey\n\nFast non-custodial wallet infrastructure.\n\n\u2022 Sub-second signing in secure enclaves\n\u2022 Strict automated policy engine\n\u2022 Built for autonomous fintech agents\n\nhttps://turnkey.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_08_turnkey.png",
         "posted": false
       },
       {
-        "text": "9/ Hyperbolic\n\nDecentralized AI inference on-chain.\n\n• Pay for open models directly with crypto\n• Verifiable compute proofs\n• No credit cards or cloud contracts\n\nhttps://hyperbolic.xyz",
+        "text": "9/ Hyperbolic\n\nDecentralized AI inference on-chain.\n\n\u2022 Pay for open models directly with crypto\n\u2022 Verifiable compute proofs\n\u2022 No credit cards or cloud contracts\n\nhttps://hyperbolic.xyz",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_agents_wallets/tweet_09_hyperbolic.png",
         "posted": false
       },
@@ -2653,12 +2653,12 @@
         "posted": false
       },
       {
-        "text": "12/ Web3 telegram channels worth joining:\n\n• Events: https://t.me/eventsweb3\n• Jobs: https://t.me/jobsweb3\n• News: https://t.me/web3newsfeed\n• Discussions: https://t.me/hashtagweb3",
+        "text": "12/ Web3 telegram channels worth joining:\n\n\u2022 Events: https://t.me/eventsweb3\n\u2022 Jobs: https://t.me/jobsweb3\n\u2022 News: https://t.me/web3newsfeed\n\u2022 Discussions: https://t.me/hashtagweb3",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/web3_channels.png",
         "posted": false
       },
       {
-        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "13/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -2672,47 +2672,47 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ Local embeddings and search turn your private notes into a fast reasoning engine.\n\n8 tools to build an AI second brain 🧵👇",
+        "text": "1/ Local embeddings and search turn your private notes into a fast reasoning engine.\n\n8 tools to build an AI second brain \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_01_cover.png",
         "posted": false
       },
       {
-        "text": "2/ Obsidian + Local LLM\n\nPrivate offline knowledge base.\n\n• Local Markdown files with no vendor lock-in\n• Query notes using local embeddings\n• Never sends private notes to cloud APIs\n\nhttps://obsidian.md",
+        "text": "2/ Obsidian + Local LLM\n\nPrivate offline knowledge base.\n\n\u2022 Local Markdown files with no vendor lock-in\n\u2022 Query notes using local embeddings\n\u2022 Never sends private notes to cloud APIs\n\nhttps://obsidian.md",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_02_obsidian.png",
         "posted": false
       },
       {
-        "text": "3/ Readwise Reader\n\nInbox for web articles, newsletters, and PDFs.\n\n• Saves highlights across web and Kindle\n• Fast inline AI summaries\n• Syncs directly to Obsidian and Notion\n\nhttps://readwise.io/read",
+        "text": "3/ Readwise Reader\n\nInbox for web articles, newsletters, and PDFs.\n\n\u2022 Saves highlights across web and Kindle\n\u2022 Fast inline AI summaries\n\u2022 Syncs directly to Obsidian and Notion\n\nhttps://readwise.io/read",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_03_readwise.png",
         "posted": false
       },
       {
-        "text": "4/ Google NotebookLM\n\nNotebook assistant grounded in your files.\n\n• Answers linked directly to exact source quotes\n• Generates Audio Overviews of dense papers\n• Analyzes 50+ PDFs simultaneously\n\nhttps://notebooklm.google",
+        "text": "4/ Google NotebookLM\n\nNotebook assistant grounded in your files.\n\n\u2022 Answers linked directly to exact source quotes\n\u2022 Generates Audio Overviews of dense papers\n\u2022 Analyzes 50+ PDFs simultaneously\n\nhttps://notebooklm.google",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_04_notebooklm.png",
         "posted": false
       },
       {
-        "text": "5/ Elicit\n\nResearch assistant for scientific literature.\n\n• Searches 200M+ research papers\n• Extracts study data into structured tables\n• Finds consensus across academic papers\n\nhttps://elicit.com",
+        "text": "5/ Elicit\n\nResearch assistant for scientific literature.\n\n\u2022 Searches 200M+ research papers\n\u2022 Extracts study data into structured tables\n\u2022 Finds consensus across academic papers\n\nhttps://elicit.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_05_elicit.png",
         "posted": false
       },
       {
-        "text": "6/ Khoj\n\nOpen-source desktop AI for personal files.\n\n• Search markdown, PDFs, and GitHub repos\n• Runs with local Ollama models\n• Obsidian and Emacs integrations\n\nhttps://khoj.dev",
+        "text": "6/ Khoj\n\nOpen-source desktop AI for personal files.\n\n\u2022 Search markdown, PDFs, and GitHub repos\n\u2022 Runs with local Ollama models\n\u2022 Obsidian and Emacs integrations\n\nhttps://khoj.dev",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_06_khoj.png",
         "posted": false
       },
       {
-        "text": "7/ Mem.ai\n\nSelf-organizing workspace.\n\n• No manual tagging or folder management\n• Surfaces past relevant notes as you write\n• Search across your whole note history\n\nhttps://mem.ai",
+        "text": "7/ Mem.ai\n\nSelf-organizing workspace.\n\n\u2022 No manual tagging or folder management\n\u2022 Surfaces past relevant notes as you write\n\u2022 Search across your whole note history\n\nhttps://mem.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_07_mem.png",
         "posted": false
       },
       {
-        "text": "8/ Perplexity Pro\n\nSearch engine with live citations.\n\n• Direct answers with verified footnotes\n• Multi-step search for complex questions\n• Organize threads into project collections\n\nhttps://perplexity.ai",
+        "text": "8/ Perplexity Pro\n\nSearch engine with live citations.\n\n\u2022 Direct answers with verified footnotes\n\u2022 Multi-step search for complex questions\n\u2022 Organize threads into project collections\n\nhttps://perplexity.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_08_perplexity.png",
         "posted": false
       },
       {
-        "text": "9/ Fabric\n\nOpen-source prompt patterns.\n\n• Library of tested prompts to extract insights\n• Pipe text and articles from terminal directly\n• Pulls key points and counterarguments fast\n\nhttps://github.com/danielmiessler/fabric",
+        "text": "9/ Fabric\n\nOpen-source prompt patterns.\n\n\u2022 Library of tested prompts to extract insights\n\u2022 Pipe text and articles from terminal directly\n\u2022 Pulls key points and counterarguments fast\n\nhttps://github.com/danielmiessler/fabric",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_second_brain/tweet_09_fabric.png",
         "posted": false
       },
@@ -2732,7 +2732,7 @@
         "posted": false
       },
       {
-        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "13/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
@@ -2746,47 +2746,47 @@
     "posted": false,
     "tweets": [
       {
-        "text": "1/ Quantum computers will break RSA, and attackers are already storing encrypted traffic to decrypt later.\n\n8 tools and standards for post-quantum encryption 🧵👇",
+        "text": "1/ Quantum computers will break RSA, and attackers are already storing encrypted traffic to decrypt later.\n\n8 tools and standards for post-quantum encryption \ud83e\uddf5\ud83d\udc47",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_01_cover.png",
         "posted": false
       },
       {
-        "text": "2/ NIST PQC Standards (2024)\n\nOfficial post-quantum encryption algorithms.\n\n• ML-KEM: Key exchange replacing RSA and DH\n• ML-DSA: Primary digital signature standard\n• SLH-DSA: Stateless hash backup signatures\n\nhttps://csrc.nist.gov/projects/post-quantum-cryptography",
+        "text": "2/ NIST PQC Standards (2024)\n\nOfficial post-quantum encryption algorithms.\n\n\u2022 ML-KEM: Key exchange replacing RSA and DH\n\u2022 ML-DSA: Primary digital signature standard\n\u2022 SLH-DSA: Stateless hash backup signatures\n\nhttps://csrc.nist.gov/projects/post-quantum-cryptography",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_02_nist_standards.png",
         "posted": false
       },
       {
-        "text": "3/ Harvest Now, Decrypt Later (HNDL)\n\nThe immediate quantum risk.\n\n• Attackers store encrypted traffic today\n• Data will be decrypted once quantum scale arrives\n• Demands migrating critical systems now\n\nhttps://cisa.gov/quantum",
+        "text": "3/ Harvest Now, Decrypt Later (HNDL)\n\nThe immediate quantum risk.\n\n\u2022 Attackers store encrypted traffic today\n\u2022 Data will be decrypted once quantum scale arrives\n\u2022 Demands migrating critical systems now\n\nhttps://cisa.gov/quantum",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_03_harvest_threat.png",
         "posted": false
       },
       {
-        "text": "4/ Qiskit (by IBM)\n\nOpen-source quantum computing toolkit.\n\n• Write and test quantum circuits in Python\n• Run algorithms on IBM quantum hardware\n• Standard library for quantum research\n\nhttps://qiskit.org",
+        "text": "4/ Qiskit (by IBM)\n\nOpen-source quantum computing toolkit.\n\n\u2022 Write and test quantum circuits in Python\n\u2022 Run algorithms on IBM quantum hardware\n\u2022 Standard library for quantum research\n\nhttps://qiskit.org",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_04_qiskit.png",
         "posted": false
       },
       {
-        "text": "5/ Cirq (by Google Quantum AI)\n\nPython library for noisy quantum circuits.\n\n• Built for error-correction experiments\n• Maps directly to Google Sycamore processors\n• Simulates physical qubit noise accurately\n\nhttps://quantumai.google/cirq",
+        "text": "5/ Cirq (by Google Quantum AI)\n\nPython library for noisy quantum circuits.\n\n\u2022 Built for error-correction experiments\n\u2022 Maps directly to Google Sycamore processors\n\u2022 Simulates physical qubit noise accurately\n\nhttps://quantumai.google/cirq",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_05_cirq.png",
         "posted": false
       },
       {
-        "text": "6/ Open Quantum Safe (liboqs)\n\nOpen-source C library for quantum algorithms.\n\n• Clean implementations of all NIST standards\n• Integrates with OpenSSL for TLS testing\n• Used by browsers and cloud platforms\n\nhttps://openquantumsafe.org",
+        "text": "6/ Open Quantum Safe (liboqs)\n\nOpen-source C library for quantum algorithms.\n\n\u2022 Clean implementations of all NIST standards\n\u2022 Integrates with OpenSSL for TLS testing\n\u2022 Used by browsers and cloud platforms\n\nhttps://openquantumsafe.org",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_06_open_quantum_safe.png",
         "posted": false
       },
       {
-        "text": "7/ Cloudflare Post-Quantum TLS\n\nProtecting web traffic with hybrid encryption.\n\n• Combines X25519 with post-quantum ML-KEM\n• Secures over 20% of public web traffic\n• Zero noticeable latency for users\n\nhttps://cloudflare.com",
+        "text": "7/ Cloudflare Post-Quantum TLS\n\nProtecting web traffic with hybrid encryption.\n\n\u2022 Combines X25519 with post-quantum ML-KEM\n\u2022 Secures over 20% of public web traffic\n\u2022 Zero noticeable latency for users\n\nhttps://cloudflare.com",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_07_cloudflare_pqc.png",
         "posted": false
       },
       {
-        "text": "8/ PennyLane (by Xanadu)\n\nQuantum machine learning library.\n\n• Connects PyTorch and JAX to quantum circuits\n• Train hybrid quantum-classical networks\n• Runs on photonic and superconducting chips\n\nhttps://pennylane.ai",
+        "text": "8/ PennyLane (by Xanadu)\n\nQuantum machine learning library.\n\n\u2022 Connects PyTorch and JAX to quantum circuits\n\u2022 Train hybrid quantum-classical networks\n\u2022 Runs on photonic and superconducting chips\n\nhttps://pennylane.ai",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_08_pennylane.png",
         "posted": false
       },
       {
-        "text": "9/ Signal PQXDH Protocol\n\nPost-quantum consumer messaging.\n\n• Upgraded Double Ratchet with ML-KEM\n• Protects chats against future decryption\n• First major app with PQC at global scale\n\nhttps://signal.org",
+        "text": "9/ Signal PQXDH Protocol\n\nPost-quantum consumer messaging.\n\n\u2022 Upgraded Double Ratchet with ML-KEM\n\u2022 Protects chats against future decryption\n\u2022 First major app with PQC at global scale\n\nhttps://signal.org",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/quantum_pqc_security/tweet_09_signal_pqxdh.png",
         "posted": false
       },
@@ -2806,9 +2806,369 @@
         "posted": false
       },
       {
-        "text": "13/ My free courses:\n\n• AI Automation: https://veda.ng/automation\n• The Agentic Web: https://veda.ng/agentic\n• MCP Development: https://veda.ng/mcp\n• Vibe Coding: https://veda.ng/vibecoding\n• Prompt Engineering: https://veda.ng/prompt",
+        "text": "13/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 The Agentic Web: https://veda.ng/agentic\n\u2022 MCP Development: https://veda.ng/mcp\n\u2022 Vibe Coding: https://veda.ng/vibecoding\n\u2022 Prompt Engineering: https://veda.ng/prompt",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
+      }
+    ]
+  },
+  {
+    "id": "ai-search-aeo-engines-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Traditional SEO targeted keywords and backlinks, but Answer Engine Optimization (AEO) targets LLM citation synthesis.\n\n8 search engines and protocols defining AEO \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Perplexity Online LLM \u2014 Conversational search engine.\n\n\u2022 Live index retrieval with inline citations\n\u2022 Multi-source cross-referencing for facts\n\nhttps://www.perplexity.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_02_perplexity.png",
+        "url": "https://www.perplexity.ai"
+      },
+      {
+        "text": "3/ Exa.ai Neural Search \u2014 Embedding-based web index.\n\n\u2022 Searches by meaning instead of keywords\n\u2022 Trained on link-prediction neural models\n\nhttps://exa.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_03_exa.png",
+        "url": "https://exa.ai"
+      },
+      {
+        "text": "4/ Tavily Search API \u2014 Agentic search infrastructure.\n\n\u2022 Built specifically for autonomous AI agents\n\u2022 Filters ads, junk HTML, and cookie modals\n\nhttps://tavily.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_04_tavily.png",
+        "url": "https://tavily.com"
+      },
+      {
+        "text": "5/ Brave Search API \u2014 Independent web index.\n\n\u2022 100% independent web index\n\u2022 Zero ad tracking or user profiling\n\nhttps://brave.com/search/api",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_05_brave.png",
+        "url": "https://brave.com/search/api"
+      },
+      {
+        "text": "6/ You.com Custom Agents \u2014 Multi-modal answer engine.\n\n\u2022 Executes Python code in sandboxed runners\n\u2022 Live query expansion across parallel sources\n\nhttps://you.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_06_you.png",
+        "url": "https://you.com"
+      },
+      {
+        "text": "7/ Bing Grounding API \u2014 Enterprise index grounding.\n\n\u2022 Real-time index grounding for frontier LLMs\n\u2022 Direct URL citation and freshness checks\n\nhttps://www.microsoft.com/bing",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_07_bing.png",
+        "url": "https://www.microsoft.com/bing"
+      },
+      {
+        "text": "8/ Kagi Search Engine \u2014 Ad-free fast search engine.\n\n\u2022 Fast zero-telemetry private web search\n\u2022 Customizable domain weighting and blacklists\n\nhttps://kagi.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_08_kagi.png",
+        "url": "https://kagi.com"
+      },
+      {
+        "text": "9/ llms.txt Standard \u2014 Agent indexing specification.\n\n\u2022 Standardized markdown file for root domains\n\u2022 Curates key documentation for AI crawlers\n\nhttps://llmstxt.org",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_search_aeo_engines/tweet_09_llmstxt.png",
+        "url": "https://llmstxt.org"
+      },
+      {
+        "text": "10/ AEO shifts optimization from ranking blue links to becoming the primary cited source in LLM synthesis. Structured schema, clean markdown, and llms.txt are now core infrastructure.",
+        "image": null
+      },
+      {
+        "text": "11/ Production RAG systems require clean web retrieval feeds. Breakdown of how vector search and reranking models work under the hood:",
+        "image": null
+      },
+      {
+        "text": "12/ Autonomous agents need real-time web grounding to avoid hallucinations. Full guide to building AI web scrapers and crawlers:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "agent-memory-context-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ LLM context windows forget state the moment a session terminates. Agent memory engines provide persistent episodic recall.\n\n8 memory & context engines for AI agents \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Mem0 \u2014 Personalized memory layer.\n\n\u2022 Dynamic graph & vector memory store\n\u2022 Automatically extracts user facts\n\nhttps://mem0.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_02_mem0.png",
+        "url": "https://mem0.ai"
+      },
+      {
+        "text": "3/ Zep \u2014 Temporal memory store.\n\n\u2022 Fast message storage for production bots\n\u2022 Continuous temporal knowledge graphs\n\nhttps://www.getzep.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_03_zep.png",
+        "url": "https://www.getzep.com"
+      },
+      {
+        "text": "4/ Letta (MemGPT) \u2014 OS memory architecture.\n\n\u2022 Virtual context paging like classic operating systems\n\u2022 Separates working context from deep recall\n\nhttps://www.letta.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_04_letta.png",
+        "url": "https://www.letta.com"
+      },
+      {
+        "text": "5/ LangGraph Checkpointers \u2014 Stateful agent persistence.\n\n\u2022 Saves every state node to Postgres or Redis\n\u2022 Supports time-travel replay and rollback\n\nhttps://github.com/langchain-ai/langgraph",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_05_langgraph.png",
+        "url": "https://github.com/langchain-ai/langgraph"
+      },
+      {
+        "text": "6/ Cognee \u2014 Cognitive memory engine.\n\n\u2022 Turns text into structured graph databases\n\u2022 Built-in deterministic data pipelines\n\nhttps://github.com/topoteretes/cognee",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_06_cognee.png",
+        "url": "https://github.com/topoteretes/cognee"
+      },
+      {
+        "text": "7/ Superlinked \u2014 Vector compute engine.\n\n\u2022 Combines text, numbers, and categories in vectors\n\u2022 Recency weighting for fresh memory recall\n\nhttps://superlinked.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_07_superlinked.png",
+        "url": "https://superlinked.com"
+      },
+      {
+        "text": "8/ PostgreSQL pgvector \u2014 Relational vector store.\n\n\u2022 Stores embeddings alongside user profiles\n\u2022 HNSW indexing for sub-millisecond retrieval\n\nhttps://github.com/pgvector/pgvector",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_08_pgvector.png",
+        "url": "https://github.com/pgvector/pgvector"
+      },
+      {
+        "text": "9/ Motorhead \u2014 Incremental summarization.\n\n\u2022 Fast Rust-powered memory server\n\u2022 Automatically compresses long conversation histories\n\nhttps://github.com/getmetal/motorhead",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/agent_memory_context/tweet_09_motorhead.png",
+        "url": "https://github.com/getmetal/motorhead"
+      },
+      {
+        "text": "10/ Memory transforms reactive chatbots into proactive agents. Tiered context architectures (working memory, semantic graphs, episodic archives) are now the standard design pattern.",
+        "image": null
+      },
+      {
+        "text": "11/ Agents need execution rails alongside memory. Detailed overview of smart accounts and programmatic wallets for autonomous bots:",
+        "image": null
+      },
+      {
+        "text": "12/ Grounded RAG pipelines ensure agent memories stay truthful. Full breakdown of production retrieval architectures:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "terminal-ai-coding-agents-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ AI coding tools are moving out of web chat windows and into developer terminal shells where real work happens.\n\n8 CLI and terminal AI coding agents \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ Aider \u2014 CLI Git pair programmer.\n\n\u2022 Directly edits files across your git repo\n\u2022 Automatically crafts descriptive git commits\n\nhttps://aider.chat",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_02_aider.png",
+        "url": "https://aider.chat"
+      },
+      {
+        "text": "3/ OpenHands (All-Hands) \u2014 Autonomous software agent.\n\n\u2022 Sandboxed Docker container execution\n\u2022 Runs shell commands, browses web, and edits code\n\nhttps://github.com/All-Hands-AI/OpenHands",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_03_openhands.png",
+        "url": "https://github.com/All-Hands-AI/OpenHands"
+      },
+      {
+        "text": "4/ Claude Code (Anthropic) \u2014 Agentic terminal harness.\n\n\u2022 Command-line tool navigating entire codebases\n\u2022 Runs test suites and auto-fixes failing tests\n\nhttps://docs.anthropic.com/en/docs/agents-and-tools/claude-code",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_04_claude_code.png",
+        "url": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code"
+      },
+      {
+        "text": "5/ Codegen CLI \u2014 Multi-repo migration agent.\n\n\u2022 Graph-based AST analysis across repos\n\u2022 Executes large-scale library migrations\n\nhttps://codegen.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_05_codegen.png",
+        "url": "https://codegen.com"
+      },
+      {
+        "text": "6/ Goose (by Block) \u2014 Open-source extensible agent.\n\n\u2022 Extensible on-machine autonomous developer agent\n\u2022 Integrates with MCP tool specifications\n\nhttps://block.github.io/goose",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_06_goose.png",
+        "url": "https://block.github.io/goose"
+      },
+      {
+        "text": "7/ Plandex \u2014 Long-running task planner.\n\n\u2022 Plans complex software features step-by-step\n\u2022 Sandboxed diff review before applying changes\n\nhttps://plandex.ai",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_07_plandex.png",
+        "url": "https://plandex.ai"
+      },
+      {
+        "text": "8/ Crab (by Dria) \u2014 Local shell assistant.\n\n\u2022 Translates human intent into bash commands\n\u2022 Validates command safety before execution\n\nhttps://github.com/andromeda-lab/crab",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_08_crab.png",
+        "url": "https://github.com/andromeda-lab/crab"
+      },
+      {
+        "text": "9/ OpenCode \u2014 Lightweight terminal agent.\n\n\u2022 Terminal-first autonomous coding client\n\u2022 Fast iteration with minimal dependencies\n\nhttps://github.com/opencode-ai/opencode",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/terminal_ai_coding_agents/tweet_09_opencode.png",
+        "url": "https://github.com/opencode-ai/opencode"
+      },
+      {
+        "text": "10/ The developer workflow has shifted from copy-pasting code snippets to directing autonomous CLI agents with test-driven feedback loops. The terminal is the ultimate agent execution sandbox.",
+        "image": null
+      },
+      {
+        "text": "11/ Autonomous coding relies heavily on robust sandbox environments and microVMs. Full guide to container isolation for agents:",
+        "image": null
+      },
+      {
+        "text": "12/ Multi-agent frameworks enable parallel coding, reviewing, and testing. Complete architectural breakdown:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "zkml-verifiable-ai-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ You cannot trust an AI agent's decision unless you can cryptographically verify the exact model and weights executed.\n\n8 zkML proof systems and tools defining verifiable AI \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ EZKL \u2014 ONNX-to-ZK compiler.\n\n\u2022 Converts ONNX neural models into halo2 SNARKs\n\u2022 Generates EVM verifier smart contracts\n\nhttps://ezkl.xyz",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_02_ezkl.png",
+        "url": "https://ezkl.xyz"
+      },
+      {
+        "text": "3/ Modulus Labs \u2014 ZK inference prover.\n\n\u2022 Specialized prover tailored for AI math\n\u2022 Drastically cuts proof generation latency\n\nhttps://www.moduluslabs.xyz",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_03_modulus.png",
+        "url": "https://www.moduluslabs.xyz"
+      },
+      {
+        "text": "4/ Giza Protocol \u2014 Cairo ZK-AI framework.\n\n\u2022 Transpiles ML models into Cairo smart contracts\n\u2022 Native verifiable execution on Starknet L2\n\nhttps://giza.tech",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_04_giza.png",
+        "url": "https://giza.tech"
+      },
+      {
+        "text": "5/ RISC Zero zkVM \u2014 General-purpose zkVM.\n\n\u2022 Runs Rust ML code in a verifiable virtual machine\n\u2022 STARK-based proofs for arbitrary computation\n\nhttps://www.risczero.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_05_risczero.png",
+        "url": "https://www.risczero.com"
+      },
+      {
+        "text": "6/ SP1 (by Succinct) \u2014 High-throughput zkVM.\n\n\u2022 100% open-source RISC-V zero-knowledge VM\n\u2022 Precompiles accelerate complex matrix tensor operations\n\nhttps://www.succinct.xyz/sp1",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_06_sp1.png",
+        "url": "https://www.succinct.xyz/sp1"
+      },
+      {
+        "text": "7/ ZKML (by Jason Morton) \u2014 Foundational C++ prover.\n\n\u2022 Pioneering research framework for proof systems\n\u2022 Benchmarks verifiable transformer layers\n\nhttps://github.com/ddkang/zkml",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_07_zkml.png",
+        "url": "https://github.com/ddkang/zkml"
+      },
+      {
+        "text": "8/ Ingonyama ICICLE \u2014 Hardware acceleration.\n\n\u2022 GPU and FPGA acceleration for cryptography\n\u2022 Speeds up NTT and MSM zero-knowledge calculations\n\nhttps://www.ingonyama.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_08_ingonyama.png",
+        "url": "https://www.ingonyama.com"
+      },
+      {
+        "text": "9/ Aligned Layer \u2014 Verification settlement.\n\n\u2022 Decentralized verification layer on Ethereum\n\u2022 Aggregates proofs to slash on-chain verification costs\n\nhttps://alignedlayer.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/zkml_verifiable_ai/tweet_09_aligned.png",
+        "url": "https://alignedlayer.com"
+      },
+      {
+        "text": "10/ zkML solves the fundamental AI trust deficit: proving that a specific model produced an output without revealing sensitive weights or private input data. It is the cryptographic foundation for autonomous agent liability.",
+        "image": null
+      },
+      {
+        "text": "11/ Autonomous agents require verifiable execution alongside secure on-chain wallets. Complete breakdown of smart contract security:",
+        "image": null
+      },
+      {
+        "text": "12/ Post-quantum cryptography will protect zero-knowledge proofs and public keys against future quantum computers. Full guide:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
+      }
+    ]
+  },
+  {
+    "id": "crypto-account-abstraction-thread",
+    "posted": false,
+    "scheduledFor": null,
+    "tweets": [
+      {
+        "text": "1/ Autonomous AI agents cannot sign seed phrases. Account Abstraction (ERC-4337) gives software bots programmable wallets.\n\n8 account abstraction SDKs and tools \ud83e\uddf5\ud83d\udc47",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_01_cover.png"
+      },
+      {
+        "text": "2/ ZeroDev Kernel \u2014 Modular smart account.\n\n\u2022 Most deployed ERC-4337 smart account\n\u2022 Session keys allow bots to transact within limits\n\nhttps://zerodev.app",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_02_zerodev.png",
+        "url": "https://zerodev.app"
+      },
+      {
+        "text": "3/ Biconomy SDK \u2014 Account abstraction stack.\n\n\u2022 Full-stack smart account SDK\n\u2022 Paymaster sponsors gas fees in any token\n\nhttps://www.biconomy.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_03_biconomy.png",
+        "url": "https://www.biconomy.io"
+      },
+      {
+        "text": "4/ Privy Embedded Wallets \u2014 Onboarding & enclave wallets.\n\n\u2022 Embeds self-custodial wallets via email or SMS\n\u2022 Server-side wallets with secure enclave signing\n\nhttps://www.privy.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_04_privy.png",
+        "url": "https://www.privy.io"
+      },
+      {
+        "text": "5/ Pimlico \u2014 Bundler & paymaster infra.\n\n\u2022 Alto: high-speed open-source ERC-4337 bundler\n\u2022 Paymaster infrastructure live on 40+ chains\n\nhttps://pimlico.io",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_05_pimlico.png",
+        "url": "https://pimlico.io"
+      },
+      {
+        "text": "6/ Thirdweb Engine \u2014 Backend Web3 gateway.\n\n\u2022 Managed HTTP server for backend transaction queuing\n\u2022 Automatic gas fee estimation and nonce management\n\nhttps://thirdweb.com/engine",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_06_thirdweb.png",
+        "url": "https://thirdweb.com/engine"
+      },
+      {
+        "text": "7/ Alchemy Smart Accounts \u2014 Light account framework.\n\n\u2022 Ultra gas-optimized smart contracts\n\u2022 Backed by Alchemy's high-throughput bundler\n\nhttps://www.alchemy.com/smart-accounts",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_07_alchemy.png",
+        "url": "https://www.alchemy.com/smart-accounts"
+      },
+      {
+        "text": "8/ Safe Core SDK \u2014 Multi-sig smart contracts.\n\n\u2022 Industry gold-standard multi-sig security\n\u2022 Programmable allowance modules for automated agents\n\nhttps://safe.global",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_08_safe.png",
+        "url": "https://safe.global"
+      },
+      {
+        "text": "9/ Dynamic.xyz SDK \u2014 Auth & embedded wallets.\n\n\u2022 Modern authentication bridging Web2 to Web3\n\u2022 Embeds smart accounts across EVM, Solana, and Cosmos\n\nhttps://www.dynamic.xyz",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/crypto_account_abstraction/tweet_09_dynamic.png",
+        "url": "https://www.dynamic.xyz"
+      },
+      {
+        "text": "10/ Account abstraction converts dumb cryptographic keypairs into programmable software accounts. Session keys, gas sponsorship, and batch execution are what make autonomous AI agents economically viable.",
+        "image": null
+      },
+      {
+        "text": "11/ Agents need cryptographic execution rails to buy compute and pay APIs. Full architectural breakdown of agent wallets:",
+        "image": null
+      },
+      {
+        "text": "12/ Smart contract security is paramount when bots hold custody. Complete guide to auditing on-chain protocols:",
+        "image": null
+      },
+      {
+        "text": "13/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/proai",
+        "image": null,
+        "url": "https://t.me/proai"
+      },
+      {
+        "text": "14/ My free courses:\n\n\u2022 AI Automation: https://veda.ng/automation\n\u2022 Prompt Engineering: https://veda.ng/prompt-engineering\n\u2022 RAG Architecture: https://veda.ng/rag\n\u2022 Agent Architecture: https://veda.ng/agents",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113"
       }
     ]
   }
