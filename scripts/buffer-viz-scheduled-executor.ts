@@ -74,19 +74,23 @@ export async function channels() {
 }
 
 export function chooseChannel(service: string, envName: string, available: any[]) {
-  const serviceChannels = available.filter(c => c.service === service);
   const targetId = process.env[envName]?.trim();
-  let matches = serviceChannels.filter(c => !targetId || c.id === targetId);
-  if (matches.length === 0 && serviceChannels.length === 1) {
-    matches = serviceChannels;
+  if (targetId) {
+    const directMatch = available.find(c => c.id === targetId);
+    if (directMatch) {
+      if (directMatch.isDisconnected || directMatch.isLocked) throw new Error(`${service} channel is disconnected or locked`);
+      return directMatch;
+    }
   }
-  if (matches.length !== 1) {
-    const list = serviceChannels.map(c => `${c.id} (${c.name || 'unnamed'})`).join(', ');
-    throw new Error(`Expected one ${service} channel; available [${list}]; set ${envName} to choose explicitly`);
+  const isTwitter = service === 'twitter' || service === 'x';
+  const serviceChannels = available.filter(c => isTwitter ? (c.service === 'twitter' || c.service === 'x') : c.service === service);
+  if (serviceChannels.length === 1) {
+    const channel = serviceChannels[0];
+    if (channel.isDisconnected || channel.isLocked) throw new Error(`${service} channel is disconnected or locked`);
+    return channel;
   }
-  const channel = matches[0];
-  if (channel.isDisconnected || channel.isLocked) throw new Error(`${service} channel is disconnected or locked`);
-  return channel;
+  const allList = available.map(c => `${c.id} (${c.name || 'unnamed'}: ${c.service})`).join(', ');
+  throw new Error(`Expected one ${service} channel; available [${allList}]; set ${envName} to choose explicitly`);
 }
 
 export function buildInput(service: string, entry: VizPost, channelId: string, videoUrl: string) {
