@@ -2736,15 +2736,17 @@
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
     "audioRevision": "no-attribution-v1",
-    "videoEmbedUrl": "https://veda.ng/api/social-video/44ee256de901834e7c190ef17b71b3c0ac930abe/scripts/viz-batch2-assets/no-attribution/hls/104-pumpkins-2000-2024.m3u8",
-    "mediaValidatedAt": "2026-11-02T09:49:45.707Z",
     "state": "sent",
-    "attemptedAt": "2026-11-02T09:49:45.707Z",
-    "attemptedSlot": "2026-11-02T14:00",
-    "publishedText": "How the largest pumpkin, squash and gourd producers changed.\n\n2000-2024. Pumpkin, squash and gourd production by country, measured in millions of tonnes.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0xf7103e6e",
-    "platformPostId": "0xf7103e6e5dde83ddf8d5f9f5f4a40568cc63c2a5",
-    "publicationAcceptedAt": "2026-11-02T09:49:45.922Z"
+    "repairHistory": [
+      {
+        "reason": "Unverified embed deleted or replaced",
+        "platformPostId": "0xf7103e6e5dde83ddf8d5f9f5f4a40568cc63c2a5",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0xf7103e6e",
+        "attemptedAt": "2026-11-02T09:49:45.707Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/44ee256de901834e7c190ef17b71b3c0ac930abe/scripts/viz-batch2-assets/no-attribution/hls/104-pumpkins-2000-2024.m3u8",
+        "deletedAt": "2026-11-02T10:00:00.000Z"
+      }
+    ]
   },
   {
     "id": "viz-b2-farcaster-105",
@@ -4005,16 +4007,18 @@
     "altText": "How to Add Numbers from 1 to n",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png",
     "batchId": "explainer-v1",
-    "videoEmbedUrl": "https://veda.ng/api/social-video/9e508ce724a9893f93e3ded8a665e38fb6d6d2c3/scripts/viz-assets/videos/explainer_videos/1x1/hls/sum_of_integers_1x1.m3u8",
-    "mediaValidatedAt": "2026-11-16T07:58:25.122Z",
     "state": "sent",
-    "attemptedAt": "2026-11-16T07:58:25.122Z",
-    "attemptedSlot": "2026-11-16T09:00",
-    "publishedText": "How to add the numbers from 1 to n without adding each one.\n\nBuild a staircase of blocks from 1 to n.\n\nMake a second copy, flip it upside down, and fit them together.\n\nThey make a rectangle. Cut the total area in half.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0x19474caa",
-    "platformPostId": "0x19474caaf8608988d8d8cbbc4035fbc00e6304fa",
-    "publicationAcceptedAt": "2026-11-16T07:58:25.283Z",
-    "postedAt": "2026-11-16T07:58:25.283Z"
+    "postedAt": "2026-11-16T07:58:25.283Z",
+    "repairHistory": [
+      {
+        "reason": "Unverified embed deleted by user from Farcaster",
+        "platformPostId": "0x19474caaf8608988d8d8cbbc4035fbc00e6304fa",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0x19474caa",
+        "attemptedAt": "2026-11-16T07:58:25.122Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/9e508ce724a9893f93e3ded8a665e38fb6d6d2c3/scripts/viz-assets/videos/explainer_videos/1x1/hls/sum_of_integers_1x1.m3u8",
+        "deletedAt": "2026-11-15T17:00:00.000Z"
+      }
+    ]
   },
   {
     "id": "explainer-farcaster-geometric_series",
@@ -4027,17 +4031,19 @@
     "altText": "Why Halves Add Up to One",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png",
     "batchId": "explainer-v1",
-    "videoEmbedUrl": "https://veda.ng/api/social-video/1b3f201dd8a70329482affef8e0ad258884d7c5d/scripts/viz-assets/videos/explainer_videos/1x1/hls/geometric_series_1x1.m3u8",
-    "mediaValidatedAt": "2026-11-16T12:16:03.257Z",
     "state": "sent",
-    "attemptedAt": "2026-11-16T12:16:03.257Z",
-    "attemptedSlot": "2026-11-16T17:00",
-    "publishedText": "Take a square with an area of 1.\n\nCut it in half. That is 1/2.\n\nCut the leftover space in half. That is 1/4.\n\nKeep cutting halves forever. Together they fill the square.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0x874305ee",
-    "platformPostId": "0x874305eed3b86ffeba31adc75b3c0a640e29ccf7",
-    "publicationAcceptedAt": "2026-11-16T12:16:03.490Z",
     "error": null,
-    "postedAt": "2026-11-16T12:16:03.490Z"
+    "postedAt": "2026-11-16T12:16:03.490Z",
+    "repairHistory": [
+      {
+        "reason": "Unverified embed deleted by user from Farcaster",
+        "platformPostId": "0x874305eed3b86ffeba31adc75b3c0a640e29ccf7",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0x874305ee",
+        "attemptedAt": "2026-11-16T12:16:03.257Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/1b3f201dd8a70329482affef8e0ad258884d7c5d/scripts/viz-assets/videos/explainer_videos/1x1/hls/geometric_series_1x1.m3u8",
+        "deletedAt": "2026-11-16T17:00:00.000Z"
+      }
+    ]
   },
   {
     "id": "explainer-farcaster-difference_of_squares",
