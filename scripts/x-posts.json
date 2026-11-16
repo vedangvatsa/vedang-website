@@ -2260,7 +2260,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Defending on-chain protocols against exploits requires rigorous fuzzing, static analysis, and formal verification.\n\n8 essential tools to audit smart contracts 🧵👇",
@@ -2318,7 +2318,8 @@
         "posted": false
       }
     ],
-    "error": "Account is not allowed to perform this action"
+    "postedAt": "2026-11-16T15:24:25.023Z",
+    "tweetId": "6afb20222d89e5b19ced3b2b"
   },
   {
     "id": "ai-web-scrapers-thread",
