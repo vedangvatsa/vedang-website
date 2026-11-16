@@ -3514,13 +3514,11 @@
     "altText": "Why Halves Add Up to One",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png",
     "batchId": "explainer-v1",
-    "postedAt": "2026-11-16T12:37:43.597Z",
-    "state": "sent",
-    "bufferPostId": "6afaf915f017e92b4ba3f61f",
-    "bufferStatus": "sent",
-    "postUrl": "https://twitter.com/vedangvatsa/status/2122308129891188786",
-    "platformPostId": "2122308129891188786",
-    "publishedText": "Visual geometric proof of the infinite series sum 1/2 + 1/4 + 1/8 + ... = 1 by repeatedly halving the remaining area of a unit square."
+    "publishedText": "Visual geometric proof of the infinite series sum 1/2 + 1/4 + 1/8 + ... = 1 by repeatedly halving the remaining area of a unit square.",
+    "state": "failed",
+    "attemptedSlot": "2026-11-16T17:00",
+    "attemptedAt": "2026-11-16T12:36:09.308Z",
+    "error": "Account is not allowed to perform this action"
   },
   {
     "id": "explainer-x-difference_of_squares",
