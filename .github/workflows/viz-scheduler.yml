@@ -98,7 +98,10 @@ jobs:
 
       - name: Validate publishing logic and all captions offline
         if: steps.due.outputs.run == 'true'
-        run: npx tsx --test scripts/viz-publishing.test.ts scripts/farcaster-video.test.ts tests/social-video.test.ts
+        run: |
+          npx tsx --test scripts/viz-publishing.test.ts
+          npx tsx --test scripts/farcaster-video.test.ts
+          npx tsx --test tests/social-video.test.ts
 
       - name: Prepare Farcaster playback validation
         if: steps.due.outputs.run == 'true' && (contains(env.VIZ_DIRECT_PLATFORMS, 'farcaster') || contains(env.VIZ_DIRECT_PLATFORMS, 'all'))
