@@ -2189,7 +2189,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Conversational AI has moved from robotic turn delay to sub-500ms real-time voice streaming.\n\n8 tools powering real-time voice AI agents 🧵👇",
@@ -2251,7 +2251,9 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
-    ]
+    ],
+    "postedAt": "2026-11-16T05:13:59.775Z",
+    "tweetId": "6afa911160a910801c6d9139"
   },
   {
     "id": "smart-contract-security-thread",
