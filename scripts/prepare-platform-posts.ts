@@ -15,8 +15,8 @@
  *     "unlock", "streamline", "holistic", "paradigm shift", "synergy",
  *     "in the realm of", "it's notable that", "in today's world",
  *     "major shift", "at the end of the day", "only time will tell"
- *   - NEVER: "I'm excited/thrilled/humbled", hype language, hashtag spam
- *   - MAX 2 hashtags per post
+ *   - NEVER: "I'm excited/thrilled/humbled", hype language, hashtags
+ *   - ZERO hashtags per post — never include any hashtags
  *   - NEVER post same text verbatim across platforms — adapt tone
  *   - NEVER start with "In today's..." or "In an era..."
  *   - NEVER end with "only time will tell" or "remains to be seen"
@@ -153,7 +153,7 @@ BANNED SENTENCE PATTERNS:
 - Grandiose openers ("In an era of unprecedented...", "In today's...")
 - Vague conclusions ("it will be interesting to see how this unfolds...")
 
-HASHTAG RULE: max 2 hashtags per post. Include only if naturally relevant.`;
+HASHTAG RULE: ZERO hashtags. Never include any hashtags in any post.`;
 
 // ─── Rewrite with Claude ────────────────────────────────────────────────────
 

@@ -1,5 +1,5 @@
-export const BUFFER_PLATFORMS = ['youtube', 'instagram', 'tiktok'];
-export const DIRECT_PLATFORMS = ['linkedin', 'x', 'bluesky', 'facebook', 'threads', 'tumblr', 'mastodon', 'farcaster'];
+export const BUFFER_PLATFORMS = ['youtube', 'instagram', 'tiktok', 'x'];
+export const DIRECT_PLATFORMS = ['linkedin', 'bluesky', 'facebook', 'threads', 'tumblr', 'mastodon', 'farcaster'];
 
 export function configuredDirectPlatforms(value = process.env.VIZ_DIRECT_PLATFORMS || '') {
   if (!value.trim()) return [];

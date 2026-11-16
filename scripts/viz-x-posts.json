@@ -751,7 +751,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "paused": true,
     "pauseReason": "Earlier campaign backlog retained for audit; the October batch is the active campaign."
   },
@@ -835,7 +835,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "paused": true,
     "pauseReason": "Earlier campaign backlog retained for audit; the October batch is the active campaign."
   },
@@ -3493,12 +3493,7 @@
     "posted": false,
     "altText": "How to Add Numbers from 1 to n",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png",
-    "batchId": "explainer-v1",
-    "state": "uncertain",
-    "attemptedAt": "2026-11-16T05:01:57.106Z",
-    "attemptedSlot": "2026-11-16T09:00",
-    "publishedText": "Visual proof of why the sum of integers from 1 to n equals n(n+1)/2 by interlocking two staircases into a rectangle.",
-    "error": "Account is not allowed to perform this action"
+    "batchId": "explainer-v1"
   },
   {
     "id": "explainer-x-geometric_series",
@@ -3640,8 +3635,8 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_1x1.png",
     "batchId": "explainer-v1",
-    "title": "Irrationality of √2",
-    "altText": "Irrationality of √2",
+    "title": "Irrationality of \u221a2",
+    "altText": "Irrationality of \u221a2",
     "text": "Geometric visual proof that the square root of 2 is irrational through infinite descent of folded squares."
   },
   {

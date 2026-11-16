@@ -19,6 +19,7 @@ export function validateCaption(platform, text) {
   // The user explicitly requested a short "Data source: ..." label.
   if (/[:—–]/.test(prose.replace(/Data source: [^\n]+\.$/g, ''))) throw new Error(`${platform} caption contains an unapproved colon or long dash`);
   if ((text.match(/#[\p{L}\p{N}]+/gu) || []).length > 2) throw new Error(`${platform} caption has more than two hashtags`);
+  if (platform === 'x' && (text.match(/#[\p{L}\p{N}]+/gu) || []).length > 0) throw new Error('x caption must have strictly zero hashtags');
   if (text.split(/\s+/).length > 200) throw new Error(`${platform} caption exceeds 200 words`);
   return count;
 }

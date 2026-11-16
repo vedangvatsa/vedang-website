@@ -11,9 +11,10 @@ import {
 dotenv.config({ path: path.join(ROOT, '.env.local'), quiet: true });
 
 export const PLATFORMS = [
-  { service: 'youtube', prefix: 'YT', channelEnv: 'BUFFER_YOUTUBE_CHANNEL_ID' },
-  { service: 'instagram', prefix: 'IG', channelEnv: 'BUFFER_INSTAGRAM_CHANNEL_ID' },
-  { service: 'tiktok', prefix: 'TT', channelEnv: 'BUFFER_TIKTOK_CHANNEL_ID' },
+  { service: 'youtube', prefix: 'YT', channelEnv: 'BUFFER_YOUTUBE_CHANNEL_ID', bufferService: 'youtube' },
+  { service: 'instagram', prefix: 'IG', channelEnv: 'BUFFER_INSTAGRAM_CHANNEL_ID', bufferService: 'instagram' },
+  { service: 'tiktok', prefix: 'TT', channelEnv: 'BUFFER_TIKTOK_CHANNEL_ID', bufferService: 'tiktok' },
+  { service: 'x', prefix: 'TW', channelEnv: 'BUFFER_TWITTER_CHANNEL_ID', bufferService: 'twitter' },
 ] as const;
 
 export const POST_FIELDS = 'id status externalLink sentAt shareMode schedulingType';
@@ -169,7 +170,7 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
   }
   const { post, slot } = selectDue(posts);
   if (!post) { console.log(`${platform.service}: nothing due`); return; }
-  const channel = chooseChannel(platform.service, platform.channelEnv, available);
+  const channel = chooseChannel(platform.bufferService, platform.channelEnv, available);
   localVideo(post);
   const url = publicVideoUrl(post);
   await checkPublicVideo(url);
