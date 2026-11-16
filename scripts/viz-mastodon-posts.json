@@ -856,7 +856,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, ACRA Europe, uri: https://trackingsdg7.esmap.org/, note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO), publisher: International Energy Agency (IEA), International Renewable Energy Agency (IRENA), United Nations Statistical Division (UNSD), World Bank, World Health Organization (WHO), date published: 2025-06;\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "state": "sent",
     "attemptedAt": "2026-10-09T09:34:46.056Z",
     "attemptedSlot": "2026-10-09T14:00",
@@ -952,7 +952,7 @@
     "error": null,
     "captionStyle": "concise-v1",
     "sourceCredit": "Tracking SDG 7",
-    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution—NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
+    "sourceOrganization": "Tracking SDG 7: The Energy Progress Report, International Energy Agency (IEA), note: License: Creative Commons Attribution\u2014NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO);\nInternational Renewable Energy Agency (IRENA), note: Tracking SDG 7: The Energy Progress Report;\nUnited Nations (UN), note: Tracking SDG 7: The Energy Progress Report, publisher: UN Statistics Division;\nWorld Bank (WB), note: Tracking SDG 7: The Energy Progress Report;\nWorld Health Organization (WHO), note: Tracking SDG 7: The Energy Progress Report",
     "state": "sent",
     "attemptedAt": "2026-10-10T18:07:44.687Z",
     "attemptedSlot": "2026-10-10T20:00",
@@ -3330,7 +3330,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-125",
@@ -3355,7 +3357,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-126",
@@ -3380,7 +3384,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-66",
@@ -3405,7 +3411,9 @@
     "sourceCredit": "WHO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-127",
@@ -3430,7 +3438,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-128",
@@ -3455,7 +3465,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-129",
@@ -3480,7 +3492,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-130",
@@ -3505,7 +3519,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-67",
@@ -3530,7 +3546,9 @@
     "sourceCredit": "UNAIDS",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-131",
@@ -3555,7 +3573,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-132",
@@ -3580,7 +3600,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-133",
@@ -3605,7 +3627,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-134",
@@ -3630,7 +3654,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-68",
@@ -3655,7 +3681,9 @@
     "sourceCredit": "IMF",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-135",
@@ -3680,7 +3708,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-136",
@@ -3705,7 +3735,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-137",
@@ -3730,7 +3762,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-138",
@@ -3755,7 +3789,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-139",
@@ -3780,7 +3816,9 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
   },
   {
     "id": "viz-b2-mastodon-140",
@@ -3805,6 +3843,788 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused in favor of math explainer video series"
+  },
+  {
+    "id": "explainer-mastodon-circle_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/circle_area_1x1.mp4",
+    "title": "Why Circle Area is Pi Times Radius Squared",
+    "text": "Why the area of a circle equals pi times radius squared.\n\nCut a circle into thin rings and unroll them.\n\nThey form a triangle.\n\nThe bottom line is the circumference. The height is the radius.",
+    "scheduleDate": "2026-11-15",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Why Circle Area is Pi Times Radius Squared",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/circle_area_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-pythagorean_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/pythagorean_theorem_1x1.mp4",
+    "title": "The Pythagorean Theorem",
+    "text": "Four matching right triangles placed inside a square.\n\nMoving them around shows the leftover space stays the same.\n\nThe two smaller squares equal the big square on the longest side.",
+    "scheduleDate": "2026-11-15",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "The Pythagorean Theorem",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pythagorean_theorem_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-sum_of_odds",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sum_of_odds_1x1.mp4",
+    "title": "Why Adding Odd Numbers Makes Square Numbers",
+    "text": "Adding odd numbers in order always makes a square number.\n\n1 makes a 1 by 1 square.\n\nAdd 3, you get a 2 by 2 square.\n\nAdd 5, you get a 3 by 3 square.",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Why Adding Odd Numbers Makes Square Numbers",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-sum_of_integers",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sum_of_integers_1x1.mp4",
+    "title": "How to Add Numbers from 1 to n",
+    "text": "How to add the numbers from 1 to n without adding each one.\n\nBuild a staircase of blocks from 1 to n.\n\nMake a second copy, flip it upside down, and fit them together.\n\nThey make a rectangle. Cut the total area in half.",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "How to Add Numbers from 1 to n",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-geometric_series",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/geometric_series_1x1.mp4",
+    "title": "Why Halves Add Up to One",
+    "text": "Take a square with an area of 1.\n\nCut it in half. That is 1/2.\n\nCut the leftover space in half. That is 1/4.\n\nKeep cutting halves forever. Together they fill the square.",
+    "scheduleDate": "2026-11-16",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Why Halves Add Up to One",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-difference_of_squares",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/difference_of_squares_1x1.mp4",
+    "title": "The Difference of Squares",
+    "text": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Visualizing the Difference of Squares",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-sphere_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sphere_volume_1x1.mp4",
+    "title": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
+    "text": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-derivative_tangent",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/derivative_tangent_1x1.mp4",
+    "title": "What a Derivative Actually Is",
+    "text": "What a derivative means in geometry.\n\nDraw a line through two points on a curve.\n\nMove the two points closer together.\n\nThe line turns into a tangent touching at just one point.",
+    "scheduleDate": "2026-11-17",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "What a Derivative Actually Is",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-product_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/product_rule_1x1.mp4",
+    "title": "The Product Rule Made Simple",
+    "text": "Why the derivative of u times v is u dv plus v du.\n\nPicture a rectangle of width u and height v.\n\nIf both sides grow slightly, the new area is two thin strips plus a tiny corner.\n\nThe corner is too small to matter.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "The Product Rule Made Simple",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-sin_derivative",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sin_derivative_1x1.mp4",
+    "title": "Why the Derivative of Sine is Cosine",
+    "text": "Why the rate of change of sine equals cosine.\n\nMove a point around a circle.\n\nSine is how high the point is.\n\nAs you move along the circle, how fast height changes matches horizontal distance.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Why the Derivative of Sine is Cosine",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-central_limit_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/central_limit_theorem_1x1.mp4",
+    "title": "Why the Bell Curve Shows Up Everywhere",
+    "text": "Drop balls through rows of pins.\n\nEach ball bounces randomly left or right.\n\nMost balls end up near the center.\n\nThe pile naturally forms a bell shape.",
+    "scheduleDate": "2026-11-18",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Why the Bell Curve Shows Up Everywhere",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-square_of_sum",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/square_of_sum_1x1.mp4",
+    "title": "Square of a Sum",
+    "text": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Square of a Sum",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/square_of_sum_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-riemann_integral",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/riemann_integral_1x1.mp4",
+    "title": "The Riemann Integral",
+    "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "The Riemann Integral",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-chain_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/chain_rule_1x1.mp4",
+    "title": "The Chain Rule",
+    "text": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
+    "scheduleDate": "2026-11-19",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "The Chain Rule",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/chain_rule_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-birthday_paradox",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/birthday_paradox_1x1.mp4",
+    "title": "The Birthday Paradox",
+    "text": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "The Birthday Paradox",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/birthday_paradox_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-irrationality_sqrt2",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/irrationality_sqrt2_1x1.mp4",
+    "title": "Irrationality of \u221a2",
+    "text": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Irrationality of \u221a2",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-ln_derivative",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/ln_derivative_1x1.mp4",
+    "title": "Derivative of ln(x)",
+    "text": "Why the derivative of ln(x) equals 1/x.\n\nThe natural logarithm is defined as the area under the hyperbola 1/t.\n\nScaling the area horizontally by x scales the height by 1/x, proving the derivative is exactly 1/x.",
+    "scheduleDate": "2026-11-20",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Derivative of ln(x)",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/ln_derivative_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-matrix_transform",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/matrix_transform_1x1.mp4",
+    "title": "What is a Matrix?",
+    "text": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "What is a Matrix?",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/matrix_transform_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-graph_shift",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/graph_shift_1x1.mp4",
+    "title": "Function Transformations",
+    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Function Transformations",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-curve_arclength",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/curve_arclength_1x1.mp4",
+    "title": "Arc Length of a Curve",
+    "text": "How to calculate the length of a curved line.\n\nZoom into an infinitesimal segment.\n\nPythagoras on differentials gives dL squared equals dx squared plus dy squared, leading directly to the arc length integral.",
+    "scheduleDate": "2026-11-21",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Arc Length of a Curve",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/curve_arclength_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-integration_by_parts",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/integration_by_parts_1x1.mp4",
+    "title": "Integration by Parts",
+    "text": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Integration by Parts",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/integration_by_parts_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-normal_distribution",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/normal_distribution_1x1.mp4",
+    "title": "The Normal Distribution",
+    "text": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "The Normal Distribution",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/normal_distribution_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-inclined_plane",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/inclined_plane_1x1.mp4",
+    "title": "Forces on a Ramp",
+    "text": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface.",
+    "scheduleDate": "2026-11-22",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Forces on a Ramp",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/inclined_plane_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-rubiks_permutations",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/rubiks_permutations_1x1.mp4",
+    "title": "Permutations of Rubik's Cube",
+    "text": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Permutations of Rubik's Cube",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/rubiks_permutations_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-power_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/power_rule_1x1.mp4",
+    "title": "The Power Rule",
+    "text": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "The Power Rule",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/power_rule_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-geometric_mean",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/geometric_mean_1x1.mp4",
+    "title": "The Geometric Mean",
+    "text": "Geometric proof of the geometric mean theorem.\n\nDraw a semicircle over diameter a plus b.\n\nAn altitude h to the circle forms similar right triangles.\n\nCross-multiplying gives h\u00b2 = a\u00b7b, proving h is the square root of a times b.",
+    "scheduleDate": "2026-11-23",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "The Geometric Mean",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_mean_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-tangent_secant",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/tangent_secant_1x1.mp4",
+    "title": "Tangent-Secant Theorem",
+    "text": "Geometric proof of the tangent-secant theorem.\n\nFrom external point P, draw tangent PT and secant PAB.\n\nAlternate segment theorem gives angle PTA = angle PBT, making triangles PTA and PBT similar.\n\nCross-multiplying PT / PB = PA / PT proves PT squared equals PA times PB.",
+    "scheduleDate": "2026-11-24",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Tangent-Secant Theorem",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_secant_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-euler_formula",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/euler_formula_1x1.mp4",
+    "title": "Euler Identity",
+    "text": "Geometric intuition behind Euler identity.\n\nIn the complex plane, e to the i theta rotates by angle theta.\n\nSetting theta to pi produces a 180-degree rotation around the origin, landing directly at -1.\n\nAdding 1 to both sides establishes e^(i\u03c0) + 1 = 0.",
+    "scheduleDate": "2026-11-24",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Euler Identity",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/euler_formula_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-am_gm_inequality",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/am_gm_inequality_1x1.mp4",
+    "title": "AM-GM Inequality",
+    "text": "Geometric proof of the AM-GM inequality in mathematics.\n\nDraw a semicircle over diameter a + b.\n\nThe radius is the arithmetic mean R = (a + b) / 2, while the altitude is the geometric mean h = \u221a(ab).\n\nSince no altitude exceeds the radius, (a + b) / 2 \u2265 \u221a(ab).",
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "AM-GM Inequality",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/am_gm_inequality_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-sine_addition",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sine_addition_1x1.mp4",
+    "title": "Sine Addition Formula",
+    "text": "Geometric proof of the sine addition formula in trigonometry.\n\nStack two right triangles with angles \u03b1 and \u03b2.\n\nThe total vertical height sin(\u03b1 + \u03b2) splits into two projections - sin\u03b1\u00b7cos\u03b2 and cos\u03b1\u00b7sin\u03b2.\n\nThus sin(\u03b1 + \u03b2) = sin\u03b1\u00b7cos\u03b2 + cos\u03b1\u00b7sin\u03b2.",
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Sine Addition Formula",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sine_addition_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-cosine_addition",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/cosine_addition_1x1.mp4",
+    "title": "Cosine Addition Formula",
+    "text": "Geometric proof of the cosine addition formula in trigonometry.\n\nIn stacked right triangles with angles \u03b1 and \u03b2, horizontal base cos(\u03b1 + \u03b2) equals base projection cos\u03b1\u00b7cos\u03b2 minus pullback segment sin\u03b1\u00b7sin\u03b2.\n\nThus cos(\u03b1 + \u03b2) = cos\u03b1\u00b7cos\u03b2 \u2212 sin\u03b1\u00b7sin\u03b2.",
+    "scheduleDate": "2026-11-25",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Cosine Addition Formula",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/cosine_addition_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-sum_of_cubes",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sum_of_cubes_1x1.mp4",
+    "title": "Sum of Consecutive Cubes",
+    "text": "Geometric proof that 1\u00b3 + 2\u00b3 + \u22ef + n\u00b3 = (1 + 2 + \u22ef + n)\u00b2.\n\nA square of side (1 + 2 + \u22ef + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k\u00b3.\n\nSumming all bands yields Nicomachus theorem.",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Sum of Consecutive Cubes",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_cubes_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-inscribed_angle_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/inscribed_angle_theorem_1x1.mp4",
+    "title": "Inscribed Angle Theorem",
+    "text": "Inscribed Angle Theorem - An inscribed angle is exactly half the central angle that subtends the same circular arc. Clear visual proof by radial decomposition.",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Inscribed Angle Theorem",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-cross_product_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/cross_product_area_1x1.mp4",
+    "title": "Cross Product and Parallelogram Area",
+    "text": "Cross Product Magnitude - Why |u x v| = |u||v|sin(theta). Geometric animation demonstrating that cross product magnitude equals the exact area of the spanned parallelogram.",
+    "scheduleDate": "2026-11-26",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Cross Product and Parallelogram Area",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-triangle_incircle_area",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/triangle_incircle_area_1x1.mp4",
+    "title": "Triangle Area via Inradius",
+    "text": "Triangle Area via Inradius - Why Area = r * s. Partitioning any triangle into three sub-triangles of altitude r yields an intuitive visual derivation.",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Triangle Area via Inradius",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangle_incircle_area_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-chord_intersection_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/chord_intersection_theorem_1x1.mp4",
+    "title": "Intersecting Chords Theorem",
+    "text": "Intersecting Chords Theorem - When two chords intersect inside a circle, AE * EB = CE * ED. Visual proof using inscribed angles and similar triangles.",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Intersecting Chords Theorem",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-tangent_half_angle",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/tangent_half_angle_1x1.mp4",
+    "title": "Tangent Half-Angle Formula",
+    "text": "Tangent Half-Angle Formula - Why tan(theta/2) = sin(theta) / (1 + cos(theta)). Elegant unit circle inscribed angle proof.",
+    "scheduleDate": "2026-11-27",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Tangent Half-Angle Formula",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_half_angle_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-shoelace_formula",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/shoelace_formula_1x1.mp4",
+    "title": "The Shoelace Formula for Area",
+    "text": "The Shoelace Formula - Calculating polygon area directly from coordinates using signed trapezoid edge dissections.",
+    "scheduleDate": "2026-11-28",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "The Shoelace Formula for Area",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/shoelace_formula_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-quotient_rule",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/quotient_rule_1x1.mp4",
+    "title": "The Quotient Rule in Calculus",
+    "text": "The Quotient Rule - Why d/dx(u/v) = (u'v - uv') / v^2. Elegant visual proof by area substitution u = q * v.",
+    "scheduleDate": "2026-11-28",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "The Quotient Rule in Calculus",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/quotient_rule_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-derivative_of_cosx",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/derivative_of_cosx_1x1.mp4",
+    "title": "Derivative of Cosine is Negative Sine",
+    "text": "Derivative of Cosine - Why d/dx[cos(x)] = -sin(x). Unit circle tangent triangle shows the horizontal component decreases.",
+    "scheduleDate": "2026-11-28",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Derivative of Cosine is Negative Sine",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_of_cosx_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-surface_area_sphere",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/surface_area_sphere_1x1.mp4",
+    "title": "Surface Area of a Sphere",
+    "text": "Surface Area of a Sphere - Why Area = 4 * pi * r^2. Shell differentiation shows surface area is dV/dr of sphere volume.",
+    "scheduleDate": "2026-11-29",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Surface Area of a Sphere",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/surface_area_sphere_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-cone_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/cone_volume_1x1.mp4",
+    "title": "Volume of a Cone",
+    "text": "Volume of a Cone - Why V = 1/3 * pi * r^2 * h. Disc integration proves cone volume is exactly one-third cylinder volume.",
+    "scheduleDate": "2026-11-29",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Volume of a Cone",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/cone_volume_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-pyramid_volume",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/pyramid_volume_1x1.mp4",
+    "title": "Volume of a Pyramid",
+    "text": "Volume of a Pyramid - Why V = 1/3 * Base * Height. Three congruent pyramids pack a cube completely.",
+    "scheduleDate": "2026-11-29",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Volume of a Pyramid",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pyramid_volume_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-fibonacci_spiral",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/fibonacci_spiral_1x1.mp4",
+    "title": "The Fibonacci Spiral and Golden Ratio",
+    "text": "The Fibonacci Spiral - Tiling Fibonacci squares converges to the golden ratio phi = 1.618.",
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "The Fibonacci Spiral and Golden Ratio",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/fibonacci_spiral_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-pascals_triangle_sum",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/pascals_triangle_sum_1x1.mp4",
+    "title": "Row Sums of Pascal Triangle",
+    "text": "Pascal's Triangle Row Sums - Why each row sums to 2^n via Binomial Theorem on (1 + 1)^n.",
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Row Sums of Pascal Triangle",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/pascals_triangle_sum_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-hockey_stick_identity",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/hockey_stick_identity_1x1.mp4",
+    "title": "The Hockey-Stick Identity",
+    "text": "The Hockey-Stick Identity - Diagonal sums in Pascal's triangle turn sharply into the next row.",
+    "scheduleDate": "2026-11-30",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "The Hockey-Stick Identity",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/hockey_stick_identity_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-euclidean_algorithm",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/euclidean_algorithm_1x1.mp4",
+    "title": "The Euclidean Algorithm",
+    "text": "Visual geometric explanation of the Euclidean Algorithm showing how greatest common divisors gcd(a, b) are computed through recursive square tiling.",
+    "scheduleDate": "2026-12-01",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "The Euclidean Algorithm",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/euclidean_algorithm_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-determinant_2x2",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/determinant_2x2_1x1.mp4",
+    "title": "Determinant as Area Scaling",
+    "text": "Visual geometric explanation of the 2x2 determinant showing how det(A) = ad - bc measures the exact area scaling factor of transformed basis vectors.",
+    "scheduleDate": "2026-12-01",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "altText": "Determinant as Area Scaling",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/determinant_2x2_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-eigenvalues_2x2",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/eigenvalues_2x2_1x1.mp4",
+    "title": "Eigenvectors & Invariant Directions",
+    "text": "Visual geometric explanation of eigenvectors and eigenvalues showing how certain invariant axes maintain their direction under matrix transformation.",
+    "scheduleDate": "2026-12-01",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Eigenvectors & Invariant Directions",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/eigenvalues_2x2_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-harmonic_series_divergence",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/harmonic_series_divergence_1x1.mp4",
+    "title": "Divergence of the Harmonic Series",
+    "text": "Visual proof of why the harmonic series diverges to infinity. By grouping terms into powers of 2, each block sums to greater than one half, showing that adding infinitely many halves grows without bound.",
+    "scheduleDate": "2026-12-02",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Divergence of the Harmonic Series",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/harmonic_series_divergence_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-telescoping_series",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/telescoping_series_1x1.mp4",
+    "title": "The Telescoping Series",
+    "text": "Visual proof of why the infinite series sum 1 / (n(n+1)) equals exactly 1. Partial fractions split each term into 1/n - 1/(n+1), causing all intermediate terms to cancel out like a collapsing telescope.",
+    "scheduleDate": "2026-12-02",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "The Telescoping Series",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/telescoping_series_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-taylor_series_sin",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/taylor_series_sin_1x1.mp4",
+    "title": "Taylor Series Approximation of Sine",
+    "text": "Visualizing how polynomials approximate a sine wave around the origin. A linear tangent gives slope, degree 3 captures inflection curvature, and degree 5 hugs the peak, showing how infinite polynomial terms converge to the exact wave.",
+    "scheduleDate": "2026-12-03",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Taylor Series Approximation of Sine",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/taylor_series_sin_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-extreme_value_theorem",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/extreme_value_theorem_1x1.mp4",
+    "title": "Stationary Points and Fermat Theorem",
+    "text": "Visual proof of Fermat theorem on stationary points. As a curve transitions from rising to falling, its tangent slope changes sign, requiring the derivative to vanish completely at every peak and trough.",
+    "scheduleDate": "2026-12-03",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Stationary Points and Fermat Theorem",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/extreme_value_theorem_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-triangular_numbers_square",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/triangular_numbers_square_1x1.mp4",
+    "title": "Two Triangular Numbers Make a Square",
+    "text": "Visual proof that adding any two consecutive triangular numbers always produces a perfect square where T_(n-1) + T_n = n^2. Interlocking an n-staircase with an (n-1)-staircase tiles an exact n by n square.",
+    "scheduleDate": "2026-12-04",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Two Triangular Numbers Make a Square",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangular_numbers_square_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-infinite_geometric_series_third",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/infinite_geometric_series_third_1x1.mp4",
+    "title": "Infinite Geometric Series Sum",
+    "text": "Visual geometric proof that the infinite series sum of (1/4)^k equals exactly 1/3. Recursive quadrant trisection divides a unit square into three congruent color sets that completely tile an area of 1.",
+    "scheduleDate": "2026-12-04",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Infinite Geometric Series Sum",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/infinite_geometric_series_third_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-collatz_conjecture",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/collatz_conjecture_1x1.mp4",
+    "title": "The Collatz Conjecture 3n + 1",
+    "text": "Visualizing the hailstone orbit of the Collatz 3n + 1 conjecture for n = 7. Starting from 7, the orbit climbs to a peak of 52 before descending into the universal 4 -> 2 -> 1 terminal loop.",
+    "scheduleDate": "2026-12-05",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "The Collatz Conjecture 3n + 1",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/collatz_conjecture_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-sieve_of_eratosthenes",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/sieve_of_eratosthenes_1x1.mp4",
+    "title": "The Sieve of Eratosthenes",
+    "text": "Visualizing how prime numbers are filtered using the ancient Sieve of Eratosthenes on a grid. Systematically eliminating multiples of primes 2, 3, and 5 reveals all prime numbers in the remainder.",
+    "scheduleDate": "2026-12-05",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "The Sieve of Eratosthenes",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sieve_of_eratosthenes_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-dot_product_projection",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/dot_product_projection_1x1.mp4",
+    "title": "The Dot Product as a Shadow",
+    "text": "Visualizing the dot product as a geometric shadow projection. The scalar product u . v measures the length of the orthogonal shadow cast by vector u onto base vector v multiplied by the length of v.",
+    "scheduleDate": "2026-12-06",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "The Dot Product as a Shadow",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/dot_product_projection_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-complex_multiplication",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/complex_multiplication_1x1.mp4",
+    "title": "Complex Multiplication",
+    "text": "Visualizing multiplication of complex numbers in the complex plane. Multiplying two numbers adds their polar angles and multiplies their lengths, turning multiplication into simultaneous rotation and scaling.",
+    "scheduleDate": "2026-12-06",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Complex Multiplication",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/complex_multiplication_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-roots_of_unity",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/roots_of_unity_1x1.mp4",
+    "title": "Roots of Unity and Symmetry",
+    "text": "Visualizing the nth roots of unity z^n = 1 in the complex plane. The solutions form perfectly symmetric regular polygons inscribed inside the unit circle, naturally summing to zero at the origin.",
+    "scheduleDate": "2026-12-07",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Roots of Unity and Symmetry",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/roots_of_unity_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-snells_law",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/snells_law_1x1.mp4",
+    "title": "Snell Law of Refraction",
+    "text": "Visualizing Snell law of refraction derived from Fermat principle of least time. Light travelling between different media bends at the boundary to minimize total travel time rather than distance.",
+    "scheduleDate": "2026-12-07",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Snell Law of Refraction",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/snells_law_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-simple_harmonic_motion",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/simple_harmonic_motion_1x1.mp4",
+    "title": "Simple Harmonic Motion and Circular Motion",
+    "text": "Visualizing simple harmonic motion as the one-dimensional projection of uniform circular motion. The oscillating position of a mass on a spring matches the horizontal cosine projection of an object rotating at constant angular frequency.",
+    "scheduleDate": "2026-12-08",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Simple Harmonic Motion and Circular Motion",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/simple_harmonic_motion_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-doppler_effect",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/doppler_effect_1x1.mp4",
+    "title": "The Doppler Effect and Wavefronts",
+    "text": "Visualizing the Doppler effect through moving wavefront geometry. When a wave source travels at steady velocity, emitted spherical wavefronts bunch together ahead to shorten wavelength and increase frequency, while stretching apart behind.",
+    "scheduleDate": "2026-12-08",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "The Doppler Effect and Wavefronts",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/doppler_effect_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-projectile_parabola",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/projectile_parabola_1x1.mp4",
+    "title": "Projectile Motion and Parabolic Flight",
+    "text": "Visualizing projectile motion as decoupled orthogonal motion. Horizontal movement maintains constant uniform velocity while vertical movement undergoes uniform gravitational acceleration. Eliminating time reveals that any projectile traces a true downward parabola.",
+    "scheduleDate": "2026-12-09",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "altText": "Projectile Motion and Parabolic Flight",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/projectile_parabola_1x1.png",
+    "batchId": "explainer-v1"
+  },
+  {
+    "id": "explainer-mastodon-geometric_distribution",
+    "video": "scripts/viz-assets/videos/explainer_videos/1x1/geometric_distribution_1x1.mp4",
+    "title": "Geometric Distribution Expected Value (E = 1/p)",
+    "text": "Visual proof of why the expected wait time of a geometric distribution equals 1/p via memoryless recursion. A single trial either succeeds with probability p in 1 step or resets with probability 1-p, proving that expected trials always equal 1/p.",
+    "scheduleDate": "2026-12-09",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "altText": "Geometric Distribution Expected Value (E = 1/p)",
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_distribution_1x1.png",
+    "batchId": "explainer-v1"
   }
 ]
