@@ -9,8 +9,8 @@
   "preview_urls": false,
   "upload_source_maps": true,
   "routes": [
-    { "pattern": "veda.ng/api/social-video/*", "zone_name": "veda.ng" },
-    { "pattern": "www.veda.ng/api/social-video/*", "zone_name": "veda.ng" }
+    { "pattern": "veda.ng/api/social-video/*", "zone_id": "164a5fbc833a7aaddc7341db48860954" },
+    { "pattern": "www.veda.ng/api/social-video/*", "zone_id": "164a5fbc833a7aaddc7341db48860954" }
   ],
   "observability": {
     "enabled": true,
