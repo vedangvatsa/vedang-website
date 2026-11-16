@@ -2,7 +2,7 @@
 export const SOCIAL_VIDEO_ORIGIN = 'https://raw.githubusercontent.com/vedangvatsa/vedang-website';
 export const HLS_CONTENT_TYPE = 'application/vnd.apple.mpegurl';
 export const HLS_CONTENT_TYPE_PATTERN = /^application\/(?:vnd\.apple\.mpegurl|x-mpegurl)(?:;|$)/i;
-const VIDEO_PATH = /^scripts\/(?:viz-assets\/videos|viz-batch2-assets\/(?:videos|no-attribution)|thread-assets\/(?:linkedin-rewrites|ig-reels))\/(?:[a-zA-Z0-9_-]+\.mp4|hls\/[a-zA-Z0-9_-]+\.(?:m3u8|mp4))$/;
+const VIDEO_PATH = /^scripts\/(?:viz-assets\/videos|viz-batch2-assets\/(?:videos|no-attribution)|thread-assets\/(?:linkedin-rewrites|ig-reels)|viz-assets\/videos\/explainer_videos\/1x1)\/(?:[a-zA-Z0-9_-]+\.mp4|hls\/[a-zA-Z0-9_-]+\.(?:m3u8|mp4))$/;
 const VIDEO_REF = /^(?:main|[a-f0-9]{40})$/;
 const COMMIT_REF = /^[a-f0-9]{40}$/;
 
