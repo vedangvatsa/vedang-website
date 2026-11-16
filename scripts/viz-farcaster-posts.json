@@ -4065,7 +4065,17 @@
         "videoEmbedUrl": "https://veda.ng/api/social-video/6f1ebca42114c0d1a44c6732ca7b692097823b91/scripts/viz-assets/videos/explainer_videos/1x1/hls/difference_of_squares_1x1.m3u8",
         "deletedAt": "2026-11-17T03:42:00.000Z"
       }
-    ]
+    ],
+    "videoEmbedUrl": "https://veda.ng/api/social-video/8804d9f630d015faef0db8161c5b47ee0bcae6f8/scripts/viz-assets/videos/explainer_videos/1x1/hls/difference_of_squares_1x1.m3u8",
+    "mediaValidatedAt": "2026-11-16T22:52:21.815Z",
+    "state": "uncertain",
+    "attemptedAt": "2026-11-16T22:52:21.815Z",
+    "attemptedSlot": "2026-11-17T01:00",
+    "publishedText": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0xdcd84a99",
+    "platformPostId": "0xdcd84a9988b0791d908da6d1bfa8eae1a1bcad15",
+    "publicationAcceptedAt": "2026-11-16T22:52:21.978Z",
+    "error": "Farcaster cast 0xdcd84a9988b0791d908da6d1bfa8eae1a1bcad15 is unverified (client did not confirm the expected caption and video embed); keep its receipt and hold the queue"
   },
   {
     "id": "explainer-farcaster-sphere_volume",
