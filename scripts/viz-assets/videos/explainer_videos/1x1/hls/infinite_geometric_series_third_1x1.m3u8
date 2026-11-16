@@ -3,11 +3,11 @@
 #EXT-X-TARGETDURATION:6
 #EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-MAP:URI="infinite_geometric_series_third_1x1.mp4",BYTERANGE="893@0"
+#EXT-X-MAP:URI="infinite_geometric_series_third_1x1.mp4",BYTERANGE="1420@0"
 #EXTINF:6.200000,
-#EXT-X-BYTERANGE:231391@893
+#EXT-X-BYTERANGE:234443@1420
 infinite_geometric_series_third_1x1.mp4
 #EXTINF:4.100000,
-#EXT-X-BYTERANGE:143992@232284
+#EXT-X-BYTERANGE:145284@235863
 infinite_geometric_series_third_1x1.mp4
 #EXT-X-ENDLIST
