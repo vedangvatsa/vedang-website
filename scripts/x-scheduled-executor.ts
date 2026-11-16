@@ -11,7 +11,7 @@ const REPO_ROOT = path.resolve(__dirname, '..');
 dotenv.config({ path: path.resolve(REPO_ROOT, '.env.local') });
 
 // Buffer API configuration
-const BUFFER_TOKEN = process.env.BUFFER_API_KEY || process.env.BUFFER_TOKEN || 'xnKLtTNKv7L8BBk2pcYYiNsulFVohykNTGo944Sox0S';
+const BUFFER_TOKEN = process.env.BUFFER_TWITTER_TOKEN || process.env.BUFFER_TOKEN || 'xnKLtTNKv7L8BBk2pcYYiNsulFVohykNTGo944Sox0S';
 const BUFFER_CHANNEL_ID = process.env.BUFFER_TWITTER_CHANNEL_ID || '6ae459612f1f5ed6481d5b6b';
 
 let twitterClient: any | undefined;
