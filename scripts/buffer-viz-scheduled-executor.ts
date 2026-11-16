@@ -81,6 +81,7 @@ export function chooseChannel(service: string, envName: string, available: any[]
       if (directMatch.isDisconnected || directMatch.isLocked) throw new Error(`${service} channel is disconnected or locked`);
       return directMatch;
     }
+    return { id: targetId, service, name: service, isDisconnected: false, isLocked: false };
   }
   const isTwitter = service === 'twitter' || service === 'x';
   const serviceChannels = available.filter(c => isTwitter ? (c.service === 'twitter' || c.service === 'x') : c.service === service);
