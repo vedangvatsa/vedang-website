@@ -25,12 +25,13 @@ export const CREATE_POST = `mutation PublishVizNow($input: CreatePostInput!) {
   }
 }`;
 
-export async function gql(query: string, variables: Record<string, unknown> = {}, retries = 2) {
-  if (!process.env.BUFFER_API_KEY) throw new Error('Missing BUFFER_API_KEY');
+export async function gql(query: string, variables: Record<string, unknown> = {}, retries = 2, token = process.env.BUFFER_API_KEY) {
+  const authToken = token || process.env.BUFFER_API_KEY;
+  if (!authToken) throw new Error('Missing BUFFER_API_KEY');
   for (let attempt = 0; attempt <= retries; attempt++) {
     const res = await fetch('https://api.buffer.com', {
       method: 'POST', signal: AbortSignal.timeout(60000),
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.BUFFER_API_KEY}` },
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${authToken}` },
       body: JSON.stringify({ query, variables }),
     });
     if (res.status === 429 && attempt < retries) {
@@ -148,11 +149,11 @@ export function applyBufferStatus(entry: VizPost, remote: any) {
   }
 }
 
-async function reconcile(entry: VizPost, save: () => void) {
+async function reconcile(entry: VizPost, save: () => void, token?: string) {
   const isStale = entry.attemptedAt && (Date.now() - Date.parse(entry.attemptedAt as string)) > 2 * 3600000;
   const maxAttempts = isStale ? 1 : 30;
   for (let i = 0; i < maxAttempts; i++) {
-    const data = await gql(`query($id: PostId!) { post(input: {id: $id}) { ${POST_FIELDS} } }`, { id: entry.bufferPostId });
+    const data = await gql(`query($id: PostId!) { post(input: {id: $id}) { ${POST_FIELDS} } }`, { id: entry.bufferPostId }, 2, token);
     applyBufferStatus(entry, data.post);
     save();
     if (entry.state !== 'submitted') break;
@@ -162,12 +163,15 @@ async function reconcile(entry: VizPost, save: () => void) {
 }
 
 export async function runPlatform(platform: typeof PLATFORMS[number], available: any[], dryRun: boolean) {
+  const token = platform.service === 'x'
+    ? (process.env.BUFFER_TWITTER_TOKEN || 'xnKLtTNKv7L8BBk2pcYYiNsulFVohykNTGo944Sox0S')
+    : process.env.BUFFER_API_KEY;
   const file = path.resolve(ROOT, 'scripts', process.env[`${platform.prefix}_POSTS_FILE`] || `viz-${platform.service}-posts.json`);
   const posts = readQueue(file);
   const save = () => saveQueue(file, posts);
   if (!dryRun) {
     for (const entry of posts.filter(p => !p.paused && p.bufferPostId && !p.posted && p.state !== 'failed')) {
-      await reconcile(entry, save);
+      await reconcile(entry, save, token);
     }
   }
   // Dry-run validates every entry, even when none is due, without uploads or writes.
@@ -195,7 +199,7 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
   post.attemptedAt = new Date().toISOString();
   save();
   try {
-    const data = await gql(CREATE_POST, { input });
+    const data = await gql(CREATE_POST, { input }, 2, token);
     const result = data?.createPost;
     if (!result?.post?.id) {
       post.state = 'failed';
@@ -203,7 +207,7 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
     }
     applyBufferStatus(post, result.post);
     save();
-    if (!post.posted) await reconcile(post, save);
+    if (!post.posted) await reconcile(post, save, token);
     console.log(`${platform.service}: sent ${post.postUrl || post.bufferPostId}`);
   } catch (err) {
     if (post.state === 'publishing') post.state = 'uncertain';
