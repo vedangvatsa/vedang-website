@@ -4005,9 +4005,18 @@
     "text": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-16T09:00",
+    "attemptedAt": "2026-11-16T04:59:46.219Z",
+    "bufferPostId": "6afa8dc28e87c256a3b2b04d",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DfyjdoykiHZ/",
+    "postedAt": "2026-11-16T05:01:00.729Z",
+    "error": null
   },
   {
     "id": "explainer-ig-geometric_series",

@@ -3493,7 +3493,12 @@
     "posted": false,
     "altText": "How to Add Numbers from 1 to n",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "uncertain",
+    "attemptedAt": "2026-11-16T05:01:57.106Z",
+    "attemptedSlot": "2026-11-16T09:00",
+    "publishedText": "Visual proof of why the sum of integers from 1 to n equals n(n+1)/2 by interlocking two staircases into a rectangle.",
+    "error": "Account is not allowed to perform this action"
   },
   {
     "id": "explainer-x-geometric_series",

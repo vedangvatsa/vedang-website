@@ -3286,8 +3286,8 @@
     "text": "How the largest leek and related vegetable producers changed.\n\n2000-2024. Leek and related vegetable production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-08",
     "scheduleTime": "01:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-16T05:02:36.569Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/123-r2.txt",
     "captionStyle": "concise-v2",
@@ -3299,7 +3299,13 @@
     "sourceCredit": "FAO",
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T05:02:28.434Z",
+    "attemptedSlot": "2026-11-16T09:00",
+    "publishedText": "How the largest leek and related vegetable producers changed.\n\n2000-2024. Leek and related vegetable production by country, measured in thousands of tonnes.",
+    "postUrl": "https://hachyderm.io/@vedang/117624363838850579",
+    "platformPostId": "117624363838850579"
   },
   {
     "id": "viz-b2-mastodon-124",

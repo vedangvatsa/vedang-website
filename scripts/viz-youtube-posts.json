@@ -4069,9 +4069,18 @@
     "tags": [],
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Two identical staircases lock together into a rectangle, proving the formula for the sum of the first n integers.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-16T09:00",
+    "attemptedAt": "2026-11-16T04:59:46.213Z",
+    "bufferPostId": "6afa8dc260a910801c6c49db",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=o1n0loqi7w8",
+    "postedAt": "2026-11-16T04:59:47.898Z",
+    "error": null
   },
   {
     "id": "explainer-yt-geometric_series",

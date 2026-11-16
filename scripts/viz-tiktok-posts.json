@@ -4065,9 +4065,18 @@
     "title": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-16T09:00",
+    "attemptedAt": "2026-11-16T04:59:46.223Z",
+    "bufferPostId": "6afa8dc2ff465c57dad351e5",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7708629507493661970",
+    "postedAt": "2026-11-16T05:01:35.577Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-geometric_series",

@@ -3844,9 +3844,17 @@
     "text": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T05:01:50.173Z",
+    "attemptedSlot": "2026-11-16T09:00",
+    "publishedText": "How to add numbers from 1 to n.\n\nMake a staircase from 1 to n.\n\nFlip a copy upside down and lock them together.\n\nIt makes a rectangle. Half of it is the sum.",
+    "platformPostId": "urn:li:ugcPost:7527959118360363008",
+    "postedAt": "2026-11-16T05:01:57.102Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7527959118360363008/"
   },
   {
     "id": "explainer-linkedin-geometric_series",
