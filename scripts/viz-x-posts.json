@@ -3490,10 +3490,18 @@
     "text": "Visual proof of why the sum of integers from 1 to n equals n(n+1)/2 by interlocking two staircases into a rectangle.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "How to Add Numbers from 1 to n",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "postedAt": "2026-11-16T06:19:17.524Z",
+    "state": "sent",
+    "error": null,
+    "bufferPostId": "6afaa063d7e5fee638a5fc8c",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2122212893689008448",
+    "platformPostId": "2122212893689008448",
+    "publishedText": "Visual proof of why the sum of integers from 1 to n equals n(n+1)/2 by interlocking two staircases into a rectangle."
   },
   {
     "id": "explainer-x-geometric_series",
