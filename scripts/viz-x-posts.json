@@ -3515,10 +3515,15 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png",
     "batchId": "explainer-v1",
     "publishedText": "Visual geometric proof of the infinite series sum 1/2 + 1/4 + 1/8 + ... = 1 by repeatedly halving the remaining area of a unit square.",
-    "state": "failed",
+    "state": "sent",
     "attemptedSlot": "2026-11-16T17:00",
-    "attemptedAt": "2026-11-16T12:36:09.308Z",
-    "error": "Account is not allowed to perform this action"
+    "attemptedAt": "2026-11-16T12:37:43.597Z",
+    "error": null,
+    "postedAt": "2026-11-16T12:37:43.597Z",
+    "bufferPostId": "6afaf915f017e92b4ba3f61f",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2122308129891188786",
+    "platformPostId": "2122308129891188786"
   },
   {
     "id": "explainer-x-difference_of_squares",
