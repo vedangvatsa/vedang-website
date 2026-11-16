@@ -3919,10 +3919,18 @@
     "text": "Take a square with an area of 1.\n\nCut it in half. That is 1/2.\n\nCut the leftover space in half. That is 1/4.\n\nKeep cutting halves forever. Together they fill the square.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why Halves Add Up to One",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T12:15:54.247Z",
+    "attemptedSlot": "2026-11-16T17:00",
+    "publishedText": "Take a square with an area of 1.\n\nCut it in half. That is 1/2.\n\nCut the leftover space in half. That is 1/4.\n\nKeep cutting halves forever. Together they fill the square.",
+    "postUrl": "https://hachyderm.io/@vedang/117626068068920676",
+    "platformPostId": "117626068068920676",
+    "postedAt": "2026-11-16T12:16:01.024Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-difference_of_squares",

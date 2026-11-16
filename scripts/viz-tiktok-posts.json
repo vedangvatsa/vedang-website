@@ -4085,9 +4085,18 @@
     "title": "Why halves add up to 1.\n\nStart with a square of 1.\n\nColor half, then half of what is left, forever.\n\nAll the pieces fill the square.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Why halves add up to 1.\n\nStart with a square of 1.\n\nColor half, then half of what is left, forever.\n\nAll the pieces fill the square.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-16T17:00",
+    "attemptedAt": "2026-11-16T12:13:31.094Z",
+    "bufferPostId": "6afaf36b0c2af02527de0e5f",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7708741309787393332",
+    "postedAt": "2026-11-16T12:15:14.277Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-difference_of_squares",

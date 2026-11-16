@@ -3862,9 +3862,17 @@
     "text": "Why halves add up to 1.\n\nStart with a square of 1.\n\nColor half, then half of what is left, forever.\n\nAll the pieces fill the square.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T12:15:17.941Z",
+    "attemptedSlot": "2026-11-16T17:00",
+    "publishedText": "Why halves add up to 1.\n\nStart with a square of 1.\n\nColor half, then half of what is left, forever.\n\nAll the pieces fill the square.",
+    "platformPostId": "urn:li:ugcPost:7528068203122655232",
+    "postedAt": "2026-11-16T12:15:24.926Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528068203122655232/"
   },
   {
     "id": "explainer-linkedin-difference_of_squares",

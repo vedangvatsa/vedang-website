@@ -3529,8 +3529,8 @@
     "text": "How the largest dried chilli and pepper producers changed.\n\n2000-2024. Dried chilli and pepper production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-08",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-16T12:15:54.243Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/124-r2.txt",
     "captionStyle": "concise-v2",
@@ -3545,7 +3545,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T12:15:50.707Z",
+    "attemptedSlot": "2026-11-16T17:00",
+    "publishedText": "How the largest dried chilli and pepper producers changed.\n\n2000-2024. Dried chilli and pepper production by country, measured in millions of tonnes.",
+    "platformPostId": "833441082049183744",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833441082049183744"
   },
   {
     "id": "viz-b2-tumblr-125",

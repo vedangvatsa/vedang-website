@@ -3835,10 +3835,18 @@
     "text": "Why an infinite series can add up to a whole number.\n\nStart with a square that has an area of 1.\n\nColor in half of it. Then color half of what is left, and keep going.\n\nEach step fills half of the remaining space.\n\nTogether, 1/2 plus 1/4 plus 1/8 and so on fill the whole square to 1.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why Halves Add Up to One",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_4x5.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T12:15:31.018Z",
+    "attemptedSlot": "2026-11-16T17:00",
+    "publishedText": "Why an infinite series can add up to a whole number.\n\nStart with a square that has an area of 1.\n\nColor in half of it. Then color half of what is left, and keep going.\n\nEach step fills half of the remaining space.\n\nTogether, 1/2 plus 1/4 plus 1/8 and so on fill the whole square to 1.",
+    "platformPostId": "1107588242187378",
+    "postedAt": "2026-11-16T12:15:50.700Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=1107588242187378"
   },
   {
     "id": "explainer-fb-difference_of_squares",

@@ -4026,7 +4026,17 @@
     "posted": false,
     "altText": "Why Halves Add Up to One",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/1b3f201dd8a70329482affef8e0ad258884d7c5d/scripts/viz-assets/videos/explainer_videos/1x1/hls/geometric_series_1x1.m3u8",
+    "mediaValidatedAt": "2026-11-16T12:16:03.257Z",
+    "state": "uncertain",
+    "attemptedAt": "2026-11-16T12:16:03.257Z",
+    "attemptedSlot": "2026-11-16T17:00",
+    "publishedText": "Take a square with an area of 1.\n\nCut it in half. That is 1/2.\n\nCut the leftover space in half. That is 1/4.\n\nKeep cutting halves forever. Together they fill the square.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0x874305ee",
+    "platformPostId": "0x874305eed3b86ffeba31adc75b3c0a640e29ccf7",
+    "publicationAcceptedAt": "2026-11-16T12:16:03.490Z",
+    "error": "Farcaster cast 0x874305eed3b86ffeba31adc75b3c0a640e29ccf7 is unverified (client did not confirm the expected caption and video embed); keep its receipt and hold the queue"
   },
   {
     "id": "explainer-farcaster-difference_of_squares",

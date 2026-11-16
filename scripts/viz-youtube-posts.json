@@ -4090,9 +4090,18 @@
     "tags": [],
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Dividing a unit square repeatedly into halves to show how an infinite geometric series equals 1.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-16T17:00",
+    "attemptedAt": "2026-11-16T12:13:31.098Z",
+    "bufferPostId": "6afaf36b08eb28e26b01ea20",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=lLLmscMAWZU",
+    "postedAt": "2026-11-16T12:13:32.694Z",
+    "error": null
   },
   {
     "id": "explainer-yt-difference_of_squares",
