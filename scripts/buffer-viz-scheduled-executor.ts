@@ -74,8 +74,16 @@ export async function channels() {
 }
 
 export function chooseChannel(service: string, envName: string, available: any[]) {
-  const matches = available.filter(c => c.service === service && (!process.env[envName] || c.id === process.env[envName]));
-  if (matches.length !== 1) throw new Error(`Expected one ${service} channel; set ${envName} to choose explicitly`);
+  const serviceChannels = available.filter(c => c.service === service);
+  const targetId = process.env[envName]?.trim();
+  let matches = serviceChannels.filter(c => !targetId || c.id === targetId);
+  if (matches.length === 0 && serviceChannels.length === 1) {
+    matches = serviceChannels;
+  }
+  if (matches.length !== 1) {
+    const list = serviceChannels.map(c => `${c.id} (${c.name || 'unnamed'})`).join(', ');
+    throw new Error(`Expected one ${service} channel; available [${list}]; set ${envName} to choose explicitly`);
+  }
   const channel = matches[0];
   if (channel.isDisconnected || channel.isLocked) throw new Error(`${service} channel is disconnected or locked`);
   return channel;
