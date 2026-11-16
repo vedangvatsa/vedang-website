@@ -2317,7 +2317,8 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
-    ]
+    ],
+    "error": "Account is not allowed to perform this action"
   },
   {
     "id": "ai-web-scrapers-thread",

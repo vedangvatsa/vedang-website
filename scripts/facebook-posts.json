@@ -1350,8 +1350,10 @@
     "text": "Why adding consecutive odd numbers always creates a square number.\n\nStart with 1 block.\n\nWrap 3 blocks around it to make a 2 by 2 square.\n\nWrap 5 blocks around that to make a 3 by 3 square.\n\nEvery odd number fits as the next outer layer.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "01:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_odds_4x5.png",
+    "postedAt": "2026-11-16T12:00:31.406Z",
+    "fbPostId": "3187957674869598"
   },
   {
     "id": "explainer-fb-sum_of_integers",
