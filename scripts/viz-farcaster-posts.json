@@ -4001,20 +4001,20 @@
     "text": "How to add the numbers from 1 to n without adding each one.\n\nBuild a staircase of blocks from 1 to n.\n\nMake a second copy, flip it upside down, and fit them together.\n\nThey make a rectangle. Cut the total area in half.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "How to Add Numbers from 1 to n",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_1x1.png",
     "batchId": "explainer-v1",
     "videoEmbedUrl": "https://veda.ng/api/social-video/9e508ce724a9893f93e3ded8a665e38fb6d6d2c3/scripts/viz-assets/videos/explainer_videos/1x1/hls/sum_of_integers_1x1.m3u8",
     "mediaValidatedAt": "2026-11-16T07:58:25.122Z",
-    "state": "uncertain",
+    "state": "sent",
     "attemptedAt": "2026-11-16T07:58:25.122Z",
     "attemptedSlot": "2026-11-16T09:00",
     "publishedText": "How to add the numbers from 1 to n without adding each one.\n\nBuild a staircase of blocks from 1 to n.\n\nMake a second copy, flip it upside down, and fit them together.\n\nThey make a rectangle. Cut the total area in half.",
     "postUrl": "https://farcaster.xyz/vedangvatsa/0x19474caa",
     "platformPostId": "0x19474caaf8608988d8d8cbbc4035fbc00e6304fa",
     "publicationAcceptedAt": "2026-11-16T07:58:25.283Z",
-    "error": "Farcaster cast 0x19474caaf8608988d8d8cbbc4035fbc00e6304fa is unverified (client did not confirm the expected caption and video embed); keep its receipt and hold the queue"
+    "postedAt": "2026-11-16T07:58:25.283Z"
   },
   {
     "id": "explainer-farcaster-geometric_series",
