@@ -172,7 +172,10 @@ jobs:
 
       - name: Pull latest changes before commit
         if: always()
-        run: git pull --rebase origin main || true
+        run: |
+          git stash || true
+          git pull --rebase origin main || true
+          git stash pop || true
 
       - name: Commit updated post files
         if: always()
