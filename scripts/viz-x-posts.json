@@ -3532,10 +3532,19 @@
     "text": "Visual proof of the difference of squares a^2 - b^2 = (a-b)(a+b) by rearranging a corner cutout into a single rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "Visualizing the Difference of Squares",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Visual proof of the difference of squares a^2 - b^2 = (a-b)(a+b) by rearranging a corner cutout into a single rectangle.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T01:00",
+    "attemptedAt": "2026-11-16T20:51:41.921Z",
+    "bufferPostId": "6afb6cde9c7c07cbc8511354",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2122432457488163160",
+    "postedAt": "2026-11-16T20:51:45.599Z",
+    "error": null
   },
   {
     "id": "explainer-x-sphere_volume",

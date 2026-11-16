@@ -4043,9 +4043,18 @@
     "text": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T01:00",
+    "attemptedAt": "2026-11-16T20:51:41.916Z",
+    "bufferPostId": "6afb6cde3e6202be878a2151",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Df0QZpVDm9O/",
+    "postedAt": "2026-11-16T20:52:39.713Z",
+    "error": null
   },
   {
     "id": "explainer-ig-sphere_volume",

@@ -4105,9 +4105,18 @@
     "title": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T01:00",
+    "attemptedAt": "2026-11-16T20:51:41.912Z",
+    "bufferPostId": "6afb6cde3e6202be878a214a",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7708874899980438804",
+    "postedAt": "2026-11-16T20:52:25.178Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-sphere_volume",

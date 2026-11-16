@@ -3563,8 +3563,8 @@
     "text": "How the largest raw vanilla producers changed.\n\n2000-2024. Raw vanilla production by country, measured in tonnes.",
     "scheduleDate": "2026-11-08",
     "scheduleTime": "17:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-16T20:53:31.157Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/125-r2.txt",
     "captionStyle": "concise-v2",
@@ -3579,7 +3579,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T20:53:26.795Z",
+    "attemptedSlot": "2026-11-17T01:00",
+    "publishedText": "How the largest raw vanilla producers changed.\n\n2000-2024. Raw vanilla production by country, measured in tonnes.",
+    "platformPostId": "833473647531507712",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833473647531507712"
   },
   {
     "id": "viz-b2-tumblr-126",

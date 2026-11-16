@@ -4049,7 +4049,17 @@
     "posted": false,
     "altText": "Visualizing the Difference of Squares",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/6f1ebca42114c0d1a44c6732ca7b692097823b91/scripts/viz-assets/videos/explainer_videos/1x1/hls/difference_of_squares_1x1.m3u8",
+    "mediaValidatedAt": "2026-11-16T20:53:48.525Z",
+    "state": "uncertain",
+    "attemptedAt": "2026-11-16T20:53:48.525Z",
+    "attemptedSlot": "2026-11-17T01:00",
+    "publishedText": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0x1d2141d7",
+    "platformPostId": "0x1d2141d79c1d2332b45dfe6a8df78c454a97d041",
+    "publicationAcceptedAt": "2026-11-16T20:53:48.761Z",
+    "error": "Farcaster cast 0x1d2141d79c1d2332b45dfe6a8df78c454a97d041 is unverified (client did not confirm the expected caption and video embed); keep its receipt and hold the queue"
   },
   {
     "id": "explainer-farcaster-sphere_volume",

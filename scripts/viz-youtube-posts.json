@@ -4111,9 +4111,18 @@
     "tags": [],
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Cutting a corner square out and rearranging the remaining parts into a rectangle.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T01:00",
+    "attemptedAt": "2026-11-16T20:51:41.907Z",
+    "bufferPostId": "6afb6cde46606800af19a30a",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=ufR4DRfAWuI",
+    "postedAt": "2026-11-16T20:51:43.938Z",
+    "error": null
   },
   {
     "id": "explainer-yt-sphere_volume",

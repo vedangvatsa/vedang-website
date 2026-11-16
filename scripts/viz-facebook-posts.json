@@ -3855,10 +3855,18 @@
     "text": "Why the difference of two squares equals a minus b times a plus b.\n\nStart with a square of size a by a, and remove a corner square of size b by b.\n\nThe remaining shape divides into two rectangular pieces.\n\nMoving one piece makes a single rectangle with width a plus b and height a minus b.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "Visualizing the Difference of Squares",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_4x5.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T20:53:09.061Z",
+    "attemptedSlot": "2026-11-17T01:00",
+    "publishedText": "Why the difference of two squares equals a minus b times a plus b.\n\nStart with a square of size a by a, and remove a corner square of size b by b.\n\nThe remaining shape divides into two rectangular pieces.\n\nMoving one piece makes a single rectangle with width a plus b and height a minus b.",
+    "platformPostId": "3001693490205166",
+    "postedAt": "2026-11-16T20:53:26.785Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=3001693490205166"
   },
   {
     "id": "explainer-fb-sphere_volume",

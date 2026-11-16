@@ -3939,10 +3939,18 @@
     "text": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "Visualizing the Difference of Squares",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T20:53:31.161Z",
+    "attemptedSlot": "2026-11-17T01:00",
+    "publishedText": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
+    "postUrl": "https://hachyderm.io/@vedang/117628103496092858",
+    "platformPostId": "117628103496092858",
+    "postedAt": "2026-11-16T20:53:39.216Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-sphere_volume",

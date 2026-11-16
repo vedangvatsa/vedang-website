@@ -3880,9 +3880,17 @@
     "text": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-16T20:52:50.726Z",
+    "attemptedSlot": "2026-11-17T01:00",
+    "publishedText": "Difference of squares.\n\nStart with a big square.\n\nCut out a small corner square.\n\nRearrange the pieces to make a rectangle.",
+    "platformPostId": "urn:li:ugcPost:7528198449691955200",
+    "postedAt": "2026-11-16T20:52:58.173Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528198449691955200/"
   },
   {
     "id": "explainer-linkedin-sphere_volume",
