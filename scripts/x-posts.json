@@ -2468,7 +2468,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Modern DeFi protocols manage tens of billions across automated liquidity, lending, and cross-chain messaging.\n\n8 protocols that define modern DeFi architecture 🧵👇",
@@ -2525,7 +2525,9 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
-    ]
+    ],
+    "postedAt": "2026-11-17T20:02:51.304Z",
+    "tweetId": "6afcb2e5ca5f4f8df9cf42dc"
   },
   {
     "id": "computer-vision-models-thread",

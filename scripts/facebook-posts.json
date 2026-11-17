@@ -1372,8 +1372,10 @@
     "text": "Why an infinite series can add up to a whole number.\n\nStart with a square that has an area of 1.\n\nColor in half of it. Then color half of what is left, and keep going.\n\nEach step fills half of the remaining space.\n\nTogether, 1/2 plus 1/4 plus 1/8 and so on fill the whole square to 1.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "17:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_series_4x5.png",
+    "postedAt": "2026-11-17T20:03:18.633Z",
+    "fbPostId": "2995912904085617"
   },
   {
     "id": "explainer-fb-difference_of_squares",
