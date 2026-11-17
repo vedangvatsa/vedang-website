@@ -3574,10 +3574,19 @@
     "text": "Visualizing the geometric definition of a derivative as secant lines between two points converge into a single tangent line.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "What a Derivative Actually Is",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Visualizing the geometric definition of a derivative as secant lines between two points converge into a single tangent line.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T17:00",
+    "attemptedAt": "2026-11-17T11:54:01.583Z",
+    "bufferPostId": "6afc405a9d7d4c6b78592d45",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2122659539220676884",
+    "postedAt": "2026-11-17T11:54:06.101Z",
+    "error": null
   },
   {
     "id": "explainer-x-product_rule",

@@ -4145,9 +4145,18 @@
     "title": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T17:00",
+    "attemptedAt": "2026-11-17T11:54:01.363Z",
+    "bufferPostId": "6afc40599d7d4c6b78592d1f",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7709107428280798482",
+    "postedAt": "2026-11-17T11:54:44.145Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-product_rule",

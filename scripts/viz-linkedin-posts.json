@@ -3916,9 +3916,17 @@
     "text": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T11:55:09.862Z",
+    "attemptedSlot": "2026-11-17T17:00",
+    "publishedText": "What a derivative is.\n\nPick two points on a curve.\n\nBring them closer together.\n\nThe line turns into the exact slope at one point.",
+    "platformPostId": "urn:li:ugcPost:7528425525279850496",
+    "postedAt": "2026-11-17T11:55:17.165Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528425525279850496/"
   },
   {
     "id": "explainer-linkedin-product_rule",

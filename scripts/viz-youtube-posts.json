@@ -4153,9 +4153,18 @@
     "tags": [],
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Moving two points closer on a curve until the line becomes the tangent line.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T17:00",
+    "attemptedAt": "2026-11-17T11:54:01.591Z",
+    "bufferPostId": "6afc4059137943ebd674877f",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=YbSMAELQbig",
+    "postedAt": "2026-11-17T11:54:03.292Z",
+    "error": null
   },
   {
     "id": "explainer-yt-product_rule",

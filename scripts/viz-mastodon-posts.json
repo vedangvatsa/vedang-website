@@ -3979,10 +3979,18 @@
     "text": "What a derivative means in geometry.\n\nDraw a line through two points on a curve.\n\nMove the two points closer together.\n\nThe line turns into a tangent touching at just one point.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "What a Derivative Actually Is",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T11:55:48.068Z",
+    "attemptedSlot": "2026-11-17T17:00",
+    "publishedText": "What a derivative means in geometry.\n\nDraw a line through two points on a curve.\n\nMove the two points closer together.\n\nThe line turns into a tangent touching at just one point.",
+    "postUrl": "https://hachyderm.io/@vedang/117631651414326559",
+    "platformPostId": "117631651414326559",
+    "postedAt": "2026-11-17T11:55:56.164Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-product_rule",

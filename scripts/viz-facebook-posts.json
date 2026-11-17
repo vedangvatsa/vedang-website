@@ -3895,10 +3895,18 @@
     "text": "The geometric meaning of a derivative.\n\nPick two points on a curve and draw a line between them.\n\nAs the distance between the two points shrinks toward zero, the line rotates.\n\nAt the limit, it touches the curve at a single point, showing the exact slope at that instant.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "What a Derivative Actually Is",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_4x5.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T11:55:27.372Z",
+    "attemptedSlot": "2026-11-17T17:00",
+    "publishedText": "The geometric meaning of a derivative.\n\nPick two points on a curve and draw a line between them.\n\nAs the distance between the two points shrinks toward zero, the line rotates.\n\nAt the limit, it touches the curve at a single point, showing the exact slope at that instant.",
+    "platformPostId": "1670612508001399",
+    "postedAt": "2026-11-17T11:55:43.420Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=1670612508001399"
   },
   {
     "id": "explainer-fb-product_rule",

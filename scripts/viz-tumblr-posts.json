@@ -3631,8 +3631,8 @@
     "text": "How tuberculosis incidence changed across countries.\n\n2000-2024. Estimated annual new and relapse tuberculosis cases per 100,000 people.",
     "scheduleDate": "2026-11-09",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-17T11:55:48.063Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/66-r2.txt",
     "captionStyle": "concise-v2",
@@ -3647,7 +3647,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T11:55:43.432Z",
+    "attemptedSlot": "2026-11-17T17:00",
+    "publishedText": "How tuberculosis incidence changed across countries.\n\n2000-2024. Estimated annual new and relapse tuberculosis cases per 100,000 people.",
+    "platformPostId": "833530414209630208",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833530414209630208"
   },
   {
     "id": "viz-b2-tumblr-127",
