@@ -3934,9 +3934,17 @@
     "text": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T21:24:13.186Z",
+    "attemptedSlot": "2026-11-18T01:00",
+    "publishedText": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
+    "platformPostId": "urn:li:ugcPost:7528568732718170113",
+    "postedAt": "2026-11-17T21:24:20.519Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528568732718170113/"
   },
   {
     "id": "explainer-linkedin-sin_derivative",

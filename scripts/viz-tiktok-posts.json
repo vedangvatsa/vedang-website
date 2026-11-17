@@ -4165,9 +4165,18 @@
     "title": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "The product rule explained visually.\n\nMake a rectangle of width u and height v.\n\nGrow both sides.\n\nThe extra area is two thin strips.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-18T01:00",
+    "attemptedAt": "2026-11-17T21:23:26.088Z",
+    "bufferPostId": "6afcc5cef35d3f4877f19d5f",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7709252737879379252",
+    "postedAt": "2026-11-17T21:24:09.293Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-sin_derivative",

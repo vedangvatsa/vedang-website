@@ -3595,10 +3595,19 @@
     "text": "Visual proof of the calculus product rule d(uv) = u dv + v du using the expanding area of a rectangle.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "The Product Rule Made Simple",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Visual proof of the calculus product rule d(uv) = u dv + v du using the expanding area of a rectangle.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-18T01:00",
+    "attemptedAt": "2026-11-17T21:23:26.244Z",
+    "bufferPostId": "6afcc5cea739830f97465c4f",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2122802835821670437",
+    "postedAt": "2026-11-17T21:23:30.664Z",
+    "error": null
   },
   {
     "id": "explainer-x-sin_derivative",

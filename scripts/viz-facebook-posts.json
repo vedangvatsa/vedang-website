@@ -3915,10 +3915,18 @@
     "text": "A visual explanation of the product rule in calculus.\n\nPicture a rectangle with width u and height v.\n\nWhen both sides grow a little bit, the extra area comes from two side strips and one tiny corner.\n\nAs the changes get smaller, the corner disappears, leaving only the two strips.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "The Product Rule Made Simple",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_4x5.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T21:24:30.430Z",
+    "attemptedSlot": "2026-11-18T01:00",
+    "publishedText": "A visual explanation of the product rule in calculus.\n\nPicture a rectangle with width u and height v.\n\nWhen both sides grow a little bit, the extra area comes from two side strips and one tiny corner.\n\nAs the changes get smaller, the corner disappears, leaving only the two strips.",
+    "platformPostId": "1694681982020295",
+    "postedAt": "2026-11-17T21:24:45.547Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=1694681982020295"
   },
   {
     "id": "explainer-fb-sin_derivative",

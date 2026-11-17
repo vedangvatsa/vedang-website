@@ -4174,9 +4174,18 @@
     "tags": [],
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Showing how a growing rectangle explains the product rule in calculus.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-18T01:00",
+    "attemptedAt": "2026-11-17T21:23:26.334Z",
+    "bufferPostId": "6afcc5ce9b0477630c94f16c",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=1P2qlloCu5A",
+    "postedAt": "2026-11-17T21:23:28.128Z",
+    "error": null
   },
   {
     "id": "explainer-yt-sin_derivative",

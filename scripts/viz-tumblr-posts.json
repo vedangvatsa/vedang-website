@@ -3665,8 +3665,8 @@
     "text": "How the largest olive oil producers changed.\n\n2000-2023. Olive oil production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-09",
     "scheduleTime": "17:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-17T21:24:50.213Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/127-r2.txt",
     "captionStyle": "concise-v2",
@@ -3681,7 +3681,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T21:24:45.557Z",
+    "attemptedSlot": "2026-11-18T01:00",
+    "publishedText": "How the largest olive oil producers changed.\n\n2000-2023. Olive oil production by country, measured in millions of tonnes.",
+    "platformPostId": "833566214839320576",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833566214839320576"
   },
   {
     "id": "viz-b2-tumblr-128",

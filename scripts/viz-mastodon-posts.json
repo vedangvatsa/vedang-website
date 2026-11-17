@@ -3999,10 +3999,18 @@
     "text": "Why the derivative of u times v is u dv plus v du.\n\nPicture a rectangle of width u and height v.\n\nIf both sides grow slightly, the new area is two thin strips plus a tiny corner.\n\nThe corner is too small to matter.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "The Product Rule Made Simple",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T21:24:50.218Z",
+    "attemptedSlot": "2026-11-18T01:00",
+    "publishedText": "Why the derivative of u times v is u dv plus v du.\n\nPicture a rectangle of width u and height v.\n\nIf both sides grow slightly, the new area is two thin strips plus a tiny corner.\n\nThe corner is too small to matter.",
+    "postUrl": "https://hachyderm.io/@vedang/117633888947347562",
+    "platformPostId": "117633888947347562",
+    "postedAt": "2026-11-17T21:24:58.183Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-sin_derivative",
