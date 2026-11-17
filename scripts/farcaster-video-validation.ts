@@ -187,7 +187,7 @@ export async function verifyFarcasterCast(hash: string, castUrl: string | undefi
   const username = decodeURIComponent(name);
   const query = new URLSearchParams({ username, castHashPrefix: hash.slice(0,10), limit: '15' });
   let reason = 'cast not visible';
-  for (let attempt = 0; attempt < 6; attempt++) {
+  for (let attempt = 0; attempt < 12; attempt++) {
     try {
       const response = await request(`https://api.farcaster.xyz/v2/user-thread-casts?${query}`, {
         cache: 'no-store', signal: AbortSignal.timeout(15000),
@@ -206,7 +206,7 @@ export async function verifyFarcasterCast(hash: string, castUrl: string | undefi
         reason = cast ? 'client did not confirm the expected caption and video embed' : 'cast not visible';
       }
     } catch (error) { reason = (error as Error).message; }
-    if (attempt < 5) await wait(5000);
+    if (attempt < 11) await wait(5000);
   }
   throw new Error(`Farcaster cast ${hash} is unverified (${reason}); keep its receipt and hold the queue`);
 }

@@ -4052,7 +4052,7 @@
     "text": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "Visualizing the Difference of Squares",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_1x1.png",
     "batchId": "explainer-v1",
@@ -4064,18 +4064,17 @@
         "attemptedAt": "2026-11-16T20:53:48.525Z",
         "videoEmbedUrl": "https://veda.ng/api/social-video/6f1ebca42114c0d1a44c6732ca7b692097823b91/scripts/viz-assets/videos/explainer_videos/1x1/hls/difference_of_squares_1x1.m3u8",
         "deletedAt": "2026-11-17T03:42:00.000Z"
+      },
+      {
+        "reason": "Warpcast ingestion placed embed into unknowns; cast deleted by user",
+        "platformPostId": "0xdcd84a9988b0791d908da6d1bfa8eae1a1bcad15",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0xdcd84a99",
+        "attemptedAt": "2026-11-16T22:52:21.815Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/8804d9f630d015faef0db8161c5b47ee0bcae6f8/scripts/viz-assets/videos/explainer_videos/1x1/hls/difference_of_squares_1x1.m3u8",
+        "deletedAt": "2026-11-17T06:57:45.735Z"
       }
     ],
-    "videoEmbedUrl": "https://veda.ng/api/social-video/8804d9f630d015faef0db8161c5b47ee0bcae6f8/scripts/viz-assets/videos/explainer_videos/1x1/hls/difference_of_squares_1x1.m3u8",
-    "mediaValidatedAt": "2026-11-16T22:52:21.815Z",
-    "state": "uncertain",
-    "attemptedAt": "2026-11-16T22:52:21.815Z",
-    "attemptedSlot": "2026-11-17T01:00",
-    "publishedText": "Start with a big square.\n\nCut a small square out of the corner.\n\nSlice the leftover piece into two parts and slide one over.\n\nThey form a single rectangle.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0xdcd84a99",
-    "platformPostId": "0xdcd84a9988b0791d908da6d1bfa8eae1a1bcad15",
-    "publicationAcceptedAt": "2026-11-16T22:52:21.978Z",
-    "error": "Farcaster cast 0xdcd84a9988b0791d908da6d1bfa8eae1a1bcad15 is unverified (client did not confirm the expected caption and video embed); keep its receipt and hold the queue"
+    "postedAt": "2026-11-17T01:00:00.000Z"
   },
   {
     "id": "explainer-farcaster-sphere_volume",
