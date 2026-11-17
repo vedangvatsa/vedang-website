@@ -2,7 +2,7 @@ name: Social Media Scheduled Posts
 
 on:
   schedule:
-    - cron: "*/15 * * * *" # Poll queue every 15 mins (resilient to GitHub Actions jitter)
+    - cron: "35 3,11,19 * * *" # 09:05, 17:05, 01:05 IST (3 runs/day)
   workflow_dispatch: # Allow manual trigger
 
 concurrency:

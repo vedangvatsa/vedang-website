@@ -374,9 +374,18 @@ async function main() {
   for (const post of posts) {
     if (post.posted) continue;
 
-    const isDue =
-      post.scheduleDate < currentDate ||
-      (post.scheduleDate === currentDate && post.scheduleTime <= currentTime);
+    // Check if post is due (includes a 15-min tolerance window to prevent skips from minor runner clock jitter)
+    let isDue = false;
+    try {
+      const [sYear, sMonth, sDay] = post.scheduleDate.split('-').map(Number);
+      const [sHour, sMin] = post.scheduleTime.split(':').map(Number);
+      const scheduledUtc = Date.UTC(sYear, sMonth - 1, sDay, sHour, sMin) - (TIMEZONE_OFFSET_HOURS * 60 * 60 * 1000);
+      isDue = (Date.now() - scheduledUtc) >= -15 * 60 * 1000;
+    } catch {
+      isDue =
+        post.scheduleDate < currentDate ||
+        (post.scheduleDate === currentDate && post.scheduleTime <= currentTime);
+    }
 
     if (!isDue) continue;
 
