@@ -4132,9 +4132,18 @@
     "tags": [],
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Showing how a sphere can be broken into tiny pyramids to find its total volume.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T09:00",
+    "attemptedAt": "2026-11-17T07:03:41.914Z",
+    "bufferPostId": "6afbfc4ec6d951405b4bb452",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=dFdFHUl80Nc",
+    "postedAt": "2026-11-17T07:03:43.466Z",
+    "error": null
   },
   {
     "id": "explainer-yt-derivative_tangent",

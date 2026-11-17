@@ -4086,7 +4086,17 @@
     "posted": false,
     "altText": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "videoEmbedUrl": "https://veda.ng/api/social-video/d5618cc9c36cf65ce236489954b00e4880449306/scripts/viz-assets/videos/explainer_videos/1x1/hls/sphere_volume_1x1.m3u8",
+    "mediaValidatedAt": "2026-11-17T07:05:44.550Z",
+    "state": "uncertain",
+    "attemptedAt": "2026-11-17T07:05:44.550Z",
+    "attemptedSlot": "2026-11-17T09:00",
+    "publishedText": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
+    "postUrl": "https://farcaster.xyz/vedangvatsa/0x0de48ac7",
+    "platformPostId": "0x0de48ac74658b554208de6254666b8df0c584324",
+    "publicationAcceptedAt": "2026-11-17T07:05:44.752Z",
+    "error": "Farcaster cast 0x0de48ac74658b554208de6254666b8df0c584324 is unverified (client did not confirm the expected caption and video embed); keep its receipt and hold the queue"
   },
   {
     "id": "explainer-farcaster-derivative_tangent",

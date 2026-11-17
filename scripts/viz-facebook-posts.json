@@ -3875,10 +3875,18 @@
     "text": "How Archimedes figured out the volume of a sphere.\n\nBreak a sphere down into many tiny pyramids with their points touching the center.\n\nThe height of every pyramid is the radius, and the sum of their bases is the surface area.\n\nAdding the volume of all the pyramids gives four thirds pi r cubed.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_4x5.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T07:05:08.096Z",
+    "attemptedSlot": "2026-11-17T09:00",
+    "publishedText": "How Archimedes figured out the volume of a sphere.\n\nBreak a sphere down into many tiny pyramids with their points touching the center.\n\nThe height of every pyramid is the radius, and the sum of their bases is the surface area.\n\nAdding the volume of all the pyramids gives four thirds pi r cubed.",
+    "platformPostId": "2563103157510277",
+    "postedAt": "2026-11-17T07:05:28.790Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=2563103157510277"
   },
   {
     "id": "explainer-fb-derivative_tangent",

@@ -3882,10 +3882,18 @@
     "text": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T07:04:57.913Z",
+    "attemptedSlot": "2026-11-17T09:00",
+    "publishedText": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3n2ii3vgpeg2f",
+    "postedAt": "2026-11-17T07:05:08.092Z",
+    "error": null,
+    "postUrl": "https://bsky.app/profile/did:plc:x3llxr24tbj72fy3nish3xrh/post/3n2ii3vgpeg2f"
   },
   {
     "id": "explainer-bsky-derivative_tangent",

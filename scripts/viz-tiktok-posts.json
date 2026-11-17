@@ -4125,9 +4125,18 @@
     "title": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T09:00",
+    "attemptedAt": "2026-11-17T07:03:41.907Z",
+    "bufferPostId": "6afbfc4e9f28abc456205f71",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7709031593465236742",
+    "postedAt": "2026-11-17T07:04:24.520Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-derivative_tangent",

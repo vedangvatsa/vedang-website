@@ -3553,10 +3553,19 @@
     "text": "Visual derivation of the volume of a sphere V = 4/3 pi r^3 by partitioning the sphere into infinitesimal pyramids meeting at the center.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Visual derivation of the volume of a sphere V = 4/3 pi r^3 by partitioning the sphere into infinitesimal pyramids meeting at the center.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T09:00",
+    "attemptedAt": "2026-11-17T07:03:42.067Z",
+    "bufferPostId": "6afbfc4e82a2d4951bef01ac",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2122586467608174770",
+    "postedAt": "2026-11-17T07:03:44.470Z",
+    "error": null
   },
   {
     "id": "explainer-x-derivative_tangent",

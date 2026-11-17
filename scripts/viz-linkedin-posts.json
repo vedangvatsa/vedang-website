@@ -3898,9 +3898,17 @@
     "text": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-17T07:04:50.545Z",
+    "attemptedSlot": "2026-11-17T09:00",
+    "publishedText": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
+    "platformPostId": "urn:li:ugcPost:7528352463406616576",
+    "postedAt": "2026-11-17T07:04:57.907Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528352463406616576/"
   },
   {
     "id": "explainer-linkedin-derivative_tangent",

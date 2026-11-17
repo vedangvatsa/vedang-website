@@ -4062,9 +4062,18 @@
     "text": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Volume of a sphere.\n\nSplit the sphere into tiny pyramids.\n\nThe bases cover the surface. Points meet in the center.\n\nAdding them gives the volume.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-17T09:00",
+    "attemptedAt": "2026-11-17T07:03:41.911Z",
+    "bufferPostId": "6afbfc4ea23f2007cb7bd43d",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Df1WcMRFR0L/",
+    "postedAt": "2026-11-17T07:04:43.192Z",
+    "error": null
   },
   {
     "id": "explainer-ig-derivative_tangent",
