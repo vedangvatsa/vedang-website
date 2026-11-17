@@ -1361,8 +1361,10 @@
     "text": "Adding numbers from 1 to n quickly.\n\nStack blocks into a staircase from 1 up to n.\n\nTake an identical copy, turn it upside down, and lock the two stairs together.\n\nThey form a rectangle with width n and height n plus 1.\n\nHalf of that rectangle is the exact sum.",
     "scheduleDate": "2026-11-16",
     "scheduleTime": "09:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_integers_4x5.png",
+    "postedAt": "2026-11-17T02:37:52.863Z",
+    "fbPostId": "29533355936350246"
   },
   {
     "id": "explainer-fb-geometric_series",
