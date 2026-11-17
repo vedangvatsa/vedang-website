@@ -4083,20 +4083,20 @@
     "text": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Volume of a Sphere is 4/3 Pi r Cubed",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_1x1.png",
     "batchId": "explainer-v1",
-    "videoEmbedUrl": "https://veda.ng/api/social-video/d5618cc9c36cf65ce236489954b00e4880449306/scripts/viz-assets/videos/explainer_videos/1x1/hls/sphere_volume_1x1.m3u8",
-    "mediaValidatedAt": "2026-11-17T07:05:44.550Z",
-    "state": "uncertain",
-    "attemptedAt": "2026-11-17T07:05:44.550Z",
-    "attemptedSlot": "2026-11-17T09:00",
-    "publishedText": "How to find the volume of a sphere.\n\nThink of a sphere as thousands of tiny pyramids.\n\nTheir bases cover the surface, and their points meet in the middle.\n\nAdding their volumes gives four thirds pi r cubed.",
-    "postUrl": "https://farcaster.xyz/vedangvatsa/0x0de48ac7",
-    "platformPostId": "0x0de48ac74658b554208de6254666b8df0c584324",
-    "publicationAcceptedAt": "2026-11-17T07:05:44.752Z",
-    "error": "Farcaster cast 0x0de48ac74658b554208de6254666b8df0c584324 is unverified (client did not confirm the expected caption and video embed); keep its receipt and hold the queue"
+    "postedAt": "2026-11-17T09:00:00.000Z",
+    "repairHistory": [
+      {
+        "reason": "Unverified embed (Warpcast placed into unknowns); Farcaster publishing disabled",
+        "platformPostId": "0x0de48ac74658b554208de6254666b8df0c584324",
+        "postUrl": "https://farcaster.xyz/vedangvatsa/0x0de48ac7",
+        "attemptedAt": "2026-11-17T07:05:44.550Z",
+        "videoEmbedUrl": "https://veda.ng/api/social-video/d5618cc9c36cf65ce236489954b00e4880449306/scripts/viz-assets/videos/explainer_videos/1x1/hls/sphere_volume_1x1.m3u8"
+      }
+    ]
   },
   {
     "id": "explainer-farcaster-derivative_tangent",
@@ -4108,7 +4108,9 @@
     "posted": false,
     "altText": "What a Derivative Actually Is",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-product_rule",
@@ -4120,7 +4122,9 @@
     "posted": false,
     "altText": "The Product Rule Made Simple",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-sin_derivative",
@@ -4132,7 +4136,9 @@
     "posted": false,
     "altText": "Why the Derivative of Sine is Cosine",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-central_limit_theorem",
@@ -4144,7 +4150,9 @@
     "posted": false,
     "altText": "Why the Bell Curve Shows Up Everywhere",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-square_of_sum",
@@ -4156,7 +4164,9 @@
     "posted": false,
     "altText": "Square of a Sum",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/square_of_sum_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-riemann_integral",
@@ -4168,7 +4178,9 @@
     "posted": false,
     "altText": "The Riemann Integral",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-chain_rule",
@@ -4180,7 +4192,9 @@
     "posted": false,
     "altText": "The Chain Rule",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chain_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-birthday_paradox",
@@ -4192,7 +4206,9 @@
     "posted": false,
     "altText": "The Birthday Paradox",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/birthday_paradox_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-irrationality_sqrt2",
@@ -4204,7 +4220,9 @@
     "posted": false,
     "altText": "Irrationality of √2",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-ln_derivative",
@@ -4216,7 +4234,9 @@
     "posted": false,
     "altText": "Derivative of ln(x)",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/ln_derivative_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-matrix_transform",
@@ -4228,7 +4248,9 @@
     "posted": false,
     "altText": "What is a Matrix?",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/matrix_transform_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-graph_shift",
@@ -4240,7 +4262,9 @@
     "posted": false,
     "altText": "Function Transformations",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-curve_arclength",
@@ -4252,7 +4276,9 @@
     "posted": false,
     "altText": "Arc Length of a Curve",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/curve_arclength_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-integration_by_parts",
@@ -4264,7 +4290,9 @@
     "posted": false,
     "altText": "Integration by Parts",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/integration_by_parts_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-normal_distribution",
@@ -4276,7 +4304,9 @@
     "posted": false,
     "altText": "The Normal Distribution",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/normal_distribution_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-inclined_plane",
@@ -4288,7 +4318,9 @@
     "posted": false,
     "altText": "Forces on a Ramp",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/inclined_plane_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-rubiks_permutations",
@@ -4300,7 +4332,9 @@
     "posted": false,
     "altText": "Permutations of Rubik's Cube",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/rubiks_permutations_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-power_rule",
@@ -4312,7 +4346,9 @@
     "posted": false,
     "altText": "The Power Rule",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/power_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-geometric_mean",
@@ -4324,7 +4360,9 @@
     "posted": false,
     "altText": "The Geometric Mean",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_mean_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-tangent_secant",
@@ -4336,7 +4374,9 @@
     "posted": false,
     "altText": "Tangent-Secant Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_secant_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-euler_formula",
@@ -4348,7 +4388,9 @@
     "posted": false,
     "altText": "Euler Identity",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/euler_formula_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-am_gm_inequality",
@@ -4360,7 +4402,9 @@
     "posted": false,
     "altText": "AM-GM Inequality",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/am_gm_inequality_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-sine_addition",
@@ -4372,7 +4416,9 @@
     "posted": false,
     "altText": "Sine Addition Formula",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sine_addition_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-cosine_addition",
@@ -4384,7 +4430,9 @@
     "posted": false,
     "altText": "Cosine Addition Formula",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cosine_addition_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-sum_of_cubes",
@@ -4396,7 +4444,9 @@
     "posted": false,
     "altText": "Sum of Consecutive Cubes",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_cubes_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-inscribed_angle_theorem",
@@ -4408,7 +4458,9 @@
     "posted": false,
     "altText": "Inscribed Angle Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-cross_product_area",
@@ -4420,7 +4472,9 @@
     "posted": false,
     "altText": "Cross Product and Parallelogram Area",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-triangle_incircle_area",
@@ -4446,7 +4500,9 @@
     "posted": false,
     "altText": "Intersecting Chords Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-tangent_half_angle",
@@ -4458,7 +4514,9 @@
     "posted": false,
     "altText": "Tangent Half-Angle Formula",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_half_angle_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-shoelace_formula",
@@ -4470,7 +4528,9 @@
     "posted": false,
     "altText": "The Shoelace Formula for Area",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/shoelace_formula_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-quotient_rule",
@@ -4482,7 +4542,9 @@
     "posted": false,
     "altText": "The Quotient Rule in Calculus",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/quotient_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-derivative_of_cosx",
@@ -4494,7 +4556,9 @@
     "posted": false,
     "altText": "Derivative of Cosine is Negative Sine",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_of_cosx_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-surface_area_sphere",
@@ -4506,7 +4570,9 @@
     "posted": false,
     "altText": "Surface Area of a Sphere",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/surface_area_sphere_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-cone_volume",
@@ -4518,7 +4584,9 @@
     "posted": false,
     "altText": "Volume of a Cone",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cone_volume_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-pyramid_volume",
@@ -4530,7 +4598,9 @@
     "posted": false,
     "altText": "Volume of a Pyramid",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pyramid_volume_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-fibonacci_spiral",
@@ -4542,7 +4612,9 @@
     "posted": false,
     "altText": "The Fibonacci Spiral and Golden Ratio",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/fibonacci_spiral_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-pascals_triangle_sum",
@@ -4554,7 +4626,9 @@
     "posted": false,
     "altText": "Row Sums of Pascal Triangle",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pascals_triangle_sum_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-hockey_stick_identity",
@@ -4566,7 +4640,9 @@
     "posted": false,
     "altText": "The Hockey-Stick Identity",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/hockey_stick_identity_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-euclidean_algorithm",
@@ -4578,7 +4654,9 @@
     "posted": false,
     "altText": "The Euclidean Algorithm",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/euclidean_algorithm_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-determinant_2x2",
@@ -4590,7 +4668,9 @@
     "posted": false,
     "altText": "Determinant as Area Scaling",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/determinant_2x2_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-eigenvalues_2x2",
@@ -4602,7 +4682,9 @@
     "posted": false,
     "altText": "Eigenvectors & Invariant Directions",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/eigenvalues_2x2_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-harmonic_series_divergence",
@@ -4614,7 +4696,9 @@
     "posted": false,
     "altText": "Divergence of the Harmonic Series",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/harmonic_series_divergence_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-telescoping_series",
@@ -4626,7 +4710,9 @@
     "posted": false,
     "altText": "The Telescoping Series",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/telescoping_series_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-taylor_series_sin",
@@ -4638,7 +4724,9 @@
     "posted": false,
     "altText": "Taylor Series Approximation of Sine",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/taylor_series_sin_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-extreme_value_theorem",
@@ -4650,7 +4738,9 @@
     "posted": false,
     "altText": "Stationary Points and Fermat Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/extreme_value_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-triangular_numbers_square",
@@ -4662,7 +4752,9 @@
     "posted": false,
     "altText": "Two Triangular Numbers Make a Square",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangular_numbers_square_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-infinite_geometric_series_third",
@@ -4674,7 +4766,9 @@
     "posted": false,
     "altText": "Infinite Geometric Series Sum",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/infinite_geometric_series_third_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-collatz_conjecture",
@@ -4686,7 +4780,9 @@
     "posted": false,
     "altText": "The Collatz Conjecture 3n + 1",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/collatz_conjecture_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-sieve_of_eratosthenes",
@@ -4698,7 +4794,9 @@
     "posted": false,
     "altText": "The Sieve of Eratosthenes",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sieve_of_eratosthenes_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-dot_product_projection",
@@ -4710,7 +4808,9 @@
     "posted": false,
     "altText": "The Dot Product as a Shadow",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/dot_product_projection_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-complex_multiplication",
@@ -4722,7 +4822,9 @@
     "posted": false,
     "altText": "Complex Multiplication",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/complex_multiplication_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-roots_of_unity",
@@ -4734,7 +4836,9 @@
     "posted": false,
     "altText": "Roots of Unity and Symmetry",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/roots_of_unity_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-snells_law",
@@ -4746,7 +4850,9 @@
     "posted": false,
     "altText": "Snell Law of Refraction",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/snells_law_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-simple_harmonic_motion",
@@ -4758,7 +4864,9 @@
     "posted": false,
     "altText": "Simple Harmonic Motion and Circular Motion",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/simple_harmonic_motion_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-doppler_effect",
@@ -4770,7 +4878,9 @@
     "posted": false,
     "altText": "The Doppler Effect and Wavefronts",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/doppler_effect_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-projectile_parabola",
@@ -4782,7 +4892,9 @@
     "posted": false,
     "altText": "Projectile Motion and Parabolic Flight",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/projectile_parabola_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   },
   {
     "id": "explainer-farcaster-geometric_distribution",
@@ -4794,6 +4906,8 @@
     "posted": false,
     "altText": "Geometric Distribution Expected Value (E = 1/p)",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_distribution_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Farcaster publishing disabled per user request"
   }
 ]
