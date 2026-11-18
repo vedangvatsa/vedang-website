@@ -2534,7 +2534,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Open vision models can now segment video, estimate 3D depth, and run document OCR completely offline.\n\n8 state-of-the-art open vision models you can run 🧵👇",
@@ -2586,7 +2586,9 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
-    ]
+    ],
+    "postedAt": "2026-11-18T09:19:26.528Z",
+    "tweetId": "6afd6d986aa4338a57dcf246"
   },
   {
     "id": "ai-agents-wallets-thread",

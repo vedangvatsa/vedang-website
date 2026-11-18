@@ -1383,8 +1383,10 @@
     "text": "Why the difference of two squares equals a minus b times a plus b.\n\nStart with a square of size a by a, and remove a corner square of size b by b.\n\nThe remaining shape divides into two rectangular pieces.\n\nMoving one piece makes a single rectangle with width a plus b and height a minus b.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "01:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/difference_of_squares_4x5.png",
+    "postedAt": "2026-11-18T09:19:52.080Z",
+    "fbPostId": "1127433060165259"
   },
   {
     "id": "explainer-fb-sphere_volume",
