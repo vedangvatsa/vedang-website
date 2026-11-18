@@ -3970,9 +3970,17 @@
     "text": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-18T12:05:25.697Z",
+    "attemptedSlot": "2026-11-18T17:00",
+    "publishedText": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
+    "platformPostId": "urn:li:ugcPost:7528790498283728897",
+    "postedAt": "2026-11-18T12:05:33.605Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528790498283728897/"
   },
   {
     "id": "explainer-linkedin-square_of_sum",

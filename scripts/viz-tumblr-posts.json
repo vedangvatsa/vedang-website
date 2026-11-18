@@ -3733,8 +3733,8 @@
     "text": "How the largest camel meat producers changed.\n\n2000-2024. Camel meat production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-10",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-18T12:06:00.262Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/129-r2.txt",
     "captionStyle": "concise-v2",
@@ -3749,7 +3749,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-18T12:05:56.936Z",
+    "attemptedSlot": "2026-11-18T17:00",
+    "publishedText": "How the largest camel meat producers changed.\n\n2000-2024. Camel meat production by country, measured in thousands of tonnes.",
+    "platformPostId": "833621653138309120",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833621653138309120"
   },
   {
     "id": "viz-b2-tumblr-130",

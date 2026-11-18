@@ -4216,9 +4216,18 @@
     "tags": [],
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Watching random left and right bounces stack into a bell curve.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-18T17:00",
+    "attemptedAt": "2026-11-18T12:02:37.588Z",
+    "bufferPostId": "6afd93dd03c6b6e75e059c6d",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=W3g5TiOEdow",
+    "postedAt": "2026-11-18T12:02:39.182Z",
+    "error": null
   },
   {
     "id": "explainer-yt-square_of_sum",

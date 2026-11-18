@@ -4205,9 +4205,18 @@
     "title": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Why bell curves happen.\n\nDrop balls through pins.\n\nEach ball bounces left or right.\n\nMost land in the middle, forming a bell curve.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-18T17:00",
+    "attemptedAt": "2026-11-18T12:02:37.575Z",
+    "bufferPostId": "6afd93dd771ad9d67626406a",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7709480885724368148",
+    "postedAt": "2026-11-18T12:05:16.747Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-square_of_sum",

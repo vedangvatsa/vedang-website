@@ -3955,10 +3955,18 @@
     "text": "Why the bell curve shows up everywhere.\n\nWhen you drop balls through rows of pegs, each ball makes several random choices to bounce left or right.\n\nExtreme paths to the far sides are rare, while paths that balance out are common.\n\nAdding many small random steps always builds a normal distribution.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Bell Curve Shows Up Everywhere",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_4x5.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-18T12:05:42.988Z",
+    "attemptedSlot": "2026-11-18T17:00",
+    "publishedText": "Why the bell curve shows up everywhere.\n\nWhen you drop balls through rows of pegs, each ball makes several random choices to bounce left or right.\n\nExtreme paths to the far sides are rare, while paths that balance out are common.\n\nAdding many small random steps always builds a normal distribution.",
+    "platformPostId": "1455801303294073",
+    "postedAt": "2026-11-18T12:05:56.926Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=1455801303294073"
   },
   {
     "id": "explainer-fb-square_of_sum",

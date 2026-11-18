@@ -3962,10 +3962,18 @@
     "text": "Drop balls through rows of pins.\n\nEach ball bounces randomly left or right.\n\nMost balls end up near the center.\n\nThe pile naturally forms a bell shape.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Bell Curve Shows Up Everywhere",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-18T12:05:33.613Z",
+    "attemptedSlot": "2026-11-18T17:00",
+    "publishedText": "Drop balls through rows of pins.\n\nEach ball bounces randomly left or right.\n\nMost balls end up near the center.\n\nThe pile naturally forms a bell shape.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3n2ljeca3po2f",
+    "postedAt": "2026-11-18T12:05:42.983Z",
+    "error": null,
+    "postUrl": "https://bsky.app/profile/did:plc:x3llxr24tbj72fy3nish3xrh/post/3n2ljeca3po2f"
   },
   {
     "id": "explainer-bluesky-square_of_sum",

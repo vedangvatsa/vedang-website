@@ -4039,10 +4039,18 @@
     "text": "Drop balls through rows of pins.\n\nEach ball bounces randomly left or right.\n\nMost balls end up near the center.\n\nThe pile naturally forms a bell shape.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Bell Curve Shows Up Everywhere",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-18T12:06:00.267Z",
+    "attemptedSlot": "2026-11-18T17:00",
+    "publishedText": "Drop balls through rows of pins.\n\nEach ball bounces randomly left or right.\n\nMost balls end up near the center.\n\nThe pile naturally forms a bell shape.",
+    "postUrl": "https://hachyderm.io/@vedang/117637353869052909",
+    "platformPostId": "117637353869052909",
+    "postedAt": "2026-11-18T12:06:08.722Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-square_of_sum",

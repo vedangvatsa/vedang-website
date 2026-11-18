@@ -3637,10 +3637,19 @@
     "text": "Visualizing the central limit theorem as independent random bounces through a Galton board assemble into a normal bell curve.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Bell Curve Shows Up Everywhere",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Visualizing the central limit theorem as independent random bounces through a Galton board assemble into a normal bell curve.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-18T17:00",
+    "attemptedAt": "2026-11-18T12:02:37.643Z",
+    "bufferPostId": "6afd93de771ad9d676264083",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2123024083600257336",
+    "postedAt": "2026-11-18T12:02:40.255Z",
+    "error": null
   },
   {
     "id": "explainer-x-square_of_sum",
