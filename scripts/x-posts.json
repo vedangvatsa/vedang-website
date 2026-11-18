@@ -2595,7 +2595,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Software agents cannot open bank accounts, so crypto rails give them balance sheets.\n\n8 tools powering AI agents with wallets 🧵👇",
@@ -2661,7 +2661,9 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
-    ]
+    ],
+    "postedAt": "2026-11-18T12:13:15.896Z",
+    "tweetId": "6afd965467b44b742a532a08"
   },
   {
     "id": "ai-second-brain-thread",
