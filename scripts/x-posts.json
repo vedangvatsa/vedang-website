@@ -2670,7 +2670,7 @@
     "type": "thread",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:05",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
         "text": "1/ Local embeddings and search turn your private notes into a fast reasoning engine.\n\n8 tools to build an AI second brain 🧵👇",
@@ -2736,7 +2736,9 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/common/courses_v2.png?v=20261113",
         "posted": false
       }
-    ]
+    ],
+    "postedAt": "2026-11-18T20:41:15.155Z",
+    "tweetId": "6afe0d600fd3f6beff50eb06"
   },
   {
     "id": "quantum-pqc-security-thread",

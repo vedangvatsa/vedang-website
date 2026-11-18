@@ -1394,8 +1394,10 @@
     "text": "How Archimedes figured out the volume of a sphere.\n\nBreak a sphere down into many tiny pyramids with their points touching the center.\n\nThe height of every pyramid is the radius, and the sum of their bases is the surface area.\n\nAdding the volume of all the pyramids gives four thirds pi r cubed.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "09:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sphere_volume_4x5.png",
+    "postedAt": "2026-11-18T20:41:35.817Z",
+    "fbPostId": "2349550132486615"
   },
   {
     "id": "explainer-fb-derivative_tangent",
