@@ -4119,9 +4119,18 @@
     "text": "Why the derivative of sine is cosine.\n\nMove around a circle.\n\nHeight is sine.\n\nHow fast height changes matches the cosine distance.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_9x16.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Why the derivative of sine is cosine.\n\nMove around a circle.\n\nHeight is sine.\n\nHow fast height changes matches the cosine distance.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-18T09:00",
+    "attemptedAt": "2026-11-18T08:48:12.435Z",
+    "bufferPostId": "6afd664c45783105f43a043a",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Df4HMmEEY7C/",
+    "postedAt": "2026-11-18T08:48:40.848Z",
+    "error": null
   },
   {
     "id": "explainer-ig-central_limit_theorem",

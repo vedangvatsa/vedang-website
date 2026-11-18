@@ -4019,10 +4019,18 @@
     "text": "Why the rate of change of sine equals cosine.\n\nMove a point around a circle.\n\nSine is how high the point is.\n\nAs you move along the circle, how fast height changes matches horizontal distance.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Derivative of Sine is Cosine",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-18T08:52:41.306Z",
+    "attemptedSlot": "2026-11-18T09:00",
+    "publishedText": "Why the rate of change of sine equals cosine.\n\nMove a point around a circle.\n\nSine is how high the point is.\n\nAs you move along the circle, how fast height changes matches horizontal distance.",
+    "postUrl": "https://hachyderm.io/@vedang/117636593714461353",
+    "platformPostId": "117636593714461353",
+    "postedAt": "2026-11-18T08:52:49.680Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-central_limit_theorem",

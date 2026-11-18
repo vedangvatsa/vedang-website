@@ -3699,8 +3699,8 @@
     "text": "How the largest palm oil producers changed.\n\n2000-2023. Palm oil production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-10",
     "scheduleTime": "01:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-18T08:52:41.302Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/128-r2.txt",
     "captionStyle": "concise-v2",
@@ -3715,7 +3715,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-18T08:52:38.414Z",
+    "attemptedSlot": "2026-11-18T09:00",
+    "publishedText": "How the largest palm oil producers changed.\n\n2000-2023. Palm oil production by country, measured in millions of tonnes.",
+    "platformPostId": "833609490734727168",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833609490734727168"
   },
   {
     "id": "viz-b2-tumblr-129",

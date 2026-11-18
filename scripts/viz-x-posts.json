@@ -3616,10 +3616,19 @@
     "text": "Visualizing why the rate of change of sine equals cosine through circular motion on the unit circle.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Why the Derivative of Sine is Cosine",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "publishedText": "Visualizing why the rate of change of sine equals cosine through circular motion on the unit circle.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-18T09:00",
+    "attemptedAt": "2026-11-18T08:48:12.577Z",
+    "bufferPostId": "6afd664c805b2f3bff4142b8",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2122975164115681516",
+    "postedAt": "2026-11-18T08:48:16.941Z",
+    "error": null
   },
   {
     "id": "explainer-x-central_limit_theorem",
