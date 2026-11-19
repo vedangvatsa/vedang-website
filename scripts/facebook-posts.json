@@ -1405,8 +1405,10 @@
     "text": "The geometric meaning of a derivative.\n\nPick two points on a curve and draw a line between them.\n\nAs the distance between the two points shrinks toward zero, the line rotates.\n\nAt the limit, it touches the curve at a single point, showing the exact slope at that instant.",
     "scheduleDate": "2026-11-17",
     "scheduleTime": "17:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_tangent_4x5.png",
+    "postedAt": "2026-11-19T12:07:14.298Z",
+    "fbPostId": "981120641324479"
   },
   {
     "id": "explainer-fb-product_rule",
