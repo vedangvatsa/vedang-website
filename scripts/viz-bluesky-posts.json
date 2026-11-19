@@ -4000,12 +4000,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/riemann_integral_1x1.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Riemann Integral",
     "altText": "The Riemann Integral",
-    "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve."
+    "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "state": "sent",
+    "attemptedAt": "2026-11-19T12:02:18.477Z",
+    "attemptedSlot": "2026-11-19T17:00",
+    "publishedText": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "platformPostId": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3n2nznfuwjw2m",
+    "postedAt": "2026-11-19T12:02:28.172Z",
+    "error": null,
+    "postUrl": "https://bsky.app/profile/did:plc:x3llxr24tbj72fy3nish3xrh/post/3n2nznfuwjw2m"
   },
   {
     "id": "explainer-bluesky-chain_rule",

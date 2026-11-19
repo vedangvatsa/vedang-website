@@ -4175,10 +4175,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/riemann_integral_9x16.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_9x16.png",
     "batchId": "explainer-v1",
-    "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve."
+    "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "publishedText": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-19T17:00",
+    "attemptedAt": "2026-11-19T11:59:04.179Z",
+    "bufferPostId": "6afee4880ec6644abcd61d8a",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Df7B8I8EYrE/",
+    "postedAt": "2026-11-19T12:02:06.709Z",
+    "error": null
   },
   {
     "id": "explainer-ig-chain_rule",

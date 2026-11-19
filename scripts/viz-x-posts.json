@@ -3677,12 +3677,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/riemann_integral_1x1.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Riemann Integral",
     "altText": "The Riemann Integral",
-    "text": "Visualizing the Riemann integral as the sum of increasingly narrow vertical rectangles converging to the exact area under a curve."
+    "text": "Visualizing the Riemann integral as the sum of increasingly narrow vertical rectangles converging to the exact area under a curve.",
+    "publishedText": "Visualizing the Riemann integral as the sum of increasingly narrow vertical rectangles converging to the exact area under a curve.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-19T17:00",
+    "attemptedAt": "2026-11-19T11:59:04.186Z",
+    "bufferPostId": "6afee488ad8533e6e9d978ac",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2123385580541091974",
+    "postedAt": "2026-11-19T11:59:07.873Z",
+    "error": null
   },
   {
     "id": "explainer-x-chain_rule",

@@ -3801,8 +3801,8 @@
     "text": "How HIV prevalence changed across countries.\n\n2000-2024. The estimated share of people aged 15-49 living with HIV.",
     "scheduleDate": "2026-11-11",
     "scheduleTime": "01:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-19T12:02:47.380Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/67-r2.txt",
     "captionStyle": "concise-v2",
@@ -3817,7 +3817,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-19T12:02:43.819Z",
+    "attemptedSlot": "2026-11-19T17:00",
+    "publishedText": "How HIV prevalence changed across countries.\n\n2000-2024. The estimated share of people aged 15-49 living with HIV.",
+    "platformPostId": "833712047842803712",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833712047842803712"
   },
   {
     "id": "viz-b2-tumblr-131",

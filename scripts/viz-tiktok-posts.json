@@ -4243,11 +4243,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/riemann_integral_9x16.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_9x16.png",
     "batchId": "explainer-v1",
     "title": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
-    "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve."
+    "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "publishedText": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-19T17:00",
+    "attemptedAt": "2026-11-19T11:59:04.124Z",
+    "bufferPostId": "6afee4880879dc3911522483",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7709850929243131156",
+    "postedAt": "2026-11-19T12:01:10.817Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-chain_rule",

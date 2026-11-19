@@ -4260,7 +4260,14 @@
     "batchId": "explainer-v1",
     "title": "The Riemann Integral",
     "description": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
-    "tags": []
+    "tags": [],
+    "publishedText": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "state": "failed",
+    "attemptedSlot": "2026-11-19T17:00",
+    "attemptedAt": "2026-11-19T11:59:04.182Z",
+    "bufferPostId": "6afee488ad8533e6e9d978c2",
+    "bufferStatus": "error",
+    "error": "Buffer status error; inspect post 6afee488ad8533e6e9d978c2"
   },
   {
     "id": "explainer-yt-chain_rule",

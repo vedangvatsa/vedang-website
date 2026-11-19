@@ -4079,10 +4079,18 @@
     "text": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "The Riemann Integral",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-19T12:02:47.384Z",
+    "attemptedSlot": "2026-11-19T17:00",
+    "publishedText": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "postUrl": "https://hachyderm.io/@vedang/117643003532326867",
+    "platformPostId": "117643003532326867",
+    "postedAt": "2026-11-19T12:02:55.738Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-chain_rule",
