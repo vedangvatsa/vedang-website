@@ -4156,10 +4156,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/square_of_sum_9x16.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/square_of_sum_9x16.png",
     "batchId": "explainer-v1",
-    "text": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared."
+    "text": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
+    "publishedText": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-19T01:00",
+    "attemptedAt": "2026-11-19T01:21:58.163Z",
+    "bufferPostId": "6afe4f3659eff0b616ce87c8",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/Df546_mgaT_/",
+    "postedAt": "2026-11-19T01:22:58.517Z",
+    "error": null
   },
   {
     "id": "explainer-ig-riemann_integral",

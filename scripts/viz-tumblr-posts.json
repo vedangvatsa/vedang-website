@@ -3767,8 +3767,8 @@
     "text": "How the largest fresh cream producers changed.\n\n2000-2023. Fresh cream production by country, measured in thousands of tonnes.",
     "scheduleDate": "2026-11-10",
     "scheduleTime": "17:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-19T01:23:48.266Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/130-r2.txt",
     "captionStyle": "concise-v2",
@@ -3783,7 +3783,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-19T01:23:44.299Z",
+    "attemptedSlot": "2026-11-19T01:00",
+    "publishedText": "How the largest fresh cream producers changed.\n\n2000-2023. Fresh cream production by country, measured in thousands of tonnes.",
+    "platformPostId": "833671846357565440",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833671846357565440"
   },
   {
     "id": "viz-b2-tumblr-67",

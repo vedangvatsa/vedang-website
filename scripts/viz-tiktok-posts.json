@@ -4223,11 +4223,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/square_of_sum_9x16.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/square_of_sum_9x16.png",
     "batchId": "explainer-v1",
     "title": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
-    "text": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared."
+    "text": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
+    "publishedText": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-19T01:00",
+    "attemptedAt": "2026-11-19T01:21:58.154Z",
+    "bufferPostId": "6afe4f363802f5b9fc59e716",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7709686666629221684",
+    "postedAt": "2026-11-19T01:22:40.897Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-riemann_integral",

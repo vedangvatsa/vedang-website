@@ -4059,10 +4059,18 @@
     "text": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "Square of a Sum",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/square_of_sum_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-19T01:23:48.269Z",
+    "attemptedSlot": "2026-11-19T01:00",
+    "publishedText": "Geometric proof of (a + b) squared.\n\nA square with side length a plus b splits into four areas.\n\nOne a squared, one b squared, and two matching a times b rectangles.\n\nThey sum exactly to a squared plus 2ab plus b squared.",
+    "postUrl": "https://hachyderm.io/@vedang/117640490913966976",
+    "platformPostId": "117640490913966976",
+    "postedAt": "2026-11-19T01:23:56.222Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-riemann_integral",

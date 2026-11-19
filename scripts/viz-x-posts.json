@@ -3656,12 +3656,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/square_of_sum_1x1.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/square_of_sum_1x1.png",
     "batchId": "explainer-v1",
     "title": "Square of a Sum",
     "altText": "Square of a Sum",
-    "text": "Geometric visual proof of (a + b)^2 = a^2 + 2ab + b^2 by partitioning a square into four component areas."
+    "text": "Geometric visual proof of (a + b)^2 = a^2 + 2ab + b^2 by partitioning a square into four component areas.",
+    "publishedText": "Geometric visual proof of (a + b)^2 = a^2 + 2ab + b^2 by partitioning a square into four component areas.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-19T01:00",
+    "attemptedAt": "2026-11-19T01:21:58.158Z",
+    "bufferPostId": "6afe4f363802f5b9fc59e725",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2123225254063440385",
+    "postedAt": "2026-11-19T01:22:03.077Z",
+    "error": null
   },
   {
     "id": "explainer-x-riemann_integral",
