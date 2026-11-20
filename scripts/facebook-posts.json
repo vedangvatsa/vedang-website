@@ -1416,8 +1416,10 @@
     "text": "A visual explanation of the product rule in calculus.\n\nPicture a rectangle with width u and height v.\n\nWhen both sides grow a little bit, the extra area comes from two side strips and one tiny corner.\n\nAs the changes get smaller, the corner disappears, leaving only the two strips.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "01:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/product_rule_4x5.png",
+    "postedAt": "2026-11-20T01:28:19.104Z",
+    "fbPostId": "3376441846077599"
   },
   {
     "id": "explainer-fb-sin_derivative",

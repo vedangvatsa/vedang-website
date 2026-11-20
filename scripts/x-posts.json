@@ -2881,7 +2881,7 @@
   },
   {
     "id": "agent-memory-context-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -2939,7 +2939,9 @@
       }
     ],
     "scheduleDate": "2026-11-19",
-    "scheduleTime": "17:05"
+    "scheduleTime": "17:05",
+    "postedAt": "2026-11-20T01:27:57.566Z",
+    "tweetId": "6affa2170f5eda1a57afd831"
   },
   {
     "id": "terminal-ai-coding-agents-thread",
