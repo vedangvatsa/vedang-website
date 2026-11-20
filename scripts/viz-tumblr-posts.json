@@ -3835,8 +3835,8 @@
     "text": "How the largest whole milk powder producers changed.\n\n2000-2023. Whole milk powder production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-11",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-20T12:03:00.846Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/131-r2.txt",
     "captionStyle": "concise-v2",
@@ -3851,7 +3851,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-20T12:03:00.453Z",
+    "attemptedSlot": "2026-11-20T17:00",
+    "publishedText": "How the largest whole milk powder producers changed.\n\n2000-2023. Whole milk powder production by country, measured in millions of tonnes.",
+    "platformPostId": "833802658763751424",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833802658763751424"
   },
   {
     "id": "viz-b2-tumblr-132",

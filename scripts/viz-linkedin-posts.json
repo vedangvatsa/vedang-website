@@ -4023,10 +4023,18 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/chain_rule_4x5.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chain_rule_4x5.png",
     "batchId": "explainer-v1",
-    "text": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x."
+    "text": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
+    "state": "sent",
+    "attemptedAt": "2026-11-20T12:02:32.695Z",
+    "attemptedSlot": "2026-11-20T17:00",
+    "publishedText": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
+    "platformPostId": "urn:li:ugcPost:7529514544914759680",
+    "postedAt": "2026-11-20T12:02:39.780Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7529514544914759680/"
   },
   {
     "id": "explainer-linkedin-birthday_paradox",

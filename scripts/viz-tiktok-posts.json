@@ -4263,11 +4263,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/chain_rule_9x16.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chain_rule_9x16.png",
     "batchId": "explainer-v1",
     "title": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
-    "text": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x."
+    "text": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
+    "publishedText": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-20T17:00",
+    "attemptedAt": "2026-11-20T12:00:29.415Z",
+    "bufferPostId": "6b00365d3d025b9e58abca17",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7710222351618608405",
+    "postedAt": "2026-11-20T12:02:24.564Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-birthday_paradox",

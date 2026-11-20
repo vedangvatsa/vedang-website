@@ -3698,12 +3698,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/chain_rule_1x1.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chain_rule_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Chain Rule",
     "altText": "The Chain Rule",
-    "text": "Visual proof of the calculus chain rule showing how rates of change multiply across connected dimensions."
+    "text": "Visual proof of the calculus chain rule showing how rates of change multiply across connected dimensions.",
+    "publishedText": "Visual proof of the calculus chain rule showing how rates of change multiply across connected dimensions.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-20T17:00",
+    "attemptedAt": "2026-11-20T12:00:29.394Z",
+    "bufferPostId": "6b003660c0a7142f84b90c5e",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2123748338541441390",
+    "postedAt": "2026-11-20T12:00:36.127Z",
+    "error": null
   },
   {
     "id": "explainer-x-birthday_paradox",
