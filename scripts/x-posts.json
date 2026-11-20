@@ -2945,7 +2945,7 @@
   },
   {
     "id": "terminal-ai-coding-agents-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3003,7 +3003,9 @@
       }
     ],
     "scheduleDate": "2026-11-20",
-    "scheduleTime": "01:05"
+    "scheduleTime": "01:05",
+    "postedAt": "2026-11-20T12:09:57.715Z",
+    "tweetId": "6b00388f8f4d50958cbfdfa2"
   },
   {
     "id": "zkml-verifiable-ai-thread",

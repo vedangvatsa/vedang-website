@@ -1427,8 +1427,10 @@
     "text": "Why the derivative of sine is cosine.\n\nTrace a point moving around a unit circle.\n\nSine measures the vertical height of the point, while cosine measures the horizontal distance.\n\nWhen the point moves a tiny step along the circle, the change in height equals the horizontal distance.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "09:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/sin_derivative_4x5.png",
+    "postedAt": "2026-11-20T12:10:21.717Z",
+    "fbPostId": "1628052778803643"
   },
   {
     "id": "explainer-fb-central_limit_theorem",
