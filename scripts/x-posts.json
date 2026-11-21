@@ -3137,7 +3137,7 @@
   },
   {
     "id": "agent-orchestration-frameworks-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3195,7 +3195,9 @@
       }
     ],
     "scheduleDate": "2026-11-21",
-    "scheduleTime": "01:05"
+    "scheduleTime": "01:05",
+    "postedAt": "2026-11-21T23:56:42.552Z",
+    "tweetId": "6b022fb4846b0ee9074809b0"
   },
   {
     "id": "agent-browser-environments-thread",
