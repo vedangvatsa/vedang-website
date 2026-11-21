@@ -3073,7 +3073,7 @@
   },
   {
     "id": "crypto-account-abstraction-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3131,7 +3131,9 @@
       }
     ],
     "scheduleDate": "2026-11-20",
-    "scheduleTime": "17:05"
+    "scheduleTime": "17:05",
+    "postedAt": "2026-11-21T11:45:20.893Z",
+    "tweetId": "6b018449846b0ee907036007"
   },
   {
     "id": "agent-orchestration-frameworks-thread",
