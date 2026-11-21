@@ -1438,7 +1438,9 @@
     "text": "Why the bell curve shows up everywhere.\n\nWhen you drop balls through rows of pegs, each ball makes several random choices to bounce left or right.\n\nExtreme paths to the far sides are rare, while paths that balance out are common.\n\nAdding many small random steps always builds a normal distribution.",
     "scheduleDate": "2026-11-18",
     "scheduleTime": "17:00",
-    "posted": false,
-    "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_4x5.png"
+    "posted": true,
+    "thumbnail": "scripts/viz-assets/previews/explainer_videos/central_limit_theorem_4x5.png",
+    "postedAt": "2026-11-21T00:59:06.383Z",
+    "fbPostId": "1504575064860603"
   }
 ]

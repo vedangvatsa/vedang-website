@@ -3009,7 +3009,7 @@
   },
   {
     "id": "zkml-verifiable-ai-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3067,7 +3067,9 @@
       }
     ],
     "scheduleDate": "2026-11-20",
-    "scheduleTime": "09:05"
+    "scheduleTime": "09:05",
+    "postedAt": "2026-11-21T00:58:35.250Z",
+    "tweetId": "6b00ecb59ffbc8503ce9fe92"
   },
   {
     "id": "crypto-account-abstraction-thread",
