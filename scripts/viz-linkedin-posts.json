@@ -4041,10 +4041,18 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/birthday_paradox_4x5.mp4",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/birthday_paradox_4x5.png",
     "batchId": "explainer-v1",
-    "text": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons."
+    "text": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
+    "state": "sent",
+    "attemptedAt": "2026-11-21T00:57:15.405Z",
+    "attemptedSlot": "2026-11-21T01:00",
+    "publishedText": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
+    "platformPostId": "urn:li:ugcPost:7529709509318205440",
+    "postedAt": "2026-11-21T00:57:22.751Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7529709509318205440/"
   },
   {
     "id": "explainer-linkedin-irrationality_sqrt2",

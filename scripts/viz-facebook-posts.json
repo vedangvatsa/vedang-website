@@ -4033,12 +4033,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/birthday_paradox_4x5.mp4",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/birthday_paradox_4x5.png",
     "batchId": "explainer-v1",
     "title": "The Birthday Paradox",
     "altText": "The Birthday Paradox",
-    "text": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons."
+    "text": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
+    "state": "sent",
+    "attemptedAt": "2026-11-21T00:57:22.755Z",
+    "attemptedSlot": "2026-11-21T01:00",
+    "publishedText": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
+    "platformPostId": "1706031067559142",
+    "postedAt": "2026-11-21T00:57:44.965Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=1706031067559142"
   },
   {
     "id": "explainer-fb-irrationality_sqrt2",

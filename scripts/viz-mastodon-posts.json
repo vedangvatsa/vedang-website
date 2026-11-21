@@ -4119,10 +4119,18 @@
     "text": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "The Birthday Paradox",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/birthday_paradox_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-21T00:57:48.728Z",
+    "attemptedSlot": "2026-11-21T01:00",
+    "publishedText": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
+    "postUrl": "https://hachyderm.io/@vedang/117651713353739153",
+    "platformPostId": "117651713353739153",
+    "postedAt": "2026-11-21T00:57:57.066Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-irrationality_sqrt2",

@@ -3719,12 +3719,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/birthday_paradox_1x1.mp4",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/birthday_paradox_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Birthday Paradox",
     "altText": "The Birthday Paradox",
-    "text": "Visualizing the birthday paradox where 23 people create 253 pairwise comparisons giving a greater than 50% chance of a shared birthday."
+    "text": "Visualizing the birthday paradox where 23 people create 253 pairwise comparisons giving a greater than 50% chance of a shared birthday.",
+    "publishedText": "Visualizing the birthday paradox where 23 people create 253 pairwise comparisons giving a greater than 50% chance of a shared birthday.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-21T01:00",
+    "attemptedAt": "2026-11-21T00:55:27.595Z",
+    "bufferPostId": "6b00ebff5e993799d83f31d9",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2123943352643064153",
+    "postedAt": "2026-11-21T00:55:31.083Z",
+    "error": null
   },
   {
     "id": "explainer-x-irrationality_sqrt2",
