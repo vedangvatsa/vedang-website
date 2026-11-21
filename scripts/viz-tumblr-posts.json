@@ -3903,8 +3903,8 @@
     "text": "How the largest tea leaf producers changed.\n\n2000-2024. Tea leaf production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-12",
     "scheduleTime": "01:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-21T11:34:43.216Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/133-r2.txt",
     "captionStyle": "concise-v2",
@@ -3919,7 +3919,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-21T11:34:39.630Z",
+    "attemptedSlot": "2026-11-21T17:00",
+    "publishedText": "How the largest tea leaf producers changed.\n\n2000-2024. Tea leaf production by country, measured in millions of tonnes.",
+    "platformPostId": "833891475779682304",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833891475779682304"
   },
   {
     "id": "viz-b2-tumblr-134",

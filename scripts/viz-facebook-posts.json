@@ -4053,12 +4053,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/irrationality_sqrt2_4x5.mp4",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_4x5.png",
     "batchId": "explainer-v1",
     "title": "Irrationality of √2",
     "altText": "Irrationality of √2",
-    "text": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist."
+    "text": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist.",
+    "state": "sent",
+    "attemptedAt": "2026-11-21T11:34:18.875Z",
+    "attemptedSlot": "2026-11-21T17:00",
+    "publishedText": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist.",
+    "platformPostId": "991137150743564",
+    "postedAt": "2026-11-21T11:34:39.623Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=991137150743564"
   },
   {
     "id": "explainer-fb-ln_derivative",

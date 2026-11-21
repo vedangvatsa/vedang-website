@@ -4139,10 +4139,18 @@
     "text": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist.",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Irrationality of √2",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-21T11:34:43.219Z",
+    "attemptedSlot": "2026-11-21T17:00",
+    "publishedText": "Geometric proof that the square root of 2 is irrational.\n\nAssume a square with integer sides has twice the area of another integer square.\n\nFolding the corners creates a strictly smaller integer square pair.\n\nInfinite descent proves no integer ratio can exist.",
+    "postUrl": "https://hachyderm.io/@vedang/117654217759200386",
+    "platformPostId": "117654217759200386",
+    "postedAt": "2026-11-21T11:34:51.239Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-ln_derivative",

@@ -3740,12 +3740,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/irrationality_sqrt2_1x1.mp4",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/irrationality_sqrt2_1x1.png",
     "batchId": "explainer-v1",
     "title": "Irrationality of √2",
     "altText": "Irrationality of √2",
-    "text": "Geometric visual proof that the square root of 2 is irrational through infinite descent of folded squares."
+    "text": "Geometric visual proof that the square root of 2 is irrational through infinite descent of folded squares.",
+    "publishedText": "Geometric visual proof that the square root of 2 is irrational through infinite descent of folded squares.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-21T17:00",
+    "attemptedAt": "2026-11-21T11:33:03.143Z",
+    "bufferPostId": "6b01816f846b0ee907021d1e",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2124103808699560167",
+    "postedAt": "2026-11-21T11:33:06.889Z",
+    "error": null
   },
   {
     "id": "explainer-x-ln_derivative",
