@@ -4038,9 +4038,9 @@
         "url": "https://github.com/apoorvumang/prompt-lookup-decoding"
       },
       {
-        "text": "7/ Hydra - Adaptive multi-head engine.\n\n• Evaluates candidate draft tokens in tree-structured attention masks\n• Maximizes acceptance probability across diverse reasoning tasks\n\nhttps://github.com/facebookresearch/hydra",
+        "text": "7/ Hydra - Adaptive multi-head engine.\n\n• Evaluates candidate draft tokens in tree-structured attention masks\n• Maximizes acceptance probability across diverse reasoning tasks\n\nhttps://github.com/zankner/Hydra",
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/speculative_decoding_engines/tweet_07_hydra.png",
-        "url": "https://github.com/facebookresearch/hydra"
+        "url": "https://github.com/zankner/Hydra"
       },
       {
         "text": "8/ Rest - Datastore token speculator.\n\n• Retrieves candidate tokens from a pre-built offline datastore\n• Eliminates GPU compute required for running draft models\n\nhttps://github.com/FasterDecoding/REST",
@@ -4167,9 +4167,9 @@
         "url": "https://www.zenrows.com"
       },
       {
-        "text": "8/ NetNut - Direct ISP proxy network.\n\n• Direct connectivity to tier-1 ISPs without P2P middle hops\n• High bandwidth throughput for heavy video and PDF pipelines\n\nhttps://netnut.io",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_08_netnut.png",
-        "url": "https://netnut.io"
+        "text": "8/ IPRoyal - Transparent residential proxy network.\n\n• 34M+ ethically sourced IPs with 99.9% uptime\n• Custom sticky sessions and granular geo-targeting for scrapers\n\nhttps://iproyal.com",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/web_scraping_proxy_networks/tweet_08_iproyal.png",
+        "url": "https://iproyal.com"
       },
       {
         "text": "9/ Webshare - High-throughput datacenter.\n\n• Cost-effective private proxy pools for bulk web harvesting\n• Fully programmable REST API for granular configuration\n\nhttps://www.webshare.io",
@@ -4401,7 +4401,8 @@
       },
       {
         "text": "6/ ZenDriver - Chrome DevTools Protocol.\n\n• Lightweight async Python client communicating directly with Chrome\n• Zero Node.js or Selenium binary dependencies required\n\nhttps://github.com/berstend/puppeteer-extra",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_automation_libraries/tweet_06_zendriver.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_automation_libraries/tweet_06_zendriver.png",
+        "url": "https://github.com/cdpdriver/zendriver"
       },
       {
         "text": "7/ Playwright-Stealth - Evasion plugin stack.\n\n• Injects JavaScript patches evading modern anti-bot fingerprints\n• Spoofs WebGL vendor strings and realistic audio context\n\nhttps://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth",
@@ -4413,7 +4414,8 @@
       },
       {
         "text": "9/ Helium - High-level wrapper.\n\n• Human-readable automation wrapper around Selenium\n• Simple syntax allowing AI agents to navigate pages easily\n\nhttps://github.com/mherrmann/helium",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_automation_libraries/tweet_09_helium.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_automation_libraries/tweet_09_helium.png",
+        "url": "https://github.com/mherrmann/helium"
       },
       {
         "text": "10/ Join one of the largest AI News and Updates groups on Telegram (free):\n\nhttps://t.me/hashtag_ai"
@@ -4651,7 +4653,8 @@
       },
       {
         "text": "4/ Bifrost - Low-latency Rust gateway.\n\n• Ultra-lightweight reverse proxy built by Helicone\n• Zero-copy streaming response caching and tracking\n\nhttps://github.com/Helicone/helicone",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_04_bifrost.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/ai_gateway_rate_limiting/tweet_04_bifrost.png",
+        "url": "https://github.com/Helicone/helicone"
       },
       {
         "text": "5/ Kong AI Gateway - Enterprise API proxy.\n\n• Centralizes governance across internal microservices\n• Dynamic prompt decoration and token quota enforcement\n\nhttps://github.com/Kong/kong",
@@ -4725,7 +4728,8 @@
       },
       {
         "text": "9/ Ratchet - WebGPU inference engine.\n\n• Rust-native compute shaders optimized for client devices\n• Instant model warmup with zero compile-time latency\n\nhttps://github.com/huggingface/candle",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_09_ratchet.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/webassembly_ai_runtimes/tweet_09_ratchet.png",
+        "url": "https://github.com/huggingface/ratchet"
       },
       {
         "text": "10/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/hashtag_ai"
@@ -4805,7 +4809,8 @@
       },
       {
         "text": "2/ Chonkie - Lightweight Python chunker.\n\n• Fast token, word, and sentence semantic chunking\n• Clean API with zero heavy dependencies or memory bloat\n\nhttps://pypi.org/project/chonkie/",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_02_chonkie.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/chunking_tokenization_engines/tweet_02_chonkie.png",
+        "url": "https://github.com/feyninc/chonkie"
       },
       {
         "text": "3/ SemChunk - Fast semantic splitting.\n\n• Respects exact token limits while preserving full sentences\n• Integrates seamlessly with Hugging Face and Tiktoken\n\nhttps://github.com/umarbutler/semchunk",
@@ -5689,7 +5694,8 @@
       },
       {
         "text": "7/ Taxy AI - Open browser agent.\n\n• Open-source extension operating active tabs via natural language\n• Highlights DOM elements and clicks buttons using visual anchors\n\nhttps://github.com/browserbase/stagehand",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_07_taxy.png"
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/browser_extension_agent_bridges/tweet_07_taxy.png",
+        "url": "https://github.com/TaxyAI/browser-extension"
       },
       {
         "text": "8/ Built-in Gemini Nano API - Local browser AI.\n\n• Native `window.ai` language model running entirely on local NPU\n• Zero network latency and zero privacy leak for page summarization\n\nhttps://developer.chrome.com/docs/ai/built-in",
@@ -5834,8 +5840,9 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_02_gptbot.png"
       },
       {
-        "text": "3/ ClaudeBot - Anthropic training crawler.\n\n• Respects standard robots.txt directives and crawl-delay tags\n• Gathers high-signal academic and technical documentation\n\nhttps://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_03_claudebot.png"
+        "text": "3/ ClaudeBot - Anthropic training crawler.\n\n• Respects standard robots.txt directives and crawl-delay tags\n• Gathers high-signal academic and technical documentation\n\nhttps://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/geo_ai_search_crawlers/tweet_03_claudebot.png",
+        "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
       },
       {
         "text": "4/ PerplexityBot - Answer engine scraper.\n\n• Real-time crawler fetching source citations for user queries\n• Blocking PerplexityBot removes domain links from AI answer cards\n\nhttps://docs.perplexity.ai/",
@@ -6236,8 +6243,9 @@
         "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_08_pysyft.png"
       },
       {
-        "text": "9/ Presidio - Microsoft PII anonymizer.\n\n• Detects names, phone numbers, and SSNs in unstructured text\n• Redacts or replaces entities with synthetic pseudonyms before indexing\n\nhttps://github.com/microsoft/presidio",
-        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_09_presidio.png"
+        "text": "9/ Presidio - Microsoft PII anonymizer.\n\n• Detects names, phone numbers, and SSNs in unstructured text\n• Redacts or replaces entities with synthetic pseudonyms before indexing\n\nhttps://github.com/data-privacy-stack/presidio",
+        "image": "https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/public/images/thread/differential_privacy_ml/tweet_09_presidio.png",
+        "url": "https://github.com/data-privacy-stack/presidio"
       },
       {
         "text": "10/ Join 14,000+ engineers building production AI systems and agent infrastructure in our community:\n\nhttps://t.me/hashtag_ai"
