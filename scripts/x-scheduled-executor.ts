@@ -321,6 +321,52 @@ async function validateUrlsInText(text: string): Promise<{ valid: boolean; badUr
   return { valid: badUrls.length === 0, badUrls };
 }
 
+async function validateImageUrl(imageUrl: string): Promise<{ valid: boolean; error?: string }> {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 6000);
+    const res = await fetch(imageUrl, {
+      method: 'HEAD',
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      signal: controller.signal,
+    });
+    clearTimeout(timeout);
+    if (res.status === 404 || res.status >= 500) {
+      return { valid: false, error: `Image URL returned HTTP ${res.status}: ${imageUrl}` };
+    }
+  } catch {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 6000);
+      const res = await fetch(imageUrl, {
+        method: 'GET',
+        headers: { 'User-Agent': 'Mozilla/5.0', Range: 'bytes=0-1024' },
+        signal: controller.signal,
+      });
+      clearTimeout(timeout);
+      if (res.status === 404 || res.status >= 500) {
+        return { valid: false, error: `Image URL returned HTTP ${res.status}: ${imageUrl}` };
+      }
+    } catch (e) {
+      console.warn(`⚠️ Warning: could not reach image URL ${imageUrl}:`, e);
+    }
+  }
+
+  // Also verify local file if on disk
+  if (imageUrl.includes('raw.githubusercontent.com/vedangvatsa/vedang-website/main/')) {
+    const rel = imageUrl.split('raw.githubusercontent.com/vedangvatsa/vedang-website/main/')[1].split('?')[0];
+    const local = path.resolve(REPO_ROOT, rel);
+    if (fs.existsSync(local)) {
+      const stats = fs.statSync(local);
+      if (stats.size < 4096) {
+        return { valid: false, error: `Image file is suspiciously small or corrupt (${stats.size} bytes): ${local}` };
+      }
+    }
+  }
+
+  return { valid: true };
+}
+
 async function main() {
   // Load from both post files
   let posts: XPost[] = [];
@@ -393,16 +439,25 @@ async function main() {
     const isQuote = post.type === 'quote' && post.quote_tweet_id;
     const isReply = post.type === 'reply' && post.reply_to_tweet_id;
 
-    // PRE-FLIGHT VALIDATION: Check all URLs in post to guarantee no 404 or dead links
-    let hasBrokenUrl = false;
+    // PRE-FLIGHT VALIDATION: Check all URLs and image assets in post to guarantee no 404s
+    let hasBrokenAsset = false;
     if (isThread && post.tweets) {
       for (const tw of post.tweets) {
         const check = await validateUrlsInText(tw.text);
         if (!check.valid) {
           console.error(`🚨 Thread "${post.id}" contains broken URL(s):`, check.badUrls);
           post.error = `Pre-flight failed: Broken URL(s): ${check.badUrls.join(', ')}`;
-          hasBrokenUrl = true;
+          hasBrokenAsset = true;
           break;
+        }
+        if (tw.image && tw.image.startsWith('http')) {
+          const imgCheck = await validateImageUrl(tw.image);
+          if (!imgCheck.valid) {
+            console.error(`🚨 Thread "${post.id}" contains invalid image:`, imgCheck.error);
+            post.error = `Pre-flight failed: ${imgCheck.error}`;
+            hasBrokenAsset = true;
+            break;
+          }
         }
       }
     } else if (post.text) {
@@ -410,12 +465,20 @@ async function main() {
       if (!check.valid) {
         console.error(`🚨 Post "${post.id}" contains broken URL(s):`, check.badUrls);
         post.error = `Pre-flight failed: Broken URL(s): ${check.badUrls.join(', ')}`;
-        hasBrokenUrl = true;
+        hasBrokenAsset = true;
+      }
+      if (post.image && post.image.startsWith('http')) {
+        const imgCheck = await validateImageUrl(post.image);
+        if (!imgCheck.valid) {
+          console.error(`🚨 Post "${post.id}" contains invalid image:`, imgCheck.error);
+          post.error = `Pre-flight failed: ${imgCheck.error}`;
+          hasBrokenAsset = true;
+        }
       }
     }
 
-    if (hasBrokenUrl) {
-      console.warn(`⏭️ Skipping "${post.id}" due to broken URL pre-flight failure.`);
+    if (hasBrokenAsset) {
+      console.warn(`⏭️ Skipping "${post.id}" due to pre-flight failure.`);
       continue;
     }
 
