@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { createHash } from 'node:crypto';
-import { ROOT, selectDue, type VizPost, readQueue, publicVideoUrl, localVideo } from './viz-publishing.js';
+import { ROOT, selectDue, type VizPost, readQueue, publicVideoUrl, localVideo, publicThumbnailUrl } from './viz-publishing.js';
 import { buildInput, applyBufferStatus, runPlatform, PLATFORMS, chooseChannel } from './buffer-viz-scheduled-executor.js';
 import { runPlatform as runNative } from './native-viz-scheduled-executor.js';
 import { captionLength, validateCaption, validateConciseBufferCaption, conciseBufferCaption, validateVideoOnlyCaption, LIMITS } from './viz-captions.mjs';
@@ -89,6 +89,10 @@ test('all Buffer payloads publish now without dueAt or a Buffer queue mode', () 
     assert.equal(input.schedulingType, 'automatic');
     assert.equal('dueAt' in input, false);
     assert.equal(input.assets[0].video.url, 'https://cdn.example/video.mp4');
+    assert.equal('thumbnailUrl' in input.assets[0].video, false);
+
+    const inputWithThumb = buildInput(p.service, entry('one'), 'channel', 'https://cdn.example/video.mp4', 'https://cdn.example/thumb.png');
+    assert.equal(inputWithThumb.assets[0].video.thumbnailUrl, 'https://cdn.example/thumb.png');
   }
 });
 
@@ -359,9 +363,14 @@ test('Buffer and native dry-runs make no network requests or queue writes', asyn
 
 test('public media configuration rejects non-HTTPS and traversal', () => {
   assert.throws(() => publicVideoUrl({ ...entry('one'), publicVideoUrl: 'http://example.com/video.mp4' }), /HTTPS/);
+  assert.throws(() => publicThumbnailUrl({ ...entry('one'), publicThumbnailUrl: 'http://example.com/thumb.png' }), /HTTPS/);
   const old = process.env.VIZ_MEDIA_BASE_URL;
   process.env.VIZ_MEDIA_BASE_URL = 'https://cdn.example';
-  try { assert.throws(() => publicVideoUrl({ ...entry('one'), video: '../outside.mp4' }), /Invalid video path/); }
+  try {
+    assert.throws(() => publicVideoUrl({ ...entry('one'), video: '../outside.mp4' }), /Invalid video path/);
+    assert.throws(() => publicThumbnailUrl({ ...entry('one'), thumbnail: '../outside.png' }), /Invalid thumbnail path/);
+    assert.equal(publicThumbnailUrl(entry('one')), undefined);
+  }
   finally { if (old) process.env.VIZ_MEDIA_BASE_URL = old; else delete process.env.VIZ_MEDIA_BASE_URL; }
 });
 

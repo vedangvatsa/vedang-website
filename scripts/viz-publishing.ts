@@ -8,6 +8,7 @@ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export type VizPost = {
   id: string; scheduleDate: string; scheduleTime: string; posted: boolean;
   video?: string; videoPath?: string; publicVideoUrl?: string;
+  thumbnail?: string; thumbnailPath?: string; publicThumbnailUrl?: string;
   text?: string; title?: string; description?: string; tags?: string[];
   postedAt?: string | null; error?: string | null; postUrl?: string;
   state?: 'publishing' | 'submitted' | 'sent' | 'failed' | 'uncertain';
@@ -91,6 +92,40 @@ export async function checkPublicVideo(url: string) {
   if (!res.ok) throw new Error(`Public video returned HTTP ${res.status}`);
   if (!/^(video\/mp4|application\/octet-stream)(;|$)/i.test(res.headers.get('content-type') || '')) {
     throw new Error('Public video URL does not serve MP4/binary content');
+  }
+}
+
+export function localThumbnail(post: VizPost): string | undefined {
+  const value = post.thumbnail || post.thumbnailPath;
+  if (!value) return undefined;
+  const absolute = path.resolve(ROOT, value);
+  if (!absolute.startsWith(`${ROOT}${path.sep}`) || !/\.(png|jpe?g|webp)$/i.test(absolute)) {
+    throw new Error(`Invalid thumbnail path for ${post.id}`);
+  }
+  const stat = fs.statSync(absolute);
+  if (!stat.isFile() || !stat.size) throw new Error(`Missing/empty thumbnail for ${post.id}`);
+  return absolute;
+}
+
+export function publicThumbnailUrl(post: VizPost): string | undefined {
+  if (post.publicThumbnailUrl) {
+    if (new URL(post.publicThumbnailUrl).protocol !== 'https:') throw new Error('Thumbnail URL must use HTTPS');
+    return post.publicThumbnailUrl;
+  }
+  const local = localThumbnail(post);
+  if (!local) return undefined;
+  const base = process.env.VIZ_MEDIA_BASE_URL;
+  if (!base) throw new Error('Set VIZ_MEDIA_BASE_URL to a public host serving repository-relative media paths');
+  if (new URL(base).protocol !== 'https:') throw new Error('Media host must use HTTPS');
+  const rel = path.relative(ROOT, local).split(path.sep).map(encodeURIComponent).join('/');
+  return `${base.replace(/\/$/, '')}/${rel}`;
+}
+
+export async function checkPublicThumbnail(url: string) {
+  const res = await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(30000) });
+  if (!res.ok) throw new Error(`Public thumbnail returned HTTP ${res.status}`);
+  if (!/^(image\/(png|jpeg|webp)|application\/octet-stream)(;|$)/i.test(res.headers.get('content-type') || '')) {
+    throw new Error('Public thumbnail URL does not serve image/binary content');
   }
 }
 

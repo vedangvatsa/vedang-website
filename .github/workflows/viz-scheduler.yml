@@ -157,6 +157,13 @@ jobs:
           path: scripts/viz-*-posts.json
           retention-days: 90
 
+      - name: Pull latest changes before commit
+        if: always() && steps.due.outputs.run == 'true' && inputs.mode != 'preflight' && inputs.mode != 'dry-run'
+        run: |
+          git stash || true
+          git pull --rebase origin main || true
+          git stash pop || true
+
       - name: Commit updated viz queues
         if: always() && steps.due.outputs.run == 'true' && inputs.mode != 'preflight' && inputs.mode != 'dry-run'
         id: queues
