@@ -17,7 +17,7 @@ export async function publish(platform: string, post: VizPost, video: string, ur
   switch (platform) {
     case 'linkedin': {
       const { postToLinkedIn } = await import('./linkedin-scheduled-executor.js');
-      const commentary = ['licensed-v2', 'concise-v2'].includes(String(post.captionStyle)) ? encodeLinkedInPlainText(text) : text;
+      const commentary = encodeLinkedInPlainText(text);
       const result = await postToLinkedIn(commentary, video);
       if (!result.success || !result.id) throw new Error(result.error || 'LinkedIn returned no post ID');
       return result.id;
@@ -117,7 +117,7 @@ export async function runPlatform(platform: string, dryRun: boolean, file = path
     post.error = null;
     if (platform === 'linkedin') {
       post.postUrl = `https://www.linkedin.com/feed/update/${id}/`;
-      if (['licensed-v2', 'concise-v2'].includes(String(post.captionStyle))) post.commentaryEncoding = 'little-text-v1';
+      post.commentaryEncoding = 'little-text-v1';
     } else if (platform === 'bluesky') {
       const record = /^at:\/\/([^/]+)\/app\.bsky\.feed\.post\/([^/]+)$/.exec(id);
       if (record) post.postUrl = `https://bsky.app/profile/${record[1]}/post/${record[2]}`;

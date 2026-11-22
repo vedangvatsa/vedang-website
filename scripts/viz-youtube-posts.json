@@ -4278,7 +4278,7 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chain_rule_9x16.png",
     "batchId": "explainer-v1",
     "title": "The Chain Rule",
-    "description": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x.",
+    "description": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x gives the total rate of change of y with respect to x.",
     "tags": []
   },
   {
