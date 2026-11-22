@@ -4081,10 +4081,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/ln_derivative_4x5.mp4",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/ln_derivative_4x5.png",
     "batchId": "explainer-v1",
-    "text": "Why the derivative of ln(x) equals 1/x.\n\nThe natural logarithm is defined as the area under the hyperbola 1/t.\n\nScaling the area horizontally by x scales the height by 1/x, proving the derivative is exactly 1/x."
+    "text": "Why the derivative of ln(x) equals 1/x.\n\nThe natural logarithm is defined as the area under the hyperbola 1/t.\n\nScaling the area horizontally by x scales the height by 1/x, proving the derivative is exactly 1/x.",
+    "state": "sent",
+    "attemptedAt": "2026-11-22T11:49:30.987Z",
+    "attemptedSlot": "2026-11-22T17:00",
+    "publishedText": "Why the derivative of ln(x) equals 1/x.\n\nThe natural logarithm is defined as the area under the hyperbola 1/t.\n\nScaling the area horizontally by x scales the height by 1/x, proving the derivative is exactly 1/x.",
+    "platformPostId": "urn:li:ugcPost:7530236041857863680",
+    "postedAt": "2026-11-22T11:49:37.981Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7530236041857863680/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "explainer-linkedin-matrix_transform",

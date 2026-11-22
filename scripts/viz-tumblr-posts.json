@@ -3937,8 +3937,8 @@
     "text": "How the largest molasses producers changed.\n\n2000-2023. Molasses production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-12",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-22T11:49:54.427Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/134-r2.txt",
     "captionStyle": "concise-v2",
@@ -3953,7 +3953,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-22T11:49:53.540Z",
+    "attemptedSlot": "2026-11-22T17:00",
+    "publishedText": "How the largest molasses producers changed.\n\n2000-2023. Molasses production by country, measured in millions of tonnes.",
+    "platformPostId": "833983028027113472",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/833983028027113472"
   },
   {
     "id": "viz-b2-tumblr-68",
