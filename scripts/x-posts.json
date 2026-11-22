@@ -3201,7 +3201,7 @@
   },
   {
     "id": "agent-browser-environments-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3259,7 +3259,9 @@
       }
     ],
     "scheduleDate": "2026-11-21",
-    "scheduleTime": "09:05"
+    "scheduleTime": "09:05",
+    "postedAt": "2026-11-22T11:57:57.510Z",
+    "tweetId": "6b02d8bfc72676f5e925d41d"
   },
   {
     "id": "depin-hardware-sensor-networks-thread",
