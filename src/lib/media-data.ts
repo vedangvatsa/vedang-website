@@ -147,4 +147,5 @@ export const speakingEngagementImages: string[] = [
   '/images/speaker/Vedang - speaker29.webp',
   '/images/speaker/Vedang - speaker30.webp',
   '/images/speaker/Vedang - speaker31.webp',
+  '/images/speaker/Vedang - speaker32.webp',
 ];
