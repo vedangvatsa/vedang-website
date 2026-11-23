@@ -3329,7 +3329,7 @@
   },
   {
     "id": "hybrid-search-sparse-dense-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3387,7 +3387,9 @@
       }
     ],
     "scheduleDate": "2026-11-22",
-    "scheduleTime": "01:05"
+    "scheduleTime": "01:05",
+    "postedAt": "2026-11-23T13:37:52.103Z",
+    "tweetId": "6b0441a9ab9184f298a567cb"
   },
   {
     "id": "continuous-batching-inference-thread",
