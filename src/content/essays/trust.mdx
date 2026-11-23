@@ -76,7 +76,13 @@ By 2025, companies like [Zama](https://www.zama.ai/) have developed FHE compiler
 
 FHE remains the least mature of the four primitives, with performance orders of magnitude slower than plaintext computation. Performance has been improving at roughly 10x per year, and hardware acceleration through FPGAs and ASICs is an active area of development.
 
-<TrustPrimitivesComparison />
+<Figure
+  src="/images/essays/charts/trust-primitives-comparison.webp"
+  alt="Trust primitives comparison"
+  width={856}
+  height={641}
+  wide
+/>
 
 <PullQuote>
 Programmable trust replaces intermediaries that require data disclosure with mathematical proofs that require none. The trust is stronger: mathematics is harder to corrupt than institutions. And the privacy cost is zero.
@@ -90,7 +96,13 @@ Between 2020 and 2025, estimated losses from smart contract exploits, bridge hac
 
 The smart contract audit market has grown to approximately $1.8 billion (2025), with projections reaching $7.6 billion by 2034. But a recurring pattern in 2025 was that many exploited protocols had previously undergone professional security audits. The lesson is that traditional point-in-time code audits are necessary but insufficient for complex, highly composable DeFi systems. The industry is moving toward continuous, integrated security: real-time monitoring, formal verification, and AI-powered vulnerability detection alongside human expert review.
 
-<DeFiSecurityChart />
+<Figure
+  src="/images/essays/charts/de-fi-security-chart.webp"
+  alt="De fi security chart"
+  width={848}
+  height={439}
+  wide
+/>
 
 ## The Application Stack
 
@@ -106,7 +118,13 @@ Programmable trust enables transaction types that are structurally impossible wi
 
 **Cross-border payments.** The correspondent banking system processes roughly $28 trillion in annual cross-border payment flows through a chain of intermediaries, each adding cost and delay. Stablecoin transfers with ZKP identity attestations could reduce settlement from days to seconds while maintaining regulatory compliance, without requiring the sender's full financial history to traverse multiple jurisdictions.
 
-<TrustApplicationDomains />
+<Figure
+  src="/images/essays/charts/trust-application-domains.webp"
+  alt="Trust application domains"
+  width={856}
+  height={541}
+  wide
+/>
 
 ## The Regulatory Driver
 
@@ -116,7 +134,13 @@ The technical architecture of the EUDI Wallet is designed around the principles 
 
 The regulatory mandate creates a forcing function for adoption that purely market-driven approaches have lacked. When banks, telecoms, and healthcare providers are legally required to accept ZKP-based identity attestations, the infrastructure investment follows. The EU's 450 million citizens represent the first continental-scale deployment of programmable trust principles in a regulated context.
 
-<DigitalIdentityTimeline />
+<Figure
+  src="/images/essays/charts/digital-identity-timeline.webp"
+  alt="Digital identity timeline"
+  width={848}
+  height={360}
+  wide
+/>
 
 ## The Trust Stack
 
@@ -130,11 +154,23 @@ The trajectory is toward a layered trust stack that combines all four primitives
 
 **Layer 4: Application logic.** Smart contracts, identity wallets, DeFi protocols, and supply chain systems built on top of the trust stack, inheriting its privacy and verification properties.
 
-<TrustStackArchitecture />
+<Figure
+  src="/images/essays/charts/trust-stack-architecture.webp"
+  alt="Trust stack architecture"
+  width={856}
+  height={575}
+  wide
+/>
 
 Transactions that currently require extensive data disclosure (mortgage applications, insurance claims, medical referrals, background checks, cross-border payments) can be restructured around proof rather than exposure. The applicant does not reveal their entire financial history. They prove specific properties of it, mathematically, and the verifier has higher confidence in the proof than they would in a stack of disclosed documents, because mathematics is harder to forge than paper.
 
-<TrustComparisonChart />
+<Figure
+  src="/images/essays/charts/trust-comparison-chart.webp"
+  alt="Trust comparison chart"
+  width={856}
+  height={477}
+  wide
+/>
 
 <KeyTakeaway>
 Programmable trust architectures enable selective disclosure and cryptographic verification across institutional identity, smart contracts, and multi-party computation while minimizing third-party data exposure.

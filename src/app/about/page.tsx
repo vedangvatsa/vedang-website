@@ -313,6 +313,7 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4">
                         <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-6">
+                            <li><Link href="https://doi.org/10.5281/zenodo.24121071" target="_blank" rel="noopener noreferrer" className="hover:text-primary">AI Agent Readiness Across 100,000 Websites</Link>; Zenodo</li>
                             <li><Link href="https://doi.org/10.5281/zenodo.23661069" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Delegation and Trust in Agentic Commerce</Link>; Zenodo</li>
                             <li><Link href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218" target="_blank" rel="noopener noreferrer" className="hover:text-primary">State of AI Research</Link>; SSRN</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.6874178" target="_blank" rel="noopener noreferrer" className="hover:text-primary">AI Agent Infrastructure Stack</Link>; SSRN</li>
@@ -324,7 +325,6 @@ export default function ProfilePage() {
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5357534" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Blockchain Ecosystem Evolution</Link>; SSRN</li>
                             <li><Link href="https://ieeexplore.ieee.org/document/9515004" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Estonia&apos;s e-governance and public service delivery solution</Link>; IEEE</li>
                             <li><Link href="https://ieeexplore.ieee.org/document/9514979" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Analysis of Global Research Proceedings in Artificial Intelligence</Link>; IEEE</li>
-                            <li><Link href="https://dx.doi.org/10.21474/IJAR01/11418" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Identification of Algorithmic Bias Through Policy Instruments</Link>; IJAR</li>
                             <li>China&apos;s approach to AI: A review of policy, ethics, and research advancements; Responsible AI Forum 2021, Munich</li>
                             <li>Decoding identity in the Metaverse; Yourstory</li>
                             <li>Ethical implications in Artificial Intelligence and Brain Computer Interfaces</li>
@@ -550,7 +550,7 @@ export default function ProfilePage() {
                 Speaker on Emerging Technologies
               </h2>
               <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto mb-6">
-                Speaker and panelist across IIT Delhi, IIT Kanpur, OP Jindal University, Bharati Vidyapeeth, TUM Munich, ISB Hyderabad, ETH Enugu, India Blockchain Month, Premier AI and Web3 Gala, The Responsible AI Forum, Bizthon, Code Africa Conference, NIFT Panchkula, and more.
+                Speaker and panelist across IIT Delhi, IIT Kanpur, IIM Lucknow, OP Jindal University, Bharati Vidyapeeth, TUM Munich, ISB Hyderabad, ETH Enugu, India Blockchain Month, Premier AI and Web3 Gala, The Responsible AI Forum, Bizthon, Code Africa Conference, NIFT Panchkula, and more.
               </p>
               <SpeakingGallery />
             </section>

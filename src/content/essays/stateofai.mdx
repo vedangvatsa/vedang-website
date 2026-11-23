@@ -28,13 +28,25 @@ The resulting corpus is 65.4% journal articles, 13.4% preprints, and 7.7% book c
   abstract="A bibliometric analysis of 5,003,783 OpenAlex works (2013 to mid-2026) whose abstracts match AI method terms, covering publication volume, keyword frequency, LLM growth, geographic output, and citation distribution."
 />
 
-<StateOfAiTimeline />
+<Figure
+  src="/images/essays/charts/state-of-ai-timeline.webp"
+  alt="State of ai timeline"
+  width={856}
+  height={719}
+  wide
+/>
 
 ## II. Keyword counts
 
 The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actual priorities of the global AI research enterprise. Not what conference keynotes claim matters, but what researchers are building.
 
-<StateOfAiKeywordsChart />
+<Figure
+  src="/images/essays/charts/state-of-ai-keywords-chart.webp"
+  alt="State of ai keywords chart"
+  width={856}
+  height={536}
+  wide
+/>
 
 <StatRow>
   <Stat label="Total Papers Analyzed" value="5,003,783" trend="up" />
@@ -50,7 +62,13 @@ The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actua
 
 ### Trigram Architecture
 
-<StateOfAiBigramsChart />
+<Figure
+  src="/images/essays/charts/state-of-ai-bigrams-chart.svg"
+  alt="State of ai bigrams chart"
+  width={800}
+  height={500}
+  wide
+/>
 
 The trigram distribution reveals the architectural building blocks of modern AI. **"Deep neural network"** (518,431) leads, followed by **"convolutional neural network"** (394,934). Together they account for over 913,000 abstract mentions.
 
@@ -66,7 +84,13 @@ For comparison, from 2022 to 2025 "transformer" grew 3.3x, "reinforcement learni
 
 ### The Fastest-Rising Keywords
 
-<StateOfAiMomentum />
+<Figure
+  src="/images/essays/charts/state-of-ai-momentum.webp"
+  alt="State of ai momentum"
+  width={856}
+  height={594}
+  wide
+/>
 
 The ten fastest-rising keywords tell a definitive story about where research attention is shifting, and every single one is related to large language models. Not computer vision. Not reinforcement learning. Not graph methods. All LLM.
 
@@ -117,7 +141,13 @@ India ranks third globally with **369,931 publications**, and its growth traject
   <Stat label="India Growth (2013-2025)" value="32.3x" trend="up" />
 </StatRow>
 
-<StateOfAiGeography />
+<Figure
+  src="/images/essays/charts/state-of-ai-geography.webp"
+  alt="State of ai geography"
+  width={856}
+  height={522}
+  wide
+/>
 
 **Institutional concentration is significant.** The Chinese Academy of Sciences leads all institutions with 74,921 papers, 49.4% more than CNRS (50,145). Six of the top ten institutions globally are Chinese. Harvard (21,529) is the highest-ranked US institution at position 8.
 
@@ -129,7 +159,13 @@ The citation distribution across five million AI papers follows an extreme power
 
 This figure is partly inflated by recency. Papers published in 2024-2026 have had little time to accumulate citations. But the structural pattern is clear. A tiny fraction of papers captures the vast majority of research attention.
 
-<StateOfAiCitations />
+<Figure
+  src="/images/essays/charts/state-of-ai-citations.webp"
+  alt="State of ai citations"
+  width={856}
+  height={346}
+  wide
+/>
 
 The most-cited paper in this pull is [ResNet](https://arxiv.org/abs/1512.03385) (He et al., 2015/2016) with **221,202** OpenAlex citations as of 12 June 2026, about 1.9x the next entry. Citation totals move. This is a snapshot. The top-cited papers share a common characteristic. They are reusable building blocks (ResNet, Adam, AlexNet, VGGNet, XGBoost). Infrastructure accumulates citations because every downstream paper that uses the tool cites the original.
 

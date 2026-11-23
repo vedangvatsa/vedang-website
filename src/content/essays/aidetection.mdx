@@ -109,11 +109,23 @@ Eighteen pairs overlap by title and two by normalized text. The word minimum exc
 
 For this test, the models learn from all 149,026 retained original texts. That differs from the five-part test, where each fit leaves one part out. The training settings stay the same, but the amount of training data changes. A later check holds the trained models fixed across both datasets to see whether that difference explains the gap.
 
-<AbstractTransferComparison />
+<Figure
+  src="/images/essays/charts/abstract-transfer-comparison.webp"
+  alt="Abstract transfer comparison"
+  width={848}
+  height={570}
+  wide
+/>
 
 On the separate dataset, the forest correctly labels 7,991 published texts and wrongly flags 328. It detects only 976 generated texts and misses 7,343. Its false-positive rate is 3.94%, close to the original 3.60%, but recall falls to 11.73%. The model gives the published label to most texts, including most of the generated ones.
 
-<AbstractTransferErrors />
+<Figure
+  src="/images/essays/charts/abstract-transfer-errors.webp"
+  alt="Abstract transfer errors"
+  width={848}
+  height={468}
+  wide
+/>
 
 Because the classes have equal sizes, a rule that calls everything published would score 50%. The forest's 53.89% is 3.89 percentage points higher. Calling it “the same as chance” would go beyond the reported analysis. The measured gap is a loss of accuracy, with very low detection of generated texts at the chosen cutoff.
 

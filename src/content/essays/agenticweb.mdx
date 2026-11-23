@@ -10,7 +10,13 @@ keywords: ['agentic web', 'AI agents', 'autonomous agents', 'web evolution', 'MC
 
 The web used to be for looking things up. Then it was for posting. Now people send ChatGPT, Perplexity, or a company agent to book, research, or buy, and they read the report. MCP and A2A are how those agents call tools instead of clicking a page.
 
-<WebEvolutionTimeline />
+<Figure
+  src="/images/essays/charts/web-evolution-timeline.webp"
+  alt="Web evolution timeline"
+  width={856}
+  height={335}
+  wide
+/>
 
 <Figure src="/images/essays/agentic-web-diagram.svg?v=8" alt="Diagram: human web with scroll and ads moving to agent web with goals and tools" wide />
 
@@ -33,13 +39,25 @@ Doc Searls coined the term [intention economy](https://cyber.harvard.edu/researc
 
 Every major AI platform (OpenAI, Google, Microsoft, Amazon, and Anthropic) has standardized around MCP. The protocol went from 2 million monthly SDK downloads at launch to 97 million by March 2026. Google released its complementary [Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/) in April 2025 with over 50 launch partners and moved it to the Linux Foundation in June 2025 under the same AAIF umbrella. By February 2026 more than 100 enterprises had been listed as adopters, including Salesforce, Atlassian, PayPal, and the usual consulting names. Those are logos on a launch page. MCP is how an agent calls a tool. A2A is how one agent finds another.
 
-<MCPAdoptionChart />
+<Figure
+  src="/images/essays/charts/mcp-adoption-chart.webp"
+  alt="Mcp adoption chart"
+  width={848}
+  height={262}
+  wide
+/>
 
 ## What Makes an Agent Different from a Chatbot
 
 The distinction matters because it changes what computers can do for you.
 
-<AgentVsChatbot />
+<Figure
+  src="/images/essays/charts/agent-vs-chatbot.webp"
+  alt="Agent vs chatbot"
+  width={848}
+  height={448}
+  wide
+/>
 
 <Columns>
 <Column>
@@ -58,7 +76,13 @@ The key capabilities are perception (understanding its digital environment), rea
 
 The pace of improvement is measurable. [METR](https://metr.org/) (Model Evaluation and Threat Research) tracks a metric called the "task-completion time horizon," which measures the complexity of tasks AI agents can complete autonomously. Their research shows this capability has been doubling every 7 months since 2019. More recent data from 2023 onward suggests the doubling time has accelerated to roughly 4 months. If these trends hold, agents will be independently completing tasks that currently take humans days or weeks within the next few years.
 
-<TaskHorizonChart />
+<Figure
+  src="/images/essays/charts/task-horizon-chart.webp"
+  alt="Task horizon chart"
+  width={856}
+  height={476}
+  wide
+/>
 
 This is more than a feature upgrade. It is a change in the relationship between user and software. Instead of operating software, you manage it. You become the strategist, not the operator.
 
@@ -78,7 +102,13 @@ There is also an interesting side effect. The current web, optimized for human p
 
 The Agentic Web is a stack of protocols, each handling a different layer between a human's intent and the final execution of a task.
 
-<ProtocolStackDiagram />
+<Figure
+  src="/images/essays/charts/protocol-stack-diagram.webp"
+  alt="Protocol stack diagram"
+  width={848}
+  height={603}
+  wide
+/>
 
 At the top sits the application layer: products like OpenAI Operator, Google Mariner, and Genspark Super Agent that users interact with directly. These agents interpret natural language goals and break them into executable steps.
 
@@ -123,11 +153,23 @@ The agent-to-agent transaction layer is still early, but it is being built on in
 
 The adoption is not abstract. In September 2025, [Salesforce CEO Marc Benioff revealed](https://salesforceben.com/) that the company had reduced its customer support workforce from 9,000 to 5,000 employees, citing its Agentforce platform, which was handling roughly 50% of customer interactions with quality scores comparable to human agents. Duolingo stopped using human contractors for tasks AI could handle. A [study by OpenAI and the University of Pennsylvania](https://arxiv.org/abs/2303.10130) found that large language models can accelerate the completion of roughly 15% of U.S. job tasks without loss of quality. When additional tools are integrated, that figure rises to between 47% and 56%.
 
-<AgentMarketChart />
+<Figure
+  src="/images/essays/charts/agent-market-chart.webp"
+  alt="Agent market chart"
+  width={848}
+  height={524}
+  wide
+/>
 
 The pattern is not uniform. Financial services leads in production deployments, with 78% of organizations running AI agents in at least one business function. Technology companies follow closely. Retail has hit 53%, driven heavily by demand forecasting and inventory optimization, with 75% of retailers now considering AI agents essential for competitiveness. Healthcare sits at 42%, accelerating in administrative workflows like scheduling and insurance verification while remaining cautious about clinical autonomy. Government and manufacturing lag behind but are scaling.
 
-<IndustryAdoptionChart />
+<Figure
+  src="/images/essays/charts/industry-adoption-chart.webp"
+  alt="Industry adoption chart"
+  width={848}
+  height={713}
+  wide
+/>
 
 This matches a broader pattern. The AI agent market within Web3 specifically saw its token market value grow from $22 billion in late 2023 to over $55 billion by end of 2024, and it has continued growing through 2025. DeFAI, the fusion of decentralized finance with autonomous agents, is now a real category. Agents are optimizing DeFi strategies, managing liquidity pools, and participating in DAO governance. By 2026, the DeFAI sector has moved past the hype cycle into structural maturity, with projects emphasizing verifiable compute via Zero-Knowledge Machine Learning (ZKML) and autonomous intent-based execution.
 
@@ -137,7 +179,13 @@ Gartner has also warned that over 40% of agentic AI projects are at risk of canc
 
 The ecosystem of companies building agentic infrastructure has grown rapidly. A few categories stand out.
 
-<InfrastructureOverview />
+<Figure
+  src="/images/essays/charts/infrastructure-overview.webp"
+  alt="Infrastructure overview"
+  width={848}
+  height={527}
+  wide
+/>
 
 <ResearchPaper
   title="The Agent Infrastructure Stack"
@@ -162,7 +210,13 @@ The security risks of autonomous agents are documented and growing.
 
 In November 2025, Anthropic confirmed that a Chinese state-sponsored group weaponized Claude Code to autonomously perform 80 to 90% of tactical operations (reconnaissance, vulnerability discovery, and data exfiltration) in attacks against 30 global targets across finance, manufacturing, and government. In January 2026, researchers studying a simulated social network of 770,000 autonomous agents observed agents performing prompt injection attacks against each other within days, exacerbated by a database misconfiguration. A vulnerability in Microsoft 365 Copilot (CVE-2025-32711, dubbed "EchoLeak") allowed a single crafted email to trigger automatic data exfiltration without any user interaction.
 
-<SecurityThreatMatrix />
+<Figure
+  src="/images/essays/charts/security-threat-matrix.webp"
+  alt="Security threat matrix"
+  width={848}
+  height={529}
+  wide
+/>
 
 The threat categories break down into six areas. Indirect prompt injection, where malicious instructions are hidden in data the agent processes, remains the primary attack vector. Excessive agency, where agents are granted overly broad permissions, creates blast radius problems when a single agent is compromised. Memory poisoning introduces false information into an agent's persistent context. Cascading failures propagate malicious actions across multi-agent systems faster than humans can intervene. Supply chain attacks exploit vulnerabilities in agent frameworks and plugins. And agency abuse, where an agent executes technically permitted but unintended actions (like deleting a database from an ambiguous instruction), represents an emerging category.
 

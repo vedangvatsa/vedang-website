@@ -27,8 +27,11 @@
 
 ## Chart Component Standards
 
-### React Chart Components (MDX inline)
-All chart components rendered inside essays follow these rules:
+### Essay inline charts (static assets)
+Essay MDX should use `<Figure src="/images/essays/charts/…">` or hero SVGs under `public/images/essays/`. To regenerate chart images after editing a legacy chart component: `node scripts/generate-chart-export-bundle.mjs`, run the dev server, then `npx tsx scripts/capture-essay-charts.mts` and `node scripts/replace-mdx-charts-with-figures.mjs` (usually only the first step is needed if prose already references figures).
+
+### React Chart Components (legacy / export source only)
+Legacy chart components in `src/components/mdx/*-charts.tsx` are export sources, not rendered in published essays. They follow these rules when maintained:
 - **File location**: `src/components/mdx/{essay-slug}-charts.tsx`
 - **Directive**: Must include `'use client'` at top
 - **Container**: `<figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">`

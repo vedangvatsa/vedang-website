@@ -133,7 +133,7 @@ ${essayLinks}
 - [Blockchain Ecosystem Evolution](https://dx.doi.org/10.2139/ssrn.5357534): Historical development and architectural evolution of blockchain networks.
 - [Estonia's e-gov and Digital Public Service Delivery Solutions](https://ieeexplore.ieee.org/document/9515004): Digital governance infrastructure and decentralized identity implementation.
 - [Analysis of Global Research Proceedings in AI](https://ieeexplore.ieee.org/document/9514979): Comprehensive survey of AI research trends and emerging methodologies.
-- [Identification of Algorithmic Bias Through Policy Instruments](https://dx.doi.org/10.21474/IJAR01/11418): Methods for detecting and mitigating bias in AI systems through structured policy analysis.
+- [AI Agent Readiness Across 100,000 Websites](https://doi.org/10.5281/zenodo.24121071): Census of agent-readiness signals across 100,000 websites and 120 protocol standards (MCP, OpenAPI, llms.txt).
 
 ## Glossary
 

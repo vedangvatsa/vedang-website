@@ -60,13 +60,25 @@ A chatbot that hallucinates costs you credibility. An agent that hallucinates co
 
 One notable exit: [Helicone](https://helicone.ai/), an LLM observability proxy, was acquired by Mintlify in March 2026 and is now in maintenance mode.
 
-<InfraFundingByLayer />
+<Figure
+  src="/images/essays/charts/infra-funding-by-layer.webp"
+  alt="Infra funding by layer"
+  width={848}
+  height={445}
+  wide
+/>
 
 ## How Agents Think
 
 Every agent call requires an inference pass. The compute layer provides the GPU infrastructure, model hosting, and API endpoints that turn prompts into responses. This is the largest value pool in the entire stack.
 
-<ComputeValuationTable />
+<Figure
+  src="/images/essays/charts/compute-valuation-table.webp"
+  alt="Compute valuation table"
+  width={848}
+  height={413}
+  wide
+/>
 
 [Cerebras](https://cerebras.ai/) IPO'd on NASDAQ at $185 per share in May 2026 and trades at approximately $52 billion in market capitalization. It holds an OpenAI compute contract worth over $20 billion. The company builds custom wafer-scale chips designed for inference, not training, positioning it as purpose-built for the agentic workload pattern (many small, fast inference calls rather than months-long training runs).
 
@@ -92,7 +104,13 @@ An agent that writes code needs somewhere to run it. Executing untrusted, LLM-ge
 
 [E2B](https://e2b.dev/) raised [$32 million](https://www.crunchbase.com/organization/e2b-dev) and provides cloud-based sandboxed environments (micro-VMs) specifically designed for AI-generated code execution. Hugging Face, Perplexity, and Groq integrate E2B into their products, and the company reports that 88% of Fortune 100 companies have signed up. Each sandbox is an isolated, ephemeral micro-VM with its own filesystem, network, and process tree, created on demand and destroyed when the task completes.
 
-<SecurityConsolidation />
+<Figure
+  src="/images/essays/charts/security-consolidation.webp"
+  alt="Security consolidation"
+  width={848}
+  height={485}
+  wide
+/>
 
 ## How Agents Are Defended
 
@@ -106,7 +124,13 @@ Two newer security entrants are approaching the problem differently. [Corridor](
 
 Standalone agent security is being absorbed into larger platform companies (Cisco, Check Point), while the next generation of security companies are embedding themselves directly into the developer workflow. In late May 2026, Palo Alto Networks acquired Portkey, an AI gateway company, to add agent runtime security and identity to its Prisma AIRS platform. Snowflake acquired Natoma, an MCP platform for agent governance. Asana acquired Stack AI, a no-code agent builder, for approximately $75 million. The acquirer profile is expanding beyond security vendors to include data platforms and productivity companies.
 
-<AgentProductValuations />
+<Figure
+  src="/images/essays/charts/agent-product-valuations.webp"
+  alt="Agent product valuations"
+  width={848}
+  height={597}
+  wide
+/>
 
 ## Who Ships Autonomous Agents
 
@@ -122,13 +146,25 @@ Combined, these six companies represent over $59 billion in valuation on roughly
 
 Disclosed equity funding for pure-play agentic AI companies nearly doubled from $1.5 billion in 2024 to $2.9 billion in 2025. The number of disclosed deals grew from 31 to 50. Between January and May 2026, the market raised another $1.1 billion across 29 deals, putting it on pace for approximately $2.6 billion annualized. The raw capital growth is real. What the headline numbers obscure is where that capital actually lands.
 
-<FundingVelocityChart />
+<Figure
+  src="/images/essays/charts/funding-velocity-chart.webp"
+  alt="Funding velocity chart"
+  width={848}
+  height={383}
+  wide
+/>
 
 ### Capital Concentrates Violently
 
 The distribution is not normal. In early 2026, the top 3 deals captured 44% of total agentic AI capital. The top 10 captured 78%. The bottom half of all deals split 11.5% among themselves. This is the defining structural feature of the agent funding market. A small number of companies absorb most of the money, and the rest compete for scraps.
 
-<CapitalConcentrationChart />
+<Figure
+  src="/images/essays/charts/capital-concentration-chart.webp"
+  alt="Capital concentration chart"
+  width={848}
+  height={328}
+  wide
+/>
 
 This concentration exists at every stage. The median AI seed round in 2026 sits at approximately $4.6 million, up from around $3 million for the broader market. But the upper quartile of AI seed deals now exceeds $8 to $10 million, and outlier rounds (Parallel's $30 million seed, for example) distort the average further. Investors increasingly expect $500K to $1 million in ARR at seed stage, a bar that would have been Series A territory three years ago.
 
@@ -136,7 +172,13 @@ At Series A and beyond, the bar is higher still. Investors are moving away from 
 
 ### Who Is Funding What
 
-<TopInvestorsTable />
+<Figure
+  src="/images/essays/charts/top-investors-table.webp"
+  alt="Top investors table"
+  width={856}
+  height={429}
+  wide
+/>
 
 The investor thesis splits along clear lines. Sequoia leads growth-stage rounds for vertical agents (Sierra) and compute (fal.ai), with a newer bet on perception (Parallel). a16z funds horizontal infrastructure, including orchestration (Inngest), storage (Upstash), and the development environments that agents run in. Kleiner Perkins straddles both, leading the largest perception deal (Browserbase at $67.5M) while backing vertical players like Harvey and Glean. Y Combinator operates as the primary seed pipeline for agent infrastructure, with Firecrawl, Kernel, E2B, Cubic, and Meticulous all passing through its batches.
 
@@ -166,7 +208,13 @@ Not every successful agent company raised venture capital. [Chatbase](https://ww
 
 The bootstrapped path works for tools in the perception, monitoring, and developer experience layers. It does not work for compute (capital-intensive), security (enterprise sales required), or orchestration (infrastructure complexity). The funding data confirms the obvious. Some layers require venture capital to exist, and others can be built profitably from day one.
 
-<MarketplaceComposition />
+<Figure
+  src="/images/essays/charts/marketplace-composition.webp"
+  alt="Marketplace composition"
+  width={848}
+  height={294}
+  wide
+/>
 
 ## Developer Platforms Are Productizing the Stack
 

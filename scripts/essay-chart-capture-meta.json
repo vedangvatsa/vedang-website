@@ -1,0 +1,767 @@
+{
+  "AIDetectorFeatureComparison": {
+    "slug": "ai-detector-feature-comparison",
+    "width": 848,
+    "height": 469
+  },
+  "AIJobExposure": {
+    "slug": "ai-job-exposure",
+    "width": 848,
+    "height": 262
+  },
+  "AIMaturityLevels": {
+    "slug": "ai-maturity-levels",
+    "width": 848,
+    "height": 498
+  },
+  "AINewsSiteGrowth": {
+    "slug": "ai-news-site-growth",
+    "width": 848,
+    "height": 314
+  },
+  "APIAbstractionLayer": {
+    "slug": "api-abstraction-layer",
+    "width": 848,
+    "height": 401
+  },
+  "AbstractTransferComparison": {
+    "slug": "abstract-transfer-comparison",
+    "width": 848,
+    "height": 570
+  },
+  "AbstractTransferErrors": {
+    "slug": "abstract-transfer-errors",
+    "width": 848,
+    "height": 468
+  },
+  "AgentForXPattern": {
+    "slug": "agent-for-x-pattern",
+    "width": 848,
+    "height": 460
+  },
+  "AgentLayerTaxonomy": {
+    "slug": "agent-layer-taxonomy",
+    "width": 848,
+    "height": 487
+  },
+  "AgentMarketChart": {
+    "slug": "agent-market-chart",
+    "width": 848,
+    "height": 524
+  },
+  "AgentMarketGrowth": {
+    "slug": "agent-market-growth",
+    "width": 848,
+    "height": 238
+  },
+  "AgentProductValuations": {
+    "slug": "agent-product-valuations",
+    "width": 848,
+    "height": 597
+  },
+  "AgentToolsMap": {
+    "slug": "agent-tools-map",
+    "width": 848,
+    "height": 749
+  },
+  "AgentVsChatbot": {
+    "slug": "agent-vs-chatbot",
+    "width": 848,
+    "height": 448
+  },
+  "AgenticStateArchitecture": {
+    "slug": "agentic-state-architecture",
+    "width": 848,
+    "height": 474
+  },
+  "AlignmentFrameworkChart": {
+    "slug": "alignment-framework-chart",
+    "width": 848,
+    "height": 439
+  },
+  "ApiTrafficChart": {
+    "slug": "api-traffic-chart",
+    "width": 848,
+    "height": 417
+  },
+  "AttentionCollapseChart": {
+    "slug": "attention-collapse-chart",
+    "width": 848,
+    "height": 413
+  },
+  "AttentionSpanDecline": {
+    "slug": "attention-span-decline",
+    "width": 848,
+    "height": 439
+  },
+  "AutomationROIChart": {
+    "slug": "automation-roi-chart",
+    "width": 848,
+    "height": 536
+  },
+  "BCIMarketChart": {
+    "slug": "bci-market-chart",
+    "width": 848,
+    "height": 404
+  },
+  "BatchSizeTimeline": {
+    "slug": "batch-size-timeline",
+    "width": 848,
+    "height": 420
+  },
+  "COOEffectSize": {
+    "slug": "coo-effect-size",
+    "width": 848,
+    "height": 366
+  },
+  "CapitalConcentrationChart": {
+    "slug": "capital-concentration-chart",
+    "width": 848,
+    "height": 328
+  },
+  "CoaseDisruption": {
+    "slug": "coase-disruption",
+    "width": 848,
+    "height": 413
+  },
+  "CommerceBenchmarkScores": {
+    "slug": "commerce-benchmark-scores",
+    "width": 848,
+    "height": 411
+  },
+  "CommerceOutcomeChecks": {
+    "slug": "commerce-outcome-checks",
+    "width": 848,
+    "height": 480
+  },
+  "ComputeValuationTable": {
+    "slug": "compute-valuation-table",
+    "width": 848,
+    "height": 413
+  },
+  "ContentPipelineFlow": {
+    "slug": "content-pipeline-flow",
+    "width": 848,
+    "height": 743
+  },
+  "CurationFactorsChart": {
+    "slug": "curation-factors-chart",
+    "width": 848,
+    "height": 605
+  },
+  "DAOTreasuryChart": {
+    "slug": "dao-treasury-chart",
+    "width": 848,
+    "height": 279
+  },
+  "DAOVoterParticipation": {
+    "slug": "dao-voter-participation",
+    "width": 848,
+    "height": 447
+  },
+  "DashboardMetricsMap": {
+    "slug": "dashboard-metrics-map",
+    "width": 848,
+    "height": 405
+  },
+  "DataCenterEnergyChart": {
+    "slug": "data-center-energy-chart",
+    "width": 848,
+    "height": 310
+  },
+  "DataSourceDisruption": {
+    "slug": "data-source-disruption",
+    "width": 848,
+    "height": 588
+  },
+  "DeFiSecurityChart": {
+    "slug": "de-fi-security-chart",
+    "width": 848,
+    "height": 439
+  },
+  "DecentralizedIdentityMarket": {
+    "slug": "decentralized-identity-market",
+    "width": 848,
+    "height": 329
+  },
+  "DefenseHardwareSurge": {
+    "slug": "defense-hardware-surge",
+    "width": 848,
+    "height": 435
+  },
+  "DigitalGovMaturity": {
+    "slug": "digital-gov-maturity",
+    "width": 848,
+    "height": 322
+  },
+  "DigitalIdentityTimeline": {
+    "slug": "digital-identity-timeline",
+    "width": 848,
+    "height": 360
+  },
+  "DistributedArchitectureChart": {
+    "slug": "distributed-architecture-chart",
+    "width": 848,
+    "height": 584
+  },
+  "DualEconomyFramework": {
+    "slug": "dual-economy-framework",
+    "width": 848,
+    "height": 367
+  },
+  "EGovernanceMaturity": {
+    "slug": "e-governance-maturity",
+    "width": 848,
+    "height": 467
+  },
+  "EResidencyImpact": {
+    "slug": "e-residency-impact",
+    "width": 848,
+    "height": 454
+  },
+  "EarlyCareerImpact": {
+    "slug": "early-career-impact",
+    "width": 848,
+    "height": 332
+  },
+  "EnergyMeshComparison": {
+    "slug": "energy-mesh-comparison",
+    "width": 848,
+    "height": 432
+  },
+  "EnterpriseAdoption": {
+    "slug": "enterprise-adoption",
+    "width": 848,
+    "height": 284
+  },
+  "FrontendDeclineChart": {
+    "slug": "frontend-decline-chart",
+    "width": 848,
+    "height": 286
+  },
+  "FundingVelocityChart": {
+    "slug": "funding-velocity-chart",
+    "width": 848,
+    "height": 383
+  },
+  "GDPGrowthTimeline": {
+    "slug": "gdp-growth-timeline",
+    "width": 848,
+    "height": 262
+  },
+  "GUITimeline": {
+    "slug": "gui-timeline",
+    "width": 848,
+    "height": 578
+  },
+  "GenderImpact": {
+    "slug": "gender-impact",
+    "width": 848,
+    "height": 374
+  },
+  "GodProtocolComparison": {
+    "slug": "god-protocol-comparison",
+    "width": 848,
+    "height": 605
+  },
+  "GovernanceEffectivenessChart": {
+    "slug": "governance-effectiveness-chart",
+    "width": 848,
+    "height": 603
+  },
+  "GovernanceScorecard": {
+    "slug": "governance-scorecard",
+    "width": 848,
+    "height": 366
+  },
+  "GovernanceStackChart": {
+    "slug": "governance-stack-chart",
+    "width": 848,
+    "height": 630
+  },
+  "HapticGenerationsChart": {
+    "slug": "haptic-generations-chart",
+    "width": 848,
+    "height": 517
+  },
+  "HardwarePivotGrid": {
+    "slug": "hardware-pivot-grid",
+    "width": 848,
+    "height": 505
+  },
+  "HealthcareComparison": {
+    "slug": "healthcare-comparison",
+    "width": 848,
+    "height": 413
+  },
+  "IdentitySpectrumChart": {
+    "slug": "identity-spectrum-chart",
+    "width": 848,
+    "height": 513
+  },
+  "ImplementationChecklist": {
+    "slug": "implementation-checklist",
+    "width": 848,
+    "height": 455
+  },
+  "ImplementationTimeline": {
+    "slug": "implementation-timeline",
+    "width": 848,
+    "height": 445
+  },
+  "IncomeThresholdChart": {
+    "slug": "income-threshold-chart",
+    "width": 848,
+    "height": 493
+  },
+  "IndiaSectorBifurcation": {
+    "slug": "india-sector-bifurcation",
+    "width": 848,
+    "height": 413
+  },
+  "IndustrialEvolution": {
+    "slug": "industrial-evolution",
+    "width": 848,
+    "height": 430
+  },
+  "IndustryAdoptionChart": {
+    "slug": "industry-adoption-chart",
+    "width": 848,
+    "height": 713
+  },
+  "InequalitySnapshot": {
+    "slug": "inequality-snapshot",
+    "width": 848,
+    "height": 402
+  },
+  "InfraFundingByLayer": {
+    "slug": "infra-funding-by-layer",
+    "width": 848,
+    "height": 445
+  },
+  "InfrastructureOverview": {
+    "slug": "infrastructure-overview",
+    "width": 848,
+    "height": 527
+  },
+  "InterruptionCostChart": {
+    "slug": "interruption-cost-chart",
+    "width": 848,
+    "height": 725
+  },
+  "JobChurnChart": {
+    "slug": "job-churn-chart",
+    "width": 848,
+    "height": 300
+  },
+  "MCPAdoptionChart": {
+    "slug": "mcp-adoption-chart",
+    "width": 848,
+    "height": 262
+  },
+  "MarketplaceComposition": {
+    "slug": "marketplace-composition",
+    "width": 848,
+    "height": 294
+  },
+  "MaterialConstraints": {
+    "slug": "material-constraints",
+    "width": 848,
+    "height": 413
+  },
+  "MediaTrustChart": {
+    "slug": "media-trust-chart",
+    "width": 848,
+    "height": 515
+  },
+  "MeshOrgComparison": {
+    "slug": "mesh-org-comparison",
+    "width": 848,
+    "height": 454
+  },
+  "MeshTransactionCostChart": {
+    "slug": "mesh-transaction-cost-chart",
+    "width": 848,
+    "height": 393
+  },
+  "MethodologicalEvolution": {
+    "slug": "methodological-evolution",
+    "width": 848,
+    "height": 548
+  },
+  "MisinfoSpreadChart": {
+    "slug": "misinfo-spread-chart",
+    "width": 848,
+    "height": 368
+  },
+  "MonasteryPrincipleChart": {
+    "slug": "monastery-principle-chart",
+    "width": 848,
+    "height": 541
+  },
+  "NurtureSequence": {
+    "slug": "nurture-sequence",
+    "width": 848,
+    "height": 374
+  },
+  "ObserverEffectChart": {
+    "slug": "observer-effect-chart",
+    "width": 848,
+    "height": 353
+  },
+  "OutreachPipeline": {
+    "slug": "outreach-pipeline",
+    "width": 848,
+    "height": 559
+  },
+  "ParticipationExpansionChart": {
+    "slug": "participation-expansion-chart",
+    "width": 848,
+    "height": 492
+  },
+  "PerceptionArcTimeline": {
+    "slug": "perception-arc-timeline",
+    "width": 848,
+    "height": 356
+  },
+  "PersonalityProfileExplorer": {
+    "slug": "personality-profile-explorer",
+    "width": 848,
+    "height": 901
+  },
+  "PlatformConcentration": {
+    "slug": "platform-concentration",
+    "width": 848,
+    "height": 368
+  },
+  "PlatformShiftTimeline": {
+    "slug": "platform-shift-timeline",
+    "width": 848,
+    "height": 508
+  },
+  "PlaybookHeroCard": {
+    "slug": "playbook-hero-card",
+    "width": 848,
+    "height": 506
+  },
+  "PolarizationFindings": {
+    "slug": "polarization-findings",
+    "width": 848,
+    "height": 612
+  },
+  "PresenceThresholdChart": {
+    "slug": "presence-threshold-chart",
+    "width": 848,
+    "height": 653
+  },
+  "PrivacyTechStack": {
+    "slug": "privacy-tech-stack",
+    "width": 848,
+    "height": 532
+  },
+  "ProductivityParadox": {
+    "slug": "productivity-paradox",
+    "width": 848,
+    "height": 428
+  },
+  "ProtocolStackDiagram": {
+    "slug": "protocol-stack-diagram",
+    "width": 848,
+    "height": 603
+  },
+  "PseudonymousSuccessCases": {
+    "slug": "pseudonymous-success-cases",
+    "width": 848,
+    "height": 500
+  },
+  "ROIImpactStats": {
+    "slug": "roi-impact-stats",
+    "width": 848,
+    "height": 387
+  },
+  "RealityCheckGrid": {
+    "slug": "reality-check-grid",
+    "width": 848,
+    "height": 377
+  },
+  "ReceiptsDemandChart": {
+    "slug": "receipts-demand-chart",
+    "width": 848,
+    "height": 309
+  },
+  "ReceiptsExposureChart": {
+    "slug": "receipts-exposure-chart",
+    "width": 848,
+    "height": 407
+  },
+  "ReceiptsLaborFacts": {
+    "slug": "receipts-labor-facts",
+    "width": 848,
+    "height": 429
+  },
+  "RecentBatchComposition": {
+    "slug": "recent-batch-composition",
+    "width": 848,
+    "height": 298
+  },
+  "RegulatoryFriction": {
+    "slug": "regulatory-friction",
+    "width": 848,
+    "height": 495
+  },
+  "RegulatoryGrowth": {
+    "slug": "regulatory-growth",
+    "width": 848,
+    "height": 431
+  },
+  "ReputationInfraChart": {
+    "slug": "reputation-infra-chart",
+    "width": 848,
+    "height": 542
+  },
+  "RetreatMovementsTimeline": {
+    "slug": "retreat-movements-timeline",
+    "width": 848,
+    "height": 545
+  },
+  "SaaSPricingShift": {
+    "slug": "saa-s-pricing-shift",
+    "width": 848,
+    "height": 413
+  },
+  "ScarcitySpectrum": {
+    "slug": "scarcity-spectrum",
+    "width": 848,
+    "height": 678
+  },
+  "SecurityConsolidation": {
+    "slug": "security-consolidation",
+    "width": 848,
+    "height": 485
+  },
+  "SecurityThreatMatrix": {
+    "slug": "security-threat-matrix",
+    "width": 848,
+    "height": 529
+  },
+  "SensoryBandwidthChart": {
+    "slug": "sensory-bandwidth-chart",
+    "width": 848,
+    "height": 370
+  },
+  "SensoryStackTable": {
+    "slug": "sensory-stack-table",
+    "width": 848,
+    "height": 469
+  },
+  "SensoryStackTimeline": {
+    "slug": "sensory-stack-timeline",
+    "width": 848,
+    "height": 550
+  },
+  "SilenceEconomyChart": {
+    "slug": "silence-economy-chart",
+    "width": 848,
+    "height": 588
+  },
+  "SimCostComparison": {
+    "slug": "sim-cost-comparison",
+    "width": 848,
+    "height": 413
+  },
+  "SimulationDomainChart": {
+    "slug": "simulation-domain-chart",
+    "width": 848,
+    "height": 509
+  },
+  "SimulationGapChart": {
+    "slug": "simulation-gap-chart",
+    "width": 848,
+    "height": 450
+  },
+  "SocialListeningMap": {
+    "slug": "social-listening-map",
+    "width": 848,
+    "height": 427
+  },
+  "SpatialComputingAdoption": {
+    "slug": "spatial-computing-adoption",
+    "width": 848,
+    "height": 359
+  },
+  "StateOfAiCitations": {
+    "slug": "state-of-ai-citations",
+    "width": 856,
+    "height": 346
+  },
+  "StateOfAiGeography": {
+    "slug": "state-of-ai-geography",
+    "width": 856,
+    "height": 522
+  },
+  "StateOfAiKeywordsChart": {
+    "slug": "state-of-ai-keywords-chart",
+    "width": 856,
+    "height": 536
+  },
+  "StateOfAiMomentum": {
+    "slug": "state-of-ai-momentum",
+    "width": 856,
+    "height": 594
+  },
+  "StateOfAiTimeline": {
+    "slug": "state-of-ai-timeline",
+    "width": 856,
+    "height": 719
+  },
+  "SupportTierChart": {
+    "slug": "support-tier-chart",
+    "width": 856,
+    "height": 464
+  },
+  "TTPEvolutionTimeline": {
+    "slug": "ttp-evolution-timeline",
+    "width": 856,
+    "height": 401
+  },
+  "TTPMarketScale": {
+    "slug": "ttp-market-scale",
+    "width": 856,
+    "height": 437
+  },
+  "TaglineArchaeology": {
+    "slug": "tagline-archaeology",
+    "width": 856,
+    "height": 351
+  },
+  "TaskHorizonChart": {
+    "slug": "task-horizon-chart",
+    "width": 856,
+    "height": 476
+  },
+  "TextUIAdoption": {
+    "slug": "text-ui-adoption",
+    "width": 856,
+    "height": 289
+  },
+  "TokenTaxFormatChart": {
+    "slug": "token-tax-format-chart",
+    "width": 856,
+    "height": 675
+  },
+  "TopInvestorsTable": {
+    "slug": "top-investors-table",
+    "width": 856,
+    "height": 429
+  },
+  "TrainingCostChart": {
+    "slug": "training-cost-chart",
+    "width": 856,
+    "height": 441
+  },
+  "TransferabilityGrid": {
+    "slug": "transferability-grid",
+    "width": 856,
+    "height": 456
+  },
+  "TrustApplicationDomains": {
+    "slug": "trust-application-domains",
+    "width": 856,
+    "height": 541
+  },
+  "TrustComparisonChart": {
+    "slug": "trust-comparison-chart",
+    "width": 856,
+    "height": 477
+  },
+  "TrustPrimitivesComparison": {
+    "slug": "trust-primitives-comparison",
+    "width": 856,
+    "height": 641
+  },
+  "TrustStackArchitecture": {
+    "slug": "trust-stack-architecture",
+    "width": 856,
+    "height": 575
+  },
+  "UBIPilotResults": {
+    "slug": "ubi-pilot-results",
+    "width": 856,
+    "height": 371
+  },
+  "UIComplexityComparison": {
+    "slug": "ui-complexity-comparison",
+    "width": 856,
+    "height": 448
+  },
+  "UseCaseCatalog": {
+    "slug": "use-case-catalog",
+    "width": 856,
+    "height": 568
+  },
+  "VCBarbellSystemVisual": {
+    "slug": "vc-barbell-system-visual",
+    "width": 856,
+    "height": 554
+  },
+  "VCBarbellVectorDiagram": {
+    "slug": "vc-barbell-vector-diagram",
+    "width": 856,
+    "height": 414
+  },
+  "VCDeathValleyTimeline": {
+    "slug": "vc-death-valley-timeline",
+    "width": 856,
+    "height": 709
+  },
+  "VCEquationBoxSVG": {
+    "slug": "vc-equation-box-svg",
+    "width": 856,
+    "height": 206
+  },
+  "VCGiniConcentrationChart": {
+    "slug": "vc-gini-concentration-chart",
+    "width": 856,
+    "height": 852
+  },
+  "VCSectorSemanticAnalysis": {
+    "slug": "vc-sector-semantic-analysis",
+    "width": 856,
+    "height": 1056
+  },
+  "VCStrategicFrameworkDiagram": {
+    "slug": "vc-strategic-framework-diagram",
+    "width": 856,
+    "height": 435
+  },
+  "VCValuationExpansionChart": {
+    "slug": "vc-valuation-expansion-chart",
+    "width": 856,
+    "height": 694
+  },
+  "VotingMechanismChart": {
+    "slug": "voting-mechanism-chart",
+    "width": 856,
+    "height": 664
+  },
+  "WebEvolutionTimeline": {
+    "slug": "web-evolution-timeline",
+    "width": 856,
+    "height": 335
+  },
+  "YCGeoConcentration": {
+    "slug": "yc-geo-concentration",
+    "width": 856,
+    "height": 267
+  },
+  "YCIndustryBreakdown": {
+    "slug": "yc-industry-breakdown",
+    "width": 1024,
+    "height": 1024
+  },
+  "ZeroUIMarketMap": {
+    "slug": "zero-ui-market-map",
+    "width": 856,
+    "height": 838
+  }
+}

@@ -94,13 +94,19 @@
 - **`<SectionLabel>`** — Do NOT use. It renders as an all-caps, light-blue, non-semantic `<span>` that duplicates the `## ` heading below it. Use standard `##` markdown headings for all section dividers.
 - **Opening `<Callout>` boxes** — Do NOT wrap the essay's opening paragraph in a `<Callout>` (e.g., "The Core Thesis", "Key Findings", "Executive Summary"). The opening text must be a plain paragraph. Callouts are reserved for mid-body asides (warnings, supplementary info, inline data tables).
 
-### Custom Chart Components
-If an essay needs an interactive chart, use `src/components/mdx/{essay-slug}-charts.tsx`. A chart is optional. Charts must:
+### Visuals: SVG, tables, and charts
+**Default order:** (1) prose + markdown table, (2) `<StatRow>` / `<Figure src="…svg">`, (3) MDX React charts only when interaction clearly helps.
+
+Do **not** add large interactive widgets (sliders, calculators, faux app UIs) that repeat numbers already in the essay. Those belong as static SVGs in `public/images/essays/` (see `docs/infographic-design-guide.md`), not as client components.
+
+### Custom Chart Components (use sparingly)
+If an essay needs an **interactive** chart, use `src/components/mdx/{essay-slug}-charts.tsx`. Charts are optional. They must:
 - Use `'use client'` directive
 - Follow light-mode aesthetic (white bg, `#37352f` text, `#e3e3e0` borders)
 - Include source attribution in `text-[10px] text-muted-foreground/60`
 - Be registered in `src/app/[slug]/page.tsx` (import + component mapping)
 - Use verified data with hyperlinked sources where possible
+- Add something the prose, table, or SVG cannot (e.g. exploring a large parameter space), not a duplicate of fixed assumptions
 
 ### Formatting Rules
 - **No em-dashes** (`—`). Use commas, colons, semicolons, or restructure the sentence.

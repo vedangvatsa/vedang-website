@@ -1,0 +1,926 @@
+[
+  {
+    "name": "AIDetectorFeatureComparison",
+    "slug": "ai-detector-feature-comparison",
+    "module": "ai-detector-charts",
+    "image": "/images/essays/charts/ai-detector-feature-comparison.webp"
+  },
+  {
+    "name": "AIJobExposure",
+    "slug": "ai-job-exposure",
+    "module": "aieconomy-charts",
+    "image": "/images/essays/charts/ai-job-exposure.webp"
+  },
+  {
+    "name": "AIMaturityLevels",
+    "slug": "ai-maturity-levels",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/ai-maturity-levels.webp"
+  },
+  {
+    "name": "AINewsSiteGrowth",
+    "slug": "ai-news-site-growth",
+    "module": "plurality-charts",
+    "image": "/images/essays/charts/ai-news-site-growth.webp"
+  },
+  {
+    "name": "APIAbstractionLayer",
+    "slug": "api-abstraction-layer",
+    "module": "universal-charts",
+    "image": "/images/essays/charts/api-abstraction-layer.webp"
+  },
+  {
+    "name": "AbstractTransferComparison",
+    "slug": "abstract-transfer-comparison",
+    "module": "aidetection-charts",
+    "image": "/images/essays/charts/abstract-transfer-comparison.webp"
+  },
+  {
+    "name": "AbstractTransferErrors",
+    "slug": "abstract-transfer-errors",
+    "module": "aidetection-charts",
+    "image": "/images/essays/charts/abstract-transfer-errors.webp"
+  },
+  {
+    "name": "AgentForXPattern",
+    "slug": "agent-for-x-pattern",
+    "module": "yc-charts",
+    "image": "/images/essays/charts/agent-for-x-pattern.webp"
+  },
+  {
+    "name": "AgentLayerTaxonomy",
+    "slug": "agent-layer-taxonomy",
+    "module": "yc-charts",
+    "image": "/images/essays/charts/agent-layer-taxonomy.webp"
+  },
+  {
+    "name": "AgentMarketChart",
+    "slug": "agent-market-chart",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/agent-market-chart.webp"
+  },
+  {
+    "name": "AgentMarketGrowth",
+    "slug": "agent-market-growth",
+    "module": "agent-economy-charts",
+    "image": "/images/essays/charts/agent-market-growth.webp"
+  },
+  {
+    "name": "AgentProductValuations",
+    "slug": "agent-product-valuations",
+    "module": "agentstack-charts",
+    "image": "/images/essays/charts/agent-product-valuations.webp"
+  },
+  {
+    "name": "AgentToolsMap",
+    "slug": "agent-tools-map",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/agent-tools-map.webp"
+  },
+  {
+    "name": "AgentVsChatbot",
+    "slug": "agent-vs-chatbot",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/agent-vs-chatbot.webp"
+  },
+  {
+    "name": "AgenticStateArchitecture",
+    "slug": "agentic-state-architecture",
+    "module": "stateagents-charts",
+    "image": "/images/essays/charts/agentic-state-architecture.webp"
+  },
+  {
+    "name": "AlignmentFrameworkChart",
+    "slug": "alignment-framework-chart",
+    "module": "godprotocol-charts",
+    "image": "/images/essays/charts/alignment-framework-chart.webp"
+  },
+  {
+    "name": "ApiTrafficChart",
+    "slug": "api-traffic-chart",
+    "module": "post-interface-charts",
+    "image": "/images/essays/charts/api-traffic-chart.webp"
+  },
+  {
+    "name": "AttentionCollapseChart",
+    "slug": "attention-collapse-chart",
+    "module": "post-interface-charts",
+    "image": "/images/essays/charts/attention-collapse-chart.webp"
+  },
+  {
+    "name": "AttentionSpanDecline",
+    "slug": "attention-span-decline",
+    "module": "monasticism-charts",
+    "image": "/images/essays/charts/attention-span-decline.webp"
+  },
+  {
+    "name": "AutomationROIChart",
+    "slug": "automation-roi-chart",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/automation-roi-chart.webp"
+  },
+  {
+    "name": "BCIMarketChart",
+    "slug": "bci-market-chart",
+    "module": "sensory-charts",
+    "image": "/images/essays/charts/bci-market-chart.webp"
+  },
+  {
+    "name": "BatchSizeTimeline",
+    "slug": "batch-size-timeline",
+    "module": "yc-charts",
+    "image": "/images/essays/charts/batch-size-timeline.webp"
+  },
+  {
+    "name": "COOEffectSize",
+    "slug": "coo-effect-size",
+    "module": "cheap-charts",
+    "image": "/images/essays/charts/coo-effect-size.webp"
+  },
+  {
+    "name": "CapitalConcentrationChart",
+    "slug": "capital-concentration-chart",
+    "module": "agentstack-charts",
+    "image": "/images/essays/charts/capital-concentration-chart.webp"
+  },
+  {
+    "name": "CoaseDisruption",
+    "slug": "coase-disruption",
+    "module": "agent-economy-charts",
+    "image": "/images/essays/charts/coase-disruption.webp"
+  },
+  {
+    "name": "CommerceBenchmarkScores",
+    "slug": "commerce-benchmark-scores",
+    "module": "agentcommerce-charts",
+    "image": "/images/essays/charts/commerce-benchmark-scores.webp"
+  },
+  {
+    "name": "CommerceOutcomeChecks",
+    "slug": "commerce-outcome-checks",
+    "module": "agentcommerce-charts",
+    "image": "/images/essays/charts/commerce-outcome-checks.webp"
+  },
+  {
+    "name": "ComputeValuationTable",
+    "slug": "compute-valuation-table",
+    "module": "agentstack-charts",
+    "image": "/images/essays/charts/compute-valuation-table.webp"
+  },
+  {
+    "name": "ContentPipelineFlow",
+    "slug": "content-pipeline-flow",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/content-pipeline-flow.webp"
+  },
+  {
+    "name": "CurationFactorsChart",
+    "slug": "curation-factors-chart",
+    "module": "plurality-charts",
+    "image": "/images/essays/charts/curation-factors-chart.webp"
+  },
+  {
+    "name": "DAOTreasuryChart",
+    "slug": "dao-treasury-chart",
+    "module": "mesh-charts",
+    "image": "/images/essays/charts/dao-treasury-chart.webp"
+  },
+  {
+    "name": "DAOVoterParticipation",
+    "slug": "dao-voter-participation",
+    "module": "constitutions-charts",
+    "image": "/images/essays/charts/dao-voter-participation.webp"
+  },
+  {
+    "name": "DashboardMetricsMap",
+    "slug": "dashboard-metrics-map",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/dashboard-metrics-map.webp"
+  },
+  {
+    "name": "DataCenterEnergyChart",
+    "slug": "data-center-energy-chart",
+    "module": "infinity-charts",
+    "image": "/images/essays/charts/data-center-energy-chart.webp"
+  },
+  {
+    "name": "DataSourceDisruption",
+    "slug": "data-source-disruption",
+    "module": "socialscience-charts",
+    "image": "/images/essays/charts/data-source-disruption.webp"
+  },
+  {
+    "name": "DeFiSecurityChart",
+    "slug": "de-fi-security-chart",
+    "module": "trust-charts",
+    "image": "/images/essays/charts/de-fi-security-chart.webp"
+  },
+  {
+    "name": "DecentralizedIdentityMarket",
+    "slug": "decentralized-identity-market",
+    "module": "pseudonymity-charts",
+    "image": "/images/essays/charts/decentralized-identity-market.webp"
+  },
+  {
+    "name": "DefenseHardwareSurge",
+    "slug": "defense-hardware-surge",
+    "module": "yc-charts",
+    "image": "/images/essays/charts/defense-hardware-surge.webp"
+  },
+  {
+    "name": "DigitalGovMaturity",
+    "slug": "digital-gov-maturity",
+    "module": "stateagents-charts",
+    "image": "/images/essays/charts/digital-gov-maturity.webp"
+  },
+  {
+    "name": "DigitalIdentityTimeline",
+    "slug": "digital-identity-timeline",
+    "module": "trust-charts",
+    "image": "/images/essays/charts/digital-identity-timeline.webp"
+  },
+  {
+    "name": "DistributedArchitectureChart",
+    "slug": "distributed-architecture-chart",
+    "module": "godprotocol-charts",
+    "image": "/images/essays/charts/distributed-architecture-chart.webp"
+  },
+  {
+    "name": "DualEconomyFramework",
+    "slug": "dual-economy-framework",
+    "module": "infinity-charts",
+    "image": "/images/essays/charts/dual-economy-framework.webp"
+  },
+  {
+    "name": "EGovernanceMaturity",
+    "slug": "e-governance-maturity",
+    "module": "bureaucracy-charts",
+    "image": "/images/essays/charts/e-governance-maturity.webp"
+  },
+  {
+    "name": "EResidencyImpact",
+    "slug": "e-residency-impact",
+    "module": "stateagents-charts",
+    "image": "/images/essays/charts/e-residency-impact.webp"
+  },
+  {
+    "name": "EarlyCareerImpact",
+    "slug": "early-career-impact",
+    "module": "aieconomy-charts",
+    "image": "/images/essays/charts/early-career-impact.webp"
+  },
+  {
+    "name": "EnergyMeshComparison",
+    "slug": "energy-mesh-comparison",
+    "module": "mesh-charts",
+    "image": "/images/essays/charts/energy-mesh-comparison.webp"
+  },
+  {
+    "name": "EnterpriseAdoption",
+    "slug": "enterprise-adoption",
+    "module": "agent-economy-charts",
+    "image": "/images/essays/charts/enterprise-adoption.webp"
+  },
+  {
+    "name": "FrontendDeclineChart",
+    "slug": "frontend-decline-chart",
+    "module": "post-interface-charts",
+    "image": "/images/essays/charts/frontend-decline-chart.webp"
+  },
+  {
+    "name": "FundingVelocityChart",
+    "slug": "funding-velocity-chart",
+    "module": "agentstack-charts",
+    "image": "/images/essays/charts/funding-velocity-chart.webp"
+  },
+  {
+    "name": "GDPGrowthTimeline",
+    "slug": "gdp-growth-timeline",
+    "module": "singapore-charts",
+    "image": "/images/essays/charts/gdp-growth-timeline.webp"
+  },
+  {
+    "name": "GUITimeline",
+    "slug": "gui-timeline",
+    "module": "post-interface-charts",
+    "image": "/images/essays/charts/gui-timeline.webp"
+  },
+  {
+    "name": "GenderImpact",
+    "slug": "gender-impact",
+    "module": "aieconomy-charts",
+    "image": "/images/essays/charts/gender-impact.webp"
+  },
+  {
+    "name": "GodProtocolComparison",
+    "slug": "god-protocol-comparison",
+    "module": "godprotocol-charts",
+    "image": "/images/essays/charts/god-protocol-comparison.webp"
+  },
+  {
+    "name": "GovernanceEffectivenessChart",
+    "slug": "governance-effectiveness-chart",
+    "module": "constitutions-charts",
+    "image": "/images/essays/charts/governance-effectiveness-chart.webp"
+  },
+  {
+    "name": "GovernanceScorecard",
+    "slug": "governance-scorecard",
+    "module": "singapore-charts",
+    "image": "/images/essays/charts/governance-scorecard.webp"
+  },
+  {
+    "name": "GovernanceStackChart",
+    "slug": "governance-stack-chart",
+    "module": "constitutions-charts",
+    "image": "/images/essays/charts/governance-stack-chart.webp"
+  },
+  {
+    "name": "HapticGenerationsChart",
+    "slug": "haptic-generations-chart",
+    "module": "sensory-charts",
+    "image": "/images/essays/charts/haptic-generations-chart.webp"
+  },
+  {
+    "name": "HardwarePivotGrid",
+    "slug": "hardware-pivot-grid",
+    "module": "post-interface-charts",
+    "image": "/images/essays/charts/hardware-pivot-grid.webp"
+  },
+  {
+    "name": "HealthcareComparison",
+    "slug": "healthcare-comparison",
+    "module": "singapore-charts",
+    "image": "/images/essays/charts/healthcare-comparison.webp"
+  },
+  {
+    "name": "IdentitySpectrumChart",
+    "slug": "identity-spectrum-chart",
+    "module": "pseudonymity-charts",
+    "image": "/images/essays/charts/identity-spectrum-chart.webp"
+  },
+  {
+    "name": "ImplementationChecklist",
+    "slug": "implementation-checklist",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/implementation-checklist.webp"
+  },
+  {
+    "name": "ImplementationTimeline",
+    "slug": "implementation-timeline",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/implementation-timeline.webp"
+  },
+  {
+    "name": "IncomeThresholdChart",
+    "slug": "income-threshold-chart",
+    "module": "cheap-charts",
+    "image": "/images/essays/charts/income-threshold-chart.webp"
+  },
+  {
+    "name": "IndiaSectorBifurcation",
+    "slug": "india-sector-bifurcation",
+    "module": "cheap-charts",
+    "image": "/images/essays/charts/india-sector-bifurcation.webp"
+  },
+  {
+    "name": "IndustrialEvolution",
+    "slug": "industrial-evolution",
+    "module": "singapore-charts",
+    "image": "/images/essays/charts/industrial-evolution.webp"
+  },
+  {
+    "name": "IndustryAdoptionChart",
+    "slug": "industry-adoption-chart",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/industry-adoption-chart.webp"
+  },
+  {
+    "name": "InequalitySnapshot",
+    "slug": "inequality-snapshot",
+    "module": "singapore-charts",
+    "image": "/images/essays/charts/inequality-snapshot.webp"
+  },
+  {
+    "name": "InfraFundingByLayer",
+    "slug": "infra-funding-by-layer",
+    "module": "agentstack-charts",
+    "image": "/images/essays/charts/infra-funding-by-layer.webp"
+  },
+  {
+    "name": "InfrastructureOverview",
+    "slug": "infrastructure-overview",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/infrastructure-overview.webp"
+  },
+  {
+    "name": "InterruptionCostChart",
+    "slug": "interruption-cost-chart",
+    "module": "monasticism-charts",
+    "image": "/images/essays/charts/interruption-cost-chart.webp"
+  },
+  {
+    "name": "JobChurnChart",
+    "slug": "job-churn-chart",
+    "module": "aieconomy-charts",
+    "image": "/images/essays/charts/job-churn-chart.webp"
+  },
+  {
+    "name": "MCPAdoptionChart",
+    "slug": "mcp-adoption-chart",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/mcp-adoption-chart.webp"
+  },
+  {
+    "name": "MarketplaceComposition",
+    "slug": "marketplace-composition",
+    "module": "agentstack-charts",
+    "image": "/images/essays/charts/marketplace-composition.webp"
+  },
+  {
+    "name": "MaterialConstraints",
+    "slug": "material-constraints",
+    "module": "infinity-charts",
+    "image": "/images/essays/charts/material-constraints.webp"
+  },
+  {
+    "name": "MediaTrustChart",
+    "slug": "media-trust-chart",
+    "module": "plurality-charts",
+    "image": "/images/essays/charts/media-trust-chart.webp"
+  },
+  {
+    "name": "MeshOrgComparison",
+    "slug": "mesh-org-comparison",
+    "module": "mesh-charts",
+    "image": "/images/essays/charts/mesh-org-comparison.webp"
+  },
+  {
+    "name": "MeshTransactionCostChart",
+    "slug": "mesh-transaction-cost-chart",
+    "module": "mesh-charts",
+    "image": "/images/essays/charts/mesh-transaction-cost-chart.webp"
+  },
+  {
+    "name": "MethodologicalEvolution",
+    "slug": "methodological-evolution",
+    "module": "socialscience-charts",
+    "image": "/images/essays/charts/methodological-evolution.webp"
+  },
+  {
+    "name": "MisinfoSpreadChart",
+    "slug": "misinfo-spread-chart",
+    "module": "plurality-charts",
+    "image": "/images/essays/charts/misinfo-spread-chart.webp"
+  },
+  {
+    "name": "MonasteryPrincipleChart",
+    "slug": "monastery-principle-chart",
+    "module": "monasticism-charts",
+    "image": "/images/essays/charts/monastery-principle-chart.webp"
+  },
+  {
+    "name": "NurtureSequence",
+    "slug": "nurture-sequence",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/nurture-sequence.webp"
+  },
+  {
+    "name": "ObserverEffectChart",
+    "slug": "observer-effect-chart",
+    "module": "socialscience-charts",
+    "image": "/images/essays/charts/observer-effect-chart.webp"
+  },
+  {
+    "name": "OutreachPipeline",
+    "slug": "outreach-pipeline",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/outreach-pipeline.webp"
+  },
+  {
+    "name": "ParticipationExpansionChart",
+    "slug": "participation-expansion-chart",
+    "module": "pseudonymity-charts",
+    "image": "/images/essays/charts/participation-expansion-chart.webp"
+  },
+  {
+    "name": "PerceptionArcTimeline",
+    "slug": "perception-arc-timeline",
+    "module": "cheap-charts",
+    "image": "/images/essays/charts/perception-arc-timeline.webp"
+  },
+  {
+    "name": "PersonalityProfileExplorer",
+    "slug": "personality-profile-explorer",
+    "module": "personality-charts",
+    "image": "/images/essays/charts/personality-profile-explorer.webp"
+  },
+  {
+    "name": "PlatformConcentration",
+    "slug": "platform-concentration",
+    "module": "infinity-charts",
+    "image": "/images/essays/charts/platform-concentration.webp"
+  },
+  {
+    "name": "PlatformShiftTimeline",
+    "slug": "platform-shift-timeline",
+    "module": "universal-charts",
+    "image": "/images/essays/charts/platform-shift-timeline.webp"
+  },
+  {
+    "name": "PlaybookHeroCard",
+    "slug": "playbook-hero-card",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/playbook-hero-card.webp"
+  },
+  {
+    "name": "PolarizationFindings",
+    "slug": "polarization-findings",
+    "module": "socialscience-charts",
+    "image": "/images/essays/charts/polarization-findings.webp"
+  },
+  {
+    "name": "PresenceThresholdChart",
+    "slug": "presence-threshold-chart",
+    "module": "sensory-charts",
+    "image": "/images/essays/charts/presence-threshold-chart.webp"
+  },
+  {
+    "name": "PrivacyTechStack",
+    "slug": "privacy-tech-stack",
+    "module": "godprotocol-charts",
+    "image": "/images/essays/charts/privacy-tech-stack.webp"
+  },
+  {
+    "name": "ProductivityParadox",
+    "slug": "productivity-paradox",
+    "module": "aieconomy-charts",
+    "image": "/images/essays/charts/productivity-paradox.webp"
+  },
+  {
+    "name": "ProtocolStackDiagram",
+    "slug": "protocol-stack-diagram",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/protocol-stack-diagram.webp"
+  },
+  {
+    "name": "PseudonymousSuccessCases",
+    "slug": "pseudonymous-success-cases",
+    "module": "pseudonymity-charts",
+    "image": "/images/essays/charts/pseudonymous-success-cases.webp"
+  },
+  {
+    "name": "ROIImpactStats",
+    "slug": "roi-impact-stats",
+    "module": "stepwise-charts",
+    "image": "/images/essays/charts/roi-impact-stats.webp"
+  },
+  {
+    "name": "RealityCheckGrid",
+    "slug": "reality-check-grid",
+    "module": "infinity-charts",
+    "image": "/images/essays/charts/reality-check-grid.webp"
+  },
+  {
+    "name": "ReceiptsDemandChart",
+    "slug": "receipts-demand-chart",
+    "module": "receipts-charts",
+    "image": "/images/essays/charts/receipts-demand-chart.webp"
+  },
+  {
+    "name": "ReceiptsExposureChart",
+    "slug": "receipts-exposure-chart",
+    "module": "receipts-charts",
+    "image": "/images/essays/charts/receipts-exposure-chart.webp"
+  },
+  {
+    "name": "ReceiptsLaborFacts",
+    "slug": "receipts-labor-facts",
+    "module": "receipts-charts",
+    "image": "/images/essays/charts/receipts-labor-facts.webp"
+  },
+  {
+    "name": "RecentBatchComposition",
+    "slug": "recent-batch-composition",
+    "module": "yc-charts",
+    "image": "/images/essays/charts/recent-batch-composition.webp"
+  },
+  {
+    "name": "RegulatoryFriction",
+    "slug": "regulatory-friction",
+    "module": "bureaucracy-charts",
+    "image": "/images/essays/charts/regulatory-friction.webp"
+  },
+  {
+    "name": "RegulatoryGrowth",
+    "slug": "regulatory-growth",
+    "module": "bureaucracy-charts",
+    "image": "/images/essays/charts/regulatory-growth.webp"
+  },
+  {
+    "name": "ReputationInfraChart",
+    "slug": "reputation-infra-chart",
+    "module": "pseudonymity-charts",
+    "image": "/images/essays/charts/reputation-infra-chart.webp"
+  },
+  {
+    "name": "RetreatMovementsTimeline",
+    "slug": "retreat-movements-timeline",
+    "module": "monasticism-charts",
+    "image": "/images/essays/charts/retreat-movements-timeline.webp"
+  },
+  {
+    "name": "SaaSPricingShift",
+    "slug": "saa-s-pricing-shift",
+    "module": "post-interface-charts",
+    "image": "/images/essays/charts/saa-s-pricing-shift.webp"
+  },
+  {
+    "name": "ScarcitySpectrum",
+    "slug": "scarcity-spectrum",
+    "module": "infinity-charts",
+    "image": "/images/essays/charts/scarcity-spectrum.webp"
+  },
+  {
+    "name": "SecurityConsolidation",
+    "slug": "security-consolidation",
+    "module": "agentstack-charts",
+    "image": "/images/essays/charts/security-consolidation.webp"
+  },
+  {
+    "name": "SecurityThreatMatrix",
+    "slug": "security-threat-matrix",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/security-threat-matrix.webp"
+  },
+  {
+    "name": "SensoryBandwidthChart",
+    "slug": "sensory-bandwidth-chart",
+    "module": "sensory-charts",
+    "image": "/images/essays/charts/sensory-bandwidth-chart.webp"
+  },
+  {
+    "name": "SensoryStackTable",
+    "slug": "sensory-stack-table",
+    "module": "sensory-charts",
+    "image": "/images/essays/charts/sensory-stack-table.webp"
+  },
+  {
+    "name": "SensoryStackTimeline",
+    "slug": "sensory-stack-timeline",
+    "module": "sensory-charts",
+    "image": "/images/essays/charts/sensory-stack-timeline.webp"
+  },
+  {
+    "name": "SilenceEconomyChart",
+    "slug": "silence-economy-chart",
+    "module": "monasticism-charts",
+    "image": "/images/essays/charts/silence-economy-chart.webp"
+  },
+  {
+    "name": "SimCostComparison",
+    "slug": "sim-cost-comparison",
+    "module": "simulayer-charts",
+    "image": "/images/essays/charts/sim-cost-comparison.webp"
+  },
+  {
+    "name": "SimulationDomainChart",
+    "slug": "simulation-domain-chart",
+    "module": "simulayer-charts",
+    "image": "/images/essays/charts/simulation-domain-chart.webp"
+  },
+  {
+    "name": "SimulationGapChart",
+    "slug": "simulation-gap-chart",
+    "module": "simulayer-charts",
+    "image": "/images/essays/charts/simulation-gap-chart.webp"
+  },
+  {
+    "name": "SocialListeningMap",
+    "slug": "social-listening-map",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/social-listening-map.webp"
+  },
+  {
+    "name": "SpatialComputingAdoption",
+    "slug": "spatial-computing-adoption",
+    "module": "sensory-charts",
+    "image": "/images/essays/charts/spatial-computing-adoption.webp"
+  },
+  {
+    "name": "StateOfAiBigramsChart",
+    "slug": "state-of-ai-bigrams-chart",
+    "module": "stateofai-charts",
+    "image": "/images/essays/charts/state-of-ai-bigrams-chart.webp"
+  },
+  {
+    "name": "StateOfAiCitations",
+    "slug": "state-of-ai-citations",
+    "module": "stateofai-charts",
+    "image": "/images/essays/charts/state-of-ai-citations.webp"
+  },
+  {
+    "name": "StateOfAiGeography",
+    "slug": "state-of-ai-geography",
+    "module": "stateofai-charts",
+    "image": "/images/essays/charts/state-of-ai-geography.webp"
+  },
+  {
+    "name": "StateOfAiKeywordsChart",
+    "slug": "state-of-ai-keywords-chart",
+    "module": "stateofai-charts",
+    "image": "/images/essays/charts/state-of-ai-keywords-chart.webp"
+  },
+  {
+    "name": "StateOfAiMomentum",
+    "slug": "state-of-ai-momentum",
+    "module": "stateofai-charts",
+    "image": "/images/essays/charts/state-of-ai-momentum.webp"
+  },
+  {
+    "name": "StateOfAiTimeline",
+    "slug": "state-of-ai-timeline",
+    "module": "stateofai-charts",
+    "image": "/images/essays/charts/state-of-ai-timeline.webp"
+  },
+  {
+    "name": "SupportTierChart",
+    "slug": "support-tier-chart",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/support-tier-chart.webp"
+  },
+  {
+    "name": "TTPEvolutionTimeline",
+    "slug": "ttp-evolution-timeline",
+    "module": "godprotocol-charts",
+    "image": "/images/essays/charts/ttp-evolution-timeline.webp"
+  },
+  {
+    "name": "TTPMarketScale",
+    "slug": "ttp-market-scale",
+    "module": "godprotocol-charts",
+    "image": "/images/essays/charts/ttp-market-scale.webp"
+  },
+  {
+    "name": "TaglineArchaeology",
+    "slug": "tagline-archaeology",
+    "module": "yc-charts",
+    "image": "/images/essays/charts/tagline-archaeology.webp"
+  },
+  {
+    "name": "TaskHorizonChart",
+    "slug": "task-horizon-chart",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/task-horizon-chart.webp"
+  },
+  {
+    "name": "TextUIAdoption",
+    "slug": "text-ui-adoption",
+    "module": "universal-charts",
+    "image": "/images/essays/charts/text-ui-adoption.webp"
+  },
+  {
+    "name": "TokenTaxFormatChart",
+    "slug": "token-tax-format-chart",
+    "module": "token-tax-charts",
+    "image": "/images/essays/charts/token-tax-format-chart.webp"
+  },
+  {
+    "name": "TopInvestorsTable",
+    "slug": "top-investors-table",
+    "module": "agentstack-charts",
+    "image": "/images/essays/charts/top-investors-table.webp"
+  },
+  {
+    "name": "TrainingCostChart",
+    "slug": "training-cost-chart",
+    "module": "infinity-charts",
+    "image": "/images/essays/charts/training-cost-chart.webp"
+  },
+  {
+    "name": "TransferabilityGrid",
+    "slug": "transferability-grid",
+    "module": "singapore-charts",
+    "image": "/images/essays/charts/transferability-grid.webp"
+  },
+  {
+    "name": "TrustApplicationDomains",
+    "slug": "trust-application-domains",
+    "module": "trust-charts",
+    "image": "/images/essays/charts/trust-application-domains.webp"
+  },
+  {
+    "name": "TrustComparisonChart",
+    "slug": "trust-comparison-chart",
+    "module": "trust-charts",
+    "image": "/images/essays/charts/trust-comparison-chart.webp"
+  },
+  {
+    "name": "TrustPrimitivesComparison",
+    "slug": "trust-primitives-comparison",
+    "module": "trust-charts",
+    "image": "/images/essays/charts/trust-primitives-comparison.webp"
+  },
+  {
+    "name": "TrustStackArchitecture",
+    "slug": "trust-stack-architecture",
+    "module": "trust-charts",
+    "image": "/images/essays/charts/trust-stack-architecture.webp"
+  },
+  {
+    "name": "UBIPilotResults",
+    "slug": "ubi-pilot-results",
+    "module": "aieconomy-charts",
+    "image": "/images/essays/charts/ubi-pilot-results.webp"
+  },
+  {
+    "name": "UIComplexityComparison",
+    "slug": "ui-complexity-comparison",
+    "module": "universal-charts",
+    "image": "/images/essays/charts/ui-complexity-comparison.webp"
+  },
+  {
+    "name": "UseCaseCatalog",
+    "slug": "use-case-catalog",
+    "module": "playbook-charts",
+    "image": "/images/essays/charts/use-case-catalog.webp"
+  },
+  {
+    "name": "VCBarbellSystemVisual",
+    "slug": "vc-barbell-system-visual",
+    "module": "funding-charts",
+    "image": "/images/essays/charts/vc-barbell-system-visual.webp"
+  },
+  {
+    "name": "VCBarbellVectorDiagram",
+    "slug": "vc-barbell-vector-diagram",
+    "module": "funding-charts",
+    "image": "/images/essays/charts/vc-barbell-vector-diagram.webp"
+  },
+  {
+    "name": "VCDeathValleyTimeline",
+    "slug": "vc-death-valley-timeline",
+    "module": "funding-charts",
+    "image": "/images/essays/charts/vc-death-valley-timeline.webp"
+  },
+  {
+    "name": "VCEquationBoxSVG",
+    "slug": "vc-equation-box-svg",
+    "module": "funding-charts",
+    "image": "/images/essays/charts/vc-equation-box-svg.webp"
+  },
+  {
+    "name": "VCGiniConcentrationChart",
+    "slug": "vc-gini-concentration-chart",
+    "module": "funding-charts",
+    "image": "/images/essays/charts/vc-gini-concentration-chart.webp"
+  },
+  {
+    "name": "VCSectorSemanticAnalysis",
+    "slug": "vc-sector-semantic-analysis",
+    "module": "funding-charts",
+    "image": "/images/essays/charts/vc-sector-semantic-analysis.webp"
+  },
+  {
+    "name": "VCStrategicFrameworkDiagram",
+    "slug": "vc-strategic-framework-diagram",
+    "module": "funding-charts",
+    "image": "/images/essays/charts/vc-strategic-framework-diagram.webp"
+  },
+  {
+    "name": "VCValuationExpansionChart",
+    "slug": "vc-valuation-expansion-chart",
+    "module": "funding-charts",
+    "image": "/images/essays/charts/vc-valuation-expansion-chart.webp"
+  },
+  {
+    "name": "VotingMechanismChart",
+    "slug": "voting-mechanism-chart",
+    "module": "constitutions-charts",
+    "image": "/images/essays/charts/voting-mechanism-chart.webp"
+  },
+  {
+    "name": "WebEvolutionTimeline",
+    "slug": "web-evolution-timeline",
+    "module": "agentic-web-charts",
+    "image": "/images/essays/charts/web-evolution-timeline.webp"
+  },
+  {
+    "name": "YCGeoConcentration",
+    "slug": "yc-geo-concentration",
+    "module": "yc-charts",
+    "image": "/images/essays/charts/yc-geo-concentration.webp"
+  },
+  {
+    "name": "YCIndustryBreakdown",
+    "slug": "yc-industry-breakdown",
+    "module": "yc-charts",
+    "image": "/images/essays/charts/yc-industry-breakdown.webp"
+  },
+  {
+    "name": "ZeroUIMarketMap",
+    "slug": "zero-ui-market-map",
+    "module": "post-interface-charts",
+    "image": "/images/essays/charts/zero-ui-market-map.webp"
+  }
+]

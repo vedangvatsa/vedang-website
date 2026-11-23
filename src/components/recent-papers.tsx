@@ -1,5 +1,9 @@
 export const recentPapers = [
   {
+    title: 'AI Agent Readiness Across 100,000 Websites',
+    url: 'https://doi.org/10.5281/zenodo.24121071',
+  },
+  {
     title: 'Delegation and Trust in Agentic Commerce',
     url: 'https://doi.org/10.5281/zenodo.23661069',
   },
@@ -42,9 +46,5 @@ export const recentPapers = [
   {
     title: 'Analysis of Global Research Proceedings in AI',
     url: 'https://ieeexplore.ieee.org/document/9514979',
-  },
-  {
-    title: 'Identification of Algorithmic Bias Through Policy Instruments',
-    url: 'https://dx.doi.org/10.21474/IJAR01/11418',
   },
 ];

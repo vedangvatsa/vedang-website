@@ -187,7 +187,7 @@ export default function CommunityProfilePage() {
                         <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
                             <li><span className="font-semibold text-foreground">Top Global Influencer:</span> Ranked among the Top 50 in Metaverse (Thinkers360) and Top 50 in Fintech & Crypto (Favikon).</li>
                             <li><span className="font-semibold text-foreground">Featured Author:</span> Published articles for Government Blockchain Association, KPMG, IEEE, Economic Times, Business Insider, and YourStory.</li>
-                             <li><span className="font-semibold text-foreground">Esteemed Public Speaker:</span> Guest lecturer at IIT Delhi, IIT Kanpur, OP Jindal University, TUM Munich, and The Responsible AI Forum.</li>
+                             <li><span className="font-semibold text-foreground">Esteemed Public Speaker:</span> Guest lecturer at IIT Delhi, IIT Kanpur, IIM Lucknow, OP Jindal University, TUM Munich, and The Responsible AI Forum.</li>
                             <li><span className="font-semibold text-foreground">Royal Society of Arts (FRSA):</span> Awarded a fellowship for outstanding achievements in social progress, joining a historic community including Charles Dickens and Stephen Hawking.</li>
                             <li><span className="font-semibold text-foreground">Extensive Research:</span> Authored 22+ publications on AI, Web3, and digital economies, featured by LinkedIn News UK & Europe.</li>
                         </ul>
