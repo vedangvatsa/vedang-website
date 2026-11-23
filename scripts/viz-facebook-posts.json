@@ -4113,12 +4113,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/graph_shift_4x5.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_4x5.png",
     "batchId": "explainer-v1",
     "title": "Function Transformations",
     "altText": "Function Transformations",
-    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger."
+    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "state": "sent",
+    "attemptedAt": "2026-11-23T13:26:02.077Z",
+    "attemptedSlot": "2026-11-23T17:00",
+    "publishedText": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "platformPostId": "1902077620963959",
+    "postedAt": "2026-11-23T13:26:22.868Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=1902077620963959"
   },
   {
     "id": "explainer-fb-curve_arclength",

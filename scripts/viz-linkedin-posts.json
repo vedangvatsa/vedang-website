@@ -4119,10 +4119,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/graph_shift_4x5.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_4x5.png",
     "batchId": "explainer-v1",
-    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger."
+    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "state": "sent",
+    "attemptedAt": "2026-11-23T13:25:54.651Z",
+    "attemptedSlot": "2026-11-23T17:00",
+    "publishedText": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "platformPostId": "urn:li:ugcPost:7530622689816862720",
+    "postedAt": "2026-11-23T13:26:02.072Z",
+    "error": null,
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7530622689816862720/",
+    "commentaryEncoding": "little-text-v1"
   },
   {
     "id": "explainer-linkedin-curve_arclength",

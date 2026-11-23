@@ -4199,10 +4199,18 @@
     "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "Function Transformations",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-23T13:26:26.636Z",
+    "attemptedSlot": "2026-11-23T17:00",
+    "publishedText": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "postUrl": "https://hachyderm.io/@vedang/117665981683908952",
+    "platformPostId": "117665981683908952",
+    "postedAt": "2026-11-23T13:26:34.503Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-curve_arclength",
