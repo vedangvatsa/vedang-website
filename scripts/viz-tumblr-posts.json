@@ -3971,8 +3971,8 @@
     "text": "How problem loans changed across banking systems.\n\n2011-2024. Nonperforming loans as a share of total gross loans.",
     "scheduleDate": "2026-11-12",
     "scheduleTime": "17:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-23T00:26:26.567Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/68-r2.txt",
     "captionStyle": "concise-v2",
@@ -3987,7 +3987,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-23T00:26:22.077Z",
+    "attemptedSlot": "2026-11-23T01:00",
+    "publishedText": "How problem loans changed across banking systems.\n\n2011-2024. Nonperforming loans as a share of total gross loans.",
+    "platformPostId": "834030625338032128",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/834030625338032128"
   },
   {
     "id": "viz-b2-tumblr-135",

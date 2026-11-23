@@ -4179,10 +4179,18 @@
     "text": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "What is a Matrix?",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/matrix_transform_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-23T00:26:26.572Z",
+    "attemptedSlot": "2026-11-23T01:00",
+    "publishedText": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
+    "postUrl": "https://hachyderm.io/@vedang/117662914581641177",
+    "platformPostId": "117662914581641177",
+    "postedAt": "2026-11-23T00:26:34.219Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-graph_shift",

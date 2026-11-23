@@ -4347,7 +4347,12 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/matrix_transform_9x16.png",
     "batchId": "explainer-v1",
     "title": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
-    "text": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid."
+    "text": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
+    "publishedText": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
+    "state": "failed",
+    "attemptedSlot": "2026-11-23T01:00",
+    "attemptedAt": "2026-11-23T00:25:52.272Z",
+    "error": "Invalid post: Video thumbnailUrl is not supported: social networks do not accept custom video thumbnail images, so this value is never sent to the network. Remove thumbnailUrl from the video asset. To pick the video thumbnail, set metadata.thumbnailOffset on the video (offset into the video in milliseconds; supported for Instagram, TikTok, and Pinterest only)."
   },
   {
     "id": "explainer-tiktok-graph_shift",
