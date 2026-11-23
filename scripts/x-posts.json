@@ -3265,7 +3265,7 @@
   },
   {
     "id": "depin-hardware-sensor-networks-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3323,7 +3323,9 @@
       }
     ],
     "scheduleDate": "2026-11-21",
-    "scheduleTime": "17:05"
+    "scheduleTime": "17:05",
+    "postedAt": "2026-11-23T00:30:02.824Z",
+    "tweetId": "6b038904d5eabfb8cceffd5c"
   },
   {
     "id": "hybrid-search-sparse-dense-thread",
