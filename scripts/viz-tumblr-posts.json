@@ -4039,8 +4039,8 @@
     "text": "How the largest crude sunflower-seed oil producers changed.\n\n2000-2023. Crude sunflower-seed oil production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-13",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-24T04:23:36.958Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/136-r2.txt",
     "captionStyle": "concise-v2",
@@ -4055,7 +4055,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-24T04:23:32.905Z",
+    "attemptedSlot": "2026-11-24T09:00",
+    "publishedText": "How the largest crude sunflower-seed oil producers changed.\n\n2000-2023. Crude sunflower-seed oil production by country, measured in millions of tonnes.",
+    "platformPostId": "834136143961391104",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/834136143961391104"
   },
   {
     "id": "viz-b2-tumblr-137",
