@@ -3393,7 +3393,7 @@
   },
   {
     "id": "continuous-batching-inference-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3451,7 +3451,9 @@
       }
     ],
     "scheduleDate": "2026-11-22",
-    "scheduleTime": "09:05"
+    "scheduleTime": "09:05",
+    "postedAt": "2026-11-24T04:27:24.164Z",
+    "tweetId": "6b051225f0d7b1e0deafac8e"
   },
   {
     "id": "reranking-models-retrieval-thread",
