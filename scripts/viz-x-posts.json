@@ -3788,11 +3788,7 @@
     "title": "What is a Matrix?",
     "altText": "What is a Matrix?",
     "text": "Visualizing linear algebra transformations by tracking where the standard basis vectors land on the grid.",
-    "publishedText": "Visualizing linear algebra transformations by tracking where the standard basis vectors land on the grid.",
-    "state": "failed",
-    "attemptedSlot": "2026-11-23T01:00",
-    "attemptedAt": "2026-11-23T00:25:52.425Z",
-    "error": "Invalid post: Video thumbnailUrl is not supported: social networks do not accept custom video thumbnail images, so this value is never sent to the network. Remove thumbnailUrl from the video asset. To pick the video thumbnail, set metadata.thumbnailOffset on the video (offset into the video in milliseconds; supported for Instagram, TikTok, and Pinterest only)."
+    "publishedText": "Visualizing linear algebra transformations by tracking where the standard basis vectors land on the grid."
   },
   {
     "id": "explainer-x-graph_shift",

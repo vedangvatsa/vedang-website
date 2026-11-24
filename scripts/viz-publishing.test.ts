@@ -90,9 +90,6 @@ test('all Buffer payloads publish now without dueAt or a Buffer queue mode', () 
     assert.equal('dueAt' in input, false);
     assert.equal(input.assets[0].video.url, 'https://cdn.example/video.mp4');
     assert.equal('thumbnailUrl' in input.assets[0].video, false);
-
-    const inputWithThumb = buildInput(p.service, entry('one'), 'channel', 'https://cdn.example/video.mp4', 'https://cdn.example/thumb.png');
-    assert.equal(inputWithThumb.assets[0].video.thumbnailUrl, 'https://cdn.example/thumb.png');
   }
 });
 

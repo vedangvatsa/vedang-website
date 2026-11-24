@@ -5,8 +5,7 @@ import path from 'node:path';
 import { validateCaption, validateConciseBufferCaption, validateVideoOnlyCaption } from './viz-captions.mjs';
 import {
   ROOT, isMain, readQueue, saveQueue, selectDue, localVideo, publicVideoUrl,
-  checkPublicVideo, localThumbnail, publicThumbnailUrl, checkPublicThumbnail,
-  sleep, type VizPost,
+  checkPublicVideo, sleep, type VizPost,
 } from './viz-publishing.js';
 
 dotenv.config({ path: path.join(ROOT, '.env.local'), quiet: true });
@@ -96,7 +95,7 @@ export function chooseChannel(service: string, envName: string, available: any[]
   throw new Error(`Expected one ${service} channel; available [${allList}]; set ${envName} to choose explicitly`);
 }
 
-export function buildInput(service: string, entry: VizPost, channelId: string, videoUrl: string, thumbnailUrl?: string) {
+export function buildInput(service: string, entry: VizPost, channelId: string, videoUrl: string) {
   let text = service === 'youtube' ? entry.description : entry.text || entry.title;
   if (text && !['concise-v1', 'concise-v2'].includes(String(entry.captionStyle)) && entry.notesUrl && process.env.VIZ_NOTES_BASE_URL) {
     const original = new URL(String(entry.notesUrl));
@@ -116,7 +115,7 @@ export function buildInput(service: string, entry: VizPost, channelId: string, v
   if (service === 'youtube' && (!entry.title || Array.from(entry.title).length > 100)) throw new Error('YouTube title must be 1-100 characters');
   return {
     channelId, text, schedulingType: 'automatic', mode: 'shareNow',
-    assets: [{ video: { url: videoUrl, ...(thumbnailUrl ? { thumbnailUrl } : {}) } }],
+    assets: [{ video: { url: videoUrl } }],
     ...(metadata ? { metadata } : {}),
   };
 }
@@ -179,8 +178,7 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
   if (dryRun) {
     for (const entry of posts) {
       localVideo(entry);
-      if (entry.thumbnail || entry.thumbnailPath) localThumbnail(entry);
-      buildInput(platform.service, entry, 'dry-run', 'https://example.invalid/video.mp4', (entry.thumbnail || entry.thumbnailPath) ? 'https://example.invalid/thumbnail.png' : undefined);
+      buildInput(platform.service, entry, 'dry-run', 'https://example.invalid/video.mp4');
     }
     // Offline validation cannot reconcile live submissions. Leave queue selection
     // to the publishing path, after Buffer has confirmed any outstanding post IDs.
@@ -193,13 +191,7 @@ export async function runPlatform(platform: typeof PLATFORMS[number], available:
   localVideo(post);
   const url = publicVideoUrl(post);
   await checkPublicVideo(url);
-  let thumbnailUrl: string | undefined;
-  if (post.thumbnail || post.thumbnailPath || post.publicThumbnailUrl) {
-    localThumbnail(post);
-    thumbnailUrl = publicThumbnailUrl(post);
-    if (thumbnailUrl) await checkPublicThumbnail(thumbnailUrl);
-  }
-  const input = buildInput(platform.service, post, channel.id, url, thumbnailUrl);
+  const input = buildInput(platform.service, post, channel.id, url);
   post.publishedText = input.text;
   // Persist before the mutation. An ambiguous response must never cause an automatic duplicate.
   post.state = 'publishing';

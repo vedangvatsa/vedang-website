@@ -4020,17 +4020,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/chain_rule_1x1.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chain_rule_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Chain Rule",
     "altText": "The Chain Rule",
     "text": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x gives the total rate of change of y with respect to x.",
-    "state": "uncertain",
+    "state": "sent",
     "attemptedAt": "2026-11-20T12:02:39.788Z",
     "attemptedSlot": "2026-11-20T17:00",
     "publishedText": "Visual proof of the chain rule in calculus.\n\nThree connected number lines track change.\n\nThe rate of change of y with respect to u multiplied by the rate of change of u with respect to x gives the total rate of change of y with respect to x.",
-    "error": "Bluesky video processing failed"
+    "error": null,
+    "postedAt": "2026-11-20T01:28:32.795Z",
+    "postUrl": "https://bsky.app/profile/did:plc:x3llxr24tbj72fy3nish3xrh/post/3n2pgp3lbh32m",
+    "platformPostId": "3n2pgp3lbh32m"
   },
   {
     "id": "explainer-bluesky-birthday_paradox",
