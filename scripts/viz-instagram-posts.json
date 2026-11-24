@@ -4270,11 +4270,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/matrix_transform_9x16.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/matrix_transform_9x16.png",
     "batchId": "explainer-v1",
     "text": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
-    "publishedText": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid."
+    "publishedText": "Visual linear algebra - what a matrix really does.\n\nA matrix transforms 2D space.\n\nIts columns simply tell you where the standard basis vectors i-hat and j-hat land on the grid.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-25T01:00",
+    "attemptedAt": "2026-11-24T21:42:12.664Z",
+    "bufferPostId": "6b0604b4e57cd4af41f832b6",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DgI8iqRmfwj/",
+    "postedAt": "2026-11-24T21:43:12.445Z",
+    "error": null
   },
   {
     "id": "explainer-ig-graph_shift",

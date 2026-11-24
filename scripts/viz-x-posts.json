@@ -3782,13 +3782,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/matrix_transform_1x1.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/matrix_transform_1x1.png",
     "batchId": "explainer-v1",
     "title": "What is a Matrix?",
     "altText": "What is a Matrix?",
     "text": "Visualizing linear algebra transformations by tracking where the standard basis vectors land on the grid.",
-    "publishedText": "Visualizing linear algebra transformations by tracking where the standard basis vectors land on the grid."
+    "publishedText": "Visualizing linear algebra transformations by tracking where the standard basis vectors land on the grid.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-25T01:00",
+    "attemptedAt": "2026-11-24T21:42:12.670Z",
+    "bufferPostId": "6b0604b5bc79b3715eb02eb6",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2125344272652144669",
+    "postedAt": "2026-11-24T21:42:16.413Z",
+    "error": null
   },
   {
     "id": "explainer-x-graph_shift",

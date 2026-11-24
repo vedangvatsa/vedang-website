@@ -4255,13 +4255,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/riemann_integral_9x16.mp4",
     "scheduleDate": "2026-11-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/riemann_integral_9x16.png",
     "batchId": "explainer-v1",
     "title": "The Riemann Integral",
     "description": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
     "tags": [],
-    "publishedText": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve."
+    "publishedText": "What is integration, really?\n\nDivide the area under a curve into narrow vertical rectangles.\n\nAs the width approaches zero, the rectangle sum approaches the exact smooth area under the curve.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-25T01:00",
+    "attemptedAt": "2026-11-24T21:42:12.708Z",
+    "bufferPostId": "6b0604b5e57cd4af41f832c4",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=29JhgXFqVnU",
+    "postedAt": "2026-11-24T21:42:14.270Z",
+    "error": null
   },
   {
     "id": "explainer-yt-chain_rule",
