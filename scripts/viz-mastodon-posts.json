@@ -4239,10 +4239,18 @@
     "text": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral.",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "Integration by Parts",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/integration_by_parts_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-24T21:27:58.886Z",
+    "attemptedSlot": "2026-11-25T01:00",
+    "publishedText": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral.",
+    "postUrl": "https://hachyderm.io/@vedang/117673537447464869",
+    "platformPostId": "117673537447464869",
+    "postedAt": "2026-11-24T21:28:06.282Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-normal_distribution",

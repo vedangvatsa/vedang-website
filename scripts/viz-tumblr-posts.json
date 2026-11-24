@@ -4073,8 +4073,8 @@
     "text": "How the largest groundnut oil producers changed.\n\n2000-2023. Groundnut oil production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-13",
     "scheduleTime": "17:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-24T21:27:58.882Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/137-r2.txt",
     "captionStyle": "concise-v2",
@@ -4089,7 +4089,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-24T21:27:54.406Z",
+    "attemptedSlot": "2026-11-25T01:00",
+    "publishedText": "How the largest groundnut oil producers changed.\n\n2000-2023. Groundnut oil production by country, measured in millions of tonnes.",
+    "platformPostId": "834200591432564736",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/834200591432564736"
   },
   {
     "id": "viz-b2-tumblr-138",
