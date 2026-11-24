@@ -3457,7 +3457,7 @@
   },
   {
     "id": "reranking-models-retrieval-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3515,7 +3515,9 @@
       }
     ],
     "scheduleDate": "2026-11-22",
-    "scheduleTime": "17:05"
+    "scheduleTime": "17:05",
+    "postedAt": "2026-11-24T21:30:52.942Z",
+    "tweetId": "6b060206da2eab4595a90f80"
   },
   {
     "id": "tee-confidential-compute-thread",
