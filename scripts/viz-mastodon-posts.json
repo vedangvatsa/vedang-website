@@ -4259,10 +4259,18 @@
     "text": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three.",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "The Normal Distribution",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/normal_distribution_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-25T13:22:34.882Z",
+    "attemptedSlot": "2026-11-25T17:00",
+    "publishedText": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three.",
+    "postUrl": "https://hachyderm.io/@vedang/117677291092678864",
+    "platformPostId": "117677291092678864",
+    "postedAt": "2026-11-25T13:22:42.381Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-inclined_plane",

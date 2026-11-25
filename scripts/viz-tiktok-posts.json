@@ -4363,11 +4363,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/graph_shift_9x16.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_9x16.png",
     "batchId": "explainer-v1",
     "title": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
-    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger."
+    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "publishedText": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-25T17:00",
+    "attemptedAt": "2026-11-25T13:20:36.714Z",
+    "bufferPostId": "6b06e0a5d0c412ddea829742",
+    "bufferStatus": "sent",
+    "postUrl": "https://tiktok.com/@vedangvatsa/video/7712098364589968641",
+    "postedAt": "2026-11-25T13:21:20.026Z",
+    "error": null
   },
   {
     "id": "explainer-tiktok-curve_arclength",

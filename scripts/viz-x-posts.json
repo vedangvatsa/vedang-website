@@ -3803,12 +3803,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/graph_shift_1x1.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_1x1.png",
     "batchId": "explainer-v1",
     "title": "Function Transformations",
     "altText": "Function Transformations",
-    "text": "Visualizing why replacing x with x - c creates an input delay that shifts the entire graph to the right."
+    "text": "Visualizing why replacing x with x - c creates an input delay that shifts the entire graph to the right.",
+    "publishedText": "Visualizing why replacing x with x - c creates an input delay that shifts the entire graph to the right.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-25T17:00",
+    "attemptedAt": "2026-11-25T13:20:36.580Z",
+    "bufferPostId": "6b06e0a55f4bdd9b86bd11d4",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2125580428501287142",
+    "postedAt": "2026-11-25T13:20:40.410Z",
+    "error": null
   },
   {
     "id": "explainer-x-curve_arclength",

@@ -4289,10 +4289,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/graph_shift_9x16.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/graph_shift_9x16.png",
     "batchId": "explainer-v1",
-    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger."
+    "text": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "publishedText": "Why subtracting c shifts a graph to the right.\n\nReplacing x with x minus c creates an input delay.\n\nTo produce the exact same output, x must be c units larger.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-25T17:00",
+    "attemptedAt": "2026-11-25T13:20:36.710Z",
+    "bufferPostId": "6b06e0a55f4bdd9b86bd11fb",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DgKn7z2MmAB/",
+    "postedAt": "2026-11-25T13:21:36.454Z",
+    "error": null
   },
   {
     "id": "explainer-ig-curve_arclength",
