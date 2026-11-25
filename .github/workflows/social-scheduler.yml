@@ -188,4 +188,5 @@ jobs:
         if: always()
         env:
           PLATFORM_STEPS: ${{ toJSON(steps) }}
+          REQUIRED_PLATFORMS: "x"
         run: node scripts/report-platform-outcomes.mjs x bluesky facebook instagram threads tumblr farcaster mastodon devto hashnode

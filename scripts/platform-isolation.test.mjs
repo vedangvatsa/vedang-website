@@ -25,6 +25,23 @@ test('skipped platforms do not fail a healthy run', () => {
   assert.equal(result.status, 0);
 });
 
+test('non-required failed platforms do not fail the run when REQUIRED_PLATFORMS is specified', () => {
+  const result = spawnSync(process.execPath, ['scripts/report-platform-outcomes.mjs', 'x', 'threads', 'hashnode'], {
+    env: {
+      ...process.env,
+      GITHUB_STEP_SUMMARY: '',
+      REQUIRED_PLATFORMS: 'x',
+      PLATFORM_STEPS: JSON.stringify({
+        x: { outcome: 'success' },
+        threads: { outcome: 'failure' },
+        hashnode: { outcome: 'failure' },
+      }),
+    },
+  });
+  assert.equal(result.status, 0);
+});
+
+
 for (const workflow of ['social-scheduler', 'viz-scheduler']) {
   test(`${workflow} isolates platform errors and saves receipts before reporting failures`, () => {
     const { steps } = parse(readFileSync(`.github/workflows/${workflow}.yml`, 'utf8')).jobs.post;

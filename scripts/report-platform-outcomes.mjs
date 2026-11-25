@@ -8,4 +8,16 @@ const report = ['## Platform execution results', '', '| Platform / check | Outco
   '', 'Success means the executor completed; publication is confirmed by its queue receipt.', ''].join('\n');
 console.log(report);
 if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, report);
-if (rows.some(([, outcome]) => outcome === 'failure')) process.exitCode = 1;
+
+const required = process.env.REQUIRED_PLATFORMS
+  ? process.env.REQUIRED_PLATFORMS.split(',').map(s => s.trim()).filter(Boolean)
+  : null;
+
+if (required) {
+  if (rows.some(([name, outcome]) => required.includes(name) && outcome === 'failure')) {
+    process.exitCode = 1;
+  }
+} else if (rows.some(([, outcome]) => outcome === 'failure')) {
+  process.exitCode = 1;
+}
+
