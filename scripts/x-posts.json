@@ -3521,7 +3521,7 @@
   },
   {
     "id": "tee-confidential-compute-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3579,7 +3579,9 @@
       }
     ],
     "scheduleDate": "2026-11-23",
-    "scheduleTime": "01:05"
+    "scheduleTime": "01:05",
+    "postedAt": "2026-11-25T06:23:05.780Z",
+    "tweetId": "6b067ec3b6204bca46d0c404"
   },
   {
     "id": "small-language-models-thread",
