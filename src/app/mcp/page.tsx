@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     description: 'Free course on building MCP servers that connect AI to databases, APIs, and any data source.',
     url: 'https://veda.ng/mcp',
     type: 'website',
-    images: [{ url: '/mcp/opengraph-image.png', width: 1200, height: 630 }],
+    images: [{ url: '/og/courses/mcp/_landing.png', width: 1200, height: 630, type: 'image/png' }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/mcp/opengraph-image.png'],
+    images: ['/og/courses/mcp/_landing.png'],
   },
 };
 

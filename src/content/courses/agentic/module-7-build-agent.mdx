@@ -97,30 +97,37 @@ Theory is valuable, but nothing beats building something real. This module walks
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Here's a minimal agent you can run right now using the OpenAI Agents SDK. It has one tool (get the current weather) and a system prompt. This is a complete, working script.</p>
             <p><strong>Setup:</strong></p>
-            <pre><code>{`pip install openai-agents
-export OPENAI_API_KEY="your-key-here"`}</code></pre>
+
+            ```bash
+            pip install openai-agents
+            export OPENAI_API_KEY="your-key-here"
+
+            ```
             <p><strong>The agent (agent.py):</strong></p>
-            <pre><code>{`from agents import Agent, Runner, function_tool
 
-# Define a tool the agent can use
-@function_tool
-def get_weather(city: str) -> str:
-    """Get the current weather for a city."""
-    # In production, this would call a real weather API
-    return f"The weather in {city} is 22°C and sunny."
-
-# Create the agent with a system prompt and tools
-agent = Agent(
-    name="Weather Assistant",
-    instructions="You are a helpful weather assistant. When asked about weather, use the get_weather tool. Keep responses short.",
-    tools=[get_weather],
-)
-
-# Run the agent
-result = Runner.run_sync(agent, "What's the weather like in Tokyo?")
-print(result.final_output)
-# Output: "The weather in Tokyo is 22°C and sunny."
-`}</code></pre>
+            ```bash
+            from agents import Agent, Runner, function_tool
+            
+            # Define a tool the agent can use
+            @function_tool
+            def get_weather(city: str) -> str:
+                """Get the current weather for a city."""
+                # In production, this would call a real weather API
+                return f"The weather in {city} is 22°C and sunny."
+            
+            # Create the agent with a system prompt and tools
+            agent = Agent(
+                name="Weather Assistant",
+                instructions="You are a helpful weather assistant. When asked about weather, use the get_weather tool. Keep responses short.",
+                tools=[get_weather],
+            )
+            
+            # Run the agent
+            result = Runner.run_sync(agent, "What's the weather like in Tokyo?")
+            print(result.final_output)
+            # Output: "The weather in Tokyo is 22°C and sunny."
+            
+            ```
             <p><strong>What's happening in this code:</strong></p>
             <ol>
                 <li><code>@function_tool</code> turns a regular Python function into a tool the agent can call. The docstring becomes the tool description that the LLM reads.</li>
@@ -130,49 +137,52 @@ print(result.final_output)
             <p>This is 15 lines of real code. From here, you can add more tools (database lookups, API calls, file operations), chain multiple agents together, or add guardrails. The pattern stays the same.</p>
             <p><strong>Level up: multi-tool agent with a write gate</strong></p>
             <p>Production agents almost always need more than one tool, and they need a hard stop before irreversible actions. Here is a pattern that adds a knowledge lookup, an order lookup, and a draft-only refund tool that requires human approval before money moves:</p>
-            <pre><code>{`from agents import Agent, Runner, function_tool
 
-# --- Tools (reads are free; writes are gated) ---
-
-@function_tool
-def search_docs(query: str) -> str:
-    """Search product docs / FAQ for an answer."""
-    # Replace with real RAG or DB lookup
-    return "Refunds are available within 30 days for unused seats."
-
-@function_tool
-def get_order(order_id: str) -> str:
-    """Fetch order status and amount by order ID."""
-    return f"Order {order_id}: status=paid, amount=49.00 USD, product=Pro Plan"
-
-@function_tool
-def draft_refund(order_id: str, reason: str) -> str:
-    """Prepare a refund request. Does NOT execute payment. Requires human approval."""
-    return (
-        f"REFUND_DRAFT ready for order {order_id}. "
-        f"Reason: {reason}. Status: PENDING_HUMAN_APPROVAL. "
-        "Do not tell the user the refund is complete until approved."
-    )
-
-agent = Agent(
-    name="Support Agent",
-    instructions="""You are a support agent for Acme.
-RULES:
-1. Always call search_docs before answering policy questions.
-2. For order questions, call get_order with the order ID.
-3. Never claim a refund is complete. You may only draft_refund.
-4. If the user asks to delete data or change billing, say a human must approve.
-5. Keep answers under 4 sentences unless asked for detail.""",
-    tools=[search_docs, get_order, draft_refund],
-)
-
-result = Runner.run_sync(
-    agent,
-    "Order ORD-100 is wrong. I want a refund. Explain the policy and prepare a refund."
-)
-print(result.final_output)
-# Next step in your app: show REFUND_DRAFT to a human, then call Stripe if approved.
-`}</code></pre>
+            ```bash
+            from agents import Agent, Runner, function_tool
+            
+            # --- Tools (reads are free; writes are gated) ---
+            
+            @function_tool
+            def search_docs(query: str) -> str:
+                """Search product docs / FAQ for an answer."""
+                # Replace with real RAG or DB lookup
+                return "Refunds are available within 30 days for unused seats."
+            
+            @function_tool
+            def get_order(order_id: str) -> str:
+                """Fetch order status and amount by order ID."""
+                return f"Order {order_id}: status=paid, amount=49.00 USD, product=Pro Plan"
+            
+            @function_tool
+            def draft_refund(order_id: str, reason: str) -> str:
+                """Prepare a refund request. Does NOT execute payment. Requires human approval."""
+                return (
+                    f"REFUND_DRAFT ready for order {order_id}. "
+                    f"Reason: {reason}. Status: PENDING_HUMAN_APPROVAL. "
+                    "Do not tell the user the refund is complete until approved."
+                )
+            
+            agent = Agent(
+                name="Support Agent",
+                instructions="""You are a support agent for Acme.
+            RULES:
+            1. Always call search_docs before answering policy questions.
+            2. For order questions, call get_order with the order ID.
+            3. Never claim a refund is complete. You may only draft_refund.
+            4. If the user asks to delete data or change billing, say a human must approve.
+            5. Keep answers under 4 sentences unless asked for detail.""",
+                tools=[search_docs, get_order, draft_refund],
+            )
+            
+            result = Runner.run_sync(
+                agent,
+                "Order ORD-100 is wrong. I want a refund. Explain the policy and prepare a refund."
+            )
+            print(result.final_output)
+            # Next step in your app: show REFUND_DRAFT to a human, then call Stripe if approved.
+            
+            ```
             <p><strong>What you should add next in a real app:</strong></p>
             <ol>
                 <li><strong>Persistent state:</strong> store conversation + structured fields (order_id, intent, confidence) in a database.</li>

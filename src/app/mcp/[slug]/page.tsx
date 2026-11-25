@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import matter from 'gray-matter';
 import { courseConfigs } from '@/lib/course-config';
+import { buildCourseModuleMetadata } from '@/lib/course-module-metadata';
 import { CourseModuleLayout } from '@/components/courses/course-module-layout';
 
 // Custom visual components for MCP
@@ -46,20 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const markdown = fs.readFileSync(filePath, 'utf-8');
   const { data: frontmatter } = matter(markdown);
-  const title = `${frontmatter.title} | MCP Development 101`;
-  const description = frontmatter.description;
-
-  return {
-    title: { absolute: title },
-    description,
-    alternates: { canonical: `/mcp/${slug}` },
-    openGraph: { title, description, url: `https://veda.ng/mcp/${slug}`,
-      images: [{ url: `/mcp/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
-    },
-    twitter: { card: 'summary_large_image', title, description,
-      images: [`/mcp/${slug}/opengraph-image.png`],
-    },
-  };
+  return buildCourseModuleMetadata('mcp', slug, frontmatter);
 }
 
 export default async function CourseModulePage({ params }: { params: Promise<{ slug: string }> }) {

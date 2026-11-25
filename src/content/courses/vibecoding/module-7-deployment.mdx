@@ -120,12 +120,15 @@ Building an app on your computer is only half the job. To share it with the worl
                 <li>If using Supabase RLS, test with two users: user A must not read user B's rows.</li>
             </ul>
             <p><strong>Minimal CI pipeline (copy this intent into your AI prompt):</strong></p>
-            <pre><code>{`# On every push:
-# 1. npm ci
-# 2. npm run lint
-# 3. npm test
-# 4. npm run build
-# Optional: Playwright smoke test against preview URL`}</code></pre>
+
+            ```bash
+            # On every push:
+            # 1. npm ci
+            # 2. npm run lint
+            # 3. npm test
+            # 4. npm run build
+            # Optional: Playwright smoke test against preview URL
+            ```
             <p><strong>Security smoke test after deploy:</strong></p>
             <ol>
                 <li>Open the site in a private window. Protected routes should redirect to login.</li>

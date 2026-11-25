@@ -30,23 +30,26 @@ A pipeline is a sequence of stages where the output of each stage feeds into the
             <p>A real-world pipeline that aggregates job listings from 50+ company boards and broadcasts them daily:</p>
             <p><strong>Stage 1. Trigger:</strong> GitHub Actions cron runs at 6am UTC daily.</p>
             <p><strong>Stage 2. Fetch:</strong></p>
-            <pre><code>{`// Fetch from multiple ATS platforms in parallel
-const sources = [
-  // Greenhouse boards
-  ...greenhouseSlugs.map(slug => 
-    fetch(\`https://boards-api.greenhouse.io/v1/boards/\${slug}/jobs\`)
-  ),
-  // Lever boards  
-  ...leverSlugs.map(slug =>
-    fetch(\`https://api.lever.co/v0/postings/\${slug}?mode=json\`)
-  ),
-  // Ashby boards
-  ...ashbySlugs.map(slug =>
-    fetch(\`https://api.ashbyhq.com/posting-api/job-board/\${slug}\`)
-  ),
-];
 
-const results = await Promise.allSettled(sources);`}</code></pre>
+            ```typescript
+            // Fetch from multiple ATS platforms in parallel
+            const sources = [
+              // Greenhouse boards
+              ...greenhouseSlugs.map(slug => 
+                fetch(\`https://boards-api.greenhouse.io/v1/boards/\${slug}/jobs\`)
+              ),
+              // Lever boards  
+              ...leverSlugs.map(slug =>
+                fetch(\`https://api.lever.co/v0/postings/\${slug}?mode=json\`)
+              ),
+              // Ashby boards
+              ...ashbySlugs.map(slug =>
+                fetch(\`https://api.ashbyhq.com/posting-api/job-board/\${slug}\`)
+              ),
+            ];
+            
+            const results = await Promise.allSettled(sources);
+            ```
             <p><strong>Stage 3. Transform:</strong></p>
             <ul>
                 <li>Normalize fields (title, company, location, URL) across different API formats</li>
@@ -89,22 +92,25 @@ const results = await Promise.allSettled(sources);`}</code></pre>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Production pipelines must handle failures gracefully. Key patterns:</p>
             <p><strong>1. Retry with Exponential Backoff:</strong></p>
-            <pre><code>{`async function fetchWithRetry(url, maxRetries = 3) {
-  for (let attempt = 0; attempt < maxRetries; attempt++) {
-    try {
-      const response = await fetch(url);
-      if (response.status === 429) { // Rate limited
-        const delay = Math.pow(2, attempt) * 1000; // 1s, 2s, 4s
-        await new Promise(r => setTimeout(r, delay));
-        continue;
-      }
-      return await response.json();
-    } catch (error) {
-      if (attempt === maxRetries - 1) throw error;
-      await new Promise(r => setTimeout(r, 1000 * (attempt + 1)));
-    }
-  }
-}`}</code></pre>
+
+            ```typescript
+            async function fetchWithRetry(url, maxRetries = 3) {
+              for (let attempt = 0; attempt < maxRetries; attempt++) {
+                try {
+                  const response = await fetch(url);
+                  if (response.status === 429) { // Rate limited
+                    const delay = Math.pow(2, attempt) * 1000; // 1s, 2s, 4s
+                    await new Promise(r => setTimeout(r, delay));
+                    continue;
+                  }
+                  return await response.json();
+                } catch (error) {
+                  if (attempt === maxRetries - 1) throw error;
+                  await new Promise(r => setTimeout(r, 1000 * (attempt + 1)));
+                }
+              }
+            }
+            ```
             <p><strong>2. Dead Letter Queue:</strong> When a step fails after all retries, don't lose the data. Store failed items in a separate queue (a database table, a Google Sheet tab) for manual review or later retry.</p>
             <p><strong>3. Idempotency:</strong> Design each step so running it twice with the same input produces the same result. Use unique IDs and "upsert" operations instead of blind inserts.</p>
             <p><strong>4. Circuit Breaker:</strong> If an API is consistently failing, stop calling it and alert the team instead of burning through rate limits with retries.</p>

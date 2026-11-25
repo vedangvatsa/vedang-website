@@ -18,23 +18,26 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
                 <li><strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
             </ul>
             <p><strong>Configuration format:</strong></p>
-            <pre><code>{`{
-  "mcpServers": {
-    "my-server": {
-      "command": "node",
-      "args": ["dist/index.js"],
-      "cwd": "/path/to/my-server",
-      "env": {
-        "DATABASE_URL": "postgresql://...",
-        "API_KEY": "sk-..."
-      }
-    },
-    "another-server": {
-      "command": "npx",
-      "args": ["-y", "@some-org/mcp-server-name"]
-    }
-  }
-}`}</code></pre>
+
+            ```json
+            {
+              "mcpServers": {
+                "my-server": {
+                  "command": "node",
+                  "args": ["dist/index.js"],
+                  "cwd": "/path/to/my-server",
+                  "env": {
+                    "DATABASE_URL": "postgresql://...",
+                    "API_KEY": "sk-..."
+                  }
+                },
+                "another-server": {
+                  "command": "npx",
+                  "args": ["-y", "@some-org/mcp-server-name"]
+                }
+              }
+            }
+            ```
             <p><strong>Key fields:</strong></p>
             <ul>
                 <li><code>command</code>: The executable to run (node, npx, python, etc.)</li>
@@ -56,17 +59,20 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
                 <li>Set any required environment variables</li>
             </ol>
             <p>Cursor also supports a <code>.cursor/mcp.json</code> file in your project root for per-project MCP configuration:</p>
-            <pre><code>{`{
-  "mcpServers": {
-    "project-db": {
-      "command": "npx",
-      "args": ["tsx", "mcp/db-server.ts"],
-      "env": {
-        "DATABASE_URL": "postgresql://localhost:5432/myapp"
-      }
-    }
-  }
-}`}</code></pre>
+
+            ```json
+            {
+              "mcpServers": {
+                "project-db": {
+                  "command": "npx",
+                  "args": ["tsx", "mcp/db-server.ts"],
+                  "env": {
+                    "DATABASE_URL": "postgresql://localhost:5432/myapp"
+                  }
+                }
+              }
+            }
+            ```
             <p>This means you can ship MCP configurations with your codebase so team members automatically get the same tools when they open the project.</p>
         </AccordionContent>
     </AccordionItem>
@@ -74,15 +80,18 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
         <AccordionTrigger className="text-lg text-left">VS Code with GitHub Copilot</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>VS Code supports MCP through its GitHub Copilot Chat integration. Configuration uses the <code>.vscode/mcp.json</code> file:</p>
-            <pre><code>{`{
-  "servers": {
-    "my-tools": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["./mcp-server/dist/index.js"]
-    }
-  }
-}`}</code></pre>
+
+            ```json
+            {
+              "servers": {
+                "my-tools": {
+                  "type": "stdio",
+                  "command": "node",
+                  "args": ["./mcp-server/dist/index.js"]
+                }
+              }
+            }
+            ```
             <p>Once configured, you can reference MCP tools in Copilot Chat using the <code>#</code> symbol to select available tools. Copilot will call the tools as needed during your conversation.</p>
         </AccordionContent>
     </AccordionItem>
@@ -90,28 +99,31 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
         <AccordionTrigger className="text-lg text-left">Building a Custom MCP Client</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>You can build your own MCP client using the SDK. This is useful for embedding MCP in custom applications, scripts, or automation pipelines.</p>
-            <pre><code>{`import { Client } from "@modelcontextprotocol/sdk/client/index.js";
-import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
-// Create a client that connects to a server
-const transport = new StdioClientTransport({
-  command: "node",
-  args: ["path/to/server.js"],
-});
-
-const client = new Client({ name: "my-app", version: "1.0.0" });
-await client.connect(transport);
-
-// List available tools
-const tools = await client.listTools();
-console.log("Available tools:", tools);
-
-// Call a tool
-const result = await client.callTool({
-  name: "count_words",
-  arguments: { text: "Hello world" },
-});
-console.log("Result:", result);`}</code></pre>
+            ```typescript
+            import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+            import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+            
+            // Create a client that connects to a server
+            const transport = new StdioClientTransport({
+              command: "node",
+              args: ["path/to/server.js"],
+            });
+            
+            const client = new Client({ name: "my-app", version: "1.0.0" });
+            await client.connect(transport);
+            
+            // List available tools
+            const tools = await client.listTools();
+            console.log("Available tools:", tools);
+            
+            // Call a tool
+            const result = await client.callTool({
+              name: "count_words",
+              arguments: { text: "Hello world" },
+            });
+            console.log("Result:", result);
+            ```
             <p>Custom clients give you full programmatic control. You can build CLI tools, web APIs, cron jobs, or any application that needs to interact with MCP servers.</p>
         </AccordionContent>
     </AccordionItem>

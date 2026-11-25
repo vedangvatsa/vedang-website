@@ -828,7 +828,7 @@ export default function ScanPage() {
               })}
             </div>
 
-            {/* Capabilities grid */
+            {/* Capabilities grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
               {[
                 { label: 'robots.txt AI policy',   active: result.badges.aiBotFriendly },

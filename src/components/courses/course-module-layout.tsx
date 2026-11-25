@@ -3,7 +3,12 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import { MarkComplete } from '@/components/mark-complete';
 import { GlossaryVisualizer } from '@/components/mdx/glossary-visualizer';
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import {
+  CourseAccordion as Accordion,
+  CourseAccordionItem as AccordionItem,
+  CourseAccordionTrigger as AccordionTrigger,
+  CourseAccordionContent as AccordionContent,
+} from '@/components/courses/course-accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
 import { Table } from '@/components/mdx';

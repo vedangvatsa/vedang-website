@@ -15,33 +15,39 @@ The transition from development to production is where most automation projects 
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Every time-triggered automation needs a scheduler. The main options:</p>
             <p><strong>1. GitHub Actions (Free Tier)</strong></p>
-            <pre><code>{`# .github/workflows/daily-broadcast.yml
-name: Daily Job Broadcast
-on:
-  schedule:
-    - cron: '0 8 * * *'  # Every day at 8am UTC
-  workflow_dispatch: {}   # Manual trigger for testing
 
-jobs:
-  broadcast:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: '20' }
-      - run: npm ci
-      - run: node scripts/broadcast-jobs.mjs
-        env:
-          SUPABASE_URL: \${{ secrets.SUPABASE_URL }}
-          TELEGRAM_BOT_TOKEN: \${{ secrets.TELEGRAM_BOT_TOKEN }}`}</code></pre>
+            ```bash
+            # .github/workflows/daily-broadcast.yml
+            name: Daily Job Broadcast
+            on:
+              schedule:
+                - cron: '0 8 * * *'  # Every day at 8am UTC
+              workflow_dispatch: {}   # Manual trigger for testing
+            
+            jobs:
+              broadcast:
+                runs-on: ubuntu-latest
+                steps:
+                  - uses: actions/checkout@v4
+                  - uses: actions/setup-node@v4
+                    with: { node-version: '20' }
+                  - run: npm ci
+                  - run: node scripts/broadcast-jobs.mjs
+                    env:
+                      SUPABASE_URL: \${{ secrets.SUPABASE_URL }}
+                      TELEGRAM_BOT_TOKEN: \${{ secrets.TELEGRAM_BOT_TOKEN }}
+            ```
             <p><strong>2. Vercel Cron Jobs:</strong> For Next.js apps, add cron triggers to API routes:</p>
-            <pre><code>{`// vercel.json
-{
-  "crons": [{
-    "path": "/api/cron/broadcast",
-    "schedule": "0 8 * * *"
-  }]
-}`}</code></pre>
+
+            ```typescript
+            // vercel.json
+            {
+              "crons": [{
+                "path": "/api/cron/broadcast",
+                "schedule": "0 8 * * *"
+              }]
+            }
+            ```
             <p><strong>3. n8n / Make Schedules:</strong> Built-in scheduling in no-code tools. Best for non-technical teams.</p>
             <p><strong>4. Railway / Render Cron:</strong> For standalone scripts that need more compute time than GitHub Actions allows (6 hours max).</p>
         </AccordionContent>
@@ -51,31 +57,34 @@ jobs:
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>You need to know when automations fail before your users notice.</p>
             <p><strong>Lightweight monitoring stack:</strong></p>
-            <pre><code>{`// At the end of every pipeline run, send a heartbeat
-async function reportPipelineStatus(pipeline, results) {
-  const status = {
-    pipeline,
-    timestamp: new Date().toISOString(),
-    success: results.successes,
-    failures: results.failures,
-    duration: results.durationMs,
-  };
 
-  // 1. Log to console (GitHub Actions captures this)
-  console.log(JSON.stringify(status));
-
-  // 2. Update monitoring spreadsheet via MCP
-  await updateSheet("Automation Log", status);
-
-  // 3. Alert on failure
-  if (results.failures > 0) {
-    await sendSlackAlert(\`Pipeline \${pipeline} had \${results.failures} failures\`);
-  }
-
-  // 4. Heartbeat: external monitoring tools (UptimeRobot, Better Uptime)
-  //    will alert if the heartbeat stops arriving
-  await fetch(\`https://heartbeat.uptimerobot.com/\${HEARTBEAT_ID}\`);
-}`}</code></pre>
+            ```typescript
+            // At the end of every pipeline run, send a heartbeat
+            async function reportPipelineStatus(pipeline, results) {
+              const status = {
+                pipeline,
+                timestamp: new Date().toISOString(),
+                success: results.successes,
+                failures: results.failures,
+                duration: results.durationMs,
+              };
+            
+              // 1. Log to console (GitHub Actions captures this)
+              console.log(JSON.stringify(status));
+            
+              // 2. Update monitoring spreadsheet via MCP
+              await updateSheet("Automation Log", status);
+            
+              // 3. Alert on failure
+              if (results.failures > 0) {
+                await sendSlackAlert(\`Pipeline \${pipeline} had \${results.failures} failures\`);
+              }
+            
+              // 4. Heartbeat: external monitoring tools (UptimeRobot, Better Uptime)
+              //    will alert if the heartbeat stops arriving
+              await fetch(\`https://heartbeat.uptimerobot.com/\${HEARTBEAT_ID}\`);
+            }
+            ```
             <p><strong>What to monitor:</strong></p>
             <ul>
                 <li>Did the pipeline run on time? (Missing heartbeat = alert)</li>

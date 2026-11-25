@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import matter from 'gray-matter';
 import { courseConfigs } from '@/lib/course-config';
+import { buildCourseModuleMetadata } from '@/lib/course-module-metadata';
 import { CourseModuleLayout } from '@/components/courses/course-module-layout';
 
 // Custom visual components for Prompt Engineering
@@ -47,28 +48,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const filePath = path.join(CONTENT_PATH, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) notFound();
   
-  const moduleConfig = config.modules.find(m => m.slug === slug);
-  let moduleTitle = moduleConfig?.title || slug;
-  let moduleDesc = `Learn ${moduleTitle} in the Prompt Engineering 101 course by Vedang Vatsa.`;
-  
-  try {
-    const { data } = matter(fs.readFileSync(filePath, 'utf8'));
-    if (data.title) moduleTitle = data.title;
-    if (data.description) moduleDesc = data.description;
-  } catch {}
-  
-  const title = `${moduleTitle} | Prompt Engineering 101`;
-  return {
-    title: { absolute: title },
-    description: moduleDesc,
-    alternates: { canonical: `/prompt/${slug}` },
-    openGraph: { title, description: moduleDesc, url: `https://veda.ng/prompt/${slug}`,
-      images: [{ url: `/prompt/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
-    },
-    twitter: { card: 'summary_large_image', title, description: moduleDesc,
-      images: [`/prompt/${slug}/opengraph-image.png`],
-    },
-  };
+  const markdown = fs.readFileSync(filePath, 'utf-8');
+  const { data: frontmatter } = matter(markdown);
+  return buildCourseModuleMetadata('prompt', slug, frontmatter);
 }
 
 export default async function PromptEngineeringModulePage({ params }: { params: Promise<{ slug: string }> }) {

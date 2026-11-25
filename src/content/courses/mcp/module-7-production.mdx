@@ -12,32 +12,35 @@ Building a working server is step one. Shipping a reliable, secure server that o
         <AccordionTrigger className="text-lg text-left">Error Handling Best Practices</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>MCP defines specific error codes in the JSON-RPC response. Using them correctly helps clients handle failures gracefully:</p>
-            <pre><code>{`import { McpError, ErrorCode } from "@modelcontextprotocol/sdk/types.js";
 
-server.tool("get_user", "Get a user by ID", {
-  userId: z.string(),
-}, async ({ userId }) => {
-  // Validate input
-  if (!userId.match(/^[a-zA-Z0-9-]+$/)) {
-    throw new McpError(
-      ErrorCode.InvalidParams,
-      "User ID must be alphanumeric"
-    );
-  }
-
-  // Handle not found
-  const user = await db.findUser(userId);
-  if (!user) {
-    return {
-      content: [{ type: "text", text: "User not found." }],
-      isError: true,
-    };
-  }
-
-  return {
-    content: [{ type: "text", text: JSON.stringify(user) }],
-  };
-});`}</code></pre>
+            ```typescript
+            import { McpError, ErrorCode } from "@modelcontextprotocol/sdk/types.js";
+            
+            server.tool("get_user", "Get a user by ID", {
+              userId: z.string(),
+            }, async ({ userId }) => {
+              // Validate input
+              if (!userId.match(/^[a-zA-Z0-9-]+$/)) {
+                throw new McpError(
+                  ErrorCode.InvalidParams,
+                  "User ID must be alphanumeric"
+                );
+              }
+            
+              // Handle not found
+              const user = await db.findUser(userId);
+              if (!user) {
+                return {
+                  content: [{ type: "text", text: "User not found." }],
+                  isError: true,
+                };
+              }
+            
+              return {
+                content: [{ type: "text", text: JSON.stringify(user) }],
+              };
+            });
+            ```
             <p><strong>Key distinction:</strong></p>
             <ul>
                 <li><strong>throw McpError</strong>: for protocol-level errors (invalid params, internal server error). These signal to the client that something went wrong with the request itself.</li>
@@ -52,22 +55,25 @@ server.tool("get_user", "Get a user by ID", {
             <p>MCP servers can do powerful things, which makes security critical. Follow these principles:</p>
             <p><strong>1. Input Validation (Defense in Depth):</strong></p>
             <p>Zod schemas are your first line of defense, but add manual validation for sensitive operations:</p>
-            <pre><code>{`server.tool("execute_query", "Run a database query", {
-  sql: z.string().max(1000).describe("SQL SELECT query"),
-}, async ({ sql }) => {
-  // Layer 1: Zod validates type and length
-  // Layer 2: Manual SQL injection prevention
-  const forbidden = ["DROP", "DELETE", "INSERT", "UPDATE", "ALTER", "--", ";"];
-  if (forbidden.some(word => sql.toUpperCase().includes(word))) {
-    return {
-      content: [{ type: "text", text: "Query contains forbidden keywords." }],
-      isError: true,
-    };
-  }
-  // Layer 3: Use parameterized queries when possible
-  const results = await db.query(sql);
-  return { content: [{ type: "text", text: JSON.stringify(results) }] };
-});`}</code></pre>
+
+            ```typescript
+            server.tool("execute_query", "Run a database query", {
+              sql: z.string().max(1000).describe("SQL SELECT query"),
+            }, async ({ sql }) => {
+              // Layer 1: Zod validates type and length
+              // Layer 2: Manual SQL injection prevention
+              const forbidden = ["DROP", "DELETE", "INSERT", "UPDATE", "ALTER", "--", ";"];
+              if (forbidden.some(word => sql.toUpperCase().includes(word))) {
+                return {
+                  content: [{ type: "text", text: "Query contains forbidden keywords." }],
+                  isError: true,
+                };
+              }
+              // Layer 3: Use parameterized queries when possible
+              const results = await db.query(sql);
+              return { content: [{ type: "text", text: JSON.stringify(results) }] };
+            });
+            ```
             <p><strong>2. Principle of Least Privilege:</strong></p>
             <ul>
                 <li>Give the server's database user read-only access unless writes are essential</li>
@@ -76,20 +82,23 @@ server.tool("get_user", "Get a user by ID", {
             </ul>
             <p><strong>3. Rate Limiting:</strong></p>
             <p>Prevent runaway costs and abuse by limiting how often tools can be called:</p>
-            <pre><code>{`const callCounts = new Map<string, { count: number; resetAt: number }>();
-const RATE_LIMIT = 100; // calls per minute
 
-function checkRateLimit(toolName: string): boolean {
-  const now = Date.now();
-  const entry = callCounts.get(toolName) || { count: 0, resetAt: now + 60000 };
-  if (now > entry.resetAt) {
-    entry.count = 0;
-    entry.resetAt = now + 60000;
-  }
-  entry.count++;
-  callCounts.set(toolName, entry);
-  return entry.count <= RATE_LIMIT;
-}`}</code></pre>
+            ```typescript
+            const callCounts = new Map<string, { count: number; resetAt: number }>();
+            const RATE_LIMIT = 100; // calls per minute
+            
+            function checkRateLimit(toolName: string): boolean {
+              const now = Date.now();
+              const entry = callCounts.get(toolName) || { count: 0, resetAt: now + 60000 };
+              if (now > entry.resetAt) {
+                entry.count = 0;
+                entry.resetAt = now + 60000;
+              }
+              entry.count++;
+              callCounts.set(toolName, entry);
+              return entry.count <= RATE_LIMIT;
+            }
+            ```
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
@@ -102,21 +111,26 @@ function checkRateLimit(toolName: string): boolean {
                 <li>Add a shebang (<code>#!/usr/bin/env node</code>) to the top of your entry file</li>
                 <li>Run <code>npm publish</code></li>
             </ol>
-            <pre><code>{`// package.json
-{
-  "name": "@yourorg/mcp-server-weather",
-  "version": "1.0.0",
-  "bin": {
-    "mcp-server-weather": "dist/index.js"
-  },
-  "files": ["dist"],
-  "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
-  }
-}`}</code></pre>
+            ```typescript
+            // package.json
+            {
+              "name": "@yourorg/mcp-server-weather",
+              "version": "1.0.0",
+              "bin": {
+                "mcp-server-weather": "dist/index.js"
+              },
+              "files": ["dist"],
+              "scripts": {
+                "build": "tsc",
+                "prepublishOnly": "npm run build"
+              }
+            }
+            ```
             <p>Users can then run your server with:</p>
-            <pre><code>{`npx -y @yourorg/mcp-server-weather`}</code></pre>
+
+            ```bash
+            npx -y @yourorg/mcp-server-weather
+            ```
             <p><strong>MCP Registry:</strong> The community-maintained registry at <code>mcp.run</code> and <code>smithery.ai</code> are directories where users discover MCP servers. Submit your server for visibility.</p>
         </AccordionContent>
     </AccordionItem>
@@ -125,34 +139,37 @@ function checkRateLimit(toolName: string): boolean {
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>In production, you need visibility into what your server is doing:</p>
             <p><strong>Structured Logging:</strong></p>
-            <pre><code>{`// Always log to stderr (never stdout for stdio transport!)
-function log(level: string, message: string, data?: object) {
-  const entry = {
-    timestamp: new Date().toISOString(),
-    level,
-    message,
-    ...data,
-  };
-  console.error(JSON.stringify(entry));
-}
 
-// Log every tool invocation
-server.tool("search", "Search records", { query: z.string() },
-  async ({ query }) => {
-    log("info", "Tool invoked", { tool: "search", query });
-    const start = Date.now();
-    try {
-      const results = await performSearch(query);
-      log("info", "Tool completed", {
-        tool: "search", duration: Date.now() - start, resultCount: results.length,
-      });
-      return { content: [{ type: "text", text: JSON.stringify(results) }] };
-    } catch (error) {
-      log("error", "Tool failed", { tool: "search", error: String(error) });
-      throw error;
-    }
-  }
-);`}</code></pre>
+            ```typescript
+            // Always log to stderr (never stdout for stdio transport!)
+            function log(level: string, message: string, data?: object) {
+              const entry = {
+                timestamp: new Date().toISOString(),
+                level,
+                message,
+                ...data,
+              };
+              console.error(JSON.stringify(entry));
+            }
+            
+            // Log every tool invocation
+            server.tool("search", "Search records", { query: z.string() },
+              async ({ query }) => {
+                log("info", "Tool invoked", { tool: "search", query });
+                const start = Date.now();
+                try {
+                  const results = await performSearch(query);
+                  log("info", "Tool completed", {
+                    tool: "search", duration: Date.now() - start, resultCount: results.length,
+                  });
+                  return { content: [{ type: "text", text: JSON.stringify(results) }] };
+                } catch (error) {
+                  log("error", "Tool failed", { tool: "search", error: String(error) });
+                  throw error;
+                }
+              }
+            );
+            ```
             <p><strong>Key metrics to track:</strong></p>
             <ul>
                 <li>Tool invocation count and frequency</li>
@@ -168,49 +185,58 @@ server.tool("search", "Search records", { query: z.string() },
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>MCP servers need three levels of testing:</p>
             <p><strong>1. Unit tests for tool handlers:</strong></p>
-            <pre><code>{`import { describe, it, expect } from 'vitest';
-import { countWords } from './tools/count-words.js';
 
-describe('countWords', () => {
-  it('counts words in simple text', () => {
-    expect(countWords('hello world')).toBe(2);
-  });
-
-  it('handles empty string', () => {
-    expect(countWords('')).toBe(0);
-  });
-
-  it('handles multiple spaces', () => {
-    expect(countWords('hello   world   test')).toBe(3);
-  });
-});`}</code></pre>
+            ```typescript
+            import { describe, it, expect } from 'vitest';
+            import { countWords } from './tools/count-words.js';
+            
+            describe('countWords', () => {
+              it('counts words in simple text', () => {
+                expect(countWords('hello world')).toBe(2);
+              });
+            
+              it('handles empty string', () => {
+                expect(countWords('')).toBe(0);
+              });
+            
+              it('handles multiple spaces', () => {
+                expect(countWords('hello   world   test')).toBe(3);
+              });
+            });
+            ```
             <p>Extract your tool logic into pure functions. Test them independently of the MCP protocol layer.</p>
             <p><strong>2. Integration tests with MCP Inspector:</strong></p>
-            <pre><code>{`# Start the inspector and test each tool manually
-npx @modelcontextprotocol/inspector npx tsx src/index.ts
 
-# Verify:
-# ✓ All tools appear in the tools list
-# ✓ Each tool accepts valid inputs and returns correct results
-# ✓ Invalid inputs return isError: true with helpful messages
-# ✓ No stdout pollution (only stderr logging)`}</code></pre>
+            ```bash
+            # Start the inspector and test each tool manually
+            npx @modelcontextprotocol/inspector npx tsx src/index.ts
+            
+            # Verify:
+            # ✓ All tools appear in the tools list
+            # ✓ Each tool accepts valid inputs and returns correct results
+            # ✓ Invalid inputs return isError: true with helpful messages
+            # ✓ No stdout pollution (only stderr logging)
+            ```
             <p><strong>3. End-to-end tests with a programmatic client:</strong></p>
-            <pre><code>{`import { Client } from "@modelcontextprotocol/sdk/client/index.js";
-import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
-const transport = new StdioClientTransport({
-  command: "npx", args: ["tsx", "src/index.ts"],
-});
-const client = new Client({ name: "test", version: "1.0.0" });
-await client.connect(transport);
-
-const result = await client.callTool({
-  name: "count_words",
-  arguments: { text: "hello world" },
-});
-assert(result.content[0].text.includes("2"));
-await client.close();
-await transport.close();`}</code></pre>
+            ```typescript
+            import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+            import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+            
+            const transport = new StdioClientTransport({
+              command: "npx", args: ["tsx", "src/index.ts"],
+            });
+            const client = new Client({ name: "test", version: "1.0.0" });
+            await client.connect(transport);
+            
+            const result = await client.callTool({
+              name: "count_words",
+              arguments: { text: "hello world" },
+            });
+            assert(result.content[0].text.includes("2"));
+            await client.close();
+            await transport.close();
+            ```
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-6">

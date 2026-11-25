@@ -51,17 +51,21 @@ The architectural insight behind MCP is composability. Each MCP server exposes a
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Connecting an AI agent to your database via MCP enables data automation:</p>
             <p><strong>Pattern 1: Data Quality Automation</strong></p>
-            <pre><code>{`// Natural language instruction to the AI agent:
-"Query the jobs table for any listings where the title 
-contains numbers or special characters. Clean them up 
-by removing job IDs and normalizing the format. 
-Update the records in place."
 
-// The agent will:
-// 1. Call database MCP: SELECT * FROM jobs WHERE title ~ '[0-9]{4,}'
-// 2. Process results with AI to clean titles
-// 3. Call database MCP: UPDATE jobs SET title = 'cleaned' WHERE id = ...
-// 4. Report: "Cleaned 47 job titles"`}</code></pre>
+            ```typescript
+            // Natural language instruction to the AI agent:
+            "Query the jobs table for any listings where the title 
+            contains numbers or special characters. Clean them up 
+            by removing job IDs and normalizing the format. 
+            Update the records in place."
+            
+            // The agent will:
+            // 1. Call database MCP: SELECT * FROM jobs WHERE title ~ '[0-9]{4,}'
+            // 2. Process results with AI to clean titles
+            // 3. Call database MCP: UPDATE jobs SET title = 'cleaned' WHERE id = ...
+            // 4. Report: "Cleaned 47 job titles"
+
+            ```
             <p><strong>Pattern 2: Reporting Automation</strong></p>
             <ul>
                 <li>"Generate a weekly report of new jobs by category and company, with week-over-week growth percentages"</li>
@@ -131,30 +135,33 @@ Update the records in place."
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Messaging platforms are natural outputs for automated pipelines. Here's how to build distribution bots:</p>
             <p><strong>Telegram Bot (most common for public channels):</strong></p>
-            <pre><code>{`// The pattern: fetch data → format → post via Bot API
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const CHANNEL_ID = process.env.TELEGRAM_CHANNEL_ID;
 
-async function postToTelegram(message) {
-  await fetch(\`https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage\`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: CHANNEL_ID,
-      text: message,
-      parse_mode: 'HTML',
-      disable_web_page_preview: true,
-    }),
-  });
-}
-
-// Usage in a pipeline:
-const jobs = await fetchNewJobs(); // From database MCP
-for (const job of jobs.slice(0, 10)) {
-  const msg = \`<b>\${job.title}</b>\\n\${job.company}\\n\${job.location}\\n\\nApply: \${job.url}\`;
-  await postToTelegram(msg);
-  await new Promise(r => setTimeout(r, 1000)); // Rate limit: 1 msg/sec
-}`}</code></pre>
+            ```typescript
+            // The pattern: fetch data → format → post via Bot API
+            const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+            const CHANNEL_ID = process.env.TELEGRAM_CHANNEL_ID;
+            
+            async function postToTelegram(message) {
+              await fetch(\`https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage\`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  chat_id: CHANNEL_ID,
+                  text: message,
+                  parse_mode: 'HTML',
+                  disable_web_page_preview: true,
+                }),
+              });
+            }
+            
+            // Usage in a pipeline:
+            const jobs = await fetchNewJobs(); // From database MCP
+            for (const job of jobs.slice(0, 10)) {
+              const msg = \`<b>\${job.title}</b>\\n\${job.company}\\n\${job.location}\\n\\nApply: \${job.url}\`;
+              await postToTelegram(msg);
+              await new Promise(r => setTimeout(r, 1000)); // Rate limit: 1 msg/sec
+            }
+            ```
             <p><strong>Slack Bot (for internal teams):</strong></p>
             <ul>
                 <li>Use Slack's Incoming Webhooks for simple notifications</li>

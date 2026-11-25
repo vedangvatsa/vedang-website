@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     description: 'Free course on building automated pipelines with AI agents, APIs, MCP servers, and no-code tools.',
     url: 'https://veda.ng/automation',
     type: 'website',
-    images: [{ url: '/automation/opengraph-image.png', width: 1200, height: 630 }],
+    images: [{ url: '/og/courses/automation/_landing.png', width: 1200, height: 630, type: 'image/png' }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/automation/opengraph-image.png'],
+    images: ['/og/courses/automation/_landing.png'],
   },
 };
 

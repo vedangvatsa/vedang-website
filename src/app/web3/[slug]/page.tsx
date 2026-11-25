@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import matter from 'gray-matter';
 import Image from 'next/image';
 import { courseConfigs } from '@/lib/course-config';
+import { buildCourseModuleMetadata } from '@/lib/course-module-metadata';
 import { CourseModuleLayout } from '@/components/courses/course-module-layout';
 
 // Custom visual components for Web3
@@ -52,20 +53,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   
   const markdown = fs.readFileSync(filePath, 'utf-8');
   const { data: frontmatter } = matter(markdown);
-  const title = `${frontmatter.title} | Web3 101`;
-  const description = frontmatter.description;
-  
-  return {
-    title: { absolute: title },
-    description,
-    alternates: { canonical: `/web3/${slug}` },
-    openGraph: { title, description, url: `https://veda.ng/web3/${slug}`,
-      images: [{ url: `/web3/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
-    },
-    twitter: { card: 'summary_large_image', title, description,
-      images: [`/web3/${slug}/opengraph-image.png`],
-    },
-  };
+  return buildCourseModuleMetadata('web3', slug, frontmatter);
 }
 
 export default async function CourseModulePage({ params }: { params: Promise<{ slug: string }> }) {

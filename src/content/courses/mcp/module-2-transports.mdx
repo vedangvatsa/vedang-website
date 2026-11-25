@@ -13,29 +13,38 @@ MCP is transport-agnostic: the same protocol works whether the server runs on yo
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Every MCP message is a JSON-RPC 2.0 message. This is a simple, well-established standard for remote procedure calls. There are three types:</p>
             <p><strong>1. Request</strong> (client → server, expects a response):</p>
-            <pre><code>{`{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "tools/call",
-  "params": {
-    "name": "search_database",
-    "arguments": { "query": "SELECT * FROM users LIMIT 5" }
-  }
-}`}</code></pre>
+
+            ```json
+            {
+              "jsonrpc": "2.0",
+              "id": 1,
+              "method": "tools/call",
+              "params": {
+                "name": "search_database",
+                "arguments": { "query": "SELECT * FROM users LIMIT 5" }
+              }
+            }
+            ```
             <p><strong>2. Response</strong> (server → client):</p>
-            <pre><code>{`{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": {
-    "content": [{ "type": "text", "text": "Found 5 users..." }]
-  }
-}`}</code></pre>
+
+            ```json
+            {
+              "jsonrpc": "2.0",
+              "id": 1,
+              "result": {
+                "content": [{ "type": "text", "text": "Found 5 users..." }]
+              }
+            }
+            ```
             <p><strong>3. Notification</strong> (either direction, no response expected):</p>
-            <pre><code>{`{
-  "jsonrpc": "2.0",
-  "method": "notifications/progress",
-  "params": { "progressToken": "abc", "progress": 50, "total": 100 }
-}`}</code></pre>
+
+            ```json
+            {
+              "jsonrpc": "2.0",
+              "method": "notifications/progress",
+              "params": { "progressToken": "abc", "progress": 50, "total": 100 }
+            }
+            ```
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">

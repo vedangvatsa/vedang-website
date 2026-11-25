@@ -18,40 +18,42 @@ Now that you understand the fundamentals, let's build real servers that solve ac
                 <li><strong>Schema as a resource:</strong> Expose your database schema as an MCP resource. This gives the LLM context about your tables and columns so it generates correct SQL.</li>
                 <li><strong>Query validation:</strong> Always validate queries before execution. Block DROP, DELETE, and ALTER statements unless explicitly intended.</li>
             </ul>
-            <pre><code>{`// Expose schema as a resource
-server.resource(
-  "db://myapp/schema",
-  "Database schema for the application",
-  async () => ({
-    contents: [{
-      uri: "db://myapp/schema",
-      mimeType: "text/plain",
-      text: await getSchemaDescription(),
-    }],
-  })
-);
-
-// Read-only query tool
-server.tool(
-  "query_database",
-  "Execute a read-only SQL query against the database",
-  {
-    sql: z.string().describe("A SELECT query to execute"),
-  },
-  async ({ sql }) => {
-    // Safety check
-    if (!/^\\s*SELECT/i.test(sql)) {
-      return {
-        content: [{ type: "text", text: "Error: Only SELECT queries are allowed." }],
-        isError: true,
-      };
-    }
-    const results = await db.query(sql);
-    return {
-      content: [{ type: "text", text: JSON.stringify(results, null, 2) }],
-    };
-  }
-);`}</code></pre>
+            ```typescript
+            // Expose schema as a resource
+            server.resource(
+              "db://myapp/schema",
+              "Database schema for the application",
+              async () => ({
+                contents: [{
+                  uri: "db://myapp/schema",
+                  mimeType: "text/plain",
+                  text: await getSchemaDescription(),
+                }],
+              })
+            );
+            
+            // Read-only query tool
+            server.tool(
+              "query_database",
+              "Execute a read-only SQL query against the database",
+              {
+                sql: z.string().describe("A SELECT query to execute"),
+              },
+              async ({ sql }) => {
+                // Safety check
+                if (!/^\\s*SELECT/i.test(sql)) {
+                  return {
+                    content: [{ type: "text", text: "Error: Only SELECT queries are allowed." }],
+                    isError: true,
+                  };
+                }
+                const results = await db.query(sql);
+                return {
+                  content: [{ type: "text", text: JSON.stringify(results, null, 2) }],
+                };
+              }
+            );
+            ```
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -59,38 +61,41 @@ server.tool(
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Wrapping a REST API as an MCP server is one of the most common and valuable patterns. It lets AI interact with any web service.</p>
             <p><strong>Example: Weather API server</strong></p>
-            <pre><code>{`server.tool(
-  "get_weather",
-  "Get the current weather for a city",
-  {
-    city: z.string().describe("City name, e.g. 'London'"),
-    units: z.enum(["celsius", "fahrenheit"])
-      .default("celsius")
-      .describe("Temperature units"),
-  },
-  async ({ city, units }) => {
-    const response = await fetch(
-      \`https://api.weather.com/v1/current?\` +
-      \`city=\${encodeURIComponent(city)}&units=\${units}\`,
-      { headers: { "Authorization": \`Bearer \${process.env.WEATHER_API_KEY}\` } }
-    );
 
-    if (!response.ok) {
-      return {
-        content: [{ type: "text", text: \`Weather API error: \${response.status}\` }],
-        isError: true,
-      };
-    }
-
-    const data = await response.json();
-    return {
-      content: [{
-        type: "text",
-        text: \`Weather in \${city}: \${data.temp}°, \${data.description}\`,
-      }],
-    };
-  }
-);`}</code></pre>
+            ```typescript
+            server.tool(
+              "get_weather",
+              "Get the current weather for a city",
+              {
+                city: z.string().describe("City name, e.g. 'London'"),
+                units: z.enum(["celsius", "fahrenheit"])
+                  .default("celsius")
+                  .describe("Temperature units"),
+              },
+              async ({ city, units }) => {
+                const response = await fetch(
+                  \`https://api.weather.com/v1/current?\` +
+                  \`city=\${encodeURIComponent(city)}&units=\${units}\`,
+                  { headers: { "Authorization": \`Bearer \${process.env.WEATHER_API_KEY}\` } }
+                );
+            
+                if (!response.ok) {
+                  return {
+                    content: [{ type: "text", text: \`Weather API error: \${response.status}\` }],
+                    isError: true,
+                  };
+                }
+            
+                const data = await response.json();
+                return {
+                  content: [{
+                    type: "text",
+                    text: \`Weather in \${city}: \${data.temp}°, \${data.description}\`,
+                  }],
+                };
+              }
+            );
+            ```
             <p><strong>Best practices for API wrappers:</strong></p>
             <ul>
                 <li>Always handle API errors gracefully: return <code>isError: true</code> with a descriptive message</li>
@@ -104,17 +109,20 @@ server.tool(
         <AccordionTrigger className="text-lg text-left">Pattern 3: Multi-Tool Servers</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Real servers typically expose multiple related tools. Group tools logically and use consistent naming conventions:</p>
-            <pre><code>{`// A project management MCP server
-server.tool("list_projects", "List all active projects", {}, ...);
-server.tool("get_project", "Get details of a specific project",
-  { id: z.string() }, ...);
-server.tool("create_task", "Create a new task in a project",
-  { projectId: z.string(), title: z.string(), assignee: z.string().optional() }, ...);
-server.tool("update_task_status", "Update the status of a task",
-  { taskId: z.string(), status: z.enum(["todo", "in-progress", "done"]) }, ...);
 
-// Expose project list as a resource for context
-server.resource("projects://active", "List of active projects", ...);`}</code></pre>
+            ```typescript
+            // A project management MCP server
+            server.tool("list_projects", "List all active projects", {}, ...);
+            server.tool("get_project", "Get details of a specific project",
+              { id: z.string() }, ...);
+            server.tool("create_task", "Create a new task in a project",
+              { projectId: z.string(), title: z.string(), assignee: z.string().optional() }, ...);
+            server.tool("update_task_status", "Update the status of a task",
+              { taskId: z.string(), status: z.enum(["todo", "in-progress", "done"]) }, ...);
+            
+            // Expose project list as a resource for context
+            server.resource("projects://active", "List of active projects", ...);
+            ```
             <p><strong>Naming conventions:</strong></p>
             <ul>
                 <li>Use <code>verb_noun</code> format: <code>search_users</code>, <code>create_task</code>, <code>get_project</code></li>
@@ -135,37 +143,40 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
             </ul>
             <p><strong>Building a Remote HTTP / SSE Server:</strong></p>
             <p>When running a server on a remote host (e.g. EC2, a VPS, or a container), you expose an HTTP endpoint with <code>SSEServerTransport</code>:</p>
-            <pre><code>{`import express from "express";
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
 
-const app = express();
-const server = new McpServer({ name: "remote-mcp", version: "1.0.0" });
-
-// Active SSE transports keyed by session ID
-const transports = new Map<string, SSEServerTransport>();
-
-app.get("/sse", async (req, res) => {
-  const transport = new SSEServerTransport("/messages", res);
-  transports.set(transport.sessionId, transport);
-  res.on("close", () => {
-    transports.delete(transport.sessionId);
-  });
-  await server.connect(transport);
-});
-
-app.post("/messages", async (req, res) => {
-  const sessionId = String(req.query.sessionId);
-  const transport = transports.get(sessionId);
-  if (!transport) {
-    return res.status(404).send("Session not found");
-  }
-  await transport.handlePostMessage(req, res);
-});
-
-app.listen(3001, () => {
-  console.error("Remote MCP server listening on http://localhost:3001/sse");
-});`}</code></pre>
+            ```typescript
+            import express from "express";
+            import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+            import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
+            
+            const app = express();
+            const server = new McpServer({ name: "remote-mcp", version: "1.0.0" });
+            
+            // Active SSE transports keyed by session ID
+            const transports = new Map<string, SSEServerTransport>();
+            
+            app.get("/sse", async (req, res) => {
+              const transport = new SSEServerTransport("/messages", res);
+              transports.set(transport.sessionId, transport);
+              res.on("close", () => {
+                transports.delete(transport.sessionId);
+              });
+              await server.connect(transport);
+            });
+            
+            app.post("/messages", async (req, res) => {
+              const sessionId = String(req.query.sessionId);
+              const transport = transports.get(sessionId);
+              if (!transport) {
+                return res.status(404).send("Session not found");
+              }
+              await transport.handlePostMessage(req, res);
+            });
+            
+            app.listen(3001, () => {
+              console.error("Remote MCP server listening on http://localhost:3001/sse");
+            });
+            ```
             <p><strong>OAuth 2.0 (Client → Server) for remote HTTP MCP:</strong></p>
             <p>Local stdio servers often trust the desktop user. Remote Streamable HTTP servers on the public internet must not. Use OAuth so the MCP client proves who is calling you.</p>
             <p><strong>Remote OAuth cookbook (high level):</strong></p>
@@ -178,25 +189,28 @@ app.listen(3001, () => {
                 <li><strong>Map claims to permissions:</strong> e.g. scope <code>sheets:write</code> required for write tools; deny by default.</li>
             </ol>
             <p><strong>Minimal validation sketch (Node):</strong></p>
-            <pre><code>{`// Pseudocode: run before every tool handler on a remote server
-async function requireUser(req) {
-  const header = req.headers.authorization || "";
-  const token = header.startsWith("Bearer ") ? header.slice(7) : null;
-  if (!token) throw new Error("401 missing bearer token");
 
-  const payload = await verifyJwt(token, {
-    issuer: process.env.OAUTH_ISSUER,
-    audience: process.env.OAUTH_AUDIENCE,
-    jwksUrl: process.env.OAUTH_JWKS_URL,
-  });
-
-  // Optional: enforce scopes
-  const scopes = String(payload.scope || "").split(" ");
-  if (!scopes.includes("mcp:invoke")) {
-    throw new Error("403 missing mcp:invoke scope");
-  }
-  return { userId: payload.sub, scopes };
-}`}</code></pre>
+            ```typescript
+            // Pseudocode: run before every tool handler on a remote server
+            async function requireUser(req) {
+              const header = req.headers.authorization || "";
+              const token = header.startsWith("Bearer ") ? header.slice(7) : null;
+              if (!token) throw new Error("401 missing bearer token");
+            
+              const payload = await verifyJwt(token, {
+                issuer: process.env.OAUTH_ISSUER,
+                audience: process.env.OAUTH_AUDIENCE,
+                jwksUrl: process.env.OAUTH_JWKS_URL,
+              });
+            
+              // Optional: enforce scopes
+              const scopes = String(payload.scope || "").split(" ");
+              if (!scopes.includes("mcp:invoke")) {
+                throw new Error("403 missing mcp:invoke scope");
+              }
+              return { userId: payload.sub, scopes };
+            }
+            ```
             <p><strong>Operational rules:</strong></p>
             <ul>
                 <li>Short-lived access tokens + refresh tokens; never log raw tokens.</li>
@@ -242,32 +256,35 @@ async function requireUser(req) {
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>A file system MCP server gives AI read/write access to files. This is powerful and dangerous; you must sandbox it properly.</p>
             <p><strong>Implementation pattern:</strong></p>
-            <pre><code>{`import path from 'path';
 
-const ALLOWED_DIR = process.env.WORKSPACE_DIR || '/home/user/workspace';
-
-function validatePath(filePath: string): string {
-  const resolved = path.resolve(ALLOWED_DIR, filePath);
-  // Critical: prevent directory traversal attacks
-  if (!resolved.startsWith(ALLOWED_DIR)) {
-    throw new McpError(
-      ErrorCode.InvalidParams,
-      \`Access denied: path \${filePath} is outside the workspace\`
-    );
-  }
-  return resolved;
-}
-
-server.tool(
-  "read_file",
-  "Read the contents of a file within the workspace directory",
-  { path: z.string().describe("Relative path within the workspace") },
-  async ({ path: filePath }) => {
-    const safePath = validatePath(filePath);
-    const content = await fs.readFile(safePath, 'utf-8');
-    return { content: [{ type: "text", text: content }] };
-  }
-);`}</code></pre>
+            ```typescript
+            import path from 'path';
+            
+            const ALLOWED_DIR = process.env.WORKSPACE_DIR || '/home/user/workspace';
+            
+            function validatePath(filePath: string): string {
+              const resolved = path.resolve(ALLOWED_DIR, filePath);
+              // Critical: prevent directory traversal attacks
+              if (!resolved.startsWith(ALLOWED_DIR)) {
+                throw new McpError(
+                  ErrorCode.InvalidParams,
+                  \`Access denied: path \${filePath} is outside the workspace\`
+                );
+              }
+              return resolved;
+            }
+            
+            server.tool(
+              "read_file",
+              "Read the contents of a file within the workspace directory",
+              { path: z.string().describe("Relative path within the workspace") },
+              async ({ path: filePath }) => {
+                const safePath = validatePath(filePath);
+                const content = await fs.readFile(safePath, 'utf-8');
+                return { content: [{ type: "text", text: content }] };
+              }
+            );
+            ```
             <p><strong>Security rules for file system servers:</strong></p>
             <ul>
                 <li>Always resolve and validate paths before any file operation</li>
