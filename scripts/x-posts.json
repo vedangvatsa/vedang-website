@@ -3585,7 +3585,7 @@
   },
   {
     "id": "small-language-models-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3643,7 +3643,9 @@
       }
     ],
     "scheduleDate": "2026-11-23",
-    "scheduleTime": "09:05"
+    "scheduleTime": "09:05",
+    "postedAt": "2026-11-25T13:28:47.721Z",
+    "tweetId": "6b06e289608f8f2e33d73a72"
   },
   {
     "id": "structured-data-extraction-thread",
