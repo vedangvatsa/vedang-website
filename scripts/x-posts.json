@@ -3649,7 +3649,7 @@
   },
   {
     "id": "structured-data-extraction-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3707,7 +3707,9 @@
       }
     ],
     "scheduleDate": "2026-11-23",
-    "scheduleTime": "17:05"
+    "scheduleTime": "17:05",
+    "postedAt": "2026-11-26T02:27:52.835Z",
+    "tweetId": "6b0799229f6dda31ccb779c9"
   },
   {
     "id": "fhe-encrypted-computation-thread",
