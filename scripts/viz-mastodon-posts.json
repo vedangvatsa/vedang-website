@@ -4299,10 +4299,18 @@
     "text": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
     "scheduleDate": "2026-11-23",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "altText": "Permutations of Rubik's Cube",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/rubiks_permutations_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-26T13:02:31.423Z",
+    "attemptedSlot": "2026-11-26T17:00",
+    "publishedText": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
+    "postUrl": "https://hachyderm.io/@vedang/117682874583184656",
+    "platformPostId": "117682874583184656",
+    "postedAt": "2026-11-26T13:02:39.683Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-power_rule",

@@ -4327,10 +4327,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/integration_by_parts_9x16.mp4",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/integration_by_parts_9x16.png",
     "batchId": "explainer-v1",
-    "text": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral."
+    "text": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral.",
+    "publishedText": "Visual proof of integration by parts.\n\nA bounding box of area u times v splits into two complementary regions.\n\nThe total area minus the vertical integral equals the horizontal integral.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-26T17:00",
+    "attemptedAt": "2026-11-26T12:59:39.071Z",
+    "bufferPostId": "6b082d3b7ad5a1071f9e4728",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DgNKVC4Bopo/",
+    "postedAt": "2026-11-26T13:00:36.422Z",
+    "error": null
   },
   {
     "id": "explainer-ig-normal_distribution",

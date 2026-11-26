@@ -4213,12 +4213,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/rubiks_permutations_4x5.mp4",
     "scheduleDate": "2026-11-23",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/rubiks_permutations_4x5.png",
     "batchId": "explainer-v1",
     "title": "Permutations of Rubik's Cube",
     "altText": "Permutations of Rubik's Cube",
-    "text": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe."
+    "text": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
+    "state": "sent",
+    "attemptedAt": "2026-11-26T13:02:09.248Z",
+    "attemptedSlot": "2026-11-26T17:00",
+    "publishedText": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
+    "platformPostId": "2220312778517606",
+    "postedAt": "2026-11-26T13:02:28.348Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=2220312778517606"
   },
   {
     "id": "explainer-fb-power_rule",

@@ -3845,12 +3845,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/integration_by_parts_1x1.mp4",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/integration_by_parts_1x1.png",
     "batchId": "explainer-v1",
     "title": "Integration by Parts",
     "altText": "Integration by Parts",
-    "text": "Visual proof of integration by parts showing how the bounding rectangle splits into two complementary integrals."
+    "text": "Visual proof of integration by parts showing how the bounding rectangle splits into two complementary integrals.",
+    "publishedText": "Visual proof of integration by parts showing how the bounding rectangle splits into two complementary integrals.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-26T17:00",
+    "attemptedAt": "2026-11-26T12:59:39.064Z",
+    "bufferPostId": "6b082d3b7ad5a1071f9e472f",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2125937540024639577",
+    "postedAt": "2026-11-26T12:59:42.400Z",
+    "error": null
   },
   {
     "id": "explainer-x-normal_distribution",

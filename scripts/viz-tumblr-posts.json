@@ -4141,8 +4141,8 @@
     "text": "How the largest soybean oil producers changed.\n\n2000-2023. Soybean oil production by country, measured in millions of tonnes.",
     "scheduleDate": "2026-11-14",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
+    "posted": true,
+    "postedAt": "2026-11-26T13:02:31.419Z",
     "error": null,
     "notesUrl": "https://veda.ng/viz-notes/139-r2.txt",
     "captionStyle": "concise-v2",
@@ -4157,7 +4157,13 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-26T13:02:28.357Z",
+    "attemptedSlot": "2026-11-26T17:00",
+    "publishedText": "How the largest soybean oil producers changed.\n\n2000-2023. Soybean oil production by country, measured in millions of tonnes.",
+    "platformPostId": "834349984755466240",
+    "postUrl": "https://vedangvatsa.tumblr.com/post/834349984755466240"
   },
   {
     "id": "viz-b2-tumblr-140",
