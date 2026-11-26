@@ -3713,7 +3713,7 @@
   },
   {
     "id": "fhe-encrypted-computation-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3771,7 +3771,9 @@
       }
     ],
     "scheduleDate": "2026-11-24",
-    "scheduleTime": "01:05"
+    "scheduleTime": "01:05",
+    "postedAt": "2026-11-26T13:07:47.867Z",
+    "tweetId": "6b082f1db56b3bb7f9fc6e1b"
   },
   {
     "id": "model-quantization-techniques-thread",
