@@ -4193,12 +4193,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/inclined_plane_4x5.mp4",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/inclined_plane_4x5.png",
     "batchId": "explainer-v1",
     "title": "Forces on a Ramp",
     "altText": "Forces on a Ramp",
-    "text": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface."
+    "text": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface.",
+    "state": "sent",
+    "attemptedAt": "2026-11-26T02:24:49.757Z",
+    "attemptedSlot": "2026-11-26T01:00",
+    "publishedText": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface.",
+    "platformPostId": "1451188143803117",
+    "postedAt": "2026-11-26T02:25:04.846Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=1451188143803117"
   },
   {
     "id": "explainer-fb-rubiks_permutations",

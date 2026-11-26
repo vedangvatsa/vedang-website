@@ -4308,10 +4308,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/curve_arclength_9x16.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/curve_arclength_9x16.png",
     "batchId": "explainer-v1",
-    "text": "How to calculate the length of a curved line.\n\nZoom into an infinitesimal segment.\n\nPythagoras on differentials gives dL squared equals dx squared plus dy squared, leading directly to the arc length integral."
+    "text": "How to calculate the length of a curved line.\n\nZoom into an infinitesimal segment.\n\nPythagoras on differentials gives dL squared equals dx squared plus dy squared, leading directly to the arc length integral.",
+    "publishedText": "How to calculate the length of a curved line.\n\nZoom into an infinitesimal segment.\n\nPythagoras on differentials gives dL squared equals dx squared plus dy squared, leading directly to the arc length integral.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-26T01:00",
+    "attemptedAt": "2026-11-26T02:21:36.782Z",
+    "bufferPostId": "6b0797b1b8e2338b85816baf",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DgMBYWuSjiK/",
+    "postedAt": "2026-11-26T02:24:33.424Z",
+    "error": null
   },
   {
     "id": "explainer-ig-integration_by_parts",

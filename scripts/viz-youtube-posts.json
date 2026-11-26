@@ -4297,12 +4297,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/birthday_paradox_9x16.mp4",
     "scheduleDate": "2026-11-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/birthday_paradox_9x16.png",
     "batchId": "explainer-v1",
     "title": "The Birthday Paradox",
     "description": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
-    "tags": []
+    "tags": [],
+    "publishedText": "Why 23 people give a 50% chance of a shared birthday.\n\nIt is not comparing everyone to you.\n\nIt compares every possible pair among 23 people, which makes 253 comparisons.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-26T01:00",
+    "attemptedAt": "2026-11-26T02:21:36.809Z",
+    "bufferPostId": "6b0797b107071a6067488085",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.youtube.com/watch?v=qZJmMSdoW1k",
+    "postedAt": "2026-11-26T02:21:38.542Z",
+    "error": null
   },
   {
     "id": "explainer-yt-irrationality_sqrt2",

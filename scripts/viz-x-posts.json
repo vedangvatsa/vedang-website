@@ -3824,12 +3824,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/curve_arclength_1x1.mp4",
     "scheduleDate": "2026-11-21",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/curve_arclength_1x1.png",
     "batchId": "explainer-v1",
     "title": "Arc Length of a Curve",
     "altText": "Arc Length of a Curve",
-    "text": "Visualizing the arc length integral by applying the Pythagorean theorem to infinitesimal segments along a curve."
+    "text": "Visualizing the arc length integral by applying the Pythagorean theorem to infinitesimal segments along a curve.",
+    "publishedText": "Visualizing the arc length integral by applying the Pythagorean theorem to infinitesimal segments along a curve.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-26T01:00",
+    "attemptedAt": "2026-11-26T02:21:36.788Z",
+    "bufferPostId": "6b0797b1d4eda4b659cd5bd5",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2125776972760391692",
+    "postedAt": "2026-11-26T02:21:40.191Z",
+    "error": null
   },
   {
     "id": "explainer-x-integration_by_parts",
