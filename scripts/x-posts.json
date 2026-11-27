@@ -3777,7 +3777,7 @@
   },
   {
     "id": "model-quantization-techniques-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3835,7 +3835,9 @@
       }
     ],
     "scheduleDate": "2026-11-24",
-    "scheduleTime": "09:05"
+    "scheduleTime": "09:05",
+    "postedAt": "2026-11-27T02:25:46.762Z",
+    "tweetId": "6b08ea247c3f43554e4e591f"
   },
   {
     "id": "agent-observability-tracing-thread",
