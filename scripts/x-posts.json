@@ -3841,7 +3841,7 @@
   },
   {
     "id": "agent-observability-tracing-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3899,7 +3899,9 @@
       }
     ],
     "scheduleDate": "2026-11-24",
-    "scheduleTime": "17:05"
+    "scheduleTime": "17:05",
+    "postedAt": "2026-11-27T13:04:55.556Z",
+    "tweetId": "6b097ff1e94385a8fda762c6"
   },
   {
     "id": "llms-txt-standard-thread",
