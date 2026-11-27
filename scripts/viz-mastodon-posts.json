@@ -4319,10 +4319,18 @@
     "text": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
     "scheduleDate": "2026-11-23",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "altText": "The Power Rule",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/power_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "state": "sent",
+    "attemptedAt": "2026-11-27T02:25:50.579Z",
+    "attemptedSlot": "2026-11-27T01:00",
+    "publishedText": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
+    "postUrl": "https://hachyderm.io/@vedang/117686033315244282",
+    "platformPostId": "117686033315244282",
+    "postedAt": "2026-11-27T02:25:58.130Z",
+    "error": null
   },
   {
     "id": "explainer-mastodon-geometric_mean",

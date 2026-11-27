@@ -3866,12 +3866,21 @@
     "video": "scripts/viz-assets/videos/explainer_videos/1x1/normal_distribution_1x1.mp4",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/normal_distribution_1x1.png",
     "batchId": "explainer-v1",
     "title": "The Normal Distribution",
     "altText": "The Normal Distribution",
-    "text": "Visualizing the 68-95-99.7 empirical rule across standard deviations of the normal distribution."
+    "text": "Visualizing the 68-95-99.7 empirical rule across standard deviations of the normal distribution.",
+    "publishedText": "Visualizing the 68-95-99.7 empirical rule across standard deviations of the normal distribution.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-27T01:00",
+    "attemptedAt": "2026-11-27T02:22:14.072Z",
+    "bufferPostId": "6b08e95670e2a88e2ced2429",
+    "bufferStatus": "sent",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2126139517673390548",
+    "postedAt": "2026-11-27T02:22:17.610Z",
+    "error": null
   },
   {
     "id": "explainer-x-inclined_plane",

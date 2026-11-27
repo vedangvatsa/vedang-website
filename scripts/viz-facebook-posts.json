@@ -4233,12 +4233,20 @@
     "video": "scripts/viz-assets/videos/explainer_videos/4x5/power_rule_4x5.mp4",
     "scheduleDate": "2026-11-23",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/power_rule_4x5.png",
     "batchId": "explainer-v1",
     "title": "The Power Rule",
     "text": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
-    "altText": "The Power Rule"
+    "altText": "The Power Rule",
+    "state": "sent",
+    "attemptedAt": "2026-11-27T02:25:27.057Z",
+    "attemptedSlot": "2026-11-27T01:00",
+    "publishedText": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
+    "platformPostId": "3424801041039676",
+    "postedAt": "2026-11-27T02:25:50.572Z",
+    "error": null,
+    "postUrl": "https://www.facebook.com/watch/?v=3424801041039676"
   },
   {
     "id": "explainer-fb-geometric_mean",

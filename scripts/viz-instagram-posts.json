@@ -4346,10 +4346,19 @@
     "video": "scripts/viz-assets/videos/explainer_videos/9x16/normal_distribution_9x16.mp4",
     "scheduleDate": "2026-11-22",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/normal_distribution_9x16.png",
     "batchId": "explainer-v1",
-    "text": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three."
+    "text": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three.",
+    "publishedText": "The 68-95-99.7 empirical rule of the normal distribution.\n\n68% of data falls within one standard deviation of the mean.\n\n95% falls within two standard deviations, and 99.7% falls within three.",
+    "state": "sent",
+    "attemptedSlot": "2026-11-27T01:00",
+    "attemptedAt": "2026-11-27T02:22:13.628Z",
+    "bufferPostId": "6b08e9568899c4e7790c4fd7",
+    "bufferStatus": "sent",
+    "postUrl": "https://www.instagram.com/reel/DgOmSe4xJRx/",
+    "postedAt": "2026-11-27T02:25:10.037Z",
+    "error": null
   },
   {
     "id": "explainer-ig-inclined_plane",
