@@ -4191,6 +4191,8 @@
     ],
     "audioAttributionRequired": false,
     "audioLicense": "Mixkit Stock Music Free License",
-    "audioRevision": "no-attribution-v1"
+    "audioRevision": "no-attribution-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   }
 ]

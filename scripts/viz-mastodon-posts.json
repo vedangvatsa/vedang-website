@@ -4342,7 +4342,9 @@
     "posted": false,
     "altText": "The Geometric Mean",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_mean_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-tangent_secant",
@@ -4354,7 +4356,9 @@
     "posted": false,
     "altText": "Tangent-Secant Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_secant_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-euler_formula",
@@ -4366,7 +4370,9 @@
     "posted": false,
     "altText": "Euler Identity",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/euler_formula_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-am_gm_inequality",
@@ -4378,7 +4384,9 @@
     "posted": false,
     "altText": "AM-GM Inequality",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/am_gm_inequality_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-sine_addition",
@@ -4390,7 +4398,9 @@
     "posted": false,
     "altText": "Sine Addition Formula",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sine_addition_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-cosine_addition",
@@ -4402,7 +4412,9 @@
     "posted": false,
     "altText": "Cosine Addition Formula",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cosine_addition_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-sum_of_cubes",
@@ -4414,7 +4426,9 @@
     "posted": false,
     "altText": "Sum of Consecutive Cubes",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_cubes_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-inscribed_angle_theorem",
@@ -4426,7 +4440,9 @@
     "posted": false,
     "altText": "Inscribed Angle Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-cross_product_area",
@@ -4438,7 +4454,9 @@
     "posted": false,
     "altText": "Cross Product and Parallelogram Area",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-triangle_incircle_area",
@@ -4450,7 +4468,9 @@
     "posted": false,
     "altText": "Triangle Area via Inradius",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangle_incircle_area_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-chord_intersection_theorem",
@@ -4462,7 +4482,9 @@
     "posted": false,
     "altText": "Intersecting Chords Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-tangent_half_angle",
@@ -4474,7 +4496,9 @@
     "posted": false,
     "altText": "Tangent Half-Angle Formula",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_half_angle_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-shoelace_formula",
@@ -4486,7 +4510,9 @@
     "posted": false,
     "altText": "The Shoelace Formula for Area",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/shoelace_formula_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-quotient_rule",
@@ -4498,7 +4524,9 @@
     "posted": false,
     "altText": "The Quotient Rule in Calculus",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/quotient_rule_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-derivative_of_cosx",
@@ -4510,7 +4538,9 @@
     "posted": false,
     "altText": "Derivative of Cosine is Negative Sine",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_of_cosx_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-surface_area_sphere",
@@ -4522,7 +4552,9 @@
     "posted": false,
     "altText": "Surface Area of a Sphere",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/surface_area_sphere_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-cone_volume",
@@ -4534,7 +4566,9 @@
     "posted": false,
     "altText": "Volume of a Cone",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cone_volume_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-pyramid_volume",
@@ -4546,7 +4580,9 @@
     "posted": false,
     "altText": "Volume of a Pyramid",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pyramid_volume_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-fibonacci_spiral",
@@ -4558,7 +4594,9 @@
     "posted": false,
     "altText": "The Fibonacci Spiral and Golden Ratio",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/fibonacci_spiral_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-pascals_triangle_sum",
@@ -4570,7 +4608,9 @@
     "posted": false,
     "altText": "Row Sums of Pascal Triangle",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pascals_triangle_sum_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-hockey_stick_identity",
@@ -4582,7 +4622,9 @@
     "posted": false,
     "altText": "The Hockey-Stick Identity",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/hockey_stick_identity_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-euclidean_algorithm",
@@ -4594,7 +4636,9 @@
     "posted": false,
     "altText": "The Euclidean Algorithm",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/euclidean_algorithm_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-determinant_2x2",
@@ -4606,7 +4650,9 @@
     "posted": false,
     "altText": "Determinant as Area Scaling",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/determinant_2x2_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-eigenvalues_2x2",
@@ -4618,7 +4664,9 @@
     "posted": false,
     "altText": "Eigenvectors & Invariant Directions",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/eigenvalues_2x2_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-harmonic_series_divergence",
@@ -4630,7 +4678,9 @@
     "posted": false,
     "altText": "Divergence of the Harmonic Series",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/harmonic_series_divergence_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-telescoping_series",
@@ -4642,7 +4692,9 @@
     "posted": false,
     "altText": "The Telescoping Series",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/telescoping_series_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-taylor_series_sin",
@@ -4654,7 +4706,9 @@
     "posted": false,
     "altText": "Taylor Series Approximation of Sine",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/taylor_series_sin_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-extreme_value_theorem",
@@ -4666,7 +4720,9 @@
     "posted": false,
     "altText": "Stationary Points and Fermat Theorem",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/extreme_value_theorem_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-triangular_numbers_square",
@@ -4678,7 +4734,9 @@
     "posted": false,
     "altText": "Two Triangular Numbers Make a Square",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangular_numbers_square_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-infinite_geometric_series_third",
@@ -4690,7 +4748,9 @@
     "posted": false,
     "altText": "Infinite Geometric Series Sum",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/infinite_geometric_series_third_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-collatz_conjecture",
@@ -4702,7 +4762,9 @@
     "posted": false,
     "altText": "The Collatz Conjecture 3n + 1",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/collatz_conjecture_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-sieve_of_eratosthenes",
@@ -4714,7 +4776,9 @@
     "posted": false,
     "altText": "The Sieve of Eratosthenes",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sieve_of_eratosthenes_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-dot_product_projection",
@@ -4726,7 +4790,9 @@
     "posted": false,
     "altText": "The Dot Product as a Shadow",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/dot_product_projection_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-complex_multiplication",
@@ -4738,7 +4804,9 @@
     "posted": false,
     "altText": "Complex Multiplication",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/complex_multiplication_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-roots_of_unity",
@@ -4750,7 +4818,9 @@
     "posted": false,
     "altText": "Roots of Unity and Symmetry",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/roots_of_unity_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-snells_law",
@@ -4762,7 +4832,9 @@
     "posted": false,
     "altText": "Snell Law of Refraction",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/snells_law_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-simple_harmonic_motion",
@@ -4774,7 +4846,9 @@
     "posted": false,
     "altText": "Simple Harmonic Motion and Circular Motion",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/simple_harmonic_motion_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-doppler_effect",
@@ -4786,7 +4860,9 @@
     "posted": false,
     "altText": "The Doppler Effect and Wavefronts",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/doppler_effect_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-projectile_parabola",
@@ -4798,7 +4874,9 @@
     "posted": false,
     "altText": "Projectile Motion and Parabolic Flight",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/projectile_parabola_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-mastodon-geometric_distribution",
@@ -4810,6 +4888,8 @@
     "posted": false,
     "altText": "Geometric Distribution Expected Value (E = 1/p)",
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_distribution_1x1.png",
-    "batchId": "explainer-v1"
+    "batchId": "explainer-v1",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   }
 ]

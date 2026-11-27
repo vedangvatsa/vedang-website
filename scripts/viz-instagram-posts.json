@@ -4368,7 +4368,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/inclined_plane_9x16.png",
     "batchId": "explainer-v1",
-    "text": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface."
+    "text": "Vector mechanics on an inclined plane.\n\nGravity pulls straight down with force mg.\n\nDecomposing into axes shows mg sin theta accelerates down the ramp while mg cos theta presses perpendicularly into the surface.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-rubiks_permutations",
@@ -4378,7 +4380,9 @@
     "posted": false,
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/rubiks_permutations_9x16.png",
     "batchId": "explainer-v1",
-    "text": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe."
+    "text": "How many positions can a Rubik's cube have?\n\n8 corner pieces and 12 edge pieces give 43 quintillion reachable states.\n\nEven turning one state per second, exploring every permutation would take longer than the age of the universe.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-power_rule",
@@ -4389,7 +4393,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/power_rule_9x16.png",
     "batchId": "explainer-v1",
     "title": "The Power Rule",
-    "text": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x."
+    "text": "Geometric proof of the power rule in calculus.\n\nTake a square of side x with area x squared.\n\nIncreasing the side by dx adds two rectangular strips of area x times dx and a tiny corner.\n\nThe corner vanishes in the limit, leaving the rate of change as exactly 2x.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-geometric_mean",
@@ -4400,7 +4406,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/geometric_mean_9x16.png",
     "batchId": "explainer-v1",
     "title": "The Geometric Mean",
-    "text": "Geometric proof of the geometric mean theorem.\n\nConstruct a semicircle over a diameter of length a plus b.\n\nErecting an altitude h from the split point to the circle forms similar right triangles.\n\nCross-multiplying gives h squared equals a times b, proving h is the square root of a times b."
+    "text": "Geometric proof of the geometric mean theorem.\n\nConstruct a semicircle over a diameter of length a plus b.\n\nErecting an altitude h from the split point to the circle forms similar right triangles.\n\nCross-multiplying gives h squared equals a times b, proving h is the square root of a times b.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-instagram-tangent_secant",
@@ -4411,7 +4419,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_secant_9x16.png",
     "batchId": "explainer-v1",
     "title": "Tangent-Secant Theorem",
-    "text": "Geometric proof of the tangent-secant theorem in geometry.\n\nFrom external point P, draw tangent PT and secant line PAB.\n\nBy the alternate segment theorem, angle PTA equals angle PBT.\n\nSharing angle P makes triangles PTA and PBT similar.\n\nCross-multiplying PT / PB = PA / PT proves PT squared equals PA times PB."
+    "text": "Geometric proof of the tangent-secant theorem in geometry.\n\nFrom external point P, draw tangent PT and secant line PAB.\n\nBy the alternate segment theorem, angle PTA equals angle PBT.\n\nSharing angle P makes triangles PTA and PBT similar.\n\nCross-multiplying PT / PB = PA / PT proves PT squared equals PA times PB.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-instagram-euler_formula",
@@ -4422,7 +4432,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/euler_formula_9x16.png",
     "batchId": "explainer-v1",
     "title": "Euler Identity",
-    "text": "Geometric intuition behind Euler identity.\n\nIn the complex plane, e to the i theta rotates by angle theta.\n\nSetting theta to pi produces a 180-degree rotation around the origin, landing directly at -1.\n\nAdding 1 to both sides establishes e^(iπ) + 1 = 0."
+    "text": "Geometric intuition behind Euler identity.\n\nIn the complex plane, e to the i theta rotates by angle theta.\n\nSetting theta to pi produces a 180-degree rotation around the origin, landing directly at -1.\n\nAdding 1 to both sides establishes e^(iπ) + 1 = 0.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-instagram-am_gm_inequality",
@@ -4433,7 +4445,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/am_gm_inequality_9x16.png",
     "batchId": "explainer-v1",
     "title": "AM-GM Inequality",
-    "text": "Geometric proof of the AM-GM inequality in mathematics.\n\nDraw a semicircle over diameter a + b.\n\nThe radius is the arithmetic mean R = (a + b) / 2, while the altitude is the geometric mean h = √(ab).\n\nSince no altitude exceeds the radius, (a + b) / 2 ≥ √(ab)."
+    "text": "Geometric proof of the AM-GM inequality in mathematics.\n\nDraw a semicircle over diameter a + b.\n\nThe radius is the arithmetic mean R = (a + b) / 2, while the altitude is the geometric mean h = √(ab).\n\nSince no altitude exceeds the radius, (a + b) / 2 ≥ √(ab).",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-instagram-sine_addition",
@@ -4444,7 +4458,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sine_addition_9x16.png",
     "batchId": "explainer-v1",
     "title": "Sine Addition Formula",
-    "text": "Geometric proof of the sine addition formula in trigonometry.\n\nStack two right triangles with angles α and β.\n\nThe total vertical height sin(α + β) splits into two projections - sinα·cosβ and cosα·sinβ.\n\nThus sin(α + β) = sinα·cosβ + cosα·sinβ."
+    "text": "Geometric proof of the sine addition formula in trigonometry.\n\nStack two right triangles with angles α and β.\n\nThe total vertical height sin(α + β) splits into two projections - sinα·cosβ and cosα·sinβ.\n\nThus sin(α + β) = sinα·cosβ + cosα·sinβ.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-instagram-cosine_addition",
@@ -4455,7 +4471,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cosine_addition_9x16.png",
     "batchId": "explainer-v1",
     "title": "Cosine Addition Formula",
-    "text": "Geometric proof of the cosine addition formula in trigonometry.\n\nIn stacked right triangles with angles α and β, horizontal base cos(α + β) equals base projection cosα·cosβ minus pullback segment sinα·sinβ.\n\nThus cos(α + β) = cosα·cosβ − sinα·sinβ."
+    "text": "Geometric proof of the cosine addition formula in trigonometry.\n\nIn stacked right triangles with angles α and β, horizontal base cos(α + β) equals base projection cosα·cosβ minus pullback segment sinα·sinβ.\n\nThus cos(α + β) = cosα·cosβ − sinα·sinβ.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-instagram-sum_of_cubes",
@@ -4466,7 +4484,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/sum_of_cubes_9x16.png",
     "batchId": "explainer-v1",
     "title": "Sum of Consecutive Cubes",
-    "text": "Geometric proof that 1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)².\n\nA square of side (1 + 2 + ⋯ + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k³.\n\nSumming all bands yields Nicomachus theorem."
+    "text": "Geometric proof that 1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)².\n\nA square of side (1 + 2 + ⋯ + n) partitions into nested L-bands.\n\nEach k-th L-band has area exactly k³.\n\nSumming all bands yields Nicomachus theorem.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-inscribed_angle_theorem",
@@ -4477,7 +4497,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/inscribed_angle_theorem_9x16.png",
     "batchId": "explainer-v1",
     "text": "Inscribed Angle Theorem - The measure of an angle inscribed in a circle is exactly half the measure of the central angle subtending the same arc. Visual proof by radial triangle decomposition.",
-    "title": "Inscribed Angle Theorem"
+    "title": "Inscribed Angle Theorem",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-cross_product_area",
@@ -4488,7 +4510,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cross_product_area_9x16.png",
     "batchId": "explainer-v1",
     "text": "Cross Product Magnitude - Why |u x v| = |u||v|sin(theta). Geometric visualization showing how the magnitude of the vector cross product equals the exact area of the spanned parallelogram.",
-    "title": "Cross Product and Parallelogram Area"
+    "title": "Cross Product and Parallelogram Area",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-triangle_incircle_area",
@@ -4499,7 +4523,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/triangle_incircle_area_9x16.png",
     "batchId": "explainer-v1",
     "text": "Triangle Area via Inradius - Why Area = r * s. Connecting the incenter to vertices partitions any triangle into three sub-triangles each with altitude r, summing directly to inradius times semiperimeter.",
-    "title": "Triangle Area via Inradius"
+    "title": "Triangle Area via Inradius",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-chord_intersection_theorem",
@@ -4510,7 +4536,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/chord_intersection_theorem_9x16.png",
     "batchId": "explainer-v1",
     "text": "Intersecting Chords Theorem - When two chords intersect inside a circle, AE * EB = CE * ED. Beautiful visual proof utilizing inscribed angles and similar triangles.",
-    "title": "Intersecting Chords Theorem"
+    "title": "Intersecting Chords Theorem",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-tangent_half_angle",
@@ -4521,7 +4549,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/tangent_half_angle_9x16.png",
     "batchId": "explainer-v1",
     "text": "Tangent Half-Angle Formula - Why tan(theta/2) = sin(theta) / (1 + cos(theta)). Inscribing theta/2 into a unit circle generates a right triangle with altitude sin(theta) and base 1 + cos(theta).",
-    "title": "Tangent Half-Angle Formula"
+    "title": "Tangent Half-Angle Formula",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-shoelace_formula",
@@ -4532,7 +4562,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/shoelace_formula_9x16.png",
     "batchId": "explainer-v1",
     "text": "The Shoelace Formula - How to calculate the area of any polygon from coordinates. Summing signed trapezoid areas under directed edges cancels outer regions, leaving the exact polygon area.",
-    "title": "The Shoelace Formula for Area"
+    "title": "The Shoelace Formula for Area",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-quotient_rule",
@@ -4543,7 +4575,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/quotient_rule_9x16.png",
     "batchId": "explainer-v1",
     "text": "The Quotient Rule - Why d/dx(u/v) = (u'v - uv') / v^2. Formulating the quotient as an area u = q * v allows direct differentiation via the product rule to isolate q'.",
-    "title": "The Quotient Rule in Calculus"
+    "title": "The Quotient Rule in Calculus",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-derivative_of_cosx",
@@ -4554,7 +4588,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/derivative_of_cosx_9x16.png",
     "batchId": "explainer-v1",
     "text": "Derivative of Cosine - Why d/dx[cos(x)] = -sin(x). Moving along the unit circle, the horizontal coordinate decreases as angle increases, generating a negative sine rate of change.",
-    "title": "Derivative of Cosine is Negative Sine"
+    "title": "Derivative of Cosine is Negative Sine",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-surface_area_sphere",
@@ -4565,7 +4601,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/surface_area_sphere_9x16.png",
     "batchId": "explainer-v1",
     "text": "Surface Area of a Sphere - Why Area = 4 * pi * r^2. Expanding a sphere by a thin shell dr yields dV = Area * dr, proving surface area is the exact derivative of sphere volume.",
-    "title": "Surface Area of a Sphere"
+    "title": "Surface Area of a Sphere",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-cone_volume",
@@ -4576,7 +4614,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/cone_volume_9x16.png",
     "batchId": "explainer-v1",
     "text": "Volume of a Cone - Why V = 1/3 * pi * r^2 * h. Slicing into circular discs with linear radius growth yields a z^2 integral that integrates to 1/3 of the bounding cylinder volume.",
-    "title": "Volume of a Cone"
+    "title": "Volume of a Cone",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-pyramid_volume",
@@ -4587,7 +4627,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pyramid_volume_9x16.png",
     "batchId": "explainer-v1",
     "text": "Volume of a Pyramid - Why V = 1/3 * Base * Height. Any cube can be partitioned cleanly into 3 identical pyramids sharing an apex, proving the one-third factor geometrically.",
-    "title": "Volume of a Pyramid"
+    "title": "Volume of a Pyramid",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-fibonacci_spiral",
@@ -4598,7 +4640,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/fibonacci_spiral_9x16.png",
     "batchId": "explainer-v1",
     "text": "The Fibonacci Spiral - Tiling successive Fibonacci squares generates a logarithmic spiral whose ratio between consecutive squares converges to the golden ratio phi = 1.618.",
-    "title": "The Fibonacci Spiral and Golden Ratio"
+    "title": "The Fibonacci Spiral and Golden Ratio",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-pascals_triangle_sum",
@@ -4609,7 +4653,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/pascals_triangle_sum_9x16.png",
     "batchId": "explainer-v1",
     "text": "Pascal's Triangle Row Sums - Why each row sums to 2^n. By the Binomial Theorem on (1 + 1)^n, each coefficient expands into the total count of subsets of an n-element set.",
-    "title": "Row Sums of Pascal Triangle"
+    "title": "Row Sums of Pascal Triangle",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-hockey_stick_identity",
@@ -4620,7 +4666,9 @@
     "thumbnail": "scripts/viz-assets/previews/explainer_videos/hockey_stick_identity_9x16.png",
     "batchId": "explainer-v1",
     "text": "The Hockey-Stick Identity - Summing consecutive entries along any diagonal in Pascal's triangle turns sharply into the entry below, proved via telescoping recurrence.",
-    "title": "The Hockey-Stick Identity"
+    "title": "The Hockey-Stick Identity",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-euclidean_algorithm",
@@ -4633,7 +4681,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual geometric explanation of the Euclidean Algorithm showing how greatest common divisors gcd(a, b) are computed through recursive square tiling."
+    "text": "Visual geometric explanation of the Euclidean Algorithm showing how greatest common divisors gcd(a, b) are computed through recursive square tiling.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-determinant_2x2",
@@ -4646,7 +4696,9 @@
     "scheduleTime": "09:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual geometric explanation of the 2x2 determinant showing how det(A) = ad - bc measures the exact area scaling factor of transformed basis vectors."
+    "text": "Visual geometric explanation of the 2x2 determinant showing how det(A) = ad - bc measures the exact area scaling factor of transformed basis vectors.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-eigenvalues_2x2",
@@ -4659,7 +4711,9 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual geometric explanation of eigenvectors and eigenvalues showing how certain invariant axes maintain their direction under matrix transformation."
+    "text": "Visual geometric explanation of eigenvectors and eigenvalues showing how certain invariant axes maintain their direction under matrix transformation.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-harmonic_series_divergence",
@@ -4672,7 +4726,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual proof of why the harmonic series diverges to infinity. By grouping terms into powers of 2, each block sums to greater than one half, showing that adding infinitely many halves grows without bound."
+    "text": "Visual proof of why the harmonic series diverges to infinity. By grouping terms into powers of 2, each block sums to greater than one half, showing that adding infinitely many halves grows without bound.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-telescoping_series",
@@ -4685,7 +4741,9 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual proof of why the infinite series sum 1 / (n(n+1)) equals exactly 1. Partial fractions split each term into 1/n - 1/(n+1), causing all intermediate terms to cancel out like a collapsing telescope."
+    "text": "Visual proof of why the infinite series sum 1 / (n(n+1)) equals exactly 1. Partial fractions split each term into 1/n - 1/(n+1), causing all intermediate terms to cancel out like a collapsing telescope.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-taylor_series_sin",
@@ -4698,7 +4756,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing how polynomials approximate a sine wave around the origin. A linear tangent gives slope, degree 3 captures inflection curvature, and degree 5 hugs the peak, showing how infinite polynomial terms converge to the exact wave."
+    "text": "Visualizing how polynomials approximate a sine wave around the origin. A linear tangent gives slope, degree 3 captures inflection curvature, and degree 5 hugs the peak, showing how infinite polynomial terms converge to the exact wave.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-extreme_value_theorem",
@@ -4711,7 +4771,9 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual proof of Fermat theorem on stationary points. As a curve transitions from rising to falling, its tangent slope changes sign, requiring the derivative to vanish completely at every peak and trough."
+    "text": "Visual proof of Fermat theorem on stationary points. As a curve transitions from rising to falling, its tangent slope changes sign, requiring the derivative to vanish completely at every peak and trough.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-triangular_numbers_square",
@@ -4724,7 +4786,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual proof that adding any two consecutive triangular numbers always produces a perfect square where T_(n-1) + T_n = n^2. Interlocking an n-staircase with an (n-1)-staircase tiles an exact n by n square."
+    "text": "Visual proof that adding any two consecutive triangular numbers always produces a perfect square where T_(n-1) + T_n = n^2. Interlocking an n-staircase with an (n-1)-staircase tiles an exact n by n square.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-infinite_geometric_series_third",
@@ -4737,7 +4801,9 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual geometric proof that the infinite series sum of (1/4)^k equals exactly 1/3. Recursive quadrant trisection divides a unit square into three congruent color sets that completely tile an area of 1."
+    "text": "Visual geometric proof that the infinite series sum of (1/4)^k equals exactly 1/3. Recursive quadrant trisection divides a unit square into three congruent color sets that completely tile an area of 1.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-collatz_conjecture",
@@ -4750,7 +4816,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing the hailstone orbit of the Collatz 3n + 1 conjecture for n = 7. Starting from 7, the orbit climbs to a peak of 52 before descending into the universal 4 -> 2 -> 1 terminal loop."
+    "text": "Visualizing the hailstone orbit of the Collatz 3n + 1 conjecture for n = 7. Starting from 7, the orbit climbs to a peak of 52 before descending into the universal 4 -> 2 -> 1 terminal loop.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-sieve_of_eratosthenes",
@@ -4763,7 +4831,9 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing how prime numbers are filtered using the ancient Sieve of Eratosthenes on a grid. Systematically eliminating multiples of primes 2, 3, and 5 reveals all prime numbers in the remainder."
+    "text": "Visualizing how prime numbers are filtered using the ancient Sieve of Eratosthenes on a grid. Systematically eliminating multiples of primes 2, 3, and 5 reveals all prime numbers in the remainder.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-dot_product_projection",
@@ -4776,7 +4846,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing the dot product as a geometric shadow projection. The scalar product u . v measures the length of the orthogonal shadow cast by vector u onto base vector v multiplied by the length of v."
+    "text": "Visualizing the dot product as a geometric shadow projection. The scalar product u . v measures the length of the orthogonal shadow cast by vector u onto base vector v multiplied by the length of v.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-complex_multiplication",
@@ -4789,7 +4861,9 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing multiplication of complex numbers in the complex plane. Multiplying two numbers adds their polar angles and multiplies their lengths, turning multiplication into simultaneous rotation and scaling."
+    "text": "Visualizing multiplication of complex numbers in the complex plane. Multiplying two numbers adds their polar angles and multiplies their lengths, turning multiplication into simultaneous rotation and scaling.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-roots_of_unity",
@@ -4802,7 +4876,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing the nth roots of unity z^n = 1 in the complex plane. The solutions form perfectly symmetric regular polygons inscribed inside the unit circle, naturally summing to zero at the origin."
+    "text": "Visualizing the nth roots of unity z^n = 1 in the complex plane. The solutions form perfectly symmetric regular polygons inscribed inside the unit circle, naturally summing to zero at the origin.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-snells_law",
@@ -4815,7 +4891,9 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing Snell law of refraction derived from Fermat principle of least time. Light travelling between different media bends at the boundary to minimize total travel time rather than distance."
+    "text": "Visualizing Snell law of refraction derived from Fermat principle of least time. Light travelling between different media bends at the boundary to minimize total travel time rather than distance.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-simple_harmonic_motion",
@@ -4828,7 +4906,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing simple harmonic motion as the one-dimensional projection of uniform circular motion. The oscillating position of a mass on a spring matches the horizontal cosine projection of an object rotating at constant angular frequency."
+    "text": "Visualizing simple harmonic motion as the one-dimensional projection of uniform circular motion. The oscillating position of a mass on a spring matches the horizontal cosine projection of an object rotating at constant angular frequency.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-doppler_effect",
@@ -4841,7 +4921,9 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing the Doppler effect through moving wavefront geometry. When a wave source travels at steady velocity, emitted spherical wavefronts bunch together ahead to shorten wavelength and increase frequency, while stretching apart behind."
+    "text": "Visualizing the Doppler effect through moving wavefront geometry. When a wave source travels at steady velocity, emitted spherical wavefronts bunch together ahead to shorten wavelength and increase frequency, while stretching apart behind.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-projectile_parabola",
@@ -4854,7 +4936,9 @@
     "scheduleTime": "01:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visualizing projectile motion as decoupled orthogonal motion. Horizontal movement maintains constant uniform velocity while vertical movement undergoes uniform gravitational acceleration. Eliminating time reveals that any projectile traces a true downward parabola."
+    "text": "Visualizing projectile motion as decoupled orthogonal motion. Horizontal movement maintains constant uniform velocity while vertical movement undergoes uniform gravitational acceleration. Eliminating time reveals that any projectile traces a true downward parabola.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   },
   {
     "id": "explainer-ig-geometric_distribution",
@@ -4867,6 +4951,8 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "text": "Visual proof of why the expected wait time of a geometric distribution equals 1/p via memoryless recursion. A single trial either succeeds with probability p in 1 step or resets with probability 1-p, proving that expected trials always equal 1/p."
+    "text": "Visual proof of why the expected wait time of a geometric distribution equals 1/p via memoryless recursion. A single trial either succeeds with probability p in 1 step or resets with probability 1-p, proving that expected trials always equal 1/p.",
+    "paused": true,
+    "pauseReason": "Paused globally per user instruction: stop posting the video everywhere"
   }
 ]
