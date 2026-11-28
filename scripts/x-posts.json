@@ -3969,7 +3969,7 @@
   },
   {
     "id": "prompt-injection-defenses-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -4027,7 +4027,9 @@
       }
     ],
     "scheduleDate": "2026-11-25",
-    "scheduleTime": "09:05"
+    "scheduleTime": "09:05",
+    "postedAt": "2026-11-28T12:18:35.925Z",
+    "tweetId": "6b0ac6950f9559e0ce0e5837"
   },
   {
     "id": "speculative-decoding-engines-thread",
