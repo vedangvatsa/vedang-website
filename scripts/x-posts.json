@@ -3905,7 +3905,7 @@
   },
   {
     "id": "llms-txt-standard-thread",
-    "posted": false,
+    "posted": true,
     "scheduledFor": null,
     "tweets": [
       {
@@ -3963,7 +3963,9 @@
       }
     ],
     "scheduleDate": "2026-11-25",
-    "scheduleTime": "01:05"
+    "scheduleTime": "01:05",
+    "postedAt": "2026-11-28T02:10:53.494Z",
+    "tweetId": "6b0a382770e80ae8f1c4c44a"
   },
   {
     "id": "prompt-injection-defenses-thread",
